@@ -41,7 +41,7 @@ launchctl print gui/$UID/tw.kho.pipeline | head -20
 **2026-09-13 已掛上並實跑驗證**：`launchctl kickstart` 觸發一次，六個階段
 （scheduler → normalize → health → cluster → relations → emit → site → 三支檢查器）
 退出碼全部 0，共 132 秒，鎖檔正常釋放，`last exit code = 0`。
-先前另外手動跑過一次完整抓取（當時 22 支，之後陸續接到 27 支）：
+先前另外手動跑過一次完整抓取（當時 22 支，之後陸續接到 29 支）：
 22 支中 21 支到期、**0 支失敗**
 （`moe-cc-courses` 未到期），最慢的是 `xuanen-centers` 的 34 個站點，1,580 秒。
 所以一輪抓取加建站約 30 分鐘，而每小時喚醒多數時候只會抓到期的少數幾支。
