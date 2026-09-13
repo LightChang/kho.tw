@@ -27,6 +27,7 @@ import {
 import { writeSitemaps, courseHint, maxDate } from './sitemap.mjs';
 import { collectTeachers, teachersWithPages, MIN_COURSES } from '../transform/teachers.mjs';
 import { shortProvider } from '../transform/slug.mjs';
+import { todayTaipei } from '../transform/_date.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const DIST = path.join(ROOT, 'dist');
@@ -38,6 +39,17 @@ const STATUS_LABEL = {
 const WEEKDAY_LABEL = ['', '週一', '週二', '週三', '週四', '週五', '週六', '週日'];
 // 可報名的排前面，已結束的排後面
 const STATUS_ORDER = { open: 0, upcoming: 1, running: 2, full: 3, unknown: 4, closed: 5, cancelled: 6 };
+
+// 「上課已經結束」與「報名狀態」是兩件事，這裡只講前者。
+//
+// ingest/CONTRACT.md §5 明訂：拿上課結束日去推「報名已截止」是用上課期間冒充報名期間，
+// 不可以。所以**不動 enrollment.status**——那是來源說的事實，來源沒說就是 unknown。
+// 但全站 16,448 門狀態未知的課裡，有 10,767 門的上課結束日早就過了，
+// 頁面上只寫「狀態未知」會讓人以為說不定還報得到。排程日期是我們手上確實有的事實，
+// 照實寫出來即可，不必也不該去改報名狀態。
+const TODAY = todayTaipei();
+const hasEnded = (c) => Boolean(c.schedule?.endDate) && c.schedule.endDate < TODAY;
+const endedNote = (c) => (hasEnded(c) ? `<span class="ended">課程已於 ${esc(c.schedule.endDate)} 結束</span>` : '');
 
 // 站內連結：slug 是中文，每一段都要百分比編碼（與 site/sitemap.mjs 的 toLoc() 同一套規則）。
 // 編碼後只剩 unreserved 字元與 %XX，不含 HTML 的特殊字元，所以不必再 esc()。
@@ -80,14 +92,18 @@ function courseCard(c, { markInferred = false } = {}) {
   const left = Number.isFinite(c.enrollment?.available)
     ? `　<span class="tnum" style="color:var(--full)">剩 ${c.enrollment.available} 位</span>` : '';
   return `<div class="card">
-<div><a href="${link('course', c.slug)}">${esc(c.title)}</a> ${statusBadge(c.enrollment?.status)}${left}</div>
+<div><a href="${link('course', c.slug)}">${esc(c.title)}</a> ${statusBadge(c.enrollment?.status)}${left}　${endedNote(c)}</div>
 <div class="meta">${esc(c.provider?.nameRaw ?? '')}${c.venue?.city ? `　${esc(c.venue.city)}${esc(c.venue.district ?? '')}` : ''}</div>
 ${when ? `<div class="meta">${esc(when)}</div>` : ''}
 ${markInferred && c.categoryFrom === 'title' ? '<div class="meta-2">分類依課名判斷</div>' : ''}
 </div>`;
 }
 
-const byStatusThenDate = (a, b) => (STATUS_ORDER[a.enrollment?.status] ?? 9) - (STATUS_ORDER[b.enrollment?.status] ?? 9)
+// 已經上完的課一律排到最後，再依報名狀態、再依開課日新到舊。
+// 先前只看 status，結果「狀態未知」（排序 4）的一萬多門過期課會插在
+// 額滿（3）與已截止（5）之間，把還報得到的課往下擠。
+const byStatusThenDate = (a, b) => (hasEnded(a) - hasEnded(b))
+  || (STATUS_ORDER[a.enrollment?.status] ?? 9) - (STATUS_ORDER[b.enrollment?.status] ?? 9)
   || String(b.schedule?.startDate ?? '').localeCompare(String(a.schedule?.startDate ?? ''));
 
 async function readNdjson(file) {
@@ -142,6 +158,7 @@ function coursePage(c, venue, teacherPages = []) {
   const body = `<div class="card">
 <h2>${esc(c.title)} ${statusBadge(c.enrollment?.status)}</h2>
 <div class="meta">${esc(c.provider?.nameRaw ?? '')}${c.venue?.city ? `　${esc(c.venue.city)}${esc(c.venue.district ?? '')}` : ''}</div>
+${hasEnded(c) ? `<div class="meta-2">${endedNote(c)}　本站不改寫來源給的報名狀態，這一行講的是上課期間。</div>` : ''}
 ${c.description ? `<p>${esc(c.description)}</p>` : ''}
 <table>${rows.map(([k, v]) => `<tr><th style="width:7em">${esc(k)}</th><td>${esc(v)}</td></tr>`).join('')}</table>
 </div>

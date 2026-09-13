@@ -50,6 +50,9 @@ a:hover{text-decoration:underline}
 .st-upcoming{color:var(--upcoming)}
 .st-running{color:var(--running)}
 .st-cancelled,.st-closed,.st-unknown{color:var(--idle)}
+/* 「課程已於 X 結束」講的是上課期間，不是報名狀態（見 site/build.mjs 的 hasEnded）。
+   刻意不用 .st 的膠囊外框，免得被當成第七種報名狀態。 */
+.ended{color:var(--ink-3);font-size:var(--fs-xs);white-space:nowrap}
 
 /* 內頁（課程／縣市／場館）共用 */
 .wrap{max-width:1040px;margin:0 auto;padding:28px 20px 64px}

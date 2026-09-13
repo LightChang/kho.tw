@@ -6,8 +6,12 @@
 // 校內課程代碼（internal_course_code，跨來源合併的錨點）只在單筆詳情端點才有，
 // 列表端點沒有，所以這一層產不出 externalIds，合併要靠 L2 的課名＋期別＋時段規則。
 
+// 下面這些對照與解析函式由 transform/normalize/moe-cc-detail.mjs 一起使用：
+// 詳情端點回的是同一套欄位（quarter、time_cat_id、weekday、time_begin…），
+// 兩邊各寫一份遲早會走樣，所以從這裡匯出、那邊 import。
+//
 // course_tag_id_arr 的對照取自站方 utility/utility_func_proj.js 的 course_tag_name_arr
-const TOPICS = {
+export const TOPICS = {
   1: '性別平等', 2: '公民素養', 3: '人權法治', 4: '環境永續', 5: '媒體素養',
   6: '安全教育', 7: '生命教育', 8: '社區總體營造', 9: '新住民課程', 10: '國防教育',
   11: '本土語文', 12: '山野教育', 13: '美感教育', 14: '傳統藝術', 15: '民俗文化資產',
@@ -16,16 +20,16 @@ const TOPICS = {
   25: '高齡心理健康', 26: '交通安全',
 };
 // time_cat_id 對照取自課程查詢頁的 time_cat_arr
-const RECURRENCE = { 11: 'weekly', 12: 'twice-weekly', 21: 'biweekly', 22: 'biweekly-twice', 99: 'irregular' };
+export const RECURRENCE = { 11: 'weekly', 12: 'twice-weekly', 21: 'biweekly', 22: 'biweekly-twice', 99: 'irregular' };
 const SEASON = { 1: 'spring', 2: 'autumn', 3: 'summer', 4: 'winter' };
 
-const EMPTY_DATE = '0000-00-00';
+export const EMPTY_DATE = '0000-00-00';
 const EMPTY_TIME = '00:00:00';
 const hhmm = (t) => (t && t !== EMPTY_TIME ? t.slice(0, 5) : undefined);
 // 來源的 weekday 0 是星期日（對照頁面的 weekday_short_tw），L1 統一用 ISO 1-7
 const isoWeekday = (n) => (n === 0 ? 7 : Number(n));
 
-function parseTerm(quarter) {
+export function parseTerm(quarter) {
   const s = String(quarter ?? '');
   if (s.length !== 4) return undefined;
   const year = Number(s.slice(0, 3));
@@ -34,7 +38,7 @@ function parseTerm(quarter) {
   return season ? { raw: s, year, season } : { raw: s, year };
 }
 
-function slotsOf(r) {
+export function slotsOf(r) {
   const slots = [];
   const first = { weekday: isoWeekday(r.weekday), startTime: hhmm(r.time_begin), endTime: hhmm(r.time_end) };
   if (first.startTime || Number.isFinite(first.weekday)) slots.push(first);

@@ -13,6 +13,7 @@
 //   data/relations.ndjson  course → venue 的邊（含懸空）
 import { createHash } from 'node:crypto';
 import { readdir, readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { todayTaipei } from './_date.mjs';
 
@@ -111,11 +112,43 @@ export function cityOf(raw) {
   return COUNTIES.has(s) ? s : null;
 }
 
+// 行政區：多數來源只給縣市，但地址字串裡本來就寫著行政區
+//（「臺中市西區五權路2之3號」的 district 是 null，可是「西區」就在地址裡）。
+// 課程層 6,495 門、場館層 1,179 個可以這樣補回來。
+//
+// **不用 regex 抓**：/^(縣市)([一-龥]{1,3}?[區鄉鎮市])/ 的非貪婪會先吃到
+// 「前鎮區」的「鎮」，把它抓成「前鎮」——578 筆對照組有 8 筆栽在這裡。
+// 改成比對 overrides/districts.json（政府名錄自帶的 city+district 建的對照表），
+// 只認「該縣市底下真實存在的行政區」，錯誤降到 4 筆，而那 4 筆是現有資料本身標錯。
+//
+// 取**最長**命中：「臺南市新市區」不能被「新市」搶走，「臺中市大安區」同理。
+const DISTRICTS = JSON.parse(
+  readFileSync(new URL('../overrides/districts.json', import.meta.url), 'utf-8'),
+).districts;
+
+export function districtOf(city, address) {
+  const list = DISTRICTS[cityOf(city)];
+  if (!list || !address) return null;
+  let best = null;
+  for (const d of list) {
+    if (address.includes(d) && (!best || d.length > best.length)) best = d;
+  }
+  return best;
+}
+
 // 場館名正規化：用來把課程的場地名對到名錄（「臺北市中山運動中心」vs「台北市中山運動中心」）
+//
+// 也要剝掉學校的設立別前綴。教育部學校名錄寫「市立板橋國中」「私立育才國小」
+// 「國立政治大學」，課程的地點欄卻只寫「板橋國中」「育才國小」「政治大學」，
+// 不剝就永遠對不上——而借用學校場地的課正是 derived-name 那 4,871 門的大宗。
+// 只比對字串開頭，所以「臺北市立圖書館」不受影響（它開頭是「臺」不是「市立」）。
+const SCHOOL_PREFIX = /^(國立|市立|縣立|私立|公立)/;
+
 export function normVenueName(raw) {
   return String(raw ?? '')
     .replace(/台/g, '臺')
     .replace(/[\s　（）()]/g, '')
+    .replace(SCHOOL_PREFIX, '')
     .trim();
 }
 
@@ -260,7 +293,20 @@ async function main() {
     const regCandidates = [regByAddr, lookupName(venueName), lookupName(loc.providerNameRaw)]
       .filter(Boolean)
       .filter((r) => r === regByAddr || sameCounty(r));
-    const reg = regCandidates.find((r) => r.lat) ?? regCandidates[0] ?? null;
+    // 名錄候選全都沒座標、而課程自己的門牌在 geocoded.csv 裡查得到時，**不要改用名錄**。
+    //
+    // 改用名錄會把 venueId 從 hash8(門牌) 換成 hash8(名錄來源|記錄)，而名錄自己的門牌
+    // 不見得在快取裡（寫法不同、或根本沒送過 TGOS），等於把手上已經有的座標丟掉。
+    // 2026-09-13 接教育部學校名錄時實測：36 個場館、152 門課就是這樣掉的
+    //（立農國小、成德國小、文湖國小…原本都靠 geocoded-address 拿到座標）。
+    //
+    // 只擋名稱比對這條路。門牌命中名錄（registry-address）時，課程地址與名錄門牌
+    // 是同一個鍵，下面 registry 分支自己查快取就會命中，不會有這個問題。
+    const geoHit = addr ? geocoded.get(addr) : undefined;
+    const reg = regCandidates.find((r) => r.lat)
+      ?? regByAddr
+      ?? (geoHit ? null : regCandidates[0])
+      ?? null;
     if (reg) {
       venueId = reg.id;
       method = reg === regByAddr ? 'registry-address' : 'registry-name';
@@ -288,7 +334,9 @@ async function main() {
       stats[method] = (stats[method] ?? 0) + 1;
       prev.courseCount += 1;
       if (!prev.city && cityOf(loc.city)) prev.city = cityOf(loc.city);
-      if (!prev.district && loc.district) prev.district = loc.district;
+      // 名錄的門牌優先於課程的地址：場館的身分來自名錄，課程地址可能是別的地方
+      // （同一個理由見上面補座標那段）。
+      if (!prev.district) prev.district = loc.district ?? districtOf(prev.city, prev.address);
       venues.set(venueId, prev);
     } else if (addr) {
       venueId = `ven_${hash8(addr)}`;
@@ -302,12 +350,12 @@ async function main() {
       const displayName = venueName && !looksLikeAddress ? venueName : addr;
       const prev = venues.get(venueId) ?? {
         id: venueId, name: displayName, address: addr, source: coords ? 'geocoded' : 'derived',
-        city: cityOf(loc.city), district: loc.district ?? null,
+        city: cityOf(loc.city), district: loc.district ?? districtOf(cityOf(loc.city), addr),
         lat: coords?.lat ?? null, lng: coords?.lng ?? null, courseCount: 0,
       };
       prev.courseCount += 1;
       if (!prev.city && cityOf(loc.city)) prev.city = cityOf(loc.city);
-      if (!prev.district && loc.district) prev.district = loc.district;
+      if (!prev.district) prev.district = loc.district ?? districtOf(prev.city, addr);
       venues.set(venueId, prev);
     } else if (venueName) {
       venueId = `ven_${hash8(`name:${venueName}`)}`;
@@ -337,7 +385,8 @@ async function main() {
       toNameRaw: venueName || loc.address || '',
       toHint: {
         city: cityOf(loc.city),
-        district: loc.district ?? null,
+        // 場館解出來的行政區優先：course.venue 在沒有場館時只剩這個 hint 可用（見 emit.mjs）
+        district: (venueId ? venues.get(venueId)?.district : null) ?? loc.district ?? null,
         lat: venueId ? (venues.get(venueId)?.lat ?? null) : null,
         lng: venueId ? (venues.get(venueId)?.lng ?? null) : null,
       },
