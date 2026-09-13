@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+  kho.tw 定時抓取。安裝與停用方式見 docs/operations.md。
+
+  StartInterval 3600：每小時喚醒一次，但實際上哪些來源該抓由 transform/scheduler.mjs
+  依 data/schedule-state.json 自己決定（course-live 3-24 小時、registry 7-30 天不等）。
+  每小時喚醒只是給 scheduler 一個檢查機會，多數時候它會回報「沒有來源到期」就結束。
+
+  RunAtLoad 設 false：安裝當下不要立刻抓一輪，先手動跑一次確認沒問題再交給排程。
+-->
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>tw.kho.pipeline</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/lightman/weiqi.kids/kho.tw/ops/run-pipeline.sh</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/lightman/weiqi.kids/kho.tw</string>
+
+  <key>StartInterval</key>
+  <integer>3600</integer>
+
+  <key>RunAtLoad</key>
+  <false/>
+
+  <!-- 腳本自己會寫 data/logs/pipeline-YYYY-MM-DD.log；
+       這兩個檔只收腳本本身沒接住的錯誤（例如 bash 都還沒起來就失敗）。 -->
+  <key>StandardOutPath</key>
+  <string>/Users/lightman/weiqi.kids/kho.tw/data/logs/launchd.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/lightman/weiqi.kids/kho.tw/data/logs/launchd.err.log</string>
+
+  <!-- 筆電闔上或睡眠錯過的排程，醒來後補跑一次就好，不要把錯過的每小時都補上。 -->
+  <key>ThrottleInterval</key>
+  <integer>600</integer>
+
+  <key>ProcessType</key>
+  <string>Background</string>
+
+  <!-- 抓取會被網路狀況拖住，但不該無限期佔著鎖；腳本內另有殘留鎖清理。 -->
+  <key>ExitTimeOut</key>
+  <integer>120</integer>
+</dict>
+</plist>

@@ -1,0 +1,22 @@
+{
+  "name": "kho-tw",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "pipeline": "npm run ingest:tolerant && npm run normalize && npm run health && npm run cluster && npm run relations && npm run emit",
+    "build": "npm run pipeline && npm run site && npm run validate",
+    "ingest:tolerant": "node transform/scheduler.mjs || [ $? -eq 2 ]",
+    "normalize": "node transform/normalize.mjs",
+    "health": "node transform/check-health.mjs",
+    "cluster": "node transform/cluster.mjs",
+    "relations": "node transform/resolve-relations.mjs",
+    "emit": "node transform/emit.mjs",
+    "site": "node site/build.mjs",
+    "validate": "node site/validate-jsonld.mjs && node site/check-links.mjs && node site/check-sitemap.mjs",
+    "links": "node site/check-links.mjs",
+    "sitemap": "node site/check-sitemap.mjs",
+    "ingest": "node transform/scheduler.mjs",
+    "ingest:force": "node transform/scheduler.mjs --force",
+    "ingest:due": "node transform/scheduler.mjs --list"
+  }
+}

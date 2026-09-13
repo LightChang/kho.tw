@@ -1,0 +1,41 @@
+# ── 產出物：管線重跑就會重建，不進版控 ──────────────────────
+dist/
+public/
+ingest/raw/
+data/staged/
+data/courses.ndjson
+data/clusters.ndjson
+data/relations.ndjson
+data/venues.ndjson
+data/summary.json
+data/logs/
+data/.pipeline.lock/
+
+# ── 雜物 ──────────────────────────────────────────────
+__pycache__/
+*.pyc
+.DS_Store
+asvs-server.log
+
+# ── 以下**刻意不忽略**，理由寫在這裡免得日後有人「順手」加進上面 ──
+#
+# data/slugs.ndjson
+#   全站網址的唯一真相。append-only，一個 id 只配一次 slug；檔案沒了，
+#   重跑會配出另一組網址，已經發布出去的連結全部斷掉。這是本專案最不可重建的檔案。
+#
+# data/observation/
+#   append-only 的觀測軌跡，記錄「哪個來源在哪一天說過什麼」。
+#   firstObservedAt / lastChangedAt / disappearedAt 只存在於這裡，
+#   重抓一次來源不會還原歷史。體積大（66 MB）但 NDJSON 依 id 排序、
+#   輸出穩定，每日 diff 只有真正變動的那幾行。
+#
+# data/schedule-state.json、data/health-history.json
+#   自適應排程的間隔與各來源的筆數歷史。刪掉的話排程會退回初始間隔重新學，
+#   健康檢查也會把每支來源都當成「首次記錄」而失去擋壞資料的能力。
+#
+# geocode/out/
+#   TGOS 批次比對有每日額度上限，結果等同不可重建——重跑要重新申請、重新等寄回。
+#   geocoded.csv 是 2,954 筆已編碼座標的累積快取。
+#
+# overrides/
+#   人工查證過的對照表（分類、軒恩站點、行政區）。來源查不到才靠它。

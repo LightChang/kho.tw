@@ -1,0 +1,43 @@
+id	類別	層	名稱	端點	方法	格式	實測筆數	實測日	即時性	名額欄位	座標	狀態	備註
+moe-cc-courses	社大	全國	教育部全國社大網課程	https://cc.moe.edu.tw/view/public_page/pub_load_ajax.php	POST form: user_id=0, json_str_aes={"act_type":"load_course_list","quarter":"1151",...,"i_display_start":0,"i_display_length":20000}, aoData=[]	json	13011	2026-09-13	落後：中位數開課後50天建檔	無	無（地址文字）	已接	robots Allow /；歷史層＋全國覆蓋
+moe-cc-filter	社大	全國	教育部全國社大網篩選清單	https://cc.moe.edu.tw/view/public_page/pub_load_ajax.php	POST form: user_id=0, json_str={"act_type":"load_school_quarter_list","system_group":"AFTER1101"}	json	22縣市/90校/24期別	2026-09-11	—	—	—	可用	社大 entity 種子
+moe-cc-detail	社大	全國	教育部全國社大網課程詳情	https://cc.moe.edu.tw/view/public_page/pub_load_ajax.php	POST form: user_id=0, json_str={"act_type":"load_course_content","course_id":N}	json	逐筆	2026-09-11	同上	無	無	可用	internal_course_code＝校內代碼；course_intro、course_cat_name、create/verified_datetime
+moe-cc-sites	社大	全國	社區大學據點資訊（dataset 40181）	https://depart.moe.edu.tw/ed2400/Common/HitCount.ashx?p=C535150A0F617C6860CE01B098F7F2109789188FC445F71F5A68B1573A6310F8042DF60722082B0858719ECE87C7AD0715382C4021794C49AA4D5C2DF38858B39B7E17D2603DD16F955BC608E943D06B1CC821D950486A55C78E377A175B8AB6&type=FB01D469347C76A7&s=C9B2F32BA415989D	GET	csv	12859	2026-09-11	每學期	—	無（地址）	已接	教室 venue 種子
+taipei-cc	社大	縣市	臺北市社大聯網	https://lle.tp.edu.tw/api/course?limit=5000&page=1	GET	json	6045	2026-09-11	即時	openStatus 列舉	無	已接	含樂齡學堂/樂齡中心/成人教育班
+ntpc-cc	社大	縣市	新北市社大聯合資訊網	https://cci.ntpc.edu.tw/cht/index.php?code=list&ids=15&page=1	GET	html	1500	2026-09-12	即時	開課狀況列舉	無	已接	列表：開課日/分類/行政區/社大/課名/教師/星期/狀況
+taichung-cc	社大	縣市	臺中市社大共學Full聯網	https://cc.tc.edu.tw/application/index/course-search-data?semester_state=383&kind=courseTabList&page=1	GET	html片段	1295	2026-09-13	即時	報名人數/名額 數字	無	已接	—
+cc-shared-platform	社大	單位	社大共用報名平台（twcc/twcu/twco/tycc/course.org.tw/frog.tw）	https://ss.twcc.org.tw/course/m_course_list.php	GET	html	4077	2026-09-13	即時	開/滿/停開 旗標	無	已接	26 主機約30校；detail u= 雜湊每學期換；2026-09-13 加入 fonghu（新竹縣，89 門），ty/lsy 仍 503
+yunlin-cc	社大	單位	雲林4社大共用	https://www.seacoast.url.tw/ajax/SchoolTimetable-data.php	GET	未解析	389	2026-09-13	—	—	—	已接	favorlangriver/seacoast/ylsxcu/ylpucu
+taoyuan-cc-portal	社大	縣市	桃園市社大聯網	https://ta.twcc.org.tw/front/search.php	GET	html	1206	2026-09-13	—	—	—	已接	首頁無115字樣
+tainan-cc-portal	社大	縣市	臺南市社大	https://tncu.tn.edu.tw/System/main/Course/Index.php?Com=Xinying	GET	html	1160	2026-09-13	—	—	—	已接	七校合計；各校期別不同步（曾文為當期），處理方式見 transform/normalize/tainan-cc-portal.mjs 檔頭
+hsinchu-county-cc-portal	社大	縣市	新竹縣社大	https://hccu.eduweb.tw/System/main/Home/Index.php	GET	html	—	2026-09-13	—	—	—	不接	站內課程是 104 學年廢棄資料（Detail 一律無資料）；現役系統在共用平台，缺的 fonghu 已併入 cc-shared-platform
+nantou-cc-portal	社大	縣市	南投縣社大聯網	https://ntcun.ntct.edu.tw/Modules/Course/Index.php?Unit=1	GET	html	218	2026-09-13	—	—	—	已接	首頁有115字樣
+penghu-cc-portal	社大	縣市	澎湖縣社大	https://www.penghu.gov.tw/phcc/home.jsp?id=40	GET	html	50	2026-09-13	—	—	—	已接	人工維護的 div 週課表，無費用／名額／狀態；版面脆弱，解析採寬容策略
+hualien-cc	社大	單位	花蓮社大（cloudschool）	https://hualien.cloudschool.com.tw/application/index/course-search-data?semester_state=18&kind=courseTabList&page=1	GET	html	72	2026-09-13	—	—	—	已接	—
+keelung-cc-portal	社大	縣市	基隆市	https://lifelearn.kl.edu.tw/index.php?sub=sites&subid=1	GET	—	—	2026-09-11	—	—	—	失效	404
+kinmen-cc	社大	單位	金門社大	https://thkcc.com.tw/	GET	—	—	2026-09-11	—	—	—	失效	403
+taitung-cc	社大	單位	臺東社大	http://tcu.nttu.edu.tw/	GET	—	—	2026-09-11	—	—	—	失效	StateError
+sports-venues	運動中心	全國	全國運動場館資訊（dataset 22849）	https://ws.sports.gov.tw/FS01/FilePath/1/relfile/164/10269/5a511d68-e6b8-42ee-a449-acc395135268.csv	GET	csv	15001	2026-09-11	每年	—	有	已接	官網欄位部分失效（泰山/淡水/蘆洲）
+taipei-sports-centers	運動中心	縣市	臺北市各區運動中心（data.taipei 121203）	https://data.taipei/api/dataset/80be7612-593f-4795-9935-a10ce0f7b75b/resource/e7c46724-3517-4ce5-844f-5a4404897b7d/download	GET	csv	12	2026-09-13	每年	—	有	已接	—
+xuanen-cyc	運動中心	營運商	救國團報名系統（軒恩）	https://scr.cyc.org.tw/tpNN.aspx?Module=class_booking&files=class_info&B=<類別>	GET	html	合計 3859（三列同一支）	2026-09-13	即時	滿班人數/可報名人數	無（場館對照）	已接	實作合併為 ingest/sources/xuanen-centers.mjs（34 站）
+xuanen-wdyg	運動中心	營運商	舞動陽光報名系統（軒恩）	https://bwd.xuanen.com.tw/wdNN.aspx?Module=class_booking&files=class_info&B=<類別>	GET	html	合計 3859（三列同一支）	2026-09-13	即時	滿班人數/可報名人數	無（場館對照）	已接	實作合併為 ingest/sources/xuanen-centers.mjs（34 站）
+xuanen-other	運動中心	營運商	其他軒恩站點	https://fe.xuanen.com.tw/fe01.aspx ; https://danson.xuanen.com.tw/ds02.aspx ; https://bbq.xuanen.com.tw/bq01.aspx ; https://bnt.xuanen.com.tw/nt01.aspx ; https://www.ymca.com.tw/slsc68.aspx	GET	html	合計 3859（三列同一支）	2026-09-13	即時	滿班人數/可報名人數	無（場館對照）	已接	實作合併為 ingest/sources/xuanen-centers.mjs（34 站）
+17fit	運動中心	營運商	17fit（南平/五股/平鎮）	https://npsc.17fit.com/studios	GET	spa	—	2026-09-11	—	—	—	不接	rate-limit 等待頁，依 CONTRACT 不繞過
+bookfastpos	運動中心	單位	前金運動中心	https://ec.bookfastpos.com/eMXRXL3Rvo/	GET	—	—	2026-09-13	—	—	—	不接	課表路由回 ROUTE_NOT_FOUND、commodity/list 回「不是合法的 API 呼叫者」，需廠商憑證，依 CONTRACT §2 不接
+taipei-venue-booking	運動中心	縣市	臺北市運動中心預約系統	https://booking-tpsc.sporetrofit.com/	GET	html	—	2026-09-11	—	—	—	不適用	場地租借，無課程
+moe-senior-centers	樂齡	全國	全國樂齡學習中心聯繫資料（dataset 163769）	https://ws.moe.edu.tw/Download.ashx?u=LzAwMS9VcGxvYWQvNi9yZWxmaWxlLzc4NTYvOTAxNTAvMzJkZjRlNmUtMDU4OC00YTEwLTg4NDctM2U1NjEwNDg0ODM0LmNzdg%3d%3d&n=5YWo5ZyL5qiC6b2h5a2457%2bS5Lit5b%2bD6IGv57mr6LOH5paZLmNzdg%3d%3d&icon=..csv	GET	csv	368	2026-09-11	不定期	—	無（地址）	已接	entity 種子
+moe-senior-portal	樂齡	全國	教育部樂齡學習網課程查詢	https://socialedu2.moe.gov.tw/	GET	—	—	2026-09-11	—	—	—	不接	導向登入頁
+ntpc-ezlearn	樂齡	縣市	新北市數位樂學網	https://ezlearn.ntpc.gov.tw/courses	GET	html	1024	2026-09-12	即時	招生人數	無	已接	樂齡中心/松年大學/婦女大學；詳情 /courses/detail/<id>
+taichung-senior-courses	長青	縣市	臺中市長青學苑課程資料（dataset 91935）	https://data.gov.tw/dataset/91935	GET	csv	1885（僅113年）	2026-09-11	停更	招生名額/課程狀態	有（TWD97）	過期	來源系統 old65.taichung.gov.tw 仍在運作
+taipei-senior-points	長青	縣市	臺北市銀髮族據點課程資訊（dataset 121911）	https://data.taipei/api/dataset/7566463a-b145-499a-b68c-f6fcb680e5c4/resource/62256beb-fbfa-4557-af86-7e03e7fd132c/download	GET	csv	420	2026-09-13	年度	人數	無	已接	第二階段
+tainan-senior	長青	縣市	臺南市長青學苑（dataset 172378）	https://data.gov.tw/dataset/172378	GET	csv	125（113年）	2026-09-11	不定期	無	無	過期	第二階段
+taiwanjobs	職訓	全國	台灣就業通職訓課程	https://course.taiwanjobs.gov.tw/api/Course/paging	POST form: Limit, Offset, SourceType(1-7), TrainingPeriod=1	json	2396	2026-09-13	即時（UpdateTime）	無	無（縣市）	已接	涵蓋 6060／6614
+mol-6060	職訓	全國	職業訓練課程資訊（dataset 6060）	https://apiservice.mol.gov.tw/OdService/download/A17000000J-000007-eqj	GET	json	467	2026-09-13	不定期	數量	無	已接	僅分署自辦；被 taiwanjobs 涵蓋
+mol-6614	職訓	全國	分署自辦在職訓練（dataset 6614）	https://apiservice.mol.gov.tw/OdService/download/A17000000J-020009-A8I	GET	csv	118	2026-09-13	每月	無	無	已接	被 taiwanjobs 涵蓋
+ncl-events	圖書館	國家館	國家圖書館 RSS（seh.tw 已接）	https://web.ncl.edu.tw/event/FMEvents/Rss	GET	xml	8	2026-09-13	即時	無	defaultVenue	已接	seh.tw ingest/sources/ncl-events.mjs
+nlpi-activities	圖書館	國家館	國立公共資訊圖書館活動日曆	https://activity.nlpi.edu.tw/ActiveList.aspx?n=3&sms=10294&page=1&PageSize=12	GET	html	54	2026-09-13	即時	—	defaultVenue	已接	改用 activity.nlpi.edu.tw/ActiveList.aspx；舊 recap 路徑只拿得到前 10 筆
+ncl-actio	圖書館	國家館	國家圖書館活動報名系統	https://actio.ncl.edu.tw/	GET	—	—	2026-09-11	—	—	—	失效	DNS 查不到
+national-public-libraries	圖書館	全國	公共圖書館基本資料（seh.tw 已接）	https://plisnet.nlpi.edu.tw/api/API/LibraryInfoData	GET	json	22	2026-09-13	不定期	—	有	已接	seh.tw ingest/sources/national-public-libraries.mjs
+forest-nature-edu	其他	全國	林業保育署自然教育中心課程（dataset 70984）	https://data.moa.gov.tw/Service/OpenData/ForestNcLesson.aspx?FOTT=CSV&IsTransData=1&UnitId=D48	GET	csv	124	2026-09-13	不定期	無	無	已接	第二階段
+tnpl-activities	圖書館	縣市	臺南市立圖書館活動報名	https://www.tnpl.tn.edu.tw/api/ActivityList.ashx	GET	json	49	2026-09-13	即時	總名額	defaultVenue	已接	館方公開 API；可報名數是總名額不是剩餘，故不填 available
+ntpc-library-activities	圖書館	縣市	新北市立圖書館活動報名	https://atpass.ntpclib.gov.tw/activities/8e109e8bb57a4b44b21e31c34db87dba	GET	html	54	2026-09-13	即時	已報名/名額	defaultVenue	已接	已報名/名額兩數皆有，相減得剩餘；候補不併入 available
