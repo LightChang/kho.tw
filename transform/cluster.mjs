@@ -24,13 +24,22 @@ const FULLWIDTH = /[！-～]/g;
 const toHalf = (s) => s.replace(FULLWIDTH, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0));
 
 // 「臺北市松山社區大學」「松山社大」「台北市松山社區大學」要視為同一所
+const COUNTY_PREFIX = /^(臺北市|新北市|桃園市|臺中市|臺南市|高雄市|基隆市|新竹市|新竹縣|嘉義市|嘉義縣|苗栗縣|彰化縣|南投縣|雲林縣|屏東縣|宜蘭縣|花蓮縣|臺東縣|澎湖縣|金門縣|連江縣)/;
+const SCHOOL_SUFFIX = /(社區大學|社大|樂齡學習中心|樂齡中心|國民運動中心|運動中心)$/;
+
 export function normSchool(raw) {
-  return toHalf(String(raw ?? ''))
-    .replace(/台/g, '臺')
-    .replace(/\s+/g, '')
-    .replace(/^(臺北市|新北市|桃園市|臺中市|臺南市|高雄市|基隆市|新竹市|新竹縣|嘉義市|嘉義縣|苗栗縣|彰化縣|南投縣|雲林縣|屏東縣|宜蘭縣|花蓮縣|臺東縣|澎湖縣|金門縣|連江縣)/, '')
-    .replace(/(社區大學|社大|樂齡學習中心|樂齡中心|國民運動中心|運動中心)$/, '')
-    .trim();
+  const s = toHalf(String(raw ?? '')).replace(/台/g, '臺').replace(/\s+/g, '').trim();
+  const key = s.replace(COUNTY_PREFIX, '').replace(SCHOOL_SUFFIX, '').trim();
+  if (key) return key;
+  // 「澎湖縣社區大學」這種「縣市名＋類型」、沒有額外校名的學校，剝完前綴與後綴會
+  // 變成空字串。而下面 keysOf() 的每條規則都要求 school 非空，所以這些學校的課
+  // **一條合併鍵都產生不出來**，永遠各自 singleton——實測澎湖 137、花蓮 122、
+  // 臺東 105 共 364 筆 L1，來源數清一色是 1。
+  //
+  // 退而求其次用地名當識別：剝掉後綴、再去掉結尾的「縣」或「市」。
+  // 「澎湖縣社區大學」與簡稱「澎湖社大」都收斂成「澎湖」，兩邊才對得上
+  //（全站碰撞檢查只撞出這三組同校異名，沒有撞到別的學校）。
+  return s.replace(SCHOOL_SUFFIX, '').replace(/[縣市]$/, '').trim();
 }
 
 // 「【11/18開課】抒壓玩水彩（六週）」→「抒壓玩水彩」
