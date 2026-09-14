@@ -21,6 +21,7 @@ import { readFile, writeFile, mkdir, cp, rm } from 'node:fs/promises';
 import path from 'node:path';
 import { CSS } from './theme.mjs';
 import { renderHome } from './home.mjs';
+import { renderMap } from './map.mjs';
 import {
   courseJsonLd, itemListJsonLd, pageListJsonLd, venueJsonLd, courseUrl, venueUrl, teacherUrl, SITE_URL,
 } from './jsonld.mjs';
@@ -67,7 +68,7 @@ function page(title, body, { description = '', jsonld = null, canonical = '', ex
     : '';
   const chrome = bare ? body : `
 <header class="topbar"><div class="inner"><b><a href="/">kho.tw</a></b>
-<a href="/open.html">可報名</a><a href="/topics.html">主題</a><a href="/types.html">類型</a><a href="/cities.html">縣市</a><a href="/teachers.html">講師</a><a href="/search.html">搜尋</a></div></header>
+<a href="/open.html">可報名</a><a href="/topics.html">主題</a><a href="/types.html">類型</a><a href="/cities.html">縣市</a><a href="/map.html">地圖</a><a href="/teachers.html">講師</a><a href="/search.html">搜尋</a></div></header>
 <main class="wrap">${body}</main>`;
   return `<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -211,6 +212,9 @@ async function main() {
   await rm(DIST, { recursive: true, force: true });
   await mkdir(DIST, { recursive: true });
   await cp(path.join(ROOT, 'public', 'index.json'), path.join(DIST, 'index.json'));
+  // Leaflet 自己放一份（見 site/map.mjs 的理由），連同它的 images/ 一起複製。
+  // 從第三方 CDN 載會讓整站多一個外部信任對象，而 NLSC 圖磚已經是不可避免的那一個。
+  await cp(path.join(ROOT, 'public', 'lib'), path.join(DIST, 'lib'), { recursive: true });
 
   // ── 首頁（滿版一頁） ──────────────────────────────
   await write('index.html', renderHome(home, { page }),
@@ -356,6 +360,35 @@ ${list.slice(0, 200).map(courseCard).join('')}`, {
       jsonld: venueJsonLd(v, list),
     }), { group: 'venues', lastmod: listLastmod(list), changefreq: 'weekly', priority: '0.5' });
   }
+
+  // ── 地圖頁 ────────────────────────────────────
+  // 場館為單位聚合，不是課程——19,671 門有座標的課只落在 1,782 個地點上，
+  // 按場館聚合後資料從 1.3 MB 降到 78 KB，地圖也不會同一個點疊幾十個標記。
+  const mapRows = [];
+  let mapCourses = 0;
+  let mapOpen = 0;
+  for (const [id, list] of coursesByVenue) {
+    const v = venues.get(id);
+    if (!v || v.lat == null || v.lng == null) continue;
+    const open = list.filter((c) => c.enrollment?.status === 'open').length;
+    mapCourses += list.length;
+    mapOpen += open;
+    mapRows.push([
+      v.slug, v.name, v.city ?? '', v.district ?? '',
+      // 小數 5 位約 1 公尺，遠超過本站座標實際的精度，再多位數只是灌大檔案
+      Number(v.lat.toFixed(5)), Number(v.lng.toFixed(5)),
+      list.length, open,
+    ]);
+  }
+  mapRows.sort((a, b) => b[6] - a[6] || String(a[0]).localeCompare(String(b[0])));
+  await writeFile(path.join(DIST, 'venues-map.json'), JSON.stringify(mapRows), 'utf-8');
+  await write('map.html', renderMap({
+    page,
+    venueCount: mapRows.length,
+    courseCount: mapCourses,
+    openCount: mapOpen,
+    updatedAt: home.updatedAt,
+  }), { group: 'pages', lastmod: home.updatedAt, changefreq: 'weekly', priority: '0.8' });
 
   // ── 講師頁 ────────────────────────────────────
   // 全站 8,672 個講師姓名原本只出現在課程頁的一列文字裡，沒有任何頁面回答得了

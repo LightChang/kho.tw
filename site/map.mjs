@@ -1,0 +1,191 @@
+// site/map.mjs
+// 地圖頁：全台上課地點分布 ＋「找我附近的課」。
+//
+// 四個刻意的選擇，改之前先看理由：
+//
+//   1. 圖磚用內政部國土測繪中心的「臺灣通用電子地圖」（EMAP6，無等高線版），
+//      不用 OpenStreetMap。台灣的路名、門牌與行政界線比 OSM 準；免申請免金鑰；
+//      2026-09-14 實測 access-control-allow-origin:*、回應 40–110ms、無縮放層級限制。
+//      授權是「政府資料開放授權條款－第1版」，**要求標示出處**，所以頁面底部固定標示。
+//
+//   2. Leaflet 自己放一份在 /lib/，不從第三方 CDN 載。整站原本零外部連線，
+//      接了地圖之後訪客只會多連 NLSC 圖磚主機一個——那是功能必需，cdnjs 不是。
+//
+//   3. 1,782 個點用 canvas renderer 畫 circleMarker，不引入 markercluster 外掛。
+//      這個量在 canvas 上不需要叢集，也就不必多一個外部依賴。
+//
+//   4. **座標精度的警語不是客套話。** 這些點有 635 個來自名錄門牌比對、
+//      97 個來自場館名稱比對，只夠回答「在哪一區」，不夠回答「走路五分鐘會不會到」。
+//      所以「找附近」的結果一律標示直線距離並註明是概略位置，不做路線規劃、
+//      不宣稱「步行 N 分鐘」。做不到的事就不要在介面上暗示做得到。
+//
+// 資料來自 /venues-map.json（由 site/build.mjs 產生），欄位是陣列不是物件，省體積：
+//   [slug, 場館名, 縣市, 行政區, lat, lng, 課程數, 招生中數]
+// 實測 1,782 個點、346 KB。對照 /index.json 是 3.63 MB——地圖按「場館」聚合而不是
+// 按「課程」，19,671 門有座標的課只落在 1,782 個地點上，這一步把資料量壓掉九成。
+import { SITE_URL } from './jsonld.mjs';
+
+export function renderMap({ page, venueCount, courseCount, openCount, updatedAt }) {
+  const body = `
+<div class="card">
+  <h2>上課地點地圖</h2>
+  <div class="meta">全台 ${venueCount.toLocaleString('en-US')} 個有座標的上課地點，共 ${courseCount.toLocaleString('en-US')} 門課，其中 ${openCount.toLocaleString('en-US')} 門正在招生。</div>
+  <div class="meta-2">點一下地圖上的圓點看該地點的課程。圓點越大代表課越多，綠色代表目前有課在招生。</div>
+</div>
+
+<div class="card map-card">
+  <div class="map-tools">
+    <button id="near" type="button">找我附近的課</button>
+    <select id="city" aria-label="跳到指定縣市"><option value="">跳到縣市⋯</option></select>
+    <span class="meta-2" id="mapmsg"></span>
+  </div>
+  <div id="map" role="application" aria-label="全台上課地點分布圖"></div>
+</div>
+
+<div class="card" id="nearbox" hidden>
+  <h3>離你最近的上課地點</h3>
+  <div class="meta-2">直線距離，不是步行距離。本站的座標由地址批次比對而來，<b>只夠分辨到「哪一區」</b>——
+  同一個門牌可能對到整棟大樓或整個校區，實際位置請以開課單位公告為準。</div>
+  <ol id="nearlist" class="nearlist"></ol>
+</div>
+
+<div class="card">
+  <div class="meta-2">
+    圖磚來源：<a href="https://maps.nlsc.gov.tw/" rel="noopener">內政部國土測繪中心</a>臺灣通用電子地圖，
+    依「政府資料開放授權條款－第1版」使用。地圖程式為 <a href="https://leafletjs.com/" rel="noopener">Leaflet</a> 1.9.4（本站自帶，不從第三方載入）。
+    地點座標為本站以地址批次比對產生，資料更新於 ${updatedAt}。
+  </div>
+</div>
+
+<link rel="stylesheet" href="/lib/leaflet.css">
+<script src="/lib/leaflet.js"></script>
+<script>
+(function () {
+  var TAIWAN = [23.8, 121.0];
+  var map = L.map('map', { center: TAIWAN, zoom: 8, minZoom: 7, maxZoom: 18, preferCanvas: true });
+
+  L.tileLayer('https://wmts.nlsc.gov.tw/wmts/EMAP6/default/GoogleMapsCompatible/{z}/{y}/{x}', {
+    attribution: '圖磚 © <a href="https://maps.nlsc.gov.tw/">內政部國土測繪中心</a>',
+    maxZoom: 18,
+  }).addTo(map);
+
+  var renderer = L.canvas({ padding: 0.3 });
+  var msg = document.getElementById('mapmsg');
+  var rows = [];
+  var layer = L.layerGroup().addTo(map);
+
+  // 圓點半徑依課程數，但要有上下限——不設上限的話，臺北幾個大場館會蓋掉整個台北。
+  function radius(n) {
+    var r = 3 + Math.sqrt(n) * 1.1;
+    return r > 14 ? 14 : r;
+  }
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+  }
+
+  function draw() {
+    layer.clearLayers();
+    for (var i = 0; i < rows.length; i++) {
+      var r = rows[i];
+      var open = r[7] > 0;
+      var m = L.circleMarker([r[4], r[5]], {
+        renderer: renderer,
+        radius: radius(r[6]),
+        color: open ? '#1a7f4f' : '#8c94a1',
+        weight: 1,
+        fillColor: open ? '#1a7f4f' : '#8c94a1',
+        fillOpacity: 0.45,
+      });
+      m.bindPopup(
+        '<b><a href="/venue/' + encodeURIComponent(r[0]) + '.html">' + esc(r[1]) + '</a></b><br>'
+        + esc(r[2]) + esc(r[3]) + '<br>'
+        + r[6] + ' 門課' + (r[7] > 0 ? '，其中 <b>' + r[7] + ' 門招生中</b>' : '（目前沒有招生中的課）')
+      );
+      layer.addLayer(m);
+    }
+  }
+
+  fetch('/venues-map.json').then(function (r) { return r.json(); }).then(function (data) {
+    rows = data;
+    draw();
+    // 縣市下拉：從資料本身生，不寫死清單
+    var seen = {};
+    var sel = document.getElementById('city');
+    for (var i = 0; i < rows.length; i++) {
+      var c = rows[i][2];
+      if (!c || seen[c]) continue;
+      seen[c] = 1;
+      var o = document.createElement('option');
+      o.value = c; o.textContent = c;
+      sel.appendChild(o);
+    }
+    sel.addEventListener('change', function () {
+      var c = sel.value;
+      if (!c) { map.setView(TAIWAN, 8); return; }
+      var pts = [];
+      for (var i = 0; i < rows.length; i++) if (rows[i][2] === c) pts.push([rows[i][4], rows[i][5]]);
+      if (pts.length) map.fitBounds(pts, { padding: [30, 30] });
+    });
+  }).catch(function () {
+    msg.textContent = '地點資料載入失敗，請重新整理。';
+  });
+
+  // 直線距離（Haversine）。不做路線規劃：本站座標的精度撐不起「步行幾分鐘」這種說法。
+  function distanceKm(aLat, aLng, bLat, bLng) {
+    var R = 6371;
+    var dLat = (bLat - aLat) * Math.PI / 180;
+    var dLng = (bLng - aLng) * Math.PI / 180;
+    var s = Math.sin(dLat / 2) * Math.sin(dLat / 2)
+      + Math.cos(aLat * Math.PI / 180) * Math.cos(bLat * Math.PI / 180)
+        * Math.sin(dLng / 2) * Math.sin(dLng / 2);
+    return R * 2 * Math.atan2(Math.sqrt(s), Math.sqrt(1 - s));
+  }
+
+  document.getElementById('near').addEventListener('click', function () {
+    if (!navigator.geolocation) { msg.textContent = '這個瀏覽器不支援定位。'; return; }
+    if (!rows.length) { msg.textContent = '地點資料還在載入，請稍候。'; return; }
+    msg.textContent = '定位中⋯';
+    navigator.geolocation.getCurrentPosition(function (pos) {
+      var la = pos.coords.latitude, ln = pos.coords.longitude;
+      msg.textContent = '';
+      map.setView([la, ln], 13);
+      L.circleMarker([la, ln], {
+        renderer: renderer, radius: 8, color: '#1f5bbf', weight: 2,
+        fillColor: '#1f5bbf', fillOpacity: 0.35,
+      }).addTo(layer).bindPopup('你的位置（由瀏覽器提供）').openPopup();
+
+      var near = [];
+      for (var i = 0; i < rows.length; i++) {
+        var r = rows[i];
+        near.push({ r: r, d: distanceKm(la, ln, r[4], r[5]) });
+      }
+      near.sort(function (a, b) { return a.d - b.d; });
+      var list = document.getElementById('nearlist');
+      list.innerHTML = '';
+      for (var j = 0; j < 20 && j < near.length; j++) {
+        var it = near[j], row = it.r;
+        var li = document.createElement('li');
+        li.innerHTML = '<a href="/venue/' + encodeURIComponent(row[0]) + '.html">' + esc(row[1]) + '</a>'
+          + '<span class="meta-2"> ' + esc(row[2]) + esc(row[3]) + '　'
+          + (it.d < 1 ? Math.round(it.d * 1000) + ' 公尺' : it.d.toFixed(1) + ' 公里')
+          + '　' + row[6] + ' 門課'
+          + (row[7] > 0 ? '、<b>' + row[7] + ' 門招生中</b>' : '') + '</span>';
+        list.appendChild(li);
+      }
+      document.getElementById('nearbox').hidden = false;
+      document.getElementById('nearbox').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, function (err) {
+      msg.textContent = err.code === 1
+        ? '你拒絕了定位權限，所以沒辦法找附近。可以改用上面的縣市選單。'
+        : '定位失敗，可以改用上面的縣市選單。';
+    }, { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 });
+  });
+})();
+</script>`;
+
+  return page('上課地點地圖｜kho.tw', body, {
+    description: `全台 ${venueCount.toLocaleString('en-US')} 個成人課程上課地點的分布地圖，可以找離你最近的課。`,
+    canonical: `${SITE_URL}/map.html`,
+  });
+}

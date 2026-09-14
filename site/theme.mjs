@@ -58,6 +58,16 @@ a:hover{text-decoration:underline}
 .wrap{max-width:1040px;margin:0 auto;padding:28px 20px 64px}
 .topbar{background:var(--surface);border-bottom:1px solid var(--line)}
 .topbar .inner{max-width:1040px;margin:0 auto;padding:14px 20px;display:flex;gap:18px;align-items:baseline}
+/* 手機：導覽列改成單行橫向捲動，不換行。
+   2026-09-14 加了「地圖」之後變成 8 個連結，390px 寬會折成三行、佔掉 125px，
+   等於首屏 15% 被導覽列吃掉。改成可橫向滑動後固定一行（實測 52px）。
+   -webkit-overflow-scrolling 讓 iOS 有慣性；scrollbar 在手機上本來就不顯示。 */
+@media (max-width:560px){
+  .topbar .inner{flex-wrap:nowrap;overflow-x:auto;gap:14px;padding:12px 16px;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .topbar .inner::-webkit-scrollbar{display:none}
+  .topbar a,.topbar b{flex:none;white-space:nowrap}
+}
 .topbar b{font-size:var(--fs-lg)}
 .topbar a{color:var(--ink)}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
@@ -73,6 +83,23 @@ th{color:var(--ink-2);font-weight:600;white-space:nowrap}
 .chips a{display:inline-flex;align-items:baseline;gap:6px;padding:4px 12px;border:1px solid var(--line);
   border-radius:999px;background:var(--surface);font-size:var(--fs-sm)}
 .chips .n{color:var(--ink-3);font-size:var(--fs-xs)}
+
+/* 地圖頁（見 site/map.mjs）。地圖容器一定要有明確高度，Leaflet 不會自己撐開。 */
+.map-card{padding:14px}
+.map-tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+.map-tools button{font:inherit;font-weight:700;padding:10px 18px;border:0;border-radius:var(--radius);
+  background:var(--link);color:#fff;cursor:pointer}
+.map-tools select{font:inherit;padding:9px 12px;border:1px solid var(--line);
+  border-radius:var(--radius);background:var(--surface);color:var(--ink)}
+#map{height:min(70vh,620px);border-radius:var(--radius);border:1px solid var(--line)}
+/* 手機把地圖壓矮一點，否則下面的說明與「附近」清單整個被推出畫面外 */
+@media (max-width:560px){ #map{height:min(58vh,420px)} .map-tools button,.map-tools select{flex:1} }
+.nearlist{list-style:none;margin:0;padding:0}
+.nearlist li{border-top:1px solid var(--line);padding:9px 2px}
+.nearlist li:first-child{border-top:0}
+/* Leaflet 的彈出視窗沿用站內字級，不用它預設的 12px——本站讀者是成人與樂齡族群 */
+.leaflet-popup-content{font:var(--fs-sm)/1.6 system-ui,"Noto Sans TC","PingFang TC",sans-serif}
+.leaflet-container{font:var(--fs-xs)/1.5 system-ui,"Noto Sans TC","PingFang TC",sans-serif}
 `;
 
 // 首頁專用：滿版一頁，橫豎都不可捲
