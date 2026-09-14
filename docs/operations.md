@@ -213,3 +213,55 @@ curl -s https://kho.tw/sitemap.xml | head -3
 - **`KHO_SITE_URL` 設錯會污染全站 42,461 頁**的 canonical、sitemap 與 JSON-LD，
   等於叫搜尋引擎去抓不存在的網址。預設值寫在 workflow 裡（`https://kho.tw`），
   要改網址時設 repository variable `KHO_SITE_URL` 覆寫，不必動程式。
+
+## 9. Search Console 與 Analytics
+
+兩個都做成開關：`KHO_GSC_VERIFY` 與 `KHO_GA_ID` 這兩個 repository variable
+沒設的話，產出的 42,461 頁**一個 Google 相關標籤都不會有**——不留空 meta、
+也不載入任何腳本。要停用追蹤就把變數刪掉再跑一次，不必改程式。
+
+設定位置：repo → Settings → Secrets and variables → Actions → **Variables**（不是 Secrets，
+這兩個值本來就會出現在網頁原始碼裡，不是機密）。
+
+### Search Console：建議用 DNS TXT
+
+你正在改 GoDaddy 的 DNS，順手一起做最省事，而且這是**網域層級**驗證：
+涵蓋 http/https、www 與所有子網域，將來換主機、換部署方式都不會失效，
+也不必在四萬多頁裡塞一個 meta 標籤。
+
+1. Search Console → 新增資源 → 選左邊的「**網域**」（不是「網址前置字元」）
+2. 輸入 `kho.tw`，它會給一段 `google-site-verification=xxxxxxxx`
+3. 在 GoDaddy 新增一筆 TXT 記錄：名稱 `@`、值就是那整段
+4. 回 Search Console 按驗證（DNS 生效前會失敗，等十分鐘再試）
+
+若你不想動 DNS，備援是設 `KHO_GSC_VERIFY` 這個 variable（值填驗證字串的
+`content` 部分），重新部署後每頁的 `<head>` 都會有那個 meta，再用「網址前置字元」驗證。
+
+### 提交 sitemap
+
+驗證通過後：Search Console → Sitemaps → 輸入 `https://kho.tw/sitemap.xml` → 提交。
+
+只要提交這一個。它是 sitemap index，底下 5 個分檔 Google 會自己去抓。
+限制是單檔 50 MB／50,000 個網址，本站最大的分檔是 5.44 MB／20,000 個，離上限很遠。
+
+### Analytics（GA4）
+
+1. GA 後台建立資源 → 資料串流 → 網站 → 填 `https://kho.tw`
+2. 複製那串**評估 ID**，格式是 `G-` 開頭（不是 `UA-`，也不是 `GTM-`）
+3. 設成 repository variable `KHO_GA_ID`
+4. 重新部署：`gh workflow run deploy --field rebuild=true`
+
+程式會擋掉格式錯誤的 ID（填成 `UA-`、`GTM-` 或純數字都會讓 build 失敗並說明原因）。
+不擋的話，全站會載入一個永遠收不到資料的腳本，而畫面上完全看不出來。
+
+安裝碼逐字取自 Google 官方說明，放在 `<head>` 開啟標籤之後立刻——官方要求的位置。
+順序錯了不會有任何錯誤訊息，只會少收資料。
+
+### 這件事的取捨
+
+加了 `KHO_GA_ID` 之後，**全站 42,461 頁的每位訪客都會連到 googletagmanager.com**，
+並且被設一個 `_ga` cookie。在此之前本站唯一的外部連線是地圖頁的 NLSC 圖磚（功能必需）。
+
+台灣個資法沒有強制 cookie 同意；若在意歐盟訪客的 GDPR，就需要另外做同意機制。
+不想要追蹤又想看流量的話，Cloudflare Web Analytics 之類的無 cookie 方案是替代選項，
+但那要另外接，目前沒做。

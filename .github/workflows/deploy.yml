@@ -98,6 +98,11 @@ jobs:
           # 設錯等於叫搜尋引擎去抓不存在的網域。
           # 自訂網域 kho.tw 由 public/CNAME 指定；要改網址時設 repository variable 覆寫即可。
           KHO_SITE_URL: ${{ vars.KHO_SITE_URL || 'https://kho.tw' }}
+          # 兩個都**沒設就完全不輸出**：不留空 meta、也不載入任何 Google 腳本。
+          # 要停用追蹤時把 repository variable 刪掉再跑一次，不必改程式。
+          # 設定位置：repo → Settings → Secrets and variables → Actions → Variables。
+          KHO_GA_ID: ${{ vars.KHO_GA_ID }}
+          KHO_GSC_VERIFY: ${{ vars.KHO_GSC_VERIFY }}
         run: |
           node site/build.mjs
           node site/validate-jsonld.mjs
