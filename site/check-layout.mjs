@@ -30,24 +30,53 @@ export const CHECK_LAYOUT = `(() => {
 
   // 內容被裁：容器裝不下自己的內容
   const clipped = [];
-  for (const el of document.querySelectorAll('.home, .ask, .doors, .door, .hot, .hot ol, .hot li, .foot, .foot ul')) {
+  for (const el of document.querySelectorAll('.home, .ask, .doors, .door, .hot, .hot li, .foot, .foot ul')) {
     if (el.offsetParent === null && el !== document.querySelector('.home')) continue;
     if (el.scrollHeight > el.clientHeight + 1) {
       clipped.push((el.className || el.tagName) + ' 內容 ' + el.scrollHeight + 'px > 容器 ' + el.clientHeight + 'px');
     }
   }
 
+  // .hot ol 不在上面那份清單裡，因為它「刻意」裁切：容器高度是 round(down, 100%, --row-h)，
+  // 十二列一律渲染，放不下的整列被裁在列與列的邊界上。對它要驗的不是「有沒有被裁」，
+  // 而是「有沒有列被切在中間」——只要出現半截列，就是 --row-h 跟真實列高對不上。
+  // （2026-09-14 把 46.6px 寫成 47px，八列累積 3.2px 誤差，第九列就露出一條。）
+  const halfCut = [];
+  const hotOl = document.querySelector('.hot ol');
+  if (hotOl && hotOl.offsetParent !== null) {
+    const olTop = hotOl.getBoundingClientRect().top, olH = hotOl.clientHeight;
+    let n = 0;
+    for (const li of hotOl.querySelectorAll('li')) {
+      n++;
+      const r = li.getBoundingClientRect();
+      const top = Math.round(r.top - olTop), bottom = Math.round(r.bottom - olTop);
+      if (top < olH - 1 && bottom > olH + 1) {
+        halfCut.push('快額滿第 ' + n + ' 列被切在中間（' + top + '–' + bottom + 'px，容器 ' + olH + 'px）');
+      }
+    }
+  }
+
   const outside = regions.filter((r) => r.bottom > vh + 1 || r.right > vw + 1).map((r) => r.sel);
+
+  // 660px 以下首頁刻意改成可捲（見 theme.mjs 的同名斷點）：門卡內容有物理下限，
+  // 在 18px 的字級下限之下約 70px，而 460 的中段容器只有 16px。容器再小就只有兩條路
+  // ——把內容裁掉，或讓頁面捲動。選了後者，所以這裡不能再把「可直捲」算成失敗。
+  // 橫捲則是任何高度都不允許。
+  const allowScrollY = vh <= 660;
+  const scrollX = de.scrollWidth > de.clientWidth;
+  const scrollY = de.scrollHeight > de.clientHeight;
 
   return {
     viewport: vw + 'x' + vh,
-    scrollable: { x: de.scrollWidth > de.clientWidth, y: de.scrollHeight > de.clientHeight },
+    scrollable: { x: scrollX, y: scrollY, y可接受: allowScrollY },
     regions,
     overlaps,
     clipped: clipped.slice(0, 12),
     clippedCount: clipped.length,
+    halfCut,
     outsideViewport: outside,
-    pass: !(de.scrollWidth > de.clientWidth) && !(de.scrollHeight > de.clientHeight)
-      && overlaps.length === 0 && clipped.length === 0 && outside.length === 0,
+    pass: !scrollX && (!scrollY || allowScrollY)
+      && overlaps.length === 0 && clipped.length === 0 && halfCut.length === 0
+      && (allowScrollY || outside.length === 0),
   };
 })()`;

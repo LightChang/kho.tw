@@ -507,8 +507,8 @@ ${sameName.length ? `<div class="card"><h3>站內同名的其他講師頁</h3>
   await write('search.html', page('搜尋課程', `
 <div class="card"><h2>搜尋</h2>
 <form id="f" role="search" style="display:flex;gap:10px;margin-top:10px">
-<input id="q" type="search" style="flex:1;font:inherit;padding:12px 16px;border:1px solid var(--line);border-radius:10px" placeholder="課名、單位、講師">
-<button style="font:inherit;font-weight:700;padding:12px 22px;border:0;border-radius:10px;background:var(--link);color:#fff;cursor:pointer">搜尋</button></form>
+<input id="q" type="search" style="flex:1;min-width:0;font:inherit;padding:12px 16px;border:1px solid var(--line);border-radius:10px" placeholder="課名、單位、講師">
+<button style="flex:none;font:inherit;font-weight:700;padding:12px 22px;border:0;border-radius:10px;background:var(--link);color:#fff;cursor:pointer">搜尋</button></form>
 <div class="meta" id="n" style="margin-top:10px">載入索引中⋯</div></div>
 <div id="r"></div>
 <script>
