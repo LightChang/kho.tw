@@ -22,7 +22,9 @@ set -uo pipefail
 # last-run.json 有沒有寫、連續失敗有沒有累加），只要指到別的目錄跑就好，
 # 不必去改這支檔案。改檔案來測試曾經把含中文註解的行弄出壞位元組，
 # 結果驗到的是壞掉的副本，不是這支腳本。
-ROOT="${KHO_ROOT:-/Users/lightman/weiqi.kids/kho.tw}"
+# 預設值由腳本自身位置推導（ops/ 的上一層就是專案根目錄），不寫死任何人的家目錄——
+# 這份檔案會進公開版控。要指到別的地方仍可用 KHO_ROOT 覆寫。
+ROOT="${KHO_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}"
 NODE="${KHO_NODE:-/usr/local/bin/node}"
 LOG_DIR="${KHO_LOG_DIR:-$ROOT/data/logs}"
 LOCK_DIR="${KHO_LOCK_DIR:-$ROOT/data/.pipeline.lock}"

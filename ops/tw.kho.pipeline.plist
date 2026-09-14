@@ -3,6 +3,15 @@
 <!--
   kho.tw 定時抓取。安裝與停用方式見 docs/operations.md。
 
+  **這是安裝範本，不能直接用。** 檔案裡的 __KHO_ROOT__ 要換成專案的絕對路徑：
+
+      sed "s|__KHO_ROOT__|$(pwd)|g" ops/tw.kho.pipeline.plist \
+        > ~/Library/LaunchAgents/tw.kho.pipeline.plist
+
+  launchd 的 ProgramArguments 與 WorkingDirectory 規定必須是絕對路徑（它不在 shell 裡跑、
+  沒有 cwd 可用），所以這裡沒辦法像 run-pipeline.sh 那樣自己推導。
+  留佔位符而不是寫死某台電腦的家目錄，是因為這份檔案會進公開版控。
+
   StartInterval 3600：每小時喚醒一次，但實際上哪些來源該抓由 transform/scheduler.mjs
   依 data/schedule-state.json 自己決定（course-live 3-24 小時、registry 7-30 天不等）。
   每小時喚醒只是給 scheduler 一個檢查機會，多數時候它會回報「沒有來源到期」就結束。
@@ -17,11 +26,11 @@
   <key>ProgramArguments</key>
   <array>
     <string>/bin/bash</string>
-    <string>/Users/lightman/weiqi.kids/kho.tw/ops/run-pipeline.sh</string>
+    <string>__KHO_ROOT__/ops/run-pipeline.sh</string>
   </array>
 
   <key>WorkingDirectory</key>
-  <string>/Users/lightman/weiqi.kids/kho.tw</string>
+  <string>__KHO_ROOT__</string>
 
   <key>StartInterval</key>
   <integer>3600</integer>
@@ -32,9 +41,9 @@
   <!-- 腳本自己會寫 data/logs/pipeline-YYYY-MM-DD.log；
        這兩個檔只收腳本本身沒接住的錯誤（例如 bash 都還沒起來就失敗）。 -->
   <key>StandardOutPath</key>
-  <string>/Users/lightman/weiqi.kids/kho.tw/data/logs/launchd.out.log</string>
+  <string>__KHO_ROOT__/data/logs/launchd.out.log</string>
   <key>StandardErrorPath</key>
-  <string>/Users/lightman/weiqi.kids/kho.tw/data/logs/launchd.err.log</string>
+  <string>__KHO_ROOT__/data/logs/launchd.err.log</string>
 
   <!-- 筆電闔上或睡眠錯過的排程，醒來後補跑一次就好，不要把錯過的每小時都補上。 -->
   <key>ThrottleInterval</key>

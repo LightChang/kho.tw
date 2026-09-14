@@ -15,7 +15,11 @@
 ## 2. 安裝
 
 ```
-cp ops/tw.kho.pipeline.plist ~/Library/LaunchAgents/
+# plist 是安裝範本，裡面的 __KHO_ROOT__ 要換成專案的絕對路徑再放進 LaunchAgents。
+# launchd 規定 ProgramArguments 與 WorkingDirectory 必須是絕對路徑，沒辦法自己推導；
+# 範本留佔位符而不是寫死某台電腦的家目錄，是因為這份檔案進了公開版控。
+sed "s|__KHO_ROOT__|$(pwd)|g" ops/tw.kho.pipeline.plist \
+  > ~/Library/LaunchAgents/tw.kho.pipeline.plist
 launchctl bootstrap gui/$UID ~/Library/LaunchAgents/tw.kho.pipeline.plist
 ```
 

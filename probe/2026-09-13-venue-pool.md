@@ -24,11 +24,11 @@
 
 ## 1. seh.tw 的場館資料長什麼樣
 
-專案位置：`/Users/lightman/weiqi.kids/seh.tw`（與 kho.tw 同層）。
+專案位置：seh.tw 與 kho.tw 同層（`../seh.tw`）。
 
 | | |
 |---|---|
-| 檔案 | `/Users/lightman/weiqi.kids/seh.tw/data/venues.ndjson` |
+| 檔案 | `../seh.tw/data/venues.ndjson` |
 | 格式 | NDJSON，一行一個場館，6.9 MB |
 | 筆數 | **29,300** |
 | 有地址 | 17,367（59.3%） |
