@@ -58,6 +58,18 @@ export const CHECK_LAYOUT = `(() => {
 
   const outside = regions.filter((r) => r.bottom > vh + 1 || r.right > vw + 1).map((r) => r.sel);
 
+  // 空白頁會讓上面每一項都通過——沒有內容，當然不溢出、不重疊、也不裁切。
+  // 這是最危險的假通過（playwright 會間歇性停在 about:blank，整份文件只有 39 個字元），
+  // 所以要求關鍵元素真的在場。**不要求「快額滿至少一列」**：那一塊在 ≤900px 寬與
+  // ≤560px 高是刻意整塊隱藏的，拿它當必要條件會把正常的窄視窗判成失敗。
+  const doorCount = document.querySelectorAll('.door').length;
+  const bodyText = (document.body.innerText || '').trim();
+  const missing = [];
+  if (!document.querySelector('.home')) missing.push('找不到 .home');
+  if (doorCount !== 4) missing.push('門卡不是四張（實際 ' + doorCount + ' 張）');
+  if (!document.querySelector('.tally')) missing.push('找不到 .tally');
+  if (bodyText.length < 200) missing.push('頁面文字只有 ' + bodyText.length + ' 字，可能是空白頁');
+
   // 660px 以下首頁刻意改成可捲（見 theme.mjs 的同名斷點）：門卡內容有物理下限，
   // 在 18px 的字級下限之下約 70px，而 460 的中段容器只有 16px。容器再小就只有兩條路
   // ——把內容裁掉，或讓頁面捲動。選了後者，所以這裡不能再把「可直捲」算成失敗。
@@ -75,7 +87,9 @@ export const CHECK_LAYOUT = `(() => {
     clippedCount: clipped.length,
     halfCut,
     outsideViewport: outside,
-    pass: !scrollX && (!scrollY || allowScrollY)
+    missing,
+    pass: missing.length === 0
+      && !scrollX && (!scrollY || allowScrollY)
       && overlaps.length === 0 && clipped.length === 0 && halfCut.length === 0
       && (allowScrollY || outside.length === 0),
   };
