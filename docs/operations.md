@@ -136,3 +136,80 @@ nvm 換版本或清掉舊版時這條連結就會斷。改 `ops/run-pipeline.sh`
 `dist/` 每次 build 會先清空再產出三萬多個檔案，`data/observation/` 隨每輪抓取累積。
 這台機器目前可用空間不多，log 已設 14 天輪替；觀測資料要不要壓縮或截斷，
 等累積一兩個月看實際大小再決定。
+
+## 8. 發布到 GitHub Pages（自訂網域 kho.tw）
+
+站台由 `.github/workflows/deploy.yml` 每小時自動建置與部署。首次設定分四步，
+其中第 2 步要在 GoDaddy 後台做（本專案碰不到那裡）。
+
+### 1. 建立 repo 並推送
+
+```bash
+gh repo create kho.tw --public --source=. --remote=origin --push
+```
+
+**免費方案的 GitHub Pages 只支援公開 repo**，所以這一步等於把整個專案公開。
+推之前確認過：無金鑰、無密碼、無絕對路徑；納管內容 93 MB，都是政府開放資料與
+各單位官網本來就公開的課程資訊。
+
+### 2. 在 GoDaddy 改 DNS
+
+`kho.tw` 的名稱伺服器是 `ns45/ns46.domaincontrol.com`（GoDaddy），所以 DNS 在 GoDaddy 後台改。
+
+**刪掉**原本指向停放頁的兩筆：
+
+| 類型 | 名稱 | 值 |
+|---|---|---|
+| A | @ | 15.197.148.33 |
+| A | @ | 3.33.130.190 |
+
+**新增** GitHub Pages 的四筆（官方值，2026-09-14 查證自 GitHub 文件，四個 IP 反查都屬 GitHub）：
+
+| 類型 | 名稱 | 值 |
+|---|---|---|
+| A | @ | 185.199.108.153 |
+| A | @ | 185.199.109.153 |
+| A | @ | 185.199.110.153 |
+| A | @ | 185.199.111.153 |
+
+`www` 那筆改成 CNAME 指向 `lightchang.github.io`（不是 kho.tw，否則會繞回自己）。
+
+想更省事可以只設 AAAA（IPv6）或用 ALIAS/ANAME，但 GoDaddy 的免費方案不支援 ALIAS，
+所以就用上面四筆 A 記錄。
+
+### 3. 在 repo 設定自訂網域
+
+Settings → Pages → Source 選 **GitHub Actions**（不是 Deploy from a branch），
+Custom domain 填 `kho.tw`，存檔後勾選 **Enforce HTTPS**。
+
+憑證要等 DNS 生效後 GitHub 才簽得出來，通常十分鐘到一小時。在那之前
+Enforce HTTPS 會是灰的，這是正常的，不要以為設錯了。
+
+### 4. 觸發第一次部署
+
+排程是每小時整點，等它自己跑也可以。要立刻跑：
+
+```bash
+gh workflow run deploy --field rebuild=true
+gh run watch
+```
+
+`rebuild=true` 是因為第一次跑時多數來源還沒到期，scheduler 會回報「沒有變動」而跳過建置；
+這個旗標讓它不管有沒有變動都重建並部署。
+
+### 驗收
+
+```bash
+dig +short kho.tw A                      # 應該是上面那四個 IP
+curl -sI https://kho.tw | head -3        # 應該是 200
+curl -s https://kho.tw/sitemap.xml | head -3
+```
+
+### 兩個容易踩到的地方
+
+- **`dist/CNAME` 必須每次 build 都產生。** 用 Actions 部署時 GitHub 不會自動建 CNAME 檔
+  （只有「從分支發布」才會），而 build 每次都清空 `dist/`，所以 `site/build.mjs`
+  會從 `public/CNAME` 複製過去。刪掉那個檔，部署一次就掉一次網域設定。
+- **`KHO_SITE_URL` 設錯會污染全站 42,461 頁**的 canonical、sitemap 與 JSON-LD，
+  等於叫搜尋引擎去抓不存在的網址。預設值寫在 workflow 裡（`https://kho.tw`），
+  要改網址時設 repository variable `KHO_SITE_URL` 覆寫，不必動程式。
