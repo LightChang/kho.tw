@@ -224,6 +224,9 @@ async function main() {
   await cp(path.join(ROOT, 'public', 'index.json'), path.join(DIST, 'index.json'));
   // 共用樣式表獨立成一支（見 page() 的 inlineCss 註解）。首頁不吃這支，它自己內嵌。
   await writeFile(path.join(DIST, 'style.css'), CSS, 'utf-8');
+  // CNAME 是 GitHub Pages 的自訂網域設定檔，必須在站台根目錄。
+  // 每次 build 都會清空 dist/，所以要從 public/ 複製過去，否則部署一次就掉一次網域設定。
+  await cp(path.join(ROOT, 'public', 'CNAME'), path.join(DIST, 'CNAME'));
   // Leaflet 自己放一份（見 site/map.mjs 的理由），連同它的 images/ 一起複製。
   // 從第三方 CDN 載會讓整站多一個外部信任對象，而 NLSC 圖磚已經是不可避免的那一個。
   await cp(path.join(ROOT, 'public', 'lib'), path.join(DIST, 'lib'), { recursive: true });

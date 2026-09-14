@@ -94,9 +94,10 @@ jobs:
       - name: 產生網站
         if: steps.gate.outputs.go == 'true'
         env:
-          # 網域還沒定案前用 GitHub Pages 的預設網址。canonical、sitemap 與 JSON-LD
-          # 全站 42,461 頁都吃這個值，設錯等於叫搜尋引擎去抓不存在的網域。
-          KHO_SITE_URL: ${{ vars.KHO_SITE_URL || 'https://lightchang.github.io/kho.tw' }}
+          # canonical、sitemap 與 JSON-LD 全站 42,461 頁都吃這個值，
+          # 設錯等於叫搜尋引擎去抓不存在的網域。
+          # 自訂網域 kho.tw 由 public/CNAME 指定；要改網址時設 repository variable 覆寫即可。
+          KHO_SITE_URL: ${{ vars.KHO_SITE_URL || 'https://kho.tw' }}
         run: |
           node site/build.mjs
           node site/validate-jsonld.mjs
