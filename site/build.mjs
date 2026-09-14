@@ -61,7 +61,17 @@ const esc = (s) => String(s ?? '')
   .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 const fmt = (n) => Number(n ?? 0).toLocaleString('en-US');
 
-function page(title, body, { description = '', jsonld = null, canonical = '', extraCss = '', bare = false } = {}) {
+// inlineCss：把共用 CSS 直接寫進 <style> 而不是連外部檔。
+//
+// 預設 false——共用 CSS 是 4,771 bytes，內嵌在 42,461 頁等於 193 MB，
+// 佔 dist 總量的四成，而且每一頁都讓讀者重下載一次。改成外部 /style.css 之後
+// dist 從 489 MB 降到約 296 MB（GitHub Pages 上限是 1 GB），瀏覽器也只抓一次。
+//
+// 只有首頁傳 true：它是「滿版一頁」，外部樣式表會有載入前的無樣式閃爍，
+// 而首頁就一頁，內嵌的代價只有 4.7 KB。
+function page(title, body, {
+  description = '', jsonld = null, canonical = '', extraCss = '', bare = false, inlineCss = false,
+} = {}) {
   // JSON-LD 內的 < 要跳成 \\u003c，否則字串裡若出現 </script> 會提前結束 script 區塊
   const ld = jsonld
     ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c')}</script>`
@@ -76,7 +86,7 @@ function page(title, body, { description = '', jsonld = null, canonical = '', ex
 ${description ? `<meta name="description" content="${esc(description)}">` : ''}
 ${canonical ? `<link rel="canonical" href="${esc(canonical)}">` : ''}
 ${ld}
-<style>${CSS}${extraCss}</style></head><body>${chrome}</body></html>`;
+${inlineCss ? `<style>${CSS}${extraCss}</style>` : `<link rel="stylesheet" href="/style.css">${extraCss ? `<style>${extraCss}</style>` : ''}`}</head><body>${chrome}</body></html>`;
 }
 
 const statusBadge = (s) => `<span class="st st-${esc(s ?? 'unknown')}">${esc(STATUS_LABEL[s] ?? s ?? '')}</span>`;
@@ -212,6 +222,8 @@ async function main() {
   await rm(DIST, { recursive: true, force: true });
   await mkdir(DIST, { recursive: true });
   await cp(path.join(ROOT, 'public', 'index.json'), path.join(DIST, 'index.json'));
+  // 共用樣式表獨立成一支（見 page() 的 inlineCss 註解）。首頁不吃這支，它自己內嵌。
+  await writeFile(path.join(DIST, 'style.css'), CSS, 'utf-8');
   // Leaflet 自己放一份（見 site/map.mjs 的理由），連同它的 images/ 一起複製。
   // 從第三方 CDN 載會讓整站多一個外部信任對象，而 NLSC 圖磚已經是不可避免的那一個。
   await cp(path.join(ROOT, 'public', 'lib'), path.join(DIST, 'lib'), { recursive: true });

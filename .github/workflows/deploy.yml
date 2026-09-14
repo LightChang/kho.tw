@@ -1,0 +1,128 @@
+# 每小時醒來一次，抓到期的來源、重建網站、部署到 GitHub Pages。
+#
+# 「排程在程式裡，不在觸發器裡」：這裡不列 29 支來源、也不列任何間隔，
+# 那是 transform/scheduler.mjs 讀 data/schedule-state.json 自己算的（ingest/CONTRACT.md §3）。
+# cron 只負責「給它一個檢查的機會」，多數時候它會回報「沒有來源到期」就結束。
+#
+# 與姊妹站 seh.tw 的 workflow 有一個關鍵差異：**這個專案沒有任何 npm 套件**，
+# 沒有 node_modules、也沒有 package-lock.json，所以不能跑 `npm ci`（會直接失敗）。
+# package.json 只是把 node 指令包成 scripts 而已。
+name: deploy
+
+on:
+  schedule:
+    - cron: '0 * * * *'   # UTC 整點；台灣沒有日光節約，等於每個台灣整點
+  workflow_dispatch:
+    inputs:
+      force:
+        description: '強制重抓的 source id（空白＝只抓到期的）'
+        required: false
+      rebuild:
+        description: '沒有來源變動也要重建並部署（改了版面或程式時用）'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write   # 回寫 data/ 的觀測軌跡與排程狀態
+  pages: write      # 部署
+  id-token: write   # deploy-pages 的 OIDC
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false   # 抓一半被砍會讓 schedule-state 與 raw 對不起來
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90       # 首輪 moe-cc-detail 要抓 4,000 筆、每筆間隔 250ms
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 50     # rebase 要看得到近期歷史；全歷史每小時 clone 划不來
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'  # 專案用 node 22 的 ESM 與內建 fetch，不裝任何套件
+
+      # inputs.force 一律走 env，不內插進 run:。內插等於把使用者輸入當 shell 指令跑。
+      - name: 抓取到期來源
+        id: fetch
+        env:
+          FORCE: ${{ inputs.force }}
+        run: |
+          set +e
+          node transform/scheduler.mjs ${FORCE:+--force "$FORCE"}
+          code=$?
+          set -e
+          # scheduler 的退出碼：0=有變動、2=沒有來源到期或都沒變、其他=錯誤
+          case "$code" in
+            0) echo 'changed=true'  >> "$GITHUB_OUTPUT" ;;
+            2) echo 'changed=false' >> "$GITHUB_OUTPUT" ;;
+            *) echo "scheduler 失敗，退出碼 $code"; exit "$code" ;;
+          esac
+
+      - name: 這輪要不要往下跑
+        id: gate
+        env:
+          CHANGED: ${{ steps.fetch.outputs.changed }}
+          REBUILD: ${{ inputs.rebuild }}
+        run: |
+          if [ "$CHANGED" = 'true' ] || [ "$REBUILD" = 'true' ]; then
+            echo 'go=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'go=false' >> "$GITHUB_OUTPUT"
+            echo '沒有來源變動，這輪結束：不重算、不重建、不部署'
+          fi
+
+      - name: 正規化與健康檢查
+        if: steps.gate.outputs.go == 'true'
+        run: |
+          node transform/normalize.mjs
+          # 健康檢查沒過就停在 build 之前——寧可讓網站停在上一版，也不要把壞資料發出去
+          node transform/check-health.mjs
+
+      - name: 分群、關聯、投影
+        if: steps.gate.outputs.go == 'true'
+        run: |
+          node transform/cluster.mjs
+          node transform/resolve-relations.mjs
+          node transform/emit.mjs
+
+      - name: 產生網站
+        if: steps.gate.outputs.go == 'true'
+        env:
+          # 網域還沒定案前用 GitHub Pages 的預設網址。canonical、sitemap 與 JSON-LD
+          # 全站 42,461 頁都吃這個值，設錯等於叫搜尋引擎去抓不存在的網域。
+          KHO_SITE_URL: ${{ vars.KHO_SITE_URL || 'https://lightchang.github.io/kho.tw' }}
+        run: |
+          node site/build.mjs
+          node site/validate-jsonld.mjs
+          node site/check-links.mjs
+          node site/check-sitemap.mjs
+
+      # 觀測軌跡與排程狀態要回寫，否則下一輪會把每支來源都當成「首次記錄」，
+      # 自適應排程與健康檢查的歷史全部歸零。
+      - name: 回寫觀測軌跡
+        if: steps.gate.outputs.go == 'true'
+        run: |
+          git config user.name  'kho-ingest'
+          git config user.email 'ingest@kho.tw'
+          git add data/ geocode/out/ || true
+          git diff --cached --quiet || git commit -m "ingest: $(date -u +%Y-%m-%dT%H:%MZ)"
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git push
+
+      # 部署必須跟抓取同一個 job：GITHUB_TOKEN 推出去的 commit 不會觸發任何 workflow，
+      # 所以「push 觸發 deploy」那條路在這裡是死的。
+      - uses: actions/configure-pages@v5
+        if: steps.gate.outputs.go == 'true'
+      - uses: actions/upload-pages-artifact@v3
+        if: steps.gate.outputs.go == 'true'
+        with:
+          path: dist
+      - uses: actions/deploy-pages@v4
+        id: deployment
+        if: steps.gate.outputs.go == 'true'

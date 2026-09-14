@@ -116,5 +116,10 @@ document.getElementById('f').addEventListener('submit',e=>{
     description: `全台社區大學、運動中心、樂齡中心與職訓課程共 ${fmt(t.courses)} 門，其中 ${fmt(t.open)} 門正在招生。`,
     extraCss: HOME_CSS,
     bare: true,
+    // 首頁把共用 CSS 一起內嵌，不連外部 /style.css。
+    // 它是「滿版一頁」（100dvh、兩軸不可捲），外部樣式表在載入完成前會先用無樣式的
+    // 高度算一次版面，讀者會看到一次閃爍與跳動。其餘 42,460 頁走外部檔省下 193 MB，
+    // 但首頁就一頁，內嵌的代價只有 4.7 KB——這裡買的是不閃爍。
+    inlineCss: true,
   });
 }
