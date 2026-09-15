@@ -2,6 +2,11 @@
 
 管線本身的設計見 `docs/pipeline.md`。這份只講「怎麼讓它自己跑起來、壞掉時怎麼查」。
 
+> **2026-09-15 起，正式排程是 GitHub Actions（§8），本機 launchd 已停用。**
+> 兩邊同時跑會各自改寫 `data/observation/`，而本機的 commit 不會推上去，下次 pull 必定衝突。
+> 停用方式是 `launchctl bootout` 之後把 plist 改名成 `tw.kho.pipeline.plist.disabled`
+> （launchd 只載入 `.plist`，改回原名再 `launchctl bootstrap` 就恢復）。§2–§7 保留作為本機排程的說明。
+
 ## 1. 為什麼需要定時跑
 
 兩個理由，第二個比較容易被忽略：
