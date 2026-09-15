@@ -1,0 +1,7 @@
+---
+// 「課程已於 X 結束」講的是上課期間，不是報名狀態（見 src/lib/data.mjs 的 hasEnded）。
+import { hasEnded } from '../lib/data.mjs';
+
+const { course } = Astro.props;
+---
+{hasEnded(course) && <span class="ended">課程已於 {course.schedule.endDate} 結束</span>}

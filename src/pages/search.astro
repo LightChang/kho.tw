@@ -1,0 +1,29 @@
+---
+// 搜尋頁：純前端，讀 /index.json（transform/emit.mjs 產出、由 public/ 複製過來）。
+import Base from '../layouts/Base.astro';
+import { SITE_URL } from '../../site/jsonld.mjs';
+---
+<Base title="搜尋課程" description="在 29,000 門全台成人課程中搜尋課名、單位或講師。" canonical={`${SITE_URL}/search.html`}>
+<div class="card"><h2>搜尋</h2>
+<form id="f" role="search" class="search-form">
+<input id="q" type="search" placeholder="課名、單位、講師">
+<button>搜尋</button></form>
+<div class="meta search-count" id="n">載入索引中⋯</div></div>
+<div id="r"></div>
+<script is:inline>
+const L={open:'招生中',upcoming:'尚未開放報名',full:'額滿',running:'開課中',closed:'報名已截止',cancelled:'停開',unknown:'狀態未知'};
+let idx=[];
+(async()=>{idx=await(await fetch('/index.json')).json();
+  document.getElementById('n').textContent='共 '+idx.length.toLocaleString('en-US')+' 門課可搜尋';
+  const p=new URLSearchParams(location.search).get('q');
+  if(p){document.getElementById('q').value=p;run(p)}})();
+function run(v){
+  const hit=idx.filter(r=>r[1].includes(v)||r[9].includes(v)||(r[10]||'').includes(v)||(r[11]||'').includes(v));
+  document.getElementById('n').textContent='找到 '+hit.length.toLocaleString('en-US')+' 門課'+(hit.length>200?'（顯示前 200）':'');
+  document.getElementById('r').innerHTML=hit.slice(0,200).map(r=>
+    '<div class="card"><div><a href="/course/'+encodeURIComponent(r[0])+'.html">'+r[1]+'</a> <span class="st st-'+r[6]+'">'+(L[r[6]]||r[6])+'</span></div>'+
+    '<div class="meta">'+r[9]+(r[2]?'　'+r[2]+(r[3]||''):'')+'</div></div>').join('');
+}
+document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();const v=document.getElementById('q').value.trim();if(v.length>=1)run(v)});
+</script>
+</Base>

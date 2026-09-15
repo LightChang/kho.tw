@@ -1,6 +1,6 @@
 // site/sitemap.mjs
 // 產生 sitemap index、分檔 sitemap 與 robots.txt。
-// 這個專案沒有 node_modules，XML 全部自己串字串——所以百分比編碼與跳脫要自己顧。
+// XML 全部自己串字串，不靠套件——所以百分比編碼與跳脫要自己顧。
 //
 // 三個設計取捨，理由寫在這裡免得之後有人「順手改簡單一點」：
 //

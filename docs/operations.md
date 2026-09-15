@@ -15,6 +15,10 @@
 ## 2. 安裝
 
 ```
+# 網站用 Astro 建置，排程腳本直接呼叫 node_modules/astro/bin/astro.mjs，所以先裝套件。
+# 沒裝的話 site 階段會記一筆「找不到 astro.mjs，請先跑 npm ci」後結束，不會靜默失敗。
+npm ci
+
 # plist 是安裝範本，裡面的 __KHO_ROOT__ 要換成專案的絕對路徑再放進 LaunchAgents。
 # launchd 規定 ProgramArguments 與 WorkingDirectory 必須是絕對路徑，沒辦法自己推導；
 # 範本留佔位符而不是寫死某台電腦的家目錄，是因為這份檔案進了公開版控。
@@ -208,8 +212,8 @@ curl -s https://kho.tw/sitemap.xml | head -3
 ### 兩個容易踩到的地方
 
 - **`dist/CNAME` 必須每次 build 都產生。** 用 Actions 部署時 GitHub 不會自動建 CNAME 檔
-  （只有「從分支發布」才會），而 build 每次都清空 `dist/`，所以 `site/build.mjs`
-  會從 `public/CNAME` 複製過去。刪掉那個檔，部署一次就掉一次網域設定。
+  （只有「從分支發布」才會），而 build 每次都清空 `dist/`，所以 CNAME 放在 `public/`，
+  由 Astro 每次複製過去。刪掉那個檔，部署一次就掉一次網域設定。
 - **`KHO_SITE_URL` 設錯會污染全站 42,461 頁**的 canonical、sitemap 與 JSON-LD，
   等於叫搜尋引擎去抓不存在的網址。預設值寫在 workflow 裡（`https://kho.tw`），
   要改網址時設 repository variable `KHO_SITE_URL` 覆寫，不必動程式。

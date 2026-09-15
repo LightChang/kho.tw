@@ -1,0 +1,18 @@
+---
+import Base from '../../layouts/Base.astro';
+import CourseCard from '../../components/CourseCard.astro';
+import { getData, fmt } from '../../lib/data.mjs';
+import { venueJsonLd, venueUrl } from '../../../site/jsonld.mjs';
+
+export function getStaticPaths() {
+  return getData().venuePages.map((p) => ({ params: { slug: p.venue.slug }, props: p }));
+}
+
+const { venue: v, list } = Astro.props;
+---
+<Base title={`${v.name}的課程`} description={`${v.name}的成人課程共 ${fmt(list.length)} 門。`} canonical={venueUrl(v)} jsonld={venueJsonLd(v, list)}>
+<div class="card"><h2>{v.name}</h2>
+<div class="meta">{v.address ?? ''}</div>
+<div class="meta-2">{v.lat ? `座標 ${v.lat}, ${v.lng}` : '尚無座標'}　共 {fmt(list.length)} 門課</div></div>
+{list.slice(0, 200).map((c) => <CourseCard course={c} />)}
+</Base>

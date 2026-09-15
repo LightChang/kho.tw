@@ -1,0 +1,22 @@
+---
+import Base from '../../layouts/Base.astro';
+import CourseList from '../../components/CourseList.astro';
+import { getData, fmt } from '../../lib/data.mjs';
+import { itemListJsonLd, SITE_URL } from '../../../site/jsonld.mjs';
+
+export function getStaticPaths() {
+  return getData().types.map((kind) => ({ params: { kind: kind.kind }, props: { kind } }));
+}
+
+const { kind } = Astro.props;
+const { list } = kind;
+---
+<Base
+  title={`${kind.label}的課程`}
+  description={`全台${kind.label}課程共 ${fmt(list.length)} 門，其中 ${fmt(kind.open)} 門招生中。`}
+  canonical={`${SITE_URL}/type/${kind.kind}.html`}
+  jsonld={itemListJsonLd(list.slice(0, 100), { name: `${kind.label}的課程` })}
+>
+<div class="card"><h2>{kind.label}</h2><div class="meta">共 {fmt(list.length)} 門課，其中 {fmt(kind.open)} 門正在招生</div></div>
+<CourseList list={list} />
+</Base>

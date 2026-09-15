@@ -70,11 +70,11 @@ export const CHECK_LAYOUT = `(() => {
   if (!document.querySelector('.tally')) missing.push('找不到 .tally');
   if (bodyText.length < 200) missing.push('頁面文字只有 ' + bodyText.length + ' 字，可能是空白頁');
 
-  // 660px 以下首頁刻意改成可捲（見 theme.mjs 的同名斷點）：門卡內容有物理下限，
-  // 在 18px 的字級下限之下約 70px，而 460 的中段容器只有 16px。容器再小就只有兩條路
-  // ——把內容裁掉，或讓頁面捲動。選了後者，所以這裡不能再把「可直捲」算成失敗。
-  // 橫捲則是任何高度都不允許。
-  const allowScrollY = vh <= 660;
+  // 高度 660px 以下、或寬度 900px 以下（直排），首頁刻意改成可捲（見 src/styles/home.css 的同名斷點）：
+  // 門卡內容有物理下限，在 18px 的字級下限之下約 53–95px，而 460 高的中段容器只有 16px、
+  // 375×667 直排也只剩 16px。容器再小就只有兩條路——把內容裁掉，或讓頁面捲動。
+  // 選了後者，所以這裡不能再把「可直捲」算成失敗。橫捲則是任何尺寸都不允許。
+  const allowScrollY = vh <= 660 || vw <= 900;
   const scrollX = de.scrollWidth > de.clientWidth;
   const scrollY = de.scrollHeight > de.clientHeight;
 

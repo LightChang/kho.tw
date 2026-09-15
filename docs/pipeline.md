@@ -16,7 +16,10 @@ npm run health       來源筆數異常檢查
 npm run cluster      跨來源分群
 npm run relations    課程 → 場館
 npm run emit         投影、前端索引、統計
-npm run site         產生 dist/ 靜態網站
+npm run site         產生 dist/ 靜態網站（astro build）
+npm run dev          Astro 開發伺服器（KHO_LIMIT=N 只產前 N 門課程頁）
+npm test             設計系統守門：最小字級 18px、只用 token 色、文字不用 --text-muted
+npm run sync:tokens  從統一設計系統同步 src/styles/tokens.css
 npm run ingest:due   只列出誰到期，不抓
 ```
 
@@ -34,9 +37,12 @@ transform/cluster.mjs       同一門課的跨來源觀測收成一群 → data/
 transform/resolve-relations 課程 → 場館，允許懸空邊 → data/venues.ndjson、relations.ndjson
 transform/emit.mjs          投影成最終值 ＋ 各來源並排 → data/courses.ndjson、public/index.json
   transform/slug.mjs        可讀網址的規則與登記簿 → data/slugs.ndjson（只增不改，見 §7）
-site/build.mjs              靜態網站 → dist/
-  site/theme.mjs            視覺系統（kho.tw 自己的，不沿用 seh.tw 色票）
-  site/home.mjs             首頁（滿版一頁）
+src/                        Astro 靜態網站 → dist/（2026-09-15 由自寫的 site/build.mjs 移植，網址與產出逐頁比對一致）
+  src/lib/data.mjs          建置期資料層：讀 ndjson、算好各頁清單（結果掛 globalThis，只讀一次）
+  src/lib/sitemap-integration.mjs  build 完成後寫 sitemap 與 robots.txt
+  src/pages/                各頁模板；index.astro 是首頁（滿版一頁，CSS 內嵌）
+  src/styles/tokens.css     統一設計系統的副本（OKLCH 色票＋字級量表），不直接改
+  src/styles/site.css       站台樣式，只用 token；home.css 是首頁專用
   site/jsonld.mjs           schema.org JSON-LD
   site/validate-jsonld.mjs  離線驗結構化資料
   site/check-links.mjs      驗站內連結沒有 404
@@ -243,7 +249,7 @@ duration、`scheduleTimezone: Asia/Taipei`）、`location`（含 `PostalAddress`
 頁面種類：
 
 ```
-/                    首頁：滿版一頁（100dvh），橫豎都不可捲；視窗高 ≤660px 改為可捲
+/                    首頁：滿版一頁（100dvh），橫豎都不可捲；視窗高 ≤660px 或寬 ≤900px 改為「至少滿版、放不下就捲」
 /open.html           現在可報名，依縣市分組
 /types.html          課程類型索引      /type/<kind>.html
 /cities.html         縣市索引          /city/<縣市>.html
@@ -325,7 +331,7 @@ xl 32px／2xl 48px／3xl 56px，行高 1.6，最小 18px「無例外」）。使
 .door .n { font-size: clamp(1.125rem, min(100cqw / var(--len) * 1.55, 6vh), 4rem) }
 ```
 
-`--len` 是數字的字元數（含千分位逗號），由 `site/home.mjs` 輸出時一併寫進 style。
+`--len` 是數字的字元數（含千分位逗號），由 `src/pages/index.astro` 輸出時一併寫進 style。
 CSS 無從得知字串多長，這是唯一不靠 JS 的辦法。
 
 係數 **1.55**：等寬數字每字約 0.62em，`0.62 × 1.62 ≈ 1.004`——用 1.62 會讓數字寬度
@@ -348,7 +354,7 @@ CSS 無從得知字串多長，這是唯一不靠 JS 的辦法。
 
 ### 地圖與「找我附近的課」：`/map.html`
 
-`site/map.mjs`（191 行）＋ `dist/venues-map.json`（1,782 個點、211 KB）。四個刻意的選擇：
+`src/pages/map.astro` ＋ `dist/venues-map.json`（`src/pages/venues-map.json.js`）（1,782 個點、211 KB）。四個刻意的選擇：
 
 **圖磚用內政部國土測繪中心的臺灣通用電子地圖（EMAP6），不用 OpenStreetMap。**
 台灣的路名、門牌與行政界線比 OSM 準；免申請免金鑰；授權是「政府資料開放授權條款－第1版」，
@@ -365,7 +371,7 @@ OSM 官方圖磚的使用政策雖然允許「一般人類瀏覽」，但明文�
 
 **Leaflet 自己放一份在 `/lib/`，不從 CDN 載。** 整站原本零外部連線；接了地圖之後訪客只會
 多連 NLSC 圖磚主機一個——那是功能必需，cdnjs 不是。`public/lib/` 放 `leaflet.js`（147 KB）、
-`leaflet.css` 與它參考的 5 個 PNG（marker 圖示、圖層切換圖示），`build.mjs` 一併複製到 `dist/`。
+`leaflet.css` 與它參考的 5 個 PNG（marker 圖示、圖層切換圖示），Astro 從 `public/` 一併複製到 `dist/`。
 
 **按「場館」聚合，不是按「課程」。** 19,671 門有座標的課只落在 1,782 個地點上，
 聚合後資料從 1.3 MB 降到 211 KB，地圖也不會在同一個點疊幾十個標記。
@@ -380,7 +386,7 @@ OSM 官方圖磚的使用政策雖然允許「一般人類瀏覽」，但明文�
 
 課程頁與場館頁的檔名、站內連結、canonical 與 sitemap 全部用可讀 slug，不用 id。
 規則在 `transform/slug.mjs`，由 `transform/emit.mjs` 配給並記在 `data/slugs.ndjson`，
-`site/build.mjs` 只讀不改。
+網站（`src/lib/data.mjs`）只讀不改。
 
 ```
 /course/飛越拉拉二胡-五權社大-48d29.html    課名（≤20 字）-單位（≤12 字）-短碼（5 碼）
@@ -416,7 +422,7 @@ OSM 官方圖磚的使用政策雖然允許「一般人類瀏覽」，但明文�
 
 兩個連帶改動，改首頁或搜尋頁前要知道：`public/index.json` 第 0 欄從 id 換成 slug
 （前端沒有 id → slug 的對照表，放 id 就連不出去）；`public/home.json` 的 `almostFull[].id`
-放的是**百分比編碼後的 slug**，因為 `site/home.mjs` 直接把它串成 `/course/<id>.html` 且不再編碼，
+放的是**百分比編碼後的 slug**，因為首頁（`src/pages/index.astro`）直接把它串成 `/course/<id>.html` 且不再編碼，
 而首頁版面是量測驗收過的、不動它——真正的課程 id 另外放在 `courseId`。
 
 **本站尚未上線，所以這次換網址不做轉址**：沒有外部連結、沒有搜尋引擎已收錄的網址，
@@ -426,8 +432,8 @@ OSM 官方圖磚的使用政策雖然允許「一般人類瀏覽」，但明文�
 
 ### sitemap 與 robots.txt
 
-`site/sitemap.mjs` 產生（build 寫頁面時順便收條目，所以 `--limit` 開發模式不會產出指向
-不存在檔案的網址），`site/check-sitemap.mjs` 驗證（`npm run validate`，單跑 `npm run sitemap`）。
+`site/sitemap.mjs` 產生，由 `src/lib/sitemap-integration.mjs` 在 build 完成後呼叫（條目由資料推出，
+再逐一確認檔案在 `dist/` 裡，所以 `KHO_LIMIT` 開發模式不會產出指向不存在檔案的網址），`site/check-sitemap.mjs` 驗證（`npm run validate`，單跑 `npm run sitemap`）。
 
 2026-09-13 實跑（可讀 slug、29 支來源、主題分類 19 頁與講師頁 6,647 頁之後）：42,460 個 URL、五個分檔，與 `dist/` 的 42,460 個 `.html`
 一對一。中文 slug 編碼後比原本的 `crs_<hash>` 長，所以分檔的位元組數也跟著變大。
@@ -448,7 +454,7 @@ OSM 官方圖磚的使用政策雖然允許「一般人類瀏覽」，但明文�
 - **`lastmod` 用資料的日期，不是 build 當下的時間**。課程取 `sources[].lastVerifiedAt` 的最大值，
   彙整頁取它收錄的課程的最大值，首頁取 `public/home.json` 的 `updatedAt`。寫 `new Date()` 的話
   sitemap 的 git diff 每次都整份變，看不出哪些課真的更新了，對搜尋引擎也是狼來了。
-  同一份資料連跑兩次 `node site/build.mjs`，六個產出檔的 SHA-256 完全相同（2026-09-13 實測）。
+  同一份資料連跑兩次 build，六個產出檔的 SHA-256 完全相同（2026-09-13 實測；2026-09-15 移植 Astro 後與舊產生器逐檔比對，六個 sitemap 檔與 robots.txt 位元組相同）。
 - **停開與已截止的課仍然收錄**——這些頁面對「這門課還在不在」是有答案的，抽掉只會變成 404。
   但它們不會再變動，所以 `priority` 壓低、`changefreq` 拉長，把抓取預算讓給招生中的課：
 
@@ -474,7 +480,7 @@ OSM 官方圖磚的使用政策雖然允許「一般人類瀏覽」，但明文�
 `X-Robots-Tag: noindex` 標頭，那是部署端的設定（本 repo 目前沒有任何主機設定檔），
 robots.txt 管不到，不在這裡假裝管得到。
 
-`site/check-sitemap.mjs` 驗十件事：XML well-formed（專案沒有 node_modules，檢查器是自己寫的，
+`site/check-sitemap.mjs` 驗十件事：XML well-formed（檢查器是自己寫的，不靠套件，
 只驗這份產出會出錯的地方：標籤配對、單一根節點、跳脫）、index 指到的分檔都存在且根節點是
 `urlset`、每個 `<loc>` 是 `https://kho.tw` 開頭的絕對網址、百分比編碼與產生時一致（這條抓得到
 「沒編碼」與「編碼兩次」）、解碼後在 `dist/` 真的有對應檔案、全站沒有重複 URL、未超過每檔
@@ -504,7 +510,7 @@ robots.txt 管不到，不在這裡假裝管得到。
 2026-09-14 已改成隨 vh 連續縮放（見「門卡數字」一節），那三個斷點已經不存在。
 
 `site/check-layout.mjs` 是**手動腳本**：它匯出一段檢查用的 JS 字串，貼進瀏覽器主控台或
-透過瀏覽器驅動執行。這個專案沒有安裝任何 npm 套件（沒有 node_modules），
+透過瀏覽器驅動執行。要真的量版面就需要瀏覽器，專案不為了它裝 playwright，
 所以不做成 `npm run`——與其擺一個跑不起來的指令，不如寫清楚它怎麼用。
 
 **2026-09-13 那一輪的教訓（數值已被 09-14 改版取代，但成因要記住）**：當時固定驗
@@ -535,6 +541,13 @@ robots.txt 管不到，不在這裡假裝管得到。
 **660px 以下改為可捲**（`height:auto`），因為門卡內容有物理下限：標題＋數字＋單位在
 18px 字級與最小行高下約 70px，而 460px 高的視窗中段容器只有 16px，塞不下任何東西。
 可捲的首頁比內容被裁掉的首頁誠實，字級則一步都不讓。
+
+**寬 900px 以下（直排）也改為「至少滿版」**（2026-09-15，`min-height:100dvh` 取代 `height:100dvh`）。
+移植 Astro 時掃 ≤900px 寬 × 560–960px 高共 189 格，舊版有 87 格把門卡內容裁掉——375×667
+容器只剩 16px、414×736 剩 47px，iPhone SE 與 Plus 都在裡面；先前只驗 390×844 剛好是會過的那一格。
+直排之後四張門卡疊兩列，中段容器比橫排矮得多，同樣撞上門卡的物理下限。放得下時看起來仍是一頁，
+放不下才捲。`site/check-layout.mjs` 的「允許直捲」條件同步改成 `vh <= 660 || vw <= 900`，
+修改後同一組 189 格加 10 個桌面尺寸全數通過。
 
 **驗這一輪時踩到三個工具問題，記下來免得下次又被騙**：
 

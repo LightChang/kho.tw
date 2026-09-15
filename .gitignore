@@ -44,3 +44,7 @@ asvs-server.log
 #   Leaflet 與它的 5 個 PNG。這些是**下載來的、不是管線產生的**——
 #   跑一次 build 不會把它們變回來，少了地圖就是死的。
 #   所以 public/ 底下只忽略管線產生的 *.json（index.json、home.json），lib/ 要進版控。
+
+# ── Astro ─────────────────────────────────────────────
+node_modules/
+.astro/

@@ -1,0 +1,23 @@
+---
+// <head> 的共用內容。樣式不在這裡：內頁由 Base.astro 連外部 CSS，首頁自己內嵌。
+import { ANALYTICS, GSC_VERIFY } from '../site.config.mjs';
+
+interface Props {
+  title: string;
+  description?: string;
+  canonical?: string;
+  jsonld?: object;
+}
+const { title, description, canonical, jsonld } = Astro.props;
+// JSON-LD 內的 < 要跳成 <，否則字串裡若出現 </script> 會提前結束 script 區塊
+const ld = jsonld ? JSON.stringify(jsonld).replace(/</g, '\\u003c') : '';
+---
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+{/* 官方要求 GA 放在 <head> 開啟標籤之後立刻，所以排在 charset/viewport 之後、title 之前 */}
+<Fragment set:html={ANALYTICS} />
+<title>{title}</title>
+{description && <meta name="description" content={description}>}
+{canonical && <link rel="canonical" href={canonical}>}
+{ld && <script type="application/ld+json" is:inline set:html={ld} />}
+{GSC_VERIFY && <meta name="google-site-verification" content={GSC_VERIFY}>}

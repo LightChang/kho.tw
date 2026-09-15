@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import { getData, fmt, link } from '../lib/data.mjs';
+import { itemListJsonLd, SITE_URL } from '../../site/jsonld.mjs';
+
+const { openCourses, openByCity } = getData();
+---
+<Base
+  title="現在可報名的課程"
+  description={`全台 ${fmt(openCourses.length)} 門成人課程正在招生，依縣市整理。`}
+  canonical={`${SITE_URL}/open.html`}
+  jsonld={itemListJsonLd(openCourses.slice(0, 100), { name: '現在可報名的課程' })}
+>
+<div class="card"><h2>現在可報名</h2><div class="meta">共 {fmt(openCourses.length)} 門課還沒截止報名，依縣市分組。</div></div>
+{openByCity.map(([city, list]) => (
+<div class="card"><h3>{city}<span class="meta-2 tnum">　{fmt(list.length)} 門</span></h3>
+{list.slice(0, 12).map((c) => <div><a href={link('course', c.slug)}>{c.title}</a> <span class="meta-2">{c.provider?.nameRaw ?? ''}</span></div>)}
+{list.length > 12 && city !== '未標示縣市' && <div class="meta-2"><a href={`/city/${encodeURIComponent(city)}.html`}>看 {city}全部 {fmt(list.length)} 門 →</a></div>}
+{list.length > 12 && city === '未標示縣市' && <div class="meta-2">另有 {fmt(list.length - 12)} 門未標示縣市的課程</div>}
+</div>
+))}
+</Base>

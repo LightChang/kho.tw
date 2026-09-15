@@ -1,0 +1,68 @@
+---
+// 課程頁：最終值 ＋ 各來源並排 ＋ JSON-LD。
+// 檔名與站內連結一律用可讀 slug（課名-單位-短碼）。slug 由 transform/emit.mjs 配給、
+// 記在 data/slugs.ndjson，這裡只讀不改；規則與穩定性保證見 transform/slug.mjs。
+import Base from '../../layouts/Base.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import EndedNote from '../../components/EndedNote.astro';
+import { getData, hasEnded, link, fmt, WEEKDAY_LABEL } from '../../lib/data.mjs';
+import { courseJsonLd, courseUrl } from '../../../site/jsonld.mjs';
+
+export function getStaticPaths() {
+  return getData().coursePages.map((p) => ({ params: { slug: p.course.slug }, props: p }));
+}
+
+// teacherPages：這門課的講師裡「有講師頁」的那些。課程頁的「講師」欄位仍然照原樣印出
+// 來源字串（含「專業師資」「A、B」這種寫法，不加工），連結另外放一張卡片——
+// 把來源文字改寫成連結會動到事實本身，而那一欄的用途是忠實呈現來源怎麼寫。
+const { course: c, venue, teacherPages } = Astro.props;
+
+const rows = [
+  ['開課期別', c.term?.raw],
+  ['上課時間', (c.schedule?.slots ?? []).map((s) => `${WEEKDAY_LABEL[s.weekday] ?? ''} ${s.startTime ?? ''}${s.endTime ? `–${s.endTime}` : ''}`).join('、') || c.schedule?.timeInfoRaw],
+  ['起訖日期', [c.schedule?.startDate, c.schedule?.endDate].filter(Boolean).join(' – ')],
+  ['總時數', c.schedule?.hours],
+  ['講師', (c.teachers ?? []).map((t) => t.nameRaw).join('、')],
+  ['費用', c.isFree ? '免費' : (c.price !== undefined ? `${fmt(c.price)} 元` : c.priceText)],
+  ['學分', c.credit],
+  ['名額', c.enrollment?.capacity !== undefined
+    ? `${c.enrollment.capacity} 人${Number.isFinite(c.enrollment.available) ? `（尚餘 ${c.enrollment.available}）` : ''}`
+    : ''],
+  ['報名期間', [c.enrollment?.opensAt, c.enrollment?.closesAt].filter(Boolean).map((d) => String(d).slice(0, 10)).join(' – ')],
+  // 站內統一分類（18 類，見 overrides/taxonomy.json）與來源原文分開列。
+  // 有些分類是從課名推斷的，標明出處，不讓推測值冒充來源事實。
+  ['分類', c.category ? (c.categoryFrom === 'title' ? `${c.category}（依課名判斷）` : c.category) : ''],
+  ['來源分類', c.categoryRaw],
+  ['議題標籤', (c.topicsRaw ?? []).join('、')],
+].filter(([, v]) => v !== undefined && v !== null && v !== '');
+
+const jsonld = courseJsonLd(c, venue);
+---
+<Base title={`${c.title}｜${c.provider?.nameRaw ?? ''}`} description={jsonld.description} canonical={courseUrl(c)} jsonld={jsonld}>
+<div class="card">
+<h2>{c.title} <StatusBadge status={c.enrollment?.status} /></h2>
+<div class="meta">{c.provider?.nameRaw ?? ''}{c.venue?.city && `　${c.venue.city}${c.venue.district ?? ''}`}</div>
+{hasEnded(c) && <div class="meta-2"><EndedNote course={c} />　本站不改寫來源給的報名狀態，這一行講的是上課期間。</div>}
+{c.description && <p>{c.description}</p>}
+<table>{rows.map(([k, v]) => <tr><th class="th-key">{k}</th><td>{v}</td></tr>)}</table>
+</div>
+{venue?.id ? (
+<div class="card"><h3>上課地點</h3>
+<div><a href={link('venue', venue.slug)}>{venue.name}</a></div>
+<div class="meta">{venue.address ?? ''}</div>
+<div class="meta-2">{venue.lat ? `座標 ${venue.lat}, ${venue.lng}（比對方式：${c.venue.match}）` : '尚無座標'}</div></div>
+) : (
+<div class="card"><h3>上課地點</h3><div class="meta">{c.venue?.name ?? '來源未提供'}</div></div>
+)}
+{teacherPages.length > 0 && (
+<div class="card"><h3>講師的其他課程</h3>
+<ul class="chips">{teacherPages.map((t) => <li><a href={link('teacher', t.slug)}>{t.name}<span class="n tnum">{fmt(t.courseIds.length)}</span></a></li>)}</ul>
+<div class="meta-2">講師頁收錄的是「同名且同一開課單位」的課程，同名的不同人不會被合併。</div></div>
+)}
+<div class="card"><h3>資料來源</h3>
+<table><tr><th>來源</th><th>連結</th><th>提供欄位</th><th>最後確認</th></tr>
+{(c.sources ?? []).map((s) => <tr><td>{s.id}</td><td>{s.url && <a href={s.url} rel="nofollow">原始頁面</a>}</td><td class="meta-2">{s.provides.join('、')}</td><td class="meta-2">{s.lastVerifiedAt ?? ''}</td></tr>)}
+</table>
+{c.rejected && <details class="meta-2"><summary>其他來源的不同值（{c.rejected.length}）</summary><pre class="rejected">{JSON.stringify(c.rejected, null, 1)}</pre></details>}
+</div>
+</Base>

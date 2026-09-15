@@ -160,7 +160,7 @@ async function checkRobots() {
 async function main() {
   const indexFile = path.join(DIST, 'sitemap.xml');
   if (!(await exists(indexFile))) {
-    process.stderr.write(`${indexFile} 不存在——先跑 node site/build.mjs\n`);
+    process.stderr.write(`${indexFile} 不存在——先跑 npm run site\n`);
     process.exitCode = 1;
     return;
   }

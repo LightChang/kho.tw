@@ -1,0 +1,119 @@
+---
+// 首頁：滿版一頁（100dvh），橫豎都不可捲。
+//
+// 四個門各管一個面向，不是四選一：
+//   現在可報名（時效）／學什麼（類型）／在哪裡（縣市）／搜尋（已知道要找什麼）
+// 中段右側是「快額滿」——名額數字只有軒恩報名系統與臺中聯網給得出來，
+// 是本站少數別處看不到的資訊。排序依額滿比例，同一場館最多兩筆（見 transform/emit.mjs）。
+//
+// 不用 Base.astro，樣式整份內嵌：首頁是「滿版一頁」（100dvh、兩軸不可捲），
+// 外部樣式表在載入完成前會先用無樣式的高度算一次版面，讀者會看到一次閃爍與跳動。
+// 其餘頁面走外部檔省下 193 MB，但首頁就一頁，內嵌的代價只有十幾 KB——這裡買的是不閃爍。
+// ?raw 拿到的是原始字串，site.css 開頭的 @import 不會被展開，所以 tokens.css 自己串在最前面。
+import Head from '../components/Head.astro';
+import tokensCss from '../styles/tokens.css?raw';
+import siteCss from '../styles/site.css?raw';
+import homeCss from '../styles/home.css?raw';
+import { getData, fmt } from '../lib/data.mjs';
+
+const css = [tokensCss, siteCss.replace(/^@import .*$/m, ''), homeCss].join('\n');
+
+const { home } = getData();
+const t = home.totals;
+const topCities = home.cities.slice(0, 8);
+const topTypes = home.types.slice(0, 6);
+// 最多 12 列，實際顯示幾列由容器高度決定（見 home.css 的 .hot ol）
+const hot = home.almostFull.slice(0, 12);
+
+// 門卡的數字要撐滿卡片寬度，位數多就自動縮小（見 home.css 的 .door .n）。
+// CSS 沒辦法知道字串多長，所以在這裡把字元數當變數傳過去。
+const doors = [
+  { cls: 'door open', href: '/open.html', k: '現在可報名', d: '還沒截止的課', n: t.open, u: '門課程' },
+  { cls: 'door', href: '/types.html', k: '學什麼', d: '社大、運動中心、樂齡、職訓', n: home.types.length, u: '種課程類型' },
+  { cls: 'door', href: '/cities.html', k: '在哪裡', d: '依縣市找離你近的', n: home.cities.length, u: '個縣市' },
+  { cls: 'door', href: '/search.html', k: '搜尋', d: '課名、單位都能找', n: t.teachers, u: '位講師可查' },
+].map((door) => ({ ...door, s: fmt(door.n) }));
+---
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <Head
+    title="kho.tw 全台成人課程｜現在還報得到的課"
+    description={`全台社區大學、運動中心、樂齡中心與職訓課程共 ${fmt(t.courses)} 門，其中 ${fmt(t.open)} 門正在招生。`}
+  />
+  <style is:inline set:html={css} />
+</head>
+<body>
+<div class="home">
+  <header class="ask">
+    <p class="brand">kho.tw</p>
+    <h1>想學什麼？現在還報得到</h1>
+    <form id="f" role="search">
+      <input id="q" type="search" autocomplete="off" aria-label="搜尋課程、單位或講師"
+        placeholder="課名、單位、講師">
+      <button type="submit">搜尋</button>
+    </form>
+    <p class="tally" id="tally">收錄 <b class="tnum">{fmt(t.courses)}</b> 門課、<b class="tnum">{fmt(t.venues)}</b> 個上課地點，其中 <b class="tnum">{fmt(t.open)}</b> 門正在招生</p>
+  </header>
+
+  <nav class="doors" aria-label="主要入口">
+    {doors.map((door) => (
+    <a class={door.cls} href={door.href}>
+      <span class="k">{door.k}</span>
+      <span class="d">{door.d}</span>
+      <span class="n tnum" style={`--len:${door.s.length}`}>{door.s}</span>
+      <span class="u">{door.u}</span>
+    </a>
+    ))}
+  </nav>
+
+  <section class="hot" aria-labelledby="hot-h">
+    <h2 id="hot-h">快額滿</h2>
+    <p class="sub">依額滿比例排序；名額由來源每日更新，只有運動中心與臺中社大提供剩餘名額</p>
+    <ol>
+      {/* c.id 放的是百分比編碼後的 slug（transform/emit.mjs），直接串、不再編碼 */}
+      {hot.map((c) => (
+      <li><a href={`/course/${c.id}.html`} title={`已報名 ${c.capacity - c.available}／${c.capacity} 人`}>
+        <span class="left tnum">剩 {c.available}<span class="cap">／{c.capacity}</span></span>
+        <span class="t">{c.title}</span>
+        <span class="w">{c.provider}</span>
+      </a></li>
+      ))}
+    </ol>
+  </section>
+
+  <footer class="foot">
+    <div class="row">
+      <span class="lbl">縣市</span>
+      <ul>{topCities.map((c) => <li><a href={`/city/${encodeURIComponent(c.name)}.html`}>{c.name} <span class="tnum meta-2">{fmt(c.open)}</span></a></li>)}</ul>
+      <a class="more" href="/cities.html">全部 {home.cities.length} 縣市 →</a>
+    </div>
+    <div class="row">
+      <span class="lbl">類型</span>
+      <ul>{topTypes.map((k) => <li><a href={`/type/${encodeURIComponent(k.kind)}.html`}>{k.label} <span class="tnum meta-2">{fmt(k.n)}</span></a></li>)}</ul>
+    </div>
+    <p class="note">
+      <span>縣市數字為招生中課程數。各縣市收錄深度不同（新北僅抓近 180 天），數字不代表當地實際課程總量。</span>
+      <span>更新於 {home.updatedAt}</span>
+    </p>
+  </footer>
+</div>
+<script is:inline>
+const q=document.getElementById('q'),tally=document.getElementById('tally'),base=tally.innerHTML;
+let idx=null;
+async function load(){if(!idx)idx=await(await fetch('/index.json')).json();return idx}
+q.addEventListener('input',async()=>{
+  const v=q.value.trim();
+  if(v.length<2){tally.innerHTML=base;return}
+  const rows=await load();
+  const hit=rows.filter(r=>r[1].includes(v)||r[9].includes(v)||(r[11]||'').includes(v));
+  tally.innerHTML=hit.length?'找到 <b class="tnum">'+hit.length.toLocaleString('en-US')+'</b> 門：'+hit.slice(0,3).map(r=>r[1].slice(0,14)).join('、')+'⋯　按 Enter 看全部':'找不到相符的課程，換個說法試試';
+});
+document.getElementById('f').addEventListener('submit',e=>{
+  e.preventDefault();
+  const v=q.value.trim();
+  if(v)location.href='/search.html?q='+encodeURIComponent(v);
+});
+</script>
+</body>
+</html>

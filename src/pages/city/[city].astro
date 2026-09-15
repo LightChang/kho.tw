@@ -1,0 +1,21 @@
+---
+import Base from '../../layouts/Base.astro';
+import CourseList from '../../components/CourseList.astro';
+import { getData, fmt } from '../../lib/data.mjs';
+import { itemListJsonLd, SITE_URL } from '../../../site/jsonld.mjs';
+
+export function getStaticPaths() {
+  return getData().cities.map((c) => ({ params: { city: c.name }, props: { c } }));
+}
+
+const { c } = Astro.props;
+---
+<Base
+  title={`${c.name}的成人課程`}
+  description={`${c.name}社區大學、樂齡中心、運動中心與職訓課程共 ${fmt(c.list.length)} 門。`}
+  canonical={`${SITE_URL}/city/${encodeURIComponent(c.name)}.html`}
+  jsonld={itemListJsonLd(c.list.slice(0, 100), { name: `${c.name}的成人課程` })}
+>
+<div class="card"><h2>{c.name}</h2><div class="meta">{fmt(c.list.length)} 門課，其中 {fmt(c.open)} 門招生中</div></div>
+<CourseList list={c.list} />
+</Base>

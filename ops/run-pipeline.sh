@@ -131,7 +131,15 @@ run_step "relations" "$NODE" transform/resolve-relations.mjs || { log "relations
 run_step "emit"      "$NODE" transform/emit.mjs              || { log "emit 失敗，停止"; exit 1; }
 
 # ── 4. 產生網站並驗證 ──────────────────────────────────────
-run_step "site" "$NODE" site/build.mjs || { log "site build 失敗，停止"; exit 1; }
+# 直接用 $NODE 跑 Astro 的 CLI 檔，不走 npx：launchd 的 PATH 沒有 nvm，npx 找不到，
+# 而 node 本身已經在上面驗過是可執行的。node_modules 不在（沒跑過 npm ci）就明講。
+ASTRO="$ROOT/node_modules/astro/bin/astro.mjs"
+if [ ! -f "$ASTRO" ]; then
+  CURRENT_STAGE="site"
+  log "找不到 ${ASTRO}，請先在專案目錄跑 npm ci"
+  exit 1
+fi
+run_step "site" "$NODE" "$ASTRO" build || { log "site build 失敗，停止"; exit 1; }
 # 這三支要和 package.json 的 validate 保持一致——新增檢查器時兩邊都要記得加，
 # 否則排程跑的驗證會比手動 npm run validate 弱，而且不會有人發現。
 run_step "validate-jsonld" "$NODE" site/validate-jsonld.mjs || log "JSON-LD 驗證有問題（網站已產出，請查 log）"

@@ -4,9 +4,8 @@
 # 那是 transform/scheduler.mjs 讀 data/schedule-state.json 自己算的（ingest/CONTRACT.md §3）。
 # cron 只負責「給它一個檢查的機會」，多數時候它會回報「沒有來源到期」就結束。
 #
-# 與姊妹站 seh.tw 的 workflow 有一個關鍵差異：**這個專案沒有任何 npm 套件**，
-# 沒有 node_modules、也沒有 package-lock.json，所以不能跑 `npm ci`（會直接失敗）。
-# package.json 只是把 node 指令包成 scripts 而已。
+# 網站用 Astro 產生（src/），跟姊妹站 seh.tw 一樣要先 `npm ci`。
+# 抓取與轉換（transform/）仍然只用 node 內建模組，不依賴任何套件。
 name: deploy
 
 on:
@@ -45,7 +44,8 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'  # 專案用 node 22 的 ESM 與內建 fetch，不裝任何套件
+          node-version: '22'  # 專案用 node 22 的 ESM 與內建 fetch
+          cache: npm
 
       # inputs.force 一律走 env，不內插進 run:。內插等於把使用者輸入當 shell 指令跑。
       - name: 抓取到期來源
@@ -103,8 +103,11 @@ jobs:
           # 設定位置：repo → Settings → Secrets and variables → Actions → Variables。
           KHO_GA_ID: ${{ vars.KHO_GA_ID }}
           KHO_GSC_VERIFY: ${{ vars.KHO_GSC_VERIFY }}
+        # npm ci 放在這一步而不是一開頭：多數整點沒有來源到期，不必每小時裝一次 Astro
         run: |
-          node site/build.mjs
+          npm ci
+          npm test
+          npx astro build
           node site/validate-jsonld.mjs
           node site/check-links.mjs
           node site/check-sitemap.mjs

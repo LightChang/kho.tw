@@ -1,0 +1,108 @@
+/* kho.tw 站台樣式（內頁共用）
+   token 一律取自 tokens.css（統一設計系統），此檔只放排版與站台專用元件，
+   不得重新定義任何 --token，也不得直接寫 hex 或低於 --text-xs 的字級（test/style-tokens.test.mjs 擋著）。
+
+   兩個前提決定了這套設計：
+     1. 使用者是想找課的成人與樂齡族群，字要大、對比要夠。最小字級 18px 無例外。
+     2. 報名狀態是本站最重要的資訊，所以顏色帶語意且全站一致：
+        招生中=綠（pass）、額滿=紅（fail）、尚未開放=琥珀（warn）、開課中=藍（info）、停開=灰。
+
+   次要文字一律用 --text-secondary，不用 --text-muted：muted 的 L=0.60 在白底只有約 3:1，
+   達不到 WCAG AA 的 4.5:1，而它原本用在 18px 的小字上——正是樂齡讀者最吃力的地方。 */
+
+@import './tokens.css';
+
+/* 卡片底色。tokens.css 的 --bg-surface（L=0.94）比 --bg-base（L=0.97）還深，
+   拿它當卡片會變成「灰卡片放在白底上」；本站的層次是淺灰底、白卡片。 */
+:root{--card-bg:oklch(1 0 0);--radius:10px}
+
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  background:var(--bg-base);color:var(--text-primary);
+  font:var(--text-base)/1.6 system-ui,"Noto Sans TC","PingFang TC",sans-serif;
+}
+a{color:var(--color-link);text-decoration:none}
+a:hover{text-decoration:underline}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* 狀態：全站一致的語意色 */
+.st{display:inline-block;padding:1px 10px;border-radius:999px;font-size:var(--text-xs);
+  border:1px solid currentColor;white-space:nowrap}
+.st-open{color:var(--color-pass)}
+.st-full{color:var(--color-fail)}
+.st-upcoming{color:var(--color-warn)}
+.st-running{color:var(--color-info)}
+.st-cancelled,.st-closed,.st-unknown{color:var(--text-secondary)}
+.left-seats{color:var(--color-fail)}
+/* 「課程已於 X 結束」講的是上課期間，不是報名狀態（見 src/lib/data.mjs 的 hasEnded）。
+   刻意不用 .st 的膠囊外框，免得被當成第七種報名狀態。 */
+.ended{color:var(--text-secondary);font-size:var(--text-xs);white-space:nowrap}
+
+/* 內頁（課程／縣市／場館）共用 */
+.wrap{max-width:1040px;margin:0 auto;padding:28px 20px 64px}
+.topbar{background:var(--card-bg);border-bottom:1px solid var(--border-subtle)}
+.topbar .inner{max-width:1040px;margin:0 auto;padding:14px 20px;display:flex;gap:18px;align-items:baseline}
+/* 手機：導覽列改成單行橫向捲動，不換行。
+   2026-09-14 加了「地圖」之後變成 8 個連結，390px 寬會折成三行、佔掉 125px，
+   等於首屏 15% 被導覽列吃掉。改成可橫向滑動後固定一行（實測 52px）。
+   -webkit-overflow-scrolling 讓 iOS 有慣性；scrollbar 在手機上本來就不顯示。 */
+@media (max-width:560px){
+  .topbar .inner{flex-wrap:nowrap;overflow-x:auto;gap:14px;padding:12px 16px;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .topbar .inner::-webkit-scrollbar{display:none}
+  .topbar a,.topbar b{flex:none;white-space:nowrap}
+}
+.topbar b{font-size:var(--text-lg)}
+.topbar a{color:var(--text-primary)}
+.card{text-align:left;background:var(--card-bg);border:1px solid var(--border-subtle);border-radius:var(--radius);
+  padding:18px 20px;margin-bottom:14px}
+.card h2{margin:0 0 6px;font-size:var(--text-xl);line-height:1.3}
+.card h3{margin:0 0 10px;font-size:var(--text-lg)}
+.meta{color:var(--text-secondary);font-size:var(--text-sm)}
+.meta-2{color:var(--text-secondary);font-size:var(--text-xs)}
+table{width:100%;border-collapse:collapse;font-size:var(--text-sm)}
+th,td{border-bottom:1px solid var(--border-subtle);padding:9px 6px;text-align:left;vertical-align:top}
+th{color:var(--text-secondary);font-weight:600;white-space:nowrap}
+/* 窄螢幕的表格：字級對齊 design-tokens 之後 th 從 16.8px 變 20px，
+   320px 寬實測課程頁的表格被撐到 341px，整頁跟著橫捲。
+   先解除表頭不換行（341→291px），但 320 扣掉 .wrap 與 .card 的左右 padding
+   之後只剩 240px 可用，291 還是塞不下——所以再讓表格自己成為可橫捲的區塊。
+   把橫捲關在表格裡，比整頁橫捲好：表格是少數「寬度本來就可能超出」的元素。 */
+@media (max-width:420px){
+  th{white-space:normal}
+  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+}
+.chips{display:flex;flex-wrap:wrap;gap:8px 14px;list-style:none;margin:0;padding:0}
+.chips a{display:inline-flex;align-items:baseline;gap:6px;padding:4px 12px;border:1px solid var(--border-subtle);
+  border-radius:999px;background:var(--card-bg);font-size:var(--text-sm)}
+.chips .n{color:var(--text-secondary);font-size:var(--text-xs)}
+
+/* 地圖頁（見 src/pages/map.astro）。地圖容器一定要有明確高度，Leaflet 不會自己撐開。 */
+.map-card{padding:14px}
+.map-tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+.map-tools button{font:inherit;font-weight:700;padding:10px 18px;border:0;border-radius:var(--radius);
+  background:var(--color-link);color:var(--card-bg);cursor:pointer}
+.map-tools select{font:inherit;padding:9px 12px;border:1px solid var(--border-subtle);
+  border-radius:var(--radius);background:var(--card-bg);color:var(--text-primary)}
+#map{height:min(70vh,620px);border-radius:var(--radius);border:1px solid var(--border-subtle)}
+/* 手機把地圖壓矮一點，否則下面的說明與「附近」清單整個被推出畫面外 */
+@media (max-width:560px){ #map{height:min(58vh,420px)} .map-tools button,.map-tools select{flex:1} }
+.nearlist{list-style:none;margin:0;padding:0}
+.nearlist li{border-top:1px solid var(--border-subtle);padding:9px 2px}
+.nearlist li:first-child{border-top:0}
+/* Leaflet 的彈出視窗沿用站內字級，不用它預設的 12px——本站讀者是成人與樂齡族群 */
+.leaflet-popup-content{font:var(--text-sm)/1.6 system-ui,"Noto Sans TC","PingFang TC",sans-serif}
+.leaflet-container{font:var(--text-xs)/1.5 system-ui,"Noto Sans TC","PingFang TC",sans-serif}
+
+/* 課程頁 */
+.th-key{width:7em}
+/* 「其他來源的不同值」是原樣印出的 JSON；pre 的底色與框線來自 tokens.css，這裡只讓長行換行 */
+.rejected{white-space:pre-wrap}
+
+/* 搜尋頁（見 src/pages/search.astro） */
+.search-form{display:flex;gap:10px;margin-top:10px}
+.search-form input{flex:1;min-width:0;font:inherit;padding:12px 16px;border:1px solid var(--border-subtle);border-radius:var(--radius)}
+.search-form button{flex:none;font:inherit;font-weight:700;padding:12px 22px;border:0;border-radius:var(--radius);
+  background:var(--color-link);color:var(--card-bg);cursor:pointer}
+.search-count{margin-top:10px}

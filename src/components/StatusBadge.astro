@@ -1,0 +1,7 @@
+---
+import { STATUS_LABEL } from '../lib/data.mjs';
+
+const { status } = Astro.props;
+const s = status ?? 'unknown';
+---
+<span class={`st st-${s}`}>{STATUS_LABEL[s] ?? s}</span>

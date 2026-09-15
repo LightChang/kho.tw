@@ -1,0 +1,21 @@
+---
+// markInferred：主題分類頁專用。分類是從課名推斷的就標出來，不讓推測值混在來源事實裡。
+import StatusBadge from './StatusBadge.astro';
+import EndedNote from './EndedNote.astro';
+import { WEEKDAY_LABEL, link } from '../lib/data.mjs';
+
+const { course: c, markInferred = false } = Astro.props;
+const slot = c.schedule?.slots?.[0];
+const when = [
+  slot?.weekday ? WEEKDAY_LABEL[slot.weekday] : '',
+  slot?.startTime ? `${slot.startTime}${slot.endTime ? `–${slot.endTime}` : ''}` : '',
+  c.schedule?.startDate ? `自 ${c.schedule.startDate}` : '',
+].filter(Boolean).join('　');
+const left = Number.isFinite(c.enrollment?.available) ? c.enrollment.available : null;
+---
+<div class="card">
+<div><a href={link('course', c.slug)}>{c.title}</a> <StatusBadge status={c.enrollment?.status} />{left !== null && <Fragment>　<span class="tnum left-seats">剩 {left} 位</span></Fragment>}　<EndedNote course={c} /></div>
+<div class="meta">{c.provider?.nameRaw ?? ''}{c.venue?.city && `　${c.venue.city}${c.venue.district ?? ''}`}</div>
+{when && <div class="meta">{when}</div>}
+{markInferred && c.categoryFrom === 'title' && <div class="meta-2">分類依課名判斷</div>}
+</div>

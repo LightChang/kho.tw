@@ -3,6 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "dev": "astro dev",
     "pipeline": "npm run ingest:tolerant && npm run normalize && npm run health && npm run cluster && npm run relations && npm run emit",
     "build": "npm run pipeline && npm run site && npm run validate",
     "ingest:tolerant": "node transform/scheduler.mjs || [ $? -eq 2 ]",
@@ -11,12 +12,18 @@
     "cluster": "node transform/cluster.mjs",
     "relations": "node transform/resolve-relations.mjs",
     "emit": "node transform/emit.mjs",
-    "site": "node site/build.mjs",
+    "site": "astro build",
+    "preview": "astro preview",
     "validate": "node site/validate-jsonld.mjs && node site/check-links.mjs && node site/check-sitemap.mjs",
     "links": "node site/check-links.mjs",
     "sitemap": "node site/check-sitemap.mjs",
+    "test": "node --test \"test/**/*.test.mjs\"",
+    "sync:tokens": "node scripts/sync-tokens.mjs",
     "ingest": "node transform/scheduler.mjs",
     "ingest:force": "node transform/scheduler.mjs --force",
     "ingest:due": "node transform/scheduler.mjs --list"
+  },
+  "dependencies": {
+    "astro": "^7.3.2"
   }
 }

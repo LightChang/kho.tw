@@ -1,0 +1,22 @@
+---
+import Base from '../layouts/Base.astro';
+import { getData, fmt, link, MIN_COURSES } from '../lib/data.mjs';
+import { pageListJsonLd, teacherUrl, SITE_URL } from '../../site/jsonld.mjs';
+
+const { teacherIndex, pageTeachers, rankedTeachers } = getData();
+const shown = rankedTeachers.slice(0, 300);
+---
+<Base
+  title="講師"
+  description={`全台成人課程的講師索引，${fmt(pageTeachers.length)} 位講師在本站的開課紀錄。`}
+  canonical={`${SITE_URL}/teachers.html`}
+  jsonld={pageListJsonLd(shown.slice(0, 100).map((t) => ({ url: teacherUrl(t), name: `${t.name}（${t.provider}）` })), { name: '講師索引' })}
+>
+<div class="card"><h2>講師</h2>
+<div class="meta">本站從課程資料裡認得出 {fmt(teacherIndex.size)} 個講師身分（姓名＋開課單位），其中 {fmt(pageTeachers.length)} 個收錄 {MIN_COURSES} 門以上的課、有自己的頁面。</div>
+<div class="meta-2">首頁「講師」那個數字算的是另一件事——課程資料裡出現過的講師姓名字面數，含「專業師資」「講師群」這類集合名稱，兩個數字不會一樣。</div>
+<div class="meta-2">講師身分以「姓名＋開課單位」認定：同名的人很多，而來源只給名字、沒有任何識別碼，分不出「同一位老師跨校開課」與「剛好同名的兩個人」——所以寧可把同一位老師拆成兩頁，也不把兩個人合成一頁。只收錄一門課的講師不另外產頁，那一頁的內容會和課程頁完全重複。</div></div>
+<div class="card"><h3>收錄課程最多的講師</h3>
+<ul class="chips">{shown.map((t) => <li><a href={link('teacher', t.slug)}>{t.name}<span class="n tnum">{fmt(t.courseIds.length)}</span></a></li>)}</ul>
+<div class="meta-2">另外 {fmt(pageTeachers.length - shown.length)} 位講師的頁面可以從課程頁的「講師的其他課程」進入，或用<a href="/search.html">搜尋</a>找講師姓名。</div></div>
+</Base>

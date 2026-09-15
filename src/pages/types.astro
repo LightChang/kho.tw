@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import { getData, fmt } from '../lib/data.mjs';
+import { SITE_URL } from '../../site/jsonld.mjs';
+
+const { home } = getData();
+---
+<Base title="課程類型" description="社區大學、運動中心、樂齡中心、職業訓練等課程類型索引。" canonical={`${SITE_URL}/types.html`}>
+<div class="card"><h2>課程類型</h2><div class="meta">依開課單位的性質分類。</div></div>
+<div class="card"><ul class="chips">{home.types.map((k) => <li><a href={`/type/${encodeURIComponent(k.kind)}.html`}>{k.label}<span class="n tnum">{fmt(k.n)}</span></a></li>)}</ul></div>
+</Base>

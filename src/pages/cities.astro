@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import { getData, fmt } from '../lib/data.mjs';
+import { SITE_URL } from '../../site/jsonld.mjs';
+
+const { home } = getData();
+---
+<Base title="各縣市課程" description="全台 21 縣市的成人課程索引。" canonical={`${SITE_URL}/cities.html`}>
+<div class="card"><h2>各縣市</h2><div class="meta">數字是該縣市正在招生的課程數。</div></div>
+<div class="card"><ul class="chips">{home.cities.map((c) => <li><a href={`/city/${encodeURIComponent(c.name)}.html`}>{c.name}<span class="n tnum">{fmt(c.open)}／{fmt(c.n)}</span></a></li>)}</ul></div>
+</Base>

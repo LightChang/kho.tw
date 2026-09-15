@@ -1,0 +1,32 @@
+---
+// 講師頁。身分認定＝姓名＋開課單位，規則與理由見 transform/teachers.mjs。
+import Base from '../../layouts/Base.astro';
+import CourseCard from '../../components/CourseCard.astro';
+import { getData, fmt, link } from '../../lib/data.mjs';
+import { itemListJsonLd, teacherUrl } from '../../../site/jsonld.mjs';
+import { shortProvider } from '../../../transform/slug.mjs';
+
+export function getStaticPaths() {
+  return getData().teachers.map((p) => ({ params: { slug: p.teacher.slug }, props: p }));
+}
+
+const { teacher: t, list, open, sameName } = Astro.props;
+---
+<Base
+  title={`${t.name}｜${t.provider}`}
+  description={`${t.provider}講師${t.name}在本站收錄 ${fmt(list.length)} 門課，其中 ${fmt(open)} 門招生中。`}
+  canonical={teacherUrl(t)}
+  jsonld={itemListJsonLd(list.slice(0, 100), { name: `${t.name}的課程` })}
+>
+<div class="card"><h2>{t.name}</h2>
+<div class="meta">{t.provider}</div>
+<div class="meta-2">本站收錄 {fmt(list.length)} 門課，其中 {fmt(open)} 門招生中</div></div>
+{list.slice(0, 200).map((c) => <CourseCard course={c} />)}
+{list.length > 200 && <div class="meta-2">只列出前 200 門，其餘請用搜尋。</div>}
+{sameName.length > 0 && (
+<div class="card"><h3>站內同名的其他講師頁</h3>
+<div class="meta-2">本站以「姓名＋開課單位」認定講師，所以這些頁面可能是同一位老師在別的單位開課，也可能只是剛好同名的不同人。來源資料分不出來，本站就不替雙方認定。</div>
+<ul class="chips">{sameName.map((o) => <li><a href={link('teacher', o.slug)}>{o.name}<span class="n">{o.city}{shortProvider(o.provider)}</span></a></li>)}</ul></div>
+)}
+<div class="card"><div class="meta-2">本頁只整理本站已收錄課程中公開標示的講師姓名，不彙整也不推測任何其他個人資訊。資料有誤請洽原開課單位。</div></div>
+</Base>

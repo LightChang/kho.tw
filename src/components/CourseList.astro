@@ -1,0 +1,8 @@
+---
+// 彙整頁（類型／主題／縣市）的課程清單：只列前 300 門，其餘靠搜尋。
+import CourseCard from './CourseCard.astro';
+
+const { list, markInferred = false, max = 300 } = Astro.props;
+---
+{list.slice(0, max).map((c) => <CourseCard course={c} markInferred={markInferred} />)}
+{list.length > max && <div class="meta-2">只列出前 {max} 門，其餘請用搜尋。</div>}
