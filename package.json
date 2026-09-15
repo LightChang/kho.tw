@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "pipeline": "npm run ingest:tolerant && npm run normalize && npm run health && npm run cluster && npm run relations && npm run emit",
-    "build": "npm run pipeline && npm run site && npm run validate",
+    "pipeline": "pnpm run ingest:tolerant && pnpm run normalize && pnpm run health && pnpm run cluster && pnpm run relations && pnpm run emit",
+    "build": "pnpm run pipeline && pnpm run site && pnpm run validate",
     "ingest:tolerant": "node transform/scheduler.mjs || [ $? -eq 2 ]",
     "normalize": "node transform/normalize.mjs",
     "health": "node transform/check-health.mjs",
@@ -25,5 +25,11 @@
   },
   "dependencies": {
     "astro": "^7.3.2"
+  },
+  "packageManager": "pnpm@10.32.1",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }

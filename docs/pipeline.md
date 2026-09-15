@@ -8,22 +8,22 @@
 ## 1. 指令
 
 ```
-npm run build        完整跑一次：抓取 → 正規化 → 健康檢查 → 分群 → 關聯 → 投影 → 建站
-npm run pipeline     同上但不建站
-npm run ingest       只抓到期的來源        transform/scheduler.mjs
-npm run normalize    raw → L1 → observation
-npm run health       來源筆數異常檢查
-npm run cluster      跨來源分群
-npm run relations    課程 → 場館
-npm run emit         投影、前端索引、統計
-npm run site         產生 dist/ 靜態網站（astro build）
-npm run dev          Astro 開發伺服器（KHO_LIMIT=N 只產前 N 門課程頁）
-npm test             設計系統守門：最小字級 18px、只用 token 色、文字不用 --text-muted
-npm run sync:tokens  從統一設計系統同步 src/styles/tokens.css
-npm run ingest:due   只列出誰到期，不抓
+pnpm run build       完整跑一次：抓取 → 正規化 → 健康檢查 → 分群 → 關聯 → 投影 → 建站
+pnpm run pipeline    同上但不建站
+pnpm run ingest      只抓到期的來源        transform/scheduler.mjs
+pnpm run normalize   raw → L1 → observation
+pnpm run health      來源筆數異常檢查
+pnpm run cluster     跨來源分群
+pnpm run relations   課程 → 場館
+pnpm run emit        投影、前端索引、統計
+pnpm run site        產生 dist/ 靜態網站（astro build）
+pnpm run dev         Astro 開發伺服器（KHO_LIMIT=N 只產前 N 門課程頁）
+pnpm test            設計系統守門：最小字級 18px、只用 token 色、文字不用 --text-muted
+pnpm run sync:tokens  從統一設計系統同步 src/styles/tokens.css
+pnpm run ingest:due  只列出誰到期，不抓
 ```
 
-排程邏輯在程式裡，不在觸發器裡。外部只需要「每小時醒來一次」跑 `npm run ingest`。
+排程邏輯在程式裡，不在觸發器裡。外部只需要「每小時醒來一次」跑 `pnpm run ingest`。
 `scheduler.mjs` 退出碼：`0` 有來源變動（值得往下跑）、`2` 全部沒變（可以直接結束）、`1` 例外。
 
 ## 2. 六層
@@ -220,7 +220,7 @@ src/                        Astro 靜態網站 → dist/（2026-09-15 由自寫�
 
 ## 6. 結構化資料（JSON-LD）
 
-`site/jsonld.mjs` 產生，`site/validate-jsonld.mjs` 離線驗證（`npm run validate`）。
+`site/jsonld.mjs` 產生，`site/validate-jsonld.mjs` 離線驗證（`pnpm run validate`）。
 
 **先查證再實作**：Google 的「Course info」複合式搜尋結果已淘汰（2024-09 列入淘汰計畫、
 說明文件已移除），目前仍支援的是 **Course list（課程輪轉介面）**：
@@ -274,7 +274,7 @@ xl 32px／2xl 48px／3xl 56px，行高 1.6，最小 18px「無例外」）。使
 寫死 0.85rem（13.6px），都低於規範下限——而 `--fs-xs` 用在狀態膠囊、次要說明與表格註記上，
 正是最該看清楚的地方。
 
-三個檢查器都納入 `npm run validate`，`npm run build` 收尾會自動跑：JSON-LD 結構驗證、
+三個檢查器都納入 `pnpm run validate`，`pnpm run build` 收尾會自動跑：JSON-LD 結構驗證、
 站內連結驗證、sitemap 與 robots.txt 驗證。第二個抓過三個實際的 404：兩個是可報名頁連到不存在的
 「未標示縣市」頁，一個是換 slug 時首頁「快額滿」的資料沒帶到 slug、整批連到
 `/course/undefined.html`（畫面上看不出任何異狀，只有檢查器會講）。
@@ -433,7 +433,7 @@ OSM 官方圖磚的使用政策雖然允許「一般人類瀏覽」，但明文�
 ### sitemap 與 robots.txt
 
 `site/sitemap.mjs` 產生，由 `src/lib/sitemap-integration.mjs` 在 build 完成後呼叫（條目由資料推出，
-再逐一確認檔案在 `dist/` 裡，所以 `KHO_LIMIT` 開發模式不會產出指向不存在檔案的網址），`site/check-sitemap.mjs` 驗證（`npm run validate`，單跑 `npm run sitemap`）。
+再逐一確認檔案在 `dist/` 裡，所以 `KHO_LIMIT` 開發模式不會產出指向不存在檔案的網址），`site/check-sitemap.mjs` 驗證（`pnpm run validate`，單跑 `pnpm run sitemap`）。
 
 2026-09-13 實跑（可讀 slug、29 支來源、主題分類 19 頁與講師頁 6,647 頁之後）：42,460 個 URL、五個分檔，與 `dist/` 的 42,460 個 `.html`
 一對一。中文 slug 編碼後比原本的 `crs_<hash>` 長，所以分檔的位元組數也跟著變大。
@@ -511,7 +511,7 @@ robots.txt 管不到，不在這裡假裝管得到。
 
 `site/check-layout.mjs` 是**手動腳本**：它匯出一段檢查用的 JS 字串，貼進瀏覽器主控台或
 透過瀏覽器驅動執行。要真的量版面就需要瀏覽器，專案不為了它裝 playwright，
-所以不做成 `npm run`——與其擺一個跑不起來的指令，不如寫清楚它怎麼用。
+所以不做成 `pnpm run`——與其擺一個跑不起來的指令，不如寫清楚它怎麼用。
 
 **2026-09-13 那一輪的教訓（數值已被 09-14 改版取代，但成因要記住）**：當時固定驗
 1440×900／1366×600／1024×768／390×844 四個常見解析度，**漏了 1366×768，而破版就在那一格**

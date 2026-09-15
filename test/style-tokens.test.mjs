@@ -3,7 +3,7 @@
 //   1. 最小字級 18px，無例外
 //   2. 顏色只能用 token 或 oklch()；寫死的 hex 只允許設計系統自己的 fallback 值
 //
-// tokens.css 是上游同步過來的副本（npm run sync:tokens），不在這裡改；
+// tokens.css 是上游同步過來的副本（pnpm run sync:tokens），不在這裡改；
 // 但它同步進來的值一樣要守規矩，所以也一起檢查。
 
 import test from 'node:test';

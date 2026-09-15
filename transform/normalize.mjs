@@ -142,7 +142,16 @@ async function main() {
   const args = process.argv.slice(2);
   let ids = args;
   if (ids.length === 0) {
-    ids = (await readdir(RAW_DIR)).filter((f) => f.endsWith('.json')).map((f) => f.replace(/\.json$/, ''));
+    // ingest/raw/ 不進版控。CI 的全新 checkout 在「沒有來源到期、但要求重建」時根本沒有這個目錄——
+    // 那代表沒有新抓的資料要正規化，不是錯誤：後續的 cluster／emit 讀的是進版控的 data/observation/。
+    let files = [];
+    try {
+      files = await readdir(RAW_DIR);
+    } catch (err) {
+      if (err.code !== 'ENOENT') throw err;
+      process.stderr.write(`${path.relative(ROOT, RAW_DIR)}/ 不存在：這輪沒有新抓的資料，略過正規化\n`);
+    }
+    ids = files.filter((f) => f.endsWith('.json')).map((f) => f.replace(/\.json$/, ''));
   }
   const results = [];
   for (const id of ids.sort()) {

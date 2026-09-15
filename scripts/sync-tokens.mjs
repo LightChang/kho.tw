@@ -13,7 +13,7 @@ const HEADER = `/* ============================================================
  * 本檔為統一設計系統的副本，請勿直接編輯。
  *
  * 來源：agent.system-integration-quality-control/templates/styles.css
- * 同步：npm run sync:tokens
+ * 同步：pnpm run sync:tokens
  *
  * 需要新增樣式時寫在 src/styles/site.css，不要改這裡；
  * 需要調整 token 值時改上游來源檔再同步回來。

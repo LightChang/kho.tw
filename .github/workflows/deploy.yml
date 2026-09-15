@@ -4,7 +4,7 @@
 # 那是 transform/scheduler.mjs 讀 data/schedule-state.json 自己算的（ingest/CONTRACT.md §3）。
 # cron 只負責「給它一個檢查的機會」，多數時候它會回報「沒有來源到期」就結束。
 #
-# 網站用 Astro 產生（src/），跟姊妹站 seh.tw 一樣要先 `npm ci`。
+# 網站用 Astro 產生（src/），套件用 pnpm 管理（版本釘在 package.json 的 packageManager）。
 # 抓取與轉換（transform/）仍然只用 node 內建模組，不依賴任何套件。
 name: deploy
 
@@ -42,10 +42,13 @@ jobs:
         with:
           fetch-depth: 50     # rebase 要看得到近期歷史；全歷史每小時 clone 划不來
 
+      # pnpm/action-setup 沒給 version 時讀 package.json 的 packageManager，本機與 CI 用同一版
+      - uses: pnpm/action-setup@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: '22'  # 專案用 node 22 的 ESM 與內建 fetch
-          cache: npm
+          cache: pnpm
 
       # inputs.force 一律走 env，不內插進 run:。內插等於把使用者輸入當 shell 指令跑。
       - name: 抓取到期來源
@@ -103,11 +106,11 @@ jobs:
           # 設定位置：repo → Settings → Secrets and variables → Actions → Variables。
           KHO_GA_ID: ${{ vars.KHO_GA_ID }}
           KHO_GSC_VERIFY: ${{ vars.KHO_GSC_VERIFY }}
-        # npm ci 放在這一步而不是一開頭：多數整點沒有來源到期，不必每小時裝一次 Astro
+        # 安裝放在這一步而不是一開頭：多數整點沒有來源到期，不必每小時裝一次 Astro
         run: |
-          npm ci
-          npm test
-          npx astro build
+          pnpm install --frozen-lockfile
+          pnpm test
+          pnpm exec astro build
           node site/validate-jsonld.mjs
           node site/check-links.mjs
           node site/check-sitemap.mjs

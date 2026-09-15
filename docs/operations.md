@@ -16,8 +16,8 @@
 
 ```
 # 網站用 Astro 建置，排程腳本直接呼叫 node_modules/astro/bin/astro.mjs，所以先裝套件。
-# 沒裝的話 site 階段會記一筆「找不到 astro.mjs，請先跑 npm ci」後結束，不會靜默失敗。
-npm ci
+# 沒裝的話 site 階段會記一筆「找不到 astro.mjs，請先跑 pnpm install」後結束，不會靜默失敗。
+pnpm install
 
 # plist 是安裝範本，裡面的 __KHO_ROOT__ 要換成專案的絕對路徑再放進 LaunchAgents。
 # launchd 規定 ProgramArguments 與 WorkingDirectory 必須是絕對路徑，沒辦法自己推導；
@@ -61,7 +61,7 @@ launchctl bootout gui/$UID/tw.kho.pipeline
 rm ~/Library/LaunchAgents/tw.kho.pipeline.plist
 ```
 
-停用之後專案本身完全不受影響，`npm run build` 照樣可以手動跑。
+停用之後專案本身完全不受影響，`pnpm run build` 照樣可以手動跑。
 
 ## 4. 每小時喚醒，不等於每小時抓
 
@@ -119,7 +119,7 @@ cat data/logs/last-run.json
 
 **health 一直 fail，網站不更新**
 `data/health-history.json` 記錄每個來源每天的筆數。先看是哪支掉了、掉多少，
-再判斷是來源改版還是真的沒課了。確認是誤判就手動跑一次 `npm run build` 繞過。
+再判斷是來源改版還是真的沒課了。確認是誤判就手動跑一次 `pnpm run build` 繞過。
 
 **某支來源一直失敗**
 scheduler 失敗不會改間隔，只累積失敗次數，所以不會愈退愈慢。
@@ -134,7 +134,7 @@ nvm 換版本或清掉舊版時這條連結就會斷。改 `ops/run-pipeline.sh`
 **新增了檢查器，但排程沒跑到**
 `ops/run-pipeline.sh` 末段的檢查器是逐支寫死的（目前三支：JSON-LD、站內連結、sitemap），
 和 `package.json` 的 `validate` 是兩份清單。新增檢查器時兩邊都要加，
-否則排程跑的驗證會比手動 `npm run validate` 弱，而且不會有任何徵兆。
+否則排程跑的驗證會比手動 `pnpm run validate` 弱，而且不會有任何徵兆。
 
 **磁碟**
 `dist/` 每次 build 會先清空再產出三萬多個檔案，`data/observation/` 隨每輪抓取累積。
