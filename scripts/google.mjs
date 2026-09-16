@@ -116,14 +116,65 @@ async function submitSitemap(token) {
   console.log(`已送出 ${SITEMAP} → ${PROPERTY}`);
 }
 
+// sitemap index 底下每個分檔的狀態，以及抽樣網址的索引狀況。
+// GSC 網頁介面的「網頁索引狀況」在 API 這邊對應 URL Inspection：一次一個網址，
+// 每天 2,000 次上限，所以只抽樣——每種頁型各一個，看的是「這一類頁面 Google 怎麼判」。
+async function diagnose(token) {
+  const children = await call(token, 'GET', gsc(`/sites/${enc(PROPERTY)}/sitemaps?sitemapIndex=${enc(SITEMAP)}`));
+  console.log('── sitemap 分檔');
+  if (!children.ok) console.log(`  讀取失敗 ${children.status}：${children.json.error?.message}`);
+  for (const m of children.json.sitemap ?? []) {
+    const web = (m.contents ?? []).find((c) => c.type === 'web');
+    console.log(`  ${m.path.replace('https://kho.tw/', '')}　${web?.submitted ?? 0} 個網址　錯誤 ${m.errors ?? 0}　警告 ${m.warnings ?? 0}　下載 ${m.lastDownloaded ?? '尚未'}`);
+  }
+
+  const samples = process.argv.slice(3);
+  const urls = samples.length ? samples : [
+    'https://kho.tw/',
+    'https://kho.tw/open.html',
+    'https://kho.tw/topics.html',
+    'https://kho.tw/map.html',
+  ];
+  console.log('\n── 網址索引狀況（URL Inspection）');
+  for (const url of urls) {
+    const res = await fetch('https://searchconsole.googleapis.com/v1/urlInspection/index:inspect', {
+      method: 'POST',
+      headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ inspectionUrl: url, siteUrl: PROPERTY, languageCode: 'zh-TW' }),
+    });
+    const json = await res.json();
+    if (!res.ok) { console.log(`  ${url}\n    查詢失敗 ${res.status}：${json.error?.message}`); continue; }
+    const r = json.inspectionResult ?? {};
+    const i = r.indexStatusResult ?? {};
+    console.log(`  ${url}`);
+    console.log(`    判定 ${i.verdict ?? '-'}　收錄狀態 ${i.coverageState ?? '-'}`);
+    console.log(`    robots ${i.robotsTxtState ?? '-'}　編目 ${i.indexingState ?? '-'}　抓取 ${i.pageFetchState ?? '-'}　上次抓取 ${i.lastCrawlTime ?? '尚未'}`);
+    if (i.sitemap?.length) console.log(`    來自 sitemap：${i.sitemap.join('、')}`);
+    // 兩個 canonical 不一致＝Google 認為這頁跟別頁重複，會把流量歸給它選的那一個
+    if (i.userCanonical || i.googleCanonical) {
+      const same = i.userCanonical === i.googleCanonical;
+      console.log(`    canonical 我方 ${i.userCanonical ?? '-'}${same ? '　（Google 同意）' : `\n    canonical Google 選 ${i.googleCanonical ?? '-'}　⚠ 不一致`}`);
+    }
+    if (r.mobileUsabilityResult?.verdict) console.log(`    行動裝置可用性 ${r.mobileUsabilityResult.verdict}`);
+    for (const issue of r.mobileUsabilityResult?.issues ?? []) console.log(`      ${issue.severity} ${issue.issueType} ${issue.message ?? ''}`);
+    for (const rr of r.richResultsResult?.detectedItems ?? []) console.log(`    複合式結果 ${rr.richResultType}：${rr.items?.length ?? 0} 項`);
+    for (const rr of r.richResultsResult?.detectedItems ?? []) {
+      for (const item of rr.items ?? []) {
+        for (const issue of item.issues ?? []) console.log(`      ${issue.severity} ${issue.issueMessage}`);
+      }
+    }
+  }
+}
+
 const cmd = process.argv[2];
-if (!['check', 'submit-sitemap'].includes(cmd)) {
-  console.error('用法：node scripts/google.mjs check | submit-sitemap');
+if (!['check', 'submit-sitemap', 'diagnose'].includes(cmd)) {
+  console.error('用法：node scripts/google.mjs check | submit-sitemap | diagnose [網址...]');
   process.exit(2);
 }
 const key = await loadKey();
 const token = await accessToken(key);
 if (cmd === 'check') await check(token, key.client_email);
+else if (cmd === 'diagnose') await diagnose(token);
 else {
   await submitSitemap(token);
   await check(token, key.client_email);
