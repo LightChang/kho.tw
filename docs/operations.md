@@ -219,7 +219,7 @@ curl -s https://kho.tw/sitemap.xml | head -3
 - **`dist/CNAME` 必須每次 build 都產生。** 用 Actions 部署時 GitHub 不會自動建 CNAME 檔
   （只有「從分支發布」才會），而 build 每次都清空 `dist/`，所以 CNAME 放在 `public/`，
   由 Astro 每次複製過去。刪掉那個檔，部署一次就掉一次網域設定。
-- **`KHO_SITE_URL` 設錯會污染全站 42,461 頁**的 canonical、sitemap 與 JSON-LD，
+- **`KHO_SITE_URL` 設錯會污染全站每一頁**的 canonical、sitemap 與 JSON-LD，
   等於叫搜尋引擎去抓不存在的網址。預設值寫在 workflow 裡（`https://kho.tw`），
   要改網址時設 repository variable `KHO_SITE_URL` 覆寫，不必動程式。
 
@@ -229,7 +229,7 @@ curl -s https://kho.tw/sitemap.xml | head -3
 `docs/AEO.md`（結構化資料）、`docs/GEO.md`（生成式引擎）。那三份一律不寫現況數字，只寫取得數字的指令。
 
 兩個都做成開關：`KHO_GSC_VERIFY` 與 `KHO_GA_ID` 這兩個 repository variable
-沒設的話，產出的 42,461 頁**一個 Google 相關標籤都不會有**——不留空 meta、
+沒設的話，產出的頁面**一個 Google 相關標籤都不會有**——不留空 meta、
 也不載入任何腳本。要停用追蹤就把變數刪掉再跑一次，不必改程式。
 
 設定位置：repo → Settings → Secrets and variables → Actions → **Variables**（不是 Secrets，
@@ -253,8 +253,9 @@ curl -s https://kho.tw/sitemap.xml | head -3
 
 驗證通過後：Search Console → Sitemaps → 輸入 `https://kho.tw/sitemap.xml` → 提交。
 
-只要提交這一個。它是 sitemap index，底下 5 個分檔 Google 會自己去抓。
-限制是單檔 50 MB／50,000 個網址，本站最大的分檔是 5.44 MB／20,000 個，離上限很遠。
+只要提交這一個。它是 sitemap index，底下的分檔 Google 會自己去抓。
+協定限制是單檔 50 MB／50,000 個網址；本站每檔上限訂在 20,000（見 `site/sitemap.mjs`），離上限很遠。
+各分檔的現況用 `node scripts/google.mjs diagnose` 或 `docs/SEO.md` §2 的指令查。
 
 ### Analytics（GA4）
 
@@ -271,7 +272,7 @@ curl -s https://kho.tw/sitemap.xml | head -3
 
 ### 這件事的取捨
 
-加了 `KHO_GA_ID` 之後，**全站 42,461 頁的每位訪客都會連到 googletagmanager.com**，
+加了 `KHO_GA_ID` 之後，**全站每一頁的每位訪客都會連到 googletagmanager.com**，
 並且被設一個 `_ga` cookie。在此之前本站唯一的外部連線是地圖頁的 NLSC 圖磚（功能必需）。
 
 台灣個資法沒有強制 cookie 同意；若在意歐盟訪客的 GDPR，就需要另外做同意機制。

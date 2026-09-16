@@ -3,6 +3,10 @@
 2026-09-12。這份文件回答四件事：有哪些程式、排程怎麼決定下次抓取、資料怎麼從來源變成網頁、還缺什麼。
 來源的實測依據在 `probe/2026-09-11-sources.md`，欄位規格在 `transform/L1-FORMAT.md`。
 
+> **本文出現的數字都是標註日期的當日實測快照，不是現況。** 課程數、頁數、覆蓋率每輪抓取都在變，
+> 要現況請跑指令——`docs/SEO.md` §2 列了線上與本機各自怎麼數。留在這裡的數字是為了記錄
+> 「當時為什麼這樣決定」，改動前請重新量一次，不要拿舊數字當前提。
+
 ---
 
 ## 1. 指令
@@ -675,6 +679,39 @@ playwright 的主分頁會間歇性掉回 `about:blank`（見下方「瀏覽器�
 flex 子項的最小尺寸預設是內容寬度，導致表單完全不縮，390 與 320 寬量到的 `right` 都是 395。
 檢查器要排除**刻意**可捲的容器（窄螢幕的 topbar、Leaflet 圖磚層），否則會誤報一堆超寬元素。
 
+### 站徽（favicon）
+
+一扇開著的門，門把是「招生中」的綠點——首頁的主要入口就叫「四個門」，站徽沿用同一個語彙。
+顏色取自 `src/styles/tokens.css` 的 hex fallback（連結藍與招生綠）；favicon 吃不到 CSS 變數，
+所以 `public/favicon.svg` 裡是寫死的值，改 token 時要一併改它。
+
+三個檔案，都放在 `public/`（Astro 每次 build 複製到 `dist/`）：
+
+| 檔案 | 給誰 |
+|---|---|
+| `favicon.svg` | 現行瀏覽器，支援時一律優先用它 |
+| `favicon.ico` | 不支援 SVG 的舊瀏覽器，也是瀏覽器自動去要 `/favicon.ico` 時的目標 |
+| `apple-touch-icon.png` | iOS 加到主畫面（180×180） |
+
+`<link>` 在 `src/components/Head.astro`，全站每頁都有。
+
+**改圖之後要重做 PNG 與 ICO。** 這台機器的 `sharp` 原生檔裝不起來（pnpm 沒裝 darwin-x64 的
+選用相依），所以是用無頭瀏覽器把 SVG 算繪成 PNG，再自己組 ICO 容器（6 byte 檔頭 ＋
+16 byte 目錄項目 ＋ PNG 原始位元組，Vista 以後支援 PNG 內嵌）。驗證產出：
+
+```bash
+file public/favicon.ico          # 應該是 MS Windows icon resource, 32x32 with PNG image data
+file public/apple-touch-icon.png # 應該是 PNG image data, 180 x 180
+python3 -c "import xml.dom.minidom; xml.dom.minidom.parse('public/favicon.svg'); print('SVG XML OK')"
+```
+
+**SVG 的註解裡不可以出現連續兩個連字號**（XML 不允許），寫 token 名稱時會踩到：
+第一版在註解裡寫了 CSS 變數名，整份檔案不合法、瀏覽器完全不顯示，而畫面上只是「沒有圖示」，
+不會有任何錯誤訊息。所以上面那行 `xml.dom.minidom` 的驗證是必要的，不是形式。
+
+**16px 是設計的實際約束。** 第一版門把半徑 2、置中，16px 下整顆糊成一塊白方塊，看不出是門；
+改成門靠左留門框、門把放大並貼在門緣才讀得出來。改圖後請在 16／32／64 三個尺寸實際看過。
+
 ## 8. 還缺什麼
 
 - **座標**：**19,671/33,315（59.0%）有座標**，場館 1,782/2,444。2026-09-13 收到 TGOS
@@ -741,6 +778,10 @@ flex 子項的最小尺寸預設是內容寬度，導致表單完全不縮，390
 - **其餘來源**：`probe/sources.tsv` 列了 43 個，**已接 27 個**。扣掉失效 4、不接 4、
   不適用 1、資料停更 2，還沒接的只剩 22 縣市地方圖書館的活動，以及教育部全國社大網的
   兩個附屬端點（篩選清單與課程詳情，主來源已涵蓋）。
-- **`dist/` 的體積**：已經 396 MB、42,461 頁，全量重建約三分鐘，再長下去要考慮增量產出。
-- **`data/slugs.ndjson` 沒有版本控制**：它是全站網址的唯一真相（一個 id 只配給一次 slug），
-  但這個專案不是 git repo。上線後若這個檔案遺失，等於全站網址重新洗牌。
+- **`dist/` 的體積**：2026-09-14 把共用 CSS 從內嵌改成外部檔之後，從 489 MB 降到約 292 MB。
+  查現況：`du -sh dist`（注意本機可能是 `KHO_LIMIT` 的部分建置，見 `docs/SEO.md` §2）。
+  GitHub Pages 的上限是 1 GB，離上限還遠，但頁數只會再長，屆時要考慮增量產出。
+- **`data/slugs.ndjson` 的保全**：它是全站網址的唯一真相（一個 id 只配給一次 slug），
+  檔案遺失等於全站網址重新洗牌。2026-09-15 起專案已進 git 並推上 GitHub，這個檔案**有進版控**
+  （`.gitignore` 裡有一段刻意不忽略的清單，理由寫在那裡），CI 每輪也會把新配的 slug commit 回 repo。
+  確認它確實被追蹤：`git ls-files data/slugs.ndjson`。

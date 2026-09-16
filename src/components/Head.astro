@@ -15,8 +15,10 @@ const ld = jsonld ? JSON.stringify(jsonld).replace(/</g, '\\u003c') : '';
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 {/* 站徽（public/favicon.svg）：一扇門，門把是「招生中」的綠點。
-    只給 SVG 與 iOS 的 PNG，不做 .ico——現行瀏覽器都吃 SVG，
-    真的不支援的會落到 /favicon.ico 而拿到 404，那只是沒有圖示，不影響頁面。 */}
+    三種格式：.ico 給不支援 SVG 的舊瀏覽器（也是它們自動去要 /favicon.ico 時的目標）、
+    .svg 給現行瀏覽器（支援時一律優先用它）、.png 給 iOS 加到主畫面。
+    .ico 是 32px PNG 包進 ICO 容器，重做方式見 docs/pipeline.md 的站徽一節。 */}
+<link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#1e5ab8">

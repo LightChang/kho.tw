@@ -203,17 +203,37 @@ async function ga(token, days) {
   const property = (summaries.json.accountSummaries ?? []).flatMap((a) => a.propertySummaries ?? [])
     .find((p) => p.displayName === 'kho.tw');
   if (!property) { console.log('找不到名為 kho.tw 的 GA 資源；服務帳號可能還沒被加進 GA 帳戶'); return; }
-  const res = await post(token, `https://analyticsdata.googleapis.com/v1beta/${property.property}:runReport`, {
-    dateRanges: [{ startDate: `${days}daysAgo`, endDate: 'today' }],
+  const url = `https://analyticsdata.googleapis.com/v1beta/${property.property}:runReport`;
+  const range = [{ startDate: `${days}daysAgo`, endDate: 'today' }];
+  console.log(`── GA ${property.property} 最近 ${days} 天`);
+
+  const byDate = await post(token, url, {
+    dateRanges: range,
     dimensions: [{ name: 'date' }],
     metrics: [{ name: 'activeUsers' }, { name: 'sessions' }, { name: 'screenPageViews' }],
     orderBys: [{ dimension: { dimensionName: 'date' } }],
   });
-  console.log(`── GA ${property.property} 最近 ${days} 天`);
-  if (!res.ok) { console.log(`  查詢失敗 ${res.status}：${res.json.error?.message}`); return; }
-  const rows = res.json.rows ?? [];
+  if (!byDate.ok) { console.log(`  查詢失敗 ${byDate.status}：${byDate.json.error?.message}`); return; }
+  const rows = byDate.json.rows ?? [];
   if (!rows.length) console.log('  （這段期間沒有資料）');
   for (const r of rows) console.log(`  ${r.dimensionValues[0].value}　使用者 ${r.metricValues[0].value}　工作階段 ${r.metricValues[1].value}　瀏覽 ${r.metricValues[2].value}`);
+
+  // 參照來源：生成式引擎有沒有導流過來，只能從這裡看（它們不提供「你被引用幾次」的 API）。
+  // sessionSource 是 GA 判定的來源網域，chatgpt.com、perplexity.ai 這類會出現在這一欄。
+  const bySource = await post(token, url, {
+    dateRanges: range,
+    dimensions: [{ name: 'sessionSource' }, { name: 'sessionMedium' }],
+    metrics: [{ name: 'sessions' }],
+    orderBys: [{ metric: { metricName: 'sessions' }, desc: true }],
+    limit: 20,
+  });
+  console.log('\n  參照來源（前 20）');
+  if (!bySource.ok) { console.log(`    查詢失敗 ${bySource.status}：${bySource.json.error?.message}`); return; }
+  const srcs = bySource.json.rows ?? [];
+  if (!srcs.length) console.log('    （沒有資料）');
+  for (const r of srcs) {
+    console.log(`    ${r.dimensionValues[0].value} / ${r.dimensionValues[1].value}　工作階段 ${r.metricValues[0].value}`);
+  }
 }
 
 const cmd = process.argv[2];
