@@ -14,6 +14,12 @@ const ld = jsonld ? JSON.stringify(jsonld).replace(/</g, '\\u003c') : '';
 ---
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+{/* 站徽（public/favicon.svg）：一扇門，門把是「招生中」的綠點。
+    只給 SVG 與 iOS 的 PNG，不做 .ico——現行瀏覽器都吃 SVG，
+    真的不支援的會落到 /favicon.ico 而拿到 404，那只是沒有圖示，不影響頁面。 */}
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#1e5ab8">
 {/* 官方要求 GA 放在 <head> 開啟標籤之後立刻，所以排在 charset/viewport 之後、title 之前 */}
 <Fragment set:html={ANALYTICS} />
 <title>{title}</title>
