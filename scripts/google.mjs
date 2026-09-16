@@ -23,6 +23,7 @@ const SITEMAP = 'https://kho.tw/sitemap.xml';
 const SCOPES = [
   'https://www.googleapis.com/auth/webmasters',
   'https://www.googleapis.com/auth/analytics.edit',
+  'https://www.googleapis.com/auth/analytics.readonly',
 ].join(' ');
 
 const b64url = (b) => Buffer.from(b).toString('base64url');
@@ -166,15 +167,66 @@ async function diagnose(token) {
   }
 }
 
+async function post(token, url, body) {
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+  return { ok: res.ok, status: res.status, json: await res.json() };
+}
+
+// 最後 3 天的資料 Search Console 還在補，數字之後會變（seh.tw 的 gsc-pull 同一個理由）。
+const dayStr = (offset) => new Date(Date.now() - offset * 86400e3).toISOString().slice(0, 10);
+
+async function performance(token, days) {
+  const range = { startDate: dayStr(days + 3), endDate: dayStr(3) };
+  console.log(`── 搜尋成效 ${range.startDate} ~ ${range.endDate}（刻意不看最後 3 天，資料還在補）`);
+  const url = `https://www.googleapis.com/webmasters/v3/sites/${enc(PROPERTY)}/searchAnalytics/query`;
+  const total = await post(token, url, { ...range, dimensions: ['date'], rowLimit: 1000 });
+  if (!total.ok) { console.log(`  查詢失敗 ${total.status}：${total.json.error?.message}`); return; }
+  const rows = total.json.rows ?? [];
+  if (!rows.length) console.log('  （這段期間沒有資料）');
+  for (const r of rows) console.log(`  ${r.keys[0]}　曝光 ${r.impressions}　點擊 ${r.clicks}　平均排名 ${r.position.toFixed(1)}`);
+
+  for (const dim of ['page', 'query']) {
+    const res = await post(token, url, { ...range, dimensions: [dim], rowLimit: 10 });
+    console.log(`\n  依${dim === 'page' ? '頁面' : '查詢字詞'}（前 10）`);
+    const list = res.json.rows ?? [];
+    if (!list.length) console.log('    （沒有資料）');
+    for (const r of list) console.log(`    ${r.keys[0]}　曝光 ${r.impressions}　點擊 ${r.clicks}`);
+  }
+}
+
+async function ga(token, days) {
+  const summaries = await call(token, 'GET', 'https://analyticsadmin.googleapis.com/v1beta/accountSummaries?pageSize=200');
+  const property = (summaries.json.accountSummaries ?? []).flatMap((a) => a.propertySummaries ?? [])
+    .find((p) => p.displayName === 'kho.tw');
+  if (!property) { console.log('找不到名為 kho.tw 的 GA 資源；服務帳號可能還沒被加進 GA 帳戶'); return; }
+  const res = await post(token, `https://analyticsdata.googleapis.com/v1beta/${property.property}:runReport`, {
+    dateRanges: [{ startDate: `${days}daysAgo`, endDate: 'today' }],
+    dimensions: [{ name: 'date' }],
+    metrics: [{ name: 'activeUsers' }, { name: 'sessions' }, { name: 'screenPageViews' }],
+    orderBys: [{ dimension: { dimensionName: 'date' } }],
+  });
+  console.log(`── GA ${property.property} 最近 ${days} 天`);
+  if (!res.ok) { console.log(`  查詢失敗 ${res.status}：${res.json.error?.message}`); return; }
+  const rows = res.json.rows ?? [];
+  if (!rows.length) console.log('  （這段期間沒有資料）');
+  for (const r of rows) console.log(`  ${r.dimensionValues[0].value}　使用者 ${r.metricValues[0].value}　工作階段 ${r.metricValues[1].value}　瀏覽 ${r.metricValues[2].value}`);
+}
+
 const cmd = process.argv[2];
-if (!['check', 'submit-sitemap', 'diagnose'].includes(cmd)) {
-  console.error('用法：node scripts/google.mjs check | submit-sitemap | diagnose [網址...]');
+if (!['check', 'submit-sitemap', 'diagnose', 'performance', 'ga'].includes(cmd)) {
+  console.error('用法：node scripts/google.mjs check | submit-sitemap | diagnose [網址...] | performance [天數] | ga [天數]');
   process.exit(2);
 }
 const key = await loadKey();
 const token = await accessToken(key);
 if (cmd === 'check') await check(token, key.client_email);
 else if (cmd === 'diagnose') await diagnose(token);
+else if (cmd === 'performance') await performance(token, Number(process.argv[3] ?? 28));
+else if (cmd === 'ga') await ga(token, Number(process.argv[3] ?? 28));
 else {
   await submitSitemap(token);
   await check(token, key.client_email);

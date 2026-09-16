@@ -225,6 +225,9 @@ curl -s https://kho.tw/sitemap.xml | head -3
 
 ## 9. Search Console 與 Analytics
 
+上線後要看哪些指標、用什麼指令查，分三份：`docs/SEO.md`（收錄與排名）、
+`docs/AEO.md`（結構化資料）、`docs/GEO.md`（生成式引擎）。那三份一律不寫現況數字，只寫取得數字的指令。
+
 兩個都做成開關：`KHO_GSC_VERIFY` 與 `KHO_GA_ID` 這兩個 repository variable
 沒設的話，產出的 42,461 頁**一個 Google 相關標籤都不會有**——不留空 meta、
 也不載入任何腳本。要停用追蹤就把變數刪掉再跑一次，不必改程式。
