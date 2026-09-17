@@ -166,7 +166,7 @@ kho.tw 彙整 23 個公開資料來源（教育部社區大學資訊網、各縣
 報名狀態：招生中
 楊梅體育園區，11505，專業運動類課程，週四 08:00–08:55上課，自 2026-09-03 起，地點：楊梅體育園區。
 資料來源：
-- xuanen-centers：https://ymscwdyg.com.tw（最後確認 2026-09-17；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
+- xuanen-centers：https://ymscwdyg.com.tw（最後確認 2026-09-18；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
 
 ### 【總館】9/19(六)14:00-16:00城市建築美學講座「從歷史角度一窺台北城百年風貌演變」歡迎踴躍參加～」－城市建築美學講座「從歷史角度一窺台北城百年風貌演變」
 網址：https://kho.tw/course/919%E5%85%AD14001600%E5%9F%8E%E5%B8%82%E5%BB%BA%E7%AF%89%E7%BE%8E%E5%AD%B8%E8%AC%9B%E5%BA%A7-%E7%AB%8B%E5%9C%96%E6%9B%B8%E9%A4%A8%E7%B8%BD%E9%A4%A8-d4381.html
@@ -179,7 +179,7 @@ kho.tw 彙整 23 個公開資料來源（教育部社區大學資訊網、各縣
 報名狀態：招生中
 一座城市在百年內經歷三個不同政權統治，在制度、資本、人才、技術的層層影響之下的風貌流變，如何形塑台北....
 資料來源：
-- ntpc-library-activities：https://atpass.ntpclib.gov.tw/activities/8e109e8bb57a4b44b21e31c34db87dba（最後確認 2026-09-17；提供欄位：description、enrollment、provider、schedule、sourceUrl、title）
+- ntpc-library-activities：https://atpass.ntpclib.gov.tw/activities/8e109e8bb57a4b44b21e31c34db87dba（最後確認 2026-09-18；提供欄位：description、enrollment、provider、schedule、sourceUrl、title）
 
 ### 05期兒童班
 網址：https://kho.tw/course/05%E6%9C%9F%E5%85%92%E7%AB%A5%E7%8F%AD-%E9%B3%B3%E5%B1%B1%E9%81%8B%E5%8B%95%E5%9C%92%E5%8D%80-603f5.html
@@ -193,7 +193,7 @@ kho.tw 彙整 23 個公開資料來源（教育部社區大學資訊網、各縣
 報名狀態：招生中
 高雄市鳳山運動園區，11505，公益系列類課程，週日 09:45–10:45上課，自 2026-09-06 起，地點：高雄市鳳山運動園區。
 資料來源：
-- xuanen-centers：https://kfspwdyg.com.tw（最後確認 2026-09-17；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
+- xuanen-centers：https://kfspwdyg.com.tw（最後確認 2026-09-18；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
 
 
 ------------------------------------------------------------
@@ -205,4 +205,4 @@ sitemap 索引（分 pages／courses×2／venues／teachers 共 5 個分檔）�
 站內搜尋（課名／單位／講師）：https://kho.tw/search.html
 地圖（依座標找附近的課）：https://kho.tw/map.html
 
-更新於 2026-09-17（每小時抓取一次）。本頁每次建置重新生成，內容以此刻為準。
+更新於 2026-09-18（每小時抓取一次）。本頁每次建置重新生成，內容以此刻為準。
