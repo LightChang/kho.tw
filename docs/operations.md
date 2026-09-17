@@ -2,10 +2,13 @@
 
 管線本身的設計見 `docs/pipeline.md`。這份只講「怎麼讓它自己跑起來、壞掉時怎麼查」。
 
-> **2026-09-15 起，正式排程是 GitHub Actions（§8），本機 launchd 已停用。**
-> 兩邊同時跑會各自改寫 `data/observation/`，而本機的 commit 不會推上去，下次 pull 必定衝突。
-> 停用方式是 `launchctl bootout` 之後把 plist 改名成 `tw.kho.pipeline.plist.disabled`
-> （launchd 只載入 `.plist`，改回原名再 `launchctl bootstrap` 就恢復）。§2–§7 保留作為本機排程的說明。
+> **2026-09-17 起，正式排程回到主機：Linux 主機的 cron 跑 `ops/run-host.sh`，
+> GitHub Actions 的 `deploy` workflow 已停用（`gh workflow disable deploy`），
+> GitHub Pages 的來源也從「GitHub Actions」改成 **`gh-pages` 分支**——
+> `actions/deploy-pages` 只能在 Actions 裡用，本機部署只能推分支。
+> 分支來源會走 Jekyll，`dist/_astro/` 這種底線開頭的目錄會被吃掉，所以 `public/.nojekyll` 必須存在。
+> 主機排程見 §9；§2–§7 是 macOS launchd 版（`ops/run-pipeline.sh`）的說明，該版只跑到建置為止，
+> 不 commit、不部署，兩支不會同時在同一台機器上跑。
 
 ## 1. 為什麼需要定時跑
 
@@ -148,8 +151,9 @@ nvm 換版本或清掉舊版時這條連結就會斷。改 `ops/run-pipeline.sh`
 
 ## 8. 發布到 GitHub Pages（自訂網域 kho.tw）
 
-站台由 `.github/workflows/deploy.yml` 每小時自動建置與部署。首次設定分四步，
-其中第 2 步要在 GoDaddy 後台做（本專案碰不到那裡）。
+站台每小時自動建置與部署。**2026-09-17 起由主機的 `ops/run-host.sh` 做（見 §9）**，
+`deploy.yml` 已停用，Pages 來源是 `gh-pages` 分支；以下第 1、2 步是當初的首次設定紀錄，
+第 2 步要在 GoDaddy 後台做（本專案碰不到那裡）。
 
 ### 1. 建立 repo 並推送
 
@@ -223,7 +227,33 @@ curl -s https://kho.tw/sitemap.xml | head -3
   等於叫搜尋引擎去抓不存在的網址。預設值寫在 workflow 裡（`https://kho.tw`），
   要改網址時設 repository variable `KHO_SITE_URL` 覆寫，不必動程式。
 
-## 9. Search Console 與 Analytics
+## 9. 主機排程（2026-09-17 起的正式排程）
+
+跑的是 `ops/run-host.sh`，由 `/etc/cron.d/kho-tw` 每小時的 :10 分喚醒一次。
+它做的事跟原本的 GitHub Actions workflow 一樣，多了三件：先跟遠端 rebase 對齊、
+把觀測軌跡 commit 回 `main`、把 `dist/` 推上 `gh-pages` 讓 Pages 出貨。
+
+```
+10 * * * * root /mnt/yao-care/kho.tw/ops/run-host.sh >> /mnt/yao-care/kho.tw/data/logs/cron.log 2>&1
+```
+
+**鎖**：這支跟 seo-ops 的反思／大腦層共用 `/tmp/seo-claude-kho.tw.lock`。那兩層也會改這個
+工作樹，一秒重疊就會 git 撞。搶不到鎖就直接跳過這輪（不等），因為下個整點還會再來一次。
+
+**驗證不過就不部署**：三支檢查器（JSON-LD／連結／sitemap）任一支非零就停在部署之前，
+網站維持上一版。這是原本 workflow 的語意，不要改成「產出了就推」。
+
+**手動跑一次**：
+
+```
+/mnt/yao-care/kho.tw/ops/run-host.sh
+tail -40 /mnt/yao-care/kho.tw/data/logs/pipeline-$(date +%Y-%m-%d).log
+```
+
+**gh-pages worktree** 在 `/root/.cache/kho-tw-gh-pages`（不在專案磁碟上，那顆快滿了）。
+壞掉就整個刪掉，腳本下一輪會自己重建。
+
+## 10. Search Console 與 Analytics
 
 上線後要看哪些指標、用什麼指令查，分三份：`docs/SEO.md`（收錄與排名）、
 `docs/AEO.md`（結構化資料）、`docs/GEO.md`（生成式引擎）。那三份一律不寫現況數字，只寫取得數字的指令。
