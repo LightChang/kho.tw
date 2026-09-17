@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="kho.tw">
+  <!-- 站徽：一扇開著的門，門把是「招生中」的綠點。
+       首頁的主要入口就叫「四個門」（見 src/pages/index.astro），站徽沿用同一個語彙。
+       顏色取自 src/styles/tokens.css 的 hex fallback：連結藍 #1e5ab8、招生綠 #1e8050。
+       favicon 吃不到 CSS 變數，所以這裡寫死值；改 token 時要一併改這支。
+
+       三個色塊就好：16px 下細節一定糊掉，認得出的只有輪廓與明暗對比。
+       門靠左、右邊留門框，門把做大並貼在門緣——第一版門把只有 r=2 且置中，
+       16px 實測整顆糊成白方塊，看不出是門。
+       註解裡不可以出現連續兩個連字號（XML 不允許），所以 token 名稱用中文寫。 -->
+  <rect width="32" height="32" rx="7" fill="#1e5ab8"/>
+  <path d="M7 4.5h13.5a2.5 2.5 0 0 1 2.5 2.5v18a2.5 2.5 0 0 1-2.5 2.5H7z" fill="#ffffff"/>
+  <circle cx="18.7" cy="16" r="2.6" fill="#1e8050"/>
+</svg>

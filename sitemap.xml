@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://kho.tw/sitemap-pages-1.xml</loc>
+    <lastmod>2026-09-17</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://kho.tw/sitemap-courses-1.xml</loc>
+    <lastmod>2026-09-17</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://kho.tw/sitemap-courses-2.xml</loc>
+    <lastmod>2026-09-17</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://kho.tw/sitemap-venues-1.xml</loc>
+    <lastmod>2026-09-17</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://kho.tw/sitemap-teachers-1.xml</loc>
+    <lastmod>2026-09-17</lastmod>
+  </sitemap>
+</sitemapindex>

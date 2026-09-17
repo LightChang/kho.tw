@@ -1,0 +1,660 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="theme-color" content="#1e5ab8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TK4G7BS0QF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TK4G7BS0QF');
+</script>
+<title>kho.tw 全台成人課程｜現在還報得到的課</title><meta name="description" content="全台社區大學、運動中心、樂齡中心與職訓課程共 32,902 門，其中 8,579 門正在招生。"><style>/* ============================================================
+ * 本檔為統一設計系統的副本，請勿直接編輯。
+ *
+ * 來源：agent.system-integration-quality-control/templates/styles.css
+ * 同步：pnpm run sync:tokens
+ *
+ * 需要新增樣式時寫在 src/styles/site.css，不要改這裡；
+ * 需要調整 token 值時改上游來源檔再同步回來。
+ * ============================================================ */
+
+/* ============================================================
+ * OKLCH Design System — System Integration Quality Control
+ * 感知均勻的淺色主題配色 + 字級系統
+ *
+ * 設計原則：
+ *   - 淺色背景適合列印和簡報投影
+ *   - 嚴重度色彩在淺底上保持足夠對比 (WCAG AA 4.5:1+)
+ *   - 色彩 Lightness 統一壓低至 0.45-0.55 確保可讀性
+ * ============================================================ */
+
+:root {
+  /* ── 背景層級 ── */
+  --bg-base:     oklch(0.97 0.005 250);   /* 近白 */
+  --bg-surface:  oklch(0.94 0.005 250);   /* 淺灰 */
+  --bg-overlay:  oklch(0.90 0.008 250);   /* 表頭灰 */
+  --bg-hover:    oklch(0.92 0.005 250);   /* hover */
+
+  /* ── 文字層級 ── */
+  --text-primary:   oklch(0.20 0.01 250);   /* 近黑 */
+  --text-secondary: oklch(0.45 0.01 250);   /* 中灰 */
+  --text-muted:     oklch(0.60 0.008 250);  /* 淺灰 */
+
+  /* ── 嚴重度色彩（L 壓低至 0.45-0.55，確保淺底對比） ── */
+  --color-critical: oklch(0.55 0.22 25);    /* 紅 */
+  --color-high:     oklch(0.55 0.16 55);    /* 橘 */
+  --color-medium:   oklch(0.52 0.14 80);    /* 暗琥珀（黃在淺底需更深） */
+  --color-low:      oklch(0.52 0.13 240);   /* 藍 */
+
+  /* ── 狀態色彩 ── */
+  --color-pass:  oklch(0.48 0.16 150);      /* 森林綠 */
+  --color-fail:  oklch(0.55 0.22 25);       /* 同 critical */
+  --color-warn:  oklch(0.52 0.14 80);       /* 同 medium */
+  --color-info:  oklch(0.52 0.13 240);      /* 同 low */
+
+  /* ── 功能色彩 ── */
+  --color-link:   oklch(0.48 0.15 250);     /* 連結藍 */
+  --color-purple: oklch(0.50 0.17 300);     /* 滲透測試紫 */
+  --color-cyan:   oklch(0.48 0.10 200);     /* SBOM 青 */
+  --color-pink:   oklch(0.52 0.17 340);     /* Schema 粉 */
+  --color-indigo: oklch(0.48 0.15 280);     /* SGE 靛 */
+
+  /* ── 邊框 ── */
+  --border-subtle: oklch(0.85 0.005 250);
+
+  /* ── 字級系統（最小 18px，卡片數字 48px） ── */
+  --text-xs:   1.125rem;   /* 18px — 徽章、標籤 */
+  --text-sm:   1.25rem;    /* 20px — 表格內文 */
+  --text-base: 1.5rem;     /* 24px — 正文 */
+  --text-lg:   1.75rem;    /* 28px — 強調文字 */
+  --text-xl:   2rem;       /* 32px — 區段標題 */
+  --text-2xl:  3rem;       /* 48px — 摘要卡片數字 */
+  --text-3xl:  3.5rem;     /* 56px — 報告標題 */
+}
+
+/* ── Fallback for browsers without OKLCH ── */
+@supports not (color: oklch(0 0 0)) {
+  :root {
+    --bg-base:     #f5f6f8;
+    --bg-surface:  #ecedf0;
+    --bg-overlay:  #dfe0e5;
+    --bg-hover:    #e5e6ea;
+
+    --text-primary:   #1e2030;
+    --text-secondary: #5e6070;
+    --text-muted:     #8a8c98;
+
+    --color-critical: #c93135;
+    --color-high:     #b86a2a;
+    --color-medium:   #8a7020;
+    --color-low:      #2a6bb8;
+
+    --color-pass:  #1e8050;
+    --color-fail:  #c93135;
+    --color-warn:  #8a7020;
+    --color-info:  #2a6bb8;
+
+    --color-link:   #1e5ab8;
+    --color-purple: #7830b8;
+    --color-cyan:   #1e7a8a;
+    --color-pink:   #b8306a;
+    --color-indigo: #4830b8;
+
+    --border-subtle: #d5d6da;
+  }
+}
+
+/* ── Base styles ── */
+body {
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+
+/* ── Utility classes ── */
+.text-primary   { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-muted     { color: var(--text-muted); }
+
+.text-critical { color: var(--color-critical); }
+.text-high     { color: var(--color-high); }
+.text-medium   { color: var(--color-medium); }
+.text-low      { color: var(--color-low); }
+.text-pass     { color: var(--color-pass); }
+.text-fail     { color: var(--color-fail); }
+.text-warn     { color: var(--color-warn); }
+.text-info     { color: var(--color-info); }
+.text-link     { color: var(--color-link); }
+.text-purple   { color: var(--color-purple); }
+.text-cyan     { color: var(--color-cyan); }
+.text-pink     { color: var(--color-pink); }
+.text-indigo   { color: var(--color-indigo); }
+
+.bg-base    { background: var(--bg-base); }
+.bg-surface { background: var(--bg-surface); }
+.bg-overlay { background: var(--bg-overlay); }
+
+.border-subtle { border-color: var(--border-subtle); }
+
+/* ── Status badges ── */
+.status-pass { color: var(--color-pass); font-weight: 600; }
+.status-fail { color: var(--color-fail); font-weight: 600; }
+.status-warn { color: var(--color-warn); font-weight: 600; }
+
+/* ── Severity badges ── */
+.badge {
+  display: inline-block;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: var(--text-xs);
+  font-weight: 700;
+}
+.badge-critical { background: oklch(0.92 0.06 25);  color: var(--color-critical); }
+.badge-high     { background: oklch(0.92 0.04 55);  color: var(--color-high); }
+.badge-medium   { background: oklch(0.92 0.04 80);  color: var(--color-medium); }
+.badge-low      { background: oklch(0.92 0.03 240); color: var(--color-low); }
+
+@supports not (color: oklch(0 0 0)) {
+  .badge-critical { background: #fce8e8; }
+  .badge-high     { background: #fceee8; }
+  .badge-medium   { background: #fcf5e8; }
+  .badge-low      { background: #e8f0fc; }
+}
+
+/* ── Cards ── */
+.card {
+  background: var(--bg-surface);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  text-align: center;
+}
+.card-value {
+  font-size: var(--text-2xl);
+  font-weight: 700;
+}
+.card-label {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+/* ── Tables ── */
+.table-container {
+  background: var(--bg-surface);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table-container thead {
+  background: var(--bg-overlay);
+}
+.table-container th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+.table-container td {
+  padding: 0.5rem 1rem;
+  font-size: var(--text-sm);
+}
+.table-container tbody tr {
+  border-top: 1px solid var(--border-subtle);
+}
+.table-container tbody tr:hover {
+  background: var(--bg-hover);
+}
+
+/* ── Links ── */
+a { color: var(--color-link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── Code blocks ── */
+pre {
+  background: oklch(0.92 0.005 250);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  overflow-x: auto;
+  font-size: var(--text-sm);
+  color: var(--text-primary);
+  border: 1px solid var(--border-subtle);
+}
+
+@supports not (color: oklch(0 0 0)) {
+  pre { background: #e8e9ed; }
+}
+
+/* ── Quality gate ── */
+.qg-pass { color: var(--color-pass); }
+.qg-warn { color: var(--color-warn); }
+.qg-fail { color: var(--color-fail); }
+
+/* ── Font size classes ── */
+.fs-xs   { font-size: var(--text-xs); }
+.fs-sm   { font-size: var(--text-sm); }
+.fs-base { font-size: var(--text-base); }
+.fs-lg   { font-size: var(--text-lg); }
+.fs-xl   { font-size: var(--text-xl); }
+.fs-2xl  { font-size: var(--text-2xl); }
+.fs-3xl  { font-size: var(--text-3xl); }
+
+/* ============================================================
+ * Code Syntax Highlighting — Pandoc skylighting classes
+ * 配色遵循 OKLCH 設計系統，Lightness 0.40-0.60 確保淺底可讀性
+ * ============================================================ */
+
+div.sourceCode {
+  background: oklch(0.96 0.005 250);
+  border: 1px solid oklch(0.88 0.01 250);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1rem 0;
+  overflow-x: auto;
+  font-size: var(--text-sm);   /* 20px。最小字級 18px 無例外，這裡原本寫死 0.875rem＝14px */
+  line-height: 1.6;
+}
+
+pre.sourceCode { margin: 0; padding: 0; background: transparent; }
+code.sourceCode { font-family: 'SF Mono', 'Fira Code', 'JetBrains Mono', 'Consolas', monospace; }
+
+/* Keywords, control flow, imports */
+code.sourceCode span.kw,
+code.sourceCode span.cf,
+code.sourceCode span.im { color: oklch(0.45 0.15 300); font-weight: 600; }
+
+/* Data types, builtins */
+code.sourceCode span.dt,
+code.sourceCode span.bu { color: oklch(0.45 0.12 220); }
+
+/* Strings, chars */
+code.sourceCode span.st,
+code.sourceCode span.vs,
+code.sourceCode span.ss,
+code.sourceCode span.ch,
+code.sourceCode span.sc { color: oklch(0.45 0.12 150); }
+
+/* Numbers */
+code.sourceCode span.dv,
+code.sourceCode span.bn,
+code.sourceCode span.fl { color: oklch(0.50 0.14 50); }
+
+/* Comments */
+code.sourceCode span.co { color: oklch(0.60 0.02 250); font-style: italic; }
+
+/* Operators */
+code.sourceCode span.op { color: oklch(0.40 0.10 30); }
+
+/* Functions */
+code.sourceCode span.fu { color: oklch(0.45 0.14 250); }
+
+/* Decorators, attributes, preprocessor */
+code.sourceCode span.at { color: oklch(0.50 0.12 80); }
+code.sourceCode span.pp { color: oklch(0.50 0.12 80); font-weight: 600; }
+
+/* Errors, alerts */
+code.sourceCode span.al { color: oklch(0.50 0.18 25); font-weight: 600; }
+code.sourceCode span.er { color: oklch(0.50 0.18 25); text-decoration: underline; }
+
+/* Line number links */
+code.sourceCode span a { color: oklch(0.65 0.02 250); text-decoration: none; }
+code.sourceCode span a:hover { text-decoration: underline; }
+
+/* kho.tw 站台樣式（內頁共用）
+   token 一律取自 tokens.css（統一設計系統），此檔只放排版與站台專用元件，
+   不得重新定義任何 --token，也不得直接寫 hex 或低於 --text-xs 的字級（test/style-tokens.test.mjs 擋著）。
+
+   兩個前提決定了這套設計：
+     1. 使用者是想找課的成人與樂齡族群，字要大、對比要夠。最小字級 18px 無例外。
+     2. 報名狀態是本站最重要的資訊，所以顏色帶語意且全站一致：
+        招生中=綠（pass）、額滿=紅（fail）、尚未開放=琥珀（warn）、開課中=藍（info）、停開=灰。
+
+   次要文字一律用 --text-secondary，不用 --text-muted：muted 的 L=0.60 在白底只有約 3:1，
+   達不到 WCAG AA 的 4.5:1，而它原本用在 18px 的小字上——正是樂齡讀者最吃力的地方。 */
+
+
+
+/* 卡片底色。tokens.css 的 --bg-surface（L=0.94）比 --bg-base（L=0.97）還深，
+   拿它當卡片會變成「灰卡片放在白底上」；本站的層次是淺灰底、白卡片。 */
+:root{--card-bg:oklch(1 0 0);--radius:10px}
+
+*{box-sizing:border-box}
+html,body{margin:0}
+body{
+  background:var(--bg-base);color:var(--text-primary);
+  font:var(--text-base)/1.6 system-ui,"Noto Sans TC","PingFang TC",sans-serif;
+}
+a{color:var(--color-link);text-decoration:none}
+a:hover{text-decoration:underline}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* 狀態：全站一致的語意色 */
+.st{display:inline-block;padding:1px 10px;border-radius:999px;font-size:var(--text-xs);
+  border:1px solid currentColor;white-space:nowrap}
+.st-open{color:var(--color-pass)}
+.st-full{color:var(--color-fail)}
+.st-upcoming{color:var(--color-warn)}
+.st-running{color:var(--color-info)}
+.st-cancelled,.st-closed,.st-unknown{color:var(--text-secondary)}
+.left-seats{color:var(--color-fail)}
+/* 「課程已於 X 結束」講的是上課期間，不是報名狀態（見 src/lib/data.mjs 的 hasEnded）。
+   刻意不用 .st 的膠囊外框，免得被當成第七種報名狀態。 */
+.ended{color:var(--text-secondary);font-size:var(--text-xs);white-space:nowrap}
+
+/* 內頁（課程／縣市／場館）共用 */
+.wrap{max-width:1040px;margin:0 auto;padding:28px 20px 64px}
+.topbar{background:var(--card-bg);border-bottom:1px solid var(--border-subtle)}
+.topbar .inner{max-width:1040px;margin:0 auto;padding:14px 20px;display:flex;gap:18px;align-items:baseline}
+/* 手機：導覽列改成單行橫向捲動，不換行。
+   2026-09-14 加了「地圖」之後變成 8 個連結，390px 寬會折成三行、佔掉 125px，
+   等於首屏 15% 被導覽列吃掉。改成可橫向滑動後固定一行（實測 52px）。
+   -webkit-overflow-scrolling 讓 iOS 有慣性；scrollbar 在手機上本來就不顯示。 */
+@media (max-width:560px){
+  .topbar .inner{flex-wrap:nowrap;overflow-x:auto;gap:14px;padding:12px 16px;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .topbar .inner::-webkit-scrollbar{display:none}
+  .topbar a,.topbar b{flex:none;white-space:nowrap}
+}
+.topbar b{font-size:var(--text-lg)}
+.topbar a{color:var(--text-primary)}
+.card{text-align:left;background:var(--card-bg);border:1px solid var(--border-subtle);border-radius:var(--radius);
+  padding:18px 20px;margin-bottom:14px}
+.card h2{margin:0 0 6px;font-size:var(--text-xl);line-height:1.3}
+.card h3{margin:0 0 10px;font-size:var(--text-lg)}
+.meta{color:var(--text-secondary);font-size:var(--text-sm)}
+.meta-2{color:var(--text-secondary);font-size:var(--text-xs)}
+table{width:100%;border-collapse:collapse;font-size:var(--text-sm)}
+th,td{border-bottom:1px solid var(--border-subtle);padding:9px 6px;text-align:left;vertical-align:top}
+th{color:var(--text-secondary);font-weight:600;white-space:nowrap}
+/* 窄螢幕的表格：字級對齊 design-tokens 之後 th 從 16.8px 變 20px，
+   320px 寬實測課程頁的表格被撐到 341px，整頁跟著橫捲。
+   先解除表頭不換行（341→291px），但 320 扣掉 .wrap 與 .card 的左右 padding
+   之後只剩 240px 可用，291 還是塞不下——所以再讓表格自己成為可橫捲的區塊。
+   把橫捲關在表格裡，比整頁橫捲好：表格是少數「寬度本來就可能超出」的元素。 */
+@media (max-width:420px){
+  th{white-space:normal}
+  table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}
+}
+.chips{display:flex;flex-wrap:wrap;gap:8px 14px;list-style:none;margin:0;padding:0}
+.chips a{display:inline-flex;align-items:baseline;gap:6px;padding:4px 12px;border:1px solid var(--border-subtle);
+  border-radius:999px;background:var(--card-bg);font-size:var(--text-sm)}
+.chips .n{color:var(--text-secondary);font-size:var(--text-xs)}
+
+/* 地圖頁（見 src/pages/map.astro）。地圖容器一定要有明確高度，Leaflet 不會自己撐開。 */
+.map-card{padding:14px}
+.map-tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+.map-tools button{font:inherit;font-weight:700;padding:10px 18px;border:0;border-radius:var(--radius);
+  background:var(--color-link);color:var(--card-bg);cursor:pointer}
+.map-tools select{font:inherit;padding:9px 12px;border:1px solid var(--border-subtle);
+  border-radius:var(--radius);background:var(--card-bg);color:var(--text-primary)}
+#map{height:min(70vh,620px);border-radius:var(--radius);border:1px solid var(--border-subtle)}
+/* 手機把地圖壓矮一點，否則下面的說明與「附近」清單整個被推出畫面外 */
+@media (max-width:560px){ #map{height:min(58vh,420px)} .map-tools button,.map-tools select{flex:1} }
+.nearlist{list-style:none;margin:0;padding:0}
+.nearlist li{border-top:1px solid var(--border-subtle);padding:9px 2px}
+.nearlist li:first-child{border-top:0}
+/* Leaflet 的彈出視窗沿用站內字級，不用它預設的 12px——本站讀者是成人與樂齡族群 */
+.leaflet-popup-content{font:var(--text-sm)/1.6 system-ui,"Noto Sans TC","PingFang TC",sans-serif}
+.leaflet-container{font:var(--text-xs)/1.5 system-ui,"Noto Sans TC","PingFang TC",sans-serif}
+
+/* 課程頁 */
+.th-key{width:7em}
+/* 「其他來源的不同值」是原樣印出的 JSON；pre 的底色與框線來自 tokens.css，這裡只讓長行換行 */
+.rejected{white-space:pre-wrap}
+
+/* 搜尋頁（見 src/pages/search.astro） */
+.search-form{display:flex;gap:10px;margin-top:10px}
+.search-form input{flex:1;min-width:0;font:inherit;padding:12px 16px;border:1px solid var(--border-subtle);border-radius:var(--radius)}
+.search-form button{flex:none;font:inherit;font-weight:700;padding:12px 22px;border:0;border-radius:var(--radius);
+  background:var(--color-link);color:var(--card-bg);cursor:pointer}
+.search-count{margin-top:10px}
+
+/* 首頁專用：滿版一頁，橫豎都不可捲。與 site.css 一起內嵌進首頁（見 src/pages/index.astro）。 */
+
+
+.home{
+  height:100vh;height:100dvh;overflow:hidden;
+  display:grid;
+  grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
+  grid-template-rows:auto minmax(0,1fr) auto;
+  grid-template-areas:"ask ask" "doors hot" "foot foot";
+  column-gap:clamp(20px,3vw,46px);
+  padding:clamp(14px,2.2vh,28px) clamp(18px,4vw,56px) clamp(12px,2vh,24px);
+}
+.ask{grid-area:ask}
+.brand{font-size:var(--text-sm);color:var(--text-secondary);letter-spacing:.08em}
+/* 下限對齊 --fs-lg(28px)、上限對齊 --fs-2xl(48px)，中間仍隨視窗連續縮放 */
+.ask h1{margin:2px 0 clamp(8px,1.4vh,16px);font-size:clamp(1.75rem,3.2vw,3rem);line-height:1.25}
+.ask form{display:flex;gap:10px}
+.ask input{flex:1;min-width:0;font:inherit;padding:12px 16px;border:1px solid var(--border-subtle);
+  border-radius:var(--radius);background:var(--card-bg);color:var(--text-primary)}
+.ask input:focus{outline:3px solid color-mix(in oklch,var(--color-link) 40%,transparent);outline-offset:1px}
+.ask button{font:inherit;font-weight:700;padding:12px 22px;border:0;border-radius:var(--radius);
+  background:var(--color-link);color:var(--card-bg);cursor:pointer}
+.tally{margin:clamp(6px,1vh,12px) 0 0;color:var(--text-secondary);font-size:var(--text-sm)}
+.tally b{color:var(--text-primary)}
+
+/* 欄寬一定要寫 minmax(0,1fr)，不能只寫 1fr：1fr 的最小值是 auto，
+   也就是「不得小於內容的 min-content」，擋不住內容把欄位撐開。
+   320px 實測：兩欄的 min-content 加 gap 是 327.5px，而 .home 扣掉 padding 只剩 284px，
+   於是整個 .home 的欄寬被撐成 327.5px，.ask/.doors/.foot 三個區塊一起溢出、整頁橫捲。
+   改成 minmax(0,1fr) 之後欄位才允許縮到比內容窄，門卡自己有 overflow:hidden 接手。 */
+.doors{grid-area:doors;min-height:0;display:grid;gap:clamp(8px,1.4vh,14px);
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:1fr 1fr}
+/* 門卡不能被壓到比內容小：中段是 minmax(0,1fr)，視窗一矮就把卡片壓扁，
+   內容溢出格子後會和底部文字疊在一起（1366×600 實測 .doors 內容 328px、容器只有 230px，
+   底部「縣市／類型」兩行直接蓋在下排兩張卡上）。
+   所以矮視窗要縮小卡片內容本身，而不是讓它溢出。 */
+/* container-type 讓卡片自己成為度量單位：底下的 .n 用 cqw 就是「卡片內容寬度的百分比」，
+   不必去猜視窗寬度，欄寬一變數字就跟著變。 */
+/* 2026-09-14：門卡改「連續縮放」，不再用階梯式瘦身。
+   舊做法是一組 max-height 斷點各自收字級與 padding，但斷點之間門卡的內容高度是固定的、
+   容器高度卻隨視窗連續變化，所以每個斷點的正上方必定有一段區間裝不下——
+   實測 841 差 4px、769 差 2px、761 差 3px 全是這個成因，跟 1366×768 破版半年是同一個病。
+   把行高、gap 與 padding 都綁上 vh，內容高度就跟著容器一起連續變化，縫隙消失。
+   字級本身不參與縮放：18px 是 design-tokens 的下限，「無例外」。 */
+.door{container-type:inline-size;
+  display:flex;flex-direction:column;justify-content:center;
+  gap:clamp(0px,0.3vh,3px);
+  min-height:0;overflow:hidden;
+  padding:clamp(3px,1.5vh,20px) clamp(12px,1.6vw,22px);
+  border:1px solid var(--border-subtle);border-radius:var(--radius);background:var(--card-bg);color:var(--text-primary)}
+.door:hover{border-color:var(--color-link);text-decoration:none}
+.door .k{font-size:clamp(1.125rem,1.7vw,1.5rem);font-weight:800;line-height:clamp(1.15em,2.6vh,1.4em)}
+.door .d{font-size:var(--text-sm);color:var(--text-secondary);line-height:clamp(1.2em,2.5vh,1.5em)}
+/* 數字盡量放大，位數多就自動縮小——字級由「卡片寬度 ÷ 位數」決定，不是固定級數。
+   --len 是字串長度（含千分位逗號），由 src/pages/index.astro 傳進來。
+   係數 1.55：等寬數字每字約 0.62em，1.62 會讓寬度剛好等於內寬（0.62×1.62≈1.004），
+   等於一點邊都不留——實測 1024×768 與 390×844 的五位數就是這樣貼齊甚至溢出。
+   降到 1.55 留約 4% 餘裕；逗號比數字窄，實際還會再鬆一些。
+   上限 4rem 不是美觀取捨，是防止「9」這種單字元把卡片撐高——首頁是滿版一頁，
+   卡片一撐高就爆版。所以寬度算出來再大也不超過它。 */
+/* 數字同時受兩件事限制，取小者：卡片寬度 ÷ 位數（橫向放得下）與視窗高度（縱向放得下）。
+   多了 6vh 這一項之後，上限不必再用 media query 分四級——視窗一矮數字自己就變小。 */
+.door .n{margin-top:auto;font-weight:800;line-height:clamp(1em,4.4vh,1.15em);
+  font-size:clamp(1.125rem, min(100cqw / var(--len,3) * 1.55, 6vh), 4rem)}
+.door .u{font-size:var(--text-xs);color:var(--text-secondary);line-height:clamp(1.05em,2.3vh,1.4em)}
+/* 窄視窗只留標題、數字與單位：1024×768 實測「社大、運動中心、樂齡、職訓」
+   會折行把「職訓」拆成「職／訓」。四個門一起隱藏說明，保持一致。
+   說明消失後 .n 的 margin-top:auto 會把數字推到卡片底部、標題下方留一大塊空白，
+   所以同時取消那個推擠，讓數字接在標題後面。 */
+@media (max-width:1100px){
+  .door .d{display:none}
+  .door{justify-content:center;gap:4px}
+  /* 窄視窗的卡片矮很多（1024×768 實測 191px），數字若還吃 4rem 上限，
+     光數字行高就 70px，加上標題與單位容易把卡片撐高——首頁是滿版一頁，撐高就爆版。
+     所以上限跟著卡片一起收，位數自適應的公式不變。 */
+  .door .n{margin-top:2px;font-size:clamp(1.4rem, calc(100cqw / var(--len,3) * 1.55), 2.8rem)}
+  /* 這裡試過三種列高，記錄下來免得再繞一次：
+       1fr 1fr ＋ .n{margin-top:auto} → 數字被推到卡片底部，標題下方空 81px（卡片內部空洞）
+       auto auto ＋ align-content:center → 卡片縮到內容高，但整組浮在中段，左上空一塊
+       auto auto ＋ align-content:start → 頂端對齊了，左欄下方卻空 138px，右欄滿到底
+     取消 margin-top:auto 之後卡片內容本來就置中，撐滿列高只是留白變多、不會有空洞，
+     所以回到 1fr 1fr：左右兩欄等高，中段填滿。 */
+  .doors{gap:clamp(10px,2vh,18px)}
+}
+.door.open .n{color:var(--color-pass)}
+
+/* .hot 用 grid 而不是 flex，為的是讓底下 ol 的 100% 有明確參照（1fr 區域的高度）。
+   flex 的 flex:1 子項算不出「我的可用高度是多少」，round() 就沒有東西可以對齊。 */
+.hot{grid-area:hot;min-height:0;display:grid;grid-template-rows:auto auto 1fr}
+.hot h2{margin:0 0 6px;font-size:var(--text-lg)}
+.hot .sub{margin:0 0 8px;color:var(--text-secondary);font-size:var(--text-xs)}
+/* 列不可壓縮：flex:1 會把每列均分容器高度，視窗一矮就把文字切掉
+   （1366×600 實測每列容器 18px、內容需要 23px，八列全被裁）。
+   改成自然行高，再由容器高度決定顯示幾列——寧可少列，不要半列。
+
+   「不要半列」以前靠一串 max-height 斷點各自寫死列數，但每列高度取決於 base 字級
+   （.hot li a 的 min-height 是 1.9em），字級一改那串數字就全錯：2026-09-14 base 從
+   18.4px 調到 24px，每列 37→47px，舊斷點的列數全部高估，1440×900 實測 11 列需要
+   513px、容器只有 344px，清單被裁掉四成。
+   改用 round(down, 100%, --row-h)：容器高度直接對齊到列高的整數倍，多出來的列被裁在
+   列與列的邊界上，不會出現半列，也就不需要任何斷點。
+   --row-h 必須是**精確**的列高，不能四捨五入：容器高度是 round(down, 100%, --row-h)，
+   誤差會沿著列數累積。2026-09-14 第一版寫死 47px（真實值 46.6px），八列就累積出 3.2px，
+   第九列在容器底部露出一條 3px 的半截——正是這段註解本來要防的事。
+   改用 calc 從字級推導，字級再變也不會對不上：1.9 來自 .hot li a 的 min-height:1.9em
+   （em 相對於 a 繼承的 --fs-base），+1px 是 li 的上框線。 */
+.hot ol{--row-h:calc(1.9 * var(--text-base) + 1px);
+  list-style:none;margin:0;padding:0;min-height:0;overflow:hidden;
+  max-height:round(down, 100%, var(--row-h));
+  display:flex;flex-direction:column;justify-content:flex-start}
+.hot li{border-top:1px solid var(--border-subtle);flex:0 0 auto;display:flex}
+.hot li a{display:flex;align-items:center;gap:12px;width:100%;padding:4px 2px;color:var(--text-primary);
+  min-height:1.9em}
+.hot .t{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:var(--text-sm)}
+/* 場館名欄加寬到 45%：先前 32% 會把「臺北市中山運動中心」截成「臺北市中山運動中…」。
+   加寬後改由課名截斷（課名多半較短，且滑鼠移上去有完整名稱）。 */
+.hot .w{flex:none;color:var(--text-secondary);font-size:var(--text-xs);max-width:45%;overflow:hidden;
+  text-overflow:ellipsis;white-space:nowrap}
+.hot .left{flex:none;font-weight:800;color:var(--color-fail);font-size:var(--text-sm);white-space:nowrap}
+/* 原本用比例條，但實測每列都是 97–98%，紅條長度幾乎一樣、看不出差別，
+   還讓右邊緣參差。改成直接寫「剩 1／30」：班多大才是真正的差異。 */
+.hot .cap{color:var(--text-secondary);font-weight:600;font-size:var(--text-xs)}
+
+.foot{grid-area:foot;border-top:1px solid var(--border-subtle);padding-top:clamp(8px,1.4vh,14px);
+  display:grid;gap:6px;font-size:var(--text-sm)}
+.foot .row{display:flex;gap:14px;align-items:baseline;min-width:0}
+.foot .lbl{flex:none;width:5.2em;color:var(--text-secondary);font-size:var(--text-xs)}
+/* max-height 會把換行後超出的項目直接切掉。1024×768 實測切掉的正好是
+   「全部 21 縣市 →」那個導覽連結——切掉一個連結比切掉一個標籤嚴重，
+   所以連結獨立放在行尾（.more，不參與換行），清單本身只放標籤。 */
+.foot ul{display:flex;flex-wrap:wrap;gap:2px 16px;list-style:none;margin:0;padding:0;min-width:0;
+  max-height:2.9em;overflow:hidden}
+.foot .more{flex:none;margin-left:auto;white-space:nowrap;font-size:var(--text-xs)}
+/* 窄視窗少放幾個縣市，讓清單維持兩行以內。
+   390×844 實測：留 5 個標籤仍會換到第三行被 max-height 切掉，所以手機再減到 3 個。 */
+@media (max-width:1200px){ .foot ul li:nth-child(n+7){display:none} }
+@media (max-width:1040px){ .foot ul li:nth-child(n+6){display:none} }
+@media (max-width:560px){ .foot ul li:nth-child(n+5){display:none} }
+/* 手機寬度下 .row 改成上下堆疊，2.9em 的上限反而會把僅剩的兩個標籤切掉
+   （390×844 實測只剩 2 個標籤仍 cutBy:8）。這裡底部有餘裕，直接解除上限，
+   讓該列依內容撐開，不要再用裁切的方式控制高度。 */
+@media (max-width:900px){ .foot ul{max-height:none;overflow:visible} }
+/* 390px 實測：底部每多一行就會壓縮中段的門。手機只留 2 個標籤，
+   其餘走「全部 N 縣市 →」。 */
+@media (max-width:420px){ .foot ul li:nth-child(n+3){display:none} }
+.foot .note{color:var(--text-secondary);font-size:var(--text-xs);display:flex;gap:14px;flex-wrap:wrap}
+
+@media (max-width:900px){
+  /* 同樣要 minmax(0,1fr) 而不是 1fr——理由見上面 .doors 的註解，
+     桌面版的兩欄本來就是這樣寫的，手機版這行漏了。 */
+  .home{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto auto;
+    grid-template-areas:"ask" "doors" "foot"}
+  /* 窄螢幕是「至少滿版」，不是「剛好滿版」：高度用 min-height，放得下就是一頁，放不下就捲。
+     直排之後四張門卡要疊兩列，而門卡內容有物理下限（三行 18px 字約 53–95px）。
+     2026-09-15 掃 ≤900px 寬、560–960px 高共 189 格，87 格把門卡內容裁掉
+     （375×667 容器只剩 16px、414×736 剩 47px）——iPhone SE 與 Plus 這種常見尺寸都在裡面。
+     跟下面 max-height:660px 同一個取捨：字級不能再縮，可捲的首頁比內容被裁掉的首頁誠實。 */
+  .home{height:auto;min-height:100vh;min-height:100dvh;overflow:visible}
+  .hot{display:none}
+  /* 手機的卡片最矮（390×844 實測容器 95px），字級放大到官方量表後內容要 116px。
+     padding 與 gap 各收一點、數字上限從 2.4rem 降到 2rem，讓內容回到容器以內。
+     數字仍照位數自適應，只是上限變了。 */
+  .door{padding-block:6px;gap:2px}
+  .door .n{font-size:clamp(1.125rem, calc(100cqw / var(--len,3) * 1.55), 2rem)}
+  /* 手機把三段（.ask/.doors/.foot）改成依內容高度排列，門卡就不會被壓縮到溢出格子
+     去撞底部文字（390×844 曾經出現底部「縣市」那行壓在下排兩張卡上）。
+     這裡原本還寫了 grid-auto-rows:minmax(150px,auto) 當門卡下限，但 .doors 有顯式的
+     grid-template-rows:1fr 1fr，隱式列規則根本不會套用——390×844 實測卡片 134px，
+     下限從來沒生效過。與其留一條看起來有保護、實際沒作用的規則，不如拿掉。 */
+  /* 「全部 N 縣市 →」在窄螢幕用 margin-left:auto 會擠到標籤右上角；
+     改成接在清單後面，不另外佔一整行（佔一行會把底部撐高、擠壓中段）。 */
+  .foot{padding-bottom:4px}
+  .foot .row{flex-wrap:wrap}
+  .foot .more{margin-left:0;order:2}
+}
+/* 手機：搜尋按鈕縮小，輸入框才留得住寬度（390×844 實測原本只剩 263px，
+   placeholder 被截成「課名、單位、講師……例如」）。 */
+@media (max-width:560px){
+  .ask input{padding:11px 13px}
+  .ask button{padding:11px 14px;font-size:var(--text-sm)}
+}
+/* 視窗越矮，快額滿就少顯示幾列。列數由高度決定，寧可少列也不要半列被切。
+   **每列高度取決於 base 字級**：.hot li a 的 min-height 是 1.9em，
+   base 18.4px 時每列 37px、base 24px 時每列 47px。2026-09-14 字級對齊
+   design-tokens 官方量表之後，舊的列數全部高估——1440×900 實測 11 列需要
+   513px、容器只有 344px，整份清單被裁掉四成。
+   下面每一格的列數 = 實測容器高度 ÷ 47px 無條件捨去：
+     940→381px/8列  900→344/7  880→325/6  830→279/5  790→243/5
+     768→225/4  750→206/4  700→160/3  640→170/3（說明那行退場後容器反而變大）
+   改字級就要重量一次，不要憑感覺調。 */
+/* 列數不再由斷點決定——ol 的高度用 round() 對齊列高的整數倍，容器放得下幾列就顯示幾列。
+   只剩「說明那行退場」留在斷點裡：它不是列，沒辦法用同一招處理。 */
+@media (max-height:640px){ .hot .sub{display:none} }
+/* 560px 以下整塊退場：容器只剩 93px，放得下 1 列——一列的「快額滿」沒有資訊價值，
+   不如把高度讓給門卡（矮視窗下門卡才是主角）。 */
+@media (max-height:560px){ .hot{display:none} }
+
+/* 矮視窗：門卡內容依序瘦身，確保 scrollHeight <= clientHeight（實測門內容約 328px，
+   1366×600 的中段只有 230px，必須降到容器以下才不會溢出去撞底部）。
+
+   斷點是 800px 不是 760px：1366×768 會剛好掉進所有瘦身規則的空隙——
+   寬 1366 > 1100 所以說明文字還在、高 768 > 760 所以門卡不瘦身，
+   結果四張卡片內容 189px 塞進 185px 的容器，各溢出 4px。
+   （先前那輪只驗了 1440×900／1366×600／1024×768／390×844，正好跳過 768 這一格。）
+   1440×900 不受影響（900 > 800）；1024×768 本來就同時吃 max-width:1100px 的規則，
+   上限從 2.8rem 再收到 2.1rem，數字略小但仍照位數自適應。 */
+/* 行高、gap 與 padding 已經隨 vh 連續縮放（見 .door），數字上限也綁了 6vh，
+   所以這裡不再有任何「瘦身階梯」。只剩一件沒辦法連續化的決定：
+   字級碰到 18px 下限之後就收不動了，說明文字只能整行退場。 */
+@media (max-height:720px){
+  .door .d{display:none}
+}
+/* 660px 以下放棄「滿版一頁不可捲」，改成像內頁一樣捲動。
+   理由是物理下限：門卡最少要放得下標題、數字、單位三行，在 18px 字級與最小行高下
+   約 64px，加框線與 padding 約 70px。而中段容器在 640 只有 104px、560 剩 66px、
+   460 只剩 16px——460 那格連一行字都放不下。
+   字級不能再縮（18px 是 design-tokens 的「無例外」下限），所以只剩兩條路：
+   把內容塞到溢出被裁，或讓頁面可捲。可捲的首頁比內容被裁掉的首頁誠實。
+   660 這個門檻是實測來的：660 時門卡 113/113 剛好貼齊，往上全部通過。 */
+@media (max-height:660px){
+  .home{height:auto;min-height:100dvh;overflow:visible;
+    grid-template-rows:auto auto auto}
+  .doors{grid-template-rows:auto auto}
+  .door{min-height:72px}
+  /* 這裡刻意不設 .foot ul 的 max-height。那條上限是為了「滿版一頁」時壓縮底部而存在的，
+     頁面既然已經改成可捲就沒有理由再裁；而且 max-width:900px 那條早就明訂窄螢幕要
+     解除上限（max-height:none），在這裡重新設限只會依順序蓋掉它——
+     320×568 實測就是這樣把兩行標籤（66px）壓進 1.6em（32px）裡。 */
+}
+</style></head><body><div class="home"><header class="ask"><p class="brand">kho.tw</p><h1>想學什麼？現在還報得到</h1><form id="f" role="search"><input id="q" type="search" autocomplete="off" aria-label="搜尋課程、單位或講師" placeholder="課名、單位、講師"><button type="submit">搜尋</button></form><p class="tally" id="tally">收錄 <b class="tnum">32,902</b> 門課、<b class="tnum">2,442</b> 個上課地點，其中 <b class="tnum">8,579</b> 門正在招生</p></header><nav class="doors" aria-label="主要入口"><a class="door open" href="/open.html"><span class="k">現在可報名</span><span class="d">還沒截止的課</span><span class="n tnum" style="--len:5">8,579</span><span class="u">門課程</span></a><a class="door" href="/types.html"><span class="k">學什麼</span><span class="d">社大、運動中心、樂齡、職訓</span><span class="n tnum" style="--len:1">9</span><span class="u">種課程類型</span></a><a class="door" href="/cities.html"><span class="k">在哪裡</span><span class="d">依縣市找離你近的</span><span class="n tnum" style="--len:2">21</span><span class="u">個縣市</span></a><a class="door" href="/search.html"><span class="k">搜尋</span><span class="d">課名、單位都能找</span><span class="n tnum" style="--len:5">8,677</span><span class="u">位講師可查</span></a></nav><section class="hot" aria-labelledby="hot-h"><h2 id="hot-h">快額滿</h2><p class="sub">依額滿比例排序；名額由來源每日更新，只有運動中心與臺中社大提供剩餘名額</p><ol><li><a href="/course/%E6%A8%82%E9%BD%A1%E8%82%8C%E5%8A%9B%E9%A4%8A%E6%88%90%E7%8F%AD-%E6%A5%8A%E6%A2%85%E9%AB%94%E8%82%B2%E5%9C%92%E5%8D%80-16a17.html" title="已報名 49／50 人"><span class="left tnum">剩 1<span class="cap">／50</span></span><span class="t">樂齡肌力養成班</span><span class="w">楊梅體育園區</span></a></li><li><a href="/course/919%E5%85%AD14001600%E5%9F%8E%E5%B8%82%E5%BB%BA%E7%AF%89%E7%BE%8E%E5%AD%B8%E8%AC%9B%E5%BA%A7-%E7%AB%8B%E5%9C%96%E6%9B%B8%E9%A4%A8%E7%B8%BD%E9%A4%A8-d4381.html" title="已報名 49／50 人"><span class="left tnum">剩 1<span class="cap">／50</span></span><span class="t">【總館】9/19(六)14:00-16:00城市建築美學講座「從歷史角度一窺台北城百年風貌演變」歡迎踴躍參加～」－城市建築美學講座「從歷史角度一窺台北城百年風貌演變」</span><span class="w">新北市立圖書館總館</span></a></li><li><a href="/course/05%E6%9C%9F%E5%85%92%E7%AB%A5%E7%8F%AD-%E9%B3%B3%E5%B1%B1%E9%81%8B%E5%8B%95%E5%9C%92%E5%8D%80-603f5.html" title="已報名 29／30 人"><span class="left tnum">剩 1<span class="cap">／30</span></span><span class="t">05期兒童班</span><span class="w">高雄市鳳山運動園區</span></a></li><li><a href="/course/%E7%B6%9C%E5%90%88%E6%9C%89%E6%B0%A7%E8%82%8C%E5%8A%9B%E9%AB%94%E9%9B%95-%E5%8D%97%E6%B8%AF%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-43601.html" title="已報名 34／35 人"><span class="left tnum">剩 1<span class="cap">／35</span></span><span class="t">綜合有氧+肌力體雕</span><span class="w">臺北市南港運動中心</span></a></li><li><a href="/course/Boxing%E9%9B%95%E5%A1%91-%E4%B8%89%E9%87%8D%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-0ce7d.html" title="已報名 29／30 人"><span class="left tnum">剩 1<span class="cap">／30</span></span><span class="t">Boxing雕塑</span><span class="w">三重國民運動中心</span></a></li><li><a href="/course/ZUMBA-%E5%A4%A7%E9%87%8C%E5%9C%8B%E6%B0%91%E6%9A%A8%E5%85%92%E7%AB%A5%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-76927.html" title="已報名 29／30 人"><span class="left tnum">剩 1<span class="cap">／30</span></span><span class="t">ZUMBA</span><span class="w">臺中市大里國民暨兒童運動中心</span></a></li><li><a href="/course/ZUMBA-%E6%9C%9D%E9%A6%AC%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-e5444.html" title="已報名 34／35 人"><span class="left tnum">剩 1<span class="cap">／35</span></span><span class="t">ZUMBA</span><span class="w">臺中市朝馬國民運動中心</span></a></li><li><a href="/course/%E8%90%8A%E7%BE%8E%E6%88%B0%E9%AC%A5%E6%8B%B3%E6%93%8ABODYCOMBAT-%E5%A4%A7%E5%90%8C%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-9abad.html" title="已報名 35／36 人"><span class="left tnum">剩 1<span class="cap">／36</span></span><span class="t">萊美戰鬥拳擊BODYCOMBAT</span><span class="w">臺北市大同運動中心</span></a></li><li><a href="/course/%E7%BE%8E%E5%9E%8B%E5%A1%91%E8%BA%AB%E6%9C%89%E6%B0%A7-%E6%A1%83%E5%9C%92%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-29559.html" title="已報名 30／31 人"><span class="left tnum">剩 1<span class="cap">／31</span></span><span class="t">美型塑身有氧</span><span class="w">桃園國民運動中心</span></a></li><li><a href="/course/%E8%90%8A%E7%BE%8E%E6%88%B0%E9%AC%A5%E6%8B%B3%E6%93%8ABODYCOMBAT-%E5%A4%A7%E5%90%8C%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-edf0d.html" title="已報名 34／35 人"><span class="left tnum">剩 1<span class="cap">／35</span></span><span class="t">萊美戰鬥拳擊BODYCOMBAT</span><span class="w">臺北市大同運動中心</span></a></li><li><a href="/course/%E6%B4%BB%E5%8A%9B%E5%A1%91%E8%BA%AB%E7%91%9C%E7%8F%88-%E5%85%A7%E6%B9%96%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-55528.html" title="已報名 29／30 人"><span class="left tnum">剩 1<span class="cap">／30</span></span><span class="t">活力塑身瑜珈</span><span class="w">臺北市內湖運動中心</span></a></li><li><a href="/course/FUN%E5%8B%95%E7%98%A6%E8%BA%AB%E6%9C%89%E6%B0%A7-%E5%85%A7%E6%B9%96%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-076c1.html" title="已報名 29／30 人"><span class="left tnum">剩 1<span class="cap">／30</span></span><span class="t">FUN動瘦身有氧</span><span class="w">臺北市內湖運動中心</span></a></li></ol></section><footer class="foot"><div class="row"><span class="lbl">縣市</span><ul><li><a href="/city/%E8%87%BA%E5%8C%97%E5%B8%82.html">臺北市 <span class="tnum meta-2">4,897</span></a></li><li><a href="/city/%E6%96%B0%E5%8C%97%E5%B8%82.html">新北市 <span class="tnum meta-2">683</span></a></li><li><a href="/city/%E8%87%BA%E4%B8%AD%E5%B8%82.html">臺中市 <span class="tnum meta-2">616</span></a></li><li><a href="/city/%E6%A1%83%E5%9C%92%E5%B8%82.html">桃園市 <span class="tnum meta-2">476</span></a></li><li><a href="/city/%E9%AB%98%E9%9B%84%E5%B8%82.html">高雄市 <span class="tnum meta-2">427</span></a></li><li><a href="/city/%E5%8D%97%E6%8A%95%E7%B8%A3.html">南投縣 <span class="tnum meta-2">166</span></a></li><li><a href="/city/%E8%87%BA%E5%8D%97%E5%B8%82.html">臺南市 <span class="tnum meta-2">163</span></a></li><li><a href="/city/%E5%BD%B0%E5%8C%96%E7%B8%A3.html">彰化縣 <span class="tnum meta-2">138</span></a></li></ul><a class="more" href="/cities.html">全部 21 縣市 →</a></div><div class="row"><span class="lbl">類型</span><ul><li><a href="/type/community-college.html">社區大學 <span class="tnum meta-2">24,032</span></a></li><li><a href="/type/sports-center.html">運動中心 <span class="tnum meta-2">3,713</span></a></li><li><a href="/type/vocational.html">職業訓練 <span class="tnum meta-2">2,767</span></a></li><li><a href="/type/senior-center.html">樂齡中心 <span class="tnum meta-2">1,299</span></a></li><li><a href="/type/other.html">其他 <span class="tnum meta-2">701</span></a></li><li><a href="/type/library.html">圖書館 <span class="tnum meta-2">205</span></a></li></ul></div><p class="note"><span>縣市數字為招生中課程數。各縣市收錄深度不同（新北僅抓近 180 天），數字不代表當地實際課程總量。</span><span>更新於 2026-09-17</span></p></footer></div><script>
+const q=document.getElementById('q'),tally=document.getElementById('tally'),base=tally.innerHTML;
+let idx=null;
+async function load(){if(!idx)idx=await(await fetch('/index.json')).json();return idx}
+q.addEventListener('input',async()=>{
+  const v=q.value.trim();
+  if(v.length<2){tally.innerHTML=base;return}
+  const rows=await load();
+  const hit=rows.filter(r=>r[1].includes(v)||r[9].includes(v)||(r[11]||'').includes(v));
+  tally.innerHTML=hit.length?'找到 <b class="tnum">'+hit.length.toLocaleString('en-US')+'</b> 門：'+hit.slice(0,3).map(r=>r[1].slice(0,14)).join('、')+'⋯　按 Enter 看全部':'找不到相符的課程，換個說法試試';
+});
+document.getElementById('f').addEventListener('submit',e=>{
+  e.preventDefault();
+  const v=q.value.trim();
+  if(v)location.href='/search.html?q='+encodeURIComponent(v);
+});
+</script></body></html>
