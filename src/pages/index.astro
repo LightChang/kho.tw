@@ -15,11 +15,14 @@ import tokensCss from '../styles/tokens.css?raw';
 import siteCss from '../styles/site.css?raw';
 import homeCss from '../styles/home.css?raw';
 import { getData, fmt } from '../lib/data.mjs';
+import { homeJsonLd } from '../../site/jsonld.mjs';
 
 const css = [tokensCss, siteCss.replace(/^@import .*$/m, ''), homeCss].join('\n');
 
 const { home } = getData();
 const t = home.totals;
+const description = `全台社區大學、運動中心、樂齡中心與職訓課程共 ${fmt(t.courses)} 門，其中 ${fmt(t.open)} 門正在招生。`;
+const jsonld = homeJsonLd({ description });
 const topCities = home.cities.slice(0, 8);
 const topTypes = home.types.slice(0, 6);
 // 最多 12 列，實際顯示幾列由容器高度決定（見 home.css 的 .hot ol）
@@ -39,7 +42,8 @@ const doors = [
 <head>
   <Head
     title="kho.tw 全台成人課程｜現在還報得到的課"
-    description={`全台社區大學、運動中心、樂齡中心與職訓課程共 ${fmt(t.courses)} 門，其中 ${fmt(t.open)} 門正在招生。`}
+    description={description}
+    jsonld={jsonld}
   />
   <style is:inline set:html={css} />
 </head>

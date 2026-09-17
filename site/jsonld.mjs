@@ -225,6 +225,48 @@ export function pageListJsonLd(items, { name }) {
   });
 }
 
+// 首頁的實體宣告：Organization + WebSite（geo-audit 的「首頁缺 Organization/WebSite」硬缺口）。
+// 欄位只取站上已經有的事實：站名、網址、apple-touch-icon.png（唯一現成的方形圖像資產，
+// 180×180，符合 Google logo 建議的最小尺寸；favicon.svg 是向量圖，Google 的 logo 規格不收）、
+// 首頁搜尋功能（/search.html?q=，src/pages/search.astro 實際讀取的參數名）。
+// 沒有法定名稱、地址、電話、sameAs 等站外或未公開的事實，一律不寫——
+// 殘缺的結構化資料在 Google 眼裡是「無效項目」，比沒有更糟（本平台既有教訓）。
+export function organizationJsonLd({ description } = {}) {
+  return clean({
+    '@type': 'Organization',
+    '@id': `${SITE_URL}/#organization`,
+    name: 'kho.tw',
+    url: SITE_URL,
+    logo: `${SITE_URL}/apple-touch-icon.png`,
+    description,
+  });
+}
+
+export function webSiteJsonLd() {
+  return clean({
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
+    name: 'kho.tw',
+    url: SITE_URL,
+    inLanguage: 'zh-Hant-TW',
+    publisher: { '@id': `${SITE_URL}/#organization` },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: { '@type': 'EntryPoint', urlTemplate: `${SITE_URL}/search.html?q={search_term_string}` },
+      'query-input': 'required name=search_term_string',
+    },
+  });
+}
+
+// 首頁把兩個節點包進同一個 @graph：一個 <script> 標籤、共用一個 @context，
+// 語意上等同各自輸出，但省一次 script 標籤（geo-audit 用遞迴 walk 抓型別，@graph 陣列一樣抓得到）。
+export function homeJsonLd({ description } = {}) {
+  return clean({
+    '@context': 'https://schema.org',
+    '@graph': [organizationJsonLd({ description }), webSiteJsonLd()],
+  });
+}
+
 export function venueJsonLd(venue, courses) {
   const place = placeNode(venue);
   if (!place) return undefined;
