@@ -48,3 +48,6 @@ asvs-server.log
 # ── Astro ─────────────────────────────────────────────
 node_modules/
 .astro/
+
+# seo-ops 每日 SEO 數據（公開 repo，流量與搜尋數據不入版控）
+data/seo-daily/
