@@ -163,6 +163,21 @@ export function teacherUrl(teacher) {
   return pageUrl('teacher', teacher.slug);
 }
 
+// AI／搜尋引擎取用內容時要能查證來源，citation 對應課程頁「資料來源」表格
+// （src/pages/course/[slug].astro）同一份 course.sources[]。沒有 url 的來源整筆不輸出——
+// 殘缺的結構化資料在 Google 眼裡是「無效項目」，比沒有更糟（本檔既有原則，見 organizationJsonLd 註解）。
+function citationNodes(course) {
+  const nodes = (course.sources ?? [])
+    .filter((s) => s.url)
+    .map((s) => clean({
+      '@type': 'CreativeWork',
+      name: s.id,
+      url: s.url,
+      dateModified: s.lastVerifiedAt,
+    }));
+  return nodes.length ? nodes : undefined;
+}
+
 export function courseJsonLd(course, venue) {
   const schedule = scheduleNode(course);
   const instance = clean({
@@ -186,6 +201,7 @@ export function courseJsonLd(course, venue) {
     offers: offerNode(course),
     isAccessibleForFree: course.isFree,
     timeRequired: course.schedule?.hours ? `PT${course.schedule.hours}H` : undefined,
+    citation: citationNodes(course),
   });
 }
 
