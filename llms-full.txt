@@ -5,7 +5,7 @@
 
 這裡是本站聚合統計與代表性內容的全文，純文字，給 AI 助理讀的，可直接引用。
 收錄範圍：全站彙總統計（依機構類型／主題分類／縣市，共 48 個分類的完整數字）、跨來源合併與即時名額揭露各 6 筆代表性課程全文。
-本站共 33,081 門課，規模太大不可能逐頁收錄；個別課程／場館／講師的完整清單見 https://kho.tw/llms.txt 與 https://kho.tw/sitemap.xml。
+本站共 33,086 門課，規模太大不可能逐頁收錄；個別課程／場館／講師的完整清單見 https://kho.tw/llms.txt 與 https://kho.tw/sitemap.xml。
 引用時請標明來源網址；每筆課程都附上正式網址與原始資料來源。
 
 ------------------------------------------------------------
@@ -24,10 +24,10 @@ kho.tw 彙整 23 個公開資料來源（教育部社區大學資訊網、各縣
 |---|---|---|---|
 | 社區大學 | community-college | 24,241 | 4,402 |
 | 運動中心 | sports-center | 3,696 | 3,108 |
-| 職業訓練 | vocational | 2,752 | 961 |
+| 職業訓練 | vocational | 2,759 | 967 |
 | 樂齡中心 | senior-center | 1,299 | 155 |
 | 其他 | other | 701 | 6 |
-| 圖書館 | library | 207 | 99 |
+| 圖書館 | library | 205 | 95 |
 | 成人教育班 | adult-education | 107 | 18 |
 | 婦女大學 | women-center | 52 | 0 |
 | 國中小進修部 | school-continuing | 26 | 0 |
@@ -38,24 +38,24 @@ kho.tw 彙整 23 個公開資料來源（教育部社區大學資訊網、各縣
 
 | 分類 | 課程數 | 招生中 |
 |---|---|---|
-| 運動健身 | 7,076 | 3,071 |
+| 運動健身 | 7,075 | 3,070 |
 | 美術工藝 | 4,699 | 741 |
 | 音樂戲劇 | 3,881 | 694 |
 | 舞蹈 | 2,526 | 768 |
-| 語言 | 2,309 | 558 |
-| 健康養生 | 1,384 | 357 |
-| 人文社會 | 1,364 | 508 |
+| 語言 | 2,310 | 559 |
+| 健康養生 | 1,385 | 358 |
+| 人文社會 | 1,364 | 505 |
 | 電腦資訊 | 1,194 | 335 |
-| 料理烘焙 | 1,074 | 275 |
+| 料理烘焙 | 1,077 | 278 |
 | 自然生態 | 952 | 238 |
-| 工程技術 | 800 | 200 |
+| 工程技術 | 802 | 202 |
 | 攝影影音 | 689 | 108 |
-| 生活應用 | 513 | 183 |
-| 理財法律 | 489 | 134 |
-| 商業管理 | 386 | 129 |
+| 生活應用 | 514 | 184 |
+| 理財法律 | 490 | 135 |
+| 商業管理 | 387 | 130 |
 | 旅遊休閒 | 278 | 40 |
-| 教育照護 | 163 | 64 |
-| 美容美髮 | 144 | 63 |
+| 教育照護 | 162 | 63 |
+| 美容美髮 | 145 | 63 |
 
 ------------------------------------------------------------
 
@@ -63,13 +63,13 @@ kho.tw 彙整 23 個公開資料來源（教育部社區大學資訊網、各縣
 
 | 縣市 | 課程數 | 招生中 |
 |---|---|---|
-| 臺北市 | 8,150 | 4,906 |
-| 新北市 | 4,985 | 748 |
-| 臺中市 | 4,005 | 706 |
-| 桃園市 | 3,104 | 458 |
-| 高雄市 | 2,159 | 433 |
-| 南投縣 | 482 | 166 |
-| 臺南市 | 1,880 | 163 |
+| 臺北市 | 8,150 | 4,905 |
+| 新北市 | 4,986 | 749 |
+| 臺中市 | 4,007 | 708 |
+| 桃園市 | 3,103 | 457 |
+| 高雄市 | 2,162 | 436 |
+| 南投縣 | 484 | 168 |
+| 臺南市 | 1,880 | 165 |
 | 彰化縣 | 1,182 | 140 |
 | 宜蘭縣 | 421 | 125 |
 | 新竹市 | 732 | 93 |
@@ -77,9 +77,9 @@ kho.tw 彙整 23 個公開資料來源（教育部社區大學資訊網、各縣
 | 雲林縣 | 774 | 41 |
 | 嘉義市 | 305 | 32 |
 | 基隆市 | 355 | 20 |
-| 苗栗縣 | 268 | 20 |
+| 苗栗縣 | 267 | 19 |
 | 新竹縣 | 385 | 15 |
-| 屏東縣 | 326 | 8 |
+| 屏東縣 | 327 | 9 |
 | 臺東縣 | 99 | 6 |
 | 嘉義縣 | 157 | 4 |
 | 澎湖縣 | 96 | 1 |
@@ -104,8 +104,8 @@ kho.tw 彙整 23 個公開資料來源（教育部社區大學資訊網、各縣
 報名狀態：額滿
 無限制
 資料來源：
-- taipei-cc：https://ss.twcc.org.tw/course/m_course_detail.php?u=3a81c2d7239c333cb18d59018955aab7（最後確認 2026-09-17；提供欄位：categoryRaw、description、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title）
-- taipei-cc：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-09-17；提供欄位：categoryRaw、description、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title）
+- taipei-cc：https://ss.twcc.org.tw/course/m_course_detail.php?u=3a81c2d7239c333cb18d59018955aab7（最後確認 2026-09-18；提供欄位：categoryRaw、description、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title）
+- taipei-cc：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-09-18；提供欄位：categoryRaw、description、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title）
 - moe-cc-courses：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-09-15；提供欄位：credit、enrollment、schedule、topicsRaw）
 - moe-cc-courses：https://ss.twcc.org.tw/course/m_course_detail.php?u=3a81c2d7239c333cb18d59018955aab7（最後確認 2026-09-15；提供欄位：credit、enrollment、schedule、topicsRaw）
 - moe-cc-detail：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-09-15；提供欄位：）
