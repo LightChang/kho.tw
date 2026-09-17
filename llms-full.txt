@@ -1,0 +1,208 @@
+# kho.tw（全台成人課程）全文內容
+
+網站：https://kho.tw
+定位：全台社區大學、運動中心、樂齡中心與職訓課程整合查詢站，跨來源合併同一門課的重複紀錄
+
+這裡是本站聚合統計與代表性內容的全文，純文字，給 AI 助理讀的，可直接引用。
+收錄範圍：全站彙總統計（依機構類型／主題分類／縣市，共 48 個分類的完整數字）、跨來源合併與即時名額揭露各 6 筆代表性課程全文。
+本站共 32,702 門課，規模太大不可能逐頁收錄；個別課程／場館／講師的完整清單見 https://kho.tw/llms.txt 與 https://kho.tw/sitemap.xml。
+引用時請標明來源網址；每筆課程都附上正式網址與原始資料來源。
+
+------------------------------------------------------------
+
+## 這個網站在做什麼
+
+kho.tw 彙整 23 個公開資料來源（教育部社區大學資訊網、各縣市社大聯網、教育部樂齡學習網、運動中心各營運商、勞動部職業訓練開放資料等），把同一門課在不同來源出現的紀錄合併成一筆，課程頁列出每個來源提供了哪些欄位、最後確認日期，以及其他來源給出的不同值。
+收錄機構類型：社區大學、運動中心、樂齡中心、職業訓練、圖書館、成人教育班、婦女大學、國中小進修部；不含私人補習班。
+資料每小時自動抓取更新一次；報名狀態、剩餘名額依來源逐日變動，不是一次性快照。
+
+------------------------------------------------------------
+
+## 依機構類型
+
+| 類型 | 代碼 | 課程數 | 招生中 |
+|---|---|---|---|
+| 社區大學 | community-college | 23,844 | 4,329 |
+| 運動中心 | sports-center | 3,714 | 3,126 |
+| 職業訓練 | vocational | 2,752 | 961 |
+| 樂齡中心 | senior-center | 1,299 | 155 |
+| 其他 | other | 701 | 6 |
+| 圖書館 | library | 207 | 99 |
+| 成人教育班 | adult-education | 107 | 18 |
+| 婦女大學 | women-center | 52 | 0 |
+| 國中小進修部 | school-continuing | 26 | 0 |
+
+------------------------------------------------------------
+
+## 依主題分類
+
+| 分類 | 課程數 | 招生中 |
+|---|---|---|
+| 運動健身 | 7,017 | 3,077 |
+| 美術工藝 | 4,661 | 727 |
+| 音樂戲劇 | 3,828 | 687 |
+| 舞蹈 | 2,480 | 767 |
+| 語言 | 2,288 | 551 |
+| 健康養生 | 1,354 | 352 |
+| 人文社會 | 1,345 | 505 |
+| 電腦資訊 | 1,191 | 333 |
+| 料理烘焙 | 1,057 | 270 |
+| 自然生態 | 948 | 238 |
+| 工程技術 | 798 | 198 |
+| 攝影影音 | 672 | 105 |
+| 生活應用 | 513 | 183 |
+| 理財法律 | 485 | 133 |
+| 商業管理 | 386 | 129 |
+| 旅遊休閒 | 278 | 40 |
+| 教育照護 | 164 | 64 |
+| 美容美髮 | 145 | 63 |
+
+------------------------------------------------------------
+
+## 依縣市
+
+| 縣市 | 課程數 | 招生中 |
+|---|---|---|
+| 臺北市 | 8,150 | 4,904 |
+| 新北市 | 5,005 | 769 |
+| 臺中市 | 3,883 | 613 |
+| 桃園市 | 3,539 | 479 |
+| 高雄市 | 2,159 | 434 |
+| 南投縣 | 482 | 166 |
+| 臺南市 | 1,880 | 163 |
+| 彰化縣 | 1,182 | 139 |
+| 宜蘭縣 | 419 | 123 |
+| 新竹市 | 732 | 93 |
+| 花蓮縣 | 150 | 52 |
+| 雲林縣 | 774 | 41 |
+| 嘉義市 | 305 | 32 |
+| 基隆市 | 355 | 20 |
+| 苗栗縣 | 268 | 20 |
+| 新竹縣 | 385 | 15 |
+| 屏東縣 | 326 | 8 |
+| 臺東縣 | 99 | 6 |
+| 嘉義縣 | 157 | 4 |
+| 澎湖縣 | 96 | 1 |
+| 金門縣 | 48 | 1 |
+
+註：縣市收錄深度不同（例如新北僅抓近 180 天），數字不代表當地實際課程總量，只代表本站收錄量。
+
+------------------------------------------------------------
+
+## 代表性課程：跨來源合併
+
+以下課程在兩個以上來源都查得到，展示本站「最終值＋各來源並排」的做法，非隨機挑選。
+
+### ★玩線手編織
+網址：https://kho.tw/course/%E5%B1%85%E5%AE%B6%E8%BB%9F%E8%A3%9D%E8%88%87%E4%BA%94%E6%84%9F%E7%BE%8E%E5%AD%B8%E6%87%89%E7%94%A8-%E6%9D%BE%E5%B1%B1%E7%A4%BE%E5%A4%A7-500bd.html
+開課單位：松山社區大學（社區大學）
+地點：臺北市中崙高級中學，臺北市松山區
+分類：美術工藝
+上課時間：週一 19:00–21:40
+期間：2026-03-02 – 2026-06-29
+費用：3,000 元
+報名狀態：額滿
+無限制
+資料來源：
+- taipei-cc：https://ss.twcc.org.tw/course/m_course_detail.php?u=3a81c2d7239c333cb18d59018955aab7（最後確認 2026-09-17；提供欄位：categoryRaw、description、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title）
+- taipei-cc：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-09-17；提供欄位：categoryRaw、description、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title）
+- moe-cc-courses：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-09-15；提供欄位：credit、enrollment、schedule、topicsRaw）
+- moe-cc-courses：https://ss.twcc.org.tw/course/m_course_detail.php?u=3a81c2d7239c333cb18d59018955aab7（最後確認 2026-09-15；提供欄位：credit、enrollment、schedule、topicsRaw）
+- moe-cc-detail：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-09-15；提供欄位：）
+- moe-cc-detail：https://ss.twcc.org.tw/course/m_course_detail.php?u=3a81c2d7239c333cb18d59018955aab7（最後確認 2026-09-15；提供欄位：）
+
+### 恆春-解說員戶外服勤班
+網址：https://kho.tw/course/%E6%81%86%E6%98%A5%E8%A7%A3%E8%AA%AA%E5%93%A1%E6%88%B6%E5%A4%96%E6%9C%8D%E5%8B%A4%E7%8F%AD-%E5%B1%8F%E5%8D%97%E5%8D%80%E7%A4%BE%E5%A4%A7-8db9a.html
+開課單位：屏東縣屏南區社區大學（社區大學）
+地點：恆春校本部，屏東縣恆春鎮
+分類：旅遊休閒（依課名判斷，非來源標示）
+上課時間：週一 09:00–11:00、週一 09:00–11:00
+期間：2026-03-09 – 2026-05-04
+費用：免費
+報名狀態：狀態未知
+通過解說員基礎/實習班等待認證學員，藉由服務在地醫療場所、社區、學校的服務人群，來增進服務大眾的認知與學習
+資料來源：
+- moe-cc-courses：（無連結）（最後確認 2026-09-15；提供欄位：credit、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title、topicsRaw）
+- moe-cc-courses：https://new.pscc.org.tw/（最後確認 2026-09-15；提供欄位：credit、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title、topicsRaw）
+- moe-cc-courses：（無連結）（最後確認 2026-09-15；提供欄位：credit、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title、topicsRaw）
+- moe-cc-detail：（無連結）（最後確認 2026-09-15；提供欄位：description）
+- moe-cc-detail：https://new.pscc.org.tw/（最後確認 2026-09-15；提供欄位：description）
+- moe-cc-detail：（無連結）（最後確認 2026-09-15；提供欄位：description）
+
+### 東港-薩克斯風輕鬆學_初級入門
+網址：https://kho.tw/course/%E6%9D%B1%E6%B8%AF%E8%96%A9%E5%85%8B%E6%96%AF%E9%A2%A8%E8%BC%95%E9%AC%86%E5%AD%B8%E5%88%9D%E7%B4%9A%E5%85%A5%E9%96%80-%E5%B1%8F%E5%8D%97%E5%8D%80%E7%A4%BE%E5%A4%A7-08ba0.html
+開課單位：屏東縣屏南區社區大學（社區大學）
+地點：東港分校，屏東縣東港鎮
+分類：音樂戲劇（依課名判斷，非來源標示）
+上課時間：週六 08:00–10:00
+期間：2026-03-14 – 2026-07-11
+費用：1,600 元
+報名狀態：狀態未知
+針對無音樂基礎的愛樂人，可以輕鬆上手，學得開心有成就，讓音樂進入你的人生。並歡迎已有基礎想要重新打基礎的同學一同學習。基礎認識、呼吸、節奏練習、音階練習、歌曲練習、合奏默契練習。
+資料來源：
+- moe-cc-courses：（無連結）（最後確認 2026-09-15；提供欄位：credit、enrollment、isFree、price、provider、schedule、teachers、term、title、topicsRaw）
+- moe-cc-courses：（無連結）（最後確認 2026-09-15；提供欄位：credit、enrollment、isFree、price、provider、schedule、teachers、term、title、topicsRaw）
+- moe-cc-courses：（無連結）（最後確認 2026-09-15；提供欄位：credit、enrollment、isFree、price、provider、schedule、teachers、term、title、topicsRaw）
+- moe-cc-detail：（無連結）（最後確認 2026-09-15；提供欄位：description）
+- moe-cc-detail：（無連結）（最後確認 2026-09-15；提供欄位：description）
+- moe-cc-detail：（無連結）（最後確認 2026-09-15；提供欄位：description）
+
+
+------------------------------------------------------------
+
+## 代表性課程：剩餘名額即時揭露
+
+名額數字只有部分營運商（運動中心、臺中社大聯網）提供，是本站少數別處看不到的資訊，依額滿比例排序取前幾筆。
+
+### 樂齡肌力養成班
+網址：https://kho.tw/course/%E6%A8%82%E9%BD%A1%E8%82%8C%E5%8A%9B%E9%A4%8A%E6%88%90%E7%8F%AD-%E6%A5%8A%E6%A2%85%E9%AB%94%E8%82%B2%E5%9C%92%E5%8D%80-16a17.html
+開課單位：楊梅體育園區（運動中心）
+地點：楊梅體育園區
+分類：運動健身
+上課時間：週四 08:00–08:55
+期間：2026-09-03 – 2026-10-29
+費用：未提供
+名額：尚餘 1／50 名額
+報名狀態：招生中
+楊梅體育園區，11505，專業運動類課程，週四 08:00–08:55上課，自 2026-09-03 起，地點：楊梅體育園區。
+資料來源：
+- xuanen-centers：https://ymscwdyg.com.tw（最後確認 2026-09-17；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
+
+### 【總館】9/19(六)14:00-16:00城市建築美學講座「從歷史角度一窺台北城百年風貌演變」歡迎踴躍參加～」－城市建築美學講座「從歷史角度一窺台北城百年風貌演變」
+網址：https://kho.tw/course/919%E5%85%AD14001600%E5%9F%8E%E5%B8%82%E5%BB%BA%E7%AF%89%E7%BE%8E%E5%AD%B8%E8%AC%9B%E5%BA%A7-%E7%AB%8B%E5%9C%96%E6%9B%B8%E9%A4%A8%E7%B8%BD%E9%A4%A8-d4381.html
+開課單位：新北市立圖書館總館（圖書館）
+地點：新北市立圖書館總館，新北市
+分類：美術工藝（依課名判斷，非來源標示）
+期間：2026-09-19 – 2026-09-19
+費用：未提供
+名額：尚餘 1／50 名額
+報名狀態：招生中
+一座城市在百年內經歷三個不同政權統治，在制度、資本、人才、技術的層層影響之下的風貌流變，如何形塑台北....
+資料來源：
+- ntpc-library-activities：https://atpass.ntpclib.gov.tw/activities/8e109e8bb57a4b44b21e31c34db87dba（最後確認 2026-09-17；提供欄位：description、enrollment、provider、schedule、sourceUrl、title）
+
+### 05期兒童班
+網址：https://kho.tw/course/05%E6%9C%9F%E5%85%92%E7%AB%A5%E7%8F%AD-%E9%B3%B3%E5%B1%B1%E9%81%8B%E5%8B%95%E5%9C%92%E5%8D%80-603f5.html
+開課單位：高雄市鳳山運動園區（運動中心）
+地點：高雄市鳳山運動園區，高雄市
+分類：運動健身
+上課時間：週日 09:45–10:45
+期間：2026-09-06 – 2026-11-01
+費用：未提供
+名額：尚餘 1／30 名額
+報名狀態：招生中
+高雄市鳳山運動園區，11505，公益系列類課程，週日 09:45–10:45上課，自 2026-09-06 起，地點：高雄市鳳山運動園區。
+資料來源：
+- xuanen-centers：https://kfspwdyg.com.tw（最後確認 2026-09-17；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
+
+
+------------------------------------------------------------
+
+## 完整資料要去哪裡看
+
+站台導覽與網址規則：https://kho.tw/llms.txt
+sitemap 索引（分 pages／courses×2／venues／teachers 共 5 個分檔）：https://kho.tw/sitemap.xml
+站內搜尋（課名／單位／講師）：https://kho.tw/search.html
+地圖（依座標找附近的課）：https://kho.tw/map.html
+
+更新於 2026-09-17（每小時抓取一次）。本頁每次建置重新生成，內容以此刻為準。

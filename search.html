@@ -1,14 +1,4 @@
-<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="theme-color" content="#1e5ab8">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TK4G7BS0QF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TK4G7BS0QF');
-</script>
-<title>搜尋課程</title><meta name="description" content="在 29,000 門全台成人課程中搜尋課名、單位或講師。"><link rel="canonical" href="https://kho.tw/search.html"><link rel="stylesheet" href="/_astro/jsonld.PSSZNQo-.css"></head><body><header class="topbar"><div class="inner"><b><a href="/">kho.tw</a></b><a href="/open.html">可報名</a><a href="/topics.html">主題</a><a href="/types.html">類型</a><a href="/cities.html">縣市</a><a href="/map.html">地圖</a><a href="/teachers.html">講師</a><a href="/search.html">搜尋</a></div></header><main class="wrap"><div class="card"><h2>搜尋</h2><form id="f" role="search" class="search-form"><input id="q" type="search" placeholder="課名、單位、講師"><button>搜尋</button></form><div class="meta search-count" id="n">載入索引中⋯</div></div><div id="r"></div><script>
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="theme-color" content="#1e5ab8"><title>搜尋課程</title><meta name="description" content="在 29,000 門全台成人課程中搜尋課名、單位或講師。"><link rel="canonical" href="https://kho.tw/search.html"><link rel="stylesheet" href="/_astro/Base.PSSZNQo-.css"></head><body><header class="topbar"><div class="inner"><b><a href="/">kho.tw</a></b><a href="/open.html">可報名</a><a href="/topics.html">主題</a><a href="/types.html">類型</a><a href="/cities.html">縣市</a><a href="/map.html">地圖</a><a href="/teachers.html">講師</a><a href="/search.html">搜尋</a></div></header><main class="wrap"><div class="card"><h2>搜尋</h2><form id="f" role="search" class="search-form"><input id="q" type="search" placeholder="課名、單位、講師"><button>搜尋</button></form><div class="meta search-count" id="n">載入索引中⋯</div></div><div id="r"></div><script>
 const L={open:'招生中',upcoming:'尚未開放報名',full:'額滿',running:'開課中',closed:'報名已截止',cancelled:'停開',unknown:'狀態未知'};
 let idx=[];
 (async()=>{idx=await(await fetch('/index.json')).json();
