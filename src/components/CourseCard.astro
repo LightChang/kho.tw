@@ -15,7 +15,7 @@ const left = Number.isFinite(c.enrollment?.available) ? c.enrollment.available :
 ---
 <div class="card">
 <div><a href={link('course', c.slug)}>{c.title}</a> <StatusBadge status={c.enrollment?.status} />{left !== null && <Fragment>　<span class="tnum left-seats">剩 {left} 位</span></Fragment>}　<EndedNote course={c} /></div>
-<div class="meta">{c.provider?.nameRaw ?? ''}{c.venue?.city && `　${c.venue.city}${c.venue.district ?? ''}`}</div>
+<div class="meta">{c.provider?.nameRaw ?? ''}{c.venue?.city && <Fragment>　<a href={link('city', c.venue.city)}>{c.venue.city}{c.venue.district ?? ''}</a></Fragment>}</div>
 {when && <div class="meta">{when}</div>}
 {markInferred && c.categoryFrom === 'title' && <div class="meta-2">分類依課名判斷</div>}
 </div>
