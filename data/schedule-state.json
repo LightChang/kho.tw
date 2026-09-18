@@ -395,14 +395,14 @@
     "name": "雲林縣社區大學課程表（海線／虎尾溪／平原／山線）",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（帶已報名人數與額滿旗標，為即時層）",
-    "intervalMs": 16200000,
-    "interval": "4.5h",
-    "lastFetchedAt": "2026-09-18T17:10:01.941Z",
+    "intervalMs": 24300000,
+    "interval": "6.8h",
+    "lastFetchedAt": "2026-09-18T22:10:01.657Z",
     "lastChangedAt": "2026-09-18T13:10:02.789Z",
-    "nextDueAt": "2026-09-18T21:40:01.941Z",
+    "nextDueAt": "2026-09-19T04:55:01.657Z",
     "recordCount": 389,
     "contentHash": "6679c21fa50e92d23e7da7464b1634bbb1ccbcd3435d076342f6c1e51628136e",
-    "unchangedRuns": 1,
+    "unchangedRuns": 2,
     "consecutiveFailures": 0
   }
 }
