@@ -8665,6 +8665,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/venue/%E6%B4%BB%E5%8B%95%E6%95%99%E5%AE%A46-f342c.html</loc>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/venue/%E6%B5%B7%E5%B0%BE%E4%BB%A3%E5%A4%A9%E5%AE%AE-fd17e.html</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -14491,12 +14497,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/venue/1%E6%A8%93%E5%85%AB%E5%B9%B4%E4%B8%89%E7%8F%AD%E6%95%99%E5%AE%A4-8ef74.html</loc>
-    <lastmod>2026-09-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/venue/1%E6%A8%93%E5%85%AB%E5%B9%B4%E4%BA%8C%E7%8F%AD%E6%95%99%E5%AE%A4-333f1.html</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
@@ -14528,12 +14528,6 @@
   </url>
   <url>
     <loc>https://kho.tw/venue/115%E7%A7%8B%E5%AD%A3%E7%8F%AD-c2ee4.html</loc>
-    <lastmod>2026-09-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/venue/2%E6%A8%93%E9%A4%90%E5%BB%B3-676b7.html</loc>
     <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -14631,6 +14625,12 @@
   <url>
     <loc>https://kho.tw/venue/MrLobbyCoffee-f85ca.html</loc>
     <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/venue/OLD%E5%B7%A5%E4%BD%9C%E5%AE%A4-61dc1.html</loc>
+    <lastmod>2026-09-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
