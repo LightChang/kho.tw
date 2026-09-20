@@ -227,14 +227,14 @@
     "name": "新北市立圖書館－活動報名",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（報名系統，名額與狀態即時變動）",
-    "intervalMs": 10800000,
-    "interval": "3h",
-    "lastFetchedAt": "2026-09-20T12:10:02.053Z",
+    "intervalMs": 16200000,
+    "interval": "4.5h",
+    "lastFetchedAt": "2026-09-20T15:10:02.516Z",
     "lastChangedAt": "2026-09-20T12:10:02.053Z",
-    "nextDueAt": "2026-09-20T15:10:02.053Z",
+    "nextDueAt": "2026-09-20T19:40:02.516Z",
     "recordCount": 45,
     "contentHash": "92ea476f92bb9626614be3ba3e8b45787cb62e98e2d528f4a3a6e3d69c125b83",
-    "unchangedRuns": 0,
+    "unchangedRuns": 1,
     "consecutiveFailures": 0
   },
   "penghu-cc-portal": {
@@ -369,13 +369,13 @@
     "declaredFreq": "UNVERIFIED（報名系統，隨各館上架活動即時變動）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-09-20T04:10:02.655Z",
-    "lastChangedAt": "2026-09-20T04:10:02.655Z",
-    "nextDueAt": "2026-09-20T15:10:02.053Z",
+    "lastFetchedAt": "2026-09-20T15:10:02.516Z",
+    "lastChangedAt": "2026-09-20T15:10:02.516Z",
+    "nextDueAt": "2026-09-20T18:10:02.516Z",
     "recordCount": 50,
-    "contentHash": "37b91b373deafccd9f1f9c899b0ab0d2814f47397c6591c447f1f343c2545083",
+    "contentHash": "402abe7d57813c78993c0b74ac2a9fa3b469ac4719e6576142895f65cb899630",
     "unchangedRuns": 0,
-    "consecutiveFailures": 2
+    "consecutiveFailures": 0
   },
   "xuanen-centers": {
     "name": "軒恩線上報名系統－運動中心課表",
