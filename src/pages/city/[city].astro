@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import CourseList from '../../components/CourseList.astro';
-import { getData, fmt } from '../../lib/data.mjs';
+import { getData, fmt, link } from '../../lib/data.mjs';
 import { itemListJsonLd, SITE_URL } from '../../../site/jsonld.mjs';
 
 export function getStaticPaths() {
@@ -9,13 +9,29 @@ export function getStaticPaths() {
 }
 
 const { c } = Astro.props;
+
+// 機構類型分布：直接從這個縣市的課程清單聚合，不是另外杜撰的分類——
+// 讓標題與說明能對上「台北 社大 課程」「台北 運動中心 課程」這種地域＋類型的實際問法。
+const KIND_LABEL = new Map(getData().types.map((k) => [k.kind, k.label]));
+const byKind = [...c.list.reduce((m, course) => {
+  const kind = course.provider?.kind;
+  if (kind) m.set(kind, (m.get(kind) ?? 0) + 1);
+  return m;
+}, new Map())].sort((a, b) => b[1] - a[1]);
+const topKinds = byKind.slice(0, 3).map(([kind]) => KIND_LABEL.get(kind)).filter(Boolean);
 ---
 <Base
-  title={`${c.name}的成人課程`}
-  description={`${c.name}社區大學、樂齡中心、運動中心與職訓課程共 ${fmt(c.list.length)} 門。`}
+  title={topKinds.length ? `${c.name}成人課程｜${topKinds.join('・')}` : `${c.name}的成人課程`}
+  description={`${c.name}${byKind.slice(0, 4).map(([kind, n]) => `${KIND_LABEL.get(kind)}${fmt(n)}門`).join('、')}，共 ${fmt(c.list.length)} 門課，其中 ${fmt(c.open)} 門招生中。`}
   canonical={`${SITE_URL}/city/${encodeURIComponent(c.name)}.html`}
   jsonld={itemListJsonLd(c.list.slice(0, 100), { name: `${c.name}的成人課程` })}
 >
-<div class="card"><h2>{c.name}</h2><div class="meta">{fmt(c.list.length)} 門課，其中 {fmt(c.open)} 門招生中</div></div>
+<div class="card"><h2>{c.name}</h2><div class="meta">{fmt(c.list.length)} 門課，其中 {fmt(c.open)} 門招生中</div>
+{byKind.length > 0 && (
+<ul class="chips">{byKind.map(([kind, n]) => (
+  <li><a href={link('type', kind)}>{KIND_LABEL.get(kind) ?? kind}<span class="n">{fmt(n)}</span></a></li>
+))}</ul>
+)}
+</div>
 <CourseList list={c.list} />
 </Base>
