@@ -24901,6 +24901,7 @@
 {"id":"crs_b5a2cdfd","kind":"course","slug":"生成式AI與自動化流程應用實作班-國立空中大學-2cdfd","assignedAt":"2026-09-12"}
 {"id":"crs_b5a2dc0c","kind":"course","slug":"投資理財策略探究線上課程-新楊平社大-2dc0c","assignedAt":"2026-09-12"}
 {"id":"crs_b5a42a1f","kind":"course","slug":"自己做天然農產品手工皂-山線社大-42a1f","assignedAt":"2026-09-12"}
+{"id":"crs_b5a7b513","kind":"course","slug":"Hilow有氧增肌塑身2學分-土城社大-7b513","assignedAt":"2026-09-22"}
 {"id":"crs_b5aa3999","kind":"course","slug":"中醫基礎與中藥養生初階-竹北社大-a3999","assignedAt":"2026-09-12"}
 {"id":"crs_b5addff5","kind":"course","slug":"A1183民俗紙藝班法船-海線社大-ddff5","assignedAt":"2026-09-12"}
 {"id":"crs_b5af5c3c","kind":"course","slug":"9月12月喜樂英文班-基督教中國佈道會-f5c3c","assignedAt":"2026-09-12"}
@@ -32094,6 +32095,7 @@
 {"id":"crs_eb02a207","kind":"course","slug":"輕鬆學油畫-北投社大-2a207","assignedAt":"2026-09-12"}
 {"id":"crs_eb04183c","kind":"course","slug":"生活日本語中階2-竹北社大-4183c","assignedAt":"2026-09-12"}
 {"id":"crs_eb06136e","kind":"course","slug":"2026嬰幼兒閱讀推廣活動閱讀萌芽五感放-市圖總館新總館-6136e","assignedAt":"2026-09-16"}
+{"id":"crs_eb0985fc","kind":"course","slug":"塑身活力有氧-土城社大-985fc","assignedAt":"2026-09-22"}
 {"id":"crs_eb09ea7d","kind":"course","slug":"活力有氧-鳳山運動園區-9ea7d","assignedAt":"2026-09-12"}
 {"id":"crs_eb0ed8d8","kind":"course","slug":"油性粉彩畫風景-社大-ed8d8","assignedAt":"2026-09-12"}
 {"id":"crs_eb169436","kind":"course","slug":"輕鬆入門薩克斯風-中和社大-69436","assignedAt":"2026-09-12"}
@@ -38053,6 +38055,7 @@
 {"id":"tea_71aef55168806b26","kind":"teacher","slug":"宋良玉-板橋社大-bf087","assignedAt":"2026-09-13"}
 {"id":"tea_71b3c95ea7d66c76","kind":"teacher","slug":"黃興武-美港西社大-6ea1a","assignedAt":"2026-09-13"}
 {"id":"tea_71b68a4a4f138ea9","kind":"teacher","slug":"楊瑞珍-水沙連社大-40b18","assignedAt":"2026-09-13"}
+{"id":"tea_71c848ad578d5403","kind":"teacher","slug":"JOY-土城社大-f2df3","assignedAt":"2026-09-22"}
 {"id":"tea_71ca7aba24f0a06c","kind":"teacher","slug":"吳淑敬-中正社大-686c3","assignedAt":"2026-09-13"}
 {"id":"tea_71cbe645017129f1","kind":"teacher","slug":"王藝霖-北高雄社大-fcec0","assignedAt":"2026-09-13"}
 {"id":"tea_71d13c5b993fb06b","kind":"teacher","slug":"小花-虎尾全民運動館-64e1c","assignedAt":"2026-09-13"}
@@ -43874,6 +43877,7 @@
 {"id":"ven_becc2703","kind":"venue","slug":"頂埔-c2703","assignedAt":"2026-09-12"}
 {"id":"ven_bece56f6","kind":"venue","slug":"新竹市東區東大路1段116之1號-e56f6","assignedAt":"2026-09-12"}
 {"id":"ven_bf0fd4ab","kind":"venue","slug":"佳音文教基金會-fd4ab","assignedAt":"2026-09-12"}
+{"id":"ven_bf17e8f1","kind":"venue","slug":"土城-7e8f1","assignedAt":"2026-09-22"}
 {"id":"ven_bf2fde91","kind":"venue","slug":"虎尾興南有機農業推廣中心-fde91","assignedAt":"2026-09-12"}
 {"id":"ven_bf3f2d7f","kind":"venue","slug":"臺北市中山區長春路116號-f2d7f","assignedAt":"2026-09-12"}
 {"id":"ven_bf6e68f1","kind":"venue","slug":"大園國小-e68f1","assignedAt":"2026-09-12"}
