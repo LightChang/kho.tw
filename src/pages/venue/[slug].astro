@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import CourseCard from '../../components/CourseCard.astro';
-import { getData, fmt } from '../../lib/data.mjs';
+import { getData, fmt, link } from '../../lib/data.mjs';
 import { venueJsonLd, venueUrl } from '../../../site/jsonld.mjs';
 
 export function getStaticPaths() {
@@ -13,6 +13,6 @@ const { venue: v, list } = Astro.props;
 <Base title={`${v.name}的課程`} description={`${v.name}的成人課程共 ${fmt(list.length)} 門。`} canonical={venueUrl(v)} jsonld={venueJsonLd(v, list)}>
 <div class="card"><h2>{v.name}</h2>
 <div class="meta">{v.address ?? ''}</div>
-<div class="meta-2">{v.lat ? `座標 ${v.lat}, ${v.lng}` : '尚無座標'}　共 {fmt(list.length)} 門課</div></div>
+<div class="meta-2">{v.lat ? `座標 ${v.lat}, ${v.lng}` : '尚無座標'}　共 {fmt(list.length)} 門課{v.city && <Fragment>　<a href={link('city', v.city)}>看{v.city}更多成人課程</a></Fragment>}</div></div>
 {list.slice(0, 200).map((c) => <CourseCard course={c} />)}
 </Base>
