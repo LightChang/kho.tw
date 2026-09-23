@@ -63,11 +63,11 @@
     "interval": "1.8d",
     "lastFetchedAt": "2026-09-14T11:16:47.725Z",
     "lastChangedAt": "2026-09-14T11:16:47.725Z",
-    "nextDueAt": "2026-09-23T11:10:02.584Z",
+    "nextDueAt": "2026-09-25T05:10:02.822Z",
     "recordCount": 13010,
     "contentHash": "036e2e7671e038777d5a421dec08ff2a17f1ef72da191266001a1ef44534fa58",
     "unchangedRuns": 0,
-    "consecutiveFailures": 4
+    "consecutiveFailures": 5
   },
   "moe-cc-sites": {
     "name": "社區大學據點資訊",
@@ -185,14 +185,14 @@
     "name": "國立公共資訊圖書館－活動報名",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（報名平台，列表混有已結束與常態性活動）",
-    "intervalMs": 36450000,
-    "interval": "10.1h",
-    "lastFetchedAt": "2026-09-23T00:10:02.847Z",
-    "lastChangedAt": "2026-09-22T08:10:02.918Z",
-    "nextDueAt": "2026-09-23T10:17:32.847Z",
-    "recordCount": 48,
-    "contentHash": "4569542d8357da8bb44f88e8e953312b19beb9b9ffc28c65b357a4172306165d",
-    "unchangedRuns": 3,
+    "intervalMs": 18225000,
+    "interval": "5.1h",
+    "lastFetchedAt": "2026-09-23T11:10:02.822Z",
+    "lastChangedAt": "2026-09-23T11:10:02.822Z",
+    "nextDueAt": "2026-09-23T16:13:47.822Z",
+    "recordCount": 51,
+    "contentHash": "d473ca3b8702ac10a47ee0c8f22c4e7ea572365944619a66ddd32adf05ff39e6",
+    "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
   "ntpc-cc": {
@@ -343,11 +343,11 @@
     "interval": "6.8h",
     "lastFetchedAt": "2026-09-23T04:10:02.609Z",
     "lastChangedAt": "2026-09-22T20:10:02.113Z",
-    "nextDueAt": "2026-09-23T10:55:02.609Z",
+    "nextDueAt": "2026-09-23T17:55:02.822Z",
     "recordCount": 2170,
     "contentHash": "17aa1aaf54bde6c0ee7aa1fd56884ecbd3c92a8e13f27a5e1b2478b7f5ec87aa",
     "unchangedRuns": 2,
-    "consecutiveFailures": 0
+    "consecutiveFailures": 1
   },
   "taoyuan-cc-portal": {
     "name": "桃園社區大學聯合網站－課程查詢系統",
