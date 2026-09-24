@@ -4077,6 +4077,7 @@
 {"id":"crs_1c83f111","kind":"course","slug":"寫寫書法好抒壓-蘆荻社大-3f111","assignedAt":"2026-09-12"}
 {"id":"crs_1c849e22","kind":"course","slug":"桃園尚水水資源微旅行-八德社大-49e22","assignedAt":"2026-09-12"}
 {"id":"crs_1c868b20","kind":"course","slug":"走入自然覓鳥蹤週二-信義社大-68b20","assignedAt":"2026-09-12"}
+{"id":"crs_1c86b457","kind":"course","slug":"繪聲繪影寶貝來看劇紅鼻子冒險家-鹽埕圖書館-6b457","assignedAt":"2026-09-24"}
 {"id":"crs_1c878dfd","kind":"course","slug":"自媒體經營與AI視覺設計班第01期-群亞國際股份有限公司附設-78dfd","assignedAt":"2026-09-12"}
 {"id":"crs_1c8927b0","kind":"course","slug":"用畫筆走讀城市風景-南港社大-927b0","assignedAt":"2026-09-12"}
 {"id":"crs_1c909dba","kind":"course","slug":"民歌流行歌唱技巧初級-蘆山園社大-09dba","assignedAt":"2026-09-12"}
@@ -11239,6 +11240,7 @@
 {"id":"crs_506e5e88","kind":"course","slug":"樂童體操班-文山運動中心-e5e88","assignedAt":"2026-09-12"}
 {"id":"crs_50706e72","kind":"course","slug":"C08黏土捏捏樂-海線社大-06e72","assignedAt":"2026-09-12"}
 {"id":"crs_50725cf2","kind":"course","slug":"自然人文逍遙遊-松山社大-25cf2","assignedAt":"2026-09-12"}
+{"id":"crs_50787f97","kind":"course","slug":"115年10月巫瓦的故事塢1場次巫瓦的故-林森圖書館-87f97","assignedAt":"2026-09-24"}
 {"id":"crs_507a0f2f","kind":"course","slug":"樂學自然快樂行-松山社大-a0f2f","assignedAt":"2026-09-12"}
 {"id":"crs_507b3cd7","kind":"course","slug":"實用生活法律-羅東社大-b3cd7","assignedAt":"2026-09-12"}
 {"id":"crs_5084bc06","kind":"course","slug":"瑜珈提斯-文山社大-4bc06","assignedAt":"2026-09-12"}
@@ -13841,6 +13843,7 @@
 {"id":"crs_63aaab61","kind":"course","slug":"走踏宜蘭及鄰近縣市好山好水12週-宜蘭社大-aab61","assignedAt":"2026-09-12"}
 {"id":"crs_63ac1872","kind":"course","slug":"銀髮族超慢跑與肌力運動-中山社大-c1872","assignedAt":"2026-09-12"}
 {"id":"crs_63ac3f46","kind":"course","slug":"手機攝影日記初階-竹北社大-c3f46","assignedAt":"2026-09-12"}
+{"id":"crs_63ac951b","kind":"course","slug":"銀髮健康新節奏運動篇-蘆山園社大-c951b","assignedAt":"2026-09-24"}
 {"id":"crs_63ad9375","kind":"course","slug":"小型農機具電動農機使用保養與檢修週二班-曾文社大-d9375","assignedAt":"2026-09-13"}
 {"id":"crs_63ae5bbe","kind":"course","slug":"高效能健走與超慢跑訓練-大屯社大-e5bbe","assignedAt":"2026-09-12"}
 {"id":"crs_63ae842b","kind":"course","slug":"3D光固化開發香氛文創商品製作班-臺灣職能培訓發展協會-e842b","assignedAt":"2026-09-12"}
@@ -39879,6 +39882,7 @@
 {"id":"tea_ae09f7ee6118b52e","kind":"teacher","slug":"陳光增-新楊平社大-449f2","assignedAt":"2026-09-13"}
 {"id":"tea_ae0aa93cb2fd8b99","kind":"teacher","slug":"張惠華-市圖總館新總館-9ba2c","assignedAt":"2026-09-13"}
 {"id":"tea_ae2983efc255e924","kind":"teacher","slug":"許恩嫚-永康社大-93c29","assignedAt":"2026-09-13"}
+{"id":"tea_ae2cbe2af111c9b1","kind":"teacher","slug":"陳美英-林森圖書館-9c829","assignedAt":"2026-09-24"}
 {"id":"tea_ae321e7373dee7c4","kind":"teacher","slug":"素娟-八德運動中心-708f8","assignedAt":"2026-09-13"}
 {"id":"tea_ae4460b0b7a7f135","kind":"teacher","slug":"蔡秋月-大安社大-bc6fb","assignedAt":"2026-09-13"}
 {"id":"tea_ae54c897e6ac5610","kind":"teacher","slug":"朱麗貞-中山社大-8777f","assignedAt":"2026-09-13"}
