@@ -16633,12 +16633,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://kho.tw/course/%E5%85%AB%E5%BE%B7%E5%9C%B0%E6%96%B9%E5%AD%B8%E7%B6%A0%E8%89%B2%E4%BD%8E%E7%A2%B3%E6%8E%A2%E7%B4%A2%E5%9C%B0%E6%96%B9%E6%95%85%E4%BA%8B-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-105b6.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/course/%E5%85%AB%E6%A5%B5%E4%BF%9D%E5%81%A5%E9%A4%8A%E7%94%9F-%E6%9D%BE%E5%B1%B1%E5%8D%80%E6%96%B0%E8%81%9A%E9%87%8C%E8%BE%A6%E5%85%AC%E8%99%95-69653.html</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -88363,12 +88357,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/course/%E6%A1%83%E5%9C%92%E6%B0%B4%E8%B3%87%E6%BA%90%E8%88%87%E4%BD%8E%E7%A2%B3%E7%94%9F%E6%B4%BB%E8%B5%B0%E8%AE%80-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-8e674.html</loc>
-    <lastmod>2026-09-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/course/%E6%A1%83%E5%9C%92%E7%B9%AA%E7%95%AB%E8%89%B2%E9%89%9B%E7%AD%86%E7%9A%84%E7%94%9F%E6%B4%BB%E6%BC%AB%E6%AD%A5-%E6%A1%83%E5%9C%92%E7%A4%BE%E5%A4%A7-eb368.html</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>weekly</changefreq>
@@ -119997,6 +119985,18 @@
   <url>
     <loc>https://kho.tw/course/%E7%94%9F%E6%B4%BB%E7%BE%8E%E5%AD%B8%E8%8A%B1%E8%97%9D-%E8%B1%90%E6%B9%96%E7%A4%BE%E5%A4%A7-3ce98.html</loc>
     <lastmod>2026-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/course/%E7%94%9F%E6%B4%BB%E7%BE%8E%E5%AD%B8-%E8%90%AC%E8%8A%B3%E5%9C%8B%E5%B0%8F-aae4f.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/course/%E7%94%9F%E6%B4%BB%E7%BE%8E%E6%A8%82%E5%9C%B0-%E5%8D%9A%E6%84%9B%E7%A4%BE%E5%A4%A7-e3c0b.html</loc>
+    <lastmod>2026-09-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
