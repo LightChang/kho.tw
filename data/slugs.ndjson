@@ -7833,6 +7833,7 @@
 {"id":"crs_37b4f36e","kind":"course","slug":"輕鬆學太極-永和社大-4f36e","assignedAt":"2026-09-12"}
 {"id":"crs_37b76df2","kind":"course","slug":"AI代理人整合工作流程與效率提升應用班-臺灣管理顧問業產業工會-76df2","assignedAt":"2026-09-12"}
 {"id":"crs_37b7c0e1","kind":"course","slug":"為愛皂福社研習-松山社大-7c0e1","assignedAt":"2026-09-12"}
+{"id":"crs_37b9ed70","kind":"course","slug":"明志科大社區多元文化故事分享1011日-立圖書館泰山分館-9ed70","assignedAt":"2026-09-24"}
 {"id":"crs_37bef3f9","kind":"course","slug":"客家歌謠歡唱五折-新楊平社大-ef3f9","assignedAt":"2026-09-12"}
 {"id":"crs_37bfafcc","kind":"course","slug":"合唱團-新莊社大-fafcc","assignedAt":"2026-09-12"}
 {"id":"crs_37c27484","kind":"course","slug":"掌握未來智慧手機與AI的奇妙旅程-鎮港園社大-27484","assignedAt":"2026-09-12"}
@@ -19304,6 +19305,7 @@
 {"id":"crs_8c485a3a","kind":"course","slug":"弦音飄揚二胡高階-北門社大-85a3a","assignedAt":"2026-09-12"}
 {"id":"crs_8c48f26f","kind":"course","slug":"中文初階社頭班-二社田社大-8f26f","assignedAt":"2026-09-12"}
 {"id":"crs_8c48f5c3","kind":"course","slug":"信義地方文史工作坊-信義社大-8f5c3","assignedAt":"2026-09-12"}
+{"id":"crs_8c49bceb","kind":"course","slug":"iPARTY愛派對有氧企業包班-立竹光運動中心-9bceb","assignedAt":"2026-09-24"}
 {"id":"crs_8c4a95a8","kind":"course","slug":"療癒生活花藝應用-三鶯社大-a95a8","assignedAt":"2026-09-12"}
 {"id":"crs_8c4dea95","kind":"course","slug":"全方位瑜珈-南港社大-dea95","assignedAt":"2026-09-12"}
 {"id":"crs_8c517ff5","kind":"course","slug":"企業大數據PBD實務個案職場應用班-中國生產力中心附設中區服-17ff5","assignedAt":"2026-09-12"}
@@ -24933,6 +24935,7 @@
 {"id":"crs_b5291fc7","kind":"course","slug":"書法與篆刻-板橋社大-91fc7","assignedAt":"2026-09-12"}
 {"id":"crs_b529832a","kind":"course","slug":"陶藝泥好手捏拉坯四-鳳山社大-9832a","assignedAt":"2026-09-12"}
 {"id":"crs_b52a173e","kind":"course","slug":"新住民司法志工培訓-中壢社大-a173e","assignedAt":"2026-09-12"}
+{"id":"crs_b52dd3fb","kind":"course","slug":"森林裡的聲音躲在哪聲音音樂聽覺遊戲-立圖書館林口區李科永紀念-dd3fb","assignedAt":"2026-09-24"}
 {"id":"crs_b52f9ae2","kind":"course","slug":"輪棒筋絡瑜伽-美港西社大-f9ae2","assignedAt":"2026-09-12"}
 {"id":"crs_b53056c4","kind":"course","slug":"樂齡芭蕾舞進階班-吉林國小-056c4","assignedAt":"2026-09-12"}
 {"id":"crs_b530a201","kind":"course","slug":"時尚流行拼布洋裁-虎尾溪社大-0a201","assignedAt":"2026-09-12"}
@@ -42468,6 +42471,7 @@
 {"id":"ven_2396fdc8","kind":"venue","slug":"桃園市-6fdc8","assignedAt":"2026-09-12"}
 {"id":"ven_23a86c7a","kind":"venue","slug":"嘉義市東區垂楊路45號-86c7a","assignedAt":"2026-09-12"}
 {"id":"ven_23b21c5d","kind":"venue","slug":"臺北市信義區永吉路181號-21c5d","assignedAt":"2026-09-12"}
+{"id":"ven_23b9bfba","kind":"venue","slug":"新北市立圖書館林口區李科永紀念圖書館嬰幼-9bfba","assignedAt":"2026-09-24"}
 {"id":"ven_23c72144","kind":"venue","slug":"彰化縣田中鎮西路里長順街8號-72144","assignedAt":"2026-09-12"}
 {"id":"ven_23caf52f","kind":"venue","slug":"新北市三重區光復路1段61巷27號-af52f","assignedAt":"2026-09-12"}
 {"id":"ven_2431b86e","kind":"venue","slug":"彰化縣彰化市民族路267號-1b86e","assignedAt":"2026-09-12"}
