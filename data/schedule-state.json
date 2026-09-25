@@ -5,11 +5,11 @@
     "declaredFreq": "UNVERIFIED（即時層，列表帶確認開課／額滿／停開旗標）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-09-25T09:10:03.085Z",
-    "lastChangedAt": "2026-09-25T09:10:03.085Z",
-    "nextDueAt": "2026-09-25T12:10:03.085Z",
-    "recordCount": 3813,
-    "contentHash": "87e06c15b0b86c4907fa7fadaebefecced2c2ae026bf5770c793a5fe8f2d704c",
+    "lastFetchedAt": "2026-09-25T13:10:02.035Z",
+    "lastChangedAt": "2026-09-25T13:10:02.035Z",
+    "nextDueAt": "2026-09-25T16:10:02.035Z",
+    "recordCount": 3934,
+    "contentHash": "ce52b560ee79d5c4da65da68afdd73dbb81fa698fbf19ef71c3e1ad2b1cff6d6",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
@@ -371,11 +371,11 @@
     "interval": "3h",
     "lastFetchedAt": "2026-09-24T08:10:01.683Z",
     "lastChangedAt": "2026-09-24T08:10:01.683Z",
-    "nextDueAt": "2026-09-25T12:10:03.085Z",
+    "nextDueAt": "2026-09-25T16:10:02.035Z",
     "recordCount": 48,
     "contentHash": "998e72e2cfc1357b9da76645ed8c44a63539f974eac9a345241f9a6c3252d694",
     "unchangedRuns": 0,
-    "consecutiveFailures": 7
+    "consecutiveFailures": 8
   },
   "xuanen-centers": {
     "name": "軒恩線上報名系統－運動中心課表",
