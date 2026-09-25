@@ -5,11 +5,11 @@
     "declaredFreq": "UNVERIFIED（即時層，列表帶確認開課／額滿／停開旗標）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-09-25T03:10:02.317Z",
-    "lastChangedAt": "2026-09-25T03:10:02.317Z",
-    "nextDueAt": "2026-09-25T06:10:02.317Z",
-    "recordCount": 4133,
-    "contentHash": "c0a349946d6ab6c5ffe863d0493ec8fa105edfccdfa5b753dda994a853419146",
+    "lastFetchedAt": "2026-09-25T06:10:02.705Z",
+    "lastChangedAt": "2026-09-25T06:10:02.705Z",
+    "nextDueAt": "2026-09-25T09:10:02.705Z",
+    "recordCount": 4478,
+    "contentHash": "98dbb2e49bf50d30037acc4066bdfe1d24decfb0c712325bc602609362c0a93b",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
@@ -49,11 +49,11 @@
     "interval": "2.6d",
     "lastFetchedAt": "2026-09-14T11:16:47.725Z",
     "lastChangedAt": "2026-09-12T03:10:12.815Z",
-    "nextDueAt": "2026-09-25T04:10:02.337Z",
+    "nextDueAt": "2026-09-27T20:10:02.682Z",
     "recordCount": 13011,
     "contentHash": "883234fb32567b75fce2337fe9db0e38717998274cd61fb7941905abeeb98dd1",
     "unchangedRuns": 1,
-    "consecutiveFailures": 3
+    "consecutiveFailures": 4
   },
   "moe-cc-detail": {
     "name": "全國社區大學教育資訊網－課程詳情",
@@ -63,11 +63,11 @@
     "interval": "1.8d",
     "lastFetchedAt": "2026-09-14T11:16:47.725Z",
     "lastChangedAt": "2026-09-14T11:16:47.725Z",
-    "nextDueAt": "2026-09-25T05:10:02.822Z",
+    "nextDueAt": "2026-09-27T00:10:02.705Z",
     "recordCount": 13010,
     "contentHash": "036e2e7671e038777d5a421dec08ff2a17f1ef72da191266001a1ef44534fa58",
     "unchangedRuns": 0,
-    "consecutiveFailures": 5
+    "consecutiveFailures": 6
   },
   "moe-cc-sites": {
     "name": "社區大學據點資訊",
@@ -371,11 +371,11 @@
     "interval": "3h",
     "lastFetchedAt": "2026-09-24T08:10:01.683Z",
     "lastChangedAt": "2026-09-24T08:10:01.683Z",
-    "nextDueAt": "2026-09-25T06:10:02.317Z",
+    "nextDueAt": "2026-09-25T09:10:02.705Z",
     "recordCount": 48,
     "contentHash": "998e72e2cfc1357b9da76645ed8c44a63539f974eac9a345241f9a6c3252d694",
     "unchangedRuns": 0,
-    "consecutiveFailures": 5
+    "consecutiveFailures": 6
   },
   "xuanen-centers": {
     "name": "軒恩線上報名系統－運動中心課表",
@@ -395,14 +395,14 @@
     "name": "雲林縣社區大學課程表（海線／虎尾溪／平原／山線）",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（帶已報名人數與額滿旗標，為即時層）",
-    "intervalMs": 24300000,
-    "interval": "6.8h",
-    "lastFetchedAt": "2026-09-24T22:10:01.993Z",
+    "intervalMs": 36450000,
+    "interval": "10.1h",
+    "lastFetchedAt": "2026-09-25T05:10:02.682Z",
     "lastChangedAt": "2026-09-24T13:10:02.490Z",
-    "nextDueAt": "2026-09-25T04:55:01.993Z",
+    "nextDueAt": "2026-09-25T15:17:32.682Z",
     "recordCount": 398,
     "contentHash": "70d36cbf95339429bf106202fa10c011b843b8fb61cbbd68cf48c1e832928ad4",
-    "unchangedRuns": 2,
+    "unchangedRuns": 3,
     "consecutiveFailures": 0
   }
 }
