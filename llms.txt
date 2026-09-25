@@ -1,6 +1,6 @@
 # kho.tw（全台成人課程）
 
-> 全台社區大學、運動中心、樂齡中心與職訓課程整合查詢站。收錄 32,986 門課、2,433 個上課地點，其中 8,684 門正在招生。資料每小時自動抓取更新，本頁與 /llms-full.txt 在每次建置時重新生成。
+> 全台社區大學、運動中心、樂齡中心與職訓課程整合查詢站。收錄 32,986 門課、2,433 個上課地點，其中 8,683 門正在招生。資料每小時自動抓取更新，本頁與 /llms-full.txt 在每次建置時重新生成。
 
 ## 這是什麼
 kho.tw 彙整 23 個公開資料來源（教育部社區大學資訊網、各縣市社大聯網、教育部樂齡學習網、運動中心各營運商、勞動部職業訓練開放資料等），把同一門課在不同來源出現的紀錄合併成一筆，並在每個課程頁列出各來源提供的欄位與最後確認日期。收錄範圍：社區大學、運動中心、樂齡中心、職業訓練、圖書館、成人教育班、婦女大學、國中小進修部等機構公開的課程／活動資訊；不含私人補習班。
@@ -9,7 +9,7 @@ kho.tw 彙整 23 個公開資料來源（教育部社區大學資訊網、各縣
 
 ### 依機構類型（共 9 類，網址：/type/<kind 代碼>.html）
 - 社區大學（community-college）：https://kho.tw/type/community-college.html（24,264 門，4,268 門招生中）
-- 運動中心（sports-center）：https://kho.tw/type/sports-center.html（3,665 門，3,117 門招生中）
+- 運動中心（sports-center）：https://kho.tw/type/sports-center.html（3,665 門，3,116 門招生中）
 - 職業訓練（vocational）：https://kho.tw/type/vocational.html（2,679 門，987 門招生中）
 - 樂齡中心（senior-center）：https://kho.tw/type/senior-center.html（1,300 門，154 門招生中）
 - 其他（other）：https://kho.tw/type/other.html（711 門，19 門招生中）
@@ -19,7 +19,7 @@ kho.tw 彙整 23 個公開資料來源（教育部社區大學資訊網、各縣
 - 國中小進修部（school-continuing）：https://kho.tw/type/school-continuing.html（26 門，23 門招生中）
 
 ### 依主題分類（共 18 類，網址：/topic/<分類名稱>.html；分類名稱為中文，須百分比編碼）
-- 運動健身：https://kho.tw/topic/%E9%81%8B%E5%8B%95%E5%81%A5%E8%BA%AB.html（7,031 門，3,049 門招生中）
+- 運動健身：https://kho.tw/topic/%E9%81%8B%E5%8B%95%E5%81%A5%E8%BA%AB.html（7,031 門，3,048 門招生中）
 - 美術工藝：https://kho.tw/topic/%E7%BE%8E%E8%A1%93%E5%B7%A5%E8%97%9D.html（4,731 門，725 門招生中）
 - 音樂戲劇：https://kho.tw/topic/%E9%9F%B3%E6%A8%82%E6%88%B2%E5%8A%87.html（3,879 門，676 門招生中）
 - 舞蹈：https://kho.tw/topic/%E8%88%9E%E8%B9%88.html（2,520 門，774 門招生中）
