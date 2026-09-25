@@ -49,6 +49,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/venue/%E4%B8%89%E5%B3%BD-3e3cb.html</loc>
+    <lastmod>2026-09-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/venue/%E4%B8%89%E6%9D%91%E8%81%AF%E5%90%88%E6%B4%BB%E5%8B%95%E4%B8%AD%E5%BF%83-5f82a.html</loc>
     <lastmod>2026-09-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -650,12 +656,6 @@
   </url>
   <url>
     <loc>https://kho.tw/venue/%E4%BF%A1%E7%BE%A9%E5%9C%8B%E5%B0%8F-0787d.html</loc>
-    <lastmod>2026-09-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/venue/%E4%BF%A1%E7%BE%A9-7bc0b.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -7898,7 +7898,7 @@
   </url>
   <url>
     <loc>https://kho.tw/venue/%E6%A1%83%E5%9C%92%E5%B8%82%E6%A5%8A%E6%A2%85%E5%8D%80%E4%B8%AD%E5%B1%B1%E8%B7%AF125%E5%B7%B7-e7e2a.html</loc>
-    <lastmod>2026-09-15</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
