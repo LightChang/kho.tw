@@ -5,7 +5,7 @@
 
 這裡是本站聚合統計與代表性內容的全文，純文字，給 AI 助理讀的，可直接引用。
 收錄範圍：全站彙總統計（依機構類型／主題分類／縣市，共 48 個分類的完整數字）、跨來源合併與即時名額揭露各 6 筆代表性課程全文。
-本站共 33,389 門課，規模太大不可能逐頁收錄；個別課程／場館／講師的完整清單見 https://kho.tw/llms.txt 與 https://kho.tw/sitemap.xml。
+本站共 33,674 門課，規模太大不可能逐頁收錄；個別課程／場館／講師的完整清單見 https://kho.tw/llms.txt 與 https://kho.tw/sitemap.xml。
 引用時請標明來源網址；每筆課程都附上正式網址與原始資料來源。
 
 ------------------------------------------------------------
@@ -22,7 +22,7 @@ kho.tw 彙整 23 個公開資料來源（教育部社區大學資訊網、各縣
 
 | 類型 | 代碼 | 課程數 | 招生中 |
 |---|---|---|---|
-| 社區大學 | community-college | 24,717 | 4,268 |
+| 社區大學 | community-college | 25,002 | 4,268 |
 | 運動中心 | sports-center | 3,615 | 3,078 |
 | 職業訓練 | vocational | 2,686 | 988 |
 | 樂齡中心 | senior-center | 1,300 | 154 |
@@ -38,23 +38,23 @@ kho.tw 彙整 23 個公開資料來源（教育部社區大學資訊網、各縣
 
 | 分類 | 課程數 | 招生中 |
 |---|---|---|
-| 運動健身 | 7,065 | 3,016 |
-| 美術工藝 | 4,788 | 728 |
-| 音樂戲劇 | 3,939 | 676 |
-| 舞蹈 | 2,566 | 768 |
-| 語言 | 2,355 | 555 |
-| 健康養生 | 1,395 | 352 |
-| 人文社會 | 1,384 | 498 |
-| 電腦資訊 | 1,205 | 343 |
-| 料理烘焙 | 1,085 | 276 |
-| 自然生態 | 959 | 231 |
-| 工程技術 | 795 | 202 |
-| 攝影影音 | 697 | 105 |
-| 生活應用 | 512 | 184 |
-| 理財法律 | 492 | 144 |
-| 商業管理 | 379 | 123 |
-| 旅遊休閒 | 282 | 38 |
-| 教育照護 | 152 | 53 |
+| 運動健身 | 7,109 | 3,016 |
+| 美術工藝 | 4,833 | 728 |
+| 音樂戲劇 | 3,984 | 676 |
+| 舞蹈 | 2,596 | 768 |
+| 語言 | 2,373 | 555 |
+| 健康養生 | 1,401 | 352 |
+| 人文社會 | 1,389 | 498 |
+| 電腦資訊 | 1,208 | 343 |
+| 料理烘焙 | 1,094 | 276 |
+| 自然生態 | 967 | 231 |
+| 工程技術 | 799 | 202 |
+| 攝影影音 | 709 | 105 |
+| 生活應用 | 515 | 184 |
+| 理財法律 | 498 | 144 |
+| 商業管理 | 380 | 123 |
+| 旅遊休閒 | 287 | 38 |
+| 教育照護 | 154 | 53 |
 | 美容美髮 | 139 | 59 |
 
 ------------------------------------------------------------
@@ -63,22 +63,22 @@ kho.tw 彙整 23 個公開資料來源（教育部社區大學資訊網、各縣
 
 | 縣市 | 課程數 | 招生中 |
 |---|---|---|
-| 臺北市 | 8,071 | 4,901 |
+| 臺北市 | 8,191 | 4,901 |
 | 新北市 | 4,957 | 735 |
 | 臺中市 | 3,992 | 626 |
 | 桃園市 | 3,490 | 465 |
-| 高雄市 | 2,168 | 459 |
+| 高雄市 | 2,204 | 459 |
 | 臺南市 | 1,913 | 191 |
 | 南投縣 | 483 | 168 |
 | 彰化縣 | 1,184 | 142 |
 | 宜蘭縣 | 417 | 126 |
 | 新竹市 | 730 | 92 |
 | 花蓮縣 | 155 | 55 |
-| 雲林縣 | 786 | 44 |
+| 雲林縣 | 787 | 44 |
 | 嘉義市 | 297 | 26 |
 | 新竹縣 | 383 | 17 |
 | 基隆市 | 352 | 16 |
-| 屏東縣 | 330 | 15 |
+| 屏東縣 | 458 | 15 |
 | 苗栗縣 | 264 | 15 |
 | 臺東縣 | 99 | 6 |
 | 嘉義縣 | 157 | 5 |
@@ -111,41 +111,38 @@ kho.tw 彙整 23 個公開資料來源（教育部社區大學資訊網、各縣
 - moe-cc-detail：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-09-15；提供欄位：）
 - moe-cc-detail：https://ss.twcc.org.tw/course/m_course_detail.php?u=3a81c2d7239c333cb18d59018955aab7（最後確認 2026-09-15；提供欄位：）
 
-### 恆春-解說員戶外服勤班
-網址：https://kho.tw/course/%E6%81%86%E6%98%A5%E8%A7%A3%E8%AA%AA%E5%93%A1%E6%88%B6%E5%A4%96%E6%9C%8D%E5%8B%A4%E7%8F%AD-%E5%B1%8F%E5%8D%97%E5%8D%80%E7%A4%BE%E5%A4%A7-8db9a.html
-開課單位：屏東縣屏南區社區大學（社區大學）
-地點：恆春校本部，屏東縣恆春鎮
-分類：旅遊休閒（依課名判斷，非來源標示）
-上課時間：週一 09:00–11:00、週一 09:00–11:00
-期間：2026-03-09 – 2026-05-04
-費用：免費
+### 手語真奇妙
+網址：https://kho.tw/course/%E6%89%8B%E8%AA%9E%E7%9C%9F%E5%A5%87%E5%A6%99-%E5%8C%97%E9%96%80%E7%A4%BE%E5%A4%A7-23e09.html
+開課單位：臺南市北門社區大學（社區大學）
+地點：未提供，臺南市
+分類：語言（依課名判斷，非來源標示）
+上課時間：週二 19:00–21:00
+期間：2026-03-03 – 2026-06-30
+費用：1,000 元
 報名狀態：狀態未知
-通過解說員基礎/實習班等待認證學員，藉由服務在地醫療場所、社區、學校的服務人群，來增進服務大眾的認知與學習
+目前臺灣的聽語障人口正逐漸增加中，每年政府需求的手語翻譯人員亦是不符所需，故希望在北門社大開設手語課程，最重要的目的就是推廣聾人文化，能讓更多人來學習，將所學應用在生活中，可以隨時幫助聽語障朋友，讓我們的力量及溫暖能帶給這些族群的朋友更多的關懷與幫忙，也有機會報考丙級手譯員證照，協助政府的各項聾人措施及社會事務。
 資料來源：
-- moe-cc-courses：（無連結）（最後確認 2026-09-15；提供欄位：credit、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title、topicsRaw）
-- moe-cc-courses：https://new.pscc.org.tw/（最後確認 2026-09-15；提供欄位：credit、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title、topicsRaw）
-- moe-cc-courses：（無連結）（最後確認 2026-09-15；提供欄位：credit、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title、topicsRaw）
-- moe-cc-detail：（無連結）（最後確認 2026-09-15；提供欄位：description）
-- moe-cc-detail：https://new.pscc.org.tw/（最後確認 2026-09-15；提供欄位：description）
-- moe-cc-detail：（無連結）（最後確認 2026-09-15；提供欄位：description）
+- moe-cc-courses：https://www.tbmcc.tw/modules/tadnews/index.php?nsn=158（最後確認 2026-09-15；提供欄位：credit、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title、topicsRaw）
+- moe-cc-courses：https://www.tbmcc.tw/modules/tadnews/index.php?nsn=158（最後確認 2026-09-15；提供欄位：credit、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title、topicsRaw）
+- moe-cc-detail：https://www.tbmcc.tw/modules/tadnews/index.php?nsn=158（最後確認 2026-09-15；提供欄位：description）
+- moe-cc-detail：https://www.tbmcc.tw/modules/tadnews/index.php?nsn=158（最後確認 2026-09-15；提供欄位：description）
+- tainan-cc-portal：https://tncu.tn.edu.tw/Modules/Course/Show.php?ID=19637（最後確認 2026-09-27；提供欄位：schedule）
 
-### 東港-薩克斯風輕鬆學_初級入門
-網址：https://kho.tw/course/%E6%9D%B1%E6%B8%AF%E8%96%A9%E5%85%8B%E6%96%AF%E9%A2%A8%E8%BC%95%E9%AC%86%E5%AD%B8%E5%88%9D%E7%B4%9A%E5%85%A5%E9%96%80-%E5%B1%8F%E5%8D%97%E5%8D%80%E7%A4%BE%E5%A4%A7-08ba0.html
-開課單位：屏東縣屏南區社區大學（社區大學）
-地點：東港分校，屏東縣東港鎮
-分類：音樂戲劇（依課名判斷，非來源標示）
-上課時間：週六 08:00–10:00
-期間：2026-03-14 – 2026-07-11
-費用：1,600 元
+### 手沖精品咖啡
+網址：https://kho.tw/course/%E6%89%8B%E6%B2%96%E7%B2%BE%E5%93%81%E5%92%96%E5%95%A1-%E6%A1%83%E5%9C%92%E7%A4%BE%E5%A4%A7-ca272.html
+開課單位：桃園市桃園社區大學（社區大學）
+地點：桃園市桃園區復興路248號，桃園市桃園區
+分類：料理烘焙（依課名判斷，非來源標示）
+上課時間：週一 14:00–16:00
+期間：2026-03-02 – 2026-06-29
+費用：2,000 元
 報名狀態：狀態未知
-針對無音樂基礎的愛樂人，可以輕鬆上手，學得開心有成就，讓音樂進入你的人生。並歡迎已有基礎想要重新打基礎的同學一同學習。基礎認識、呼吸、節奏練習、音階練習、歌曲練習、合奏默契練習。
+推廣正確咖啡飲食觀念，人體水份佔70%，教導健康的咖啡新沖煮技法，咖啡不該只有苦澀，咖啡有苦甘酸香醇的多種美好香氣，由淺入深，教導學員煮出適合自己的咖啡風味，進而將飲品文化帶入日常生活，增進家人情感。點心製作多以簡單家用鍋具為主，讓學員在家也能作出專業級口感，課堂教導美味的點心盤飾與拍照，讓學員能快樂自信分享作品。
 資料來源：
-- moe-cc-courses：（無連結）（最後確認 2026-09-15；提供欄位：credit、enrollment、isFree、price、provider、schedule、teachers、term、title、topicsRaw）
-- moe-cc-courses：（無連結）（最後確認 2026-09-15；提供欄位：credit、enrollment、isFree、price、provider、schedule、teachers、term、title、topicsRaw）
-- moe-cc-courses：（無連結）（最後確認 2026-09-15；提供欄位：credit、enrollment、isFree、price、provider、schedule、teachers、term、title、topicsRaw）
-- moe-cc-detail：（無連結）（最後確認 2026-09-15；提供欄位：description）
-- moe-cc-detail：（無連結）（最後確認 2026-09-15；提供欄位：description）
-- moe-cc-detail：（無連結）（最後確認 2026-09-15；提供欄位：description）
+- moe-cc-courses：https://ty.twcc.org.tw/course/m_course_detail.php?u=7b55ac27d07e28475efb0b237695da27（最後確認 2026-09-15；提供欄位：credit、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title、topicsRaw）
+- moe-cc-courses：https://ty.twcc.org.tw/course/m_course_detail.php?u=2e29116e7bee80d5a1ab206573572b89（最後確認 2026-09-15；提供欄位：credit、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title、topicsRaw）
+- moe-cc-detail：https://ty.twcc.org.tw/course/m_course_detail.php?u=7b55ac27d07e28475efb0b237695da27（最後確認 2026-09-15；提供欄位：description）
+- moe-cc-detail：https://ty.twcc.org.tw/course/m_course_detail.php?u=2e29116e7bee80d5a1ab206573572b89（最後確認 2026-09-15；提供欄位：description）
 
 
 ------------------------------------------------------------
