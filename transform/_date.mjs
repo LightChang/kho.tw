@@ -10,3 +10,8 @@
 // 用 'sv-SE' 是因為它的日期格式剛好就是 YYYY-MM-DD，不必自己補零重組。
 export const todayTaipei = (d = new Date()) =>
   d.toLocaleDateString('sv-SE', { timeZone: 'Asia/Taipei' });
+
+// 結束日早於開始日的課表（兩個都要是 YYYY-MM-DD 才比）。
+// 這種資料在卡片上會被判成「已結束」，normalize、健康檢查、emit 三處都用這支把它攔下來。
+export const isInvertedSchedule = (s) =>
+  Boolean(s?.startDate && s?.endDate && s.endDate < s.startDate);

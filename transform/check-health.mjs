@@ -11,7 +11,7 @@
 // 每單數月初換期，所以運動中心類來源的窗口是每個單數月的 1-10 日。
 import { readdir, readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
-import { todayTaipei } from './_date.mjs';
+import { todayTaipei, isInvertedSchedule } from './_date.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const OBS_DIR = path.join(ROOT, 'data', 'observation');
@@ -34,12 +34,17 @@ async function activeCounts() {
     return {};
   }
   const counts = {};
+  const inverted = {};
   for (const f of files) {
     const text = await readFile(path.join(OBS_DIR, f), 'utf-8');
     const rows = text.split('\n').filter(Boolean).map((l) => JSON.parse(l));
-    counts[f.replace(/\.ndjson$/, '')] = rows.filter((r) => !r.disappearedAt).length;
+    const active = rows.filter((r) => !r.disappearedAt);
+    const id = f.replace(/\.ndjson$/, '');
+    counts[id] = active.length;
+    const bad = active.filter((r) => isInvertedSchedule(r.payload?.schedule));
+    if (bad.length) inverted[id] = bad.map((r) => r.id);
   }
-  return counts;
+  return { counts, inverted };
 }
 
 async function loadHistory() {
@@ -83,7 +88,11 @@ export function judge(sourceId, current, history, now = new Date()) {
 async function main() {
   const now = new Date();
   const today = todayTaipei(now);
-  const counts = await activeCounts();
+  const { counts, inverted } = await activeCounts();
+  // 結束日早於開始日：normalize 應已攔掉，這裡還看得到代表有來源繞過了它
+  for (const [sourceId, ids] of Object.entries(inverted).sort()) {
+    process.stderr.write(`[WARN] ${sourceId}　結束日早於開始日 ${ids.length} 筆：${ids.slice(0, 5).join('、')}\n`);
+  }
   const history = await loadHistory();
   let failed = 0;
 

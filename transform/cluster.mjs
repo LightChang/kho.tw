@@ -156,9 +156,12 @@ export async function buildClusters(observations) {
   const evidence = new Map(); // observationId -> {rule, confidence}
   const codeOf = new Map();  // observationId -> 課程代碼（用來擋掉互相矛盾的合併）
   const sourceOf = new Map();
+  const termOf = new Map();  // 群根 observationId -> 該群的結構化期別（year+season）
   for (const o of observations) {
     dsu.find(o.id);
     sourceOf.set(o.id, o.payload._source);
+    const t = o.payload.term;
+    if (t?.year && t?.season) termOf.set(o.id, `${t.year}${t.season}`);
     const code = courseCodeOf(o.payload);
     if (code) codeOf.set(o.id, `${o.payload._source}|${code}`);
   }
@@ -167,6 +170,14 @@ export async function buildClusters(observations) {
     const ca = codeOf.get(a);
     const cb = codeOf.get(b);
     if (ca && cb && ca !== cb && ca.split('|')[0] === cb.split('|')[0]) return true;
+    // 兩邊都有結構化期別且不同 → 是不同期的班，不准合併。社大的課程代碼跨期沿用
+    //（實測士林社大同一個代碼，北市聯網給 115 秋季班、教育部給 115 春季班），
+    // 「不看期別的代碼規則」把兩期串成一門課後，emit 深層合併 schedule 時會拿秋季的
+    // startDate 配春季的 endDate，結束日早於開始日，卡片誤標「已結束」（2026-09 共 119 門）。
+    // 比的是整群的期別（不是只比兩筆），免得經由沒有期別的成員把兩期橋接起來。
+    const ta = termOf.get(dsu.find(a));
+    const tb = termOf.get(dsu.find(b));
+    if (ta && tb && ta !== tb) return true;
     // 同一個來源的兩筆、雙方都沒有代碼可資區分時，弱規則不要合併：
     // 同校同期同名的多筆通常是不同班次（實測竹北社大「伸展瑜珈初階」一期 6 班）。
     if (confidence <= 0.85 && !ca && !cb && sourceOf.get(a) === sourceOf.get(b)) return true;
@@ -180,7 +191,9 @@ export async function buildClusters(observations) {
         continue;
       }
       if (confidence < 1.0 && conflicts(seen, o.id, confidence)) continue;
+      const groupTerm = termOf.get(dsu.find(seen)) ?? termOf.get(dsu.find(o.id));
       dsu.union(seen, o.id);
+      if (groupTerm) termOf.set(dsu.find(o.id), groupTerm);
       for (const id of [seen, o.id]) {
         const prev = evidence.get(id);
         if (!prev || prev.confidence < confidence) evidence.set(id, { rule, confidence });

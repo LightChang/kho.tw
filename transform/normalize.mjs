@@ -12,7 +12,7 @@
 import { createHash } from 'node:crypto';
 import { readdir, readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
-import { todayTaipei } from './_date.mjs';
+import { todayTaipei, isInvertedSchedule } from './_date.mjs';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
 const RAW_DIR = path.join(ROOT, 'ingest', 'raw');
@@ -67,6 +67,16 @@ async function writeNdjson(file, rows) {
   await writeFile(file, body ? `${body}\n` : '', 'utf-8');
 }
 
+export function dropInvertedEndDates(courses) {
+  const dropped = [];
+  for (const c of courses) {
+    if (!isInvertedSchedule(c.schedule)) continue;
+    dropped.push(`${c._sourceRecordId}（${c.schedule.startDate} > ${c.schedule.endDate}）`);
+    delete c.schedule.endDate;
+  }
+  return dropped;
+}
+
 export async function normalizeSource(sourceId, today = todayTaipei()) {
   const rawPath = path.join(RAW_DIR, `${sourceId}.json`);
   const modPath = path.join(ROOT, 'transform', 'normalize', `${sourceId}.mjs`);
@@ -82,6 +92,13 @@ export async function normalizeSource(sourceId, today = todayTaipei()) {
   // 名錄類來源產出的是場館／單位，不是課程；normalize 模組自己宣告 entityKind
   const entityKind = mod.entityKind ?? 'course';
   const staged = mod.normalize(records, { fetchedAt }).map(stable);
+  // 來源自己把結束日填得比開始日早（實測北市聯網明德國小「藝術欣賞與創作班」
+  // 2026-09-01 開課、2026-06-12 結束）。留著的話卡片會標「已結束」；不猜哪一個才對，
+  // 只把 endDate 拿掉並列出來。
+  const inverted = dropInvertedEndDates(staged);
+  if (inverted.length) {
+    process.stderr.write(`[${sourceId}] 結束日早於開始日 ${inverted.length} 筆，已略過 endDate：${inverted.slice(0, 5).join('、')}\n`);
+  }
 
   const seen = new Map();
   for (const c of staged) {
