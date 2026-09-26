@@ -8,19 +8,38 @@
 
   gtag('config', 'G-TK4G7BS0QF');
 </script>
-<title>搜尋課程</title><meta name="description" content="在 29,000 門全台成人課程中搜尋課名、單位或講師。"><link rel="canonical" href="https://kho.tw/search.html"><link rel="stylesheet" href="/_astro/Base.PSSZNQo-.css"></head><body><header class="topbar"><div class="inner"><b><a href="/">kho.tw</a></b><a href="/open.html">可報名</a><a href="/topics.html">主題</a><a href="/types.html">類型</a><a href="/cities.html">縣市</a><a href="/map.html">地圖</a><a href="/teachers.html">講師</a><a href="/search.html">搜尋</a></div></header><main class="wrap"><div class="card"><h2>搜尋</h2><form id="f" role="search" class="search-form"><input id="q" type="search" placeholder="課名、單位、講師"><button>搜尋</button></form><div class="meta search-count" id="n">載入索引中⋯</div></div><div id="r"></div><script>
+<title>搜尋課程</title><meta name="description" content="在 29,000 門全台成人課程中搜尋課名、單位或講師。"><link rel="canonical" href="https://kho.tw/search.html"><link rel="stylesheet" href="/_astro/Base.C486SUmD.css"></head><body><header class="topbar"><div class="inner"><b><a href="/">kho.tw</a></b><a href="/open.html">可報名</a><a href="/topics.html">主題</a><a href="/learn.html">想學什麼</a><a href="/cert.html">證照班</a><a href="/types.html">類型</a><a href="/cities.html">縣市</a><a href="/map.html">地圖</a><a href="/teachers.html">講師</a><a href="/search.html">搜尋</a></div></header><main class="wrap"><div class="card"><h1>搜尋</h1><form id="f" role="search" class="search-form" action="/search.html" method="get"><input id="q" name="q" type="search" placeholder="課名、單位、講師" aria-label="搜尋課名、單位、講師"><button>搜尋</button></form><div class="meta search-count" id="n">載入索引中⋯</div></div><div id="r"></div><script>
 const L={open:'招生中',upcoming:'尚未開放報名',full:'額滿',running:'開課中',closed:'報名已截止',cancelled:'停開',unknown:'狀態未知'};
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 let idx=[];
+function track(v,n){
+  // GA 沒啟用時（本機、KHO_GA_ID 未設）window.gtag 不存在，直接略過
+  if(typeof window.gtag==='function')window.gtag('event','search',{search_term:v,results:n});
+}
 (async()=>{idx=await(await fetch('/index.json')).json();
   document.getElementById('n').textContent='共 '+idx.length.toLocaleString('en-US')+' 門課可搜尋';
-  const p=new URLSearchParams(location.search).get('q');
+  const p=(new URLSearchParams(location.search).get('q')||'').trim();
   if(p){document.getElementById('q').value=p;run(p)}})();
 function run(v){
   const hit=idx.filter(r=>r[1].includes(v)||r[9].includes(v)||(r[10]||'').includes(v)||(r[11]||'').includes(v));
   document.getElementById('n').textContent='找到 '+hit.length.toLocaleString('en-US')+' 門課'+(hit.length>200?'（顯示前 200）':'');
   document.getElementById('r').innerHTML=hit.slice(0,200).map(r=>
-    '<div class="card"><div><a href="/course/'+encodeURIComponent(r[0])+'.html">'+r[1]+'</a> <span class="st st-'+r[6]+'">'+(L[r[6]]||r[6])+'</span></div>'+
-    '<div class="meta">'+r[9]+(r[2]?'　'+r[2]+(r[3]||''):'')+'</div></div>').join('');
+    '<div class="card"><div><a href="/course/'+encodeURIComponent(r[0])+'.html">'+esc(r[1])+'</a> <span class="st st-'+esc(r[6])+'">'+esc(L[r[6]]||r[6])+'</span></div>'+
+    '<div class="meta">'+esc(r[9])+(r[2]?'　'+esc(r[2])+esc(r[3]||''):'')+'</div></div>').join('');
+  track(v,hit.length);
 }
-document.getElementById('f').addEventListener('submit',e=>{e.preventDefault();const v=document.getElementById('q').value.trim();if(v.length>=1)run(v)});
+document.getElementById('f').addEventListener('submit',e=>{
+  e.preventDefault();
+  const v=document.getElementById('q').value.trim();
+  if(!v)return;
+  const url=location.pathname+'?q='+encodeURIComponent(v);
+  // 同一個字重按不再疊一筆瀏覽紀錄
+  if(new URLSearchParams(location.search).get('q')!==v)history.pushState({q:v},'',url);
+  run(v);
+});
+window.addEventListener('popstate',()=>{
+  const v=(new URLSearchParams(location.search).get('q')||'').trim();
+  document.getElementById('q').value=v;
+  if(v&&idx.length)run(v);else document.getElementById('r').innerHTML='';
+});
 </script></main></body></html>

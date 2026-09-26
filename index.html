@@ -362,7 +362,7 @@ a:hover{text-decoration:underline}
 .topbar a{color:var(--text-primary)}
 .card{text-align:left;background:var(--card-bg);border:1px solid var(--border-subtle);border-radius:var(--radius);
   padding:18px 20px;margin-bottom:14px}
-.card h2{margin:0 0 6px;font-size:var(--text-xl);line-height:1.3}
+.card h1,.card h2{margin:0 0 6px;font-size:var(--text-xl);line-height:1.3}
 .card h3{margin:0 0 10px;font-size:var(--text-lg)}
 .meta{color:var(--text-secondary);font-size:var(--text-sm)}
 .meta-2{color:var(--text-secondary);font-size:var(--text-xs)}
@@ -382,6 +382,23 @@ th{color:var(--text-secondary);font-weight:600;white-space:nowrap}
 .chips a{display:inline-flex;align-items:baseline;gap:6px;padding:4px 12px;border:1px solid var(--border-subtle);
   border-radius:999px;background:var(--card-bg);font-size:var(--text-sm)}
 .chips .n{color:var(--text-secondary);font-size:var(--text-xs)}
+.chips .chip{display:inline-flex;align-items:baseline;gap:6px;padding:4px 12px;border:1px solid var(--border-subtle);
+  border-radius:999px;background:var(--card-bg);font-size:var(--text-sm)}
+
+/* 「可考證照」標籤：與報名狀態的膠囊分開，用紫色外框，不和六種狀態色混淆 */
+.badge-cert{display:inline-block;padding:1px 10px;border-radius:999px;font-size:var(--text-xs);
+  color:var(--color-purple);border:1px solid currentColor;white-space:nowrap}
+
+/* 場館頁的課程表（見 src/pages/venue/[slug].astro）。
+   一天一段、段內依開始時間排；時間欄固定寬度，讓各天的表格對齊。 */
+.tt h2{margin-bottom:4px}
+.tt-acts{margin:12px 0 4px}
+.tt-acts [data-act]{cursor:pointer}
+.tt-acts .on{border-color:var(--color-link);background:var(--bg-hover)}
+.tt-day{margin-top:18px}
+.tt-day h3{margin:0 0 4px;padding-bottom:4px;border-bottom:2px solid var(--border-subtle)}
+.tt-time{width:8.5em;white-space:nowrap;color:var(--text-secondary)}
+@media (max-width:560px){ .tt-time{width:auto;white-space:normal} }
 
 /* 地圖頁（見 src/pages/map.astro）。地圖容器一定要有明確高度，Leaflet 不會自己撐開。 */
 .map-card{padding:14px}
