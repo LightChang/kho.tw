@@ -271,12 +271,12 @@
     "declaredFreq": "UNVERIFIED（實測 115 秋季班於開課前即有資料）",
     "intervalMs": 86400000,
     "interval": "1d",
-    "lastFetchedAt": "2026-09-25T20:10:01.688Z",
+    "lastFetchedAt": "2026-09-26T20:10:01.800Z",
     "lastChangedAt": "2026-09-23T12:10:02.765Z",
-    "nextDueAt": "2026-09-26T20:10:01.688Z",
+    "nextDueAt": "2026-09-27T20:10:01.800Z",
     "recordCount": 1295,
     "contentHash": "7736e1c0c522e2d87178e9dd921513bd634ba8ed48ce8ae1f75ed28d31b4cf63",
-    "unchangedRuns": 3,
+    "unchangedRuns": 4,
     "consecutiveFailures": 0
   },
   "tainan-cc-portal": {
