@@ -11,7 +11,7 @@ import { existsSync } from 'node:fs';
 import { rm } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { getData } from './data.mjs';
+import { getData, learnRel, certRel } from './data.mjs';
 import { SITE_URL } from '../../site/jsonld.mjs';
 import { writeSitemaps, courseHint, maxDate } from '../../site/sitemap.mjs';
 
@@ -33,6 +33,16 @@ function entries(d) {
     { rel: 'map.html', lastmod: d.home.updatedAt, changefreq: 'weekly', priority: '0.8' },
     { rel: 'teachers.html', lastmod: listLastmod(d.courses), changefreq: 'weekly', priority: '0.6' },
     { rel: 'search.html', lastmod: d.home.updatedAt, changefreq: 'monthly', priority: '0.6' },
+    // 細項（皮拉提斯、水電…）與證照班：全國、縣市、行政區三層，門檻見 data.mjs 的 FACET_MIN
+    { rel: 'learn.html', lastmod: listLastmod(d.courses), changefreq: 'weekly', priority: '0.8' },
+    ...d.learn.flatMap((l) => [
+      { rel: learnRel(l.activity.name), lastmod: listLastmod(l.list), changefreq: 'weekly', priority: '0.7' },
+      ...[...l.cities, ...l.districts].map((x) => ({
+        rel: learnRel(l.activity.name, x.area), lastmod: listLastmod(x.list), changefreq: 'weekly', priority: '0.6',
+      })),
+    ]),
+    { rel: certRel(), lastmod: listLastmod(d.cert.list), changefreq: 'weekly', priority: '0.7' },
+    ...d.cert.cities.map((x) => ({ rel: certRel(x.city), lastmod: listLastmod(x.list), changefreq: 'weekly', priority: '0.6' })),
   ];
   // 停開與已截止的課仍然收錄，只是 priority 低、changefreq 長（見 site/sitemap.mjs）
   const courses = d.courses.map((c) => ({

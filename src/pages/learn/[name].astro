@@ -1,0 +1,44 @@
+---
+// 細項全國頁：/learn/皮拉提斯.html。依縣市、行政區往下分，下面列課。
+import Base from '../../layouts/Base.astro';
+import CourseList from '../../components/CourseList.astro';
+import VenueSummary from '../../components/VenueSummary.astro';
+import { getData, fmt, learnHref, certHref } from '../../lib/data.mjs';
+import { itemListJsonLd, SITE_URL } from '../../../site/jsonld.mjs';
+
+export function getStaticPaths() {
+  return getData().learn.map((l) => ({ params: { name: l.activity.name }, props: { l } }));
+}
+
+const { l } = Astro.props;
+const a = l.activity;
+const { certIds } = getData();
+const certN = l.list.filter((c) => certIds.has(c.id)).length;
+const { types } = getData();
+const KIND_LABEL = new Map(types.map((k) => [k.kind, k.label]));
+const kinds = [...l.list.reduce((m, c) => m.set(c.provider?.kind, (m.get(c.provider?.kind) ?? 0) + 1), new Map())]
+  .filter(([k]) => KIND_LABEL.has(k)).sort((p, q) => q[1] - p[1]).slice(0, 3).map(([k]) => KIND_LABEL.get(k));
+const alias = a.aliases.length ? `（${a.aliases.join('、')}）` : '';
+---
+<Base
+  title={`成人${a.label}課程｜全台 ${l.cities.length} 縣市開課地點與時間`}
+  description={`全台成人${a.name}${alias}課程共 ${fmt(l.list.length)} 門，其中 ${fmt(l.open)} 門招生中，${l.cities.slice(0, 4).map((x) => `${x.city}${fmt(x.list.length)}門`).join('、')}。${kinds.join('、')}開的課，附上課時間與地點。`}
+  canonical={`${SITE_URL}${learnHref(a.name)}`}
+  jsonld={itemListJsonLd(l.list.slice(0, 100), { name: `成人${a.label}課程` })}
+>
+<div class="card"><h1>成人{a.label}課程</h1>
+<div class="meta">全台 {fmt(l.list.length)} 門課，其中 {fmt(l.open)} 門招生中{l.season && `，最多課集中在 ${l.season}`}</div>
+{a.aliases.length > 0 && <div class="meta-2">課名含「{[a.name, ...a.aliases].join('」「')}」等字樣的課都收在這裡。</div>}
+{a.topic && <div class="meta-2">屬於<a href={`/topic/${encodeURIComponent(a.topic)}.html`}>{a.topic}</a>{certN > 0 && <Fragment>，其中 {fmt(certN)} 門是<a href={certHref()}>證照班</a></Fragment>}。</div>}
+</div>
+{l.cities.length > 0 && (
+<div class="card"><h3>依縣市</h3>
+<ul class="chips">{l.cities.map((x) => <li><a href={learnHref(a.name, x.area)}>{x.city}{a.label}<span class="n tnum">{fmt(x.open)}／{fmt(x.list.length)}</span></a></li>)}</ul></div>
+)}
+{l.districts.length > 0 && (
+<div class="card"><h3>依行政區</h3>
+<ul class="chips">{l.districts.slice(0, 60).map((x) => <li><a href={learnHref(a.name, x.area)}>{x.city}{x.district}<span class="n tnum">{fmt(x.list.length)}</span></a></li>)}</ul></div>
+)}
+<VenueSummary list={l.list} />
+<CourseList list={l.list} />
+</Base>

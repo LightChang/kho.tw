@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import CourseList from '../../components/CourseList.astro';
-import { getData, fmt, link } from '../../lib/data.mjs';
+import { getData, fmt, link, learnHref, certHref } from '../../lib/data.mjs';
 import { itemListJsonLd, SITE_URL } from '../../../site/jsonld.mjs';
 
 export function getStaticPaths() {
@@ -18,6 +18,9 @@ const byKind = [...c.list.reduce((m, course) => {
   if (kind) m.set(kind, (m.get(kind) ?? 0) + 1);
   return m;
 }, new Map())].sort((a, b) => b[1] - a[1]);
+const { learnByCity, cert } = getData();
+const acts = learnByCity.get(c.name) ?? [];
+const certCity = cert.cities.find((x) => x.city === c.name);
 const topKinds = byKind.slice(0, 3).map(([kind]) => KIND_LABEL.get(kind)).filter(Boolean);
 ---
 <Base
@@ -33,5 +36,10 @@ const topKinds = byKind.slice(0, 3).map(([kind]) => KIND_LABEL.get(kind)).filter
 ))}</ul>
 )}
 </div>
+{acts.length > 0 && (
+<div class="card"><h3>{c.name}熱門課程</h3>
+<ul class="chips">{acts.map((o) => <li><a href={learnHref(o.activity.name, c.name)}>{o.activity.label}<span class="n tnum">{fmt(o.open)}／{fmt(o.n)}</span></a></li>)}</ul>
+{certCity && <div class="meta-2"><a href={certHref(c.name)}>{c.name}證照班 {fmt(certCity.list.length)} 門</a></div>}</div>
+)}
 <CourseList list={c.list} />
 </Base>

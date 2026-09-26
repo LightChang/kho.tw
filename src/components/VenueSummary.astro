@@ -1,0 +1,23 @@
+---
+// 彙整頁（細項／證照）的「在哪裡上」：依場館聚合，列前 12 個，連到場館頁（課程表）。
+import { getData, fmt, link } from '../lib/data.mjs';
+
+const { list, max = 12 } = Astro.props;
+const { venues } = getData();
+const rows = [...list.reduce((m, c) => {
+  const v = venues.get(c.venue?.id);
+  if (!v) return m;
+  const r = m.get(v.id) ?? { v, n: 0, providers: new Set() };
+  r.n += 1;
+  if (c.provider?.nameRaw) r.providers.add(c.provider.nameRaw);
+  return m.set(v.id, r);
+}, new Map()).values()].sort((a, b) => b.n - a.n || a.v.name.localeCompare(b.v.name));
+---
+{rows.length > 0 && (
+<div class="card"><h3>上課地點</h3>
+<table><tr><th>地點</th><th>開課單位</th><th>課數</th></tr>
+{rows.slice(0, max).map((r) => <tr><td><a href={link('venue', r.v.slug)}>{r.v.name}</a><div class="meta-2">{r.v.district ?? ''}</div></td><td class="meta-2">{[...r.providers].slice(0, 2).join('、')}</td><td class="tnum">{fmt(r.n)}</td></tr>)}
+</table>
+{rows.length > max && <div class="meta-2">另有 {fmt(rows.length - max)} 個地點，見下方課程清單。</div>}
+</div>
+)}

@@ -1,0 +1,58 @@
+---
+// 細項 × 地區：/learn/皮拉提斯/桃園市.html、/learn/肌力訓練/臺北市內湖區.html。
+// 標題用讀者的打法（「桃園皮拉提斯課程」「內湖增肌減脂」），內文用正式地名。
+import Base from '../../../layouts/Base.astro';
+import CourseList from '../../../components/CourseList.astro';
+import VenueSummary from '../../../components/VenueSummary.astro';
+import { getData, fmt, learnHref, certHref } from '../../../lib/data.mjs';
+import { shortCity, shortDistrict } from '../../../lib/facets.mjs';
+import { itemListJsonLd, SITE_URL } from '../../../../site/jsonld.mjs';
+
+export function getStaticPaths() {
+  return getData().learn.flatMap((l) => [...l.cities, ...l.districts].map((x) => ({
+    params: { name: l.activity.name, area: x.area },
+    props: { l, x },
+  })));
+}
+
+const { l, x } = Astro.props;
+const a = l.activity;
+const { types, learnByCity, certIds, certCitySet } = getData();
+const place = x.district ? shortDistrict(x.district) : shortCity(x.city);
+const full = `${x.city}${x.district ?? ''}`;
+const KIND_LABEL = new Map(types.map((k) => [k.kind, k.label]));
+const kinds = [...x.list.reduce((m, c) => m.set(c.provider?.kind, (m.get(c.provider?.kind) ?? 0) + 1), new Map())]
+  .filter(([k]) => KIND_LABEL.has(k)).sort((p, q) => q[1] - p[1]).map(([k]) => KIND_LABEL.get(k));
+const providers = [...new Set(x.list.map((c) => c.provider?.nameRaw).filter(Boolean))];
+// 同縣市的其他行政區、同行政區所在縣市頁
+const siblings = x.district
+  ? l.districts.filter((d) => d.city === x.city && d.district !== x.district)
+  : l.districts.filter((d) => d.city === x.city);
+const cityPage = x.district ? l.cities.find((c) => c.city === x.city) : null;
+const otherActs = (learnByCity.get(x.city) ?? []).filter((o) => o.activity.name !== a.name).slice(0, 16);
+const certN = x.list.filter((c) => certIds.has(c.id)).length;
+const alias = a.aliases.length ? `（${a.aliases.join('、')}）` : '';
+---
+<Base
+  title={`${place}${a.label}課程｜${full}${kinds.slice(0, 2).join('・')}開課時間與地點`}
+  description={`${full}的${a.name}${alias}課程共 ${fmt(x.list.length)} 門，其中 ${fmt(x.open)} 門招生中。開課單位有${providers.slice(0, 3).join('、')}${providers.length > 3 ? `等 ${providers.length} 個` : ''}，列出上課時間、地點與報名狀態。`}
+  canonical={`${SITE_URL}${learnHref(a.name, x.area)}`}
+  jsonld={itemListJsonLd(x.list.slice(0, 100), { name: `${full}${a.label}課程` })}
+>
+<div class="card"><h1>{place}{a.label}課程</h1>
+<div class="meta">{full}共 {fmt(x.list.length)} 門，其中 {fmt(x.open)} 門招生中{x.season && `，最多課集中在 ${x.season}`}</div>
+<div class="meta-2">開課單位：{providers.slice(0, 6).join('、')}{providers.length > 6 && `等 ${providers.length} 個`}</div>
+{certN > 0 && certCitySet.has(x.city) && <div class="meta-2">其中 {fmt(certN)} 門是證照班，另見<a href={certHref(x.city)}>{x.city}證照班</a>。</div>}
+<div class="meta-2"><a href={learnHref(a.name)}>全台{a.label}課程</a>{cityPage && <Fragment>　<a href={learnHref(a.name, cityPage.area)}>{x.city}{a.label}課程</a></Fragment>}　<a href={`/city/${encodeURIComponent(x.city)}.html`}>{x.city}全部成人課程</a></div>
+</div>
+{siblings.length > 0 && (
+<div class="card"><h3>{x.city}其他行政區的{a.label}</h3>
+<ul class="chips">{siblings.map((d) => <li><a href={learnHref(a.name, d.area)}>{d.district}<span class="n tnum">{fmt(d.list.length)}</span></a></li>)}</ul></div>
+)}
+<VenueSummary list={x.list} />
+<CourseList list={x.list} />
+{otherActs.length > 0 && (
+<div class="card"><h3>{x.city}其他熱門課程</h3>
+<ul class="chips">{otherActs.map((o) => <li><a href={learnHref(o.activity.name, x.city)}>{o.activity.label}<span class="n tnum">{fmt(o.n)}</span></a></li>)}</ul></div>
+)}
+</Base>

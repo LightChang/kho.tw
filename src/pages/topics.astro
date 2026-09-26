@@ -15,5 +15,6 @@ const topicUrl = (name) => `${SITE_URL}/topic/${encodeURIComponent(name)}.html`;
 >
 <div class="card"><h2>主題分類</h2><div class="meta">想學什麼就從這裡找。數字是該主題正在招生／全部的課程數。</div>
 <div class="meta-2">全站 {fmt(courses.length)} 門課中有 {fmt(categorised)} 門已歸類；主題分類講的是課程內容，開課單位的性質請看<a href="/types.html">類型</a>。</div></div>
+<div class="card"><div class="meta">要找更細的項目（瑜珈、皮拉提斯、書法、水電⋯）請看<a href="/learn.html">想學什麼</a>；可以考證照的課集中在<a href="/cert.html">證照班</a>。</div></div>
 <div class="card"><ul class="chips">{topics.map((t) => <li><a href={`/topic/${encodeURIComponent(t.name)}.html`}>{t.name}<span class="n tnum">{fmt(t.open)}／{fmt(t.list.length)}</span></a></li>)}</ul></div>
 </Base>

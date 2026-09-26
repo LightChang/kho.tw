@@ -5,7 +5,8 @@
 import Base from '../../layouts/Base.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
 import EndedNote from '../../components/EndedNote.astro';
-import { getData, hasEnded, link, fmt, WEEKDAY_LABEL } from '../../lib/data.mjs';
+import { getData, hasEnded, link, fmt, WEEKDAY_LABEL, certHref } from '../../lib/data.mjs';
+import { isCert } from '../../lib/facets.mjs';
 import { courseJsonLd, courseUrl } from '../../../site/jsonld.mjs';
 
 export function getStaticPaths() {
@@ -37,10 +38,18 @@ const rows = [
 ].filter(([, v]) => v !== undefined && v !== null && v !== '');
 
 const jsonld = courseJsonLd(c, venue);
+
+// 同類課程：細項頁（行政區 → 縣市 → 全台）與證照班頁。細項依課名判斷，規則見 overrides/activities.json。
+const { learnLinksOf, certCitySet } = getData();
+const related = learnLinksOf(c);
+const cert = isCert(c);
+if (cert) related.push(c.venue?.city && certCitySet.has(c.venue.city)
+  ? { href: certHref(c.venue.city), text: `${c.venue.city}證照班` }
+  : { href: certHref(), text: '全台證照班' });
 ---
 <Base title={`${c.title}｜${c.provider?.nameRaw ?? ''}`} description={jsonld.description} canonical={courseUrl(c)} jsonld={jsonld}>
 <div class="card">
-<h2>{c.title} <StatusBadge status={c.enrollment?.status} /></h2>
+<h1>{c.title} <StatusBadge status={c.enrollment?.status} />{cert && <Fragment> <span class="badge-cert">可考證照</span></Fragment>}</h1>
 <div class="meta">{c.provider?.nameRaw ?? ''}{c.venue?.city && `　${c.venue.city}${c.venue.district ?? ''}`}</div>
 {hasEnded(c) && <div class="meta-2"><EndedNote course={c} />　本站不改寫來源給的報名狀態，這一行講的是上課期間。</div>}
 {c.description && <p>{c.description}</p>}
@@ -53,6 +62,10 @@ const jsonld = courseJsonLd(c, venue);
 <div class="meta-2">{venue.lat ? `座標 ${venue.lat}, ${venue.lng}（比對方式：${c.venue.match}）` : '尚無座標'}</div></div>
 ) : (
 <div class="card"><h3>上課地點</h3><div class="meta">{c.venue?.name ?? '來源未提供'}</div></div>
+)}
+{related.length > 0 && (
+<div class="card"><h3>同類課程</h3>
+<ul class="chips">{related.map((r) => <li><a href={r.href}>{r.text}</a></li>)}</ul></div>
 )}
 {teacherPages.length > 0 && (
 <div class="card"><h3>講師的其他課程</h3>

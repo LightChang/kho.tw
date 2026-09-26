@@ -1,0 +1,25 @@
+---
+// 細項索引：皮拉提斯、瑜珈、水電⋯⋯依 18 大類分組。規則見 overrides/activities.json。
+import Base from '../layouts/Base.astro';
+import { getData, fmt, learnHref, FACET_MIN } from '../lib/data.mjs';
+import { pageListJsonLd, SITE_URL } from '../../site/jsonld.mjs';
+
+const { learn, taxonomy } = getData();
+const groups = taxonomy.categories
+  .map((topic) => ({ topic, items: learn.filter((l) => l.activity.topic === topic) }))
+  .filter((g) => g.items.length);
+---
+<Base
+  title="想學什麼：瑜珈、皮拉提斯、書法、日語、水電等課程細項"
+  description={`依課名整理的 ${learn.length} 個課程細項，從瑜珈、皮拉提斯、拳擊有氧到書法、日語、水電維修，可再依縣市、行政區找課。`}
+  canonical={`${SITE_URL}/learn.html`}
+  jsonld={pageListJsonLd(learn.map((l) => ({ url: `${SITE_URL}${learnHref(l.activity.name)}`, name: `${l.activity.label}課程` })), { name: '課程細項' })}
+>
+<div class="card"><h1>想學什麼</h1>
+<div class="meta">{learn.length} 個細項，數字是招生中／全部課程數。點進去可以再選縣市或行政區。</div>
+<div class="meta-2">細項依課名判斷，一門課可能同時屬於好幾項（例如「拳擊有氧」同時算拳擊與有氧運動）。全台不到 {FACET_MIN.national} 門的細項不另外出頁。</div></div>
+{groups.map((g) => (
+<div class="card"><h3><a href={`/topic/${encodeURIComponent(g.topic)}.html`}>{g.topic}</a></h3>
+<ul class="chips">{g.items.map((l) => <li><a href={learnHref(l.activity.name)}>{l.activity.label}<span class="n tnum">{fmt(l.open)}／{fmt(l.list.length)}</span></a></li>)}</ul></div>
+))}
+</Base>

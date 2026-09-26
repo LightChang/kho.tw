@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import CourseList from '../../components/CourseList.astro';
+import VenueSummary from '../../components/VenueSummary.astro';
+import { getData, fmt, certHref } from '../../lib/data.mjs';
+import { shortCity } from '../../lib/facets.mjs';
+import { itemListJsonLd, SITE_URL } from '../../../site/jsonld.mjs';
+
+export function getStaticPaths() {
+  return getData().cert.cities.map((x) => ({ params: { city: x.city }, props: { x } }));
+}
+
+const { x } = Astro.props;
+const providers = [...new Set(x.list.map((c) => c.provider?.nameRaw).filter(Boolean))];
+---
+<Base
+  title={`${shortCity(x.city)}證照班・檢定輔導課程｜${x.city}可考證照的課程`}
+  description={`${x.city}可考證照的成人課程共 ${fmt(x.list.length)} 門，其中 ${fmt(x.open)} 門招生中，開課單位有${providers.slice(0, 3).join('、')}${providers.length > 3 ? `等 ${providers.length} 個` : ''}。`}
+  canonical={`${SITE_URL}${certHref(x.city)}`}
+  jsonld={itemListJsonLd(x.list.slice(0, 100), { name: `${x.city}證照班` })}
+>
+<div class="card"><h1>{shortCity(x.city)}證照班・檢定輔導課程</h1>
+<div class="meta">{x.city}共 {fmt(x.list.length)} 門，其中 {fmt(x.open)} 門招生中</div>
+<div class="meta-2">判斷方式與<a href={certHref()}>全台證照班</a>相同：課名寫明證照、檢定、技術士，或課程說明寫到輔導報考。報考資格以開課單位與考試主管機關公告為準。</div>
+<div class="meta-2"><a href={`/city/${encodeURIComponent(x.city)}.html`}>{x.city}全部成人課程</a></div></div>
+<VenueSummary list={x.list} />
+<CourseList list={x.list} />
+</Base>

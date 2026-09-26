@@ -13,6 +13,7 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { collectTeachers, teachersWithPages, MIN_COURSES } from '../../transform/teachers.mjs';
 import { todayTaipei } from '../../transform/_date.mjs';
+import { compileActivities, activitiesOf, isCert, venueDisplay, mainSeason } from './facets.mjs';
 
 const ROOT = process.cwd();
 
@@ -48,6 +49,17 @@ export const byStatusThenDate = (a, b) => (hasEnded(a) - hasEnded(b))
   || String(b.schedule?.startDate ?? '').localeCompare(String(a.schedule?.startDate ?? ''));
 
 export const isOpen = (c) => c.enrollment?.status === 'open';
+
+// 細項頁與證照頁的門檻：課太少的組合不出頁，免得產出一堆只有一兩門課的薄頁。
+// 全國細項 20 門、縣市 8 門、行政區 10 門；證照班縣市頁 8 門。
+// 縣市 8 門是看過實際查詢才定的：「彰化拳擊課程」剛好 8 門，再高就接不到。
+export const FACET_MIN = { national: 20, city: 8, district: 10, certCity: 8 };
+
+// 細項頁網址：/learn/皮拉提斯.html、/learn/皮拉提斯/桃園市.html、/learn/瑜珈/臺北市內湖區.html
+export const learnRel = (name, area) => (area ? `learn/${name}/${area}.html` : `learn/${name}.html`);
+export const learnHref = (name, area) => `/${learnRel(name, area).split('/').map(encodeURIComponent).join('/')}`;
+export const certRel = (city) => (city ? `cert/${city}.html` : 'cert.html');
+export const certHref = (city) => `/${certRel(city).split('/').map(encodeURIComponent).join('/')}`;
 
 const readNdjson = (file) => readFileSync(file, 'utf-8').split('\n').filter(Boolean).map((l) => JSON.parse(l));
 const readJson = (file) => JSON.parse(readFileSync(file, 'utf-8'));
@@ -133,9 +145,15 @@ function load() {
   }));
 
   // ── 場館 ───────────────────────────────────────
+  // 場館名稱只有門牌的，用 overrides/venue-names.json 或開課單位補一個看得懂的標題（見 facets.mjs）
+  const venueNames = readJson(path.join(ROOT, 'overrides', 'venue-names.json')).venues ?? {};
   const venuePages = [...groupBy(courses, (c) => c.venue?.id)]
     .filter(([id]) => venues.has(id))
-    .map(([id, list]) => ({ venue: venues.get(id), list: list.sort(byStatusThenDate) }));
+    .map(([id, list]) => ({
+      venue: venues.get(id),
+      list: list.sort(byStatusThenDate),
+      display: venueDisplay(venues.get(id), list, venueNames),
+    }));
 
   // ── 地圖 ───────────────────────────────────────
   // 場館為單位聚合，不是課程——19,671 門有座標的課只落在 1,782 個地點上，
@@ -192,6 +210,68 @@ function load() {
     (x) => x.id,
   );
 
+  // ── 細項（皮拉提斯、水電…）× 地區 ───────────────
+  const activities = compileActivities(readJson(path.join(ROOT, 'overrides', 'activities.json')));
+  const actsByCourse = new Map(courses.map((c) => [c.id, activitiesOf(c, activities).map((a) => a.name)]));
+  const summarize = (list) => ({ list: list.sort(byStatusThenDate), open: list.filter(isOpen).length, season: mainSeason(list) });
+  const learn = [];
+  for (const a of activities) {
+    const list = courses.filter((c) => actsByCourse.get(c.id).includes(a.name));
+    if (list.length < FACET_MIN.national) continue;
+    const cities = [...groupBy(list, (c) => c.venue?.city)]
+      .filter(([, l]) => l.length >= FACET_MIN.city)
+      .map(([city, l]) => ({ city, district: null, area: city, ...summarize(l) }))
+      .sort((x, y) => y.list.length - x.list.length);
+    const districts = [...groupBy(list.filter((c) => c.venue?.city && c.venue?.district), (c) => `${c.venue.city}\t${c.venue.district}`)]
+      .filter(([, l]) => l.length >= FACET_MIN.district)
+      .map(([key, l]) => {
+        const [city, district] = key.split('\t');
+        return { city, district, area: `${city}${district}`, ...summarize(l) };
+      })
+      .sort((x, y) => y.list.length - x.list.length);
+    learn.push({ activity: a, ...summarize(list), cities, districts });
+  }
+  // 由課程找回它所屬的細項頁：課程頁、場館頁的內部連結都從這裡來
+  const learnPageSet = new Set(learn.flatMap((l) => [
+    l.activity.name,
+    ...l.cities.map((x) => `${l.activity.name}/${x.area}`),
+    ...l.districts.map((x) => `${l.activity.name}/${x.area}`),
+  ]));
+  const learnByName = new Map(learn.map((l) => [l.activity.name, l]));
+  /** 一門課的細項連結：[{ href, text }]，由細到粗（行政區 → 縣市 → 全國） */
+  const learnLinksOf = (c) => {
+    const out = [];
+    for (const name of actsByCourse.get(c.id) ?? []) {
+      const l = learnByName.get(name);
+      if (!l) continue;
+      const { city, district } = c.venue ?? {};
+      if (city && district && learnPageSet.has(`${name}/${city}${district}`)) out.push({ href: learnHref(name, `${city}${district}`), text: `${district}${l.activity.label}` });
+      if (city && learnPageSet.has(`${name}/${city}`)) out.push({ href: learnHref(name, city), text: `${city}${l.activity.label}` });
+      out.push({ href: learnHref(name), text: `${l.activity.label}（全台）` });
+    }
+    return out;
+  };
+  // 18 大類底下有哪些細項頁（主題頁用）、各縣市有哪些細項頁（縣市頁用）
+  const learnByTopic = groupBy(learn, (l) => l.activity.topic);
+  const learnByCity = new Map();
+  for (const l of learn) for (const x of l.cities) {
+    if (!learnByCity.has(x.city)) learnByCity.set(x.city, []);
+    learnByCity.get(x.city).push({ activity: l.activity, n: x.list.length, open: x.open });
+  }
+  for (const list of learnByCity.values()) list.sort((a, b) => b.n - a.n);
+
+  // ── 證照班 ─────────────────────────────────────
+  const certCourses = courses.filter(isCert).sort(byStatusThenDate);
+  const certIds = new Set(certCourses.map((c) => c.id));
+  const cert = {
+    ...summarize(certCourses),
+    cities: [...groupBy(certCourses, (c) => c.venue?.city)]
+      .filter(([, l]) => l.length >= FACET_MIN.certCity)
+      .map(([city, l]) => ({ city, ...summarize(l) }))
+      .sort((x, y) => y.list.length - x.list.length),
+  };
+  const certCitySet = new Set(cert.cities.map((x) => x.city));
+
   const limit = process.env.KHO_LIMIT ? Number(process.env.KHO_LIMIT) : Infinity;
   const coursePages = courses.slice(0, limit).map((c) => ({
     course: c,
@@ -204,6 +284,8 @@ function load() {
     openCourses, openByCity, types, topics, categorised, cities, venuePages,
     map: { rows: mapRows, courseCount: mapCourses, openCount: mapOpen },
     teacherIndex, pageTeachers, teachers, rankedTeachers, coursePages,
+    activities, actsByCourse, learn, learnByName, learnByTopic, learnByCity, learnLinksOf,
+    cert, certIds, certCitySet,
   };
 }
 

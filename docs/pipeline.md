@@ -257,9 +257,11 @@ duration、`scheduleTimezone: Asia/Taipei`）、`location`（含 `PostalAddress`
 /open.html           現在可報名，依縣市分組
 /types.html          課程類型索引      /type/<kind>.html
 /cities.html         縣市索引          /city/<縣市>.html
-/search.html         前端即時搜尋（讀 /index.json，支援 ?q=）
+/search.html         前端即時搜尋（讀 /index.json，支援 ?q=；送出時把 ?q= 寫回網址並送 GA4 search 事件）
 /course/<slug>.html  課程頁：最終值、各來源並排、落選值
-/venue/<slug>.html   場館頁
+/venue/<slug>.html   場館頁＝課程表（本期課依星期排，可依細項篩選）
+/learn.html          細項索引         /learn/<細項>.html、/learn/<細項>/<縣市或縣市+行政區>.html
+/cert.html           證照班           /cert/<縣市>.html
 /sitemap.xml         sitemap index，指向五個分檔 sitemap-<群組>-<n>.xml
 /robots.txt          全站開放檢索，指向 sitemap.xml 的絕對網址
 ```
@@ -295,6 +297,19 @@ xl 32px／2xl 48px／3xl 56px，行高 1.6，最小 18px「無例外」）。使
 主題分類本來只印在課程頁的一列文字上，沒有任何索引頁——使用者想「我要學語言」沒有入口可走。
 18 類做出來卻沒有門，等於白做，所以補了索引頁，導覽列也改成
 `可報名 / 主題 / 類型 / 縣市 / 搜尋`。首頁是 `bare` 模式、不吃導覽列，版面不受影響。
+
+### 細項 × 地區：`/learn/`（2026-09-27）
+
+18 類太粗，接不到讀者實際打的字（「桃園皮拉提斯」「高雄水電課程」「內湖增肌減脂」）。
+細項規則在 `overrides/activities.json`，只比對課名，一門課可屬於多個細項；判斷函式在
+`src/lib/facets.mjs`，例子釘在 `test/facets.test.mjs`。門檻在 `src/lib/data.mjs` 的 `FACET_MIN`：
+全國 20 門、縣市 8 門、行政區 10 門，不到門檻不出頁。標題用口語地名（桃園、台中、內湖），內文用正式全名。
+
+證照班（`/cert/`）看課名的證照、檢定、丙級／乙級、技術士、法定訓練（堆高機、照顧服務員…），
+以及描述寫到「輔導報考／取得」證照的課；「結業證書」不算。課程卡片上標「可考證照」。
+
+場館名稱只有門牌的（約四成，多是職訓與社大上課地址），標題改成「門牌（開課單位上課地點）」。
+查證過真實地點名稱後寫進 `overrides/venue-names.json`，會優先採用；沒查證的不要填。
 
 **推斷來的分類照樣收進分類頁，但每張卡片標「分類依課名判斷」。** 全站 29,947 門已歸類的課裡，
 來源自己標的與從課名推斷的大約各半；把推斷的排除掉，多數分類頁會少掉一半以上
