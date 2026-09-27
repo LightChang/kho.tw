@@ -1,5 +1,7 @@
 # GEO：生成式引擎最佳化的監看指標
 
+> 往哪裡長、下一步做什麼：見 `docs/GROWTH.md`。這份只管監看。
+
 GEO 在這裡指 **Generative Engine Optimization**——ChatGPT、Gemini、Perplexity、Copilot
 這類生成式引擎在回答「台中哪裡有樂齡電腦課」時，會不會取用並引用本站。
 （地理／在地覆蓋是另一回事，那屬於資料管線的座標與行政區，見 `docs/pipeline.md`。）
@@ -24,13 +26,13 @@ curl -s https://kho.tw/robots.txt
 每次 build 都會重寫）。**這是政策決定不是技術決定**：本站資料來自政府開放資料與各單位公開課程資訊，
 擋掉 AI 爬蟲等於放棄被生成式引擎引用的機會，要擋之前先想清楚為什麼。
 
-`llms.txt`（給 LLM 的站台導覽檔）目前沒有做。確認現況：
+`/llms.txt`（站台導覽）與 `/llms-full.txt`（全文引用）由 build 時產出，
+程式在 `src/pages/llms.txt.js`、`src/pages/llms-full.txt.js`，不要手寫靜態檔。確認線上有回應：
 
 ```bash
-curl -s -o /dev/null -w '%{http_code}\n' https://kho.tw/llms.txt    # 404 = 沒做
+curl -s -o /dev/null -w '%{http_code}\n' https://kho.tw/llms.txt
+curl -s -o /dev/null -w '%{http_code}\n' https://kho.tw/llms-full.txt
 ```
-
-要做的話，產生方式應該比照 sitemap：由程式在 build 時產出，不要手寫一份會過期的靜態清單。
 
 ## 3. 生成式引擎取用得到的內容
 
