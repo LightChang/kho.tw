@@ -60,8 +60,10 @@
    卡片一撐高就爆版。所以寬度算出來再大也不超過它。 */
 /* 數字同時受兩件事限制，取小者：卡片寬度 ÷ 位數（橫向放得下）與視窗高度（縱向放得下）。
    多了 6vh 這一項之後，上限不必再用 media query 分四級——視窗一矮數字自己就變小。 */
+/* 2026-09-27：6vh → 5.6vh。1280×800 實測第二張門卡「社大、運動中心、樂齡、職訓」折兩行，
+   內容 169px > 容器 167px；收 0.4vh（800 高時約 3px）就放得下，其餘尺寸只是數字略小。 */
 .door .n{margin-top:auto;font-weight:800;line-height:clamp(1em,4.4vh,1.15em);
-  font-size:clamp(1.125rem, min(100cqw / var(--len,3) * 1.55, 6vh), 4rem)}
+  font-size:clamp(1.125rem, min(100cqw / var(--len,3) * 1.55, 5.6vh), 4rem)}
 .door .u{font-size:var(--text-xs);color:var(--text-secondary);line-height:clamp(1.05em,2.3vh,1.4em)}
 /* 窄視窗只留標題、數字與單位：1024×768 實測「社大、運動中心、樂齡、職訓」
    會折行把「職訓」拆成「職／訓」。四個門一起隱藏說明，保持一致。
@@ -133,6 +135,9 @@
 .foot .more{flex:none;margin-left:auto;white-space:nowrap;font-size:var(--text-xs)}
 /* 窄視窗少放幾個縣市，讓清單維持兩行以內。
    390×844 實測：留 5 個標籤仍會換到第三行被 max-height 切掉，所以手機再減到 3 個。 */
+/* 1201–1320px：8 個縣市會折到第二行，而 2.9em 的上限裝不下兩行（text-sm 行高 1.6 ＋ gap，兩行要 66px、上限 58px），
+   第二行被切一半（1280×800／720／1024 實測）。這段寬度少放一個，維持一行。 */
+@media (max-width:1320px){ .foot ul li:nth-child(n+8){display:none} }
 @media (max-width:1200px){ .foot ul li:nth-child(n+7){display:none} }
 @media (max-width:1040px){ .foot ul li:nth-child(n+6){display:none} }
 @media (max-width:560px){ .foot ul li:nth-child(n+5){display:none} }
