@@ -13,7 +13,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { getData, learnRel, certRel, hasEnded, isNoindex } from './data.mjs';
 import { SITE_URL } from '../../site/jsonld.mjs';
-import { writeSitemaps, courseHint, maxDate } from '../../site/sitemap.mjs';
+import { writeSitemaps, courseHint, maxDate, isSitemapExcluded } from '../../site/sitemap.mjs';
 
 // lastmod 用資料實際的更新日期，不用 build 當下的時間（理由見 site/sitemap.mjs）。
 // 課程的日期在各來源的 lastVerifiedAt 上，取最大值；彙整頁取它收錄的課程的最大值。
@@ -72,7 +72,8 @@ export default function khoSitemap() {
         await rm(path.join(dist, 'home.json'), { force: true });
         const groups = Object.entries(entries(getData())).map(([name, list]) => ({
           name,
-          entries: list.filter((e) => existsSync(path.join(dist, e.rel))),
+          // 排除頁型（講師頁）不進 sitemap，清單見 site/sitemap.mjs 的 SITEMAP_EXCLUDED_DIRS
+          entries: list.filter((e) => !isSitemapExcluded(e.rel) && existsSync(path.join(dist, e.rel))),
         }));
         const sitemap = await writeSitemaps({ dist, siteUrl: SITE_URL, groups });
         const counts = groups.map((g) => `${g.name} ${g.entries.length}`).join('、');

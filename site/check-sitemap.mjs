@@ -15,7 +15,8 @@
 //   7. 單檔 URL 數 ≤ MAX_URLS_PER_FILE、未壓縮位元組 ≤ 50 MB、index 的分檔數 ≤ 50,000
 //   8. lastmod 是 YYYY-MM-DD、changefreq 是合法列舉、priority 落在 0.0–1.0
 //   9. 涵蓋率：dist/ 裡每個可收錄的 .html 都在 sitemap 裡、只出現一次；
-//      <head> 帶 robots noindex 的頁一律不得出現在 sitemap（2026-09-27 起，結束滿一年的課程頁）
+//      <head> 帶 robots noindex 的頁一律不得出現在 sitemap（2026-09-27 起，結束滿一年的課程頁）；
+//      SITEMAP_EXCLUDED_DIRS 列的頁型（teacher）不進 sitemap、也不得出現在 sitemap
 //  10. robots.txt 存在、允許檢索、Sitemap 指向存在的絕對網址
 //
 // 用法：node site/check-sitemap.mjs [dist 目錄]
@@ -23,7 +24,7 @@ import { readdir, readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { SITE_URL } from './jsonld.mjs';
 import {
-  MAX_URLS_PER_FILE, MAX_BYTES_PER_FILE, PROTOCOL_MAX_URLS, CHANGEFREQ, toLoc, hasNoindex, coverageProblems,
+  MAX_URLS_PER_FILE, MAX_BYTES_PER_FILE, PROTOCOL_MAX_URLS, CHANGEFREQ, toLoc, hasNoindex, coverageProblems, SITEMAP_EXCLUDED_DIRS,
 } from './sitemap.mjs';
 
 const DIST = process.argv[2] ?? path.resolve(import.meta.dirname, '..', 'dist');
@@ -198,8 +199,9 @@ async function main() {
   const onDisk = new Map();
   for await (const f of htmlFiles(DIST)) onDisk.set(path.relative(DIST, f).split(path.sep).join('/'), hasNoindex(await readFile(f, 'utf-8')));
   const inSitemap = new Set([...seen.keys()].map((loc) => decodeURIComponent(new URL(loc).pathname).replace(/^\//, '')));
-  const { notListed, noindexListed, notHtml, noindex } = coverageProblems(onDisk, inSitemap);
+  const { notListed, noindexListed, excludedListed, notHtml, noindex, excluded } = coverageProblems(onDisk, inSitemap);
   if (notListed.length) fail(`${notListed.length} 個 dist/ 的可收錄 .html 沒有進 sitemap（例：${notListed.slice(0, 3).join('、')}）`);
+  if (excludedListed.length) fail(`${excludedListed.length} 個排除頁型（${SITEMAP_EXCLUDED_DIRS.join('、')}）的頁出現在 sitemap（例：${excludedListed.slice(0, 3).join('、')}）`);
   if (noindexListed.length) fail(`${noindexListed.length} 個 noindex 頁出現在 sitemap（例：${noindexListed.slice(0, 3).join('、')}）`);
   if (notHtml.length) fail(`${notHtml.length} 個 sitemap 網址不是 dist/ 的 .html 頁面（例：${notHtml.slice(0, 3).join('、')}）`);
 
@@ -208,7 +210,7 @@ async function main() {
   const mb = (b) => `${(b / 1024 / 1024).toFixed(2)} MB`;
   process.stderr.write(`sitemap.xml：${stats.length} 個分檔，共 ${seen.size} 個 URL\n`);
   for (const s of stats) process.stderr.write(`  ${s.name}　${s.count} 個 URL、${mb(s.bytes)}\n`);
-  process.stderr.write(`dist/ 的 .html：${onDisk.size} 個，可收錄 ${onDisk.size - noindex} 個全部收錄，noindex ${noindex} 個全部不在 sitemap\n`);
+  process.stderr.write(`dist/ 的 .html：${onDisk.size} 個，可收錄 ${onDisk.size - noindex - excluded} 個全部收錄，noindex ${noindex} 個與排除頁型 ${excluded} 個全部不在 sitemap\n`);
   if (robots) process.stderr.write(`robots.txt：允許全站檢索，Sitemap → ${robots}\n`);
 
   if (errs.length === 0) {

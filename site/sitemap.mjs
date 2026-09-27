@@ -171,20 +171,32 @@ export function hasNoindex(html) {
   return false;
 }
 
+// 刻意不進 sitemap 的頁型（頁面本身可收錄、不加 noindex，靠內鏈被發現）。排除清單只寫在這裡，
+// 產生器（src/lib/sitemap-integration.mjs）與驗證器（check-sitemap.mjs）都讀它。
+// - teacher：講師頁（/teacher/…）。站主 2026-09-27 拍板：爬取預算集中在課程頁。索引頁 /teachers.html 仍收錄。
+export const SITEMAP_EXCLUDED_DIRS = Object.freeze(['teacher']);
+export const isSitemapExcluded = (rel) => SITEMAP_EXCLUDED_DIRS.some((d) => rel.startsWith(`${d}/`));
+
 /**
+ * 可收錄頁必須在 sitemap，除了 SITEMAP_EXCLUDED_DIRS 的頁型；noindex 與排除頁型一律不得在 sitemap。
  * @param {Map<string, boolean>} onDisk     dist/ 的 .html 相對路徑 → 是否 noindex
  * @param {Set<string>} inSitemap           sitemap 收錄的相對路徑（已解碼）
- * @returns {{ notListed: string[], noindexListed: string[], notHtml: string[], noindex: number }}
+ * @returns {{ notListed: string[], noindexListed: string[], excludedListed: string[], notHtml: string[], noindex: number, excluded: number }}
  */
 export function coverageProblems(onDisk, inSitemap) {
   const notListed = [];
   const noindexListed = [];
+  const excludedListed = [];
   let noindex = 0;
+  let excluded = 0;
   for (const [f, ni] of onDisk) {
+    const ex = isSitemapExcluded(f);
     if (ni) noindex++;
+    else if (ex) excluded++;
     if (ni && inSitemap.has(f)) noindexListed.push(f);
-    if (!ni && !inSitemap.has(f)) notListed.push(f);
+    if (ex && !ni && inSitemap.has(f)) excludedListed.push(f);
+    if (!ni && !ex && !inSitemap.has(f)) notListed.push(f);
   }
   const notHtml = [...inSitemap].filter((f) => !onDisk.has(f));
-  return { notListed, noindexListed, notHtml, noindex };
+  return { notListed, noindexListed, excludedListed, notHtml, noindex, excluded };
 }
