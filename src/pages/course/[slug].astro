@@ -6,7 +6,7 @@ import Base from '../../layouts/Base.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
 import EndedNote from '../../components/EndedNote.astro';
 import { getData, hasEnded, link, fmt, WEEKDAY_LABEL, certHref } from '../../lib/data.mjs';
-import { isCert } from '../../lib/facets.mjs';
+import { isCert, courseTitle, seasonOf } from '../../lib/facets.mjs';
 import { courseJsonLd, courseUrl } from '../../../site/jsonld.mjs';
 
 export function getStaticPaths() {
@@ -40,14 +40,32 @@ const rows = [
 const jsonld = courseJsonLd(c, venue);
 
 // 同類課程：細項頁（行政區 → 縣市 → 全台）與證照班頁。細項依課名判斷，規則見 overrides/activities.json。
-const { learnLinksOf, certCitySet } = getData();
+const { learnLinksOf, certCitySet, titleCollides, successorsOf, alternativesOf, currentByVenue } = getData();
 const related = learnLinksOf(c);
 const cert = isCert(c);
 if (cert) related.push(c.venue?.city && certCitySet.has(c.venue.city)
   ? { href: certHref(c.venue.city), text: `${c.venue.city}證照班` }
   : { href: certHref(), text: '全台證照班' });
+
+// 已經上完的課：頁首直接給去處——同一門課的新一期、同地點或同縣市的同類本期課。
+// 讀者多半是搜課名或地址進來的，停在一頁過期資訊上就走了。
+const ended = hasEnded(c);
+const next = ended ? successorsOf(c) : [];
+const alts = ended ? alternativesOf(c) : [];
+const venueNow = ended && venue?.id ? (currentByVenue.get(venue.id) ?? []).length : 0;
+const whenOf = (o) => [seasonOf(o.schedule?.startDate), (o.schedule?.slots ?? [])[0]?.weekday ? WEEKDAY_LABEL[o.schedule.slots[0].weekday] : '', o.schedule?.startDate ? `${o.schedule.startDate} 開課` : ''].filter(Boolean).join('・');
 ---
-<Base title={`${c.title}｜${c.provider?.nameRaw ?? ''}`} description={jsonld.description} canonical={courseUrl(c)} jsonld={jsonld}>
+<Base title={courseTitle(c, { collide: titleCollides(c), weekdayLabel: WEEKDAY_LABEL })} description={jsonld.description} canonical={courseUrl(c)} jsonld={jsonld}>
+{ended && (next.length > 0 || alts.length > 0 || venueNow > 0) && (
+<div class="card next-up">
+<h2>{next.length ? '這門課有新的一期' : '這門課已結束'}</h2>
+<div class="meta-2">這一頁的課已於 {c.schedule.endDate} 上完。</div>
+{next.length > 0 && <ul class="next-list">{next.map((o) => <li><a href={link('course', o.slug)}>{o.title}</a> <StatusBadge status={o.enrollment?.status} /><div class="meta-2">{whenOf(o)}</div></li>)}</ul>}
+{alts.length > 0 && <Fragment><h3>同類的本期課程</h3>
+<ul class="next-list">{alts.map(({ course: o, why }) => <li><a href={link('course', o.slug)}>{o.title}</a> <StatusBadge status={o.enrollment?.status} /><div class="meta-2">{why}・{o.provider?.nameRaw ?? ''}{o.schedule?.startDate ? `・${o.schedule.startDate} 開課` : ''}</div></li>)}</ul></Fragment>}
+{venueNow > 0 && <div class="meta"><a href={link('venue', venue.slug)}>{venue.name}本期課程表（{fmt(venueNow)} 門）</a></div>}
+</div>
+)}
 <div class="card">
 <h1>{c.title} <StatusBadge status={c.enrollment?.status} />{cert && <Fragment> <span class="badge-cert">可考證照</span></Fragment>}</h1>
 <div class="meta">{c.provider?.nameRaw ?? ''}{c.venue?.city && `　${c.venue.city}${c.venue.district ?? ''}`}</div>

@@ -11,7 +11,7 @@ import { existsSync } from 'node:fs';
 import { rm } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { getData, learnRel, certRel } from './data.mjs';
+import { getData, learnRel, certRel, hasEnded } from './data.mjs';
 import { SITE_URL } from '../../site/jsonld.mjs';
 import { writeSitemaps, courseHint, maxDate } from '../../site/sitemap.mjs';
 
@@ -44,9 +44,13 @@ function entries(d) {
     { rel: certRel(), lastmod: listLastmod(d.cert.list), changefreq: 'weekly', priority: '0.7' },
     ...d.cert.cities.map((x) => ({ rel: certRel(x.city), lastmod: listLastmod(x.list), changefreq: 'weekly', priority: '0.6' })),
   ];
-  // 停開與已截止的課仍然收錄，只是 priority 低、changefreq 長（見 site/sitemap.mjs）
+  // 停開與已截止的課仍然收錄，只是 priority 低、changefreq 長（見 site/sitemap.mjs）。
+  // 上課已經結束的課比照「已截止」：來源常把狀態留在「狀態未知」或「開課中」，
+  // 照報名狀態給會讓一萬多頁過期課拿到 0.5–0.6、每週回抓，跟招生中的課搶抓取預算。
+  // 報名狀態本身不動（頁面照來源寫），這裡只調給搜尋引擎的提示。
   const courses = d.courses.map((c) => ({
-    rel: `course/${c.slug}.html`, lastmod: courseLastmod(c), ...courseHint(c.enrollment?.status),
+    rel: `course/${c.slug}.html`, lastmod: courseLastmod(c),
+    ...courseHint(hasEnded(c) && c.enrollment?.status !== 'cancelled' ? 'closed' : c.enrollment?.status),
   }));
   const venues = d.venuePages.map(({ venue, list }) => ({
     rel: `venue/${venue.slug}.html`, lastmod: listLastmod(list), changefreq: 'weekly', priority: '0.5',

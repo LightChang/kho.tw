@@ -13,7 +13,7 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { collectTeachers, teachersWithPages, MIN_COURSES } from '../../transform/teachers.mjs';
 import { todayTaipei } from '../../transform/_date.mjs';
-import { compileActivities, activitiesOf, isCert, venueDisplay, mainSeason } from './facets.mjs';
+import { compileActivities, activitiesOf, isCert, venueDisplay, mainSeason, seasonOf, courseSeriesKey } from './facets.mjs';
 
 const ROOT = process.cwd();
 
@@ -272,6 +272,42 @@ function load() {
   };
   const certCitySet = new Set(cert.cities.map((x) => x.city));
 
+  // ── 課程頁標題的區分：同課名、同單位、同學期還有別門課時，標題補上課時段 ──
+  const titleKey = (c) => `${c.title}|${c.provider?.nameRaw ?? ''}|${seasonOf(c.schedule?.startDate) ?? ''}`;
+  const titleCount = new Map();
+  for (const c of courses) titleCount.set(titleKey(c), (titleCount.get(titleKey(c)) ?? 0) + 1);
+  const titleCollides = (c) => (titleCount.get(titleKey(c)) ?? 0) > 1;
+
+  // ── 過期課程的去處：同一門課的新一期、同場館／同細項的本期課 ──
+  const series = groupBy(courses, courseSeriesKey);
+  /** 同一門課（課名去掉期數＋同單位）還沒結束、而且比這門晚開課的其他期 */
+  const successorsOf = (c) => (series.get(courseSeriesKey(c)) ?? [])
+    .filter((o) => o.id !== c.id && !hasEnded(o) && String(o.schedule?.startDate ?? '9') >= String(c.schedule?.startDate ?? ''))
+    .sort((a, b) => String(a.schedule?.startDate ?? '').localeCompare(String(b.schedule?.startDate ?? '')))
+    .slice(0, 3);
+  const currentByVenue = groupBy(courses.filter((c) => !hasEnded(c)), (c) => c.venue?.id);
+  const currentByCity = groupBy(courses.filter((c) => !hasEnded(c)), (c) => c.venue?.city);
+  for (const m of [currentByVenue, currentByCity]) for (const l of m.values()) l.sort(byStatusThenDate);
+  /** 過期課程頁的替代選項：同場館同細項 → 同場館同分類 → 同縣市同細項，最多 n 門 */
+  const alternativesOf = (c, n = 6) => {
+    const acts = new Set(actsByCourse.get(c.id) ?? []);
+    const sharesAct = (o) => (actsByCourse.get(o.id) ?? []).some((a) => acts.has(a));
+    const skip = new Set([c.id, ...successorsOf(c).map((o) => o.id)]);
+    const out = [];
+    const take = (list, pred, why) => {
+      for (const o of list ?? []) {
+        if (out.length >= n) return;
+        if (skip.has(o.id) || !pred(o)) continue;
+        skip.add(o.id);
+        out.push({ course: o, why });
+      }
+    };
+    const vl = currentByVenue.get(c.venue?.id);
+    if (acts.size) take(vl, sharesAct, '同地點同類');
+    if (c.category) take(vl, (o) => o.category === c.category, '同地點同類');
+    if (acts.size) take(currentByCity.get(c.venue?.city), sharesAct, '同縣市同類');
+    return out;
+  };
   const limit = process.env.KHO_LIMIT ? Number(process.env.KHO_LIMIT) : Infinity;
   const coursePages = courses.slice(0, limit).map((c) => ({
     course: c,
@@ -286,6 +322,7 @@ function load() {
     teacherIndex, pageTeachers, teachers, rankedTeachers, coursePages,
     activities, actsByCourse, learn, learnByName, learnByTopic, learnByCity, learnLinksOf,
     cert, certIds, certCitySet,
+    titleCollides, successorsOf, alternativesOf, currentByVenue,
   };
 }
 

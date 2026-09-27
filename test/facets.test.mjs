@@ -74,3 +74,17 @@ test('地名口語寫法與學期', () => {
   assert.equal(seasonOf('2026-09-02'), '2026 秋季');
   assert.equal(seasonOf('2026-03-01'), '2026 春季');
 });
+
+test('課程頁標題：補學期，單位看不出縣市時補縣市，撞名才補時段', async () => {
+  const { courseTitle, courseSeriesKey } = await import('../src/lib/facets.mjs');
+  const wd = ['', '週一', '週二', '週三', '週四', '週五', '週六', '週日'];
+  const base = { title: '日語生活會話', provider: { nameRaw: '臺中市北屯社區大學' }, venue: { city: '臺中市' },
+    schedule: { startDate: '2026-09-07', slots: [{ weekday: 6, startTime: '19:00' }] } };
+  assert.equal(courseTitle(base), '日語生活會話｜臺中市北屯社區大學 2026 秋季');
+  assert.equal(courseTitle(base, { collide: true, weekdayLabel: wd }), '日語生活會話｜臺中市北屯社區大學 2026 秋季 週六 19:00');
+  assert.equal(courseTitle({ ...base, provider: { nameRaw: '大安社區大學' }, venue: { city: '臺北市' } }), '日語生活會話｜大安社區大學（台北） 2026 秋季');
+  assert.equal(courseTitle({ title: '書法', provider: { nameRaw: '某協會' } }), '書法｜某協會');
+  // 同一門課的不同期數算同一系列
+  assert.equal(courseSeriesKey({ title: '堆高機操作人員訓練班第02期', provider: { nameRaw: 'x' } }),
+    courseSeriesKey({ title: '堆高機操作人員訓練班 第3期', provider: { nameRaw: 'x' } }));
+});

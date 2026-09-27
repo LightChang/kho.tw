@@ -126,3 +126,42 @@ export function mainSeason(list) {
   }
   return [...m].sort((a, b) => b[1] - a[1] || b[0].localeCompare(a[0]))[0]?.[0] ?? null;
 }
+
+// ── 課程頁標題 ─────────────────────────────────
+
+const normTai = (s) => String(s ?? '').replace(/臺/g, '台');
+const cityRoot = (city) => normTai(city).replace(/[市縣]$/, '');
+
+/** 名稱裡已經有縣市（或口語縣市）就不必再補 */
+export const mentionsCity = (text, city) => Boolean(city) && normTai(text).includes(cityRoot(city));
+
+/**
+ * 課程頁的 <title>：「課名｜開課單位（縣市） 2026 秋季」。
+ * 同名同單位的課很多（全站約四成），光看課名與單位分不出是哪一期、哪一班。
+ * - 學期由開課日推（seasonOf），沒有開課日就不寫
+ * - 單位名看不出縣市時補口語縣市
+ * - collide：同課名、同單位、同學期還有別門課時，補第一個上課時段（週六 19:00）
+ */
+export function courseTitle(c, { collide = false, weekdayLabel = [] } = {}) {
+  const p = c.provider?.nameRaw ?? '';
+  const city = c.venue?.city;
+  let t = p ? `${c.title}｜${p}` : c.title;
+  if (city && !mentionsCity(p, city)) t += p ? `（${shortCity(city)}）` : `｜${city}`;
+  const s = seasonOf(c.schedule?.startDate);
+  if (s) t += ` ${s}`;
+  if (collide) {
+    const slot = (c.schedule?.slots ?? []).find((x) => x.weekday >= 1 && x.weekday <= 7);
+    if (slot) t += ` ${weekdayLabel[slot.weekday] ?? ''}${slot.startTime ? ` ${slot.startTime}` : ''}`.trimEnd();
+  }
+  return t;
+}
+
+/** 同一門課的「期別鍵」：課名去掉期數、班別與空白後＋單位。用來找同一門課的下一期。 */
+export function courseSeriesKey(c) {
+  const t = String(c.title ?? '')
+    .replace(/[【\[(（][^】\])）]*(開課|期|梯)[^】\])）]*[】\])）]/g, '')
+    .replace(/第?\s*[0-9０-９一二三四五六七八九十]+\s*[期梯]次?/g, '')
+    .replace(/[\s\p{P}\p{S}]/gu, '')
+    .toLowerCase();
+  return `${t}|${c.provider?.nameRaw ?? ''}`;
+}
