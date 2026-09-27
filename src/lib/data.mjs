@@ -50,6 +50,12 @@ export const byStatusThenDate = (a, b) => (hasEnded(a) - hasEnded(b))
 
 export const isOpen = (c) => c.enrollment?.status === 'open';
 
+// 上課結束滿一年的課程頁：noindex,follow 並移出 sitemap（站主 2026-09-27 拍板）。
+// 頁面保留、連結照走；180–365 天的不動，靠頁首「新一期」卡片承接流量。
+export const NOINDEX_AFTER_DAYS = 365;
+export const isNoindex = (c) => hasEnded(c)
+  && (Date.parse(TODAY) - Date.parse(c.schedule.endDate)) / 864e5 >= NOINDEX_AFTER_DAYS;
+
 // 細項頁與證照頁的門檻：課太少的組合不出頁，免得產出一堆只有一兩門課的薄頁。
 // 全國細項 20 門、縣市 8 門、行政區 10 門；證照班縣市頁 8 門。
 // 縣市 8 門是看過實際查詢才定的：「彰化拳擊課程」剛好 8 門，再高就接不到。

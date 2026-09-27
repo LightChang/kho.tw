@@ -158,3 +158,33 @@ Sitemap: ${siteUrl}/sitemap.xml
 
   return { files: files.map((f) => f.name), total };
 }
+
+// ── noindex 頁與 sitemap 的一致性（check-sitemap.mjs 用；純函式，test/sitemap-coverage.test.mjs 直接測）──
+// 規則：可收錄的頁必須全部進 sitemap；帶 <meta name="robots" content="…noindex…"> 的頁一律不得進 sitemap。
+// 只看 <head>：頁面正文裡出現同樣字串（例如這段說明被引用）不算。
+export function hasNoindex(html) {
+  const head = String(html).split(/<\/head>/i)[0];
+  for (const m of head.matchAll(/<meta\b[^>]*>/gi)) {
+    const tag = m[0];
+    if (/\bname\s*=\s*["']?robots["']?/i.test(tag) && /\bcontent\s*=\s*["'][^"']*\bnoindex\b/i.test(tag)) return true;
+  }
+  return false;
+}
+
+/**
+ * @param {Map<string, boolean>} onDisk     dist/ 的 .html 相對路徑 → 是否 noindex
+ * @param {Set<string>} inSitemap           sitemap 收錄的相對路徑（已解碼）
+ * @returns {{ notListed: string[], noindexListed: string[], notHtml: string[], noindex: number }}
+ */
+export function coverageProblems(onDisk, inSitemap) {
+  const notListed = [];
+  const noindexListed = [];
+  let noindex = 0;
+  for (const [f, ni] of onDisk) {
+    if (ni) noindex++;
+    if (ni && inSitemap.has(f)) noindexListed.push(f);
+    if (!ni && !inSitemap.has(f)) notListed.push(f);
+  }
+  const notHtml = [...inSitemap].filter((f) => !onDisk.has(f));
+  return { notListed, noindexListed, notHtml, noindex };
+}
