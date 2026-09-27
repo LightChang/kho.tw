@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import { underSection } from '../../lib/crumbs.mjs';
 import CourseList from '../../components/CourseList.astro';
 import { getData, fmt, learnHref } from '../../lib/data.mjs';
 import { itemListJsonLd, SITE_URL } from '../../../site/jsonld.mjs';
@@ -11,7 +12,7 @@ export function getStaticPaths() {
 const { t } = Astro.props;
 const subs = getData().learnByTopic.get(t.name) ?? [];
 ---
-<Base
+<Base crumbs={underSection('topics', t.name)}
   title={`${t.name}課程`}
   description={`全台${t.name}類成人課程共 ${fmt(t.list.length)} 門，其中 ${fmt(t.open)} 門招生中。`}
   canonical={`${SITE_URL}/topic/${encodeURIComponent(t.name)}.html`}

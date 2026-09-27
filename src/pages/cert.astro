@@ -1,6 +1,7 @@
 ---
 // 證照班：課名寫明考照、檢定，或描述講到輔導報考技術士、證照的課（判斷規則見 src/lib/facets.mjs 的 isCert）。
 import Base from '../layouts/Base.astro';
+import { sectionCrumbs } from '../lib/crumbs.mjs';
 import CourseList from '../components/CourseList.astro';
 import VenueSummary from '../components/VenueSummary.astro';
 import { getData, fmt, certHref } from '../lib/data.mjs';
@@ -8,7 +9,7 @@ import { itemListJsonLd, SITE_URL } from '../../site/jsonld.mjs';
 
 const { cert } = getData();
 ---
-<Base
+<Base crumbs={sectionCrumbs('cert')}
   title="證照班・檢定輔導課程｜丙級、乙級技術士與職訓考照課程"
   description={`全台可考證照的成人課程共 ${fmt(cert.list.length)} 門，其中 ${fmt(cert.open)} 門招生中，含丙級、乙級技術士檢定輔導、堆高機、照顧服務員、日語檢定等，依縣市整理。`}
   canonical={`${SITE_URL}${certHref()}`}

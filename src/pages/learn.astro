@@ -1,6 +1,7 @@
 ---
 // 細項索引：皮拉提斯、瑜珈、水電⋯⋯依 18 大類分組。規則見 overrides/activities.json。
 import Base from '../layouts/Base.astro';
+import { sectionCrumbs } from '../lib/crumbs.mjs';
 import { getData, fmt, learnHref, FACET_MIN } from '../lib/data.mjs';
 import { pageListJsonLd, SITE_URL } from '../../site/jsonld.mjs';
 
@@ -9,7 +10,7 @@ const groups = taxonomy.categories
   .map((topic) => ({ topic, items: learn.filter((l) => l.activity.topic === topic) }))
   .filter((g) => g.items.length);
 ---
-<Base
+<Base crumbs={sectionCrumbs('learn')}
   title="想學什麼：瑜珈、皮拉提斯、書法、日語、水電等課程細項"
   description={`依課名整理的 ${learn.length} 個課程細項，從瑜珈、皮拉提斯、拳擊有氧到書法、日語、水電維修，可再依縣市、行政區找課。`}
   canonical={`${SITE_URL}/learn.html`}

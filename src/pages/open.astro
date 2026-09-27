@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import { sectionCrumbs } from '../lib/crumbs.mjs';
 import { getData, fmt, link } from '../lib/data.mjs';
 import { itemListJsonLd, SITE_URL } from '../../site/jsonld.mjs';
 
@@ -7,7 +8,7 @@ const { openCourses, openByCity, newestOpen, firstSeen } = getData();
 // 最近新上架：本站最近才收錄的招生中課程（依初見日，見 src/lib/data.mjs 的 newestOpen）
 const fresh = newestOpen.slice(0, 20);
 ---
-<Base
+<Base crumbs={sectionCrumbs('open')}
   title="現在可報名的課程"
   description={`全台 ${fmt(openCourses.length)} 門成人課程正在招生，依縣市整理。`}
   canonical={`${SITE_URL}/open.html`}

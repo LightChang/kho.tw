@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import { underSection } from '../../lib/crumbs.mjs';
 import CourseList from '../../components/CourseList.astro';
 import { getData, fmt } from '../../lib/data.mjs';
 import { itemListJsonLd, SITE_URL } from '../../../site/jsonld.mjs';
@@ -11,7 +12,7 @@ export function getStaticPaths() {
 const { kind } = Astro.props;
 const { list } = kind;
 ---
-<Base
+<Base crumbs={underSection('types', kind.label)}
   title={`${kind.label}的課程`}
   description={`全台${kind.label}課程共 ${fmt(list.length)} 門，其中 ${fmt(kind.open)} 門招生中。`}
   canonical={`${SITE_URL}/type/${kind.kind}.html`}

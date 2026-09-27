@@ -3,6 +3,7 @@
 // 檔名與站內連結一律用可讀 slug（課名-單位-短碼）。slug 由 transform/emit.mjs 配給、
 // 記在 data/slugs.ndjson，這裡只讀不改；規則與穩定性保證見 transform/slug.mjs。
 import Base from '../../layouts/Base.astro';
+import { underCity } from '../../lib/crumbs.mjs';
 import StatusBadge from '../../components/StatusBadge.astro';
 import EndedNote from '../../components/EndedNote.astro';
 import { getData, hasEnded, isNoindex, link, fmt, WEEKDAY_LABEL, certHref } from '../../lib/data.mjs';
@@ -55,7 +56,7 @@ const alts = ended ? alternativesOf(c) : [];
 const venueNow = ended && venue?.id ? (currentByVenue.get(venue.id) ?? []).length : 0;
 const whenOf = (o) => [seasonOf(o.schedule?.startDate), (o.schedule?.slots ?? [])[0]?.weekday ? WEEKDAY_LABEL[o.schedule.slots[0].weekday] : '', o.schedule?.startDate ? `${o.schedule.startDate} 開課` : ''].filter(Boolean).join('・');
 ---
-<Base title={courseTitle(c, { collide: titleCollides(c), weekdayLabel: WEEKDAY_LABEL })} description={jsonld.description} canonical={courseUrl(c)} jsonld={jsonld} robots={isNoindex(c) ? 'noindex,follow' : undefined}>
+<Base crumbs={underCity(c.venue?.city, c.title, new Set(getData().cities.map((x) => x.name)))} title={courseTitle(c, { collide: titleCollides(c), weekdayLabel: WEEKDAY_LABEL })} description={jsonld.description} canonical={courseUrl(c)} jsonld={jsonld} robots={isNoindex(c) ? 'noindex,follow' : undefined}>
 {ended && (next.length > 0 || alts.length > 0 || venueNow > 0) && (
 <div class="card next-up">
 <h2>{next.length ? '這門課有新的一期' : '這門課已結束'}</h2>

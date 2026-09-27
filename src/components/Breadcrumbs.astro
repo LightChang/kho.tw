@@ -1,0 +1,10 @@
+---
+// 可見的麵包屑。資料來自 src/lib/crumbs.mjs；同一個陣列也由 Head.astro 輸出成 BreadcrumbList JSON-LD，
+// Google 規定結構化資料要對應頁面上看得到的內容（rules.json → global.visibleContent）。
+interface Props { crumbs: { name: string; href?: string }[] }
+const { crumbs } = Astro.props;
+const last = crumbs.length - 1;
+---
+<nav class="crumbs" aria-label="麵包屑">
+<ol>{crumbs.map((c, i) => <li>{i < last && c.href ? <a href={c.href}>{c.name}</a> : <span aria-current="page">{c.name}</span>}</li>)}</ol>
+</nav>

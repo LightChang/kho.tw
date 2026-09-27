@@ -17,7 +17,7 @@
     "validate": "node site/validate-jsonld.mjs && node site/check-links.mjs && node site/check-sitemap.mjs",
     "links": "node site/check-links.mjs",
     "sitemap": "node site/check-sitemap.mjs",
-    "test": "node --test \"test/**/*.test.mjs\"",
+    "test": "node --test \"test/**/*.test.mjs\" \"vendor/**/*.test.mjs\"",
     "sync:tokens": "node scripts/sync-tokens.mjs",
     "ingest": "node transform/scheduler.mjs",
     "ingest:force": "node transform/scheduler.mjs --force",

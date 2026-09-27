@@ -1,0 +1,120 @@
+{
+  "$comment": "kho.tw 頁型 → 必須／禁止的 JSON-LD 類型。格式見 vendor/seo-ops-jsonld/README 上游說明（seo-ops/jsonld/README.md §1）。build.format 為 file，頁面路徑帶 .html；首頁是 \"/\"。每條的 basis 是依據，驗證器不讀。改頁型或 site/jsonld.mjs 的輸出時一起改這裡。",
+  "pages": [
+    {
+      "match": "/",
+      "require": ["WebSite", "Organization"],
+      "basis": "Site names：首頁放 WebSite（name、url）https://developers.google.com/search/docs/appearance/site-names ；Organization（logo）https://developers.google.com/search/docs/appearance/structured-data/organization 。首頁滿版、沒有麵包屑。"
+    },
+    {
+      "match": "/course/*.html",
+      "require": ["Course", "BreadcrumbList"],
+      "basis": "課程頁即課程本身：Course 必填 name、description（https://developers.google.com/search/docs/appearance/structured-data/course ，Course list 只支援英文，中文頁輸出僅供其他搜尋引擎與 AI 取用）；BreadcrumbList 臺灣可見、只在桌機（https://developers.google.com/search/docs/appearance/structured-data/breadcrumb ）。"
+    },
+    {
+      "match": "/venue/*.html",
+      "require": ["Place", "BreadcrumbList"],
+      "basis": "場館頁描述一個上課地點：Place 無 Google 功能、屬 schema.org 描述（rules.json noGoogleFeature）；BreadcrumbList 同上。"
+    },
+    {
+      "match": "/open.html",
+      "require": ["ItemList", "BreadcrumbList"],
+      "apply": ["ItemList"],
+      "basis": "課程清單摘要頁：Course list 摘要頁須搭 Carousel（ItemList，ListItem 帶 position＋url、至少 2 項）https://developers.google.com/search/docs/appearance/structured-data/carousel 。"
+    },
+    {
+      "match": "/cert.html",
+      "require": ["ItemList", "BreadcrumbList"],
+      "apply": ["ItemList"],
+      "basis": "同上。"
+    },
+    {
+      "match": "/city/*.html",
+      "require": ["ItemList", "BreadcrumbList"],
+      "apply": ["ItemList"],
+      "basis": "同上（縣市、主題、類型、證照班縣市、細項全國頁都列課程）。"
+    },
+    {
+      "match": "/topic/*.html",
+      "require": ["ItemList", "BreadcrumbList"],
+      "apply": ["ItemList"],
+      "basis": "同上。"
+    },
+    {
+      "match": "/type/*.html",
+      "require": ["ItemList", "BreadcrumbList"],
+      "apply": ["ItemList"],
+      "basis": "同上。"
+    },
+    {
+      "match": "/cert/*.html",
+      "require": ["ItemList", "BreadcrumbList"],
+      "apply": ["ItemList"],
+      "basis": "同上。"
+    },
+    {
+      "match": "/learn/*.html",
+      "require": ["ItemList", "BreadcrumbList"],
+      "apply": ["ItemList"],
+      "basis": "同上。"
+    },
+    {
+      "match": "/learn/*/*.html",
+      "require": ["ItemList", "BreadcrumbList"],
+      "apply": ["ItemList"],
+      "basis": "同上（細項×地區頁）。"
+    },
+    {
+      "match": "/teacher/*.html",
+      "require": ["BreadcrumbList"],
+      "apply": ["ItemList"],
+      "basis": "講師頁列該講師的課；課程少於 3 門時 site/jsonld.mjs 不輸出 ItemList（Course list 至少三門），所以不列為必須。"
+    },
+    {
+      "match": "/topics.html",
+      "require": ["ItemList", "BreadcrumbList"],
+      "basis": "索引頁的 ItemList 裝的是站內頁面，Google 不產生結果（rules.json types.ItemList），不套 carousel 規則；保留為 schema.org 描述。"
+    },
+    {
+      "match": "/learn.html",
+      "require": ["ItemList", "BreadcrumbList"],
+      "basis": "同上。"
+    },
+    {
+      "match": "/teachers.html",
+      "require": ["ItemList", "BreadcrumbList"],
+      "basis": "同上。"
+    },
+    {
+      "match": "/types.html",
+      "require": ["BreadcrumbList"],
+      "basis": "入口頁只有麵包屑。"
+    },
+    {
+      "match": "/cities.html",
+      "require": ["BreadcrumbList"],
+      "basis": "同上。"
+    },
+    {
+      "match": "/map.html",
+      "require": ["BreadcrumbList"],
+      "basis": "同上。"
+    },
+    {
+      "match": "/search.html",
+      "require": ["BreadcrumbList"],
+      "basis": "同上。"
+    },
+    {
+      "match": "/**",
+      "forbid": ["FAQPage", "HowTo", "SpecialAnnouncement"],
+      "basis": "Google 已停止顯示的類型（rules.json deprecatedTypes）。"
+    }
+  ],
+  "exclude": [],
+  "severity": {
+    "deprecated-type": "error",
+    "removed-property": "error"
+  },
+  "severityBasis": "removed-property 升為 error：WebSite 的 SearchAction（sitelinks search box 2024-11 移除）與 Event 的 eventAttendanceMode 已確認無作用，站主 2026-09-27 拍板移除，升級以免被加回來。"
+}

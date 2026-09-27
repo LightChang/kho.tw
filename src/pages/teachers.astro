@@ -1,12 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
+import { sectionCrumbs } from '../lib/crumbs.mjs';
 import { getData, fmt, link, MIN_COURSES } from '../lib/data.mjs';
 import { pageListJsonLd, teacherUrl, SITE_URL } from '../../site/jsonld.mjs';
 
 const { teacherIndex, pageTeachers, rankedTeachers } = getData();
 const shown = rankedTeachers.slice(0, 300);
 ---
-<Base
+<Base crumbs={sectionCrumbs('teachers')}
   title="講師"
   description={`全台成人課程的講師索引，${fmt(pageTeachers.length)} 位講師在本站的開課紀錄。`}
   canonical={`${SITE_URL}/teachers.html`}

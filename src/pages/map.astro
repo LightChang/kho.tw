@@ -22,13 +22,14 @@
 // 資料來自 /venues-map.json（src/pages/venues-map.json.js）。按「場館」聚合而不是按「課程」，
 // 19,671 門有座標的課只落在 1,782 個地點上，這一步把資料量壓掉九成。
 import Base from '../layouts/Base.astro';
+import { sectionCrumbs } from '../lib/crumbs.mjs';
 import { getData, fmt } from '../lib/data.mjs';
 import { SITE_URL } from '../../site/jsonld.mjs';
 
 const { map, home } = getData();
 const venueCount = map.rows.length;
 ---
-<Base
+<Base crumbs={sectionCrumbs('map')}
   title="上課地點地圖｜kho.tw"
   description={`全台 ${fmt(venueCount)} 個成人課程上課地點的分布地圖，可以找離你最近的課。`}
   canonical={`${SITE_URL}/map.html`}

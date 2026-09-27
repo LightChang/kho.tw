@@ -1,6 +1,7 @@
 ---
 // 講師頁。身分認定＝姓名＋開課單位，規則與理由見 transform/teachers.mjs。
 import Base from '../../layouts/Base.astro';
+import { underSection } from '../../lib/crumbs.mjs';
 import CourseCard from '../../components/CourseCard.astro';
 import { getData, fmt, link } from '../../lib/data.mjs';
 import { itemListJsonLd, teacherUrl } from '../../../site/jsonld.mjs';
@@ -12,7 +13,7 @@ export function getStaticPaths() {
 
 const { teacher: t, list, open, sameName } = Astro.props;
 ---
-<Base
+<Base crumbs={underSection('teachers', t.name)}
   title={`${t.name}｜${t.provider}`}
   description={`${t.provider}講師${t.name}在本站收錄 ${fmt(list.length)} 門課，其中 ${fmt(open)} 門招生中。`}
   canonical={teacherUrl(t)}

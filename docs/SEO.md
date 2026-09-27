@@ -78,7 +78,7 @@ console.log('課程',n,'有描述',d,(100*d/n).toFixed(1)+'%','有座標',g,(100
 這三支在 `pnpm run validate` 裡，CI 每輪都會跑，失敗會擋下部署：
 
 ```bash
-node site/validate-jsonld.mjs   # JSON-LD 能不能解析、必要屬性在不在、列舉值合不合法
+node site/validate-jsonld.mjs   # JSON-LD：共用規則（seo-ops/jsonld 查證）＋頁型要求＋列舉值，含首頁；規則出處見 docs/AEO.md §5
 node site/check-links.mjs       # 站內連結沒有 404
 node site/check-sitemap.mjs     # sitemap 與 dist/ 的檔案一一對得起來
 ```

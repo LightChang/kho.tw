@@ -1,13 +1,14 @@
 ---
 // 主題分類索引。主題講的是課程內容，與「類型」（開課單位的性質）是兩個獨立面向（見 src/lib/data.mjs）。
 import Base from '../layouts/Base.astro';
+import { sectionCrumbs } from '../lib/crumbs.mjs';
 import { getData, fmt } from '../lib/data.mjs';
 import { pageListJsonLd, SITE_URL } from '../../site/jsonld.mjs';
 
 const { courses, topics, categorised } = getData();
 const topicUrl = (name) => `${SITE_URL}/topic/${encodeURIComponent(name)}.html`;
 ---
-<Base
+<Base crumbs={sectionCrumbs('topics')}
   title="課程主題分類"
   description={`語言、電腦資訊、運動健身、料理烘焙等 ${topics.length} 類成人課程主題索引，共 ${fmt(categorised)} 門課。`}
   canonical={`${SITE_URL}/topics.html`}

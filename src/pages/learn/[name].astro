@@ -1,6 +1,7 @@
 ---
 // 細項全國頁：/learn/皮拉提斯.html。依縣市、行政區往下分，下面列課。
 import Base from '../../layouts/Base.astro';
+import { learnCrumbs } from '../../lib/crumbs.mjs';
 import CourseList from '../../components/CourseList.astro';
 import VenueSummary from '../../components/VenueSummary.astro';
 import { getData, fmt, learnHref, certHref } from '../../lib/data.mjs';
@@ -20,7 +21,7 @@ const kinds = [...l.list.reduce((m, c) => m.set(c.provider?.kind, (m.get(c.provi
   .filter(([k]) => KIND_LABEL.has(k)).sort((p, q) => q[1] - p[1]).slice(0, 3).map(([k]) => KIND_LABEL.get(k));
 const alias = a.aliases.length ? `（${a.aliases.join('、')}）` : '';
 ---
-<Base
+<Base crumbs={learnCrumbs(a)}
   title={`成人${a.label}課程｜全台 ${l.cities.length} 縣市開課地點與時間`}
   description={`全台成人${a.name}${alias}課程共 ${fmt(l.list.length)} 門，其中 ${fmt(l.open)} 門招生中，${l.cities.slice(0, 4).map((x) => `${x.city}${fmt(x.list.length)}門`).join('、')}。${kinds.join('、')}開的課，附上課時間與地點。`}
   canonical={`${SITE_URL}${learnHref(a.name)}`}

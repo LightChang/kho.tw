@@ -2,6 +2,7 @@
 // 細項 × 地區：/learn/皮拉提斯/桃園市.html、/learn/肌力訓練/臺北市內湖區.html。
 // 標題用讀者的打法（「桃園皮拉提斯課程」「內湖增肌減脂」），內文用正式地名。
 import Base from '../../../layouts/Base.astro';
+import { learnCrumbs } from '../../../lib/crumbs.mjs';
 import CourseList from '../../../components/CourseList.astro';
 import VenueSummary from '../../../components/VenueSummary.astro';
 import { getData, fmt, learnHref, certHref } from '../../../lib/data.mjs';
@@ -33,7 +34,7 @@ const otherActs = (learnByCity.get(x.city) ?? []).filter((o) => o.activity.name 
 const certN = x.list.filter((c) => certIds.has(c.id)).length;
 const alias = a.aliases.length ? `（${a.aliases.join('、')}）` : '';
 ---
-<Base
+<Base crumbs={learnCrumbs(a, { city: x.city, district: x.district, cityArea: cityPage?.area })}
   title={`${place}${a.label}課程｜${full}${kinds.slice(0, 2).join('・')}開課時間與地點`}
   description={`${full}的${a.name}${alias}課程共 ${fmt(x.list.length)} 門，其中 ${fmt(x.open)} 門招生中。開課單位有${providers.slice(0, 3).join('、')}${providers.length > 3 ? `等 ${providers.length} 個` : ''}，列出上課時間、地點與報名狀態。`}
   canonical={`${SITE_URL}${learnHref(a.name, x.area)}`}

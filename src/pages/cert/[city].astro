@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import { underSection } from '../../lib/crumbs.mjs';
 import CourseList from '../../components/CourseList.astro';
 import VenueSummary from '../../components/VenueSummary.astro';
 import { getData, fmt, certHref } from '../../lib/data.mjs';
@@ -13,7 +14,7 @@ export function getStaticPaths() {
 const { x } = Astro.props;
 const providers = [...new Set(x.list.map((c) => c.provider?.nameRaw).filter(Boolean))];
 ---
-<Base
+<Base crumbs={underSection('cert', x.city)}
   title={`${shortCity(x.city)}證照班・檢定輔導課程｜${x.city}可考證照的課程`}
   description={`${x.city}可考證照的成人課程共 ${fmt(x.list.length)} 門，其中 ${fmt(x.open)} 門招生中，開課單位有${providers.slice(0, 3).join('、')}${providers.length > 3 ? `等 ${providers.length} 個` : ''}。`}
   canonical={`${SITE_URL}${certHref(x.city)}`}

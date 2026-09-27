@@ -1,15 +1,17 @@
 // site/jsonld.mjs
-// 產生 schema.org JSON-LD。
+// 全站 JSON-LD 集中在這一支產生；輸出只有一個出口：src/components/Head.astro（由 Base.astro 帶入）。
+// 頁面顯示與 JSON-LD 吃同一份資料（課程、場館物件；麵包屑吃 src/lib/crumbs.mjs 同一個陣列）。
 //
-// 重要前提（2026-09-12 查證）：
-//   Google 的「Course info」複合式搜尋結果已淘汰，說明文件已移除；
-//   目前仍支援的是「Course list（課程輪轉介面）」，規格見
-//   https://developers.google.com/search/docs/appearance/structured-data/course
-//     Course 必要：name、description（顯示上限 60 字）
-//     Course 建議：provider
-//     清單頁：ItemList.itemListElement + ListItem.position + ListItem.url，且至少三門課
-//   其餘屬性（hasCourseInstance、offers、location…）照 schema.org 詞彙寫，
-//   對複合式結果沒有加分也不扣分，但對 AEO／LLM 取用是有用的事實。
+// 依據：四站共用規則 vendor/seo-ops-jsonld/rules.json（2026-09-27 官方文件查證，每條附來源）。
+// 驗證：site/validate-jsonld.mjs（共用驗證器＋jsonld-pages.json 頁型要求），不過就不部署。
+//
+// 各類型在 Google 的現況（rules.json）：
+//   Course list：必要 name、description，建議 provider；清單頁要 ItemList（position＋url、至少三門）。
+//     **只支援英文**，本站中文頁不會有強化結果；仍照規格輸出，給其他搜尋引擎與 AI 取用。
+//   Course info（課程詳細資訊）：2025-06 公告淘汰、2025-09 文件移除。
+//   BreadcrumbList：所有地區語言、只在桌機顯示；臺灣可用。
+//   WebSite：只剩 Site names（name、url）；SearchAction（sitelinks search box）2024-11 已移除，本檔不再輸出。
+//   ItemList 裝站內頁面、Place：Google 不產生結果，屬 schema.org 描述。
 //
 // 列舉值來源：
 //   https://schema.org/DayOfWeek        Monday…Sunday
@@ -178,6 +180,9 @@ function citationNodes(course) {
   return nodes.length ? nodes : undefined;
 }
 
+// hasCourseInstance、offers 等屬性原本服務的是已淘汰的 Course info。rules.json 註記
+// 「舊文件已刪，無法逐欄查證哪些屬性已無作用」，所以保守保留：它們是 schema.org 30.1 的合法屬性、
+// 內容與課程頁表格同源，對 Google 以外的讀取者仍是可查證的事實。若日後官方文件明寫失效再移除。
 export function courseJsonLd(course, venue) {
   const schedule = scheduleNode(course);
   const instance = clean({
@@ -241,12 +246,10 @@ export function pageListJsonLd(items, { name }) {
   });
 }
 
-// 首頁的實體宣告：Organization + WebSite（geo-audit 的「首頁缺 Organization/WebSite」硬缺口）。
+// 首頁的實體宣告：Organization + WebSite。
 // 欄位只取站上已經有的事實：站名、網址、apple-touch-icon.png（唯一現成的方形圖像資產，
-// 180×180，符合 Google logo 建議的最小尺寸；favicon.svg 是向量圖，Google 的 logo 規格不收）、
-// 首頁搜尋功能（/search.html?q=，src/pages/search.astro 實際讀取的參數名）。
-// 沒有法定名稱、地址、電話、sameAs 等站外或未公開的事實，一律不寫——
-// 殘缺的結構化資料在 Google 眼裡是「無效項目」，比沒有更糟（本平台既有教訓）。
+// 180×180，符合 Google logo 至少 112×112 的規定；favicon.svg 是向量圖，Google 的 logo 規格不收）。
+// 沒有法定名稱、地址、電話、sameAs 等站外或未公開的事實，一律不寫。
 export function organizationJsonLd({ description } = {}) {
   return clean({
     '@type': 'Organization',
@@ -258,6 +261,9 @@ export function organizationJsonLd({ description } = {}) {
   });
 }
 
+// Site names 只需要 name、url（rules.json → types.WebSite）。
+// potentialAction（SearchAction）已移除：sitelinks search box 2024-11-29 自 Google 文件移除、功能不存在
+// （https://developers.google.com/search/updates#bye-sitelinkbox）。站內搜尋頁本身不受影響。
 export function webSiteJsonLd() {
   return clean({
     '@type': 'WebSite',
@@ -266,11 +272,6 @@ export function webSiteJsonLd() {
     url: SITE_URL,
     inLanguage: 'zh-Hant-TW',
     publisher: { '@id': `${SITE_URL}/#organization` },
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: { '@type': 'EntryPoint', urlTemplate: `${SITE_URL}/search.html?q={search_term_string}` },
-      'query-input': 'required name=search_term_string',
-    },
   });
 }
 
@@ -296,4 +297,22 @@ export function venueJsonLd(venue, courses) {
       ? { '@type': 'PropertyValue', name: '課程數', value: courses.length }
       : undefined,
   });
+}
+
+// 麵包屑：crumbs 就是頁面上可見麵包屑（src/components/Breadcrumbs.astro）用的同一個陣列，
+// 由 src/lib/crumbs.mjs 產生：[{ name, href }]，href 是站內路徑（已百分比編碼），最後一項是本頁、不帶 href。
+// Google 規格（rules.json → types.BreadcrumbList）：itemListElement 至少 2 項，每項 position、name，
+// 除最後一項外都要 item。最後一項省略 item，Google 以所在頁網址代替。
+export function breadcrumbJsonLd(crumbs) {
+  if (!crumbs || crumbs.length < 2) return undefined;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((c, i) => clean({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: c.name,
+      item: c.href ? new URL(c.href, `${SITE_URL}/`).href : undefined,
+    })),
+  };
 }

@@ -8,6 +8,7 @@
 //
 // 細項篩選是漸進增強：沒有 JavaScript 時整張課表照常顯示，細項標籤仍是連到細項頁的連結。
 import Base from '../../layouts/Base.astro';
+import { underCity } from '../../lib/crumbs.mjs';
 import CourseCard from '../../components/CourseCard.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
 import { getData, fmt, link, hasEnded, TODAY, WEEKDAY_LABEL, learnHref } from '../../lib/data.mjs';
@@ -80,7 +81,7 @@ const description = display.from === 'provider' || display.from === 'providers'
   : `${display.heading}${providerNote && !sameAsProvider ? `（${providerNote}）` : ''}的成人課程共 ${fmt(list.length)} 門${hasTable ? `；${season ?? '本期'}課程表依星期排列，共 ${fmt(current.length)} 門，例如${sample}` : ''}。`;
 const timeOf = (s) => `${s.startTime ?? ''}${s.endTime ? `–${s.endTime}` : ''}` || '時間未提供';
 ---
-<Base title={title} description={description} canonical={venueUrl(v)} jsonld={venueJsonLd(v, list)}>
+<Base crumbs={underCity(v.city, display.heading, new Set(getData().cities.map((x) => x.name)))} title={title} description={description} canonical={venueUrl(v)} jsonld={venueJsonLd(v, list)}>
 <div class="card"><h1>{display.heading}{hasTable ? '課程表' : '的課程'}</h1>
 {v.address && v.address !== display.name && <div class="meta">{v.address}</div>}
 {providerNote && <div class="meta">開課單位：{providerNote}</div>}

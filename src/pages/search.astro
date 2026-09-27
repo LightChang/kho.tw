@@ -7,11 +7,12 @@
 //      GA4 加強型評估的「網站搜尋」靠網址上的 q 參數認出搜尋（view_search_results），
 //      先前原地搜尋不改網址，28 天只記到 2 次。
 //   3. 另外送一個 GA4 建議事件 search（search_term），不依賴加強型評估的設定。
-// 首頁的 JSON-LD SearchAction 也是指向 /search.html?q=，三者用同一個參數名。
+// （首頁 JSON-LD 的 SearchAction 已於 2026-09-27 移除：sitelinks search box 2024-11 取消，見 site/jsonld.mjs。）
 import Base from '../layouts/Base.astro';
+import { sectionCrumbs } from '../lib/crumbs.mjs';
 import { SITE_URL } from '../../site/jsonld.mjs';
 ---
-<Base title="搜尋課程" description="在 29,000 門全台成人課程中搜尋課名、單位或講師。" canonical={`${SITE_URL}/search.html`}>
+<Base crumbs={sectionCrumbs('search')} title="搜尋課程" description="在 29,000 門全台成人課程中搜尋課名、單位或講師。" canonical={`${SITE_URL}/search.html`}>
 <div class="card"><h1>搜尋</h1>
 <form id="f" role="search" class="search-form" action="/search.html" method="get">
 <input id="q" name="q" type="search" placeholder="課名、單位、講師" aria-label="搜尋課名、單位、講師">

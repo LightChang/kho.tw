@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import { underSection } from '../../lib/crumbs.mjs';
 import CourseList from '../../components/CourseList.astro';
 import { getData, fmt, link, learnHref, certHref } from '../../lib/data.mjs';
 import { itemListJsonLd, SITE_URL } from '../../../site/jsonld.mjs';
@@ -24,7 +25,7 @@ const acts = learnByCity.get(c.name) ?? [];
 const certCity = cert.cities.find((x) => x.city === c.name);
 const topKinds = byKind.slice(0, 3).map(([kind]) => KIND_LABEL.get(kind)).filter(Boolean);
 ---
-<Base
+<Base crumbs={underSection('cities', c.name)}
   title={topKinds.length ? `${c.name}成人課程｜${topKinds.join('・')}` : `${c.name}的成人課程`}
   description={`${c.name}${byKind.slice(0, 4).map(([kind, n]) => `${KIND_LABEL.get(kind)}${fmt(n)}門`).join('、')}，共 ${fmt(c.list.length)} 門課，其中 ${fmt(c.open)} 門招生中。`}
   canonical={`${SITE_URL}/city/${encodeURIComponent(c.name)}.html`}
