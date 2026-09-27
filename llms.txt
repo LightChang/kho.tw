@@ -30,7 +30,7 @@ kho.tw 彙整 23 個公開資料來源（教育部社區大學資訊網、各縣
 - 料理烘焙：https://kho.tw/topic/%E6%96%99%E7%90%86%E7%83%98%E7%84%99.html（1,064 門，278 門招生中）
 - 自然生態：https://kho.tw/topic/%E8%87%AA%E7%84%B6%E7%94%9F%E6%85%8B.html（950 門，230 門招生中）
 - 工程技術：https://kho.tw/topic/%E5%B7%A5%E7%A8%8B%E6%8A%80%E8%A1%93.html（792 門，204 門招生中）
-- 攝影影音：https://kho.tw/topic/%E6%94%9D%E5%BD%B1%E5%BD%B1%E9%9F%B3.html（683 門，105 門招生中）
+- 攝影影音：https://kho.tw/topic/%E6%94%9D%E5%BD%B1%E5%BD%B1%E9%9F%B3.html（685 門，105 門招生中）
 - 生活應用：https://kho.tw/topic/%E7%94%9F%E6%B4%BB%E6%87%89%E7%94%A8.html（514 門，184 門招生中）
 - 理財法律：https://kho.tw/topic/%E7%90%86%E8%B2%A1%E6%B3%95%E5%BE%8B.html（486 門，143 門招生中）
 - 商業管理：https://kho.tw/topic/%E5%95%86%E6%A5%AD%E7%AE%A1%E7%90%86.html（376 門，121 門招生中）
