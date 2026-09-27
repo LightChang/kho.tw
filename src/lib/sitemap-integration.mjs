@@ -16,13 +16,15 @@ import { SITE_URL } from '../../site/jsonld.mjs';
 import { writeSitemaps, courseHint, maxDate, isSitemapExcluded } from '../../site/sitemap.mjs';
 
 // lastmod 用資料實際的更新日期，不用 build 當下的時間（理由見 site/sitemap.mjs）。
-// 課程的日期在各來源的 lastVerifiedAt 上，取最大值；彙整頁取它收錄的課程的最大值。
-const courseLastmod = (c) => maxDate((c.sources ?? []).map((s) => s.lastVerifiedAt));
-const listLastmod = (list) => maxDate(list.map(courseLastmod));
-
+// 彙整頁取它收錄的課程的最大值。
+// 2026-09-27 起取「內容真正變更」的日子（data/observation 的 lastChangedAt），不是最後確認日——
+// 後者每輪抓取都刷新，會讓全站天天標今天。規則見 site/sitemap.mjs 的 courseChangedAt()。
 function entries(d) {
+  const courseLastmod = (c) => d.changedAt.get(c.id);
+  const listLastmod = (list) => maxDate(list.map(courseLastmod));
+  const allLastmod = listLastmod(d.courses);
   const pages = [
-    { rel: 'index.html', lastmod: d.home.updatedAt, changefreq: 'daily', priority: '1.0' },
+    { rel: 'index.html', lastmod: allLastmod, changefreq: 'daily', priority: '1.0' },
     { rel: 'open.html', lastmod: listLastmod(d.openCourses), changefreq: 'daily', priority: '0.9' },
     { rel: 'types.html', lastmod: listLastmod(d.courses), changefreq: 'weekly', priority: '0.7' },
     ...d.types.map((k) => ({ rel: `type/${k.kind}.html`, lastmod: listLastmod(k.list), changefreq: 'weekly', priority: '0.7' })),
@@ -30,9 +32,9 @@ function entries(d) {
     ...d.topics.map((t) => ({ rel: `topic/${t.name}.html`, lastmod: listLastmod(t.list), changefreq: 'weekly', priority: '0.7' })),
     { rel: 'cities.html', lastmod: listLastmod(d.courses), changefreq: 'weekly', priority: '0.7' },
     ...d.cities.map((c) => ({ rel: `city/${c.name}.html`, lastmod: listLastmod(c.list), changefreq: 'weekly', priority: '0.7' })),
-    { rel: 'map.html', lastmod: d.home.updatedAt, changefreq: 'weekly', priority: '0.8' },
+    { rel: 'map.html', lastmod: allLastmod, changefreq: 'weekly', priority: '0.8' },
     { rel: 'teachers.html', lastmod: listLastmod(d.courses), changefreq: 'weekly', priority: '0.6' },
-    { rel: 'search.html', lastmod: d.home.updatedAt, changefreq: 'monthly', priority: '0.6' },
+    { rel: 'search.html', lastmod: allLastmod, changefreq: 'monthly', priority: '0.6' },
     // 細項（皮拉提斯、水電…）與證照班：全國、縣市、行政區三層，門檻見 data.mjs 的 FACET_MIN
     { rel: 'learn.html', lastmod: listLastmod(d.courses), changefreq: 'weekly', priority: '0.8' },
     ...d.learn.flatMap((l) => [

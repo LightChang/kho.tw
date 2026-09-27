@@ -37,3 +37,20 @@ test('排除頁型：講師頁不進 sitemap、進了算錯；講師索引頁照
   assert.deepEqual(bad.notListed, ['teachers.html']);
   assert.deepEqual(bad.excludedListed, ['teacher/a.html']);
 });
+
+test('lastmod 取內容變更日：只有「最後確認日」變了不影響 lastmod；同資料重算結果相同', async () => {
+  const { courseChangedAt, courseFirstSeen } = await import('../site/sitemap.mjs');
+  const obs = new Map([
+    ['a:1', { changed: '2026-09-13', first: '2026-09-12' }],
+    ['b:9', { changed: '2026-09-20', first: '2026-09-18' }],
+  ]);
+  const c = { sources: [{ id: 'a', recordId: '1', lastVerifiedAt: '2026-09-27' }, { id: 'b', recordId: '9', lastVerifiedAt: '2026-09-27' }] };
+  assert.equal(courseChangedAt(c, obs), '2026-09-20');
+  // 每小時重抓只刷新 lastVerifiedAt：lastmod 不動
+  const reverified = { sources: c.sources.map((s) => ({ ...s, lastVerifiedAt: '2026-09-28' })) };
+  assert.equal(courseChangedAt(reverified, obs), '2026-09-20');
+  assert.equal(courseChangedAt(c, obs), courseChangedAt(structuredClone(c), new Map(obs)));
+  assert.equal(courseFirstSeen(c, obs), '2026-09-12');
+  // 查不到觀測紀錄才退回最後確認日
+  assert.equal(courseChangedAt({ sources: [{ id: 'z', recordId: '0', lastVerifiedAt: '2026-09-27' }] }, obs), '2026-09-27');
+});

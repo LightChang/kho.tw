@@ -19,7 +19,7 @@ import { homeJsonLd } from '../../site/jsonld.mjs';
 
 const css = [tokensCss, siteCss.replace(/^@import .*$/m, ''), homeCss].join('\n');
 
-const { home } = getData();
+const { home, newThisWeek } = getData();
 const t = home.totals;
 const description = `全台社區大學、運動中心、樂齡中心與職訓課程共 ${fmt(t.courses)} 門，其中 ${fmt(t.open)} 門正在招生。`;
 const jsonld = homeJsonLd({ description });
@@ -72,7 +72,7 @@ const doors = [
   </nav>
 
   <section class="hot" aria-labelledby="hot-h">
-    <h2 id="hot-h">快額滿</h2>
+    <h2 id="hot-h">快額滿{newThisWeek > 0 && <a class="new-link" href="/open.html#new">本週新上架 <span class="tnum">{fmt(newThisWeek)}</span> 門 →</a>}</h2>
     <p class="sub">依額滿比例排序；名額由來源每日更新，只有運動中心與臺中社大提供剩餘名額</p>
     <ol>
       {/* c.id 放的是百分比編碼後的 slug（transform/emit.mjs），直接串、不再編碼 */}

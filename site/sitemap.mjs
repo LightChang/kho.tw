@@ -200,3 +200,25 @@ export function coverageProblems(onDisk, inSitemap) {
   const notHtml = [...inSitemap].filter((f) => !onDisk.has(f));
   return { notListed, noindexListed, excludedListed, notHtml, noindex, excluded };
 }
+
+// ── lastmod：內容真正變更的日子 ─────────────────────────
+// 2026-09-27 前用 sources[].lastVerifiedAt（最後一次確認還在），每輪抓取都會刷新成當天，
+// 線上 sitemap-courses-1 有 13,344 頁標當天——等於對搜尋引擎說全站每天都改。
+// 改用 data/observation 的 lastChangedAt（normalize 只在 contentHash 變了才更新它）。
+// obsKey 與 observation 的 id 相同：`<來源 id>:<來源紀錄 id>`。
+export const obsKey = (source) => `${source.id}:${source.recordId}`;
+
+/**
+ * 一門課的 lastmod：各來源觀測內容最後變更日的最大值。
+ * 查不到觀測紀錄的來源才退回 lastVerifiedAt（2026-09-27 實測 0 筆）。
+ * @param {{sources?: {id:string, recordId:string, lastVerifiedAt?:string}[]}} course
+ * @param {Map<string, {changed?: string}>} obs
+ */
+export function courseChangedAt(course, obs) {
+  return maxDate((course.sources ?? []).map((s) => obs.get(obsKey(s))?.changed ?? s.lastVerifiedAt));
+}
+
+/** 一門課最早被本站看到的日子（各來源 firstObservedAt 的最小值），「新上架」用。 */
+export function courseFirstSeen(course, obs) {
+  return (course.sources ?? []).map((s) => obs.get(obsKey(s))?.first).filter(Boolean).sort()[0];
+}

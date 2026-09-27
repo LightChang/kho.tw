@@ -18,7 +18,8 @@ const byKind = [...c.list.reduce((m, course) => {
   if (kind) m.set(kind, (m.get(kind) ?? 0) + 1);
   return m;
 }, new Map())].sort((a, b) => b[1] - a[1]);
-const { learnByCity, cert } = getData();
+const { learnByCity, cert, newestOpenByCity, firstSeen } = getData();
+const fresh = (newestOpenByCity.get(c.name) ?? []).slice(0, 8);
 const acts = learnByCity.get(c.name) ?? [];
 const certCity = cert.cities.find((x) => x.city === c.name);
 const topKinds = byKind.slice(0, 3).map(([kind]) => KIND_LABEL.get(kind)).filter(Boolean);
@@ -40,6 +41,11 @@ const topKinds = byKind.slice(0, 3).map(([kind]) => KIND_LABEL.get(kind)).filter
 <div class="card"><h3>{c.name}熱門課程</h3>
 <ul class="chips">{acts.map((o) => <li><a href={learnHref(o.activity.name, c.name)}>{o.activity.label}<span class="n tnum">{fmt(o.open)}／{fmt(o.n)}</span></a></li>)}</ul>
 {certCity && <div class="meta-2"><a href={certHref(c.name)}>{c.name}證照班 {fmt(certCity.list.length)} 門</a></div>}</div>
+)}
+{fresh.length > 0 && (
+<div class="card"><h3>{c.name}最近新上架</h3>
+{fresh.map((o) => <div><a href={link('course', o.slug)}>{o.title}</a> <span class="meta-2">{o.provider?.nameRaw ?? ''}・{String(firstSeen.get(o.id)).slice(5).replace('-', '/')} 收錄</span></div>)}
+</div>
 )}
 <CourseList list={c.list} />
 </Base>

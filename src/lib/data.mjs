@@ -13,6 +13,8 @@ import { readFileSync } from 'node:fs';
 import path from 'node:path';
 import { collectTeachers, teachersWithPages, MIN_COURSES } from '../../transform/teachers.mjs';
 import { todayTaipei } from '../../transform/_date.mjs';
+import { readdirSync } from 'node:fs';
+import { courseChangedAt, courseFirstSeen } from '../../site/sitemap.mjs';
 import { compileActivities, activitiesOf, isCert, venueDisplay, mainSeason, seasonOf, courseSeriesKey } from './facets.mjs';
 
 const ROOT = process.cwd();
@@ -103,12 +105,33 @@ function load() {
   if (noSlug) throw new Error(`${noSlug} 門課的 data/courses.ndjson 沒有 slug，請重跑 node transform/emit.mjs`);
 
   const home = readJson(path.join(ROOT, 'public', 'home.json'));
+
+  // 觀測層的內容變更日與初見日（sitemap lastmod 與「新上架」用）。只留兩個日期，不留 payload。
+  const obsDir = path.join(ROOT, 'data', 'observation');
+  const obs = new Map();
+  for (const f of readdirSync(obsDir).filter((n) => n.endsWith('.ndjson')).sort()) {
+    for (const line of readFileSync(path.join(obsDir, f), 'utf-8').split('\n')) {
+      if (!line) continue;
+      const o = JSON.parse(line);
+      obs.set(o.id, { changed: o.lastChangedAt ?? undefined, first: o.firstObservedAt ?? undefined });
+    }
+  }
+  const changedAt = new Map(courses.map((c) => [c.id, courseChangedAt(c, obs)]));
+  const firstSeen = new Map(courses.map((c) => [c.id, courseFirstSeen(c, obs)]));
   // 主題分類的清單與顯示順序以 overrides/taxonomy.json 為準（只讀不改），
   // 不從課程資料反推——反推的話某一類剛好沒課就會整類消失，順序也會跟著資料飄。
   const taxonomy = readJson(path.join(ROOT, 'overrides', 'taxonomy.json'));
 
   // ── 現在可報名，依縣市分組 ─────────────────────
   const openCourses = courses.filter(isOpen);
+  // 最近新上架：招生中的課依本站初見日新到舊，同一天再依開課日。/open.html、縣市頁、首頁連結用。
+  const byNewest = (a, b) => String(firstSeen.get(b.id) ?? '').localeCompare(String(firstSeen.get(a.id) ?? ''))
+    || String(b.schedule?.startDate ?? '').localeCompare(String(a.schedule?.startDate ?? ''))
+    || a.slug.localeCompare(b.slug);
+  const newestOpen = openCourses.filter((c) => firstSeen.get(c.id)).sort(byNewest);
+  const newestOpenByCity = groupBy(newestOpen, (c) => c.venue?.city);
+  const weekAgo = new Date(Date.parse(`${TODAY}T00:00:00Z`) - 7 * 864e5).toISOString().slice(0, 10);
+  const newThisWeek = newestOpen.filter((c) => firstSeen.get(c.id) > weekAgo).length;
   const openByCity = [...groupBy(openCourses, (c) => c.venue?.city ?? '未標示縣市')]
     .sort((a, b) => b[1].length - a[1].length);
 
@@ -329,6 +352,7 @@ function load() {
     activities, actsByCourse, learn, learnByName, learnByTopic, learnByCity, learnLinksOf,
     cert, certIds, certCitySet,
     titleCollides, successorsOf, alternativesOf, currentByVenue,
+    changedAt, firstSeen, newestOpen, newestOpenByCity, newThisWeek,
   };
 }
 

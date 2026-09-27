@@ -3,7 +3,9 @@ import Base from '../layouts/Base.astro';
 import { getData, fmt, link } from '../lib/data.mjs';
 import { itemListJsonLd, SITE_URL } from '../../site/jsonld.mjs';
 
-const { openCourses, openByCity } = getData();
+const { openCourses, openByCity, newestOpen, firstSeen } = getData();
+// 最近新上架：本站最近才收錄的招生中課程（依初見日，見 src/lib/data.mjs 的 newestOpen）
+const fresh = newestOpen.slice(0, 20);
 ---
 <Base
   title="現在可報名的課程"
@@ -12,6 +14,11 @@ const { openCourses, openByCity } = getData();
   jsonld={itemListJsonLd(openCourses.slice(0, 100), { name: '現在可報名的課程' })}
 >
 <div class="card"><h2>現在可報名</h2><div class="meta">共 {fmt(openCourses.length)} 門課還沒截止報名，依縣市分組。</div></div>
+{fresh.length > 0 && (
+<div class="card" id="new"><h3>最近新上架</h3><div class="meta-2">本站最近才收錄、仍在招生的課程，依收錄日新到舊。</div>
+{fresh.map((c) => <div><a href={link('course', c.slug)}>{c.title}</a> <span class="meta-2">{c.provider?.nameRaw ?? ''}{c.venue?.city ? `・${c.venue.city}` : ''}・{String(firstSeen.get(c.id)).slice(5).replace('-', '/')} 收錄</span></div>)}
+</div>
+)}
 {openByCity.map(([city, list]) => (
 <div class="card"><h3>{city}<span class="meta-2 tnum">　{fmt(list.length)} 門</span></h3>
 {list.slice(0, 12).map((c) => <div><a href={link('course', c.slug)}>{c.title}</a> <span class="meta-2">{c.provider?.nameRaw ?? ''}</span></div>)}

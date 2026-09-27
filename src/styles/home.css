@@ -227,3 +227,6 @@
      解除上限（max-height:none），在這裡重新設限只會依順序蓋掉它——
      320×568 實測就是這樣把兩行標籤（66px）壓進 1.6em（32px）裡。 */
 }
+/* 快額滿標題同一行右側的「本週新上架」連結：放在 h2 行內，不另佔一列，滿版高度不變 */
+.hot h2{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.hot h2 .new-link{font-size:var(--text-xs);font-weight:400;white-space:nowrap}
