@@ -86,7 +86,9 @@ src/                        Astro 靜態網站 → dist/（2026-09-15 由自寫�
 | moe-cc-detail | 13,010 | 上一列的單筆詳情端點。**增量抓取**，每輪上限 4,000 筆、每筆間隔 250ms，快取在 `ingest/raw/moe-cc-detail.json`。接它的理由有二：`internal_course_code` 只有詳情才給（列表端點沒有，cluster 的 1.0 規則對這支從來不成立；抽 40 門對臺北市聯網命中 35），以及 `course_intro`（全站描述覆蓋原本只有 25%）。`course_cat_name` 是社大行政三分類（生活藝能／學術／社團）不是科目，抽樣 60 筆只有這三個值，所以不寫進 `categoryRaw` |
 | taipei-cc | 6,045 | 北市聯網 JSON API，含樂齡與成人教育班 |
 | cc-shared-platform | 4,077 | 26 站共用平台（週課表／圖片／表格三種版面） |
-| xuanen-centers | 3,859 | 34 個運動中心報名系統，**全部帶名額數字** |
+| xuanen-centers | 3,859 | 34 個運動中心報名系統，**全部帶名額數字**。2026-09-28 改為各站自讀類別代碼、加土城等 3 站，38 站 10,414 門（`probe/2026-09-28-sports-centers.md`） |
+| teamxports-centers | 578 | 2026-09-28 接。全越運動 8 館（三峽、鶯歌、信義、豐原…），公開 Web API，帶剩餘名額；教師姓名來源自己遮蔽，不收 |
+| changjia-centers | 193 | 2026-09-28 接。長佳 Web App（新店、蘆竹），有已報名／名額，**沒有起訖日**（詳情 API 擋外部呼叫） |
 | taiwanjobs | 2,396 | 職訓七類方案，含產投 1,820 |
 | ntpc-cc | 1,500 | 新北聯網，只抓近 180 天 |
 | taichung-cc | 1,295 | 臺中聯網 115 學年四期，含報名人數／名額 |

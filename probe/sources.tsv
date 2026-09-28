@@ -21,7 +21,12 @@ sports-venues	運動中心	全國	全國運動場館資訊（dataset 22849）	ht
 taipei-sports-centers	運動中心	縣市	臺北市各區運動中心（data.taipei 121203）	https://data.taipei/api/dataset/80be7612-593f-4795-9935-a10ce0f7b75b/resource/e7c46724-3517-4ce5-844f-5a4404897b7d/download	GET	csv	12	2026-09-13	每年	—	有	已接	—
 xuanen-cyc	運動中心	營運商	救國團報名系統（軒恩）	https://scr.cyc.org.tw/tpNN.aspx?Module=class_booking&files=class_info&B=<類別>	GET	html	合計 3859（三列同一支）	2026-09-13	即時	滿班人數/可報名人數	無（場館對照）	已接	實作合併為 ingest/sources/xuanen-centers.mjs（34 站）
 xuanen-wdyg	運動中心	營運商	舞動陽光報名系統（軒恩）	https://bwd.xuanen.com.tw/wdNN.aspx?Module=class_booking&files=class_info&B=<類別>	GET	html	合計 3859（三列同一支）	2026-09-13	即時	滿班人數/可報名人數	無（場館對照）	已接	實作合併為 ingest/sources/xuanen-centers.mjs（34 站）
-xuanen-other	運動中心	營運商	其他軒恩站點	https://fe.xuanen.com.tw/fe01.aspx ; https://danson.xuanen.com.tw/ds02.aspx ; https://bbq.xuanen.com.tw/bq01.aspx ; https://bnt.xuanen.com.tw/nt01.aspx ; https://www.ymca.com.tw/slsc68.aspx	GET	html	合計 3859（三列同一支）	2026-09-13	即時	滿班人數/可報名人數	無（場館對照）	已接	實作合併為 ingest/sources/xuanen-centers.mjs（34 站）
+xuanen-other	運動中心	營運商	其他軒恩站點	https://fe.xuanen.com.tw/fe01.aspx ; https://danson.xuanen.com.tw/ds02.aspx ; https://bbq.xuanen.com.tw/bq01.aspx ; https://bnt.xuanen.com.tw/nt01.aspx ; https://www.ymca.com.tw/slsc68.aspx	GET	html	合計 3859（三列同一支）	2026-09-13	即時	滿班人數/可報名人數	無（場館對照）	已接	實作合併為 ingest/sources/xuanen-centers.mjs（34 站）；2026-09-28 加 fe02 竹北、fe03 土城、tp27 烏日，類別代碼改為各站自讀後三列合計 10414（見 probe/2026-09-28-sports-centers.md）
+teamxports-centers	運動中心	營運商	全越運動 XPORTS 報名系統（三峽/鶯歌/信義/豐原等 8 館）	https://WEBAPI.Teamxports.com/api/web/courseenrollment/multiple-course-list	POST json: brandId=1, siteId, courseCatIds, classDate, memberId=0	json	578	2026-09-28	即時	剩餘名額/名額上下限	無（館址門牌）	已接	前端遮蔽教師姓名，normalize 不收教師
+changjia-centers	運動中心	營運商	長佳智慧運動中心 Web App（新店/蘆竹）	https://changjia.sporetrofit.com/Location/CourseList/ajax/createTable/	POST form: LID, LIDName, CategoryID, count=500	html片段	193	2026-09-28	即時	已報名/名額	無（館址門牌）	已接	無起訖日：詳情 API 檢查 Origin，依 CONTRACT §2 不繞過；星期靠 weekDay 篩選反查
+ntpc-xinzhuang-sc	運動中心	單位	新莊國民運動中心（頂尖）	https://www.xzsports.com.tw/	GET	pdf	—	2026-09-28	—	—	—	不接	課表是 Google Drive 上的 PDF
+ntpc-zhonghe-sc	運動中心	單位	中和國民運動中心	https://www.zhsc.com.tw/	GET	pdf	—	2026-09-28	—	—	—	不接	Wix 官網，課表是 PDF＋App
+ntpc-luzhou-sc	運動中心	單位	蘆洲國民運動中心（展昭）	https://lzsc.chanchao.com.tw/LESSON/GetList	GET	圖片	—	2026-09-28	—	—	—	不接	各類課程頁只有一張課表圖片
 17fit	運動中心	營運商	17fit（南平/五股/平鎮）	https://npsc.17fit.com/studios	GET	spa	—	2026-09-11	—	—	—	不接	rate-limit 等待頁，依 CONTRACT 不繞過
 bookfastpos	運動中心	單位	前金運動中心	https://ec.bookfastpos.com/eMXRXL3Rvo/	GET	—	—	2026-09-13	—	—	—	不接	課表路由回 ROUTE_NOT_FOUND、commodity/list 回「不是合法的 API 呼叫者」，需廠商憑證，依 CONTRACT §2 不接
 taipei-venue-booking	運動中心	縣市	臺北市運動中心預約系統	https://booking-tpsc.sporetrofit.com/	GET	html	—	2026-09-11	—	—	—	不適用	場地租借，無課程
