@@ -39,12 +39,12 @@ kho.tw 彙整 25 個公開資料來源（教育部社區大學資訊網、各縣
 - 美容美髮：https://kho.tw/topic/%E7%BE%8E%E5%AE%B9%E7%BE%8E%E9%AB%AE.html（137 門，58 門招生中）
 
 ### 依縣市（共 21 縣市，網址：/city/<縣市名稱>.html；縣市名稱為中文，須百分比編碼）
-- 臺北市：https://kho.tw/city/%E8%87%BA%E5%8C%97%E5%B8%82.html（9,981 門，5,741 門招生中）
+- 臺北市：https://kho.tw/city/%E8%87%BA%E5%8C%97%E5%B8%82.html（9,981 門，5,742 門招生中）
 - 新北市：https://kho.tw/city/%E6%96%B0%E5%8C%97%E5%B8%82.html（7,464 門，2,279 門招生中）
 - 臺中市：https://kho.tw/city/%E8%87%BA%E4%B8%AD%E5%B8%82.html（5,115 門，1,405 門招生中）
 - 桃園市：https://kho.tw/city/%E6%A1%83%E5%9C%92%E5%B8%82.html（4,578 門，1,266 門招生中）
 - 高雄市：https://kho.tw/city/%E9%AB%98%E9%9B%84%E5%B8%82.html（2,433 門，642 門招生中）
-- 彰化縣：https://kho.tw/city/%E5%BD%B0%E5%8C%96%E7%B8%A3.html（1,341 門，279 門招生中）
+- 彰化縣：https://kho.tw/city/%E5%BD%B0%E5%8C%96%E7%B8%A3.html（1,341 門，278 門招生中）
 - 宜蘭縣：https://kho.tw/city/%E5%AE%9C%E8%98%AD%E7%B8%A3.html（542 門，205 門招生中）
 - 新竹市：https://kho.tw/city/%E6%96%B0%E7%AB%B9%E5%B8%82.html（874 門，183 門招生中）
 - 臺南市：https://kho.tw/city/%E8%87%BA%E5%8D%97%E5%B8%82.html（1,899 門，181 門招生中）
