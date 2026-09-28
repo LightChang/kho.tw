@@ -7,7 +7,8 @@ const SITES = JSON.parse(
   readFileSync(new URL('../../overrides/xuanen-sites.json', import.meta.url), 'utf-8'),
 );
 const WEEKDAY = { 一: 1, 二: 2, 三: 3, 四: 4, 五: 5, 六: 6, 日: 7 };
-// 類別代碼 → 名稱，取自課表頁 rbn_2 的 radio label（2026-09-11 實測）
+// 類別代碼 → 名稱，取自中山站課表頁 rbn_2 的 radio label（2026-09-11 實測）。
+// 代碼是各站自編的，只在 raw 沒有 _categoryName（ingest 讀不到該站類別清單而退回預設代碼）時才用。
 const CATEGORY = {
   2: '有氧系列', 3: '瑜珈系列', 4: '舞蹈系列', 5: '飛輪系列', 7: '專業運動',
   9: '武術系列', 10: '公益系列', 13: '球類課程', 14: '泳訓團體', 17: '水中運動',
@@ -58,15 +59,22 @@ export function normalize(records, { fetchedAt }) {
         // 會被場館層當成同一個場地合在一起（實測「游泳池」曾聚出 339 門課）。
         venueNameRaw: `${site.venueName ?? r._site} ${r.classroom ?? ''}`.trim(),
         addressPrecision: 'venue-name-only',
+        // 名錄對不到的場館（鳳山運動園區、八德…）沒有行政區，細項×行政區頁就接不到。
+        // 對照表查證過的才填，見 overrides/xuanen-sites.json 的 _district 說明。
+        ...(site.city ? { city: site.city } : {}),
+        ...(site.district ? { district: site.district } : {}),
       },
     };
     const term = termOf(r.dateBegin);
     if (term) course.term = term;
-    if (CATEGORY[r._category]) course.categoryRaw = CATEGORY[r._category];
+    const categoryName = r._categoryName || CATEGORY[r._category];
+    if (categoryName) course.categoryRaw = categoryName;
     if (r.teacher) course.teachers = [{ nameRaw: r.teacher }];
     if (r.capacity != null) course.enrollment.capacity = r.capacity;
     if (r.available != null) course.enrollment.available = r.available;
+    // 官網查不到的站點（舞動陽光幾站）退回報名系統本身，課程頁才有地方連回來源
     if (site.site) course.sourceUrl = `https://${site.site}`;
+    else if (r._url) course.sourceUrl = `${r._url}?Module=class_booking&files=class_info`;
     out.push(course);
   }
   return out;
