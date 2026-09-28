@@ -15,13 +15,21 @@ export function compileActivities(json) {
     aliases: a.aliases ?? [],
     match: new RegExp(a.match, 'i'),
     exclude: a.exclude ? new RegExp(a.exclude, 'i') : null,
+    categoryMatch: a.categoryMatch ? new RegExp(a.categoryMatch, 'i') : null,
   }));
 }
 
-/** 一門課屬於哪些細項。只看課名：描述常順帶提到瑜珈、伸展，拿來判斷會歸錯。 */
+/**
+ * 一門課屬於哪些細項。看課名：描述常順帶提到瑜珈、伸展，拿來判斷會歸錯。
+ * 有 categoryMatch 的細項另看來源自己標的類別（categoryRaw）：運動中心的泳訓課課名常只寫
+ * 「05期兒童班」「泳池幼兒班」「成人團體課程」，只有類別寫著「泳訓團體」「游泳課程」。
+ * exclude 仍然只看課名。
+ */
 export function activitiesOf(course, activities) {
   const title = course.title ?? '';
-  return activities.filter((a) => a.match.test(title) && !(a.exclude && a.exclude.test(title)));
+  const category = course.categoryRaw ?? '';
+  return activities.filter((a) => (a.match.test(title) || (a.categoryMatch && category && a.categoryMatch.test(category)))
+    && !(a.exclude && a.exclude.test(title)));
 }
 
 // ── 證照班 ─────────────────────────────────────

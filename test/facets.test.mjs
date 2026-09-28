@@ -38,6 +38,16 @@ test('細項：常見課名歸到對的細項', () => {
   assert.deepEqual(namesOf('MAIN STREET 英文'), ['英語']);
 });
 
+test('細項：運動中心泳訓課課名沒寫游泳時，看來源類別', () => {
+  const of = (title, categoryRaw) => activitiesOf({ title, categoryRaw }, acts).map((a) => a.name);
+  assert.ok(of('05期兒童班', '泳訓團體').includes('游泳'));
+  assert.ok(of('成人團體課程', '泳池-團體班課程').includes('游泳'));
+  assert.ok(of('兒童初階班', '游泳').includes('游泳'));
+  assert.deepEqual(of('兒童初階班', '球類課程').includes('游泳'), false);
+  // 沒有 categoryMatch 的細項不看類別：類別叫「瑜珈系列」不代表課名寫的是瑜珈
+  assert.deepEqual(of('拉丁爵士', '瑜珈系列').includes('瑜珈'), false);
+});
+
 test('證照班：看課名與描述，結業證書不算', () => {
   assert.ok(isCert({ title: '中餐烹調丙級' }));
   assert.ok(isCert({ title: '堆高機操作人員訓練班第02期' }));
