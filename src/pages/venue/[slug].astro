@@ -59,6 +59,15 @@ const acts = [...actCount].sort((a, b) => b[1] - a[1]).map(([name, n]) => ({
   name, n, label: learnByName.get(name)?.activity.label ?? name, page: learnByName.has(name),
 }));
 const actsAttr = (c) => (actsByCourse.get(c.id) ?? []).join(' ');
+// 細項分段：「內湖運動中心 皮拉提斯」這種查詢要在 HTML 裡就有對應的標題與課單，
+// 上面的篩選是 JS，搜尋引擎看不到。不開新網址（docs/GROWTH.md §5），只在頁內分段。
+const ACT_SECTION_MIN = 3;
+const firstSlot = (c) => { const s = (c.schedule?.slots ?? [])[0]; return s ? `${s.weekday}|${s.startTime ?? ''}` : '9'; };
+const actSections = acts.filter((a) => a.n >= ACT_SECTION_MIN).map((a) => ({
+  ...a,
+  list: current.filter((c) => (actsByCourse.get(c.id) ?? []).includes(a.name)).sort((x, y) => firstSlot(x).localeCompare(firstSlot(y))),
+}));
+const actNote = actSections.length ? `其中${actSections.slice(0, 3).map((a) => `${a.label} ${fmt(a.n)} 門`).join('、')}。` : '';
 
 const providers = display.providers;
 const providerNote = providers.length
@@ -78,8 +87,9 @@ const sameAsProvider = providers.length === 1 && (display.heading.includes(provi
 const sample = [...new Set(list.map((c) => c.title))].slice(0, 3).join('、');
 const description = display.from === 'provider' || display.from === 'providers'
   ? `${v.name}是${providerNote}的上課地點，共 ${fmt(list.length)} 門課，例如${sample}。`
-  : `${display.heading}${providerNote && !sameAsProvider ? `（${providerNote}）` : ''}的成人課程共 ${fmt(list.length)} 門${hasTable ? `；${season ?? '本期'}課程表依星期排列，共 ${fmt(current.length)} 門，例如${sample}` : ''}。`;
+  : `${display.heading}${providerNote && !sameAsProvider ? `（${providerNote}）` : ''}的成人課程共 ${fmt(list.length)} 門${hasTable ? `；${season ?? '本期'}課程表依星期排列，共 ${fmt(current.length)} 門，例如${sample}` : ''}。${actNote}`;
 const timeOf = (s) => `${s.startTime ?? ''}${s.endTime ? `–${s.endTime}` : ''}` || '時間未提供';
+const slotsText = (c) => (c.schedule?.slots ?? []).map((s) => `${WEEKDAY_LABEL[s.weekday] ?? ''} ${timeOf(s)}`).join('、') || c.schedule?.timeInfoRaw || '';
 ---
 <Base crumbs={underCity(v.city, display.heading, new Set(getData().cities.map((x) => x.name)))} title={title} description={description} canonical={venueUrl(v)} jsonld={venueJsonLd(v, list)}>
 <div class="card"><h1>{display.heading}{hasTable ? '課程表' : '的課程'}</h1>
@@ -113,6 +123,18 @@ const timeOf = (s) => `${s.startTime ?? ''}${s.endTime ? `–${s.endTime}` : ''}
 <table>{noSlot.map((c) => <tr data-acts={actsAttr(c)}><td class="tt-time">{c.schedule?.timeInfoRaw ?? (c.schedule?.startDate ? `自 ${c.schedule.startDate}` : '見課程頁')}</td><td><a href={link('course', c.slug)}>{c.title}</a></td><td><StatusBadge status={c.enrollment?.status} /></td></tr>)}</table>
 </section>
 )}
+</div>
+)}
+
+{actSections.length > 0 && (
+<div class="card">
+{actSections.map((a) => (
+<section class="act-sec">
+<h2>{display.heading}{a.label}課程<span class="meta-2 tnum">　{fmt(a.list.length)} 門{past && '（已結束）'}</span></h2>
+<ul class="next-list">{a.list.slice(0, 40).map((c) => <li><a href={link('course', c.slug)}>{c.title}</a> <StatusBadge status={c.enrollment?.status} /><div class="meta-2">{slotsText(c)}</div></li>)}</ul>
+{a.page && <div class="meta"><a href={learnHref(a.name)}>其他地點的{a.label}課程</a></div>}
+</section>
+))}
 </div>
 )}
 
