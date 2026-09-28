@@ -15,7 +15,7 @@ import { collectTeachers, teachersWithPages, MIN_COURSES } from '../../transform
 import { todayTaipei } from '../../transform/_date.mjs';
 import { readdirSync } from 'node:fs';
 import { courseChangedAt, courseFirstSeen } from '../../site/sitemap.mjs';
-import { compileActivities, activitiesOf, isCert, venueDisplay, mainSeason, seasonOf, courseSeriesKey } from './facets.mjs';
+import { compileActivities, activitiesOf, isCert, venueDisplay, mainSeason, seasonOf, courseSeriesKey, courseTitleKey } from './facets.mjs';
 
 const ROOT = process.cwd();
 
@@ -337,6 +337,19 @@ function load() {
     if (acts.size) take(currentByCity.get(c.venue?.city), sharesAct, '同縣市同類');
     return out;
   };
+  // ── 同名課程：同課名（去期數）的其他期別與其他開課單位，未結束的在前、同單位→同縣市優先 ──
+  // 例：同一班的「第06期」頁和不帶期數的頁互不相連，搜尋結果各自掛在不同名次。
+  const byTitle = groupBy(courses.filter((c) => courseTitleKey(c)), courseTitleKey);
+  for (const l of byTitle.values()) l.sort((a, b) => (hasEnded(a) - hasEnded(b))
+    || String(b.schedule?.startDate ?? '').localeCompare(String(a.schedule?.startDate ?? '')));
+  const sameTitleOf = (c, n = 8) => {
+    const l = byTitle.get(courseTitleKey(c)) ?? [];
+    if (l.length < 2) return [];
+    const rank = (o) => (o.provider?.nameRaw === c.provider?.nameRaw ? 0 : o.venue?.city && o.venue.city === c.venue?.city ? 1 : 2);
+    const out = [[], [], []];
+    for (const o of l) if (o.id !== c.id) out[rank(o)].push(o);
+    return out.flat().slice(0, n);
+  };
   const limit = process.env.KHO_LIMIT ? Number(process.env.KHO_LIMIT) : Infinity;
   const coursePages = courses.slice(0, limit).map((c) => ({
     course: c,
@@ -351,7 +364,7 @@ function load() {
     teacherIndex, pageTeachers, teachers, rankedTeachers, coursePages,
     activities, actsByCourse, learn, learnByName, learnByTopic, learnByCity, learnLinksOf,
     cert, certIds, certCitySet,
-    titleCollides, successorsOf, alternativesOf, currentByVenue,
+    titleCollides, successorsOf, alternativesOf, currentByVenue, sameTitleOf,
     changedAt, firstSeen, newestOpen, newestOpenByCity, newThisWeek,
   };
 }

@@ -41,7 +41,7 @@ const rows = [
 const jsonld = courseJsonLd(c, venue);
 
 // 同類課程：細項頁（行政區 → 縣市 → 全台）與證照班頁。細項依課名判斷，規則見 overrides/activities.json。
-const { learnLinksOf, certCitySet, titleCollides, successorsOf, alternativesOf, currentByVenue } = getData();
+const { learnLinksOf, certCitySet, titleCollides, successorsOf, alternativesOf, currentByVenue, sameTitleOf } = getData();
 const related = learnLinksOf(c);
 const cert = isCert(c);
 if (cert) related.push(c.venue?.city && certCitySet.has(c.venue.city)
@@ -54,6 +54,12 @@ const ended = hasEnded(c);
 const next = ended ? successorsOf(c) : [];
 const alts = ended ? alternativesOf(c) : [];
 const venueNow = ended && venue?.id ? (currentByVenue.get(venue.id) ?? []).length : 0;
+// 同名課程的其他期別與其他開課單位（已列在「新的一期」的不重複）；還沒結束的課另列同地點本期課。
+const shown = new Set([c.id, ...next.map((o) => o.id)]);
+const sameTitle = sameTitleOf(c).filter((o) => !shown.has(o.id));
+for (const o of sameTitle) shown.add(o.id);
+const venueOthers = !ended && venue?.id ? (currentByVenue.get(venue.id) ?? []).filter((o) => !shown.has(o.id)).slice(0, 6) : [];
+const whereOf = (o) => [o.provider?.nameRaw, `${o.venue?.city ?? ''}${o.venue?.district ?? ''}`].filter(Boolean).join('・');
 const whenOf = (o) => [seasonOf(o.schedule?.startDate), (o.schedule?.slots ?? [])[0]?.weekday ? WEEKDAY_LABEL[o.schedule.slots[0].weekday] : '', o.schedule?.startDate ? `${o.schedule.startDate} 開課` : ''].filter(Boolean).join('・');
 ---
 <Base crumbs={underCity(c.venue?.city, c.title, new Set(getData().cities.map((x) => x.name)))} title={courseTitle(c, { collide: titleCollides(c), weekdayLabel: WEEKDAY_LABEL })} description={jsonld.description} canonical={courseUrl(c)} jsonld={jsonld} robots={isNoindex(c) ? 'noindex,follow' : undefined}>
@@ -81,6 +87,15 @@ const whenOf = (o) => [seasonOf(o.schedule?.startDate), (o.schedule?.slots ?? []
 <div class="meta-2">{venue.lat ? `座標 ${venue.lat}, ${venue.lng}（比對方式：${c.venue.match}）` : '尚無座標'}</div></div>
 ) : (
 <div class="card"><h3>上課地點</h3><div class="meta">{c.venue?.name ?? '來源未提供'}</div></div>
+)}
+{sameTitle.length > 0 && (
+<div class="card"><h3>同名課程的其他期別／開課單位</h3>
+<ul class="next-list">{sameTitle.map((o) => <li><a href={link('course', o.slug)}>{o.title}</a> <StatusBadge status={o.enrollment?.status} /><div class="meta-2">{[whereOf(o), whenOf(o)].filter(Boolean).join('・')}</div></li>)}</ul></div>
+)}
+{venueOthers.length > 0 && (
+<div class="card"><h3>同地點的其他課程</h3>
+<ul class="next-list">{venueOthers.map((o) => <li><a href={link('course', o.slug)}>{o.title}</a> <StatusBadge status={o.enrollment?.status} /><div class="meta-2">{whenOf(o)}</div></li>)}</ul>
+<div class="meta"><a href={link('venue', venue.slug)}>{venue.name}課程表</a></div></div>
 )}
 {related.length > 0 && (
 <div class="card"><h3>同類課程</h3>

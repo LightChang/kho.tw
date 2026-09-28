@@ -156,12 +156,16 @@ export function courseTitle(c, { collide = false, weekdayLabel = [] } = {}) {
   return t;
 }
 
-/** 同一門課的「期別鍵」：課名去掉期數、班別與空白後＋單位。用來找同一門課的下一期。 */
-export function courseSeriesKey(c) {
-  const t = String(c.title ?? '')
+/** 課名去掉期數、班別與空白：同名課（不分單位）的比對鍵。 */
+export function courseTitleKey(c) {
+  return String(c.title ?? '')
     .replace(/[【\[(（][^】\])）]*(開課|期|梯)[^】\])）]*[】\])）]/g, '')
     .replace(/第?\s*[0-9０-９一二三四五六七八九十]+\s*[期梯]次?/g, '')
     .replace(/[\s\p{P}\p{S}]/gu, '')
     .toLowerCase();
-  return `${t}|${c.provider?.nameRaw ?? ''}`;
+}
+
+/** 同一門課的「期別鍵」：同名課鍵＋單位。用來找同一門課的下一期。 */
+export function courseSeriesKey(c) {
+  return `${courseTitleKey(c)}|${c.provider?.nameRaw ?? ''}`;
 }
