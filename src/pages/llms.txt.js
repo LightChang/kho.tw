@@ -5,11 +5,17 @@
 //
 // 內容全部取自 getData()（build 當下讀 data/ 的真實資料），不手寫任何數字或清單——
 // ops/run-host.sh 每小時 ingest 一次，寫死的數字隔天就過期（見 docs/GEO.md 開頭的規則）。
-import { getData, fmt, STATUS_LABEL } from '../lib/data.mjs';
+import { getData, fmt, STATUS_LABEL, programHref, freeHref, seniorHref } from '../lib/data.mjs';
 import { SITE_URL, courseUrl, venueUrl, teacherUrl } from '../../site/jsonld.mjs';
 
 export const GET = () => {
-  const { home, topics, coursePages, venuePages, teachers } = getData();
+  const { home, topics, coursePages, venuePages, teachers, programs, free, senior } = getData();
+  const hubLine = (href, name, h) => `- ${name}：${SITE_URL}${href}（${fmt(h.list.length)} 門，${fmt(h.open)} 門招生中；縣市頁：${h.cities.map((x) => x.city).join('、') || '無'}）`;
+  const hubLines = [
+    ...programs.map((p) => hubLine(programHref(p.key), `${p.name}（${p.short}）`, p)),
+    hubLine(freeHref(), '免費課程（來源標示免費）', free),
+    hubLine(seniorHref(), '銀髮・樂齡課程', senior),
+  ].join('\n');
   const t = home.totals;
   const exampleCourse = coursePages[0]?.course;
   const exampleVenue = venuePages[0]?.venue;
@@ -44,6 +50,9 @@ ${topicLines}
 
 ### 依縣市（共 ${home.cities.length} 縣市，網址：/city/<縣市名稱>.html；縣市名稱為中文，須百分比編碼）
 ${cityLines}
+
+### 專題（只收還沒上完的課；縣市頁網址：/program/<方案>/<縣市>.html、/free/<縣市>.html、/senior/<縣市>.html）
+${hubLines}
 
 ### 課程頁（本站最大宗，共 ${fmt(coursePages.length)} 頁）
 每門課一頁。網址規則：/course/<slug>.html，slug 是「課名-開課單位-短碼」，中文，每一段都要依 RFC 3986 百分比編碼，例如：

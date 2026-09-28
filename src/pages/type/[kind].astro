@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import { underSection } from '../../lib/crumbs.mjs';
 import CourseList from '../../components/CourseList.astro';
-import { getData, fmt } from '../../lib/data.mjs';
+import { getData, fmt, programHref, seniorHref } from '../../lib/data.mjs';
 import { itemListJsonLd, SITE_URL } from '../../../site/jsonld.mjs';
 
 export function getStaticPaths() {
@@ -11,6 +11,10 @@ export function getStaticPaths() {
 
 const { kind } = Astro.props;
 const { list } = kind;
+const { programs } = getData();
+// 職訓、樂齡中心兩類有對應的專題頁（還沒上完的課、依縣市），從這裡連過去
+const hubs = kind.kind === 'vocational' ? programs.map((p) => [programHref(p.key), `${p.name}（${p.short}）`])
+  : kind.kind === 'senior-center' ? [[seniorHref(), '銀髮・樂齡課程（含社大、運動中心的長輩班）']] : [];
 ---
 <Base crumbs={underSection('types', kind.label)}
   title={`${kind.label}的課程`}
@@ -18,6 +22,7 @@ const { list } = kind;
   canonical={`${SITE_URL}/type/${kind.kind}.html`}
   jsonld={itemListJsonLd(list.slice(0, 100), { name: `${kind.label}的課程` })}
 >
-<div class="card"><h2>{kind.label}</h2><div class="meta">共 {fmt(list.length)} 門課，其中 {fmt(kind.open)} 門正在招生</div></div>
+<div class="card"><h2>{kind.label}</h2><div class="meta">共 {fmt(list.length)} 門課，其中 {fmt(kind.open)} 門正在招生</div>
+{hubs.map(([href, text]) => <div class="meta-2">另見<a href={href}>{text}</a></div>)}</div>
 <CourseList list={list} />
 </Base>
