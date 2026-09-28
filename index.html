@@ -1,14 +1,4 @@
-<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="theme-color" content="#1e5ab8">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TK4G7BS0QF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TK4G7BS0QF');
-</script>
-<title>kho.tw 全台成人課程｜現在還報得到的課</title><meta name="description" content="全台社區大學、運動中心、樂齡中心與職訓課程共 32,908 門，其中 8,683 門正在招生。"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://kho.tw/#organization","name":"kho.tw","url":"https://kho.tw","logo":"https://kho.tw/apple-touch-icon.png","description":"全台社區大學、運動中心、樂齡中心與職訓課程共 32,908 門，其中 8,683 門正在招生。"},{"@type":"WebSite","@id":"https://kho.tw/#website","name":"kho.tw","url":"https://kho.tw","inLanguage":"zh-Hant-TW","publisher":{"@id":"https://kho.tw/#organization"},"potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://kho.tw/search.html?q={search_term_string}"},"query-input":"required name=search_term_string"}}]}</script><style>/* ============================================================
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="theme-color" content="#1e5ab8"><title>kho.tw 全台成人課程｜現在還報得到的課</title><meta name="description" content="全台社區大學、運動中心、樂齡中心與職訓課程共 32,908 門，其中 8,683 門正在招生。"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://kho.tw/#organization","name":"kho.tw","url":"https://kho.tw","logo":"https://kho.tw/apple-touch-icon.png","description":"全台社區大學、運動中心、樂齡中心與職訓課程共 32,908 門，其中 8,683 門正在招生。"},{"@type":"WebSite","@id":"https://kho.tw/#website","name":"kho.tw","url":"https://kho.tw","inLanguage":"zh-Hant-TW","publisher":{"@id":"https://kho.tw/#organization"}}]}</script><style>/* ============================================================
  * 本檔為統一設計系統的副本，請勿直接編輯。
  *
  * 來源：agent.system-integration-quality-control/templates/styles.css
@@ -431,6 +421,13 @@ th{color:var(--text-secondary);font-weight:600;white-space:nowrap}
 /* 已結束課程頁頂的「新一期／同類本期課」 */
 .next-list{margin:0 0 12px;padding-left:1.2em}
 .next-list li{margin-bottom:8px}
+
+/* 麵包屑（src/components/Breadcrumbs.astro）：主欄最上方、卡片之外，一行次要文字。
+   長課名允許換行，不做截斷——最後一項就是本頁標題，截掉等於藏資訊。 */
+.crumbs{margin:0 0 12px;font-size:var(--text-xs);color:var(--text-secondary)}
+.crumbs ol{display:flex;flex-wrap:wrap;list-style:none;margin:0;padding:0;gap:0 6px}
+.crumbs li{min-width:0;overflow-wrap:anywhere}
+.crumbs li+li::before{content:"›";margin-right:6px;color:var(--text-secondary)}
 
 /* 首頁專用：滿版一頁，橫豎都不可捲。與 site.css 一起內嵌進首頁（見 src/pages/index.astro）。 */
 
