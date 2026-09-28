@@ -7,6 +7,7 @@ import CourseList from '../../../components/CourseList.astro';
 import VenueSummary from '../../../components/VenueSummary.astro';
 import { getData, fmt, learnHref, certHref } from '../../../lib/data.mjs';
 import { shortCity, shortDistrict } from '../../../lib/facets.mjs';
+import { dominantSportsCenter } from '../../../lib/hubs.mjs';
 import { itemListJsonLd, SITE_URL } from '../../../../site/jsonld.mjs';
 
 export function getStaticPaths() {
@@ -32,16 +33,19 @@ const siblings = x.district
 const cityPage = x.district ? l.cities.find((c) => c.city === x.city) : null;
 const otherActs = (learnByCity.get(x.city) ?? []).filter((o) => o.activity.name !== a.name).slice(0, 16);
 const certN = x.list.filter((c) => certIds.has(c.id)).length;
+// 同一座運動中心佔六成以上：標題帶場館名，接「內湖運動中心游泳課」這種問法
+const center = dominantSportsCenter(x.list);
 const alias = a.aliases.length ? `（${a.aliases.join('、')}）` : '';
 ---
 <Base crumbs={learnCrumbs(a, { city: x.city, district: x.district, cityArea: cityPage?.area })}
-  title={`${place}${a.label}課程｜${full}${kinds.slice(0, 2).join('・')}開課時間與地點`}
+  title={center ? `${center.short}${a.label}課｜${place}${a.label}課程（${full}）時間與地點` : `${place}${a.label}課程｜${full}${kinds.slice(0, 2).join('・')}開課時間與地點`}
   description={`${full}的${a.name}${alias}課程共 ${fmt(x.list.length)} 門，其中 ${fmt(x.open)} 門招生中。開課單位有${providers.slice(0, 3).join('、')}${providers.length > 3 ? `等 ${providers.length} 個` : ''}，列出上課時間、地點與報名狀態。`}
   canonical={`${SITE_URL}${learnHref(a.name, x.area)}`}
   jsonld={itemListJsonLd(x.list.slice(0, 100), { name: `${full}${a.label}課程` })}
 >
 <div class="card"><h1>{place}{a.label}課程</h1>
 <div class="meta">{full}共 {fmt(x.list.length)} 門，其中 {fmt(x.open)} 門招生中{x.season && `，最多課集中在 ${x.season}`}</div>
+{center && <div class="meta-2">{center.name}的{a.label}課 {fmt(center.n)} 門，佔這一頁的大部分。</div>}
 <div class="meta-2">開課單位：{providers.slice(0, 6).join('、')}{providers.length > 6 && `等 ${providers.length} 個`}</div>
 {certN > 0 && certCitySet.has(x.city) && <div class="meta-2">其中 {fmt(certN)} 門是證照班，另見<a href={certHref(x.city)}>{x.city}證照班</a>。</div>}
 <div class="meta-2"><a href={learnHref(a.name)}>全台{a.label}課程</a>{cityPage && <Fragment>　<a href={learnHref(a.name, cityPage.area)}>{x.city}{a.label}課程</a></Fragment>}　<a href={`/city/${encodeURIComponent(x.city)}.html`}>{x.city}全部成人課程</a></div>

@@ -19,10 +19,12 @@ const { types } = getData();
 const KIND_LABEL = new Map(types.map((k) => [k.kind, k.label]));
 const kinds = [...l.list.reduce((m, c) => m.set(c.provider?.kind, (m.get(c.provider?.kind) ?? 0) + 1), new Map())]
   .filter(([k]) => KIND_LABEL.has(k)).sort((p, q) => q[1] - p[1]).slice(0, 3).map(([k]) => KIND_LABEL.get(k));
+// 課多半是運動中心開的（游泳、飛輪…）：標題補「運動中心X課」，接「運動中心 游泳課」這種問法
+const centerShare = l.list.filter((c) => c.provider?.kind === 'sports-center').length / l.list.length;
 const alias = a.aliases.length ? `（${a.aliases.join('、')}）` : '';
 ---
 <Base crumbs={learnCrumbs(a)}
-  title={`成人${a.label}課程｜全台 ${l.cities.length} 縣市開課地點與時間`}
+  title={centerShare >= 0.5 ? `成人${a.label}課程｜運動中心${a.label}課、全台 ${l.cities.length} 縣市開課地點與時間` : `成人${a.label}課程｜全台 ${l.cities.length} 縣市開課地點與時間`}
   description={`全台成人${a.name}${alias}課程共 ${fmt(l.list.length)} 門，其中 ${fmt(l.open)} 門招生中，${l.cities.slice(0, 4).map((x) => `${x.city}${fmt(x.list.length)}門`).join('、')}。${kinds.join('、')}開的課，附上課時間與地點。`}
   canonical={`${SITE_URL}${learnHref(a.name)}`}
   jsonld={itemListJsonLd(l.list.slice(0, 100), { name: `成人${a.label}課程` })}
