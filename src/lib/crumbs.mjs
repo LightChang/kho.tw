@@ -46,3 +46,9 @@ export function learnCrumbs({ name, label }, { city, district, cityArea } = {}) 
   const mid = cityArea ? [{ name: city, href: learnHref(name, cityArea) }] : [];
   return [...top, act, ...mid, here(district)];
 }
+
+/** 需求專題頁（產投、免費課、銀髮課）：首頁 › 專題 [› 縣市]。專題不在導覽列，直接掛首頁下。 */
+export function hubCrumbs(name, href, city) {
+  if (!city) return [HOME, here(name)];
+  return [HOME, { name, href }, here(city)];
+}

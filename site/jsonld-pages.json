@@ -65,6 +65,42 @@
       "basis": "同上（細項×地區頁）。"
     },
     {
+      "match": "/program/*.html",
+      "require": ["ItemList", "BreadcrumbList"],
+      "apply": ["ItemList"],
+      "basis": "同上（職訓方案全國頁：產投、職前訓練，2026-09-28）。"
+    },
+    {
+      "match": "/program/*/*.html",
+      "require": ["ItemList", "BreadcrumbList"],
+      "apply": ["ItemList"],
+      "basis": "同上（職訓方案縣市頁）。"
+    },
+    {
+      "match": "/free.html",
+      "require": ["ItemList", "BreadcrumbList"],
+      "apply": ["ItemList"],
+      "basis": "同上（免費課程全國頁）。"
+    },
+    {
+      "match": "/free/*.html",
+      "require": ["ItemList", "BreadcrumbList"],
+      "apply": ["ItemList"],
+      "basis": "同上（免費課程縣市頁）。"
+    },
+    {
+      "match": "/senior.html",
+      "require": ["ItemList", "BreadcrumbList"],
+      "apply": ["ItemList"],
+      "basis": "同上（銀髮・樂齡課程全國頁）。"
+    },
+    {
+      "match": "/senior/*.html",
+      "require": ["ItemList", "BreadcrumbList"],
+      "apply": ["ItemList"],
+      "basis": "同上（銀髮・樂齡課程縣市頁）。"
+    },
+    {
       "match": "/teacher/*.html",
       "require": ["BreadcrumbList"],
       "apply": ["ItemList"],

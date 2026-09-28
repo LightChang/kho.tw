@@ -1,0 +1,25 @@
+---
+// 需求專題頁（/program/、/free/、/senior/）的課程表：一門課一列的真 <table>。
+// mode="enroll"：職訓方案，列報名期間（來源的報名起訖）；mode="schedule"：免費、銀髮課，列上課時間。
+// 課名、單位、日期、狀態都照來源，不改寫；來源沒給的欄位留空，不猜。
+import StatusBadge from './StatusBadge.astro';
+import { WEEKDAY_LABEL, link, fmt } from '../lib/data.mjs';
+
+const { list, mode = 'schedule', showCity = true, max = 300 } = Astro.props;
+const md = (d) => (d ? d.slice(5).replace('-', '/') : '');
+const ymd = (d) => (d ? d.replaceAll('-', '/') : '');
+const when = (c) => {
+  const s = c.schedule?.slots?.[0];
+  if (!s) return c.schedule?.timeInfoRaw ?? '';
+  return [s.weekday ? WEEKDAY_LABEL[s.weekday] : '', s.startTime ? `${s.startTime}${s.endTime ? `–${s.endTime}` : ''}` : ''].filter(Boolean).join(' ');
+};
+const period = (e) => (e?.opensAt || e?.closesAt ? `${md(e.opensAt)}–${md(e.closesAt)}` : '');
+const rows = list.slice(0, max);
+---
+<table>
+<tr><th>課名</th><th>開課單位</th>{showCity && <th>地點</th>}<th>開課日</th>{mode === 'enroll' ? <th>報名期間</th> : <th>上課時間</th>}<th>報名狀態</th></tr>
+{rows.map((c) => (
+<tr><td><a href={link('course', c.slug)}>{c.title}</a></td><td>{c.provider?.nameRaw ?? ''}</td>{showCity && <td>{c.venue?.city ?? ''}{c.venue?.district ?? ''}</td>}<td class="tnum">{ymd(c.schedule?.startDate)}</td>{mode === 'enroll' ? <td class="tnum">{period(c.enrollment)}</td> : <td>{when(c)}</td>}<td><StatusBadge status={c.enrollment?.status} /></td></tr>
+))}
+</table>
+{list.length > max && <div class="meta-2">只列出前 {fmt(max)} 門，其餘見各縣市頁或用搜尋。</div>}

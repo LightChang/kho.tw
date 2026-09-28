@@ -15,6 +15,7 @@ import { collectTeachers, teachersWithPages, MIN_COURSES } from '../../transform
 import { todayTaipei } from '../../transform/_date.mjs';
 import { readdirSync } from 'node:fs';
 import { courseChangedAt, courseFirstSeen } from '../../site/sitemap.mjs';
+import { PROGRAMS, isFreeNow, isSenior, splitByCity, byEnrollDeadline } from './hubs.mjs';
 import { compileActivities, activitiesOf, isCert, venueDisplay, mainSeason, seasonOf, courseSeriesKey, courseTitleKey } from './facets.mjs';
 
 const ROOT = process.cwd();
@@ -68,6 +69,16 @@ export const learnRel = (name, area) => (area ? `learn/${name}/${area}.html` : `
 export const learnHref = (name, area) => `/${learnRel(name, area).split('/').map(encodeURIComponent).join('/')}`;
 export const certRel = (city) => (city ? `cert/${city}.html` : 'cert.html');
 export const certHref = (city) => `/${certRel(city).split('/').map(encodeURIComponent).join('/')}`;
+
+// 需求專題頁網址（規則見 hubs.mjs）：/program/產投.html、/program/產投/臺北市.html、/free/臺中市.html、/senior/臺北市.html
+const relOf = (dir, top, city) => (city ? `${dir}/${top ? `${top}/` : ''}${city}.html` : `${top ? `${dir}/${top}` : dir}.html`);
+const hrefOf = (rel) => `/${rel.split('/').map(encodeURIComponent).join('/')}`;
+export const programRel = (key, city) => relOf('program', key, city);
+export const programHref = (key, city) => hrefOf(programRel(key, city));
+export const freeRel = (city) => relOf('free', '', city);
+export const freeHref = (city) => hrefOf(freeRel(city));
+export const seniorRel = (city) => relOf('senior', '', city);
+export const seniorHref = (city) => hrefOf(seniorRel(city));
 
 const readNdjson = (file) => readFileSync(file, 'utf-8').split('\n').filter(Boolean).map((l) => JSON.parse(l));
 const readJson = (file) => JSON.parse(readFileSync(file, 'utf-8'));
@@ -301,6 +312,22 @@ function load() {
   };
   const certCitySet = new Set(cert.cities.map((x) => x.city));
 
+  // ── 需求專題：職訓方案、免費課、銀髮課（只收還沒上完的課，規則見 hubs.mjs） ──
+  const current = courses.filter((c) => !hasEnded(c));
+  const hub = (list) => ({
+    list, open: list.filter(isOpen).length,
+    cities: splitByCity(list, FACET_MIN.city).map((x) => ({ ...x, open: x.list.filter(isOpen).length })),
+  });
+  const programs = PROGRAMS.map((p) => ({ ...p, ...hub(current.filter(p.match).sort(byEnrollDeadline)) }));
+  const free = hub(current.filter(isFreeNow).sort(byStatusThenDate));
+  const senior = hub(current.filter((c) => isSenior(c) && c.enrollment?.status !== 'cancelled').sort(byStatusThenDate));
+  /** 縣市頁用：這個縣市有哪些專題頁 [{ href, text, n }] */
+  const hubLinksOf = (city) => [
+    ...programs.map((p) => [p.cities.find((x) => x.city === city), programHref(p.key, city), `${city}${p.short}`]),
+    [free.cities.find((x) => x.city === city), freeHref(city), `${city}免費課程`],
+    [senior.cities.find((x) => x.city === city), seniorHref(city), `${city}銀髮・樂齡課程`],
+  ].filter(([x]) => x).map(([x, href, text]) => ({ href, text, n: x.list.length }));
+
   // ── 課程頁標題的區分：同課名、同單位、同學期還有別門課時，標題補上課時段 ──
   const titleKey = (c) => `${c.title}|${c.provider?.nameRaw ?? ''}|${seasonOf(c.schedule?.startDate) ?? ''}`;
   const titleCount = new Map();
@@ -363,7 +390,7 @@ function load() {
     map: { rows: mapRows, courseCount: mapCourses, openCount: mapOpen },
     teacherIndex, pageTeachers, teachers, rankedTeachers, coursePages,
     activities, actsByCourse, learn, learnByName, learnByTopic, learnByCity, learnLinksOf,
-    cert, certIds, certCitySet,
+    cert, certIds, certCitySet, programs, free, senior, hubLinksOf,
     titleCollides, successorsOf, alternativesOf, currentByVenue, sameTitleOf,
     changedAt, firstSeen, newestOpen, newestOpenByCity, newThisWeek,
   };

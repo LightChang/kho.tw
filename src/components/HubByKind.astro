@@ -1,0 +1,17 @@
+---
+// 免費課、銀髮課頁：依機構類型（社大、樂齡中心、職訓…）分段，每段一張課程表。
+import HubTable from './HubTable.astro';
+import { getData, fmt } from '../lib/data.mjs';
+
+const { list, suffix, showCity = true } = Astro.props;
+const LABEL = new Map(getData().types.map((k) => [k.kind, k.label]));
+const groups = [...list.reduce((m, c) => {
+  const k = c.provider?.kind ?? 'other';
+  return m.set(k, [...(m.get(k) ?? []), c]);
+}, new Map())].sort((a, b) => b[1].length - a[1].length);
+---
+{groups.map(([kind, l]) => (
+<div class="card"><h3>{LABEL.get(kind) ?? '其他單位'}{suffix}<span class="meta tnum">　{fmt(l.length)} 門</span></h3>
+<HubTable list={l} showCity={showCity} />
+</div>
+))}

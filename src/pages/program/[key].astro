@@ -1,0 +1,46 @@
+---
+// 職訓方案全國頁：/program/產投.html、/program/職前訓練.html。歸類規則見 src/lib/hubs.mjs。
+import Base from '../../layouts/Base.astro';
+import { hubCrumbs } from '../../lib/crumbs.mjs';
+import HubTable from '../../components/HubTable.astro';
+import ProgramRules from '../../components/ProgramRules.astro';
+import { getData, fmt, programHref, TODAY } from '../../lib/data.mjs';
+import { itemListJsonLd, SITE_URL } from '../../../site/jsonld.mjs';
+
+export function getStaticPaths() {
+  return getData().programs.map((p) => ({ params: { key: p.key }, props: { p } }));
+}
+
+const { p } = Astro.props;
+const { programs } = getData();
+const year = TODAY.slice(0, 4);
+const upcoming = p.list.filter((c) => c.enrollment?.status === 'upcoming').length;
+const openList = p.list.filter((c) => c.enrollment?.status === 'open');
+const others = programs.filter((o) => o.key !== p.key);
+const title = p.key === '產投'
+  ? `${year} 產投課程查詢：補助 50–80%、報名中 ${fmt(p.open)} 門（每日更新）`
+  : `${year} 職前訓練課程查詢：失業、待業者職訓班，報名中 ${fmt(p.open)} 門（每日更新）`;
+---
+<Base crumbs={hubCrumbs(p.short)}
+  title={title}
+  description={`${p.name}還沒上完的課共 ${fmt(p.list.length)} 門，${fmt(p.open)} 門招生中、${fmt(upcoming)} 門尚未開放報名。依縣市列出課名、開課單位、開課日與報名期間，資料每日自台灣就業通更新。`}
+  canonical={`${SITE_URL}${programHref(p.key)}`}
+  jsonld={itemListJsonLd(p.list.slice(0, 100), { name: `${p.name}課程` })}
+>
+<div class="card"><h1>{p.name}課程（{p.short}）</h1>
+<div class="meta">還沒上完的課 {fmt(p.list.length)} 門：招生中 {fmt(p.open)} 門、尚未開放報名 {fmt(upcoming)} 門</div>
+<div class="meta-2">收錄台灣就業通「職訓課程查詢」方案別為「{p.name}」的課{p.key === '職前訓練' && '，以及勞動部職業訓練課程開放資料裡的職前訓練課'}。報名狀態與期間照來源，每日更新。</div>
+{others.map((o) => <div class="meta-2">另見<a href={programHref(o.key)}>{o.short}</a>。</div>)}
+</div>
+<ProgramRules programKey={p.key} />
+{p.cities.length > 0 && (
+<div class="card"><h3>依縣市</h3>
+<table><tr><th>縣市</th><th>招生中</th><th>尚未開放</th><th>合計</th></tr>
+{p.cities.map((x) => <tr><td><a href={programHref(p.key, x.city)}>{x.city}{p.short}</a></td><td class="tnum">{fmt(x.open)}</td><td class="tnum">{fmt(x.list.filter((c) => c.enrollment?.status === 'upcoming').length)}</td><td class="tnum">{fmt(x.list.length)}</td></tr>)}
+</table>
+<div class="meta-2">課數未滿 8 門的縣市不另開頁，課程列在下表。</div></div>
+)}
+<div class="card"><h3>招生中的{p.short}（截止日近的在前）</h3>
+{openList.length ? <HubTable list={openList} mode="enroll" /> : <div class="meta">目前沒有招生中的課。</div>}
+</div>
+</Base>

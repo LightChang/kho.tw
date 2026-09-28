@@ -11,7 +11,7 @@ import { existsSync } from 'node:fs';
 import { rm } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { getData, learnRel, certRel, hasEnded, isNoindex } from './data.mjs';
+import { getData, learnRel, certRel, programRel, freeRel, seniorRel, hasEnded, isNoindex } from './data.mjs';
 import { SITE_URL } from '../../site/jsonld.mjs';
 import { writeSitemaps, courseHint, maxDate, isSitemapExcluded } from '../../site/sitemap.mjs';
 
@@ -45,6 +45,15 @@ function entries(d) {
     ]),
     { rel: certRel(), lastmod: listLastmod(d.cert.list), changefreq: 'weekly', priority: '0.7' },
     ...d.cert.cities.map((x) => ({ rel: certRel(x.city), lastmod: listLastmod(x.list), changefreq: 'weekly', priority: '0.6' })),
+    // 需求專題（2026-09-28）：職訓方案、免費課、銀髮課；報名狀態每天在變，給 daily
+    ...d.programs.flatMap((p) => [
+      { rel: programRel(p.key), lastmod: listLastmod(p.list), changefreq: 'daily', priority: '0.8' },
+      ...p.cities.map((x) => ({ rel: programRel(p.key, x.city), lastmod: listLastmod(x.list), changefreq: 'daily', priority: '0.7' })),
+    ]),
+    ...[[d.free, freeRel], [d.senior, seniorRel]].flatMap(([h, rel]) => [
+      { rel: rel(), lastmod: listLastmod(h.list), changefreq: 'daily', priority: '0.8' },
+      ...h.cities.map((x) => ({ rel: rel(x.city), lastmod: listLastmod(x.list), changefreq: 'daily', priority: '0.7' })),
+    ]),
   ];
   // 停開與已截止的課仍然收錄，只是 priority 低、changefreq 長（見 site/sitemap.mjs）。
   // 上課已經結束的課比照「已截止」：來源常把狀態留在「狀態未知」或「開課中」，

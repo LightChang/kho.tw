@@ -1,0 +1,40 @@
+---
+// 職訓方案縣市頁：/program/產投/臺北市.html。門檻見 data.mjs 的 FACET_MIN.city。
+import Base from '../../../layouts/Base.astro';
+import { hubCrumbs } from '../../../lib/crumbs.mjs';
+import HubTable from '../../../components/HubTable.astro';
+import ProgramRules from '../../../components/ProgramRules.astro';
+import { getData, fmt, programHref, link, TODAY } from '../../../lib/data.mjs';
+import { shortCity } from '../../../lib/facets.mjs';
+import { itemListJsonLd, SITE_URL } from '../../../../site/jsonld.mjs';
+
+export function getStaticPaths() {
+  return getData().programs.flatMap((p) => p.cities.map((x) => ({ params: { key: p.key, city: x.city }, props: { p, x } })));
+}
+
+const { p, x } = Astro.props;
+const year = TODAY.slice(0, 4);
+const place = shortCity(x.city);
+const upcoming = x.list.filter((c) => c.enrollment?.status === 'upcoming').length;
+const providers = [...new Set(x.list.map((c) => c.provider?.nameRaw).filter(Boolean))];
+const siblings = p.cities.filter((o) => o.city !== x.city);
+---
+<Base crumbs={hubCrumbs(p.short, programHref(p.key), x.city)}
+  title={`${year} ${place}${p.short}：報名中 ${fmt(x.open)} 門、即將開放 ${fmt(upcoming)} 門（每日更新）`}
+  description={`${x.city}${p.name}還沒上完的課 ${fmt(x.list.length)} 門，開課單位有${providers.slice(0, 3).join('、')}${providers.length > 3 ? `等 ${providers.length} 個` : ''}。列出課名、開課日、報名期間與報名狀態。`}
+  canonical={`${SITE_URL}${programHref(p.key, x.city)}`}
+  jsonld={itemListJsonLd(x.list.slice(0, 100), { name: `${x.city}${p.name}課程` })}
+>
+<div class="card"><h1>{place}{p.short}</h1>
+<div class="meta">{x.city}還沒上完的課 {fmt(x.list.length)} 門：招生中 {fmt(x.open)} 門、尚未開放報名 {fmt(upcoming)} 門</div>
+<div class="meta-2">收錄規則同<a href={programHref(p.key)}>全台{p.short}</a>。<a href={link('city', x.city)}>{x.city}全部成人課程</a></div>
+</div>
+<ProgramRules programKey={p.key} />
+<div class="card"><h3>{x.city}{p.short}一覽</h3>
+<HubTable list={x.list} mode="enroll" showCity={true} max={400} />
+</div>
+{siblings.length > 0 && (
+<div class="card"><h3>其他縣市的{p.short}</h3>
+<ul class="chips">{siblings.map((o) => <li><a href={programHref(p.key, o.city)}>{o.city}<span class="n tnum">{fmt(o.open)}／{fmt(o.list.length)}</span></a></li>)}</ul></div>
+)}
+</Base>

@@ -1,0 +1,27 @@
+---
+// 銀髮・樂齡課程全國頁：樂齡中心的課，加上其他單位課名寫明樂齡、銀髮、長青、熟齡的課（規則見 src/lib/hubs.mjs 的 isSenior）。
+import Base from '../layouts/Base.astro';
+import { hubCrumbs } from '../lib/crumbs.mjs';
+import HubByKind from '../components/HubByKind.astro';
+import { getData, fmt, seniorHref, link } from '../lib/data.mjs';
+import { itemListJsonLd, SITE_URL } from '../../site/jsonld.mjs';
+
+const { senior } = getData();
+---
+<Base crumbs={hubCrumbs('銀髮・樂齡課程')}
+  title={`銀髮課程・樂齡課程：樂齡中心、社大、運動中心的長輩課（${fmt(senior.list.length)} 門）`}
+  description={`全台還沒上完的銀髮・樂齡課程 ${fmt(senior.list.length)} 門，其中 ${fmt(senior.open)} 門招生中，${senior.cities.slice(0, 4).map((x) => `${x.city}${fmt(x.list.length)}門`).join('、')}。收樂齡學習中心的課，以及課名寫明樂齡、銀髮、長青的課。`}
+  canonical={`${SITE_URL}${seniorHref()}`}
+  jsonld={itemListJsonLd(senior.list.slice(0, 100), { name: '銀髮・樂齡課程' })}
+>
+<div class="card"><h1>銀髮・樂齡課程</h1>
+<div class="meta">全台 {fmt(senior.list.length)} 門，其中 {fmt(senior.open)} 門招生中</div>
+<div class="meta-2">收錄樂齡學習中心的課，以及社大、運動中心、圖書館等單位課名寫明樂齡、銀髮、長青、熟齡的課；職訓課只收寫明「高齡者專班」「中高齡」的班。年齡等報名資格以開課單位公告為準。另見<a href={link('type', 'senior-center')}>樂齡中心的全部課程</a>。</div>
+</div>
+{senior.cities.length > 0 && (
+<div class="card"><h3>依縣市</h3>
+<ul class="chips">{senior.cities.map((x) => <li><a href={seniorHref(x.city)}>{x.city}銀髮課程<span class="n tnum">{fmt(x.open)}／{fmt(x.list.length)}</span></a></li>)}</ul>
+<div class="meta-2">數字是招生中／全部。未滿 8 門的縣市不另開頁，課程列在下方。</div></div>
+)}
+<HubByKind list={senior.list} suffix="的銀髮・樂齡課" />
+</Base>

@@ -1,0 +1,27 @@
+---
+// 免費課程全國頁：來源標示免費、還沒上完、報名沒截止的課（規則見 src/lib/hubs.mjs 的 isFreeNow）。
+import Base from '../layouts/Base.astro';
+import { hubCrumbs } from '../lib/crumbs.mjs';
+import HubByKind from '../components/HubByKind.astro';
+import { getData, fmt, freeHref } from '../lib/data.mjs';
+import { itemListJsonLd, SITE_URL } from '../../site/jsonld.mjs';
+
+const { free } = getData();
+---
+<Base crumbs={hubCrumbs('免費課程')}
+  title={`免費課程：這一季不用錢的社大、樂齡、圖書館、職訓課（${fmt(free.list.length)} 門）`}
+  description={`全台來源標示免費、還沒上完的成人課程 ${fmt(free.list.length)} 門，其中 ${fmt(free.open)} 門招生中，${free.cities.slice(0, 4).map((x) => `${x.city}${fmt(x.list.length)}門`).join('、')}。依縣市與開課單位類型整理。`}
+  canonical={`${SITE_URL}${freeHref()}`}
+  jsonld={itemListJsonLd(free.list.slice(0, 100), { name: '免費成人課程' })}
+>
+<div class="card"><h1>免費課程</h1>
+<div class="meta">全台 {fmt(free.list.length)} 門，其中 {fmt(free.open)} 門招生中</div>
+<div class="meta-2">只收來源明寫免費（學員負擔 0 元）的課；沒有費用資料的課不算，所以實際的免費課不只這些。已截止、停開與上完的課不列。材料費、保險費等另計的費用以開課單位公告為準。</div>
+</div>
+{free.cities.length > 0 && (
+<div class="card"><h3>依縣市</h3>
+<ul class="chips">{free.cities.map((x) => <li><a href={freeHref(x.city)}>{x.city}免費課程<span class="n tnum">{fmt(x.open)}／{fmt(x.list.length)}</span></a></li>)}</ul>
+<div class="meta-2">數字是招生中／全部。未滿 8 門的縣市不另開頁，課程列在下方。</div></div>
+)}
+<HubByKind list={free.list} suffix="的免費課" />
+</Base>

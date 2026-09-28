@@ -1,0 +1,36 @@
+---
+// 免費課程縣市頁：/free/臺中市.html。門檻見 data.mjs 的 FACET_MIN.city。
+import Base from '../../layouts/Base.astro';
+import { hubCrumbs } from '../../lib/crumbs.mjs';
+import HubByKind from '../../components/HubByKind.astro';
+import { getData, fmt, freeHref, link } from '../../lib/data.mjs';
+import { shortCity } from '../../lib/facets.mjs';
+import { itemListJsonLd, SITE_URL } from '../../../site/jsonld.mjs';
+
+export function getStaticPaths() {
+  return getData().free.cities.map((x) => ({ params: { city: x.city }, props: { x } }));
+}
+
+const { x } = Astro.props;
+const { free, types } = getData();
+const LABEL = new Map(types.map((k) => [k.kind, k.label]));
+const kinds = [...new Set(x.list.map((c) => LABEL.get(c.provider?.kind)).filter(Boolean))];
+const place = shortCity(x.city);
+const siblings = free.cities.filter((o) => o.city !== x.city);
+---
+<Base crumbs={hubCrumbs('免費課程', freeHref(), x.city)}
+  title={`${place}免費課程：這一季不用錢的${kinds.slice(0, 3).join('、')}課（${fmt(x.list.length)} 門）`}
+  description={`${x.city}來源標示免費、還沒上完的成人課程 ${fmt(x.list.length)} 門，其中 ${fmt(x.open)} 門招生中。開課單位類型：${kinds.join('、')}。列出上課時間、地點與報名狀態。`}
+  canonical={`${SITE_URL}${freeHref(x.city)}`}
+  jsonld={itemListJsonLd(x.list.slice(0, 100), { name: `${x.city}免費課程` })}
+>
+<div class="card"><h1>{place}免費課程</h1>
+<div class="meta">{x.city} {fmt(x.list.length)} 門，其中 {fmt(x.open)} 門招生中</div>
+<div class="meta-2">只收來源明寫免費（學員負擔 0 元）的課，已截止、停開與上完的課不列；材料費、保險費等另計的費用以開課單位公告為準。<a href={freeHref()}>全台免費課程</a>　<a href={link('city', x.city)}>{x.city}全部成人課程</a></div>
+</div>
+<HubByKind list={x.list} suffix="的免費課" showCity={true} />
+{siblings.length > 0 && (
+<div class="card"><h3>其他縣市的免費課程</h3>
+<ul class="chips">{siblings.map((o) => <li><a href={freeHref(o.city)}>{o.city}<span class="n tnum">{fmt(o.list.length)}</span></a></li>)}</ul></div>
+)}
+</Base>
