@@ -262,6 +262,9 @@ duration、`scheduleTimezone: Asia/Taipei`）、`location`（含 `PostalAddress`
 /venue/<slug>.html   場館頁＝課程表（本期課依星期排，可依細項篩選）
 /learn.html          細項索引         /learn/<細項>.html、/learn/<細項>/<縣市或縣市+行政區>.html
 /cert.html           證照班           /cert/<縣市>.html
+/program/產投.html    產投課程         /program/<產投|職前訓練>/<縣市>.html（只收還沒上完的課，報名期間表）
+/free.html           免費課程         /free/<縣市>.html（來源明寫免費、報名沒截止）
+/senior.html         銀髮・樂齡課程   /senior/<縣市>.html（樂齡中心＋課名寫明樂齡、銀髮的課）
 /sitemap.xml         sitemap index，指向五個分檔 sitemap-<群組>-<n>.xml
 /robots.txt          全站開放檢索，指向 sitemap.xml 的絕對網址
 ```
