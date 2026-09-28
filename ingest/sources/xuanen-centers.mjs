@@ -34,6 +34,9 @@ export const SITES = [
   { site: 'bq01', url: 'https://bbq.xuanen.com.tw/bq01.aspx', operator: '板橋國民運動中心' },
   { site: 'nt01', url: 'https://bnt.xuanen.com.tw/nt01.aspx', operator: '樹林國民運動中心' },
   { site: 'slsc68', url: 'https://www.ymca.com.tw/slsc68.aspx', operator: '士林運動中心 YMCA' },
+  // 2026-09-29 補：蘆洲國民運動中心（展昭）官網每個課程頁的「如要報名請點此連結」都指到 bcc cc01，
+  // 報名須知頁的營業人是「展昭國際企業股份有限公司蘆洲營業所」。同主機 cc02–cc05 回空頁。
+  { site: 'bcc-cc01', url: 'https://bcc.xuanen.com.tw/cc01.aspx', operator: '展昭' },
 ];
 
 export const meta = {

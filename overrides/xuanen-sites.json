@@ -40,5 +40,7 @@
   "_probe2": "2026-09-28 以各站 Module=class_booking&files=class_before 報名須知頁的服務電話查證：wd31 (02)2626-9222 與舞動陽光官網淡水國民運動中心頁相同；wd32 (02)2297-1000 與新北市體育局泰山國民運動中心頁相同，且首頁公告是「泰運盃」「泰山農產運動節」；wd33 (02)2296-9000 與舞動陽光泰山體育館官網（tssp.wdygsports.com.tw）相同。wd22 (02)2708-6000 查不到對應場館，仍不填。fe02、fe03 由頁面「回官網」連結判定；tp27 的報名須知寫明「救國團臺中市烏日全民運動館」。",
   "cyc-tp27": { "venueName": "臺中市烏日全民運動館", "site": "wrcsc.cyc.org.tw", "city": "臺中市", "district": "烏日區" },
   "fe02": { "venueName": "竹北國民運動中心", "site": "www.zbsports.com.tw", "city": "新竹縣", "district": "竹北市" },
-  "fe03": { "venueName": "土城國民運動中心", "site": "www.tcsports.com.tw", "city": "新北市", "district": "土城區" }
+  "fe03": { "venueName": "土城國民運動中心", "site": "www.tcsports.com.tw", "city": "新北市", "district": "土城區" },
+  "_probe3": "2026-09-29：bcc-cc01 由蘆洲國民運動中心官網（lzsc.chanchao.com.tw/LESSON/GetItem/16–26）的報名連結與報名須知頁營業人「展昭國際企業股份有限公司蘆洲營業所」判定；門牌取自全國運動場館資訊「蘆洲國民運動中心」（新北市蘆洲區長樂路235-1號）。",
+  "bcc-cc01": { "venueName": "蘆洲國民運動中心", "site": "lzsc.chanchao.com.tw", "city": "新北市", "district": "蘆洲區" }
 }
