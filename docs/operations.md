@@ -250,6 +250,13 @@ curl -s https://kho.tw/sitemap.xml | head -3
 tail -40 /mnt/yao-care/kho.tw/data/logs/pipeline-$(date +%Y-%m-%d).log
 ```
 
+**圖片課表會叫 claude**（2026-09-29 起）：`center-timetable-images` 抓到新的課表圖時，
+會在這一輪裡呼叫 `/root/.local/bin/claude -p`（預設設定目錄，與 seo-ops 大腦層同一個帳號）讀圖，
+一份課表約 1 分鐘、0.2–1 美元。圖沒換就讀 `data/vision-cache/` 的快取，不會呼叫。
+claude 失敗或結果沒過驗證時，那份課表沿用上一次的結果，log 會有「沿用上一次」或「這份先不收」；
+同一組圖被退件後不會每輪重讀，要重讀：`KHO_VISION_RETRY=1 node transform/scheduler.mjs --force center-timetable-images`。
+可換模型：`KHO_VISION_MODEL`（預設 opus）。
+
 **gh-pages worktree** 在 `/root/.cache/kho-tw-gh-pages`（不在專案磁碟上，那顆快滿了）。
 壞掉就整個刪掉，腳本下一輪會自己重建。
 

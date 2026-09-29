@@ -78,7 +78,7 @@ src/                        Astro 靜態網站 → dist/（2026-09-15 由自寫�
 
 ## 4. 目前接了什麼（2026-09-13 實跑）
 
-課程來源 21 支：
+課程來源 22 支：
 
 | 來源 | 筆數 | 說明 |
 |---|---|---|
@@ -88,6 +88,7 @@ src/                        Astro 靜態網站 → dist/（2026-09-15 由自寫�
 | cc-shared-platform | 4,077 | 26 站共用平台（週課表／圖片／表格三種版面） |
 | xuanen-centers | 3,859 | 34 個運動中心報名系統，**全部帶名額數字**。2026-09-28 改為各站自讀類別代碼、加土城等 3 站，38 站 10,414 門（`probe/2026-09-28-sports-centers.md`） |
 | teamxports-centers | 578 | 2026-09-28 接。全越運動 8 館（三峽、鶯歌、信義、豐原…），公開 Web API，帶剩餘名額；教師姓名來源自己遮蔽，不收 |
+| center-timetable-images | 859 | 2026-09-29 接。新莊、中和、五股國民運動中心只有圖片課表（新莊是 Drive 上的掃描 PDF），由主機的 headless claude 讀圖、程式驗證，以圖片雜湊快取在 `data/vision-cache/`（見 `ingest/sources/_vision.mjs` 檔頭）；**沒有名額**。蘆洲不在這裡：它的報名系統是軒恩 bcc cc01，在 xuanen-centers |
 | changjia-centers | 193 | 2026-09-28 接。長佳 Web App（新店、蘆竹），有已報名／名額，**沒有起訖日**（詳情 API 擋外部呼叫） |
 | taiwanjobs | 2,396 | 職訓七類方案，含產投 1,820 |
 | ntpc-cc | 1,500 | 新北聯網，只抓近 180 天 |

@@ -48,7 +48,7 @@ export const meta = {
     'https://www.zhsc.com.tw/blog-feed.xml',
     'https://wgsc.chanchao.com.tw/news.php?pa=getList',
   ],
-  recordCount: null, // 首次抽取後填
+  recordCount: 859, // 實測 2026-09-29：新莊 237、中和 226、五股 396（五股 09-10 與 11-12 兩期都還在）
   verifiedAt: '2026-09-29',
 };
 

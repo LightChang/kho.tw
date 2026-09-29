@@ -114,6 +114,13 @@ defaultVenue: {
 那 594 門改走 `registry-name` 的課要等下一批 TGOS 才會有座標——名錄的門牌進了
 `data/staged/`，`geocode/build_tgos_input.py` 下一輪自然會送。接名錄的收益是分兩階段到的。
 
+### 圖片課表（2026-09-29 起）
+
+只有圖片或掃描 PDF 課表的場館，不要自己寫 OCR 解析器，走 `ingest/sources/_vision.mjs`：
+把一份課表的全部頁面交給 `extractTimetable()`，它負責快取（`data/vision-cache/<來源>/<雜湊>.json`，進版控）、
+呼叫主機的 headless claude、驗證與「沒過就沿用上一次」。新來源只要寫「課表在哪、有哪些頁」。
+驗證不過的原因寫在快取檔的 `errors`／`warnings`，改驗證條件前先看那裡。
+
 ## 5. 名額欄位：`capacity` 與 `available`
 
 `enrollment.capacity` 是總名額、`enrollment.available` 是**剩餘**名額。本站首頁的「快額滿」完全靠 `available` 排序，而剩餘名額是全台少數只有這裡看得到的資訊——**填錯就是假的倒數**。
