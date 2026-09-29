@@ -1,9 +1,13 @@
 ---
 // 講師頁。身分認定＝姓名＋開課單位，規則與理由見 transform/teachers.mjs。
+// 2026-09-29：原本只有姓名＋課程卡，約八千頁內容雷同。改為從這位講師自己的課程
+// 算出「教什麼、在哪上、什麼時段、多少錢、開了幾年」——全部是已收錄課程的公開欄位
+// 聚合，不引入課程以外的個人資訊（見頁尾聲明）。
 import Base from '../../layouts/Base.astro';
 import { underSection } from '../../lib/crumbs.mjs';
 import CourseCard from '../../components/CourseCard.astro';
-import { getData, fmt, link } from '../../lib/data.mjs';
+import VenueSummary from '../../components/VenueSummary.astro';
+import { getData, fmt, link, learnHref, WEEKDAY_LABEL } from '../../lib/data.mjs';
 import { itemListJsonLd, teacherUrl } from '../../../site/jsonld.mjs';
 import { shortProvider } from '../../../transform/slug.mjs';
 
@@ -12,16 +16,85 @@ export function getStaticPaths() {
 }
 
 const { teacher: t, list, open, sameName } = Astro.props;
+const { actsByCourse, learnByName } = getData();
+
+const countBy = (items) => [...items.reduce((m, k) => (k ? m.set(k, (m.get(k) ?? 0) + 1) : m), new Map())]
+  .sort((a, b) => b[1] - a[1] || String(a[0]).localeCompare(String(b[0])));
+
+// 教什麼：細項（讀者會打的字）優先，對不到細項才退回 18 大類
+const acts = countBy(list.flatMap((c) => actsByCourse.get(c.id) ?? []))
+  .map(([name, n]) => ({ l: learnByName.get(name), n })).filter((x) => x.l);
+const cats = countBy(list.map((c) => c.category));
+const teaches = (acts.length ? acts.map((x) => x.l.activity.label.split('・')[0]) : cats.map(([k]) => k)).slice(0, 3);
+
+// 在哪：縣市
+const cities = countBy(list.map((c) => c.venue?.city));
+
+// 什麼時段：週間白天／週間晚上／週末
+const slotKind = (s) => {
+  if (!s?.weekday) return null;
+  if (s.weekday >= 6) return '週末';
+  return s.startTime && s.startTime >= '17:00' ? '週間晚上' : '週間白天';
+};
+const slots = countBy(list.map((c) => slotKind(c.schedule?.slots?.[0])));
+const days = countBy(list.map((c) => c.schedule?.slots?.[0]?.weekday)).slice(0, 3)
+  .map(([d, n]) => `${WEEKDAY_LABEL[d]} ${fmt(n)} 門`);
+
+// 多少錢
+const prices = list.map((c) => c.price).filter((p) => Number.isFinite(p) && p > 0).sort((a, b) => a - b);
+const free = list.filter((c) => c.isFree).length;
+
+// 開了多久：來源的學期（民國年）優先，沒有就用開課日
+const years = [...new Set(list.map((c) => c.term?.year ?? (c.schedule?.startDate ? Number(c.schedule.startDate.slice(0, 4)) - 1911 : null)).filter(Boolean))].sort();
+const span = years.length ? (years.length > 1 ? `民國 ${years[0]}–${years.at(-1)} 年` : `民國 ${years[0]} 年`) : '';
+
+const lead = [
+  `${t.name}在${t.provider}開過 ${fmt(list.length)} 門課`,
+  span && `（${span}）`,
+  teaches.length ? `，主要教${teaches.join('、')}` : '',
+  slots[0] ? `，多排在${slots[0][0]}` : '',
+  '。',
+].join('');
+
+const title = `${t.name}｜${t.provider}${teaches.length ? `・${teaches.slice(0, 2).join('、')}課程` : ''}`;
+const description = `${lead}目前 ${fmt(open)} 門招生中${cities[0] ? `，上課地點以${cities[0][0]}為主` : ''}。`;
 ---
 <Base crumbs={underSection('teachers', t.name)}
-  title={`${t.name}｜${t.provider}`}
-  description={`${t.provider}講師${t.name}在本站收錄 ${fmt(list.length)} 門課，其中 ${fmt(open)} 門招生中。`}
+  title={title}
+  description={description}
   canonical={teacherUrl(t)}
   jsonld={itemListJsonLd(list.slice(0, 100), { name: `${t.name}的課程` })}
 >
 <div class="card"><h2>{t.name}</h2>
 <div class="meta">{t.provider}</div>
+<p>{lead}</p>
 <div class="meta-2">本站收錄 {fmt(list.length)} 門課，其中 {fmt(open)} 門招生中</div></div>
+
+{(acts.length > 0 || cats.length > 0) && (
+<div class="card"><h3>教學類別</h3>
+{acts.length > 0
+  ? <ul class="chips">{acts.slice(0, 8).map((x) => <li><a href={learnHref(x.l.activity.name)}>{x.l.activity.label}<span class="n tnum">{fmt(x.n)}</span></a></li>)}</ul>
+  : <ul class="chips">{cats.slice(0, 6).map(([k, n]) => <li>{k}<span class="n tnum">{fmt(n)}</span></li>)}</ul>}
+{acts.length > 0 && cats.length > 0 && <div class="meta-2">大類：{cats.slice(0, 4).map(([k, n]) => `${k} ${fmt(n)} 門`).join('、')}</div>}
+</div>
+)}
+
+{(slots.length > 0 || prices.length > 0 || free > 0) && (
+<div class="card"><h3>上課時段與費用</h3>
+<table>
+{slots.length > 0 && <tr><th>時段</th><td>{slots.map(([k, n]) => `${k} ${fmt(n)} 門`).join('、')}</td></tr>}
+{days.length > 0 && <tr><th>常見星期</th><td>{days.join('、')}</td></tr>}
+{prices.length > 0 && <tr><th>學費</th><td class="tnum">{prices[0] === prices.at(-1) ? `${fmt(prices[0])} 元` : `${fmt(prices[0])}–${fmt(prices.at(-1))} 元`}</td></tr>}
+{free > 0 && <tr><th>免費課程</th><td class="tnum">{fmt(free)} 門</td></tr>}
+{cities.length > 0 && <tr><th>縣市</th><td>{cities.slice(0, 4).map(([k, n]) => `${k} ${fmt(n)} 門`).join('、')}</td></tr>}
+</table>
+<div class="meta-2">依本站收錄的課程公開資料計算，實際以開課單位公告為準。</div>
+</div>
+)}
+
+<VenueSummary list={list} max={6} />
+
+<h3>課程</h3>
 {list.slice(0, 200).map((c) => <CourseCard course={c} />)}
 {list.length > 200 && <div class="meta-2">只列出前 200 門，其餘請用搜尋。</div>}
 {sameName.length > 0 && (
