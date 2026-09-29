@@ -1,0 +1,81 @@
+{
+ "hash": "b14505f23a6744ffcaf26b389988c082d4f59538335747e5b9d03168d22cbe88",
+ "docKey": "zh:post:09-10兒童跑酷班",
+ "venue": "新北市中和國民運動中心",
+ "extractedAt": "2026-09-28T23:44:03.009Z",
+ "model": "opus",
+ "costUsd": 0.1619336,
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "result": {
+  "isTimetable": true,
+  "periodStartMonth": null,
+  "periodEndMonth": null
+ },
+ "courses": [
+  {
+   "code": null,
+   "title": "跑酷",
+   "category": "跑酷",
+   "section": "課程分齡時段",
+   "weekdays": [
+    6
+   ],
+   "startTime": "14:00",
+   "endTime": "15:00",
+   "startDate": "2026-09-05",
+   "endDate": "2026-10-31",
+   "sessions": 5,
+   "price": 2000,
+   "teacher": null,
+   "place": null,
+   "audience": "4-6歲",
+   "capacityText": null,
+   "note": "課程日期：9/5、9/19、10/3、10/17、10/31；單堂體驗$500",
+   "page": 1
+  },
+  {
+   "code": null,
+   "title": "跑酷",
+   "category": "跑酷",
+   "section": "課程分齡時段",
+   "weekdays": [
+    6
+   ],
+   "startTime": "15:00",
+   "endTime": "16:00",
+   "startDate": "2026-09-05",
+   "endDate": "2026-10-31",
+   "sessions": 5,
+   "price": 2000,
+   "teacher": null,
+   "place": null,
+   "audience": "6-10歲",
+   "capacityText": null,
+   "note": "課程日期：9/5、9/19、10/3、10/17、10/31；單堂體驗$500",
+   "page": 1
+  },
+  {
+   "code": null,
+   "title": "跑酷",
+   "category": "跑酷",
+   "section": "課程分齡時段",
+   "weekdays": [
+    6
+   ],
+   "startTime": "16:00",
+   "endTime": "17:00",
+   "startDate": "2026-09-05",
+   "endDate": "2026-10-31",
+   "sessions": 5,
+   "price": 2000,
+   "teacher": null,
+   "place": null,
+   "audience": "10-15歲",
+   "capacityText": null,
+   "note": "課程日期：9/5、9/19、10/3、10/17、10/31；單堂體驗$500",
+   "page": 1
+  }
+ ]
+}

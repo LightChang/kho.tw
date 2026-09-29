@@ -1,0 +1,81 @@
+{
+ "hash": "c689e7e482cc8fa4cced654347d900ef450b35d6c4d76443b4f479b0ddf28f6d",
+ "docKey": "zh:post:第三季-劍道課程-7-9月",
+ "venue": "新北市中和國民運動中心",
+ "extractedAt": "2026-09-28T23:46:34.080Z",
+ "model": "opus",
+ "costUsd": 0.1706432,
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "result": {
+  "isTimetable": true,
+  "periodStartMonth": "2026-07",
+  "periodEndMonth": "2026-09"
+ },
+ "courses": [
+  {
+   "code": null,
+   "title": "週三課",
+   "category": "劍道",
+   "section": null,
+   "weekdays": [
+    3
+   ],
+   "startTime": "19:20",
+   "endTime": "20:50",
+   "startDate": null,
+   "endDate": null,
+   "sessions": null,
+   "price": 4641,
+   "teacher": null,
+   "place": null,
+   "audience": null,
+   "capacityText": null,
+   "note": null,
+   "page": 1
+  },
+  {
+   "code": null,
+   "title": "週六課",
+   "category": "劍道",
+   "section": null,
+   "weekdays": [
+    6
+   ],
+   "startTime": "09:30",
+   "endTime": "11:30",
+   "startDate": null,
+   "endDate": null,
+   "sessions": null,
+   "price": 3672,
+   "teacher": null,
+   "place": null,
+   "audience": null,
+   "capacityText": null,
+   "note": null,
+   "page": 1
+  },
+  {
+   "code": null,
+   "title": "週日課",
+   "category": "劍道",
+   "section": null,
+   "weekdays": [
+    7
+   ],
+   "startTime": "14:30",
+   "endTime": "16:30",
+   "startDate": null,
+   "endDate": null,
+   "sessions": null,
+   "price": 3672,
+   "teacher": null,
+   "place": null,
+   "audience": null,
+   "capacityText": null,
+   "note": null,
+   "page": 1
+  }
+ ]
+}

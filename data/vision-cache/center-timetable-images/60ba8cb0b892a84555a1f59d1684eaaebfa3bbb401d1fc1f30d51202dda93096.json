@@ -1,0 +1,17 @@
+{
+ "hash": "60ba8cb0b892a84555a1f59d1684eaaebfa3bbb401d1fc1f30d51202dda93096",
+ "docKey": "zh:post:球類-一對一課程",
+ "venue": "新北市中和國民運動中心",
+ "extractedAt": "2026-09-28T23:46:40.360Z",
+ "model": "opus",
+ "costUsd": 0.1387302,
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "result": {
+  "isTimetable": false,
+  "periodStartMonth": null,
+  "periodEndMonth": null
+ },
+ "courses": []
+}
