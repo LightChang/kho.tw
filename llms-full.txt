@@ -104,8 +104,8 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 報名狀態：額滿
 無限制
 資料來源：
-- taipei-cc：https://ss.twcc.org.tw/course/m_course_detail.php?u=3a81c2d7239c333cb18d59018955aab7（最後確認 2026-09-30；提供欄位：categoryRaw、description、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title）
-- taipei-cc：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-09-30；提供欄位：categoryRaw、description、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title）
+- taipei-cc：https://ss.twcc.org.tw/course/m_course_detail.php?u=3a81c2d7239c333cb18d59018955aab7（最後確認 2026-10-01；提供欄位：categoryRaw、description、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title）
+- taipei-cc：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-10-01；提供欄位：categoryRaw、description、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title）
 - moe-cc-courses：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-09-15；提供欄位：credit、enrollment、schedule、topicsRaw）
 - moe-cc-courses：https://ss.twcc.org.tw/course/m_course_detail.php?u=3a81c2d7239c333cb18d59018955aab7（最後確認 2026-09-15；提供欄位：credit、enrollment、schedule、topicsRaw）
 - moe-cc-detail：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-09-15；提供欄位：）
@@ -126,7 +126,7 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 - moe-cc-courses：https://www.tbmcc.tw/modules/tadnews/index.php?nsn=158（最後確認 2026-09-15；提供欄位：credit、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title、topicsRaw）
 - moe-cc-detail：https://www.tbmcc.tw/modules/tadnews/index.php?nsn=158（最後確認 2026-09-15；提供欄位：description）
 - moe-cc-detail：https://www.tbmcc.tw/modules/tadnews/index.php?nsn=158（最後確認 2026-09-15；提供欄位：description）
-- tainan-cc-portal：https://tncu.tn.edu.tw/Modules/Course/Show.php?ID=19637（最後確認 2026-09-30；提供欄位：schedule）
+- tainan-cc-portal：https://tncu.tn.edu.tw/Modules/Course/Show.php?ID=19637（最後確認 2026-10-01；提供欄位：schedule）
 
 ### 手沖精品咖啡
 網址：https://kho.tw/course/%E6%89%8B%E6%B2%96%E7%B2%BE%E5%93%81%E5%92%96%E5%95%A1-%E6%A1%83%E5%9C%92%E7%A4%BE%E5%A4%A7-ca272.html
@@ -163,7 +163,7 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 報名狀態：招生中
 淡水國民運動中心，11505，有氧課程類課程，週四 11:00–12:00上課，自 2026-09-03 起，地點：淡水國民運動中心。
 資料來源：
-- xuanen-centers：https://bwd.xuanen.com.tw/wd31.aspx?Module=class_booking&files=class_info（最後確認 2026-09-30；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
+- xuanen-centers：https://bwd.xuanen.com.tw/wd31.aspx?Module=class_booking&files=class_info（最後確認 2026-10-01；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
 
 ### 假日兒童班
 網址：https://kho.tw/course/%E5%81%87%E6%97%A5%E5%85%92%E7%AB%A5%E7%8F%AD-%E6%A8%B9%E6%9E%97%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-72551.html
@@ -177,7 +177,7 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 報名狀態：招生中
 樹林國民運動中心，11505，泳訓課程類課程，週日 10:50–12:00上課，自 2026-09-13 起，地點：樹林國民運動中心。
 資料來源：
-- xuanen-centers：https://ntcslsports.com.tw（最後確認 2026-09-30；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
+- xuanen-centers：https://ntcslsports.com.tw（最後確認 2026-10-01；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
 
 ### 熱舞派對有氧
 網址：https://kho.tw/course/%E7%86%B1%E8%88%9E%E6%B4%BE%E5%B0%8D%E6%9C%89%E6%B0%A7-%E7%AB%B9%E5%8C%97%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-65e7b.html
@@ -191,7 +191,7 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 報名狀態：招生中
 竹北國民運動中心，11505，有氧類課程，週三 18:30–19:30上課，自 2026-09-02 起，地點：新竹縣竹北國民運動中心。
 資料來源：
-- xuanen-centers：https://www.zbsports.com.tw（最後確認 2026-09-30；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
+- xuanen-centers：https://www.zbsports.com.tw（最後確認 2026-10-01；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
 
 
 ------------------------------------------------------------
@@ -203,4 +203,4 @@ sitemap 索引（分 pages／courses×2／venues／teachers 共 5 個分檔）�
 站內搜尋（課名／單位／講師）：https://kho.tw/search.html
 地圖（依座標找附近的課）：https://kho.tw/map.html
 
-更新於 2026-09-30（每小時抓取一次）。本頁每次建置重新生成，內容以此刻為準。
+更新於 2026-10-01（每小時抓取一次）。本頁每次建置重新生成，內容以此刻為準。
