@@ -7,12 +7,16 @@
 // 單看結束日會把剛開學的課當成已結束。整個地點都沒有本期課時，改排最近一期，並寫明已結束。
 //
 // 細項篩選是漸進增強：沒有 JavaScript 時整張課表照常顯示，細項標籤仍是連到細項頁的連結。
+//
+// 2026-09-30：門牌查詢（「苗栗縣竹南鎮福德路1號」）落地的場館頁常常只有幾門課。
+// 補上這個地點歷年的類別、開課單位、常見時段與同區其他上課地點，規則見 src/lib/venue-profile.mjs。
 import Base from '../../layouts/Base.astro';
 import { underCity } from '../../lib/crumbs.mjs';
 import CourseCard from '../../components/CourseCard.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
 import { getData, fmt, link, hasEnded, TODAY, WEEKDAY_LABEL, learnHref } from '../../lib/data.mjs';
 import { isCert, seasonOf, mainSeason } from '../../lib/facets.mjs';
+import { venueProfile, nearbyVenues, fmtDistance, NEARBY_RADIUS_M } from '../../lib/venue-profile.mjs';
 import { venueJsonLd, venueUrl } from '../../../site/jsonld.mjs';
 
 export function getStaticPaths() {
@@ -20,7 +24,36 @@ export function getStaticPaths() {
 }
 
 const { venue: v, list, display } = Astro.props;
-const { actsByCourse, learnByName } = getData();
+const { actsByCourse, learnByName, types, venuePages, venuePagesByArea } = getData();
+
+// ── 這個地點歷年的摘要（不分學期）與同區其他地點 ──
+const prof = venueProfile(list, {
+  actsOf: (c) => actsByCourse.get(c.id) ?? [],
+  kindLabel: new Map(types.map((k) => [k.kind, k.label])),
+});
+const profActs = prof.acts.map(([name, n]) => ({ name, n, l: learnByName.get(name) }));
+const inferred = list.filter((c) => c.category && c.categoryFrom === 'title').length;
+const countText = (pairs, max) => pairs.slice(0, max).map(([k, n]) => `${k} ${fmt(n)} 門`).join('、');
+const whenText = (() => {
+  if (!prof.timed) return '';
+  const share = (n) => n / prof.timed >= 0.6;
+  const side = share(prof.weekend) ? '週末' : share(prof.weekday) ? '週間' : '';
+  const dp = prof.dayparts.slice().sort((a, b) => b[1] - a[1])[0];
+  const part = dp && share(dp[1]) ? dp[0] : '';
+  if (side || part) return `多排在${side}${part}`;
+  return '週間、週末都有';
+})();
+const topCats = prof.categories.slice(0, 2);
+const lead = [
+  `本站收錄${v.name}${prof.span ? ` ${prof.span} 年` : ''}的 ${fmt(prof.total)} 門課`,
+  prof.providers.length === 1 ? `，都由${prof.providers[0].name}開設` : prof.providers.length > 1 ? `，來自 ${fmt(prof.providers.length)} 個開課單位，${prof.providers[0].name}最多` : '',
+  topCats.length ? (prof.categories.length === 1 ? `；類別是${topCats[0][0]}` : `；類別以${topCats.map(([k]) => k).join('、')}為主`) : '',
+  whenText ? `，${whenText}` : '',
+  '。',
+].join('');
+const near = nearbyVenues(v, venuePages, { byArea: venuePagesByArea });
+const nearTitle = near.basis === 'district' ? `${v.district}其他上課地點` : `直線 ${fmtDistance(NEARBY_RADIUS_M)}內的其他上課地點`;
+const nameOf = (p) => p.display?.heading ?? p.venue.name;
 
 const cutoff = new Date(Date.parse(`${TODAY}T00:00:00Z`) - 90 * 864e5).toISOString().slice(0, 10);
 let current = list.filter((c) => !hasEnded(c) || (c.schedule?.startDate ?? '') >= cutoff);
@@ -86,7 +119,7 @@ const title = hasTable
 const sameAsProvider = providers.length === 1 && (display.heading.includes(providers[0].name) || providers[0].name.includes(display.heading));
 const sample = [...new Set(list.map((c) => c.title))].slice(0, 3).join('、');
 const description = display.from === 'provider' || display.from === 'providers'
-  ? `${v.name}是${providerNote}的上課地點，共 ${fmt(list.length)} 門課，例如${sample}。`
+  ? `${v.name}是${providerNote}的上課地點，${prof.span ? `${prof.span} 年` : ''}共 ${fmt(list.length)} 門課${topCats.length ? `，類別以${topCats.map(([k]) => k).join('、')}為主` : ''}，例如${sample}。`
   : `${display.heading}${providerNote && !sameAsProvider ? `（${providerNote}）` : ''}的成人課程共 ${fmt(list.length)} 門${hasTable ? `；${season ?? '本期'}課程表依星期排列，共 ${fmt(current.length)} 門，例如${sample}` : ''}。${actNote}`;
 const timeOf = (s) => `${s.startTime ?? ''}${s.endTime ? `–${s.endTime}` : ''}` || '時間未提供';
 const slotsText = (c) => (c.schedule?.slots ?? []).map((s) => `${WEEKDAY_LABEL[s.weekday] ?? ''} ${timeOf(s)}`).join('、') || c.schedule?.timeInfoRaw || '';
@@ -97,6 +130,7 @@ const slotsText = (c) => (c.schedule?.slots ?? []).map((s) => `${WEEKDAY_LABEL[s
 {providerNote && <div class="meta">開課單位：{providerNote}</div>}
 {display.from === 'provider' && <div class="meta-2">來源只給了門牌，沒有地點名稱；這裡的課都由 {top.name} 開設，所以標示為它的上課地點。</div>}
 {display.from === 'providers' && <div class="meta-2">來源只給了門牌，沒有地點名稱；列出在這個地址開課的單位。</div>}
+<p>{lead}</p>
 <div class="meta-2">{v.lat ? `座標 ${v.lat}, ${v.lng}` : '尚無座標'}　共 {fmt(list.length)} 門課{v.city && <Fragment>　<a href={link('city', v.city)}>看{v.city}更多成人課程</a></Fragment>}</div></div>
 
 {hasTable && (
@@ -138,10 +172,40 @@ const slotsText = (c) => (c.schedule?.slots ?? []).map((s) => `${WEEKDAY_LABEL[s
 </div>
 )}
 
+<div class="card"><h2>這個地點的課程概況</h2>
+<table>
+{prof.byYear.length > 0 && <tr><th>開課年份</th><td class="tnum">{countText(prof.byYear.slice().reverse(), 6)}</td></tr>}
+{prof.categories.length > 0 && <tr><th>類別</th><td>{countText(prof.categories, 6)}</td></tr>}
+{prof.weekdays.length > 0 && <tr><th>常見星期</th><td class="tnum">{prof.weekdays.slice(0, 4).map(([d, n]) => `${WEEKDAY_LABEL[d]} ${fmt(n)} 門`).join('、')}</td></tr>}
+{prof.dayparts.length > 0 && <tr><th>時段</th><td class="tnum">{countText(prof.dayparts, 3)}</td></tr>}
+{prof.timed > 0 && <tr><th>週間／週末</th><td class="tnum">{[prof.weekday && `只在週間 ${fmt(prof.weekday)} 門`, prof.weekend && `只在週末 ${fmt(prof.weekend)} 門`, prof.timed - prof.weekday - prof.weekend > 0 && `兩者都有 ${fmt(prof.timed - prof.weekday - prof.weekend)} 門`].filter(Boolean).join('、')}</td></tr>}
+</table>
+{profActs.length > 0 && <ul class="chips">{profActs.slice(0, 10).map((x) => <li>{x.l ? <a href={learnHref(x.name)}>{x.l.activity.label}<span class="n tnum">{fmt(x.n)}</span></a> : <span class="chip">{x.name}<span class="n tnum">{fmt(x.n)}</span></span>}</li>)}</ul>}
+<div class="meta-2">依本站收錄的 {fmt(prof.total)} 門課計算{prof.timed < prof.total && `，其中 ${fmt(prof.timed)} 門有明確的上課星期與時間`}{inferred > 0 && `；類別有 ${fmt(inferred)} 門是依課名判斷`}。上午＝12:00 前開始，下午＝12:00–17:00，晚上＝17:00 起。實際以開課單位公告為準。</div>
+</div>
+
+{prof.providers.length > 0 && (
+<div class="card"><h2>在這裡開課的單位</h2>
+<table><tr><th>開課單位</th><th>課數</th><th>年份</th><th>類別</th></tr>
+{prof.providers.slice(0, 12).map((p) => <tr><td>{p.name}{p.kind && <div class="meta-2">{p.kind}</div>}</td><td class="tnum">{fmt(p.n)}</td><td class="tnum">{p.span}</td><td class="meta-2">{p.cats.join('、')}</td></tr>)}
+</table>
+{prof.providers.length > 12 && <div class="meta-2">另有 {fmt(prof.providers.length - 12)} 個單位。</div>}
+</div>
+)}
+
 {hasTable ? (others.length > 0 && <Fragment>
 <div class="card"><h2>其他學期的課程</h2><div class="meta-2">共 {fmt(others.length)} 門{others.length > 150 && '，列出前 150 門'}。</div></div>
 {others.slice(0, 150).map((c) => <CourseCard course={c} />)}
 </Fragment>) : list.slice(0, 200).map((c) => <CourseCard course={c} />)}
+
+{near.rows.length > 0 && (
+<div class="card"><h2>{nearTitle}</h2>
+<table><tr><th>地點</th><th>直線距離</th><th>開課單位</th><th>課數</th></tr>
+{near.rows.map((p) => <tr><td><a href={link('venue', p.venue.slug)}>{nameOf(p)}</a>{p.venue.address && !nameOf(p).includes(p.venue.address) && <div class="meta-2">{p.venue.address}</div>}</td><td class="tnum">{fmtDistance(p.m) || '—'}</td><td class="meta-2">{p.display.providers.slice(0, 2).map((x) => x.name).join('、')}</td><td class="tnum">{fmt(p.list.length)}</td></tr>)}
+</table>
+<div class="meta-2">{near.basis === 'district' ? `${v.city}${v.district}` : `${v.city}、與這裡直線 ${fmtDistance(NEARBY_RADIUS_M)}內`}共 {fmt(near.total)} 處其他上課地點{near.total > near.rows.length && `，列出${v.lat != null ? '直線距離最近' : '課程最多'}的 ${fmt(near.rows.length)} 處`}。{v.lat != null && '距離是兩地座標的直線距離，不是路程。'}{v.city && <Fragment> <a href={link('city', v.city)}>看{v.city}全部成人課程</a></Fragment>}</div>
+</div>
+)}
 
 <script>
   // 課表的細項篩選：點類別只顯示含該細項的列，再點一次恢復。沒有 JS 時連結照常連到細項頁。

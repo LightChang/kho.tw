@@ -194,6 +194,8 @@ function load() {
       list: list.sort(byStatusThenDate),
       display: venueDisplay(venues.get(id), list, venueNames),
     }));
+  // 同縣市＋同行政區的場館頁（場館頁「同區其他上課地點」用，見 src/lib/venue-profile.mjs）
+  const venuePagesByArea = groupBy(venuePages.filter((p) => p.venue.city && p.venue.district), (p) => `${p.venue.city}\t${p.venue.district}`);
 
   // ── 地圖 ───────────────────────────────────────
   // 場館為單位聚合，不是課程——19,671 門有座標的課只落在 1,782 個地點上，
@@ -386,7 +388,7 @@ function load() {
 
   return {
     courses, venues, home, taxonomy,
-    openCourses, openByCity, types, topics, categorised, cities, venuePages,
+    openCourses, openByCity, types, topics, categorised, cities, venuePages, venuePagesByArea,
     map: { rows: mapRows, courseCount: mapCourses, openCount: mapOpen },
     teacherIndex, pageTeachers, teachers, rankedTeachers, coursePages,
     activities, actsByCourse, learn, learnByName, learnByTopic, learnByCity, learnLinksOf,
