@@ -1,6 +1,6 @@
 # kho.tw（全台成人課程）
 
-> 全台社區大學、運動中心、樂齡中心與職訓課程整合查詢站。收錄 42,925 門課、2,436 個上課地點，其中 14,087 門正在招生。資料每小時自動抓取更新，本頁與 /llms-full.txt 在每次建置時重新生成。
+> 全台社區大學、運動中心、樂齡中心與職訓課程整合查詢站。收錄 42,294 門課、2,413 個上課地點，其中 14,060 門正在招生。資料每小時自動抓取更新，本頁與 /llms-full.txt 在每次建置時重新生成。
 
 ## 這是什麼
 kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣市社大聯網、教育部樂齡學習網、運動中心各營運商、勞動部職業訓練開放資料等），把同一門課在不同來源出現的紀錄合併成一筆，並在每個課程頁列出各來源提供的欄位與最後確認日期。收錄範圍：社區大學、運動中心、樂齡中心、職業訓練、圖書館、成人教育班、婦女大學、國中小進修部等機構公開的課程／活動資訊；不含私人補習班。
@@ -8,8 +8,8 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 ## 頁面種類與入口
 
 ### 依機構類型（共 9 類，網址：/type/<kind 代碼>.html）
-- 社區大學（community-college）：https://kho.tw/type/community-college.html（25,282 門，4,255 門招生中）
-- 運動中心（sports-center）：https://kho.tw/type/sports-center.html（12,680 門，8,513 門招生中）
+- 社區大學（community-college）：https://kho.tw/type/community-college.html（24,530 門，4,229 門招生中）
+- 運動中心（sports-center）：https://kho.tw/type/sports-center.html（12,801 門，8,512 門招生中）
 - 職業訓練（vocational）：https://kho.tw/type/vocational.html（2,600 門，1,010 門招生中）
 - 樂齡中心（senior-center）：https://kho.tw/type/senior-center.html（1,300 門，154 門招生中）
 - 其他（other）：https://kho.tw/type/other.html（711 門，15 門招生中）
@@ -19,30 +19,30 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 - 國中小進修部（school-continuing）：https://kho.tw/type/school-continuing.html（26 門，23 門招生中）
 
 ### 依主題分類（共 18 類，網址：/topic/<分類名稱>.html；分類名稱為中文，須百分比編碼）
-- 運動健身：https://kho.tw/topic/%E9%81%8B%E5%8B%95%E5%81%A5%E8%BA%AB.html（13,851 門，6,820 門招生中）
-- 美術工藝：https://kho.tw/topic/%E7%BE%8E%E8%A1%93%E5%B7%A5%E8%97%9D.html（4,877 門，730 門招生中）
-- 音樂戲劇：https://kho.tw/topic/%E9%9F%B3%E6%A8%82%E6%88%B2%E5%8A%87.html（4,028 門，674 門招生中）
-- 舞蹈：https://kho.tw/topic/%E8%88%9E%E8%B9%88.html（2,937 門，981 門招生中）
-- 語言：https://kho.tw/topic/%E8%AA%9E%E8%A8%80.html（2,392 門，543 門招生中）
-- 健康養生：https://kho.tw/topic/%E5%81%A5%E5%BA%B7%E9%A4%8A%E7%94%9F.html（1,435 門，368 門招生中）
-- 人文社會：https://kho.tw/topic/%E4%BA%BA%E6%96%87%E7%A4%BE%E6%9C%83.html（1,398 門，500 門招生中）
-- 電腦資訊：https://kho.tw/topic/%E9%9B%BB%E8%85%A6%E8%B3%87%E8%A8%8A.html（1,194 門，347 門招生中）
-- 料理烘焙：https://kho.tw/topic/%E6%96%99%E7%90%86%E7%83%98%E7%84%99.html（1,095 門，283 門招生中）
-- 自然生態：https://kho.tw/topic/%E8%87%AA%E7%84%B6%E7%94%9F%E6%85%8B.html（985 門，246 門招生中）
-- 攝影影音：https://kho.tw/topic/%E6%94%9D%E5%BD%B1%E5%BD%B1%E9%9F%B3.html（874 門，217 門招生中）
-- 工程技術：https://kho.tw/topic/%E5%B7%A5%E7%A8%8B%E6%8A%80%E8%A1%93.html（790 門，207 門招生中）
-- 生活應用：https://kho.tw/topic/%E7%94%9F%E6%B4%BB%E6%87%89%E7%94%A8.html（523 門，189 門招生中）
-- 理財法律：https://kho.tw/topic/%E7%90%86%E8%B2%A1%E6%B3%95%E5%BE%8B.html（500 門，146 門招生中）
-- 商業管理：https://kho.tw/topic/%E5%95%86%E6%A5%AD%E7%AE%A1%E7%90%86.html（372 門，143 門招生中）
-- 旅遊休閒：https://kho.tw/topic/%E6%97%85%E9%81%8A%E4%BC%91%E9%96%92.html（293 門，41 門招生中）
-- 教育照護：https://kho.tw/topic/%E6%95%99%E8%82%B2%E7%85%A7%E8%AD%B7.html（152 門，48 門招生中）
-- 美容美髮：https://kho.tw/topic/%E7%BE%8E%E5%AE%B9%E7%BE%8E%E9%AB%AE.html（122 門，47 門招生中）
+- 運動健身：https://kho.tw/topic/%E9%81%8B%E5%8B%95%E5%81%A5%E8%BA%AB.html（13,794 門，6,810 門招生中）
+- 美術工藝：https://kho.tw/topic/%E7%BE%8E%E8%A1%93%E5%B7%A5%E8%97%9D.html（4,740 門，729 門招生中）
+- 音樂戲劇：https://kho.tw/topic/%E9%9F%B3%E6%A8%82%E6%88%B2%E5%8A%87.html（3,909 門，669 門招生中）
+- 舞蹈：https://kho.tw/topic/%E8%88%9E%E8%B9%88.html（2,890 門，979 門招生中）
+- 語言：https://kho.tw/topic/%E8%AA%9E%E8%A8%80.html（2,325 門，540 門招生中）
+- 健康養生：https://kho.tw/topic/%E5%81%A5%E5%BA%B7%E9%A4%8A%E7%94%9F.html（1,411 門，368 門招生中）
+- 人文社會：https://kho.tw/topic/%E4%BA%BA%E6%96%87%E7%A4%BE%E6%9C%83.html（1,369 門，500 門招生中）
+- 電腦資訊：https://kho.tw/topic/%E9%9B%BB%E8%85%A6%E8%B3%87%E8%A8%8A.html（1,176 門，347 門招生中）
+- 料理烘焙：https://kho.tw/topic/%E6%96%99%E7%90%86%E7%83%98%E7%84%99.html（1,068 門，283 門招生中）
+- 自然生態：https://kho.tw/topic/%E8%87%AA%E7%84%B6%E7%94%9F%E6%85%8B.html（967 門，245 門招生中）
+- 攝影影音：https://kho.tw/topic/%E6%94%9D%E5%BD%B1%E5%BD%B1%E9%9F%B3.html（854 門，216 門招生中）
+- 工程技術：https://kho.tw/topic/%E5%B7%A5%E7%A8%8B%E6%8A%80%E8%A1%93.html（778 門，207 門招生中）
+- 生活應用：https://kho.tw/topic/%E7%94%9F%E6%B4%BB%E6%87%89%E7%94%A8.html（522 門，189 門招生中）
+- 理財法律：https://kho.tw/topic/%E7%90%86%E8%B2%A1%E6%B3%95%E5%BE%8B.html（491 門，146 門招生中）
+- 商業管理：https://kho.tw/topic/%E5%95%86%E6%A5%AD%E7%AE%A1%E7%90%86.html（371 門，143 門招生中）
+- 旅遊休閒：https://kho.tw/topic/%E6%97%85%E9%81%8A%E4%BC%91%E9%96%92.html（283 門，41 門招生中）
+- 教育照護：https://kho.tw/topic/%E6%95%99%E8%82%B2%E7%85%A7%E8%AD%B7.html（150 門，48 門招生中）
+- 美容美髮：https://kho.tw/topic/%E7%BE%8E%E5%AE%B9%E7%BE%8E%E9%AB%AE.html（121 門，47 門招生中）
 
 ### 依縣市（共 21 縣市，網址：/city/<縣市名稱>.html；縣市名稱為中文，須百分比編碼）
-- 臺北市：https://kho.tw/city/%E8%87%BA%E5%8C%97%E5%B8%82.html（10,065 門，5,854 門招生中）
-- 新北市：https://kho.tw/city/%E6%96%B0%E5%8C%97%E5%B8%82.html（8,678 門，2,685 門招生中）
-- 臺中市：https://kho.tw/city/%E8%87%BA%E4%B8%AD%E5%B8%82.html（5,263 門，1,458 門招生中）
-- 桃園市：https://kho.tw/city/%E6%A1%83%E5%9C%92%E5%B8%82.html（4,726 門，1,258 門招生中）
+- 臺北市：https://kho.tw/city/%E8%87%BA%E5%8C%97%E5%B8%82.html（10,065 門，5,853 門招生中）
+- 新北市：https://kho.tw/city/%E6%96%B0%E5%8C%97%E5%B8%82.html（8,799 門，2,685 門招生中）
+- 臺中市：https://kho.tw/city/%E8%87%BA%E4%B8%AD%E5%B8%82.html（5,141 門，1,458 門招生中）
+- 桃園市：https://kho.tw/city/%E6%A1%83%E5%9C%92%E5%B8%82.html（4,290 門，1,237 門招生中）
 - 高雄市：https://kho.tw/city/%E9%AB%98%E9%9B%84%E5%B8%82.html（2,421 門，651 門招生中）
 - 彰化縣：https://kho.tw/city/%E5%BD%B0%E5%8C%96%E7%B8%A3.html（1,352 門，288 門招生中）
 - 宜蘭縣：https://kho.tw/city/%E5%AE%9C%E8%98%AD%E7%B8%A3.html（541 門，203 門招生中）
@@ -53,8 +53,8 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 - 雲林縣：https://kho.tw/city/%E9%9B%B2%E6%9E%97%E7%B8%A3.html（886 門，143 門招生中）
 - 花蓮縣：https://kho.tw/city/%E8%8A%B1%E8%93%AE%E7%B8%A3.html（158 門，42 門招生中）
 - 嘉義市：https://kho.tw/city/%E5%98%89%E7%BE%A9%E5%B8%82.html（293 門，26 門招生中）
-- 基隆市：https://kho.tw/city/%E5%9F%BA%E9%9A%86%E5%B8%82.html（351 門，17 門招生中）
 - 屏東縣：https://kho.tw/city/%E5%B1%8F%E6%9D%B1%E7%B8%A3.html（457 門，15 門招生中）
+- 基隆市：https://kho.tw/city/%E5%9F%BA%E9%9A%86%E5%B8%82.html（189 門，12 門招生中）
 - 苗栗縣：https://kho.tw/city/%E8%8B%97%E6%A0%97%E7%B8%A3.html（258 門，9 門招生中）
 - 臺東縣：https://kho.tw/city/%E8%87%BA%E6%9D%B1%E7%B8%A3.html（100 門，8 門招生中）
 - 嘉義縣：https://kho.tw/city/%E5%98%89%E7%BE%A9%E7%B8%A3.html（157 門，5 門招生中）
@@ -65,18 +65,18 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 - 產業人才投資方案（產投課程）：https://kho.tw/program/%E7%94%A2%E6%8A%95.html（1,547 門，602 門招生中；縣市頁：高雄市、臺北市、臺南市、臺中市、桃園市、新北市、嘉義市、新竹市、彰化縣、新竹縣、宜蘭縣、屏東縣、雲林縣、基隆市、南投縣、花蓮縣、苗栗縣、嘉義縣）
 - 職前訓練（職前訓練課程）：https://kho.tw/program/%E8%81%B7%E5%89%8D%E8%A8%93%E7%B7%B4.html（426 門，233 門招生中；縣市頁：臺中市、桃園市、高雄市、新北市、臺南市、彰化縣、臺北市、宜蘭縣、花蓮縣）
 - 免費課程（來源標示免費）：https://kho.tw/free.html（316 門，159 門招生中；縣市頁：臺北市、高雄市、臺南市、臺中市、新北市、屏東縣、桃園市）
-- 銀髮・樂齡課程：https://kho.tw/senior.html（1,131 門，349 門招生中；縣市頁：新北市、臺北市、臺中市、桃園市、宜蘭縣、高雄市、新竹市）
+- 銀髮・樂齡課程：https://kho.tw/senior.html（1,133 門，349 門招生中；縣市頁：新北市、臺北市、臺中市、桃園市、宜蘭縣、高雄市、新竹市）
 
-### 課程頁（本站最大宗，共 42,925 頁）
+### 課程頁（本站最大宗，共 42,294 頁）
 每門課一頁。網址規則：/course/<slug>.html，slug 是「課名-開課單位-短碼」，中文，每一段都要依 RFC 3986 百分比編碼，例如：
   https://kho.tw/course/%E9%A3%9B%E8%B6%8A%E6%8B%89%E6%8B%89%E4%BA%8C%E8%83%A1-%E4%BA%94%E6%AC%8A%E7%A4%BE%E5%A4%A7-48d29.html
 slug 由 data/slugs.ndjson 登記簿配給並保證重跑不變，不可自行推測；要拿到某門課的正確網址，請走下面的完整清單（sitemap 或站內搜尋），不要自己拼字串。
 
-### 場館頁（共 2,436 頁）
+### 場館頁（共 2,413 頁）
 網址規則：/venue/<slug>.html，例如：
   https://kho.tw/venue/%E5%81%A5%E8%A1%8C%E5%9C%8B%E5%B0%8F-247e3.html
 
-### 講師頁（只收同名同單位開課 ≥2 門者，共 8,156 頁）
+### 講師頁（只收同名同單位開課 ≥2 門者，共 7,949 頁）
 網址規則：/teacher/<slug>.html，例如：
   https://kho.tw/teacher/%E5%AE%B6%E6%85%B6-%E5%85%A7%E6%B9%96%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-f0359.html
 身分認定＝姓名＋開課單位，同名不同人不會被合併。
