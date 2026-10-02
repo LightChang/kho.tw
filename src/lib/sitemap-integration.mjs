@@ -64,13 +64,18 @@ function entries(d) {
     rel: `course/${c.slug}.html`, lastmod: courseLastmod(c),
     ...courseHint(hasEnded(c) && c.enrollment?.status !== 'cancelled' ? 'closed' : c.enrollment?.status),
   }));
-  const venues = d.venuePages.map(({ venue, list }) => ({
+  // 薄場館頁（≤2 門課且全部已結束）是 noindex，不進 sitemap（規則見 data.mjs 的 isThinVenue）
+  const venues = d.venuePages.filter((p) => !p.noindex).map(({ venue, list }) => ({
     rel: `venue/${venue.slug}.html`, lastmod: listLastmod(list), changefreq: 'weekly', priority: '0.5',
   }));
   const teachers = d.teachers.map(({ teacher, list }) => ({
     rel: `teacher/${teacher.slug}.html`, lastmod: listLastmod(list), changefreq: 'weekly', priority: '0.5',
   }));
-  return { pages, courses, venues, teachers };
+  // 場館 × 細項（/at/，2026-10-02）：本期課的清單，報名狀態每天在變
+  const venueActs = d.venueActs.map((x) => ({
+    rel: x.rel, lastmod: listLastmod(x.list), changefreq: 'daily', priority: '0.7',
+  }));
+  return { pages, courses, venues, 'venue-acts': venueActs, teachers };
 }
 
 export default function khoSitemap() {
@@ -83,7 +88,7 @@ export default function khoSitemap() {
         await rm(path.join(dist, 'home.json'), { force: true });
         const groups = Object.entries(entries(getData())).map(([name, list]) => ({
           name,
-          // 排除頁型（講師頁）不進 sitemap，清單見 site/sitemap.mjs 的 SITEMAP_EXCLUDED_DIRS
+          // 排除頁型不進 sitemap，清單見 site/sitemap.mjs 的 SITEMAP_EXCLUDED_DIRS（2026-10-02 起為空）
           entries: list.filter((e) => !isSitemapExcluded(e.rel) && existsSync(path.join(dist, e.rel))),
         }));
         const sitemap = await writeSitemaps({ dist, siteUrl: SITE_URL, groups });

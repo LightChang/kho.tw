@@ -16,7 +16,7 @@
 //   8. lastmod 是 YYYY-MM-DD、changefreq 是合法列舉、priority 落在 0.0–1.0
 //   9. 涵蓋率：dist/ 裡每個可收錄的 .html 都在 sitemap 裡、只出現一次；
 //      <head> 帶 robots noindex 的頁一律不得出現在 sitemap（2026-09-27 起，結束滿一年的課程頁）；
-//      SITEMAP_EXCLUDED_DIRS 列的頁型（teacher）不進 sitemap、也不得出現在 sitemap
+//      SITEMAP_EXCLUDED_DIRS 列的頁型不進 sitemap、也不得出現在 sitemap（2026-10-02 起清單為空）
 //  10. robots.txt 存在、允許檢索、Sitemap 指向存在的絕對網址
 //
 // 用法：node site/check-sitemap.mjs [dist 目錄]

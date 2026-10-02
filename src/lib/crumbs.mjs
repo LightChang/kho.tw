@@ -52,3 +52,8 @@ export function hubCrumbs(name, href, city) {
   if (!city) return [HOME, here(name)];
   return [HOME, { name, href }, here(city)];
 }
+
+/** 場館 × 細項頁：首頁 › 縣市 › 臺中市 › 北屯運動中心 › 皮拉提斯。city 沒有縣市頁時省略縣市兩層。 */
+export function underVenue(city, venue, label, cityPages) {
+  return [...underCity(city, venue.name, cityPages).slice(0, -1), venue, here(label)];
+}

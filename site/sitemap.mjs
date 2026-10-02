@@ -173,8 +173,9 @@ export function hasNoindex(html) {
 
 // 刻意不進 sitemap 的頁型（頁面本身可收錄、不加 noindex，靠內鏈被發現）。排除清單只寫在這裡，
 // 產生器（src/lib/sitemap-integration.mjs）與驗證器（check-sitemap.mjs）都讀它。
-// - teacher：講師頁（/teacher/…）。站主 2026-09-27 拍板：爬取預算集中在課程頁。索引頁 /teachers.html 仍收錄。
-export const SITEMAP_EXCLUDED_DIRS = Object.freeze(['teacher']);
+// 目前沒有排除的頁型。歷史：講師頁（/teacher/）2026-09-27 移出，2026-10-02 站主拍板放回
+// （講師頁只給同名同單位 ≥2 門課的講師，門檻見 transform/teachers.mjs 的 MIN_COURSES）。
+export const SITEMAP_EXCLUDED_DIRS = Object.freeze([]);
 export const isSitemapExcluded = (rel) => SITEMAP_EXCLUDED_DIRS.some((d) => rel.startsWith(`${d}/`));
 
 /**

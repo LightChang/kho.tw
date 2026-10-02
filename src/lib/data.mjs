@@ -11,11 +11,11 @@
 // 開發用：KHO_LIMIT=N 只產前 N 筆課程頁（取代舊版 site/build.mjs 的 --limit）。
 import { readFileSync } from 'node:fs';
 import path from 'node:path';
-import { collectTeachers, teachersWithPages, MIN_COURSES } from '../../transform/teachers.mjs';
+import { collectTeachers, teachersWithPages, MIN_COURSES, cleanName, SPLIT_KEEP } from '../../transform/teachers.mjs';
 import { todayTaipei } from '../../transform/_date.mjs';
 import { readdirSync } from 'node:fs';
 import { courseChangedAt, courseFirstSeen } from '../../site/sitemap.mjs';
-import { PROGRAMS, isFreeNow, isSenior, splitByCity, byEnrollDeadline } from './hubs.mjs';
+import { PROGRAMS, isFreeNow, isSenior, splitByCity, byEnrollDeadline, shortCenter } from './hubs.mjs';
 import { compileActivities, activitiesOf, isCert, venueDisplay, mainSeason, seasonOf, courseSeriesKey, courseTitleKey } from './facets.mjs';
 
 const ROOT = process.cwd();
@@ -79,6 +79,27 @@ export const freeRel = (city) => relOf('free', '', city);
 export const freeHref = (city) => hrefOf(freeRel(city));
 export const seniorRel = (city) => relOf('senior', '', city);
 export const seniorHref = (city) => hrefOf(seniorRel(city));
+
+// 場館 × 細項頁（站主 2026-10-02 拍板）：/at/<場館 slug>/<細項>.html，例如 /at/臺中市北屯國民暨兒童運動中心-xxxxx/皮拉提斯.html。
+// 接「北屯運動中心 皮拉提斯」這種「場館名＋細項」的查詢。網址由場館 slug（登記簿配給、不會變）＋細項名
+// （overrides/activities.json 的 name）組成，兩者都穩定。不放在 /venue/ 底下，是為了讓 seo-ops 的頁組
+// （watchGroups 以網址前綴分組）能把這種頁和場館頁分開算每百頁點擊。
+// 門檻與場館頁頁內細項分段相同：本期同細項 ≥3 門才出頁，場館頁那一段就連過來。
+export const VENUE_ACT_MIN = 3;
+export const venueActRel = (venueSlug, name) => `at/${venueSlug}/${name}.html`;
+export const venueActHref = (venueSlug, name) => `/${venueActRel(venueSlug, name).split('/').map(encodeURIComponent).join('/')}`;
+
+// 場館頁的「本期」：還沒上完的課，加上 90 天內才開課的課（有些來源的結束日寫在開課日之前）。
+// 場館頁課表與場館 × 細項頁共用這一個定義。
+const VENUE_CURRENT_DAYS = 90;
+export const venueCutoff = new Date(Date.parse(`${TODAY}T00:00:00Z`) - VENUE_CURRENT_DAYS * 864e5).toISOString().slice(0, 10);
+export const isVenueCurrent = (c) => !hasEnded(c) || (c.schedule?.startDate ?? '') >= venueCutoff;
+
+// 薄場館頁 noindex,follow＋移出 sitemap（站主 2026-10-02 拍板）：總共 ≤2 門課、而且一門還沒結束的課都沒有。
+// 頁面保留、連結照走，不 404；之後這個地點又有新課，下一輪 build 自動恢復收錄。
+// 「還沒結束」用 hasEnded 判斷：沒有結束日的課當作還沒結束，寧可多收也不誤殺。
+export const VENUE_THIN_MAX = 2;
+export const isThinVenue = (list) => list.length <= VENUE_THIN_MAX && list.every(hasEnded);
 
 const readNdjson = (file) => readFileSync(file, 'utf-8').split('\n').filter(Boolean).map((l) => JSON.parse(l));
 const readJson = (file) => JSON.parse(readFileSync(file, 'utf-8'));
@@ -193,6 +214,7 @@ function load() {
       venue: venues.get(id),
       list: list.sort(byStatusThenDate),
       display: venueDisplay(venues.get(id), list, venueNames),
+      noindex: isThinVenue(list),
     }));
 
   // ── 地圖 ───────────────────────────────────────
@@ -250,6 +272,19 @@ function load() {
     (x) => x.id,
   );
 
+  /**
+   * 課程的講師欄逐段拆開，有講師頁的那一段給連結：[[{ text, href? }, …], …]（一個來源字串一組）。
+   * 分隔符原樣保留、各段文字不動（含頭銜、括號綽號），只是多包一層連結——講師欄一字不改。
+   * 比對規則與講師頁身分認定同一套（cleanName），只連到「這門課」的講師頁，同名不同單位的不會連錯。
+   */
+  const teacherSegmentsOf = (c) => {
+    const pages = teacherPagesByCourse.get(c.id) ?? [];
+    return (c.teachers ?? []).map((t) => String(t.nameRaw ?? '').split(SPLIT_KEEP).filter((x) => x !== '').map((text, i, arr) => {
+      const p = pages.find((x) => x.t.name === cleanName(text));
+      return p && !SPLIT_KEEP.test(text) ? { text, href: link('teacher', p.t.slug) } : { text };
+    }));
+  };
+
   // ── 細項（皮拉提斯、水電…）× 地區 ───────────────
   const activities = compileActivities(readJson(path.join(ROOT, 'overrides', 'activities.json')));
   const actsByCourse = new Map(courses.map((c) => [c.id, activitiesOf(c, activities).map((a) => a.name)]));
@@ -291,6 +326,36 @@ function load() {
     }
     return out;
   };
+  // ── 場館 × 細項（/at/<場館>/<細項>.html，規則見 VENUE_ACT_MIN 上方說明） ──
+  // 只做有地點名稱的場館（來源本身有名稱，或 overrides 查證過）：只有門牌的地點沒有人會用「門牌＋細項」去搜。
+  // 名稱太短或只是行政區名的也不做（「景美」「校本部」「臺北市」）：「景美瑜珈課程」讀者看不出是哪裡。
+  // noindex 的薄場館不會到門檻（≤2 門），不必另外排除。
+  const placeLike = (h) => [...h].length >= 4 && !/^\S{2,3}[市縣](\S{1,3}[區鄉鎮市])?$/.test(h);
+  // 標題用讀者的叫法：「臺中市北屯國民暨兒童運動中心」→「北屯運動中心」；其他場館照原名
+  const shortVenue = (h) => (/運動(中心|園區)/.test(h) && shortCenter(h)) || h;
+  const venueActs = [];
+  for (const p of venuePages) {
+    if (p.display.from !== 'source' && p.display.from !== 'override') continue;
+    if (!placeLike(p.display.heading)) continue;
+    const cur = p.list.filter(isVenueCurrent);
+    for (const a of activities) {
+      const list = cur.filter((c) => actsByCourse.get(c.id).includes(a.name));
+      if (list.length < VENUE_ACT_MIN) continue;
+      venueActs.push({
+        venue: p.venue, display: p.display, activity: a,
+        short: shortVenue(p.display.heading),
+        href: venueActHref(p.venue.slug, a.name), rel: venueActRel(p.venue.slug, a.name),
+        ...summarize(list),
+      });
+    }
+  }
+  const venueActsByVenue = groupBy(venueActs, (x) => x.venue.id);
+  for (const l of venueActsByVenue.values()) l.sort((x, y) => y.list.length - x.list.length);
+  /** 細項 × 地區頁用：這個細項在這個縣市（district 給了就限該行政區）有哪些場館 × 細項頁，課多的在前 */
+  const venueActsIn = (name, city, district) => venueActs
+    .filter((x) => x.activity.name === name && x.venue.city === city && (!district || x.venue.district === district))
+    .sort((x, y) => y.list.length - x.list.length);
+
   // 18 大類底下有哪些細項頁（主題頁用）、各縣市有哪些細項頁（縣市頁用）
   const learnByTopic = groupBy(learn, (l) => l.activity.topic);
   const learnByCity = new Map();
@@ -299,6 +364,32 @@ function load() {
     learnByCity.get(x.city).push({ activity: l.activity, n: x.list.length, open: x.open });
   }
   for (const list of learnByCity.values()) list.sort((a, b) => b.n - a.n);
+
+  // ── 縣市頁的樞紐：行政區（連到該區的細項頁與上課地點）、主要上課地點 ──
+  const learnByDistrict = new Map();
+  for (const l of learn) for (const x of l.districts) {
+    const k = `${x.city}\t${x.district}`;
+    if (!learnByDistrict.has(k)) learnByDistrict.set(k, []);
+    learnByDistrict.get(k).push({ activity: l.activity, area: x.area, n: x.list.length });
+  }
+  for (const l of learnByDistrict.values()) l.sort((a, b) => b.n - a.n);
+  const venueRows = venuePages.filter((p) => !p.noindex).map((p) => ({
+    venue: p.venue, display: p.display, n: p.list.length, current: p.list.filter((c) => !hasEnded(c)).length,
+  }));
+  /** 縣市頁用：{ districts: [{ district, n, current, learn, venues }], venues: [...] }，都依還沒結束的課數排 */
+  const cityHubOf = (city) => {
+    const rows = venueRows.filter((r) => r.venue.city === city)
+      .sort((a, b) => b.current - a.current || b.n - a.n || a.venue.slug.localeCompare(b.venue.slug));
+    const byDistrict = groupBy(rows.filter((r) => r.venue.district), (r) => r.venue.district);
+    const districts = [...byDistrict].map(([district, vs]) => ({
+      district,
+      n: vs.reduce((t, r) => t + r.n, 0),
+      current: vs.reduce((t, r) => t + r.current, 0),
+      learn: learnByDistrict.get(`${city}\t${district}`) ?? [],
+      venues: vs,
+    })).sort((a, b) => b.current - a.current || b.n - a.n || a.district.localeCompare(b.district));
+    return { districts, venues: rows };
+  };
 
   // ── 證照班 ─────────────────────────────────────
   const certCourses = courses.filter(isCert).sort(byStatusThenDate);
@@ -390,6 +481,7 @@ function load() {
     map: { rows: mapRows, courseCount: mapCourses, openCount: mapOpen },
     teacherIndex, pageTeachers, teachers, rankedTeachers, coursePages,
     activities, actsByCourse, learn, learnByName, learnByTopic, learnByCity, learnLinksOf,
+    venueActs, venueActsByVenue, venueActsIn, cityHubOf, teacherSegmentsOf,
     cert, certIds, certCitySet, programs, free, senior, hubLinksOf,
     titleCollides, successorsOf, alternativesOf, currentByVenue, sameTitleOf,
     changedAt, firstSeen, newestOpen, newestOpenByCity, newThisWeek,

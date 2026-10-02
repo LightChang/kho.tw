@@ -11,7 +11,8 @@ import Base from '../../layouts/Base.astro';
 import { underCity } from '../../lib/crumbs.mjs';
 import CourseCard from '../../components/CourseCard.astro';
 import StatusBadge from '../../components/StatusBadge.astro';
-import { getData, fmt, link, hasEnded, TODAY, WEEKDAY_LABEL, learnHref } from '../../lib/data.mjs';
+import TeacherNames from '../../components/TeacherNames.astro';
+import { getData, fmt, link, WEEKDAY_LABEL, learnHref, isVenueCurrent } from '../../lib/data.mjs';
 import { isCert, seasonOf, mainSeason } from '../../lib/facets.mjs';
 import { venueJsonLd, venueUrl } from '../../../site/jsonld.mjs';
 
@@ -19,11 +20,12 @@ export function getStaticPaths() {
   return getData().venuePages.map((p) => ({ params: { slug: p.venue.slug }, props: p }));
 }
 
-const { venue: v, list, display } = Astro.props;
-const { actsByCourse, learnByName } = getData();
+const { venue: v, list, display, noindex } = Astro.props;
+const { actsByCourse, learnByName, venueActsByVenue } = getData();
+// 本期課程有獨立頁的細項（/at/<場館>/<細項>.html）：頁內分段只列前幾門，其餘連過去，避免兩頁內容重複
+const actPages = new Map((venueActsByVenue.get(v.id) ?? []).map((x) => [x.activity.name, x]));
 
-const cutoff = new Date(Date.parse(`${TODAY}T00:00:00Z`) - 90 * 864e5).toISOString().slice(0, 10);
-let current = list.filter((c) => !hasEnded(c) || (c.schedule?.startDate ?? '') >= cutoff);
+let current = list.filter(isVenueCurrent);
 let past = false;
 if (!current.length) {
   const latest = list.map((c) => c.schedule?.startDate).filter(Boolean).sort().at(-1);
@@ -60,8 +62,9 @@ const acts = [...actCount].sort((a, b) => b[1] - a[1]).map(([name, n]) => ({
 }));
 const actsAttr = (c) => (actsByCourse.get(c.id) ?? []).join(' ');
 // 細項分段：「內湖運動中心 皮拉提斯」這種查詢要在 HTML 裡就有對應的標題與課單，
-// 上面的篩選是 JS，搜尋引擎看不到。不開新網址（docs/GROWTH.md §5），只在頁內分段。
+// 上面的篩選是 JS，搜尋引擎看不到。2026-10-02 起同細項另有獨立頁（/at/），這裡只列前 ACT_SECTION_SHOW 門並連過去。
 const ACT_SECTION_MIN = 3;
+const ACT_SECTION_SHOW = 6;
 const firstSlot = (c) => { const s = (c.schedule?.slots ?? [])[0]; return s ? `${s.weekday}|${s.startTime ?? ''}` : '9'; };
 const actSections = acts.filter((a) => a.n >= ACT_SECTION_MIN).map((a) => ({
   ...a,
@@ -91,7 +94,7 @@ const description = display.from === 'provider' || display.from === 'providers'
 const timeOf = (s) => `${s.startTime ?? ''}${s.endTime ? `–${s.endTime}` : ''}` || '時間未提供';
 const slotsText = (c) => (c.schedule?.slots ?? []).map((s) => `${WEEKDAY_LABEL[s.weekday] ?? ''} ${timeOf(s)}`).join('、') || c.schedule?.timeInfoRaw || '';
 ---
-<Base crumbs={underCity(v.city, display.heading, new Set(getData().cities.map((x) => x.name)))} title={title} description={description} canonical={venueUrl(v)} jsonld={venueJsonLd(v, list)}>
+<Base crumbs={underCity(v.city, display.heading, new Set(getData().cities.map((x) => x.name)))} title={title} description={description} canonical={venueUrl(v)} jsonld={venueJsonLd(v, list)} robots={noindex ? 'noindex,follow' : undefined}>
 <div class="card"><h1>{display.heading}{hasTable ? '課程表' : '的課程'}</h1>
 {v.address && v.address !== display.name && <div class="meta">{v.address}</div>}
 {providerNote && <div class="meta">開課單位：{providerNote}</div>}
@@ -113,7 +116,7 @@ const slotsText = (c) => (c.schedule?.slots ?? []).map((s) => `${WEEKDAY_LABEL[s
 <section class="tt-day" data-day={d.wd}>
 <h3>{d.label}<span class="meta-2 tnum">　{fmt(d.rows.length)} 堂</span></h3>
 <table>{d.rows.map(({ c, s }) => (
-<tr data-acts={actsAttr(c)}><td class="tt-time tnum">{timeOf(s)}</td><td><a href={link('course', c.slug)}>{c.title}</a>{isCert(c) && <Fragment> <span class="badge-cert">可考證照</span></Fragment>}{c.teachers?.length > 0 && <div class="meta-2">{c.teachers.map((t) => t.nameRaw).join('、')}</div>}</td><td><StatusBadge status={c.enrollment?.status} /></td></tr>
+<tr data-acts={actsAttr(c)}><td class="tt-time tnum">{timeOf(s)}</td><td><a href={link('course', c.slug)}>{c.title}</a>{isCert(c) && <Fragment> <span class="badge-cert">可考證照</span></Fragment>}{c.teachers?.length > 0 && <div class="meta-2"><TeacherNames course={c} /></div>}</td><td><StatusBadge status={c.enrollment?.status} /></td></tr>
 ))}</table>
 </section>
 ))}
@@ -130,9 +133,9 @@ const slotsText = (c) => (c.schedule?.slots ?? []).map((s) => `${WEEKDAY_LABEL[s
 <div class="card">
 {actSections.map((a) => (
 <section class="act-sec">
-<h2>{display.heading}{a.label}課程<span class="meta-2 tnum">　{fmt(a.list.length)} 門{past && '（已結束）'}</span></h2>
-<ul class="next-list">{a.list.slice(0, 40).map((c) => <li><a href={link('course', c.slug)}>{c.title}</a> <StatusBadge status={c.enrollment?.status} /><div class="meta-2">{slotsText(c)}</div></li>)}</ul>
-{a.page && <div class="meta"><a href={learnHref(a.name)}>其他地點的{a.label}課程</a></div>}
+<h2>{actPages.has(a.name) ? <a href={actPages.get(a.name).href}>{display.heading}{a.label}課程</a> : `${display.heading}${a.label}課程`}<span class="meta-2 tnum">　{fmt(a.list.length)} 門{past && '（已結束）'}</span></h2>
+<ul class="next-list">{a.list.slice(0, actPages.has(a.name) ? ACT_SECTION_SHOW : 40).map((c) => <li><a href={link('course', c.slug)}>{c.title}</a> <StatusBadge status={c.enrollment?.status} /><div class="meta-2">{slotsText(c)}</div></li>)}</ul>
+<div class="meta">{actPages.has(a.name) && a.list.length > ACT_SECTION_SHOW && <Fragment><a href={actPages.get(a.name).href}>看全部 {fmt(a.list.length)} 門{a.label}課的時間表</a>　</Fragment>}{a.page && <a href={learnHref(a.name)}>其他地點的{a.label}課程</a>}</div>
 </section>
 ))}
 </div>

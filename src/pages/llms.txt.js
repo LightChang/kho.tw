@@ -9,7 +9,7 @@ import { getData, fmt, STATUS_LABEL, programHref, freeHref, seniorHref } from '.
 import { SITE_URL, courseUrl, venueUrl, teacherUrl } from '../../site/jsonld.mjs';
 
 export const GET = () => {
-  const { home, topics, coursePages, venuePages, teachers, programs, free, senior } = getData();
+  const { home, topics, coursePages, venuePages, venueActs, teachers, programs, free, senior } = getData();
   const hubLine = (href, name, h) => `- ${name}：${SITE_URL}${href}（${fmt(h.list.length)} 門，${fmt(h.open)} 門招生中；縣市頁：${h.cities.map((x) => x.city).join('、') || '無'}）`;
   const hubLines = [
     ...programs.map((p) => hubLine(programHref(p.key), `${p.name}（${p.short}）`, p)),
@@ -63,6 +63,10 @@ slug 由 data/slugs.ndjson 登記簿配給並保證重跑不變，不可自行�
 網址規則：/venue/<slug>.html，例如：
   ${exampleVenue ? venueUrl(exampleVenue) : ''}
 
+### 場館 × 細項頁（共 ${fmt(venueActs.length)} 頁）
+某個地點本期同一細項有 3 門以上的課才有這一頁，例如「北屯運動中心皮拉提斯課程」。網址規則：/at/<場館 slug>/<細項>.html，例如：
+  ${venueActs[0] ? SITE_URL + venueActs[0].href : ''}
+
 ### 講師頁（只收同名同單位開課 ≥2 門者，共 ${fmt(teachers.length)} 頁）
 網址規則：/teacher/<slug>.html，例如：
   ${exampleTeacher ? teacherUrl(exampleTeacher) : ''}
@@ -80,7 +84,7 @@ slug 由 data/slugs.ndjson 登記簿配給並保證重跑不變，不可自行�
 
 ## 完整網址清單
 單一課程／場館／講師的網址請勿自行拼湊，一律從下列來源取得：
-- sitemap 索引：${SITE_URL}/sitemap.xml（分 pages／courses×2／venues／teachers 共 5 個分檔）
+- sitemap 索引：${SITE_URL}/sitemap.xml（依 pages／courses／venues／venue-acts／teachers 分組分檔）
 - robots.txt：${SITE_URL}/robots.txt（全站開放檢索，未擋任何 AI 爬蟲）
 - 站內搜尋：${SITE_URL}/search.html
 

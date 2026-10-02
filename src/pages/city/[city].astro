@@ -19,7 +19,12 @@ const byKind = [...c.list.reduce((m, course) => {
   if (kind) m.set(kind, (m.get(kind) ?? 0) + 1);
   return m;
 }, new Map())].sort((a, b) => b[1] - a[1]);
-const { learnByCity, cert, newestOpenByCity, firstSeen, hubLinksOf } = getData();
+const { learnByCity, cert, newestOpenByCity, firstSeen, hubLinksOf, cityHubOf } = getData();
+// 縣市頁是樞紐（2026-10-02）：先分行政區、再列主要上課地點，課程卡只留招生排序的前 LIST_MAX 門。
+// 原本整頁是 300 張課程卡，和類型頁、可報名頁大量重複；往下走的路要靠行政區與場館連結。
+const LIST_MAX = 30;
+const VENUE_MAX = 24;
+const hub = cityHubOf(c.name);
 const hubs = hubLinksOf(c.name);
 const fresh = (newestOpenByCity.get(c.name) ?? []).slice(0, 8);
 const acts = learnByCity.get(c.name) ?? [];
@@ -30,7 +35,7 @@ const topKinds = byKind.slice(0, 3).map(([kind]) => KIND_LABEL.get(kind)).filter
   title={topKinds.length ? `${c.name}成人課程｜${topKinds.join('・')}` : `${c.name}的成人課程`}
   description={`${c.name}${byKind.slice(0, 4).map(([kind, n]) => `${KIND_LABEL.get(kind)}${fmt(n)}門`).join('、')}，共 ${fmt(c.list.length)} 門課，其中 ${fmt(c.open)} 門招生中。`}
   canonical={`${SITE_URL}/city/${encodeURIComponent(c.name)}.html`}
-  jsonld={itemListJsonLd(c.list.slice(0, 100), { name: `${c.name}的成人課程` })}
+  jsonld={itemListJsonLd(c.list.slice(0, LIST_MAX), { name: `${c.name}的成人課程` })}
 >
 <div class="card"><h2>{c.name}</h2><div class="meta">{fmt(c.list.length)} 門課，其中 {fmt(c.open)} 門招生中</div>
 {byKind.length > 0 && (
@@ -53,5 +58,27 @@ const topKinds = byKind.slice(0, 3).map(([kind]) => KIND_LABEL.get(kind)).filter
 {fresh.map((o) => <div><a href={link('course', o.slug)}>{o.title}</a> <span class="meta-2">{o.provider?.nameRaw ?? ''}・{String(firstSeen.get(o.id)).slice(5).replace('-', '/')} 收錄</span></div>)}
 </div>
 )}
-<CourseList list={c.list} />
+{hub.districts.length > 0 && (
+<div class="card"><h3>{c.name}各行政區</h3>
+<div class="meta-2">依還沒結束的課數排列；細項連到該區的課程整理，地點連到課程表。</div>
+<table><tr><th>行政區</th><th>課數</th><th>熱門課程與上課地點</th></tr>
+{hub.districts.map((d) => (
+<tr><td>{d.district}</td><td class="tnum">{fmt(d.current)}<div class="meta-2">共 {fmt(d.n)}</div></td><td>
+{d.learn.length > 0 && <div>{d.learn.slice(0, 6).map((o, i) => <Fragment>{i > 0 && '、'}<a href={learnHref(o.activity.name, o.area)}>{o.activity.label}</a></Fragment>)}</div>}
+<div class="meta-2">{d.venues.slice(0, 3).map((r, i) => <Fragment>{i > 0 && '、'}<a href={link('venue', r.venue.slug)}>{r.display.heading}</a></Fragment>)}{d.venues.length > 3 && `等 ${fmt(d.venues.length)} 個地點`}</div>
+</td></tr>
+))}
+</table></div>
+)}
+{hub.venues.length > 0 && (
+<div class="card"><h3>{c.name}主要上課地點</h3>
+<table><tr><th>地點</th><th>行政區</th><th>課數</th></tr>
+{hub.venues.slice(0, VENUE_MAX).map((r) => <tr><td><a href={link('venue', r.venue.slug)}>{r.display.heading}</a></td><td class="meta-2">{r.venue.district ?? ''}</td><td class="tnum">{fmt(r.current)}<div class="meta-2">共 {fmt(r.n)}</div></td></tr>)}
+</table>
+{hub.venues.length > VENUE_MAX && <div class="meta-2">另有 {fmt(hub.venues.length - VENUE_MAX)} 個地點，見<a href="/map.html">地圖</a>或上方行政區。</div>}
+</div>
+)}
+<div class="card"><h3>{c.name}可報名的課程</h3>
+<div class="meta-2">依報名狀態排列，列出前 {LIST_MAX} 門。全部招生中的課見<a href="/open.html">可報名</a>，找特定課名用<a href="/search.html">搜尋</a>。</div></div>
+<CourseList list={c.list} max={LIST_MAX} />
 </Base>

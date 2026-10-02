@@ -24,18 +24,15 @@ test('coverageProblems：可收錄必須在、noindex 必須不在、sitemap 不
   assert.deepEqual(bad.notHtml, ['ghost.html']);
 });
 
-test('排除頁型：講師頁不進 sitemap、進了算錯；講師索引頁照收', async () => {
+test('排除頁型：2026-10-02 起沒有排除的頁型，講師頁要進 sitemap、漏了算錯', async () => {
   const { SITEMAP_EXCLUDED_DIRS, isSitemapExcluded } = await import('../site/sitemap.mjs');
-  assert.deepEqual([...SITEMAP_EXCLUDED_DIRS], ['teacher']);
-  assert.ok(isSitemapExcluded('teacher/陳清吉-松山社大-3dcef.html'));
-  assert.ok(!isSitemapExcluded('teachers.html'));
-  assert.ok(!isSitemapExcluded('course/teacher-x.html'));
+  assert.deepEqual([...SITEMAP_EXCLUDED_DIRS], []);
+  assert.ok(!isSitemapExcluded('teacher/陳清吉-松山社大-3dcef.html'));
   const onDisk = new Map([['teachers.html', false], ['teacher/a.html', false], ['course/x.html', false]]);
-  const ok = coverageProblems(onDisk, new Set(['teachers.html', 'course/x.html']));
-  assert.deepEqual([ok.notListed, ok.excludedListed, ok.excluded], [[], [], 1]);
-  const bad = coverageProblems(onDisk, new Set(['course/x.html', 'teacher/a.html']));
-  assert.deepEqual(bad.notListed, ['teachers.html']);
-  assert.deepEqual(bad.excludedListed, ['teacher/a.html']);
+  const ok = coverageProblems(onDisk, new Set(['teachers.html', 'course/x.html', 'teacher/a.html']));
+  assert.deepEqual([ok.notListed, ok.excludedListed, ok.excluded], [[], [], 0]);
+  const bad = coverageProblems(onDisk, new Set(['teachers.html', 'course/x.html']));
+  assert.deepEqual(bad.notListed, ['teacher/a.html']);
 });
 
 test('lastmod 取內容變更日：只有「最後確認日」變了不影響 lastmod；同資料重算結果相同', async () => {

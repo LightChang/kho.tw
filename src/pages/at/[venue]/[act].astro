@@ -1,0 +1,89 @@
+---
+// 場館 × 細項：/at/<場館 slug>/<細項>.html（站主 2026-10-02 拍板，規則見 data.mjs 的 VENUE_ACT_MIN）。
+// 回答「北屯運動中心 皮拉提斯」這種查詢：這個地點本期有哪些這一類的課、星期幾幾點、還能不能報。
+// 場館頁的同名分段只列前幾門並連到這裡；細項 × 行政區頁也連過來。
+import Base from '../../../layouts/Base.astro';
+import { underVenue } from '../../../lib/crumbs.mjs';
+import StatusBadge from '../../../components/StatusBadge.astro';
+import TeacherNames from '../../../components/TeacherNames.astro';
+import { getData, fmt, link, learnHref, WEEKDAY_LABEL } from '../../../lib/data.mjs';
+import { isCert, shortDistrict } from '../../../lib/facets.mjs';
+import { itemListJsonLd, SITE_URL } from '../../../../site/jsonld.mjs';
+
+export function getStaticPaths() {
+  return getData().venueActs.map((x) => ({ params: { venue: x.venue.slug, act: x.activity.name }, props: { x } }));
+}
+
+const { x } = Astro.props;
+const { venue: v, display, activity: a, list, short } = x;
+const { cities, learnByName, venueActsByVenue } = getData();
+const l = learnByName.get(a.name);
+const districtPage = l?.districts.find((d) => d.city === v.city && d.district === v.district);
+const cityPage = l?.cities.find((c) => c.city === v.city);
+const siblings = (venueActsByVenue.get(v.id) ?? []).filter((o) => o.activity.name !== a.name);
+const providers = display.providers.map((p) => p.name);
+const providerNote = providers.length && !providers.some((p) => display.heading.includes(p) || p.includes(display.heading))
+  ? `${providers.slice(0, 2).join('、')}${providers.length > 2 ? `等 ${providers.length} 個單位` : ''}` : '';
+
+// 依星期排，一週上兩天的課出現在兩天裡（與場館頁課表同一套）
+const days = WEEKDAY_LABEL.map((label, wd) => ({ label, wd, rows: [] }));
+const noSlot = [];
+for (const c of list) {
+  const slots = (c.schedule?.slots ?? []).filter((s) => s.weekday >= 1 && s.weekday <= 7);
+  if (!slots.length) { noSlot.push(c); continue; }
+  const seen = new Set();
+  for (const s of slots) {
+    const key = `${s.weekday}|${s.startTime ?? ''}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    days[s.weekday].rows.push({ c, s });
+  }
+}
+for (const d of days) d.rows.sort((p, q) => String(p.s.startTime ?? '99').localeCompare(String(q.s.startTime ?? '99')) || p.c.title.localeCompare(q.c.title));
+const week = days.filter((d) => d.wd >= 1 && d.rows.length);
+const timeOf = (s) => `${s.startTime ?? ''}${s.endTime ? `–${s.endTime}` : ''}` || '時間未提供';
+const busiest = [...week].sort((p, q) => q.rows.length - p.rows.length).slice(0, 2).map((d) => d.label);
+
+const place = v.district ? `${v.city}${v.district}` : (v.city ?? '');
+const name = `${short}${a.label}課程`;
+const title = `${name}｜${x.season ?? '本期'}上課時間與報名狀態${short !== display.heading ? `（${display.heading}）` : place ? `（${place}）` : ''}`;
+const sample = [...new Set(list.map((c) => c.title))].slice(0, 3).join('、');
+const description = `${display.heading}${providerNote ? `（${providerNote}）` : ''}本期${a.label}課程共 ${fmt(list.length)} 門，其中 ${fmt(x.open)} 門招生中${busiest.length ? `，以${busiest.join('、')}最多` : ''}，例如${sample}。列出星期、時段、講師與報名狀態。`;
+---
+<Base crumbs={underVenue(v.city, { name: short, href: link('venue', v.slug) }, a.label, new Set(cities.map((c) => c.name)))}
+  title={title}
+  description={description}
+  canonical={`${SITE_URL}${x.href}`}
+  jsonld={itemListJsonLd(list.slice(0, 100), { name: `${display.heading}${a.label}課程` })}
+>
+<div class="card"><h1>{name}</h1>
+<div class="meta">{display.heading}{place && `・${place}`}{v.address && v.address !== display.name && `・${v.address}`}</div>
+{providerNote && <div class="meta">開課單位：{providerNote}</div>}
+<div class="meta-2">{x.season ?? '本期'}共 {fmt(list.length)} 門{a.label}課，其中 {fmt(x.open)} 門招生中。{a.aliases.length > 0 && `課名含「${[a.name, ...a.aliases].join('」「')}」的課都收在這裡。`}</div>
+<div class="meta-2"><a href={link('venue', v.slug)}>{short}全部課程表</a>{districtPage && <Fragment>　<a href={learnHref(a.name, districtPage.area)}>{shortDistrict(v.district)}其他地點的{a.label}課</a></Fragment>}{cityPage && <Fragment>　<a href={learnHref(a.name, cityPage.area)}>{v.city}{a.label}課程</a></Fragment>}{l && <Fragment>　<a href={learnHref(a.name)}>全台{a.label}課程</a></Fragment>}</div>
+</div>
+
+<div class="card tt">
+<h2>{a.label}課程時間表</h2>
+<div class="meta-2">依星期與上課時間排列，一門課一週上兩天會出現兩次。</div>
+{week.map((d) => (
+<section class="tt-day">
+<h3>{d.label}<span class="meta-2 tnum">　{fmt(d.rows.length)} 堂</span></h3>
+<table>{d.rows.map(({ c, s }) => (
+<tr><td class="tt-time tnum">{timeOf(s)}</td><td><a href={link('course', c.slug)}>{c.title}</a>{isCert(c) && <Fragment> <span class="badge-cert">可考證照</span></Fragment>}{c.teachers?.length > 0 && <div class="meta-2"><TeacherNames course={c} /></div>}</td><td><StatusBadge status={c.enrollment?.status} /></td></tr>
+))}</table>
+</section>
+))}
+{noSlot.length > 0 && (
+<section class="tt-day">
+<h3>上課時間未固定<span class="meta-2 tnum">　{fmt(noSlot.length)} 門</span></h3>
+<table>{noSlot.map((c) => <tr><td class="tt-time">{c.schedule?.timeInfoRaw ?? (c.schedule?.startDate ? `自 ${c.schedule.startDate}` : '見課程頁')}</td><td><a href={link('course', c.slug)}>{c.title}</a>{c.teachers?.length > 0 && <div class="meta-2"><TeacherNames course={c} /></div>}</td><td><StatusBadge status={c.enrollment?.status} /></td></tr>)}</table>
+</section>
+)}
+</div>
+
+{siblings.length > 0 && (
+<div class="card"><h3>{short}的其他課程</h3>
+<ul class="chips">{siblings.map((o) => <li><a href={o.href}>{o.activity.label}<span class="n tnum">{fmt(o.list.length)}</span></a></li>)}</ul></div>
+)}
+</Base>

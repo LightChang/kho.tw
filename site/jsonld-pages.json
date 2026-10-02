@@ -101,6 +101,12 @@
       "basis": "同上（銀髮・樂齡課程縣市頁）。"
     },
     {
+      "match": "/at/*/*.html",
+      "require": ["ItemList", "BreadcrumbList"],
+      "apply": ["ItemList"],
+      "basis": "同上（場館 × 細項頁，2026-10-02；門檻 3 門，ItemList 一定至少三門）。"
+    },
+    {
       "match": "/teacher/*.html",
       "require": ["BreadcrumbList"],
       "apply": ["ItemList"],

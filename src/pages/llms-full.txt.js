@@ -123,7 +123,7 @@ export const GET = () => {
     '## 完整資料要去哪裡看',
     '',
     `站台導覽與網址規則：${SITE_URL}/llms.txt`,
-    `sitemap 索引（分 pages／courses×2／venues／teachers 共 5 個分檔）：${SITE_URL}/sitemap.xml`,
+    `sitemap 索引（依 pages／courses／venues／venue-acts／teachers 分組分檔）：${SITE_URL}/sitemap.xml`,
     `站內搜尋（課名／單位／講師）：${SITE_URL}/search.html`,
     `地圖（依座標找附近的課）：${SITE_URL}/map.html`,
     '',

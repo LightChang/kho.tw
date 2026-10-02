@@ -1,0 +1,8 @@
+---
+// 講師欄：來源字串原樣印出，有講師頁的姓名包一層連結（拆段規則見 data.mjs 的 teacherSegmentsOf）。
+import { getData } from '../lib/data.mjs';
+
+const { course } = Astro.props;
+const groups = getData().teacherSegmentsOf(course);
+---
+{groups.map((segs, i) => <Fragment>{i > 0 && '、'}{segs.map((s) => (s.href ? <a href={s.href}>{s.text}</a> : s.text))}</Fragment>)}
