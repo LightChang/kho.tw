@@ -135,7 +135,7 @@ const slotsText = (c) => (c.schedule?.slots ?? []).map((s) => `${WEEKDAY_LABEL[s
 <section class="act-sec">
 <h2>{actPages.has(a.name) ? <a href={actPages.get(a.name).href}>{display.heading}{a.label}課程</a> : `${display.heading}${a.label}課程`}<span class="meta-2 tnum">　{fmt(a.list.length)} 門{past && '（已結束）'}</span></h2>
 <ul class="next-list">{a.list.slice(0, actPages.has(a.name) ? ACT_SECTION_SHOW : 40).map((c) => <li><a href={link('course', c.slug)}>{c.title}</a> <StatusBadge status={c.enrollment?.status} /><div class="meta-2">{slotsText(c)}</div></li>)}</ul>
-<div class="meta">{actPages.has(a.name) && a.list.length > ACT_SECTION_SHOW && <Fragment><a href={actPages.get(a.name).href}>看全部 {fmt(a.list.length)} 門{a.label}課的時間表</a>　</Fragment>}{a.page && <a href={learnHref(a.name)}>其他地點的{a.label}課程</a>}</div>
+<div class="meta">{actPages.has(a.name) && <Fragment><a href={actPages.get(a.name).href}>{actPages.get(a.name).short} {a.label}全部課程</a>　</Fragment>}{a.page && <a href={learnHref(a.name)}>其他地點的{a.label}課程</a>}</div>
 </section>
 ))}
 </div>

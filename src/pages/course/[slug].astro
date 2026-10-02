@@ -41,7 +41,10 @@ const rows = [
 const jsonld = courseJsonLd(c, venue);
 
 // 同類課程：細項頁（行政區 → 縣市 → 全台）與證照班頁。細項依課名判斷，規則見 overrides/activities.json。
-const { learnLinksOf, certCitySet, titleCollides, successorsOf, alternativesOf, currentByVenue, sameTitleOf } = getData();
+const { learnLinksOf, certCitySet, titleCollides, successorsOf, alternativesOf, currentByVenue, sameTitleOf, venueActsByVenue, actsByCourse } = getData();
+// 同場館同細項的獨立頁（/at/）：單堂課頁連過去，「北屯運動中心 皮拉提斯」這類查詢才會落在匯集頁而不是單堂課
+const myActs = new Set(actsByCourse.get(c.id) ?? []);
+const atPages = venue?.id ? (venueActsByVenue.get(venue.id) ?? []).filter((x) => myActs.has(x.activity.name)) : [];
 const related = learnLinksOf(c);
 const cert = isCert(c);
 if (cert) related.push(c.venue?.city && certCitySet.has(c.venue.city)
@@ -84,7 +87,8 @@ const whenOf = (o) => [seasonOf(o.schedule?.startDate), (o.schedule?.slots ?? []
 <div class="card"><h3>上課地點</h3>
 <div><a href={link('venue', venue.slug)}>{venue.name}</a></div>
 <div class="meta">{venue.address ?? ''}</div>
-<div class="meta-2">{venue.lat ? `座標 ${venue.lat}, ${venue.lng}（比對方式：${c.venue.match}）` : '尚無座標'}</div></div>
+<div class="meta-2">{venue.lat ? `座標 ${venue.lat}, ${venue.lng}（比對方式：${c.venue.match}）` : '尚無座標'}</div>
+{atPages.map((x) => <div class="meta"><a href={x.href}>{x.short} {x.activity.label}全部課程</a></div>)}</div>
 ) : (
 <div class="card"><h3>上課地點</h3><div class="meta">{c.venue?.name ?? '來源未提供'}</div></div>
 )}
