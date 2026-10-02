@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://kho.tw/course/%E6%9D%B1%E6%96%B9%E5%8F%A4%E5%85%B8%E7%BE%8E%E4%BA%BA%E8%88%9E-%E6%96%87%E5%B1%B1%E7%A4%BE%E5%A4%A7-094c7.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/course/%E6%9D%B1%E6%96%B9%E5%8F%A4%E5%85%B8%E7%BE%8E%E4%BA%BA%E8%88%9E-%E6%96%87%E5%B1%B1%E7%A4%BE%E5%A4%A7-0a967.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -119999,5 +119993,11 @@
     <lastmod>2026-09-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/course/A129%E5%96%AE%E8%BB%8A%E9%A8%8E%E4%B9%98%E8%88%87%E5%8C%97%E6%B8%AF%E6%BA%AA%E7%92%B0%E6%9D%91%E7%B6%A0%E9%81%93%E6%8E%A2%E7%B4%A2%E5%AF%A6%E5%8B%99-%E6%B5%B7%E7%B7%9A%E7%A4%BE%E5%A4%A7-f48b6.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
