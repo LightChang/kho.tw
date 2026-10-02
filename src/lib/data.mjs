@@ -79,6 +79,9 @@ export const freeRel = (city) => relOf('free', '', city);
 export const freeHref = (city) => hrefOf(freeRel(city));
 export const seniorRel = (city) => relOf('senior', '', city);
 export const seniorHref = (city) => hrefOf(seniorRel(city));
+// 銀髮・樂齡 × 行政區（2026-10-02）：/senior/臺北市/中正區.html，接「中正區銀髮族體適能」這種到區的問法。門檻同細項行政區頁。
+export const seniorDistrictRel = (city, district) => `senior/${city}/${district}.html`;
+export const seniorDistrictHref = (city, district) => hrefOf(seniorDistrictRel(city, district));
 
 // 場館 × 細項頁（站主 2026-10-02 拍板）：/at/<場館 slug>/<細項>.html，例如 /at/臺中市北屯國民暨兒童運動中心-xxxxx/皮拉提斯.html。
 // 接「北屯運動中心 皮拉提斯」這種「場館名＋細項」的查詢。網址由場館 slug（登記簿配給、不會變）＋細項名
@@ -412,6 +415,10 @@ function load() {
   const programs = PROGRAMS.map((p) => ({ ...p, ...hub(current.filter(p.match).sort(byEnrollDeadline)) }));
   const free = hub(current.filter(isFreeNow).sort(byStatusThenDate));
   const senior = hub(current.filter((c) => isSenior(c) && c.enrollment?.status !== 'cancelled').sort(byStatusThenDate));
+  senior.districts = [...groupBy(senior.list.filter((c) => c.venue?.city && c.venue?.district), (c) => `${c.venue.city}\t${c.venue.district}`)]
+    .filter(([, l]) => l.length >= FACET_MIN.district)
+    .map(([key, l]) => { const [city, district] = key.split('\t'); return { city, district, list: l, open: l.filter(isOpen).length }; })
+    .sort((a, b) => b.list.length - a.list.length || a.district.localeCompare(b.district));
   /** 縣市頁用：這個縣市有哪些專題頁 [{ href, text, n }] */
   const hubLinksOf = (city) => [
     ...programs.map((p) => [p.cities.find((x) => x.city === city), programHref(p.key, city), `${city}${p.short}`]),

@@ -1,0 +1,47 @@
+---
+// 銀髮・樂齡課程行政區頁：/senior/臺北市/中正區.html。門檻見 data.mjs 的 FACET_MIN.district。
+// 接「中正區銀髮族體適能」這種到區的問法：先列這一區的運動體能類（樂齡肌力、泳訓、骨操），再依開課單位類型分段。
+import Base from '../../../layouts/Base.astro';
+import HubByKind from '../../../components/HubByKind.astro';
+import HubTable from '../../../components/HubTable.astro';
+import { getData, fmt, seniorHref, seniorDistrictHref, link } from '../../../lib/data.mjs';
+import { itemListJsonLd, SITE_URL } from '../../../../site/jsonld.mjs';
+
+export function getStaticPaths() {
+  return getData().senior.districts.map((x) => ({ params: { city: x.city, district: x.district }, props: { x } }));
+}
+
+const { x } = Astro.props;
+const { senior, types } = getData();
+const LABEL = new Map(types.map((k) => [k.kind, k.label]));
+const FITNESS = /體適能|肌力|肌耐力|健身|骨操|慢跑|伸展|泳|太極|瑜珈|運動/;
+const fit = x.list.filter((c) => FITNESS.test(c.title));
+const rest = x.list.filter((c) => !FITNESS.test(c.title));
+const kinds = [...new Set(x.list.map((c) => LABEL.get(c.provider?.kind)).filter(Boolean))];
+const siblings = senior.districts.filter((o) => o.city === x.city && o.district !== x.district);
+const crumbs = [{ name: '首頁', href: '/' }, { name: '銀髮・樂齡課程', href: seniorHref() }, { name: x.city, href: seniorHref(x.city) }, { name: x.district }];
+---
+<Base crumbs={crumbs}
+  title={fit.length > 0
+    ? `${x.district}銀髮族體適能・樂齡課程｜${x.city}${x.district}長輩運動與學習班（${fmt(x.list.length)} 門）`
+    : `${x.district}銀髮課程・樂齡課程｜${x.city}${x.district}長輩學習班（${fmt(x.list.length)} 門）`}
+  description={`${x.city}${x.district}還沒上完的銀髮・樂齡課程 ${fmt(x.list.length)} 門，其中 ${fmt(x.open)} 門招生中${fit.length > 0 ? `；運動體能類（肌力、體適能、泳訓、伸展等）${fmt(fit.length)} 門` : ''}。開課單位類型：${kinds.join('、')}。列出上課時間、地點與報名狀態。`}
+  canonical={`${SITE_URL}${seniorDistrictHref(x.city, x.district)}`}
+  jsonld={itemListJsonLd(x.list.slice(0, 100), { name: `${x.city}${x.district}銀髮・樂齡課程` })}
+>
+<div class="card"><h1>{x.district}銀髮・樂齡課程</h1>
+<div class="meta">{x.city}{x.district} {fmt(x.list.length)} 門，其中 {fmt(x.open)} 門招生中</div>
+<div class="meta-2">收錄規則同<a href={seniorHref()}>全台銀髮・樂齡課程</a>：樂齡中心的課，加上課名寫明樂齡、銀髮、長青、熟齡的課。年齡等報名資格以開課單位公告為準。<a href={seniorHref(x.city)}>{x.city}銀髮・樂齡課程</a>　<a href={link('city', x.city)}>{x.city}全部成人課程</a></div>
+</div>
+{fit.length > 0 && (
+<div class="card"><h3>{x.district}長輩運動體能課<span class="meta tnum">　{fmt(fit.length)} 門</span></h3>
+<div class="meta-2">課名含體適能、肌力、泳訓、骨操、伸展、太極、瑜珈等字樣的課。</div>
+<HubTable list={fit} showCity={false} />
+</div>
+)}
+{rest.length > 0 && <HubByKind list={rest} suffix="的銀髮・樂齡課" showCity={false} />}
+{siblings.length > 0 && (
+<div class="card"><h3>{x.city}其他行政區的銀髮・樂齡課程</h3>
+<ul class="chips">{siblings.map((o) => <li><a href={seniorDistrictHref(o.city, o.district)}>{o.district}<span class="n tnum">{fmt(o.list.length)}</span></a></li>)}</ul></div>
+)}
+</Base>

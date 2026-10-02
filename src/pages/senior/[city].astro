@@ -3,7 +3,7 @@
 import Base from '../../layouts/Base.astro';
 import { hubCrumbs } from '../../lib/crumbs.mjs';
 import HubByKind from '../../components/HubByKind.astro';
-import { getData, fmt, seniorHref, link } from '../../lib/data.mjs';
+import { getData, fmt, seniorHref, seniorDistrictHref, link } from '../../lib/data.mjs';
 import { shortCity } from '../../lib/facets.mjs';
 import { itemListJsonLd, SITE_URL } from '../../../site/jsonld.mjs';
 
@@ -16,6 +16,7 @@ const { senior, types } = getData();
 const LABEL = new Map(types.map((k) => [k.kind, k.label]));
 const kinds = [...new Set(x.list.map((c) => LABEL.get(c.provider?.kind)).filter(Boolean))];
 const place = shortCity(x.city);
+const districts = senior.districts.filter((d) => d.city === x.city);
 const siblings = senior.cities.filter((o) => o.city !== x.city);
 ---
 <Base crumbs={hubCrumbs('銀髮・樂齡課程', seniorHref(), x.city)}
@@ -28,6 +29,11 @@ const siblings = senior.cities.filter((o) => o.city !== x.city);
 <div class="meta">{x.city} {fmt(x.list.length)} 門，其中 {fmt(x.open)} 門招生中</div>
 <div class="meta-2">收錄規則同<a href={seniorHref()}>全台銀髮・樂齡課程</a>；年齡等報名資格以開課單位公告為準。<a href={link('city', x.city)}>{x.city}全部成人課程</a></div>
 </div>
+{districts.length > 0 && (
+<div class="card"><h3>{x.city}各行政區的銀髮・樂齡課程</h3>
+<ul class="chips">{districts.map((d) => <li><a href={seniorDistrictHref(d.city, d.district)}>{d.district}<span class="n tnum">{fmt(d.open)}／{fmt(d.list.length)}</span></a></li>)}</ul>
+<div class="meta-2">數字是招生中／全部。未滿 10 門的行政區不另開頁，課程列在下方。</div></div>
+)}
 <HubByKind list={x.list} suffix="的銀髮・樂齡課" />
 {siblings.length > 0 && (
 <div class="card"><h3>其他縣市的銀髮・樂齡課程</h3>
