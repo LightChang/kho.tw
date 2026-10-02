@@ -76,6 +76,10 @@ slug 由 data/slugs.ndjson 登記簿配給並保證重跑不變，不可自行�
 網址規則：/venue/<slug>.html，例如：
   https://kho.tw/venue/%E5%81%A5%E8%A1%8C%E5%9C%8B%E5%B0%8F-247e3.html
 
+### 場館 × 細項頁（共 895 頁）
+某個地點本期同一細項有 3 門以上的課才有這一頁，例如「北屯運動中心皮拉提斯課程」。網址規則：/at/<場館 slug>/<細項>.html，例如：
+  https://kho.tw/at/%E8%87%BA%E5%8C%97%E5%B8%82%E5%85%A7%E6%B9%96%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-20bd7/%E7%9A%AE%E6%8B%89%E6%8F%90%E6%96%AF.html
+
 ### 講師頁（只收同名同單位開課 ≥2 門者，共 7,977 頁）
 網址規則：/teacher/<slug>.html，例如：
   https://kho.tw/teacher/%E5%AE%B6%E6%85%B6-%E5%85%A7%E6%B9%96%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-f0359.html
@@ -93,7 +97,7 @@ slug 由 data/slugs.ndjson 登記簿配給並保證重跑不變，不可自行�
 
 ## 完整網址清單
 單一課程／場館／講師的網址請勿自行拼湊，一律從下列來源取得：
-- sitemap 索引：https://kho.tw/sitemap.xml（分 pages／courses×2／venues／teachers 共 5 個分檔）
+- sitemap 索引：https://kho.tw/sitemap.xml（依 pages／courses／venues／venue-acts／teachers 分組分檔）
 - robots.txt：https://kho.tw/robots.txt（全站開放檢索，未擋任何 AI 爬蟲）
 - 站內搜尋：https://kho.tw/search.html
 

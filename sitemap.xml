@@ -20,4 +20,12 @@
     <loc>https://kho.tw/sitemap-venues-1.xml</loc>
     <lastmod>2026-10-02</lastmod>
   </sitemap>
+  <sitemap>
+    <loc>https://kho.tw/sitemap-venue-acts-1.xml</loc>
+    <lastmod>2026-10-02</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://kho.tw/sitemap-teachers-1.xml</loc>
+    <lastmod>2026-10-02</lastmod>
+  </sitemap>
 </sitemapindex>

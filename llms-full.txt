@@ -198,7 +198,7 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 ## 完整資料要去哪裡看
 
 站台導覽與網址規則：https://kho.tw/llms.txt
-sitemap 索引（分 pages／courses×2／venues／teachers 共 5 個分檔）：https://kho.tw/sitemap.xml
+sitemap 索引（依 pages／courses／venues／venue-acts／teachers 分組分檔）：https://kho.tw/sitemap.xml
 站內搜尋（課名／單位／講師）：https://kho.tw/search.html
 地圖（依座標找附近的課）：https://kho.tw/map.html
 
