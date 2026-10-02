@@ -25,6 +25,7 @@ import Base from '../layouts/Base.astro';
 import { sectionCrumbs } from '../lib/crumbs.mjs';
 import { getData, fmt } from '../lib/data.mjs';
 import { SITE_URL } from '../../site/jsonld.mjs';
+import VenueMapList from '../components/VenueMapList.astro';
 
 const { map, home } = getData();
 const venueCount = map.rows.length;
@@ -49,6 +50,8 @@ const venueCount = map.rows.length;
   </div>
   <div id="map" role="application" aria-label="全台上課地點分布圖"></div>
 </div>
+
+<VenueMapList rows={map.rows} />
 
 <div class="card" id="nearbox" hidden>
   <h3>離你最近的上課地點</h3>
