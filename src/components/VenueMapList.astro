@@ -1,0 +1,29 @@
+---
+// 地圖頁的文字備援：地圖本身是前端畫的圓點，搜尋引擎讀不到座標圖層，
+// 這裡把同一份資料（map.rows，[slug, 場館名, 縣市, 行政區, lat, lng, 課程數, 招生中數]）
+// 依縣市分組列成表格，讓場館頻道至少有一份可讀文字清單。
+import { fmt, link } from '../lib/data.mjs';
+
+const { rows, maxCities = 24, maxPerCity = 6 } = Astro.props;
+const byCity = [...rows.reduce((m, r) => {
+  const city = r[2] || '未標示';
+  const list = m.get(city) ?? [];
+  list.push(r);
+  return m.set(city, list);
+}, new Map())]
+  .sort((a, b) => b[1].length - a[1].length);
+---
+{byCity.length > 0 && (
+<div class="card"><h3>各縣市上課地點</h3>
+<div class="meta-2">依地點數排列，每個縣市列課數最多的前 {maxPerCity} 個地點。</div>
+<table><tr><th>縣市</th><th>地點數</th><th>主要地點</th></tr>
+{byCity.slice(0, maxCities).map(([city, list]) => (
+<tr><td>{city}</td><td class="tnum">{fmt(list.length)}</td><td>
+{list.slice(0, maxPerCity).map((r, i) => <Fragment>{i > 0 && '、'}<a href={link('venue', r[0])}>{r[1]}</a></Fragment>)}
+{list.length > maxPerCity && `等 ${fmt(list.length - maxPerCity)} 個地點`}
+</td></tr>
+))}
+</table>
+{byCity.length > maxCities && <div class="meta-2">另有 {fmt(byCity.length - maxCities)} 個縣市，點一下地圖或用上方縣市選單跳轉。</div>}
+</div>
+)}
