@@ -92,7 +92,7 @@ launchd 每小時叫醒 `ops/run-pipeline.sh`，但**哪些來源該抓是 `tran
 
 ```
 tail -f data/logs/pipeline-$(date +%Y-%m-%d).log   # 這一天的
-ls -lt data/logs/                                   # 保留 14 天，超過自動刪
+ls -lt data/logs/                                   # 前幾天的壓成 .gz（zless 看），保留 14 天
 ```
 
 `data/logs/launchd.{out,err}.log` 只會有「bash 都還沒起來就失敗」這種錯誤，

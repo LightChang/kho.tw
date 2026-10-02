@@ -33,6 +33,12 @@ mkdir -p "$LOG_DIR"
 LOG="$LOG_DIR/pipeline-$(date +%Y-%m-%d).log"
 log() { printf '%s  %s\n' "$(date '+%H:%M:%S')" "$*" >> "$LOG"; }
 
+# log 整理放在最前面：scheduler 判定「沒有變動」或任一階段失敗都會提早 exit，
+# 放檔尾的話多數輪次根本跑不到。一天的 log 可達上百 MB（astro build 逐頁列出），
+# 前幾天的先 gzip（約剩四分之一），超過保留天數再刪。
+find "$LOG_DIR" -name 'pipeline-*.log' ! -name "$(basename "$LOG")" -exec gzip -q {} \; 2>/dev/null
+find "$LOG_DIR" -name 'pipeline-*.log*' -mtime +$LOG_KEEP_DAYS -delete 2>/dev/null
+
 # ── 鎖：與 seo-reflect / seo-brain 同一把 ──────────────────────
 # -n（不等待）而不是等：這支每小時都會再來一次，等在這裡只會讓下一輪疊上來。
 exec 200>"$LOCK_FILE"
@@ -173,4 +179,3 @@ else
 fi
 
 log "───── 這輪完成，共 $(( $(date +%s) - started ))s ─────"
-find "$LOG_DIR" -name 'pipeline-*.log' -mtime +$LOG_KEEP_DAYS -delete 2>/dev/null
