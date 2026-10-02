@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://kho.tw/course/AI%E7%8E%A9%E8%BD%89%E6%97%85%E8%A1%8C%E5%89%B5%E6%84%8F%E8%A6%8F%E5%8A%83%E8%BC%95%E9%AC%86%E5%AD%B8A-%E6%A8%B9%E6%9E%97%E7%A4%BE%E5%A4%A7-16803.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/course/AI%E7%8E%A9%E8%BD%89%E6%97%85%E8%A1%8C%E5%89%B5%E6%84%8F%E8%A6%8F%E5%8A%83%E8%BC%95%E9%AC%86%E5%AD%B8A-%E6%A8%B9%E6%9E%97%E7%A4%BE%E5%A4%A7-eec82.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -279,12 +285,6 @@
   <url>
     <loc>https://kho.tw/course/AI%E7%9F%AD%E5%BD%B1%E9%9F%B3%E8%88%87Canva%E7%9A%84%E6%B5%81%E9%87%8F%E5%AF%86%E6%8A%80-%E5%BE%8C%E9%A9%9B%E7%A4%BE%E5%A4%A7-ad4bf.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/course/AI%E7%9F%AD%E5%BD%B1%E9%9F%B3%E8%A3%BD%E7%89%87%E6%89%80-%E6%94%BF%E5%BA%9C%E8%B3%87%E8%A8%8A%E4%B8%AD%E5%BF%83-f9adc.html</loc>
-    <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -2204,9 +2204,9 @@
   </url>
   <url>
     <loc>https://kho.tw/course/BodyBalance-%E4%B8%AD%E6%AD%A3%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-f8a05.html</loc>
-    <lastmod>2026-10-01</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://kho.tw/course/BodyCombat-%E6%B3%B0%E5%B1%B1%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-0677d.html</loc>
@@ -2240,7 +2240,7 @@
   </url>
   <url>
     <loc>https://kho.tw/course/BodyCombat-%E7%AB%B9%E5%8C%97%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-0969d.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -2258,7 +2258,7 @@
   </url>
   <url>
     <loc>https://kho.tw/course/BodyCombat-%E7%AB%B9%E5%8C%97%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-4e7b5.html</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -4286,7 +4286,7 @@
   </url>
   <url>
     <loc>https://kho.tw/course/HYROX%E6%96%B0%E6%89%8B%E7%8F%AD-%E4%B8%AD%E6%AD%A3%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-e6ea1.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -4760,7 +4760,7 @@
   </url>
   <url>
     <loc>https://kho.tw/course/Jazz-%E6%B3%B0%E5%B1%B1%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-e9299.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -4976,7 +4976,7 @@
   </url>
   <url>
     <loc>https://kho.tw/course/KPOP%E8%88%9E%E8%B9%88-%E7%AB%B9%E5%8C%97%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-acbe9.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -5606,7 +5606,7 @@
   </url>
   <url>
     <loc>https://kho.tw/course/MV%E6%B5%81%E8%A1%8C%E8%88%9E%E8%B9%88-%E5%8D%97%E6%B8%AF%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-f9d81.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -5931,8 +5931,8 @@
   <url>
     <loc>https://kho.tw/course/NEW%E5%93%88%E9%81%94%E7%91%9C%E7%8F%88-%E4%B8%89%E9%87%8D%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-58538.html</loc>
     <lastmod>2026-10-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://kho.tw/course/NEW%E5%99%A8%E6%A2%B0%E7%9A%AE%E6%8B%89%E6%8F%90%E6%96%AF-%E4%B8%89%E9%87%8D%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-1411f.html</loc>
@@ -6212,7 +6212,7 @@
   </url>
   <url>
     <loc>https://kho.tw/course/POWER-%E6%A5%8A%E6%A2%85%E9%AB%94%E8%82%B2%E5%9C%92%E5%8D%80-d0aa9.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -7292,7 +7292,7 @@
   </url>
   <url>
     <loc>https://kho.tw/course/SP%E7%87%83%E8%84%82%E8%A8%93%E7%B7%B4%E9%A3%9B%E8%BC%AA-%E7%AB%B9%E5%8C%97%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-8ba18.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -7424,7 +7424,7 @@
   </url>
   <url>
     <loc>https://kho.tw/course/STRONG-%E6%9D%BF%E6%A9%8B%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-e2dc5.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -7622,7 +7622,7 @@
   </url>
   <url>
     <loc>https://kho.tw/course/Street-%E7%AB%B9%E5%8C%97%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-7805d.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -8390,7 +8390,7 @@
   </url>
   <url>
     <loc>https://kho.tw/course/TRX%E5%88%9D%E9%9A%8E%E8%AA%B2%E7%A8%8B-%E6%A1%83%E5%9C%92%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-3653f.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -10340,7 +10340,7 @@
   </url>
   <url>
     <loc>https://kho.tw/course/TRX%E7%B6%9C%E5%90%88%E9%AB%94%E8%83%BD-%E8%8B%93%E9%9B%85%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-9ed7c.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -10586,9 +10586,9 @@
   </url>
   <url>
     <loc>https://kho.tw/course/TRX%E8%82%8C%E5%8A%9B%E9%9B%95%E5%A1%91-%E4%B8%89%E9%87%8D%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-fe703.html</loc>
-    <lastmod>2026-09-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://kho.tw/course/TRX%E8%82%8C%E5%8A%9B%E9%9B%95%E5%A1%91-%E5%A4%AA%E5%B9%B3%E5%9C%8B%E6%B0%91%E6%9A%A8%E5%85%92%E7%AB%A5%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-c7201.html</loc>
@@ -11420,7 +11420,7 @@
   </url>
   <url>
     <loc>https://kho.tw/course/TRX-%E5%A4%AA%E5%B9%B3%E5%9C%8B%E6%B0%91%E6%9A%A8%E5%85%92%E7%AB%A5%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-9d044.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -13489,6 +13489,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://kho.tw/course/ZUMBA-%E6%9C%9D%E9%A6%AC%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-83acf.html</loc>
+    <lastmod>2026-10-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/course/ZUMBA-%E6%9C%9D%E9%A6%AC%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-8e199.html</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>daily</changefreq>
@@ -13521,8 +13527,8 @@
   <url>
     <loc>https://kho.tw/course/ZUMBA-%E6%9C%9D%E9%A6%AC%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-e5444.html</loc>
     <lastmod>2026-10-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://kho.tw/course/ZUMBA-%E6%9C%9D%E9%A6%AC%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-edf31.html</loc>
@@ -13772,7 +13778,7 @@
   </url>
   <url>
     <loc>https://kho.tw/course/ZUMBA-%E6%B0%B8%E5%92%8C%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-99eb9.html</loc>
-    <lastmod>2026-09-19</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -14150,7 +14156,7 @@
   </url>
   <url>
     <loc>https://kho.tw/course/ZUMBA-wdygwd31-c9b4a.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -14702,7 +14708,7 @@
   </url>
   <url>
     <loc>https://kho.tw/course/Zumba-%E5%A4%A7%E5%90%8C%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-01f0b.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
@@ -15434,7 +15440,7 @@
   </url>
   <url>
     <loc>https://kho.tw/course/body-%E4%B8%AD%E6%AD%A3%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-6b083.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
