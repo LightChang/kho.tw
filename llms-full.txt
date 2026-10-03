@@ -5,7 +5,7 @@
 
 這裡是本站聚合統計與代表性內容的全文，純文字，給 AI 助理讀的，可直接引用。
 收錄範圍：全站彙總統計（依機構類型／主題分類／縣市，共 48 個分類的完整數字）、跨來源合併與即時名額揭露各 6 筆代表性課程全文。
-本站共 42,872 門課，規模太大不可能逐頁收錄；個別課程／場館／講師的完整清單見 https://kho.tw/llms.txt 與 https://kho.tw/sitemap.xml。
+本站共 43,255 門課，規模太大不可能逐頁收錄；個別課程／場館／講師的完整清單見 https://kho.tw/llms.txt 與 https://kho.tw/sitemap.xml。
 引用時請標明來源網址；每筆課程都附上正式網址與原始資料來源。
 
 ------------------------------------------------------------
@@ -22,12 +22,12 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 
 | 類型 | 代碼 | 課程數 | 招生中 |
 |---|---|---|---|
-| 社區大學 | community-college | 24,900 | 4,247 |
-| 運動中心 | sports-center | 13,014 | 8,714 |
+| 社區大學 | community-college | 25,300 | 4,248 |
+| 運動中心 | sports-center | 13,005 | 8,721 |
 | 職業訓練 | vocational | 2,598 | 1,034 |
 | 樂齡中心 | senior-center | 1,307 | 160 |
 | 其他 | other | 688 | 15 |
-| 圖書館 | library | 199 | 102 |
+| 圖書館 | library | 191 | 96 |
 | 成人教育班 | adult-education | 88 | 18 |
 | 婦女大學 | women-center | 52 | 0 |
 | 國中小進修部 | school-continuing | 26 | 23 |
@@ -38,23 +38,23 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 
 | 分類 | 課程數 | 招生中 |
 |---|---|---|
-| 運動健身 | 14,036 | 6,957 |
-| 美術工藝 | 4,835 | 743 |
-| 音樂戲劇 | 3,974 | 672 |
-| 舞蹈 | 2,927 | 996 |
-| 語言 | 2,360 | 545 |
-| 健康養生 | 1,412 | 367 |
-| 人文社會 | 1,388 | 500 |
-| 電腦資訊 | 1,202 | 362 |
-| 料理烘焙 | 1,078 | 280 |
-| 自然生態 | 977 | 247 |
-| 攝影影音 | 862 | 219 |
-| 工程技術 | 822 | 218 |
-| 生活應用 | 523 | 190 |
-| 理財法律 | 487 | 147 |
+| 運動健身 | 14,092 | 6,962 |
+| 美術工藝 | 4,904 | 743 |
+| 音樂戲劇 | 4,029 | 671 |
+| 舞蹈 | 2,962 | 997 |
+| 語言 | 2,390 | 546 |
+| 健康養生 | 1,437 | 367 |
+| 人文社會 | 1,400 | 500 |
+| 電腦資訊 | 1,207 | 362 |
+| 料理烘焙 | 1,099 | 280 |
+| 自然生態 | 984 | 247 |
+| 攝影影音 | 877 | 220 |
+| 工程技術 | 823 | 219 |
+| 生活應用 | 523 | 189 |
+| 理財法律 | 493 | 147 |
 | 商業管理 | 366 | 139 |
-| 旅遊休閒 | 285 | 36 |
-| 教育照護 | 144 | 42 |
+| 旅遊休閒 | 289 | 36 |
+| 教育照護 | 143 | 41 |
 | 美容美髮 | 125 | 51 |
 
 ------------------------------------------------------------
@@ -63,16 +63,16 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 
 | 縣市 | 課程數 | 招生中 |
 |---|---|---|
-| 臺北市 | 10,051 | 5,831 |
-| 新北市 | 8,812 | 2,740 |
-| 臺中市 | 5,243 | 1,482 |
-| 桃園市 | 5,062 | 1,463 |
-| 高雄市 | 2,405 | 635 |
-| 彰化縣 | 1,348 | 284 |
-| 宜蘭縣 | 539 | 202 |
+| 臺北市 | 10,041 | 5,824 |
+| 新北市 | 8,806 | 2,733 |
+| 臺中市 | 5,244 | 1,484 |
+| 桃園市 | 5,063 | 1,469 |
+| 高雄市 | 2,405 | 639 |
+| 彰化縣 | 1,348 | 285 |
+| 宜蘭縣 | 539 | 203 |
 | 新竹市 | 883 | 191 |
-| 臺南市 | 1,851 | 182 |
-| 新竹縣 | 584 | 169 |
+| 臺南市 | 1,848 | 181 |
+| 新竹縣 | 584 | 170 |
 | 南投縣 | 491 | 166 |
 | 雲林縣 | 883 | 144 |
 | 花蓮縣 | 157 | 35 |
@@ -104,8 +104,8 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 報名狀態：額滿
 無限制
 資料來源：
-- taipei-cc：https://ss.twcc.org.tw/course/m_course_detail.php?u=3a81c2d7239c333cb18d59018955aab7（最後確認 2026-10-03；提供欄位：categoryRaw、description、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title）
-- taipei-cc：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-10-03；提供欄位：categoryRaw、description、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title）
+- taipei-cc：https://ss.twcc.org.tw/course/m_course_detail.php?u=3a81c2d7239c333cb18d59018955aab7（最後確認 2026-10-04；提供欄位：categoryRaw、description、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title）
+- taipei-cc：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-10-04；提供欄位：categoryRaw、description、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title）
 - moe-cc-courses：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-09-15；提供欄位：credit、enrollment、schedule、topicsRaw）
 - moe-cc-courses：https://ss.twcc.org.tw/course/m_course_detail.php?u=3a81c2d7239c333cb18d59018955aab7（最後確認 2026-09-15；提供欄位：credit、enrollment、schedule、topicsRaw）
 - moe-cc-detail：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-09-15；提供欄位：）
@@ -126,7 +126,7 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 - moe-cc-courses：https://www.tbmcc.tw/modules/tadnews/index.php?nsn=158（最後確認 2026-09-15；提供欄位：credit、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title、topicsRaw）
 - moe-cc-detail：https://www.tbmcc.tw/modules/tadnews/index.php?nsn=158（最後確認 2026-09-15；提供欄位：description）
 - moe-cc-detail：https://www.tbmcc.tw/modules/tadnews/index.php?nsn=158（最後確認 2026-09-15；提供欄位：description）
-- tainan-cc-portal：https://tncu.tn.edu.tw/Modules/Course/Show.php?ID=19637（最後確認 2026-10-03；提供欄位：schedule）
+- tainan-cc-portal：https://tncu.tn.edu.tw/Modules/Course/Show.php?ID=19637（最後確認 2026-10-04；提供欄位：schedule）
 
 ### 手沖精品咖啡
 網址：https://kho.tw/course/%E6%89%8B%E6%B2%96%E7%B2%BE%E5%93%81%E5%92%96%E5%95%A1-%E6%A1%83%E5%9C%92%E7%A4%BE%E5%A4%A7-ca272.html
@@ -163,20 +163,7 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 報名狀態：招生中
 樹林國民運動中心，11505，泳訓課程類課程，週日 10:50–12:00上課，自 2026-09-13 起，地點：樹林國民運動中心。
 資料來源：
-- xuanen-centers：https://ntcslsports.com.tw（最後確認 2026-10-03；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
-
-### 【總館】「讓建築歌唱：徐亞英的交響人生-空間調音師的聲音傳奇」電影放映暨分享活動－第2️⃣場「讓建築歌唱：徐亞英的交響人生-空間調音師的聲音傳奇」電影放映暨分享活動(導演出席場次)
-網址：https://kho.tw/course/%E8%AE%93%E5%BB%BA%E7%AF%89%E6%AD%8C%E5%94%B1%E5%BE%90%E4%BA%9E%E8%8B%B1%E7%9A%84%E4%BA%A4%E9%9F%BF%E4%BA%BA%E7%94%9F%E7%A9%BA%E9%96%93%E8%AA%BF%E9%9F%B3%E5%B8%AB%E7%9A%84%E8%81%B2-%E7%AB%8B%E5%9C%96%E6%9B%B8%E9%A4%A8%E7%B8%BD%E9%A4%A8-596ef.html
-開課單位：新北市立圖書館（圖書館）
-地點：新北市立圖書館，新北市板橋區
-分類：音樂戲劇（依課名判斷，非來源標示）
-期間：2026-10-03 – 2026-10-03
-費用：未提供
-名額：尚餘 2／100 名額
-報名狀態：招生中
-內容簡介: 《讓建築歌唱～徐亞英的交響人生》是由導演楊守義執導、陳郁秀監製，歷時15年跨國追蹤拍攝的....
-資料來源：
-- ntpc-library-activities：https://atpass.ntpclib.gov.tw/activities/8e109e8bb57a4b44b21e31c34db87dba（最後確認 2026-10-03；提供欄位：description、enrollment、provider、schedule、sourceUrl、title）
+- xuanen-centers：https://ntcslsports.com.tw（最後確認 2026-10-04；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
 
 ### 肌力伸展瑜珈
 網址：https://kho.tw/course/%E8%82%8C%E5%8A%9B%E4%BC%B8%E5%B1%95%E7%91%9C%E7%8F%88-%E5%8D%97%E6%B8%AF%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-50f39.html
@@ -190,7 +177,21 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 報名狀態：招生中
 臺北市南港運動中心，11504，瑜珈系列類課程，週一 10:00–10:55上課，自 2026-08-31 起，地點：臺北市南港運動中心。
 資料來源：
-- xuanen-centers：https://ngsc.cyc.org.tw（最後確認 2026-10-03；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
+- xuanen-centers：https://ngsc.cyc.org.tw（最後確認 2026-10-04；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
+
+### Boxing雕塑
+網址：https://kho.tw/course/Boxing%E9%9B%95%E5%A1%91-%E4%B8%89%E9%87%8D%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-0ce7d.html
+開課單位：三重國民運動中心（運動中心）
+地點：三重國民運動中心，新北市三重區
+分類：運動健身（依課名判斷，非來源標示）
+上課時間：週四 19:35–20:35
+期間：2026-09-03 – 2026-10-29
+費用：未提供
+名額：尚餘 1／30 名額
+報名狀態：招生中
+三重國民運動中心，11505，有氧系列課程類課程，週四 19:35–20:35上課，自 2026-09-03 起，地點：三重國民運動中心。
+資料來源：
+- xuanen-centers：https://scsports.com.tw（最後確認 2026-10-04；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
 
 
 ------------------------------------------------------------
@@ -202,4 +203,4 @@ sitemap 索引（依 pages／courses／venues／venue-acts／teachers 分組分�
 站內搜尋（課名／單位／講師）：https://kho.tw/search.html
 地圖（依座標找附近的課）：https://kho.tw/map.html
 
-更新於 2026-10-03（每小時抓取一次）。本頁每次建置重新生成，內容以此刻為準。
+更新於 2026-10-04（每小時抓取一次）。本頁每次建置重新生成，內容以此刻為準。
