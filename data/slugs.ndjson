@@ -45265,6 +45265,7 @@
 {"id":"crs_fe1ac75c","kind":"course","slug":"iPARTY愛派對-桃園運動中心-ac75c","assignedAt":"2026-09-27"}
 {"id":"crs_fe1eed0c","kind":"course","slug":"萬丹分班屏東釀造的藝術-屏北區社大-eed0c","assignedAt":"2026-09-12"}
 {"id":"crs_fe1fab8e","kind":"course","slug":"應用AI在ESG永續報告書撰寫與查證實務-臺灣產學研合作發展策進會-fab8e","assignedAt":"2026-09-12"}
+{"id":"crs_fe204aed","kind":"course","slug":"成人桌球班-永和運動中心-04aed","assignedAt":"2026-10-03"}
 {"id":"crs_fe2260d0","kind":"course","slug":"ISO149712019醫療器材風險管理-自強工業科學基金會-260d0","assignedAt":"2026-09-12"}
 {"id":"crs_fe2283fd","kind":"course","slug":"A121你一定能聽懂的不動產大小事買賣贈-海線社大-283fd","assignedAt":"2026-09-12"}
 {"id":"crs_fe230753","kind":"course","slug":"TRX綜合體態雕塑-新莊運動中心-30753","assignedAt":"2026-09-29"}
@@ -48523,6 +48524,7 @@
 {"id":"tea_5761e17a253ccdb5","kind":"teacher","slug":"李佩眞-曾文社大-02855","assignedAt":"2026-09-13"}
 {"id":"tea_57671b47edfc7d37","kind":"teacher","slug":"官貴中-中正社大-f1379","assignedAt":"2026-09-13"}
 {"id":"tea_57798d193c2b420c","kind":"teacher","slug":"王正興-文山社大-c0818","assignedAt":"2026-09-13"}
+{"id":"tea_57821c487ecdfd13","kind":"teacher","slug":"阿信-林口運動中心-dcfa8","assignedAt":"2026-10-03"}
 {"id":"tea_578d26e17a978486","kind":"teacher","slug":"陳開慧-樹林社大-3effc","assignedAt":"2026-09-13"}
 {"id":"tea_578f84431fb8e6a7","kind":"teacher","slug":"吳嫻慧-社大-0cf59","assignedAt":"2026-09-13"}
 {"id":"tea_579a0ba25282af7a","kind":"teacher","slug":"陳世偉-汐止社大-c53ff","assignedAt":"2026-09-13"}
@@ -52375,6 +52377,7 @@
 {"id":"tea_cd9157bd46378d0a","kind":"teacher","slug":"Annie-鳳山運動園區-bc016","assignedAt":"2026-09-29"}
 {"id":"tea_cd9161717b5e2800","kind":"teacher","slug":"Marco-淡水運動中心-4947d","assignedAt":"2026-09-29"}
 {"id":"tea_cd935592d35f66c6","kind":"teacher","slug":"葉正洋-屏南區社大-f52d3","assignedAt":"2026-09-13"}
+{"id":"tea_cdac4df1ddec10b3","kind":"teacher","slug":"澎澎-林口運動中心-8ce90","assignedAt":"2026-10-03"}
 {"id":"tea_cdb6d1c61b7ec8fa","kind":"teacher","slug":"謝采璇-苗栗社大-cf463","assignedAt":"2026-09-13"}
 {"id":"tea_cdb83f69464390a4","kind":"teacher","slug":"李美月-松山社大-f6b49","assignedAt":"2026-09-13"}
 {"id":"tea_cdbb963ec3054045","kind":"teacher","slug":"劉悅楓-竹東社大-17afc","assignedAt":"2026-09-13"}
