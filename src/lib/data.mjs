@@ -359,6 +359,74 @@ function load() {
     .filter((x) => x.activity.name === name && x.venue.city === city && (!district || x.venue.district === district))
     .sort((x, y) => y.list.length - x.list.length);
 
+  // ── 社大名錄（2026-10-04）：/type/community-college.html 依社大列出，連到各社大的主上課地點 ──
+  // 「新竹社區大學課程表」原本落在一個門牌開頭的場館頁：讀者要找的是社大，頁面上卻只看得到地址。
+  // 同一間社大在不同來源的寫法不一（「北投社區大學」「臺北市北投社區大學」「台北市北投社區大學」、
+  // 「大屯社大」「臺中市大屯社區大學」），這裡合成一間。縣市前綴拿掉後同名的（雲林與臺中都有「海線社區大學」）
+  // 用縣市分開。只改頁面標題與名錄，不動來源的開課單位欄。
+  // 主上課地點＝本期課最多的場館（本期課都沒有地點資料就看全部），而且那個場館超過六成的課是這間社大開的
+  // （與 venueDisplay 認定「某單位上課地點」同一個門檻）；場館被好幾間社大共用就不算誰的主地點。
+  const CC_MAIN_SHARE = 0.6;
+  const COUNTY = /^([臺台][北中南東]|新北|桃園|新竹|苗栗|彰化|南投|雲林|嘉義|屏東|宜蘭|花蓮|高雄|基隆|澎湖|金門|連江)([縣市])/;
+  const ccRaw = new Map();
+  for (const c of types.find((k) => k.kind === 'community-college')?.list ?? []) {
+    const raw = c.provider?.nameRaw;
+    if (!raw) continue;
+    if (!ccRaw.has(raw)) ccRaw.set(raw, []);
+    ccRaw.get(raw).push(c);
+  }
+  const ccGroups = new Map();
+  const ccKeyOfRaw = new Map();
+  const unplaced = [];
+  for (const [raw, list] of ccRaw) {
+    const full = raw.replace(/社大$/, '社區大學').replace(/^台/, '臺');
+    const m = full.match(COUNTY);
+    const rest = m ? full.slice(m[0].length) : full;
+    const name = m && rest !== '社區大學' ? rest : full;
+    const cityCount = new Map();
+    for (const c of list) if (c.venue?.city) cityCount.set(c.venue.city, (cityCount.get(c.venue.city) ?? 0) + 1);
+    const city = m ? `${m[1]}${m[2]}` : [...cityCount].sort((a, b) => b[1] - a[1])[0]?.[0];
+    // 「花蓮社大」與「花蓮縣社區大學」是同一間
+    const key = `${city ?? ''}|${name.replace(/^(\S{2})[縣市]社區大學$/, '$1社區大學')}`;
+    if (!city) { unplaced.push({ raw, key, name, list }); continue; }
+    if (!ccGroups.has(key)) ccGroups.set(key, { key, city, names: [], list: [] });
+    const g = ccGroups.get(key);
+    g.names.push({ name, n: list.length });
+    g.list.push(...list);
+    ccKeyOfRaw.set(raw, key);
+  }
+  // 沒有任何地點資料的寫法：同名的社大只有一間時併過去，否則略過（沒有地點可連）
+  for (const u of unplaced) {
+    const same = [...ccGroups.values()].filter((g) => g.key.endsWith(u.key));
+    if (same.length !== 1) continue;
+    same[0].names.push({ name: u.name, n: u.list.length });
+    same[0].list.push(...u.list);
+    ccKeyOfRaw.set(u.raw, same[0].key);
+  }
+  const venuePageById = new Map(venuePages.map((p) => [p.venue.id, p]));
+  const ccHubs = [];
+  for (const g of ccGroups.values()) {
+    const name = g.names.sort((a, b) => b.n - a.n || b.name.length - a.name.length)[0].name;
+    const cur = g.list.filter(isVenueCurrent);
+    const count = new Map();
+    const placed = cur.filter((c) => c.venue?.id);
+    for (const c of placed.length ? placed : g.list) if (c.venue?.id) count.set(c.venue.id, (count.get(c.venue.id) ?? 0) + 1);
+    const top = [...count].sort((a, b) => b[1] - a[1])[0];
+    const p = top && venuePageById.get(top[0]);
+    const share = p ? p.display.providers.filter((x) => ccKeyOfRaw.get(x.name) === g.key).reduce((s, x) => s + x.n, 0) / p.list.length : 0;
+    ccHubs.push({
+      key: g.key, name, city: g.city, n: g.list.length, current: cur.length, open: cur.filter(isOpen).length,
+      main: p && !p.noindex && share >= CC_MAIN_SHARE ? p : null, share,
+    });
+  }
+  // 同名的社大在別的縣市也有：名錄與標題都加上縣市
+  const ccNameCount = new Map();
+  for (const h of ccHubs) ccNameCount.set(h.name, (ccNameCount.get(h.name) ?? 0) + 1);
+  for (const h of ccHubs) if (ccNameCount.get(h.name) > 1) h.name = `${h.city}${h.name}`;
+  ccHubs.sort((a, b) => b.current - a.current || b.n - a.n);
+  /** 場館 id → 以這裡為主上課地點的社大（場館頁標題用）；同一個場館不會分給兩間（上面的六成門檻保證） */
+  const ccByMainVenue = new Map(ccHubs.filter((h) => h.main).map((h) => [h.main.venue.id, h]));
+
   // 18 大類底下有哪些細項頁（主題頁用）、各縣市有哪些細項頁（縣市頁用）
   const learnByTopic = groupBy(learn, (l) => l.activity.topic);
   const learnByCity = new Map();
@@ -488,7 +556,7 @@ function load() {
     map: { rows: mapRows, courseCount: mapCourses, openCount: mapOpen },
     teacherIndex, pageTeachers, teachers, rankedTeachers, coursePages,
     activities, actsByCourse, learn, learnByName, learnByTopic, learnByCity, learnLinksOf,
-    venueActs, venueActsByVenue, venueActsIn, cityHubOf, teacherSegmentsOf,
+    venueActs, venueActsByVenue, venueActsIn, cityHubOf, teacherSegmentsOf, ccHubs, ccByMainVenue,
     cert, certIds, certCitySet, programs, free, senior, hubLinksOf,
     titleCollides, successorsOf, alternativesOf, currentByVenue, sameTitleOf,
     changedAt, firstSeen, newestOpen, newestOpenByCity, newThisWeek,

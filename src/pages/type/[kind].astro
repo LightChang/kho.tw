@@ -2,8 +2,8 @@
 import Base from '../../layouts/Base.astro';
 import { underSection } from '../../lib/crumbs.mjs';
 import CourseList from '../../components/CourseList.astro';
-import { getData, fmt, programHref, seniorHref } from '../../lib/data.mjs';
-import { itemListJsonLd, SITE_URL } from '../../../site/jsonld.mjs';
+import { getData, fmt, link, programHref, seniorHref } from '../../lib/data.mjs';
+import { itemListJsonLd, pageListJsonLd, SITE_URL } from '../../../site/jsonld.mjs';
 
 export function getStaticPaths() {
   return getData().types.map((kind) => ({ params: { kind: kind.kind }, props: { kind } }));
@@ -11,18 +11,54 @@ export function getStaticPaths() {
 
 const { kind } = Astro.props;
 const { list } = kind;
-const { programs } = getData();
+const { programs, ccHubs } = getData();
 // 職訓、樂齡中心兩類有對應的專題頁（還沒上完的課、依縣市），從這裡連過去
 const hubs = kind.kind === 'vocational' ? programs.map((p) => [programHref(p.key), `${p.name}（${p.short}）`])
   : kind.kind === 'senior-center' ? [[seniorHref(), '銀髮・樂齡課程（含社大、運動中心的長輩班）']] : [];
+
+// 社大（2026-10-04 起）：讀者搜的是「新竹社區大學課程表」，要先找到是哪一間社大，
+// 所以這一頁改成依縣市列出每一間社大，連到它的主上課地點（場館頁就是那間社大的課程表）。
+// 社大的合併與主地點認定見 data.mjs 的 ccHubs。
+const isCC = kind.kind === 'community-college';
+const ccCities = isCC ? [...ccHubs.reduce((m, h) => m.set(h.city, [...(m.get(h.city) ?? []), h]), new Map())]
+  .map(([city, l]) => ({ city, list: l, current: l.reduce((s, h) => s + h.current, 0), n: l.reduce((s, h) => s + h.n, 0) }))
+  .sort((a, b) => b.current - a.current || b.n - a.n) : [];
+const ccLinked = ccHubs.filter((h) => h.main);
+const title = isCC ? `社區大學課程表｜全台 ${fmt(ccHubs.length)} 間社大，依縣市找` : `${kind.label}的課程`;
+const description = isCC
+  ? `全台 ${fmt(ccHubs.length)} 間社區大學依縣市排列，點社大名稱看它主要上課地點的本期課程表。${ccCities.slice(0, 3).map((c) => `${c.city} ${c.list.length} 間`).join('、')}，本期共 ${fmt(ccHubs.reduce((s, h) => s + h.current, 0))} 門課。`
+  : `全台${kind.label}課程共 ${fmt(list.length)} 門，其中 ${fmt(kind.open)} 門招生中。`;
+const jsonld = isCC
+  ? pageListJsonLd(ccLinked.map((h) => ({ url: `${SITE_URL}${link('venue', h.main.venue.slug)}`, name: `${h.name}課程表` })), { name: '社區大學課程表' })
+  : itemListJsonLd(list.slice(0, 100), { name: `${kind.label}的課程` });
+const placeOf = (h) => h.main.display.placeName ?? (h.main.display.from === 'source' ? h.main.display.heading : h.main.venue.name);
 ---
 <Base crumbs={underSection('types', kind.label)}
-  title={`${kind.label}的課程`}
-  description={`全台${kind.label}課程共 ${fmt(list.length)} 門，其中 ${fmt(kind.open)} 門招生中。`}
+  title={title}
+  description={description}
   canonical={`${SITE_URL}/type/${kind.kind}.html`}
-  jsonld={itemListJsonLd(list.slice(0, 100), { name: `${kind.label}的課程` })}
+  jsonld={jsonld}
 >
+{isCC ? (
+<Fragment>
+<div class="card"><h1>社區大學課程表</h1>
+<div class="meta">全台 {fmt(ccHubs.length)} 間社大，共 {fmt(list.length)} 門課，其中 {fmt(kind.open)} 門正在招生</div>
+<div class="meta-2">點社大名稱會到它課最多的上課地點，那一頁依星期列出本期課表。同一間社大在不同來源寫法不同（例如「北投社大」「臺北市北投社區大學」），這裡算成同一間。</div></div>
+{ccCities.map((c) => (
+<div class="card"><h2>{c.city}的社區大學<span class="meta-2 tnum">　{fmt(c.list.length)} 間</span></h2>
+<ul class="next-list">{c.list.map((h) => (
+<li>{h.main ? <a href={link('venue', h.main.venue.slug)}>{h.name}</a> : h.name}<span class="meta-2 tnum">　{h.current ? `本期 ${fmt(h.current)} 門${h.open ? `，${fmt(h.open)} 門招生中` : ''}` : `共 ${fmt(h.n)} 門，都是往期課程`}</span>
+{h.main && placeOf(h) !== h.name && <div class="meta-2">主要上課地點：{placeOf(h)}</div>}</li>
+))}</ul>
+<div class="meta"><a href={link('city', c.city)}>{c.city}全部成人課程</a></div>
+</div>
+))}
+</Fragment>
+) : (
+<Fragment>
 <div class="card"><h2>{kind.label}</h2><div class="meta">共 {fmt(list.length)} 門課，其中 {fmt(kind.open)} 門正在招生</div>
 {hubs.map(([href, text]) => <div class="meta-2">另見<a href={href}>{text}</a></div>)}</div>
 <CourseList list={list} />
+</Fragment>
+)}
 </Base>

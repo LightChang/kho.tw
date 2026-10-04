@@ -21,7 +21,7 @@ export function getStaticPaths() {
 }
 
 const { venue: v, list, display, noindex } = Astro.props;
-const { actsByCourse, learnByName, venueActsByVenue } = getData();
+const { actsByCourse, learnByName, venueActsByVenue, ccByMainVenue } = getData();
 // 本期課程有獨立頁的細項（/at/<場館>/<細項>.html）：頁內分段只列前幾門，其餘連過去，避免兩頁內容重複
 const actPages = new Map((venueActsByVenue.get(v.id) ?? []).map((x) => [x.activity.name, x]));
 
@@ -70,27 +70,42 @@ const actSections = acts.filter((a) => a.n >= ACT_SECTION_MIN).map((a) => ({
   ...a,
   list: current.filter((c) => (actsByCourse.get(c.id) ?? []).includes(a.name)).sort((x, y) => firstSlot(x).localeCompare(firstSlot(y))),
 }));
-const actNote = actSections.length ? `其中${actSections.slice(0, 3).map((a) => `${a.label} ${fmt(a.n)} 門`).join('、')}。` : '';
 
 const providers = display.providers;
 const providerNote = providers.length
   ? `${providers.slice(0, 3).map((p) => p.name).join('、')}${providers.length > 3 ? `等 ${providers.length} 個單位` : ''}`
   : '';
-// 標題：場館名已經含開課單位（例如「臺北市內湖運動中心」）就不再重複
+// 標題與說明（2026-10-04 改）：先講「哪個單位的上課地點」與「本期開什麼課」，門牌放最後。
+// 只搜地址的查詢點擊率幾乎是 0、場館頁整組 3.3%：搜尋結果第一眼只看到門牌，讀者認不出是哪裡。
+// 社大的主上課地點（data.mjs 的 ccByMainVenue）一律以社大名稱開頭，接「某某社大課程表」的查詢。
 const top = providers[0];
-const titleProvider = top && display.from === 'source' && !display.heading.includes(top.name) && !top.name.includes(display.heading) && top.n / list.length >= 0.6
-  ? `${top.name} ` : '';
+const cc = ccByMainVenue.get(v.id);
+const norm = (s) => s.replace(/社大/g, '社區大學').replace(/^台/, '臺');
+const overlaps = (a, b) => norm(a).includes(norm(b)) || norm(b).includes(norm(a));
+// place：有地點名稱才算（來源給的或 overrides 查證過的）；只有門牌的地點 place 是 null
+const place = display.placeName ?? (display.from === 'source' ? display.heading : null);
+const dominant = top && top.n / list.length >= 0.6 ? top.name : null;
+const unitRaw = cc?.name ?? dominant;
+const unit = unitRaw && !(place && overlaps(place, unitRaw)) ? unitRaw : null;
+const fewProviders = `${providers.slice(0, 2).map((p) => p.name).join('、')}${providers.length > 2 ? '等' : ''}`;
+const lead = place ? (unit ? `${unit} ${place}` : place)
+  : unit ? `${unit}上課地點`
+  : providers.length ? `${fewProviders}的上課地點` : v.name;
+// 本期開什麼課：細項分段（≥3 門）優先，沒有就取課表裡最多的細項；標題裡最多 14 個字，太長會被截掉
+const actPool = (actSections.length ? actSections : acts).map((a) => a.label);
+const actLabels = actPool.reduce((out, label) => ([...out, label].join('、').length <= 14 ? [...out, label] : out), []).join('、');
+const addrTail = place ? '' : `｜${v.name}`;
 const hasTable = week.length > 0;
 const title = hasTable
-  ? `${display.heading}課程表｜${titleProvider}${season ?? ''}${past ? '（已結束）' : ''}`.replace(/｜$/, '')
-  : `${display.heading}的課程`;
-// 說明：場館名已含開課單位就不重複；只有門牌的地點，說明它是誰的上課地點並列幾門課名，
-// 回答「這個地址是什麼地方」。
+  ? `${lead}課程表｜${season ?? '本期'}${past ? '（已結束）' : ' '}${fmt(current.length)} 門${actLabels ? `，${actLabels}` : ''}${addrTail}`
+  : `${lead}的課程${addrTail}`;
 const sameAsProvider = providers.length === 1 && (display.heading.includes(providers[0].name) || providers[0].name.includes(display.heading));
-const sample = [...new Set(list.map((c) => c.title))].slice(0, 3).join('、');
-const description = display.from === 'provider' || display.from === 'providers'
-  ? `${v.name}是${providerNote}的上課地點，共 ${fmt(list.length)} 門課，例如${sample}。`
-  : `${display.heading}${providerNote && !sameAsProvider ? `（${providerNote}）` : ''}的成人課程共 ${fmt(list.length)} 門${hasTable ? `；${season ?? '本期'}課程表依星期排列，共 ${fmt(current.length)} 門，例如${sample}` : ''}。${actNote}`;
+const sample = [...new Set((hasTable ? current : list).map((c) => c.title))].slice(0, 3).join('、');
+const who = place ? (unit ? `${place}是${unit}的上課地點` : `${place}${providerNote && !sameAsProvider ? `（${providerNote}）` : ''}`)
+  : providers.length ? `${unit ?? providerNote}的上課地點` : v.name;
+const actCounts = actSections.slice(0, 3).map((a) => `${a.label} ${fmt(a.n)} 門`).join('、');
+const address = place ? (v.address && v.address !== display.name && !place.includes(v.address) ? v.address : '') : (providers.length ? v.name : '');
+const description = `${who}${place && !unit ? ' ' : '，'}${hasTable ? `${past ? `最近一期是${season ?? ''}（已結束），有` : `${season ?? '本期'}開`} ${fmt(current.length)} 門課${actCounts ? `，${actCounts}` : ''}` : `共 ${fmt(list.length)} 門課`}，例如${sample}。${address ? `地址：${address}。` : ''}`;
 const timeOf = (s) => `${s.startTime ?? ''}${s.endTime ? `–${s.endTime}` : ''}` || '時間未提供';
 const slotsText = (c) => (c.schedule?.slots ?? []).map((s) => `${WEEKDAY_LABEL[s.weekday] ?? ''} ${timeOf(s)}`).join('、') || c.schedule?.timeInfoRaw || '';
 ---

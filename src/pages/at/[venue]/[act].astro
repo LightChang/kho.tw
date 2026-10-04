@@ -6,7 +6,7 @@ import Base from '../../../layouts/Base.astro';
 import { underVenue } from '../../../lib/crumbs.mjs';
 import StatusBadge from '../../../components/StatusBadge.astro';
 import TeacherNames from '../../../components/TeacherNames.astro';
-import { getData, fmt, link, learnHref, WEEKDAY_LABEL } from '../../../lib/data.mjs';
+import { getData, fmt, link, learnHref, WEEKDAY_LABEL, isOpen, TODAY } from '../../../lib/data.mjs';
 import { isCert, shortDistrict } from '../../../lib/facets.mjs';
 import { itemListJsonLd, SITE_URL } from '../../../../site/jsonld.mjs';
 
@@ -44,11 +44,38 @@ const week = days.filter((d) => d.wd >= 1 && d.rows.length);
 const timeOf = (s) => `${s.startTime ?? ''}${s.endTime ? `–${s.endTime}` : ''}` || '時間未提供';
 const busiest = [...week].sort((p, q) => q.rows.length - p.rows.length).slice(0, 2).map((d) => d.label);
 
+// 剩餘名額（2026-10-04）：開頭直接回答「這間中心這門課本期還剩幾個名額、哪堂快額滿」。
+// 數字全部來自來源的 enrollment（available／capacity／status），每輪建置重算，不寫死。
+// 只有部分營運商給名額（運動中心的報名系統、臺中社大聯網），沒給的照實說沒給，不推估。
+const hasSeats = (c) => Number.isFinite(c.enrollment?.available) && Number.isFinite(c.enrollment?.capacity) && c.enrollment.capacity > 0;
+const openList = list.filter(isOpen);
+const seatOpen = openList.filter(hasSeats);
+const seatsLeft = seatOpen.reduce((s, c) => s + c.enrollment.available, 0);
+const fullN = list.filter((c) => c.enrollment?.status === 'full').length;
+// 快額滿：還在招生、剩 3 位以內或不到三成
+const almost = seatOpen
+  .filter((c) => c.enrollment.available > 0 && (c.enrollment.available <= 3 || c.enrollment.available / c.enrollment.capacity < 0.3))
+  .sort((p, q) => p.enrollment.available - q.enrollment.available || p.enrollment.available / p.enrollment.capacity - q.enrollment.available / q.enrollment.capacity)
+  .slice(0, 3);
+const md = (d) => (d ? `${Number(d.slice(5, 7))}/${Number(d.slice(8, 10))}` : '');
+const whenShort = (c) => {
+  const s = (c.schedule?.slots ?? []).find((x) => x.weekday >= 1 && x.weekday <= 7);
+  return [s ? `${WEEKDAY_LABEL[s.weekday]}${s.startTime ? ` ${s.startTime}` : ''}` : '', c.schedule?.startDate ? `${md(c.schedule.startDate)} 開課` : ''].filter(Boolean).join('，');
+};
+// 名額的日期取來源最後查核日（sources[].lastVerifiedAt），沒有就用建置日
+const verified = seatOpen.flatMap((c) => (c.sources ?? []).map((src) => src.lastVerifiedAt)).filter(Boolean).sort().at(-1) ?? TODAY;
+const asOf = `${Number(verified.slice(5, 7))} 月 ${Number(verified.slice(8, 10))} 日`;
+const seatLine = seatOpen.length
+  ? `招生中 ${fmt(openList.length)} 門，合計還有 ${fmt(seatsLeft)} 個名額${seatOpen.length < openList.length ? `（另有 ${fmt(openList.length - seatOpen.length)} 門來源沒給名額）` : ''}${fullN ? `；已額滿 ${fmt(fullN)} 門` : ''}。`
+  : openList.length
+    ? `招生中 ${fmt(openList.length)} 門${fullN ? `、已額滿 ${fmt(fullN)} 門` : ''}。這個地點的來源沒有公布剩餘名額，各班名額請點進課程頁，從報名連結查。`
+    : `本期沒有還在招生的班${fullN ? `，已額滿 ${fmt(fullN)} 門` : ''}。`;
+
 const place = v.district ? `${v.city}${v.district}` : (v.city ?? '');
 const name = `${short}${a.label}課程`;
 const title = `${name}｜${x.season ?? '本期'}上課時間與報名狀態${short !== display.heading ? `（${display.heading}）` : place ? `（${place}）` : ''}`;
 const sample = [...new Set(list.map((c) => c.title))].slice(0, 3).join('、');
-const description = `${display.heading}${providerNote ? `（${providerNote}）` : ''}本期${a.label}課程共 ${fmt(list.length)} 門，其中 ${fmt(x.open)} 門招生中${busiest.length ? `，以${busiest.join('、')}最多` : ''}，例如${sample}。列出星期、時段、講師與報名狀態。`;
+const description = `${display.heading}${providerNote ? `（${providerNote}）` : ''}本期${a.label}課程共 ${fmt(list.length)} 門，其中 ${fmt(x.open)} 門招生中${seatOpen.length ? `、合計剩 ${fmt(seatsLeft)} 個名額` : ''}${busiest.length ? `，以${busiest.join('、')}最多` : ''}，例如${sample}。列出星期、時段、講師與報名狀態。`;
 ---
 <Base crumbs={underVenue(v.city, { name: short, href: link('venue', v.slug) }, a.label, new Set(cities.map((c) => c.name)))}
   title={title}
@@ -57,6 +84,10 @@ const description = `${display.heading}${providerNote ? `（${providerNote}）` 
   jsonld={itemListJsonLd(list.slice(0, 100), { name: `${display.heading}${a.label}課程` })}
 >
 <div class="card"><h1>{name}</h1>
+<div class="seats"><strong>{x.season ?? '本期'}{seatOpen.length ? '剩餘名額' : '報名狀況'}</strong>　{seatLine}
+{almost.length > 0 && <div>快額滿：{almost.map((c, i) => <Fragment>{i > 0 && '、'}<a href={link('course', c.slug)}>{c.title}</a>（{whenShort(c)}）<span class="tnum left-seats">剩 {c.enrollment.available} 位</span></Fragment>)}</div>}
+{seatOpen.length > 0 && almost.length === 0 && <div>招生中的班名額都還有三成以上，沒有快額滿的。</div>}
+{seatOpen.length > 0 && <div class="meta-2">名額是 {asOf}從報名系統抓到的數字，名額變動很快，報名前以報名系統為準。</div>}</div>
 <div class="meta">{display.heading}{place && `・${place}`}{v.address && v.address !== display.name && `・${v.address}`}</div>
 {providerNote && <div class="meta">開課單位：{providerNote}</div>}
 <div class="meta-2">{x.season ?? '本期'}共 {fmt(list.length)} 門{a.label}課，其中 {fmt(x.open)} 門招生中。{a.aliases.length > 0 && `課名含「${[a.name, ...a.aliases].join('」「')}」的課都收在這裡。`}</div>
