@@ -1,6 +1,6 @@
 # kho.tw（全台成人課程）
 
-> 全台社區大學、運動中心、樂齡中心與職訓課程整合查詢站。收錄 43,350 門課、2,458 個上課地點，其中 14,373 門正在招生。資料每小時自動抓取更新，本頁與 /llms-full.txt 在每次建置時重新生成。
+> 全台社區大學、運動中心、樂齡中心與職訓課程整合查詢站。收錄 43,351 門課、2,458 個上課地點，其中 14,373 門正在招生。資料每小時自動抓取更新，本頁與 /llms-full.txt 在每次建置時重新生成。
 
 ## 這是什麼
 kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣市社大聯網、教育部樂齡學習網、運動中心各營運商、勞動部職業訓練開放資料等），把同一門課在不同來源出現的紀錄合併成一筆，並在每個課程頁列出各來源提供的欄位與最後確認日期。收錄範圍：社區大學、運動中心、樂齡中心、職業訓練、圖書館、成人教育班、婦女大學、國中小進修部等機構公開的課程／活動資訊；不含私人補習班。
@@ -13,7 +13,7 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 - 職業訓練（vocational）：https://kho.tw/type/vocational.html（2,559 門，1,092 門招生中）
 - 樂齡中心（senior-center）：https://kho.tw/type/senior-center.html（1,307 門，160 門招生中）
 - 其他（other）：https://kho.tw/type/other.html（686 門，13 門招生中）
-- 圖書館（library）：https://kho.tw/type/library.html（189 門，106 門招生中）
+- 圖書館（library）：https://kho.tw/type/library.html（190 門，106 門招生中）
 - 成人教育班（adult-education）：https://kho.tw/type/adult-education.html（88 門，18 門招生中）
 - 婦女大學（women-center）：https://kho.tw/type/women-center.html（52 門，0 門招生中）
 - 國中小進修部（school-continuing）：https://kho.tw/type/school-continuing.html（26 門，23 門招生中）
@@ -47,7 +47,7 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 - 彰化縣：https://kho.tw/city/%E5%BD%B0%E5%8C%96%E7%B8%A3.html（1,347 門，289 門招生中）
 - 宜蘭縣：https://kho.tw/city/%E5%AE%9C%E8%98%AD%E7%B8%A3.html（540 門，207 門招生中）
 - 新竹市：https://kho.tw/city/%E6%96%B0%E7%AB%B9%E5%B8%82.html（883 門，195 門招生中）
-- 臺南市：https://kho.tw/city/%E8%87%BA%E5%8D%97%E5%B8%82.html（1,839 門，192 門招生中）
+- 臺南市：https://kho.tw/city/%E8%87%BA%E5%8D%97%E5%B8%82.html（1,840 門，192 門招生中）
 - 新竹縣：https://kho.tw/city/%E6%96%B0%E7%AB%B9%E7%B8%A3.html（608 門，187 門招生中）
 - 南投縣：https://kho.tw/city/%E5%8D%97%E6%8A%95%E7%B8%A3.html（491 門，165 門招生中）
 - 雲林縣：https://kho.tw/city/%E9%9B%B2%E6%9E%97%E7%B8%A3.html（877 門，138 門招生中）
@@ -67,7 +67,7 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 - 免費課程（來源標示免費）：https://kho.tw/free.html（307 門，153 門招生中；縣市頁：臺北市、臺南市、高雄市、臺中市、新北市、屏東縣）
 - 銀髮・樂齡課程：https://kho.tw/senior.html（1,176 門，386 門招生中；縣市頁：新北市、臺北市、桃園市、臺中市、宜蘭縣、高雄市、新竹市）
 
-### 課程頁（本站最大宗，共 43,350 頁）
+### 課程頁（本站最大宗，共 43,351 頁）
 每門課一頁。網址規則：/course/<slug>.html，slug 是「課名-開課單位-短碼」，中文，每一段都要依 RFC 3986 百分比編碼，例如：
   https://kho.tw/course/%E9%A3%9B%E8%B6%8A%E6%8B%89%E6%8B%89%E4%BA%8C%E8%83%A1-%E4%BA%94%E6%AC%8A%E7%A4%BE%E5%A4%A7-48d29.html
 slug 由 data/slugs.ndjson 登記簿配給並保證重跑不變，不可自行推測；要拿到某門課的正確網址，請走下面的完整清單（sitemap 或站內搜尋），不要自己拼字串。
