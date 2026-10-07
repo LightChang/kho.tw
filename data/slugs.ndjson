@@ -7746,6 +7746,7 @@
 {"id":"crs_2966d68e","kind":"course","slug":"唱流行歌曲學音樂B-內湖社大-6d68e","assignedAt":"2026-09-12"}
 {"id":"crs_29686bb9","kind":"course","slug":"十孔口琴來吹歌學分費3000-新莊社大-86bb9","assignedAt":"2026-09-12"}
 {"id":"crs_296b2e21","kind":"course","slug":"中國笛-中壢社大-b2e21","assignedAt":"2026-09-12"}
+{"id":"crs_296c8912","kind":"course","slug":"115年駐館藝術家1027二1400插畫-立圖書館新店分館-c8912","assignedAt":"2026-10-07"}
 {"id":"crs_296d31eb","kind":"course","slug":"THUMPBoxing互動式健身拳擊-平原社大-d31eb","assignedAt":"2026-09-12"}
 {"id":"crs_296f231a","kind":"course","slug":"身形雕塑器械皮拉提斯-苓雅運動中心-f231a","assignedAt":"2026-09-29"}
 {"id":"crs_296fae6a","kind":"course","slug":"季節自然手作染色坊-山線社大-fae6a","assignedAt":"2026-09-12"}
@@ -35574,6 +35575,7 @@
 {"id":"crs_c308d29d","kind":"course","slug":"悠揚大提琴初階-竹塹社大-8d29d","assignedAt":"2026-09-12"}
 {"id":"crs_c30c8be8","kind":"course","slug":"氣球嘉年華結構x技法x設計-中壢社大-c8be8","assignedAt":"2026-09-12"}
 {"id":"crs_c30ef627","kind":"course","slug":"AI協作中年轉職實戰-甲安埔社大-ef627","assignedAt":"2026-09-12"}
+{"id":"crs_c30f2c78","kind":"course","slug":"永續閱讀推廣活動故事手作活動三重崇德分館-立圖書館三重崇德分館-f2c78","assignedAt":"2026-10-07"}
 {"id":"crs_c30f3f6b","kind":"course","slug":"器械皮拉提斯-北屯國民暨兒童運動中心-f3f6b","assignedAt":"2026-09-29"}
 {"id":"crs_c30fe741","kind":"course","slug":"花漾爺奶舞蹈教學及團康活動-北投區智仁里辦公處-fe741","assignedAt":"2026-09-12"}
 {"id":"crs_c30ff4e3","kind":"course","slug":"臀腿核心-長春國民暨兒童運動中心-ff4e3","assignedAt":"2026-09-12"}
@@ -36481,6 +36483,7 @@
 {"id":"crs_c7cfb534","kind":"course","slug":"流行吉他的樂趣彈唱-南關社大-fb534","assignedAt":"2026-09-12"}
 {"id":"crs_c7cfb8fc","kind":"course","slug":"滑冰基礎團課-土城運動中心-fb8fc","assignedAt":"2026-09-29"}
 {"id":"crs_c7d03f52","kind":"course","slug":"德語入門3-文山社大-03f52","assignedAt":"2026-10-05"}
+{"id":"crs_c7d049e0","kind":"course","slug":"2026新北綠讀READCYCLE永續閱-立圖書館蘆洲集賢分館-049e0","assignedAt":"2026-10-07"}
 {"id":"crs_c7d31d58","kind":"course","slug":"皮拉核心球-太平國民暨兒童運動中心-31d58","assignedAt":"2026-09-12"}
 {"id":"crs_c7d39854","kind":"course","slug":"柴燒文化生活陶-桃園社大-39854","assignedAt":"2026-09-12"}
 {"id":"crs_c7d4c483","kind":"course","slug":"11505ZUMBA2000928102-新店運動中心-4c483","assignedAt":"2026-09-29"}
@@ -56226,6 +56229,7 @@
 {"id":"ven_6f31d45c","kind":"venue","slug":"楊梅區中山北路1段390巷46號-1d45c","assignedAt":"2026-09-12"}
 {"id":"ven_6f31d95e","kind":"venue","slug":"新北市板橋區重慶路66號-1d95e","assignedAt":"2026-09-12"}
 {"id":"ven_6f3f7674","kind":"venue","slug":"彰化縣大城鄉西港村永鎮路35號-f7674","assignedAt":"2026-09-12"}
+{"id":"ven_6f53374f","kind":"venue","slug":"新北市立圖書館三重崇德分館-3374f","assignedAt":"2026-10-07"}
 {"id":"ven_6f70d27d","kind":"venue","slug":"大肚里活動中心-0d27d","assignedAt":"2026-09-12"}
 {"id":"ven_6f80d74d","kind":"venue","slug":"嘉義縣朴子市文化南路69號-0d74d","assignedAt":"2026-09-12"}
 {"id":"ven_6f88f717","kind":"venue","slug":"新園分班-8f717","assignedAt":"2026-09-12"}
