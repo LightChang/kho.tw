@@ -23143,6 +23143,7 @@
 {"id":"crs_7e694db7","kind":"course","slug":"游泳兒童班-林口運動中心-94db7","assignedAt":"2026-09-29"}
 {"id":"crs_7e6960a4","kind":"course","slug":"抒情當代-淡水運動中心-960a4","assignedAt":"2026-09-29"}
 {"id":"crs_7e6a924e","kind":"course","slug":"器械皮拉提斯-中和運動中心-a924e","assignedAt":"2026-10-01"}
+{"id":"crs_7e6b1a3b","kind":"course","slug":"器械皮拉提斯-大同運動中心-b1a3b","assignedAt":"2026-10-07"}
 {"id":"crs_7e6b5704","kind":"course","slug":"色鉛筆彩繪-岡山社大-b5704","assignedAt":"2026-09-12"}
 {"id":"crs_7e6e6613","kind":"course","slug":"輕鬆學小提琴中階-中山社大-e6613","assignedAt":"2026-09-12"}
 {"id":"crs_7e702bfa","kind":"course","slug":"客庄民俗科儀與經典唱誦五折-新楊平社大-02bfa","assignedAt":"2026-09-12"}
@@ -45292,6 +45293,7 @@
 {"id":"crs_f8a59e03","kind":"course","slug":"志工社-新莊社大-59e03","assignedAt":"2026-09-12"}
 {"id":"crs_f8a5f49f","kind":"course","slug":"重訓養成-內湖運動中心-5f49f","assignedAt":"2026-09-29"}
 {"id":"crs_f8a8f0d6","kind":"course","slug":"薩克斯風初級-新楊平社大-8f0d6","assignedAt":"2026-09-12"}
+{"id":"crs_f8ac9aa0","kind":"course","slug":"器械皮拉提斯-大同運動中心-c9aa0","assignedAt":"2026-10-07"}
 {"id":"crs_f8ad8104","kind":"course","slug":"電腦輔助設計與製造CADCAM進階2DC-勞動力發展署雲嘉南分署-d8104","assignedAt":"2026-09-12"}
 {"id":"crs_f8ae3431","kind":"course","slug":"泳隊培訓組-楊梅體育園區-e3431","assignedAt":"2026-09-29"}
 {"id":"crs_f8ae4685","kind":"course","slug":"脊椎正位瑜珈-臺北大學運動中心-e4685","assignedAt":"2026-09-29"}
@@ -53082,6 +53084,7 @@
 {"id":"tea_c16e13739fa35713","kind":"teacher","slug":"HelenP-中正社大-357ea","assignedAt":"2026-09-13"}
 {"id":"tea_c17dc4613924431b","kind":"teacher","slug":"Isa-三重運動中心-29af0","assignedAt":"2026-09-29"}
 {"id":"tea_c183438d4cd1d13e","kind":"teacher","slug":"傅瑄平-苗栗社大-b109b","assignedAt":"2026-09-13"}
+{"id":"tea_c184722ee8593e99","kind":"teacher","slug":"Sarah-大同運動中心-0e32e","assignedAt":"2026-10-07"}
 {"id":"tea_c186b97b2aedbda1","kind":"teacher","slug":"楊屏玉-後驛社大-547c1","assignedAt":"2026-09-13"}
 {"id":"tea_c196b0b512c01fce","kind":"teacher","slug":"王玉珏-貓羅溪社大-14f31","assignedAt":"2026-09-13"}
 {"id":"tea_c19731394412ff0d","kind":"teacher","slug":"小妹-中正運動中心-d02e4","assignedAt":"2026-09-29"}
