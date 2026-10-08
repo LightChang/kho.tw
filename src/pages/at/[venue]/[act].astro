@@ -25,6 +25,17 @@ const providers = display.providers.map((p) => p.name);
 const providerNote = providers.length && !providers.some((p) => display.heading.includes(p) || p.includes(display.heading))
   ? `${providers.slice(0, 2).join('、')}${providers.length > 2 ? `等 ${providers.length} 個單位` : ''}` : '';
 
+// 同場館同細項的課名常有更細的說法（如「器械皮拉提斯」）。這個說法過半時放進標題與開頭，
+// 比泛稱的細項名更貼讀者實際在搜的詞；說法直接來自課名，不是另外編的。
+const prefixRe = new RegExp(`([\\u4e00-\\u9fffA-Za-z0-9]{1,4})${a.name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`);
+const prefixCounts = new Map();
+for (const c of list) {
+  const m = prefixRe.exec(c.title ?? '');
+  if (m) prefixCounts.set(m[1], (prefixCounts.get(m[1]) ?? 0) + 1);
+}
+const [dominantPrefix, dominantN] = [...prefixCounts.entries()].sort((p, q) => q[1] - p[1])[0] ?? [];
+const activityLabel = dominantN && dominantN / list.length > 0.5 ? `${dominantPrefix}${a.label}` : a.label;
+
 // 依星期排，一週上兩天的課出現在兩天裡（與場館頁課表同一套）
 const days = WEEKDAY_LABEL.map((label, wd) => ({ label, wd, rows: [] }));
 const noSlot = [];
@@ -72,10 +83,10 @@ const seatLine = seatOpen.length
     : `本期沒有還在招生的班${fullN ? `，已額滿 ${fmt(fullN)} 門` : ''}。`;
 
 const place = v.district ? `${v.city}${v.district}` : (v.city ?? '');
-const name = `${short}${a.label}課程`;
+const name = `${short}${activityLabel}課程`;
 const title = `${name}｜${x.season ?? '本期'}上課時間與報名狀態${short !== display.heading ? `（${display.heading}）` : place ? `（${place}）` : ''}`;
 const sample = [...new Set(list.map((c) => c.title))].slice(0, 3).join('、');
-const description = `${display.heading}${providerNote ? `（${providerNote}）` : ''}本期${a.label}課程共 ${fmt(list.length)} 門，其中 ${fmt(x.open)} 門招生中${seatOpen.length ? `、合計剩 ${fmt(seatsLeft)} 個名額` : ''}${busiest.length ? `，以${busiest.join('、')}最多` : ''}，例如${sample}。列出星期、時段、講師與報名狀態。`;
+const description = `${display.heading}${providerNote ? `（${providerNote}）` : ''}本期${activityLabel}課程共 ${fmt(list.length)} 門，其中 ${fmt(x.open)} 門招生中${seatOpen.length ? `、合計剩 ${fmt(seatsLeft)} 個名額` : ''}${busiest.length ? `，以${busiest.join('、')}最多` : ''}，例如${sample}。列出星期、時段、講師與報名狀態。`;
 ---
 <Base crumbs={underVenue(v.city, { name: short, href: link('venue', v.slug) }, a.label, new Set(cities.map((c) => c.name)))}
   title={title}
