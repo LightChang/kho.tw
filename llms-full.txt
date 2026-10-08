@@ -5,7 +5,7 @@
 
 這裡是本站聚合統計與代表性內容的全文，純文字，給 AI 助理讀的，可直接引用。
 收錄範圍：全站彙總統計（依機構類型／主題分類／縣市，共 48 個分類的完整數字）、跨來源合併與即時名額揭露各 6 筆代表性課程全文。
-本站共 43,147 門課，規模太大不可能逐頁收錄；個別課程／場館／講師的完整清單見 https://kho.tw/llms.txt 與 https://kho.tw/sitemap.xml。
+本站共 43,447 門課，規模太大不可能逐頁收錄；個別課程／場館／講師的完整清單見 https://kho.tw/llms.txt 與 https://kho.tw/sitemap.xml。
 引用時請標明來源網址；每筆課程都附上正式網址與原始資料來源。
 
 ------------------------------------------------------------
@@ -22,12 +22,12 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 
 | 類型 | 代碼 | 課程數 | 招生中 |
 |---|---|---|---|
-| 社區大學 | community-college | 25,189 | 4,238 |
-| 運動中心 | sports-center | 13,047 | 8,742 |
+| 社區大學 | community-college | 25,491 | 4,238 |
+| 運動中心 | sports-center | 13,046 | 8,754 |
 | 職業訓練 | vocational | 2,553 | 1,134 |
 | 樂齡中心 | senior-center | 1,307 | 160 |
 | 其他 | other | 684 | 13 |
-| 圖書館 | library | 201 | 111 |
+| 圖書館 | library | 200 | 110 |
 | 成人教育班 | adult-education | 88 | 18 |
 | 婦女大學 | women-center | 52 | 0 |
 | 國中小進修部 | school-continuing | 26 | 23 |
@@ -38,22 +38,22 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 
 | 分類 | 課程數 | 招生中 |
 |---|---|---|
-| 運動健身 | 14,127 | 6,986 |
-| 美術工藝 | 4,882 | 759 |
-| 音樂戲劇 | 4,021 | 673 |
-| 舞蹈 | 2,971 | 997 |
-| 語言 | 2,383 | 553 |
-| 人文社會 | 1,411 | 500 |
-| 健康養生 | 1,408 | 372 |
-| 電腦資訊 | 1,190 | 371 |
-| 料理烘焙 | 1,072 | 283 |
-| 自然生態 | 986 | 250 |
-| 攝影影音 | 868 | 222 |
-| 工程技術 | 839 | 253 |
-| 生活應用 | 528 | 188 |
-| 理財法律 | 488 | 155 |
+| 運動健身 | 14,167 | 6,999 |
+| 美術工藝 | 4,943 | 759 |
+| 音樂戲劇 | 4,059 | 674 |
+| 舞蹈 | 2,983 | 997 |
+| 語言 | 2,406 | 553 |
+| 健康養生 | 1,439 | 372 |
+| 人文社會 | 1,404 | 499 |
+| 電腦資訊 | 1,195 | 370 |
+| 料理烘焙 | 1,094 | 283 |
+| 自然生態 | 991 | 250 |
+| 攝影影音 | 882 | 222 |
+| 工程技術 | 838 | 253 |
+| 生活應用 | 529 | 189 |
+| 理財法律 | 492 | 155 |
 | 商業管理 | 368 | 165 |
-| 旅遊休閒 | 287 | 41 |
+| 旅遊休閒 | 292 | 41 |
 | 教育照護 | 138 | 39 |
 | 美容美髮 | 123 | 49 |
 
@@ -63,14 +63,14 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 
 | 縣市 | 課程數 | 招生中 |
 |---|---|---|
-| 臺北市 | 10,052 | 5,848 |
-| 新北市 | 8,778 | 2,712 |
-| 桃園市 | 5,462 | 1,540 |
-| 臺中市 | 5,241 | 1,468 |
-| 高雄市 | 2,408 | 653 |
+| 臺北市 | 10,050 | 5,850 |
+| 新北市 | 8,778 | 2,714 |
+| 桃園市 | 5,463 | 1,546 |
+| 臺中市 | 5,362 | 1,468 |
+| 高雄市 | 2,408 | 654 |
 | 彰化縣 | 1,347 | 293 |
 | 宜蘭縣 | 540 | 207 |
-| 臺南市 | 1,844 | 196 |
+| 臺南市 | 1,843 | 196 |
 | 新竹市 | 883 | 195 |
 | 新竹縣 | 609 | 194 |
 | 南投縣 | 499 | 166 |
@@ -104,8 +104,8 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 報名狀態：額滿
 無限制
 資料來源：
-- taipei-cc：https://ss.twcc.org.tw/course/m_course_detail.php?u=3a81c2d7239c333cb18d59018955aab7（最後確認 2026-10-08；提供欄位：categoryRaw、description、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title）
-- taipei-cc：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-10-08；提供欄位：categoryRaw、description、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title）
+- taipei-cc：https://ss.twcc.org.tw/course/m_course_detail.php?u=3a81c2d7239c333cb18d59018955aab7（最後確認 2026-10-09；提供欄位：categoryRaw、description、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title）
+- taipei-cc：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-10-09；提供欄位：categoryRaw、description、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title）
 - moe-cc-courses：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-09-15；提供欄位：credit、enrollment、schedule、topicsRaw）
 - moe-cc-courses：https://ss.twcc.org.tw/course/m_course_detail.php?u=3a81c2d7239c333cb18d59018955aab7（最後確認 2026-09-15；提供欄位：credit、enrollment、schedule、topicsRaw）
 - moe-cc-detail：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-09-15；提供欄位：）
@@ -126,7 +126,7 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 - moe-cc-courses：https://www.tbmcc.tw/modules/tadnews/index.php?nsn=158（最後確認 2026-09-15；提供欄位：credit、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title、topicsRaw）
 - moe-cc-detail：https://www.tbmcc.tw/modules/tadnews/index.php?nsn=158（最後確認 2026-09-15；提供欄位：description）
 - moe-cc-detail：https://www.tbmcc.tw/modules/tadnews/index.php?nsn=158（最後確認 2026-09-15；提供欄位：description）
-- tainan-cc-portal：https://tncu.tn.edu.tw/Modules/Course/Show.php?ID=19637（最後確認 2026-10-08；提供欄位：schedule）
+- tainan-cc-portal：https://tncu.tn.edu.tw/Modules/Course/Show.php?ID=19637（最後確認 2026-10-09；提供欄位：schedule）
 
 ### 手沖精品咖啡
 網址：https://kho.tw/course/%E6%89%8B%E6%B2%96%E7%B2%BE%E5%93%81%E5%92%96%E5%95%A1-%E6%A1%83%E5%9C%92%E7%A4%BE%E5%A4%A7-ca272.html
@@ -163,7 +163,7 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 報名狀態：招生中
 楊梅體育園區，11505，公益課程類課程，週四 08:00–08:55上課，自 2026-09-03 起，地點：楊梅體育園區。
 資料來源：
-- xuanen-centers：https://ymscwdyg.com.tw（最後確認 2026-10-08；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
+- xuanen-centers：https://ymscwdyg.com.tw（最後確認 2026-10-09；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
 
 ### 假日兒童班
 網址：https://kho.tw/course/%E5%81%87%E6%97%A5%E5%85%92%E7%AB%A5%E7%8F%AD-%E6%A8%B9%E6%9E%97%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-72551.html
@@ -177,7 +177,7 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 報名狀態：招生中
 樹林國民運動中心，11505，泳訓課程類課程，週日 10:50–12:00上課，自 2026-09-13 起，地點：樹林國民運動中心。
 資料來源：
-- xuanen-centers：https://ntcslsports.com.tw（最後確認 2026-10-08；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
+- xuanen-centers：https://ntcslsports.com.tw（最後確認 2026-10-09；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
 
 ### 肌力伸展瑜珈
 網址：https://kho.tw/course/%E8%82%8C%E5%8A%9B%E4%BC%B8%E5%B1%95%E7%91%9C%E7%8F%88-%E5%8D%97%E6%B8%AF%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-50f39.html
@@ -191,7 +191,7 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 報名狀態：招生中
 臺北市南港運動中心，11504，瑜珈系列類課程，週一 10:00–10:55上課，自 2026-08-31 起，地點：臺北市南港運動中心。
 資料來源：
-- xuanen-centers：https://ngsc.cyc.org.tw（最後確認 2026-10-08；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
+- xuanen-centers：https://ngsc.cyc.org.tw（最後確認 2026-10-09；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
 
 
 ------------------------------------------------------------
@@ -203,4 +203,4 @@ sitemap 索引（依 pages／courses／venues／venue-acts／teachers 分組分�
 站內搜尋（課名／單位／講師）：https://kho.tw/search.html
 地圖（依座標找附近的課）：https://kho.tw/map.html
 
-更新於 2026-10-08（每小時抓取一次）。本頁每次建置重新生成，內容以此刻為準。
+更新於 2026-10-09（每小時抓取一次）。本頁每次建置重新生成，內容以此刻為準。
