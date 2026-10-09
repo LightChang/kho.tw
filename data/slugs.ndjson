@@ -102,6 +102,7 @@
 {"id":"crs_00917535","kind":"course","slug":"手機攝影鐵道風情-港都社大-17535","assignedAt":"2026-09-12"}
 {"id":"crs_0091e040","kind":"course","slug":"成人鐵人游泳-大同運動中心-1e040","assignedAt":"2026-09-29"}
 {"id":"crs_0092c324","kind":"course","slug":"活力飛輪-中和運動中心-2c324","assignedAt":"2026-10-01"}
+{"id":"crs_00944325","kind":"course","slug":"喜樹圖我就是我繪本大亂鬥Cosplay派-喜樹圖書館-44325","assignedAt":"2026-10-09"}
 {"id":"crs_0095b806","kind":"course","slug":"忘憂空靈鼓-文山社大-5b806","assignedAt":"2026-09-12"}
 {"id":"crs_00966658","kind":"course","slug":"匹克球好好玩進階班-花蓮社大-66658","assignedAt":"2026-09-12"}
 {"id":"crs_009952fb","kind":"course","slug":"古箏基礎-博愛社大-952fb","assignedAt":"2026-09-12"}
@@ -10199,6 +10200,7 @@
 {"id":"crs_36a4e7c4","kind":"course","slug":"平日幼兒班-樹林運動中心-4e7c4","assignedAt":"2026-09-29"}
 {"id":"crs_36a95c4c","kind":"course","slug":"筋膜整合瑜珈-彰北運動中心-95c4c","assignedAt":"2026-10-01"}
 {"id":"crs_36aac71d","kind":"course","slug":"活力有氧-樹林運動中心-ac71d","assignedAt":"2026-09-12"}
+{"id":"crs_36abe56c","kind":"course","slug":"藝術改變了我們從畢卡索到班克西張惠華教授-市圖總館新總館-be56c","assignedAt":"2026-10-09"}
 {"id":"crs_36adde5c","kind":"course","slug":"百匯爵士舞-新楊平社大-dde5c","assignedAt":"2026-09-12"}
 {"id":"crs_36ade30c","kind":"course","slug":"核心肌力訓練-士林社大-de30c","assignedAt":"2026-09-12"}
 {"id":"crs_36aed4f4","kind":"course","slug":"薩克斯風進階班-曾文社大-ed4f4","assignedAt":"2026-09-13"}
@@ -13384,6 +13386,7 @@
 {"id":"crs_48168fb6","kind":"course","slug":"地方創生走讀-汐止社大-68fb6","assignedAt":"2026-09-12"}
 {"id":"crs_4818bcc0","kind":"course","slug":"臺灣刺繡飛針繪繡-南港社大-8bcc0","assignedAt":"2026-09-12"}
 {"id":"crs_4818c66e","kind":"course","slug":"活力燃脂拉丁舞恰恰-文山社大-8c66e","assignedAt":"2026-09-12"}
+{"id":"crs_481a8fbf","kind":"course","slug":"藝術改變了我們從畢卡索到班克西張惠華教授-市圖總館新總館-a8fbf","assignedAt":"2026-10-09"}
 {"id":"crs_481d5405","kind":"course","slug":"太極養生氣功-南港社大-d5405","assignedAt":"2026-09-12"}
 {"id":"crs_481dc190","kind":"course","slug":"歌唱技巧-大屯社大-dc190","assignedAt":"2026-09-12"}
 {"id":"crs_481f638c","kind":"course","slug":"天然染色工藝與美學進階-宜蘭社大-f638c","assignedAt":"2026-09-12"}
@@ -21727,6 +21730,7 @@
 {"id":"crs_76015de1","kind":"course","slug":"幼兒泳訓-彰北運動中心-15de1","assignedAt":"2026-09-12"}
 {"id":"crs_7605173b","kind":"course","slug":"A88樂齡手作北港班手機數位生活與AI創-海線社大-5173b","assignedAt":"2026-09-12"}
 {"id":"crs_760674dc","kind":"course","slug":"溫和瑜伽-二林社大-674dc","assignedAt":"2026-09-12"}
+{"id":"crs_76074576","kind":"course","slug":"藝術改變了我們從畢卡索到班克西張惠華教授-市圖總館新總館-74576","assignedAt":"2026-10-09"}
 {"id":"crs_7607af63","kind":"course","slug":"觀光日語會話-新楊平社大-7af63","assignedAt":"2026-09-12"}
 {"id":"crs_760806b6","kind":"course","slug":"玄武太極之玄武養生十三劍-松山社大-806b6","assignedAt":"2026-09-19"}
 {"id":"crs_760a6bbf","kind":"course","slug":"生活中的日本語初級Ⅰ-後驛社大-a6bbf","assignedAt":"2026-09-12"}
@@ -54951,6 +54955,7 @@
 {"id":"tea_f589217c0a514fdb","kind":"teacher","slug":"小靜-彰北運動中心-4d9a0","assignedAt":"2026-09-29"}
 {"id":"tea_f58b1e2e34867681","kind":"teacher","slug":"林美娜-虎尾溪社大-401ee","assignedAt":"2026-09-13"}
 {"id":"tea_f590b5dc47f8fbd9","kind":"teacher","slug":"陳瓊瑜-平原社大-9dd4b","assignedAt":"2026-09-13"}
+{"id":"tea_f597c1e9ad258567","kind":"teacher","slug":"特展導覽志工-市圖總館新總館-347de","assignedAt":"2026-10-09"}
 {"id":"tea_f59bfefe9f5124f4","kind":"teacher","slug":"趙天傑-新店崇光社大-bb947","assignedAt":"2026-09-13"}
 {"id":"tea_f5a12163caa8d859","kind":"teacher","slug":"余連春-文山社大-80930","assignedAt":"2026-09-13"}
 {"id":"tea_f5a319c7731c0a83","kind":"teacher","slug":"RONI-中和運動中心-4d34a","assignedAt":"2026-09-29"}
