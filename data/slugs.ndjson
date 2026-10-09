@@ -2724,6 +2724,7 @@
 {"id":"crs_0e48aeb1","kind":"course","slug":"繩流-泰山運動中心-8aeb1","assignedAt":"2026-09-29"}
 {"id":"crs_0e494670","kind":"course","slug":"小米老師的創意食育餐桌保險必保學分費30-新莊社大-94670","assignedAt":"2026-09-12"}
 {"id":"crs_0e49a9db","kind":"course","slug":"陰瑜珈-新莊運動中心-9a9db","assignedAt":"2026-09-29"}
+{"id":"crs_0e4a6abd","kind":"course","slug":"器械皮拉提斯-大同運動中心-a6abd","assignedAt":"2026-10-09"}
 {"id":"crs_0e4a9b8c","kind":"course","slug":"陶藝泥好手捏拉坯一-鳳山社大-a9b8c","assignedAt":"2026-09-12"}
 {"id":"crs_0e4dc6f0","kind":"course","slug":"成人泳訓班-桃園運動中心-dc6f0","assignedAt":"2026-09-29"}
 {"id":"crs_0e4ffa8e","kind":"course","slug":"就是愛烏克-文山社大-ffa8e","assignedAt":"2026-09-12"}
@@ -15058,6 +15059,7 @@
 {"id":"crs_512a1aa8","kind":"course","slug":"ZUMBA-蘆洲運動中心-a1aa8","assignedAt":"2026-09-29"}
 {"id":"crs_512bcec6","kind":"course","slug":"Body-鳳山運動園區-bcec6","assignedAt":"2026-09-12"}
 {"id":"crs_512cc244","kind":"course","slug":"FreeStyleDance-五股運動中心-cc244","assignedAt":"2026-10-02"}
+{"id":"crs_512cf19f","kind":"course","slug":"器械皮拉提斯-大同運動中心-cf19f","assignedAt":"2026-10-09"}
 {"id":"crs_512d9fca","kind":"course","slug":"基礎瑜珈-中壢運動中心-d9fca","assignedAt":"2026-09-12"}
 {"id":"crs_512f7a02","kind":"course","slug":"TRX懸吊式訓練-桃園運動中心-f7a02","assignedAt":"2026-09-29"}
 {"id":"crs_51315ef4","kind":"course","slug":"台灣名勝古蹟走讀-萬華社大-15ef4","assignedAt":"2026-09-15"}
@@ -21305,6 +21307,7 @@
 {"id":"crs_738c1c98","kind":"course","slug":"手機攝影輕鬆學保險必保學分費3000-新莊社大-c1c98","assignedAt":"2026-09-12"}
 {"id":"crs_738c64cd","kind":"course","slug":"基礎重訓-宜蘭運動中心-c64cd","assignedAt":"2026-09-29"}
 {"id":"crs_738c6ddb","kind":"course","slug":"Stretch潛能瑜珈-南港運動中心-c6ddb","assignedAt":"2026-09-12"}
+{"id":"crs_738f6dc7","kind":"course","slug":"樂齡體適能-大同運動中心-f6dc7","assignedAt":"2026-10-09"}
 {"id":"crs_738fd18f","kind":"course","slug":"器械皮拉提斯-泰山運動中心-fd18f","assignedAt":"2026-09-29"}
 {"id":"crs_739017e8","kind":"course","slug":"色鉛筆小食光插畫-鳳山社大-017e8","assignedAt":"2026-09-12"}
 {"id":"crs_739175ab","kind":"course","slug":"小手機拍拍走家庭影像好好玩-永和社大-175ab","assignedAt":"2026-10-08"}
@@ -40739,6 +40742,7 @@
 {"id":"crs_de595c6a","kind":"course","slug":"活力動瑜珈-板橋運動中心-95c6a","assignedAt":"2026-09-29"}
 {"id":"crs_de5b627b","kind":"course","slug":"美膚課程與幸福手作-豐湖社大-b627b","assignedAt":"2026-09-12"}
 {"id":"crs_de5d556a","kind":"course","slug":"日語簡單學基礎入門-新化社大-d556a","assignedAt":"2026-09-12"}
+{"id":"crs_de5dd8d9","kind":"course","slug":"活力反應體適能-大同運動中心-dd8d9","assignedAt":"2026-10-09"}
 {"id":"crs_de62914c","kind":"course","slug":"手機攝影與AI美圖輕鬆學-中山社大-2914c","assignedAt":"2026-09-12"}
 {"id":"crs_de6395a7","kind":"course","slug":"玩轉AI社群行銷白天班-文山社大-395a7","assignedAt":"2026-10-05"}
 {"id":"crs_de659a76","kind":"course","slug":"基礎重訓-宜蘭運動中心-59a76","assignedAt":"2026-09-29"}
@@ -54987,6 +54991,7 @@
 {"id":"tea_f69e652cbb180187","kind":"teacher","slug":"林碧玫-內湖社大-22dd8","assignedAt":"2026-09-13"}
 {"id":"tea_f6aa6f9a7952b568","kind":"teacher","slug":"Aaron-宜蘭運動中心-e410d","assignedAt":"2026-09-13"}
 {"id":"tea_f6ae654ba7a5949b","kind":"teacher","slug":"梁紹偉-邑山社大-9fa1d","assignedAt":"2026-09-13"}
+{"id":"tea_f6b14462a43e8dcd","kind":"teacher","slug":"小羊-大同運動中心-ed856","assignedAt":"2026-10-09"}
 {"id":"tea_f6bea391035cee43","kind":"teacher","slug":"Keira-大同運動中心-2ba0d","assignedAt":"2026-09-29"}
 {"id":"tea_f6c2196ce6e0e7e2","kind":"teacher","slug":"倪一正-潭雅神社大-58293","assignedAt":"2026-09-13"}
 {"id":"tea_f6c229d25042fdcf","kind":"teacher","slug":"黃玄胤-海線社大-cab37","assignedAt":"2026-09-13"}
