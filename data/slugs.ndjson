@@ -3160,6 +3160,7 @@
 {"id":"crs_10709f9d","kind":"course","slug":"中餐輕鬆入門中丙葷-松山社大-09f9d","assignedAt":"2026-09-12"}
 {"id":"crs_10719f5c","kind":"course","slug":"桃園尚水水資源微旅行-八德社大-19f5c","assignedAt":"2026-09-12"}
 {"id":"crs_107211a3","kind":"course","slug":"笛簫吹奏與賞析-新店崇光社大-211a3","assignedAt":"2026-09-12"}
+{"id":"crs_1073e6b2","kind":"course","slug":"公益伸展瑜伽-淡水運動中心-3e6b2","assignedAt":"2026-10-10"}
 {"id":"crs_1076f355","kind":"course","slug":"體氣圓融舞動B-美港西社大-6f355","assignedAt":"2026-09-12"}
 {"id":"crs_1079aba2","kind":"course","slug":"歡樂羽球-桃園社大-9aba2","assignedAt":"2026-09-12"}
 {"id":"crs_107aaa92","kind":"course","slug":"大自然的瑰寶親臨蝴蝶與其他昆蟲的奇異世界-新店崇光社大-aaa92","assignedAt":"2026-09-12"}
@@ -18562,6 +18563,7 @@
 {"id":"crs_6497692f","kind":"course","slug":"幼兒團體班-板橋運動中心-7692f","assignedAt":"2026-09-29"}
 {"id":"crs_64993788","kind":"course","slug":"繩流-鳳山運動園區-93788","assignedAt":"2026-09-12"}
 {"id":"crs_649a7d52","kind":"course","slug":"女性基礎重訓-宜蘭運動中心-a7d52","assignedAt":"2026-09-29"}
+{"id":"crs_649b9fad","kind":"course","slug":"公益古典舞-淡水運動中心-b9fad","assignedAt":"2026-10-10"}
 {"id":"crs_649d8947","kind":"course","slug":"瑜珈與呼吸-竹塹社大-d8947","assignedAt":"2026-09-12"}
 {"id":"crs_64a00be1","kind":"course","slug":"跟著煮廚玩出世界料理-蘆荻社大-00be1","assignedAt":"2026-09-12"}
 {"id":"crs_64a17bfa","kind":"course","slug":"多樣化綠色行腳-林口社大-17bfa","assignedAt":"2026-09-12"}
@@ -52390,6 +52392,7 @@
 {"id":"tea_a735ea3405ae9bd3","kind":"teacher","slug":"鄧心潔-八德社大-1c62b","assignedAt":"2026-09-13"}
 {"id":"tea_a7395562c6006c99","kind":"teacher","slug":"洪慧芳-大安社大-fd718","assignedAt":"2026-09-13"}
 {"id":"tea_a73bcc26037fe318","kind":"teacher","slug":"吳子瀠-美港西社大-29504","assignedAt":"2026-09-13"}
+{"id":"tea_a73e4314d2b2759e","kind":"teacher","slug":"House-淡水運動中心-a9c6d","assignedAt":"2026-10-10"}
 {"id":"tea_a73f9a6f723d71a3","kind":"teacher","slug":"孫家偉-萬華社大-60c45","assignedAt":"2026-09-13"}
 {"id":"tea_a7415ebb870b6472","kind":"teacher","slug":"褚褚-蘆洲運動中心-231b9","assignedAt":"2026-09-29"}
 {"id":"tea_a74553957d3b8a04","kind":"teacher","slug":"許麗卿-桃園運動中心-fab12","assignedAt":"2026-09-13"}
