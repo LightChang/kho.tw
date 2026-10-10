@@ -40,9 +40,9 @@ kho.tw 彙整 26 個公開資料來源（教育部社區大學資訊網、各縣
 
 ### 依縣市（共 21 縣市，網址：/city/<縣市名稱>.html；縣市名稱為中文，須百分比編碼）
 - 臺北市：https://kho.tw/city/%E8%87%BA%E5%8C%97%E5%B8%82.html（10,050 門，5,861 門招生中）
-- 新北市：https://kho.tw/city/%E6%96%B0%E5%8C%97%E5%B8%82.html（8,652 門，2,715 門招生中）
+- 新北市：https://kho.tw/city/%E6%96%B0%E5%8C%97%E5%B8%82.html（8,652 門，2,716 門招生中）
 - 桃園市：https://kho.tw/city/%E6%A1%83%E5%9C%92%E5%B8%82.html（5,091 門，1,514 門招生中）
-- 臺中市：https://kho.tw/city/%E8%87%BA%E4%B8%AD%E5%B8%82.html（5,358 門，1,471 門招生中）
+- 臺中市：https://kho.tw/city/%E8%87%BA%E4%B8%AD%E5%B8%82.html（5,358 門，1,470 門招生中）
 - 高雄市：https://kho.tw/city/%E9%AB%98%E9%9B%84%E5%B8%82.html（2,406 門，658 門招生中）
 - 彰化縣：https://kho.tw/city/%E5%BD%B0%E5%8C%96%E7%B8%A3.html（1,348 門，294 門招生中）
 - 宜蘭縣：https://kho.tw/city/%E5%AE%9C%E8%98%AD%E7%B8%A3.html（540 門，208 門招生中）
