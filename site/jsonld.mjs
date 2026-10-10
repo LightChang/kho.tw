@@ -68,8 +68,22 @@ const clean = (o) => {
 // 對複合式結果與 LLM 取用都沒有幫助；截到 200 字，完整內容留在頁面正文。
 const truncate = (s, n = 200) => (s.length > n ? `${s.slice(0, n - 1)}…` : s);
 
+// 少數來源把整份 HTML（含 DOCTYPE、style）塞進簡介。直接印出去，搜尋結果摘要與頁面開頭都是程式碼。
+// 去掉 style/script 區塊與標籤，只留文字。
+export function plainText(raw) {
+  if (!raw) return '';
+  return String(raw)
+    .replace(/<(style|script|head)[\s\S]*?<\/\1>/gi, ' ')
+    .replace(/<!DOCTYPE[^>]*>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 export function describe(course) {
-  if (course.description?.trim()) return truncate(course.description.trim().replace(/\s+/g, ' '));
+  const own = plainText(course.description);
+  if (own) return truncate(own);
   const slot = course.schedule?.slots?.[0];
   const parts = [course.provider?.nameRaw];
   if (course.term?.raw) parts.push(course.term.raw);
@@ -80,6 +94,8 @@ export function describe(course) {
   ].filter(Boolean).join(' ');
   if (when) parts.push(`${when}上課`);
   if (course.schedule?.startDate) parts.push(`自 ${course.schedule.startDate} 起`);
+  const reg = [course.enrollment?.opensAt, course.enrollment?.closesAt].filter(Boolean).map((d) => String(d).slice(5, 10));
+  if (reg.length === 2) parts.push(`報名 ${reg[0]} 至 ${reg[1]}`);
   const place = course.venue?.name;
   if (place) parts.push(`地點：${place}`);
   return `${parts.filter(Boolean).join('，')}。`;

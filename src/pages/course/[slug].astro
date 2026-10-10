@@ -8,7 +8,7 @@ import StatusBadge from '../../components/StatusBadge.astro';
 import EndedNote from '../../components/EndedNote.astro';
 import { getData, hasEnded, isNoindex, link, fmt, WEEKDAY_LABEL, certHref } from '../../lib/data.mjs';
 import { isCert, courseTitle, seasonOf } from '../../lib/facets.mjs';
-import { courseJsonLd, courseUrl } from '../../../site/jsonld.mjs';
+import { courseJsonLd, courseUrl, plainText } from '../../../site/jsonld.mjs';
 
 export function getStaticPaths() {
   return getData().coursePages.map((p) => ({ params: { slug: p.course.slug }, props: p }));
@@ -80,7 +80,7 @@ const whenOf = (o) => [seasonOf(o.schedule?.startDate), (o.schedule?.slots ?? []
 <h1>{c.title} <StatusBadge status={c.enrollment?.status} />{cert && <Fragment> <span class="badge-cert">可考證照</span></Fragment>}</h1>
 <div class="meta">{c.provider?.nameRaw ?? ''}{c.venue?.city && `　${c.venue.city}${c.venue.district ?? ''}`}</div>
 {hasEnded(c) && <div class="meta-2"><EndedNote course={c} />　本站不改寫來源給的報名狀態，這一行講的是上課期間。</div>}
-{c.description && <p>{c.description}</p>}
+{plainText(c.description) && <p>{plainText(c.description)}</p>}
 <table>{rows.map(([k, v]) => <tr><th class="th-key">{k}</th><td>{v}</td></tr>)}</table>
 </div>
 {venue?.id ? (

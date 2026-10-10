@@ -43,7 +43,7 @@ const alias = a.aliases.length ? `（${a.aliases.join('、')}）` : '';
 ---
 <Base crumbs={learnCrumbs(a, { city: x.city, district: x.district, cityArea: cityPage?.area })}
   title={center ? `${center.short}${a.label}課｜${place}${a.label}課程（${full}）時間與地點` : `${place}${a.label}課程｜${full}${kinds.slice(0, 2).join('・')}開課時間與地點`}
-  description={`${full}的${a.name}${alias}課程共 ${fmt(x.list.length)} 門，其中 ${fmt(x.open)} 門招生中。開課單位有${providers.slice(0, 3).join('、')}${providers.length > 3 ? `等 ${providers.length} 個` : ''}，列出上課時間、地點與報名狀態。`}
+  description={`${full}的成人${a.name}${alias}課程共 ${fmt(x.list.length)} 門，其中 ${fmt(x.open)} 門招生中。開課單位有${providers.slice(0, 3).join('、')}${providers.length > 3 ? `等 ${providers.length} 個` : ''}，列出上課時間、地點與報名狀態。`}
   canonical={`${SITE_URL}${learnHref(a.name, x.area)}`}
   jsonld={itemListJsonLd(x.list.slice(0, 100), { name: `${full}${a.label}課程` })}
 >
