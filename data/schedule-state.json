@@ -201,12 +201,12 @@
     "declaredFreq": "不定期更新（dataset 6838 更新頻率欄位；RSS 本身即時，但固定只出最新 10 筆）",
     "intervalMs": 86400000,
     "interval": "1d",
-    "lastFetchedAt": "2026-10-10T09:10:03.326Z",
+    "lastFetchedAt": "2026-10-11T10:10:02.641Z",
     "lastChangedAt": "2026-10-08T02:10:02.429Z",
-    "nextDueAt": "2026-10-11T09:10:03.326Z",
+    "nextDueAt": "2026-10-12T10:10:02.641Z",
     "recordCount": 20,
     "contentHash": "429666701fd99518eedf951df677b06f22b4094828b91647d63e2bc6b3d7f8f2",
-    "unchangedRuns": 3,
+    "unchangedRuns": 4,
     "consecutiveFailures": 0
   },
   "nlpi-activities": {
@@ -255,14 +255,14 @@
     "name": "新北市立圖書館－活動報名",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（報名系統，名額與狀態即時變動）",
-    "intervalMs": 36450000,
-    "interval": "10.1h",
-    "lastFetchedAt": "2026-10-10T23:10:03.202Z",
-    "lastChangedAt": "2026-10-10T07:10:03.094Z",
-    "nextDueAt": "2026-10-11T09:17:33.202Z",
+    "intervalMs": 18225000,
+    "interval": "5.1h",
+    "lastFetchedAt": "2026-10-11T10:10:02.641Z",
+    "lastChangedAt": "2026-10-11T10:10:02.641Z",
+    "nextDueAt": "2026-10-11T15:13:47.641Z",
     "recordCount": 66,
-    "contentHash": "9cec8e37a2f19da2874ef5dd0692f7bb2c029dc4f67e1a07720949b409ff1a25",
-    "unchangedRuns": 3,
+    "contentHash": "65d0181504c23e7fcc7cc0a373895b8c6e7e154d77fa6b829cfb984e5e326f88",
+    "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
   "penghu-cc-portal": {
@@ -439,12 +439,12 @@
     "declaredFreq": "UNVERIFIED（帶已報名人數與額滿旗標，為即時層）",
     "intervalMs": 86400000,
     "interval": "1d",
-    "lastFetchedAt": "2026-10-10T09:10:03.326Z",
+    "lastFetchedAt": "2026-10-11T10:10:02.641Z",
     "lastChangedAt": "2026-10-08T09:10:03.796Z",
-    "nextDueAt": "2026-10-11T09:10:03.326Z",
+    "nextDueAt": "2026-10-12T10:10:02.641Z",
     "recordCount": 396,
     "contentHash": "b752010689eb59616d64604fb3e184fd081de28e7235131cb0cf83592bbafba8",
-    "unchangedRuns": 5,
+    "unchangedRuns": 6,
     "consecutiveFailures": 0
   }
 }
