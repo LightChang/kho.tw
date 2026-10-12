@@ -10151,6 +10151,7 @@
 {"id":"crs_35d1cab3","kind":"course","slug":"成人壁球13歲上團體班-大里國民暨兒童運動中心-1cab3","assignedAt":"2026-09-29"}
 {"id":"crs_35d3cb12","kind":"course","slug":"生活日語及其應用-文山社大-3cb12","assignedAt":"2026-09-12"}
 {"id":"crs_35d8c15c","kind":"course","slug":"TRX-蘆洲運動中心-8c15c","assignedAt":"2026-09-29"}
+{"id":"crs_35d96f5c","kind":"course","slug":"幼兒優游泳訓班-八德運動中心-96f5c","assignedAt":"2026-10-13"}
 {"id":"crs_35dc731c","kind":"course","slug":"有氧律生活B-後驛社大-c731c","assignedAt":"2026-09-12"}
 {"id":"crs_35dcf2ec","kind":"course","slug":"FigmaUIUX與Vuejs前端培訓班-逢甲大學-cf2ec","assignedAt":"2026-09-12"}
 {"id":"crs_35ddd105","kind":"course","slug":"美味糕點新主張-北投社大-dd105","assignedAt":"2026-09-12"}
@@ -24159,6 +24160,7 @@
 {"id":"crs_823a76c6","kind":"course","slug":"彩墨國畫-員永村社大-a76c6","assignedAt":"2026-09-12"}
 {"id":"crs_823c6e3a","kind":"course","slug":"TRX懸吊式訓練-中壢運動中心-c6e3a","assignedAt":"2026-09-29"}
 {"id":"crs_823eda70","kind":"course","slug":"開心學太極陳式太極拳36式-新中和社大-eda70","assignedAt":"2026-09-12"}
+{"id":"crs_824589ea","kind":"course","slug":"115年母語讀冊Chill10月場美崙山-林森圖書館-589ea","assignedAt":"2026-10-13"}
 {"id":"crs_82461838","kind":"course","slug":"不累生活正念溝通力-北投社大-61838","assignedAt":"2026-09-12"}
 {"id":"crs_82477b0b","kind":"course","slug":"中音次中音薩克斯風進階-後驛社大-77b0b","assignedAt":"2026-09-12"}
 {"id":"crs_8249c4c6","kind":"course","slug":"週六麵包點心A六甲-曾文社大-9c4c6","assignedAt":"2026-09-12"}
@@ -26722,6 +26724,7 @@
 {"id":"crs_9030f35a","kind":"course","slug":"CW脊椎正位瑜伽-楊梅體育園區-0f35a","assignedAt":"2026-09-12"}
 {"id":"crs_90318b46","kind":"course","slug":"油畫基礎-新楊平社大-18b46","assignedAt":"2026-09-12"}
 {"id":"crs_9032a7b2","kind":"course","slug":"延緩失能肌肉強化與心理減壓本土研發方案第-基督教新希望教會新喜-2a7b2","assignedAt":"2026-09-12"}
+{"id":"crs_9033a12b","kind":"course","slug":"兒童優游泳訓班-八德運動中心-3a12b","assignedAt":"2026-10-13"}
 {"id":"crs_9033d036","kind":"course","slug":"瑜珈提斯-大同運動中心-3d036","assignedAt":"2026-09-12"}
 {"id":"crs_90364852","kind":"course","slug":"女性基礎重訓-宜蘭運動中心-64852","assignedAt":"2026-09-29"}
 {"id":"crs_9038b6f1","kind":"course","slug":"水墨彩繪班-汐止社大-8b6f1","assignedAt":"2026-09-12"}
@@ -52245,6 +52248,7 @@
 {"id":"tea_9784bd7cb1391e87","kind":"teacher","slug":"溫國光-苗栗社大-0db0b","assignedAt":"2026-09-13"}
 {"id":"tea_979380dc06dd683c","kind":"teacher","slug":"Kate-新莊運動中心-073e1","assignedAt":"2026-09-29"}
 {"id":"tea_97ac8fe48b1172e8","kind":"teacher","slug":"王偉智-蘆山園社大-47f76","assignedAt":"2026-09-14"}
+{"id":"tea_97baf924aaff9df7","kind":"teacher","slug":"Jett-林口運動中心-72b25","assignedAt":"2026-10-13"}
 {"id":"tea_97bc73ec49fdd6ca","kind":"teacher","slug":"楊秋賢-竹東社大-ea990","assignedAt":"2026-09-13"}
 {"id":"tea_97c97aeeb2ffcfcb","kind":"teacher","slug":"秦麗美-鎮港園社大-71c5b","assignedAt":"2026-09-13"}
 {"id":"tea_97d6b5c648087555","kind":"teacher","slug":"邱怡偉-曾文社大-66fb7","assignedAt":"2026-09-13"}
