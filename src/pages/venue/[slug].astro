@@ -110,7 +110,7 @@ const timeOf = (s) => `${s.startTime ?? ''}${s.endTime ? `–${s.endTime}` : ''}
 const slotsText = (c) => (c.schedule?.slots ?? []).map((s) => `${WEEKDAY_LABEL[s.weekday] ?? ''} ${timeOf(s)}`).join('、') || c.schedule?.timeInfoRaw || '';
 ---
 <Base crumbs={underCity(v.city, display.heading, new Set(getData().cities.map((x) => x.name)))} title={title} description={description} canonical={venueUrl(v)} jsonld={venueJsonLd(v, list)} robots={noindex ? 'noindex,follow' : undefined}>
-<div class="card"><h1>{display.heading}{hasTable ? '課程表' : '的課程'}</h1>
+<div class="card"><h1>{lead}{hasTable ? '課程表' : '的課程'}</h1>
 {v.address && v.address !== display.name && <div class="meta">{v.address}</div>}
 {providerNote && <div class="meta">開課單位：{providerNote}</div>}
 {display.from === 'provider' && <div class="meta-2">來源只給了門牌，沒有地點名稱；這裡的課都由 {top.name} 開設，所以標示為它的上課地點。</div>}
