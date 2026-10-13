@@ -2626,6 +2626,7 @@
 {"id":"crs_0da6885b","kind":"course","slug":"燃脂飛輪-樹林運動中心-6885b","assignedAt":"2026-09-29"}
 {"id":"crs_0da6960e","kind":"course","slug":"皮拉提斯-內湖運動中心-6960e","assignedAt":"2026-09-12"}
 {"id":"crs_0da7b6d5","kind":"course","slug":"綜合歌唱班-邱春木社會福利慈善事業基-7b6d5","assignedAt":"2026-09-12"}
+{"id":"crs_0da8f44f","kind":"course","slug":"CNC車銑複合數控班含SolidWork-勞動力發展署雲嘉南分署-8f44f","assignedAt":"2026-10-14"}
 {"id":"crs_0daa3ae6","kind":"course","slug":"環境守護與災害防治認識河川森林與如何避免-大屯社大-a3ae6","assignedAt":"2026-09-12"}
 {"id":"crs_0dac0dbb","kind":"course","slug":"書法楷書進階班-南關社大-c0dbb","assignedAt":"2026-09-13"}
 {"id":"crs_0dad28d8","kind":"course","slug":"掏寶文物市場的機制與鑑賞-中正社大-d28d8","assignedAt":"2026-09-12"}
@@ -32910,6 +32911,7 @@
 {"id":"crs_b1cbc54f","kind":"course","slug":"台灣鐵道玩透透-羅東社大-bc54f","assignedAt":"2026-09-12"}
 {"id":"crs_b1cf1298","kind":"course","slug":"竹笛演奏與賞析-中壢社大-f1298","assignedAt":"2026-09-12"}
 {"id":"crs_b1d1403a","kind":"course","slug":"讓我們玩唱人聲國台語經典名曲卡拉OK歌唱-新莊社大-1403a","assignedAt":"2026-09-12"}
+{"id":"crs_b1d33ee9","kind":"course","slug":"9011電動機車檢修技術班第01期-勞動力發展署中彰投分署-33ee9","assignedAt":"2026-10-14"}
 {"id":"crs_b1d34e77","kind":"course","slug":"旅遊英語通初級-桃園社大-34e77","assignedAt":"2026-09-12"}
 {"id":"crs_b1d40eb1","kind":"course","slug":"美容養生神奇撥筋術-社大-40eb1","assignedAt":"2026-09-12"}
 {"id":"crs_b1d755f9","kind":"course","slug":"宮崎駿動畫與生命故事-北投社大-755f9","assignedAt":"2026-09-12"}
@@ -56277,6 +56279,7 @@
 {"id":"ven_34925c39","kind":"venue","slug":"埔心瑞埔國小-25c39","assignedAt":"2026-09-12"}
 {"id":"ven_34a49274","kind":"venue","slug":"李秀玉老師工作室-49274","assignedAt":"2026-09-12"}
 {"id":"ven_34abe22d","kind":"venue","slug":"成名咖啡工作室-be22d","assignedAt":"2026-09-12"}
+{"id":"ven_34b3c852","kind":"venue","slug":"臺南市官田區臺南市官田區官田區工業路40-3c852","assignedAt":"2026-10-14"}
 {"id":"ven_34fd4a01","kind":"venue","slug":"彰化縣彰化市卦山路5號-d4a01","assignedAt":"2026-09-12"}
 {"id":"ven_35206151","kind":"venue","slug":"屏東縣屏東市新興街8號-06151","assignedAt":"2026-09-12"}
 {"id":"ven_352304ae","kind":"venue","slug":"五權社區大學-304ae","assignedAt":"2026-09-12"}
@@ -57842,6 +57845,7 @@
 {"id":"ven_c1c43394","kind":"venue","slug":"臺北市信義區光復南路495號-43394","assignedAt":"2026-09-12"}
 {"id":"ven_c1d67099","kind":"venue","slug":"漳興國小4F音樂教室-67099","assignedAt":"2026-09-12"}
 {"id":"ven_c1d6903a","kind":"venue","slug":"臺南市歸仁區中山路一段2巷-6903a","assignedAt":"2026-09-12"}
+{"id":"ven_c1db67f2","kind":"venue","slug":"彰化縣彰化市建國科技大學資管系一樓個案教-b67f2","assignedAt":"2026-10-14"}
 {"id":"ven_c1fa7fc9","kind":"venue","slug":"桃園市桃園區介壽路288號-a7fc9","assignedAt":"2026-09-12"}
 {"id":"ven_c217e788","kind":"venue","slug":"新北市立圖書館新莊中港分館-7e788","assignedAt":"2026-09-13"}
 {"id":"ven_c2192474","kind":"venue","slug":"西藏路201號-92474","assignedAt":"2026-09-12"}
