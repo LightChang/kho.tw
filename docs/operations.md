@@ -240,6 +240,11 @@ curl -s https://kho.tw/sitemap.xml | head -3
 **鎖**：這支跟 seo-ops 的反思／大腦層共用 `/tmp/seo-claude-kho.tw.lock`。那兩層也會改這個
 工作樹，一秒重疊就會 git 撞。搶不到鎖就直接跳過這輪（不等），因為下個整點還會再來一次。
 
+**全機 build 輪流**（2026-10-14 起）：astro build 那一步包在 `site-build-run kho.tw -- …` 裡，
+與本機其他站的全站 build 共用一把鎖，最久沒建置的先。誰在建置、誰在排隊、各站上次何時建置：
+`site-build-turns`。等超過一小時（`SITE_BUILD_WAIT`）就放棄這輪：不部署、不回寫，記成失敗，
+log 寫「等全機 build 鎖逾時」。
+
 **驗證不過就不部署**：三支檢查器（JSON-LD／連結／sitemap）任一支非零就停在部署之前，
 網站維持上一版。這是原本 workflow 的語意，不要改成「產出了就推」。
 

@@ -10,6 +10,10 @@
 #      分支來源會走 Jekyll，底線開頭的目錄會被吃掉——所以 public/.nojekyll 必須存在。
 #   3. 與 seo-ops 的反思／大腦層共用同一把鎖 /tmp/seo-claude-kho.tw.lock。
 #      那兩層也會改這個工作樹，一秒重疊就會 git 撞（seo-ops MAINTENANCE.md「新站/新產線檢查點」）。
+#   4. astro build 那一步（只有那一步）走全機 build 輪流（2026-10-14 起）：
+#      `site-build-run kho.tw -- …`，與本機其他站共用 /var/lock/site-build.lock，最久沒建置的先。
+#      查表：site-build-turns；協定在 /usr/local/lib/site-build-turn.sh 檔頭。
+#      等超過 SITE_BUILD_WAIT（預設 3600 秒）回 75：這輪不部署、不回寫，記成失敗（stage=site）。
 #
 # 與 ops/run-pipeline.sh 的關係：那支是 macOS launchd 版，只跑到建置為止，不 commit、不部署。
 # 這支是 Linux 主機版，多了 git 同步、回寫、部署。兩支不會同時存在於同一台機器上。
@@ -122,7 +126,13 @@ if [ ! -f "$ASTRO" ]; then
   log "找不到 ${ASTRO}，請先在專案目錄跑 pnpm install"
   exit 1
 fi
-run_step "site" "$NODE" "$ASTRO" build || { log "site build 失敗，停止（不部署）"; exit 1; }
+run_step "site" /usr/local/bin/site-build-run kho.tw -- "$NODE" "$ASTRO" build
+site_code=$?
+if [ "$site_code" -eq 75 ]; then
+  log "等全機 build 鎖逾時（別站在建置，查表 site-build-turns），這輪跳過：不部署、不回寫"
+  exit 1
+fi
+[ "$site_code" -eq 0 ] || { log "site build 失敗，停止（不部署）"; exit 1; }
 # 驗證不過就不部署：原本的 workflow 是驗證失敗整個 job 紅字、deploy 步驟不會執行，
 # 這裡要維持同樣的語意，不能「產出了就推上去」。
 run_step "validate-jsonld" "$NODE" site/validate-jsonld.mjs || { log "JSON-LD 驗證沒過，不部署"; exit 1; }
