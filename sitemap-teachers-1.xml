@@ -31,12 +31,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E4%B8%81%E5%85%81%E4%BB%BB-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-96fa1.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E4%B8%81%E5%90%88%E7%BE%BF-%E5%B1%8F%E5%8D%97%E5%8D%80%E7%A4%BE%E5%A4%A7-550cb.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -75,12 +69,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E4%B8%81%E7%A7%80%E6%B4%A5-%E4%B8%AD%E6%AD%A3%E7%A4%BE%E5%A4%A7-930b1.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E4%B8%81%E7%A7%80%E6%B4%A5-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-f1988.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -170,7 +158,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E4%B8%B8%E4%B8%B8-%E8%99%8E%E5%B0%BE%E5%85%A8%E6%B0%91%E9%81%8B%E5%8B%95%E9%A4%A8-2cd0d.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -207,12 +195,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E4%BA%8E%E5%BF%97%E7%9D%BF-%E6%A1%83%E5%9C%92%E7%A4%BE%E5%A4%A7-36bb9.html</loc>
     <lastmod>2026-09-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E4%BA%8E%E6%96%87%E6%AD%A3-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-a9ee5.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -296,7 +278,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E4%BB%99%E4%BB%99-%E5%BD%B0%E5%8C%97%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-28219.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -374,12 +356,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E4%BD%95%E4%BF%8A%E5%B6%94-%E6%9D%BE%E5%B1%B1%E7%A4%BE%E5%A4%A7-8c6f5.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E4%BD%95%E5%93%81%E8%AA%BC-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-eb198.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -595,6 +571,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E4%BD%95%E7%8C%AE%E7%A7%91-%E4%B8%AD%E5%B1%B1%E7%A4%BE%E5%A4%A7-7ea1c.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E4%BD%95%E7%8C%AE%E7%A7%91-%E5%8D%97%E6%B8%AF%E7%A4%BE%E5%A4%A7-e78bc.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -603,12 +585,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E4%BD%95%E7%8C%AE%E7%A7%91-%E6%96%87%E5%B1%B1%E7%A4%BE%E5%A4%A7-aa939.html</loc>
     <lastmod>2026-09-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E4%BD%95%E7%8C%AE%E7%A7%91-%E6%9D%BE%E5%B1%B1%E7%A4%BE%E5%A4%A7-73ec3.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -651,12 +627,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E4%BD%95%E8%82%B2%E6%A8%BA-%E8%99%8E%E5%B0%BE%E6%BA%AA%E7%A4%BE%E5%A4%A7-a3904.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E4%BD%95%E8%8F%8A%E9%8C%A2-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-4482f.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -811,14 +781,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E4%BD%99%E6%A2%85%E6%85%8E-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-6b6e5.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E4%BD%99%E6%A2%85%E6%85%8E-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-6d760.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -963,12 +927,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E4%BD%99%E9%80%A3%E6%98%A5-%E6%96%87%E5%B1%B1%E7%A4%BE%E5%A4%A7-80930.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E4%BD%99%E9%87%91%E5%B7%9D-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-381e6.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1202,7 +1160,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%81%A5%E8%BA%AB%E6%88%BF%E8%8B%B1%E7%BF%AC-%E6%B0%B8%E5%92%8C%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-ab285.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1346,7 +1304,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%85%A9%E6%BE%A4-%E6%B3%B0%E5%B1%B1%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-5e91d.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1495,12 +1453,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E5%8A%89%E4%BB%81%E9%B3%B3-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-b47a5.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E5%8A%89%E4%BD%A9%E5%A6%AE-%E4%BF%A1%E7%BE%A9%E7%A4%BE%E5%A4%A7-96589.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -1603,6 +1555,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E5%8A%89%E5%93%81%E9%BA%97-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-cbee9.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E5%8A%89%E5%93%B2%E5%AE%87-%E6%9D%BF%E6%A9%8B%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-132cd.html</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -1652,7 +1610,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%8A%89%E5%A4%A7%E8%B3%A2-%E6%9D%BE%E5%B1%B1%E7%A4%BE%E5%A4%A7-533f7.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1693,6 +1651,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E5%8A%89%E5%AD%9F%E8%8A%B8-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-0dd8c.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E5%8A%89%E5%AE%87%E5%9C%83-%E5%BE%8C%E9%A9%9B%E7%A4%BE%E5%A4%A7-790f5.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -1707,12 +1671,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E5%8A%89%E5%AE%87%E8%8F%AF-%E7%AB%B9%E5%8C%97%E7%A4%BE%E5%A4%A7-b0ace.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E5%8A%89%E5%AE%A3%E4%BD%91-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-32b04.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1765,12 +1723,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E5%8A%89%E5%BD%A5%E4%BD%91-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-d7128.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E5%8A%89%E5%BE%B7%E6%96%87-%E6%97%97%E7%BE%8E%E7%A4%BE%E5%A4%A7-60f30.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -1797,12 +1749,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E5%8A%89%E6%80%A1%E7%A7%80-%E4%B8%AD%E5%B1%B1%E5%8D%80%E6%A8%82%E9%BD%A1%E5%AD%B8%E7%BF%92%E5%84%AA%E8%B3%AA%E4%B8%AD%E5%BF%83-afc43.html</loc>
     <lastmod>2026-09-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E5%8A%89%E6%80%A1%E8%89%AF-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-ae398.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1850,12 +1796,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%8A%89%E6%83%A0%E7%8F%8D-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-7410e.html</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E5%8A%89%E6%83%A0%E7%8F%8D-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-ef795.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -1886,7 +1826,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%8A%89%E6%97%A5%E5%9D%87-%E7%AB%B9%E5%8C%97%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-97a64.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -1911,12 +1851,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E5%8A%89%E6%98%8E%E9%80%9A-%E5%8D%97%E6%B8%AF%E7%A4%BE%E5%A4%A7-fa01e.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E5%8A%89%E6%98%8E%E9%9B%84-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-252db.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -2018,7 +1952,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%8A%89%E6%B0%B8%E6%B7%91-%E6%B3%B0%E5%B1%B1%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-3765f.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -2137,12 +2071,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E5%8A%89%E7%90%BC%E7%82%AB-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-273b3.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E5%8A%89%E7%91%9B%E7%8E%AB-%E7%A7%81%E7%AB%8B%E5%A4%A7%E5%90%8C%E9%AB%98%E4%B8%AD-98ade.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -2175,12 +2103,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E5%8A%89%E7%A2%A7%E9%9C%9E-%E5%85%A7%E6%B9%96%E7%A4%BE%E5%A4%A7-58474.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E5%8A%89%E7%A2%A7%E9%9C%9E-%E6%9D%BE%E5%B1%B1%E7%A4%BE%E5%A4%A7-290d7.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -2545,14 +2467,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E5%8A%89%E9%9B%B2-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-012bd.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E5%8A%89%E9%9B%B2-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-b8de0.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -2576,12 +2492,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%8A%89%E9%B3%B3%E7%8F%A0-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-a98ae.html</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E5%8A%89%E9%B3%B3%E7%8F%A0-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-c44db.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -2707,12 +2617,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E5%8D%93%E6%B7%91%E7%87%95-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-d5c72.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E5%8D%93%E6%B7%91%E7%87%95-%E6%96%B0%E6%A5%8A%E5%B9%B3%E7%A4%BE%E5%A4%A7-19a01.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -2797,6 +2701,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E5%8F%A4%E5%BB%B7%E6%9C%B1-%E6%A8%B9%E6%9E%97%E7%A4%BE%E5%A4%A7-ecc01.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E5%8F%A4%E6%99%AF%E6%B3%B1-%E5%B2%A1%E5%B1%B1%E7%A4%BE%E5%A4%A7-5808b.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -2815,20 +2725,14 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E5%8F%A4%E7%B4%A0%E8%8F%AF-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-e9b31.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E5%8F%A4%E7%B6%89%E5%AB%BA-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-e7e0b.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E5%8F%A4%E8%95%99%E7%94%84-%E8%B1%90%E6%B9%96%E7%A4%BE%E5%A4%A7-588c5.html</loc>
     <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E5%8F%A4%E8%A9%A9%E5%AF%A7-%E4%B8%AD%E5%A3%A2%E7%A4%BE%E5%A4%A7-6f90d.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -3027,6 +2931,12 @@
   <url>
     <loc>https://kho.tw/teacher/%E5%90%B3%E4%BB%A5%E8%8F%81-%E5%A4%A7%E5%AE%89%E7%A4%BE%E5%A4%A7-045b2.html</loc>
     <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E5%90%B3%E4%BB%A5%E8%8F%81-%E6%A8%B9%E6%9E%97%E7%A4%BE%E5%A4%A7-c140d.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -3313,12 +3223,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E5%90%B3%E5%AE%A3%E7%91%A9-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-eeb42.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E5%90%B3%E5%AE%B6%E5%AE%B9-%E5%8C%97%E9%AB%98%E9%9B%84%E7%A4%BE%E5%A4%A7-fd8fc.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -3542,7 +3446,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%90%B3%E6%94%BF%E7%BF%B0-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-89db3.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -3781,12 +3685,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E5%90%B3%E6%B2%9B%E6%99%B4-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-fb2d4.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E5%90%B3%E6%B2%9B%E6%99%B4-%E6%96%B0%E6%A5%8A%E5%B9%B3%E7%A4%BE%E5%A4%A7-37c9a.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -3801,12 +3699,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E5%90%B3%E6%B2%9B%E6%99%B4-%E6%B7%A1%E6%B0%B4%E7%A4%BE%E5%A4%A7-5f87c.html</loc>
     <lastmod>2026-09-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E5%90%B3%E6%B2%9B%E7%A9%8E-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-aba9c.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -4004,12 +3896,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%90%B3%E7%A7%80%E6%9E%9D-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-5e326.html</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E5%90%B3%E7%A7%80%E6%9E%9D-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-623a1.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -4034,7 +3920,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%90%B3%E7%A7%80%E7%9C%9F-%E6%9D%BE%E5%B1%B1%E7%A4%BE%E5%A4%A7-277f0.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -4077,12 +3963,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E5%90%B3%E7%A7%8B%E7%87%95-%E8%98%86%E8%8D%BB%E7%A4%BE%E5%A4%A7-1b166.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E5%90%B3%E7%A8%BC%E5%AF%85-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-c6ac7.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -4131,12 +4011,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E5%90%B3%E7%B4%A0%E8%B2%9E-%E6%9B%BE%E6%96%87%E7%A4%BE%E5%A4%A7-a828f.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E5%90%B3%E7%B4%B9%E6%87%8B-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-920b9.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -4221,12 +4095,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E5%90%B3%E8%81%B0%E8%A3%95-%E7%AC%AC%E4%B8%80%E7%A4%BE%E5%A4%A7-ea736.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E5%90%B3%E8%81%B2%E5%9C%8B-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-fb380.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -4412,7 +4280,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%90%B3%E8%AE%9A%E8%BB%92-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-e751f.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -4485,12 +4353,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E5%90%B3%E9%87%91%E9%B4%A6-%E8%B1%90%E6%B9%96%E7%A4%BE%E5%A4%A7-1ef94.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E5%90%B3%E9%8A%80%E6%B0%B4-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-0efea.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -4633,14 +4495,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E5%90%B3%E9%BA%97%E7%90%B4-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-4fa6e.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E5%90%B3%E9%BA%97%E7%90%B4-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-95eba.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -4749,12 +4605,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E5%91%82%E5%AE%97%E5%93%B2-%E5%A4%A7%E9%87%8C%E5%9C%8B%E6%B0%91%E6%9A%A8%E5%85%92%E7%AB%A5%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-6a5ff.html</loc>
     <lastmod>2026-10-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E5%91%82%E5%AE%9C%E8%87%BB-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-ea073.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -4917,12 +4767,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E5%91%82%E7%95%B9%E9%88%B4-%E4%B8%AD%E6%AD%A3%E7%A4%BE%E5%A4%A7-ebbd6.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E5%91%82%E7%A7%80%E5%9C%88-%E6%9D%BE%E5%B1%B1%E7%A4%BE%E5%A4%A7-1c4d9.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -5347,6 +5191,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E5%91%A8%E6%AC%BD%E8%B3%A2-%E6%96%B0%E6%A5%8A%E5%B9%B3%E7%A4%BE%E5%A4%A7-17ace.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E5%91%A8%E6%AD%A3%E7%BE%A9-%E6%B7%A1%E6%B0%B4%E7%A4%BE%E5%A4%A7-75a82.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -5377,12 +5227,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E5%91%A8%E7%8E%89%E7%8F%8A-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-64044.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E5%91%A8%E7%8E%89%E7%8F%8A-%E6%A1%83%E5%9C%92%E7%A4%BE%E5%A4%A7-4a2a4.html</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -5401,12 +5245,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E5%91%A8%E7%8F%88%E4%BA%98-%E6%9D%BE%E5%B1%B1%E7%A4%BE%E5%A4%A7-19593.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E5%91%A8%E7%9B%9F%E9%BA%92-%E7%AB%B9%E5%8C%97%E7%A4%BE%E5%A4%A7-b694e.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -5414,12 +5252,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%91%A8%E7%A5%81%E8%A1%A1-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-a0910.html</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E5%91%A8%E7%A5%81%E8%A1%A1-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-c24ed.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -5654,7 +5486,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%93%86%E5%93%86-%E8%8B%93%E9%9B%85%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-26838.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -6020,7 +5852,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%A4%A7%E7%87%95-%E9%95%B7%E6%98%A5%E5%9C%8B%E6%B0%91%E6%9A%A8%E5%85%92%E7%AB%A5%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-29184.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -6177,12 +6009,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E5%A7%9A%E7%BF%A0%E8%8F%AF-%E4%BF%A1%E7%BE%A9%E7%A4%BE%E5%A4%A7-52eb0.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E5%A7%9A%E8%88%9C%E5%87%A1-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-09a82.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -6464,7 +6290,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%AD%9F%E5%AD%9F-%E5%BD%B0%E5%8C%97%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-2e8c0.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -6572,6 +6398,12 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%AD%AB%E7%80%9B%E6%B4%B2-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-a816f.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E5%AD%AB%E7%8F%AE%E7%91%9C-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-f8573.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -6878,6 +6710,12 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%AE%97%E6%B3%B0-wdygwd28-4d7f9.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E5%AE%98%E6%85%A7%E6%96%87-%E7%AB%B9%E5%A1%B9%E7%A4%BE%E5%A4%A7-b6af1.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -7220,7 +7058,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%B0%8F%E5%AE%87-%E6%A5%8A%E6%A2%85%E9%AB%94%E8%82%B2%E5%9C%92%E5%8D%80-83f74.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -7808,7 +7646,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%B0%8F%E9%9B%AF-%E5%A4%A7%E5%90%8C%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-6fbf1.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -8035,6 +7873,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E5%B0%A4%E7%8F%AE%E7%8F%8A-%E6%B8%AF%E9%83%BD%E7%A4%BE%E5%A4%A7-2ddeb.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E5%B0%A4%E7%A2%A7%E7%8E%B2-%E5%AE%9C%E8%98%AD%E7%A4%BE%E5%A4%A7-310c6.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -8138,12 +7982,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%B2%91%E5%AE%B6%E5%81%89-%E4%B8%AD%E5%A3%A2%E7%A4%BE%E5%A4%A7-8b7bb.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E5%B2%91%E5%AE%B6%E5%81%89-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-fd9bd.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -8263,6 +8101,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E5%B7%AB%E8%88%88%E6%98%8C-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-1303c.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E5%B7%AB%E9%87%87%E6%86%B6-%E5%90%8E%E8%B1%90%E7%A4%BE%E5%A4%A7-067f9.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -8295,6 +8139,12 @@
   <url>
     <loc>https://kho.tw/teacher/%E5%B9%BD%E6%B5%AE-%E8%8B%93%E9%9B%85%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-d7931.html</loc>
     <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E5%BA%A6%E5%BA%A6%E6%98%80%E5%A5%87-%E6%96%B0%E8%8E%8A%E7%A4%BE%E5%A4%A7-0b3eb.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -8391,12 +8241,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E5%BB%96%E4%BF%8A%E7%AB%A5-%E5%B9%B3%E5%8E%9F%E7%A4%BE%E5%A4%A7-b55f9.html</loc>
     <lastmod>2026-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E5%BB%96%E5%81%89%E7%9A%93-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-6f5fc.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -8815,14 +8659,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E5%BB%96%E7%B4%A0%E8%98%AD-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-99f9d.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E5%BB%96%E7%B4%A0%E8%98%AD-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-c0b22.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -8894,12 +8732,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%BB%96%E8%8B%A1%E5%B8%86-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-b004a.html</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E5%BB%96%E8%8B%A1%E5%B8%86-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-c2768.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -10232,7 +10064,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%BC%B5%E7%90%A6%E9%9B%AF-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-053ee.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -10411,12 +10243,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E5%BC%B5%E7%A8%9A%E8%8B%B1-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-781de.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E5%BC%B5%E7%A8%9A%E8%8B%B1-%E6%96%B0%E8%8E%8A%E7%A4%BE%E5%A4%A7-18167.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -10425,12 +10251,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E5%BC%B5%E7%AB%8B%E6%86%B2-%E5%B1%8F%E5%8D%97%E5%8D%80%E7%A4%BE%E5%A4%A7-b931e.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E5%BC%B5%E7%AB%8B%E8%8F%81-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-4fc0f.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -10807,6 +10627,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E5%BC%B5%E9%8C%A6%E9%BE%8D-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-e5239.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E5%BC%B5%E9%8C%AB%E6%B1%A0-%E4%BA%8C%E7%A4%BE%E7%94%B0%E7%A4%BE%E5%A4%A7-87e59.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -10820,7 +10646,13 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%BC%B5%E9%9B%85%E5%B5%90-%E4%B8%AD%E5%A3%A2%E7%A4%BE%E5%A4%A7-7106c.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E5%BC%B5%E9%9B%85%E6%99%BA-%E6%96%B0%E8%8E%8A%E7%A4%BE%E5%A4%A7-bbdbd.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -10963,12 +10795,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E5%BD%AD%E4%B9%8B%E6%AB%BB-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-55216.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E5%BD%AD%E4%BA%9E%E5%8A%9B-%E6%96%87%E5%B1%B1%E7%A4%BE%E5%A4%A7-33f6b.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -10982,7 +10808,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E5%BD%AD%E4%BB%81%E5%82%91-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-aeb73.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -11251,6 +11077,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E5%BE%90%E5%84%B7%E5%BF%83-%E6%96%B0%E6%A5%8A%E5%B9%B3%E7%A4%BE%E5%A4%A7-3f43a.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E5%BE%90%E5%85%86%E5%B9%B3-%E6%B1%90%E6%AD%A2%E7%A4%BE%E5%A4%A7-66510.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -11371,12 +11203,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E5%BE%90%E5%B0%89%E7%AB%AF-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-6d05c.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E5%BE%90%E5%B0%8F%E5%A9%B7-%E7%AB%B9%E6%9D%BE%E7%A4%BE%E5%A4%A7-fa562.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -11463,6 +11289,12 @@
   <url>
     <loc>https://kho.tw/teacher/%E5%BE%90%E6%96%B9%E6%AD%A3-%E4%B8%89%E9%B6%AF%E7%A4%BE%E5%A4%A7-41800.html</loc>
     <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E5%BE%90%E6%98%8E%E5%87%B0-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-b7d77.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -11685,12 +11517,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E5%BE%90%E7%B4%A0%E7%8F%8D-%E6%A1%83%E5%9C%92%E7%A4%BE%E5%A4%A7-f612e.html</loc>
     <lastmod>2026-09-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E5%BE%90%E7%B4%A0%E7%90%B4-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-a82cb.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -11936,7 +11762,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%85%A7%E5%A9%B7-%E7%83%8F%E6%97%A5%E5%85%A8%E6%B0%91%E9%81%8B%E5%8B%95%E9%A4%A8-fbc4d.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -12063,12 +11889,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E6%88%B4%E5%AF%AC%E8%8F%AF-%E5%A4%A7%E5%B1%AF%E7%A4%BE%E5%A4%A7-7d7d6.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E6%88%B4%E5%AF%B6%E8%B2%B4-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-a33cf.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -12397,12 +12217,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E6%96%BD%E5%A6%99%E5%AE%9C-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-b6533.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E6%96%BD%E5%A6%A4%E9%9D%92-%E9%8E%AE%E6%B8%AF%E5%9C%92%E7%A4%BE%E5%A4%A7-cdb52.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -12535,7 +12349,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E6%96%BD%E7%BF%A0%E5%B3%AF-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-c374e.html</loc>
+    <loc>https://kho.tw/teacher/%E6%96%BD%E7%BF%A0%E5%B3%AF-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-0c336.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -12692,7 +12506,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%9B%89%E6%A2%85-%E6%B0%B8%E5%92%8C%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-b5977.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -12745,6 +12559,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E6%9B%B9%E6%85%A7%E6%A2%85-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-fa03a.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E6%9B%B9%E6%85%A7%E7%8F%8D-%E5%93%A1%E6%B0%B8%E6%9D%91%E7%A4%BE%E5%A4%A7-4275f.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -12758,7 +12578,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%9B%B9%E6%B0%B8%E7%85%8C-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-ee1e3.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -12925,6 +12745,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E6%9B%BE%E5%A6%99%E6%9C%88-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-12c0c.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E6%9B%BE%E5%A6%99%E6%9C%88-%E7%AB%B9%E5%A1%B9%E7%A4%BE%E5%A4%A7-ab642.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -12938,7 +12764,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%9B%BE%E5%AD%90%E8%89%AF-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-d82c5.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -13149,12 +12975,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E6%9B%BE%E6%A1%82%E9%A6%99-%E4%B8%89%E9%B6%AF%E7%A4%BE%E5%A4%A7-51e83.html</loc>
     <lastmod>2026-10-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E6%9B%BE%E6%A1%82%E9%A6%99-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-d3e2b.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -13417,7 +13237,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E6%9B%BE%E9%9B%85%E7%A5%BA-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-8be3f.html</loc>
+    <loc>https://kho.tw/teacher/%E6%9B%BE%E9%9B%85%E7%A5%BA-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-e6ca5.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -13544,12 +13364,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%9C%B1%E5%BF%83%E5%A4%8F-%E6%96%B0%E8%8E%8A%E7%A4%BE%E5%A4%A7-ccace.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E6%9C%B1%E6%86%B6%E8%8A%9D-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-3274c.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -13777,12 +13591,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E6%9C%B1%E9%9B%80%E6%95%A6-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-f1726.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E6%9C%B1%E9%A1%97%E8%87%BB-%E4%B8%AD%E5%A3%A2%E7%A4%BE%E5%A4%A7-907ed.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -13922,7 +13730,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%9D%8E%E4%BD%B3%E8%93%89Sandy-%E4%B8%AD%E6%AD%A3%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-a573e.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -14102,7 +13910,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%9D%8E%E5%93%81%E6%85%A7-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-8a1c6.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -14221,12 +14029,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E6%9D%8E%E5%A9%89%E6%85%88-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-d1aea.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E6%9D%8E%E5%A9%89%E6%85%88-%E6%96%87%E5%B1%B1%E7%A4%BE%E5%A4%A7-13e7f.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -14317,6 +14119,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E6%9D%8E%E5%AE%97%E6%99%8F-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-cd3d8.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E6%9D%8E%E5%AE%97%E7%B8%89-%E6%B7%A1%E6%B0%B4%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-80e2c.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -14343,6 +14151,12 @@
   <url>
     <loc>https://kho.tw/teacher/%E6%9D%8E%E5%AE%9B%E5%84%92-%E5%85%A7%E6%B9%96%E7%A4%BE%E5%A4%A7-c68f3.html</loc>
     <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E6%9D%8E%E5%AE%9B%E9%9D%9C-%E6%B8%AF%E9%83%BD%E7%A4%BE%E5%A4%A7-b5c7c.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -14468,7 +14282,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%9D%8E%E5%BA%9A%E9%9C%96-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-e0f3f.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -14569,6 +14383,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E6%9D%8E%E6%80%A1%E7%8F%8A-%E6%A8%B9%E6%9E%97%E7%A4%BE%E5%A4%A7-855bf.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E6%9D%8E%E6%80%A1%E7%8F%8A-%E7%AC%AC%E4%B8%80%E7%A4%BE%E5%A4%A7-41ab0.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -14595,6 +14415,12 @@
   <url>
     <loc>https://kho.tw/teacher/%E6%9D%8E%E6%83%A0%E7%91%A9-%E7%A4%BE%E5%AD%90%E5%9C%8B%E5%B0%8F-6568d.html</loc>
     <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E6%9D%8E%E6%83%A0%E7%9C%9F-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-02e5d.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -14990,12 +14816,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%9D%8E%E6%AD%A3%E4%BB%81-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-16884.html</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E6%9D%8E%E6%AD%A3%E4%BB%81-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-21a77.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -15063,12 +14883,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E6%9D%8E%E6%B7%91%E6%95%8F-%E6%9D%BF%E6%A9%8B%E7%A4%BE%E5%A4%A7-5b83b.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E6%9D%8E%E6%B7%91%E6%A2%85-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-c43b8.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -15199,6 +15013,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E6%9D%8E%E7%A7%80%E7%8E%89-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-55549.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E6%9D%8E%E7%A7%80%E7%8E%89-%E5%B1%8F%E5%8C%97%E5%8D%80%E7%A4%BE%E5%A4%A7-b311c.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -15212,7 +15032,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%9D%8E%E7%A7%80%E7%90%B4-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-4e157.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -15284,12 +15104,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%9D%8E%E7%B4%A0%E5%8D%BF-%E4%B8%AD%E5%A3%A2%E7%A4%BE%E5%A4%A7-b9b0f.html</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E6%9D%8E%E7%B4%A0%E5%8D%BF-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-4b546.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -15613,12 +15427,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E6%9D%8E%E9%9D%96%E8%8B%B1-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-6967c.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E6%9D%8E%E9%9D%96%E8%8B%B1-%E6%96%B0%E6%A5%8A%E5%B9%B3%E7%A4%BE%E5%A4%A7-36e06.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -15650,7 +15458,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%9D%8E%E9%9D%9C%E8%8A%B3-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-87418.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -15698,6 +15506,12 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%9D%8E%E9%BA%97%E8%8F%AF-%E5%A4%A7%E5%90%8C%E7%A4%BE%E5%A4%A7-fea55.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E6%9D%8E%E9%BA%97%E9%9B%B2-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-bf52b.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -15788,7 +15602,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%9D%BE%E9%BC%A0-%E5%A4%A7%E9%87%8C%E5%9C%8B%E6%B0%91%E6%9A%A8%E5%85%92%E7%AB%A5%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-ba759.html</loc>
-    <lastmod>2026-09-30</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -15843,12 +15657,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E6%9E%97%E4%B8%96%E8%BC%9D-%E8%B2%93%E7%BE%85%E6%BA%AA%E7%A4%BE%E5%A4%A7-bb962.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E6%9E%97%E4%B8%96%E9%A7%BF-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-c6776.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -15951,12 +15759,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E6%9E%97%E4%BD%91%E9%88%9E-%E5%A4%A7%E5%AE%89%E7%A4%BE%E5%A4%A7-8bb6e.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E6%9E%97%E4%BD%A9%E5%90%9B-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-0fd6f.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -16567,6 +16369,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E6%9E%97%E5%AE%89-%E4%B8%AD%E5%B1%B1%E7%A4%BE%E5%A4%A7-f25a9.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E6%9E%97%E5%AE%89-%E4%B8%AD%E6%AD%A3%E7%A4%BE%E5%A4%A7-c7c12.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -16993,20 +16801,20 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E6%9E%97%E6%85%A7%E9%9B%AF-%E6%A8%B9%E6%9E%97%E7%A4%BE%E5%A4%A7-b8cfe.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E6%9E%97%E6%85%B6%E7%A5%A5-%E5%A3%AB%E6%9E%97%E7%A4%BE%E5%A4%A7-533bb.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E6%9E%97%E6%85%B6-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-b4b35.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E6%9E%97%E6%85%B6-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-efc4d.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -17174,7 +16982,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%9E%97%E6%98%8E%E8%BC%9D-%E6%9D%BE%E5%B1%B1%E7%A4%BE%E5%A4%A7-a6126.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -17468,7 +17276,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%9E%97%E6%9F%94%E5%9D%87-%E7%83%8F%E6%97%A5%E5%85%A8%E6%B0%91%E9%81%8B%E5%8B%95%E9%A4%A8-1062c.html</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -18217,12 +18025,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E6%9E%97%E7%BE%8E%E5%8D%BF-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-e5899.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E6%9E%97%E7%BE%8E%E5%8D%BF-%E8%98%86%E5%B1%B1%E5%9C%92%E7%A4%BE%E5%A4%A7-2daee.html</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -18313,6 +18115,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E6%9E%97%E7%BE%8E%E7%8F%8D-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-b636c.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E6%9E%97%E7%BE%8E%E7%90%B4-%E6%B9%96%E5%9F%94%E7%A4%BE%E5%A4%A7-6bcee.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -18393,12 +18201,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E6%9E%97%E8%81%96%E5%82%91-%E6%9B%BE%E6%96%87%E7%A4%BE%E5%A4%A7-d3256.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E6%9E%97%E8%81%96%E5%B2%B3-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-1f074.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -18686,7 +18488,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%9E%97%E9%81%93%E5%85%83-%E6%9D%BE%E5%B1%B1%E7%A4%BE%E5%A4%A7-3622e.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -18699,6 +18501,12 @@
   <url>
     <loc>https://kho.tw/teacher/%E6%9E%97%E9%83%81%E6%A8%B9-%E5%85%A7%E6%B9%96%E7%A4%BE%E5%A4%A7-d5917.html</loc>
     <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E6%9E%97%E9%83%81%E8%8A%B7-%E6%A8%B9%E6%9E%97%E7%A4%BE%E5%A4%A7-48a62.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -18799,6 +18607,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E6%9E%97%E9%8C%A6%E9%9D%9C-%E6%A8%B9%E6%9E%97%E7%A4%BE%E5%A4%A7-fccc3.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E6%9E%97%E9%95%B7%E5%BF%97-%E6%97%97%E7%BE%8E%E7%A4%BE%E5%A4%A7-13edc.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -18848,12 +18662,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%9E%97%E9%9D%9C%E5%90%9B-%E4%B8%AD%E5%A3%A2%E7%A4%BE%E5%A4%A7-43dbf.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E6%9E%97%E9%9D%9C%E5%90%9B-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-a11db.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -19195,7 +19003,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E6%A2%81%E5%AE%8F%E5%BD%A5-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-15670.html</loc>
+    <loc>https://kho.tw/teacher/%E6%A2%81%E5%AE%8F%E5%BD%A5-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-f34a4.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -19453,6 +19261,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E6%A5%8A%E5%81%89%E5%90%9B-%E6%A8%B9%E6%9E%97%E7%A4%BE%E5%A4%A7-632fb.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E6%A5%8A%E5%81%89%E8%8B%B9-%E6%96%B0%E8%8E%8A%E7%A4%BE%E5%A4%A7-e57eb.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -19520,7 +19334,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%A5%8A%E5%A6%99%E6%9C%88-%E6%9C%9D%E9%A6%AC%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-42467.html</loc>
-    <lastmod>2026-10-02</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -19754,12 +19568,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%A5%8A%E6%83%A0%E7%AD%91-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-cb349.html</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E6%A5%8A%E6%83%A0%E7%AD%91-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-e9322.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -19855,7 +19663,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E6%A5%8A%E6%99%BA%E6%96%87-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-e5a63.html</loc>
+    <loc>https://kho.tw/teacher/%E6%A5%8A%E6%99%BA%E6%96%87-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-f6aad.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -19999,6 +19807,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E6%A5%8A%E7%8E%89%E8%90%8D-%E4%B8%AD%E5%B1%B1%E7%A4%BE%E5%A4%A7-46307.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E6%A5%8A%E7%8E%89%E8%90%8D-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-d90e3.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -20138,7 +19952,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%A5%8A%E7%BE%8E%E9%BA%97-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-6f7e4.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -20365,12 +20179,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E6%A8%8B%E5%8F%A3%E6%98%8C%E5%A4%AB-%E6%9D%BE%E5%B1%B1%E7%A4%BE%E5%A4%A7-f47c5.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E6%A8%BA%E6%A8%BA-%E4%BA%94%E8%82%A1%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-4c25b.html</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
@@ -20557,12 +20365,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E6%AF%9B%E4%BD%A9%E8%93%89-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-d2a64.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E6%AF%9B%E6%AF%9B-%E5%85%AB%E5%BE%B7%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-853f8.html</loc>
     <lastmod>2026-10-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -20570,7 +20372,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%AF%9B%E6%AF%9B-%E5%A4%A7%E5%90%8C%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-453ae.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -20595,6 +20397,12 @@
   <url>
     <loc>https://kho.tw/teacher/%E6%B0%B8%E8%8C%9C-%E5%9C%9F%E5%9F%8E%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-c758e.html</loc>
     <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E6%B0%B8%E8%AA%A0-%E8%99%8E%E5%B0%BE%E5%85%A8%E6%B0%91%E9%81%8B%E5%8B%95%E9%A4%A8-768c4.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -20822,12 +20630,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%B1%9F%E7%BE%8E%E8%B2%9E-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-50032.html</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E6%B1%9F%E7%BE%8E%E8%B2%9E-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-a9492.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -20847,12 +20649,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E6%B1%9F%E8%AB%B8%E9%BB%8E-%E5%8C%97%E5%B1%AF%E7%A4%BE%E5%A4%A7-9f1e6.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E6%B1%9F%E9%87%87%E8%8A%B9-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-873b5.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -20881,7 +20677,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E6%B1%A0%E4%BF%8A%E6%9C%8B-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-a3032.html</loc>
+    <loc>https://kho.tw/teacher/%E6%B1%A0%E4%BF%8A%E6%9C%8B-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-93937.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -21145,6 +20941,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E6%B2%88%E7%A7%80%E8%93%81-%E4%B8%AD%E5%B1%B1%E7%A4%BE%E5%A4%A7-9f4ec.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E6%B2%88%E7%A7%80%E9%9B%AF-%E4%BF%A1%E7%BE%A9%E7%A4%BE%E5%A4%A7-5469d.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -21314,7 +21116,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%B4%AA%E5%AA%BA%E5%A8%A5-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-704c5.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -21428,7 +21230,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%B4%AA%E6%95%8F%E7%91%9C-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-bf5e9.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -21549,12 +21351,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E6%B4%AA%E7%91%9E%E4%BD%91-%E5%85%A7%E6%B9%96%E7%A4%BE%E5%A4%A7-2e5ca.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E6%B4%AA%E7%91%9E%E7%92%89-%E6%9D%BE%E5%B1%B1%E7%A4%BE%E5%A4%A7-2eb15.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -21745,6 +21541,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E6%B4%AA%E9%87%91%E8%8F%8A-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-54dd1.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E6%B4%AA%E9%95%B7%E8%8B%B1-%E6%9D%BF%E6%A9%8B%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-b8914.html</loc>
     <lastmod>2026-10-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -21807,12 +21609,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E6%B4%AA%E9%BA%97%E9%87%8C-%E8%87%BA%E5%8D%97%E7%A4%BE%E5%A4%A7-8735c.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E6%B4%AA%E9%BA%97%E9%A6%99-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-80929.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -21907,14 +21703,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E6%B6%82%E7%8E%89%E7%BE%8E-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-733b3.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E6%B6%82%E7%8E%89%E7%BE%8E-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-79d91.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -21967,7 +21757,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E6%B8%A1%E9%82%89%E7%BE%8E%E6%AD%A5-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-29713.html</loc>
+    <loc>https://kho.tw/teacher/%E6%B8%A1%E9%82%89%E7%BE%8E%E6%AD%A5-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-eb36e.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -21987,6 +21777,12 @@
   <url>
     <loc>https://kho.tw/teacher/%E6%B8%A9%E5%BF%83%E5%84%80-%E5%9C%9F%E5%9F%8E%E7%A4%BE%E5%A4%A7-409a9.html</loc>
     <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E6%B8%A9%E6%83%A0%E7%8E%B2-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-8db02.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -22514,12 +22310,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E6%BD%98%E6%98%8E%E5%BF%A0-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-04be2.html</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E6%BD%98%E6%98%8E%E5%BF%A0-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-96011.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -22531,14 +22321,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E6%BD%98%E6%98%8E%E8%B3%A2-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-65d5c.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E6%BD%98%E6%98%8E%E8%B3%A2-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-8776d.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -22711,7 +22495,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E7%86%8A%E4%BA%AE%E5%AE%87-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-f0de8.html</loc>
+    <loc>https://kho.tw/teacher/%E7%84%A6%E4%B8%AD%E8%BC%9D-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-11521.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -22965,6 +22749,12 @@
   <url>
     <loc>https://kho.tw/teacher/%E7%8E%8B%E5%85%83%E6%85%B6-%E5%A4%A7%E5%AE%89%E7%A4%BE%E5%A4%A7-b1e39.html</loc>
     <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E7%8E%8B%E5%85%83%E6%85%B6-%E6%A8%B9%E6%9E%97%E7%A4%BE%E5%A4%A7-aec10.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -23311,6 +23101,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E7%8E%8B%E6%8C%AF%E5%B8%99-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-0283d.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E7%8E%8B%E6%94%BF%E6%AC%8A-%E5%A4%A7%E9%87%8C%E5%9C%8B%E6%B0%91%E6%9A%A8%E5%85%92%E7%AB%A5%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-65882.html</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -23401,12 +23197,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E7%8E%8B%E6%98%B1%E5%87%B1-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-07b13.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E7%8E%8B%E6%98%B1%E7%BF%94-%E7%AB%B9%E5%8C%97%E7%A4%BE%E5%A4%A7-b00b2.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -23451,6 +23241,12 @@
   <url>
     <loc>https://kho.tw/teacher/%E7%8E%8B%E6%9C%88%E5%AC%8C-%E6%A8%B9%E6%9E%97%E7%A4%BE%E5%A4%A7-36cf5.html</loc>
     <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E7%8E%8B%E6%9C%88%E6%A1%82-%E6%A8%B9%E6%9E%97%E7%A4%BE%E5%A4%A7-c3f4c.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -23701,6 +23497,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E7%8E%8B%E7%93%88%E5%B9%B3-%E6%96%B0%E8%8E%8A%E7%A4%BE%E5%A4%A7-2c761.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E7%8E%8B%E7%93%8A%E5%A9%B7-%E5%85%A7%E6%B9%96%E5%8D%80%E7%A2%A7%E6%B9%96%E7%A4%BE%E5%8D%80%E7%99%BC%E5%B1%95%E5%8D%94%E6%9C%83%E9%87%91-927e8.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -23810,12 +23612,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E7%8E%8B%E7%AB%8B%E5%BF%83-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-54a8e.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E7%8E%8B%E7%AB%A3%E6%98%AD-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-96a7e.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -23948,7 +23744,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E7%8E%8B%E8%88%88%E5%AC%99-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-bf6e0.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -24007,14 +23803,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E7%8E%8B%E8%8E%89%E7%9B%88-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-0768a.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E7%8E%8B%E8%8E%89%E7%9B%88-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-70dec.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -24091,12 +23881,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E7%8E%8B%E8%B2%9D%E7%B5%B2-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-9babf.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E7%8E%8B%E8%B2%A1%E4%BB%81-%E5%B1%8F%E5%8D%97%E5%8D%80%E7%A4%BE%E5%A4%A7-1b247.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -24116,7 +23900,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E7%8E%8B%E9%83%81%E6%A3%A0-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-f5f03.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -24398,7 +24182,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E7%91%AA%E5%A7%AC-%E8%98%86%E6%B4%B2%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-7aea8.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -24422,7 +24206,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E7%93%98%E5%A9%B7-%E6%B0%B8%E5%92%8C%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-d34b0.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -24537,12 +24321,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E7%94%B0%E7%94%B0-%E5%A4%A7%E5%90%8C%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-7ce8a.html</loc>
     <lastmod>2026-10-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E7%94%B0%E7%B4%A0%E8%8F%81-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-945e8.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -24775,12 +24553,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E7%9E%BF%E7%88%BE%E8%88%88-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-b9cae.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E7%9F%B3%E5%B2%B1%E6%89%BF-%E4%B8%AD%E5%B1%B1%E7%A4%BE%E5%A4%A7-4b0e8.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -24896,7 +24668,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E7%A5%9D%E7%AB%8B%E5%BC%B7-%E4%B8%AD%E5%A3%A2%E7%A4%BE%E5%A4%A7-cbed5.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -24926,7 +24698,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E7%A7%89%E6%89%BF-%E5%A4%A7%E5%90%8C%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-3d537.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -25237,12 +25009,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E7%B0%A1%E5%82%B3%E5%BD%AC-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-9e03f.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E7%B0%A1%E5%8B%9D%E5%BD%A5-%E5%85%A7%E6%B9%96%E7%A4%BE%E5%A4%A7-fa5f4.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -25257,6 +25023,12 @@
   <url>
     <loc>https://kho.tw/teacher/%E7%B0%A1%E5%98%89%E4%BF%A1-%E7%A4%BE%E5%A4%A7-a6d7a.html</loc>
     <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E7%B0%A1%E5%98%89%E7%90%B3-%E6%96%B0%E6%A5%8A%E5%B9%B3%E7%A4%BE%E5%A4%A7-e49d2.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -25363,6 +25135,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E7%B0%A1%E6%98%8E%E5%A6%82-%E4%B8%AD%E5%A3%A2%E7%A4%BE%E5%A4%A7-44b77.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E7%B0%A1%E6%98%8E%E5%B1%B1-%E6%B0%B8%E5%92%8C%E7%A4%BE%E5%A4%A7-e1c1a.html</loc>
     <lastmod>2026-09-22</lastmod>
     <changefreq>weekly</changefreq>
@@ -25459,14 +25237,14 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E7%B0%A1%E7%AB%B9%E5%90%9B-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-18861.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <loc>https://kho.tw/teacher/%E7%B0%A1%E7%B4%A0%E5%8B%A4-%E9%82%91%E5%B1%B1%E7%A4%BE%E5%A4%A7-7ae03.html</loc>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E7%B0%A1%E7%B4%A0%E5%8B%A4-%E9%82%91%E5%B1%B1%E7%A4%BE%E5%A4%A7-7ae03.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <loc>https://kho.tw/teacher/%E7%B0%A1%E7%BE%8E%E6%83%A0-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-cb416.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -25507,12 +25285,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E7%B0%A1%E9%9B%85%E9%BA%97-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-c9630.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E7%B0%A1%E9%BA%92%E7%8E%B2-%E5%BD%B0%E5%8C%96%E7%A4%BE%E5%A4%A7-ea0eb.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -25544,7 +25316,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E7%B1%B3%E5%A6%AE-%E4%B8%89%E9%87%8D%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-c62b8.html</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -25927,12 +25699,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E7%BE%85%E7%8F%AE%E8%8F%81-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-7874a.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E7%BE%85%E7%8F%AE%E8%8F%81-%E6%96%B0%E6%A5%8A%E5%B9%B3%E7%A4%BE%E5%A4%A7-56cc8.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -26227,7 +25993,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E7%BF%9F%E6%B4%9B%E5%AB%BB-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-9f0d6.html</loc>
+    <loc>https://kho.tw/teacher/%E7%BF%9F%E6%B4%9B%E5%AB%BB-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-2e669.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -26372,7 +26138,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E8%83%A1%E6%95%88%E8%8F%AF-%E6%9D%BE%E5%B1%B1%E7%A4%BE%E5%A4%A7-d3bf1.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -26437,7 +26203,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E8%83%A1%E6%B7%91%E9%BA%97-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-7011e.html</loc>
+    <loc>https://kho.tw/teacher/%E8%83%A1%E6%B7%91%E9%BA%97-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-6780d.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -26630,7 +26396,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E8%8A%AF%E5%A6%82-%E5%A4%A7%E5%90%8C%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-3ae9b.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -26654,13 +26420,13 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E8%8A%B3%E8%8A%B3-%E7%AB%B9%E5%8C%97%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-9797c.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E8%8A%B3%E8%8A%B3-%E8%8B%93%E9%9B%85%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-0c1d9.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -26925,6 +26691,12 @@
   <url>
     <loc>https://kho.tw/teacher/%E8%8E%8A%E4%BB%8B%E8%AA%A0-%E6%B1%90%E6%AD%A2%E7%A4%BE%E5%A4%A7-fc2fa.html</loc>
     <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E8%8E%8A%E4%BE%9D%E6%B6%B5-%E4%B8%AD%E5%A3%A2%E7%A4%BE%E5%A4%A7-f8f15.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -27392,7 +27164,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E8%90%B1%E8%90%B1-%E5%A4%AA%E5%B9%B3%E5%9C%8B%E6%B0%91%E6%9A%A8%E5%85%92%E7%AB%A5%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-2d4f0.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -27405,12 +27177,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E8%91%89%E4%BF%90%E4%BC%B6-%E6%BD%AD%E9%9B%85%E7%A5%9E%E7%A4%BE%E5%A4%A7-dfdf6.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E8%91%89%E5%85%89%E7%8E%B2-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-f3d49.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -28153,19 +27919,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E8%94%A1%E5%BF%B5%E6%85%88-%E6%9D%BE%E5%B1%B1%E7%A4%BE%E5%A4%A7-9a2cf.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E8%94%A1%E6%80%A1%E6%83%A0-%E4%B8%AD%E5%A3%A2%E7%A4%BE%E5%A4%A7-7bf05.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E8%94%A1%E6%80%A1%E6%83%A0-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-6ccb5.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -28783,6 +28537,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E8%94%A1%E9%80%B8%E5%BC%98-%E4%B8%AD%E5%B1%B1%E7%A4%BE%E5%A4%A7-d760f.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E8%94%A1%E9%80%B8%E5%BC%98-%E5%85%A7%E6%B9%96%E7%A4%BE%E5%A4%A7-2b383.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -28981,12 +28741,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E8%94%A3%E6%B2%9B%E5%BF%97-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-5ce6a.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E8%94%A3%E7%92%A7%E5%A6%82-%E5%B2%A1%E5%B1%B1%E7%A4%BE%E5%A4%A7-c6812.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -29138,12 +28892,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E8%95%AD%E5%AF%8C%E5%A0%82-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-74606.html</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E8%95%AD%E5%AF%8C%E5%A0%82-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-7c2a5.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -29246,7 +28994,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E8%95%AD%E7%85%A5%E7%93%8A-%E8%98%86%E6%B4%B2%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-044c3.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -30121,6 +29869,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E8%A4%9A%E7%8E%89%E7%90%AA-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-dc01e.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E8%A4%9A%E7%8E%89%E7%90%AA-%E6%9D%BE%E5%B1%B1%E7%A4%BE%E5%A4%A7-067cc.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -30314,7 +30068,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E8%A8%B1%E5%AE%B6%E5%81%89-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-4e3cc.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -30349,12 +30103,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E8%A8%B1%E5%B8%8C%E5%93%B2-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-d6d83.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E8%A8%B1%E5%BB%BA%E4%B8%AD-%E6%B7%A1%E6%B0%B4%E7%A4%BE%E5%A4%A7-26551.html</loc>
     <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -30367,14 +30115,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E8%A8%B1%E5%BF%97%E8%BC%9D-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-3e172.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E8%A8%B1%E5%BF%97%E8%BC%9D-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-d0863.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -30625,12 +30367,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E8%A8%B1%E7%8F%8A%E7%8F%8A-%E6%9D%BE%E5%B1%B1%E7%A4%BE%E5%A4%A7-c5c9b.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E8%A8%B1%E7%91%9C%E8%8A%B3-%E6%9B%BE%E6%96%87%E7%A4%BE%E5%A4%A7-ff93c.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -30704,7 +30440,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E8%A8%B1%E7%A5%90%E7%91%9C-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-c300e.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -30769,6 +30505,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E8%A8%B1%E7%B4%A0%E6%B6%B5-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-cba69.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E8%A8%B1%E7%B4%A0%E7%8F%A0-%E5%90%89%E6%9E%97%E5%9C%8B%E5%B0%8F-da44c.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -30777,12 +30519,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E8%A8%B1%E7%B4%A0%E8%8B%B1-%E4%B8%AD%E5%A3%A2%E7%A4%BE%E5%A4%A7-1e704.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E8%A8%B1%E7%B4%A0%E8%8B%B1Esther-%E4%B8%AD%E5%A3%A2%E7%A4%BE%E5%A4%A7-1a96c.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -30877,14 +30613,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E8%A8%B1%E9%9B%85%E5%A9%B7-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-48b45.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E8%A8%B1%E9%9B%85%E5%A9%B7-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-f41cb.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -30937,12 +30667,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E8%A8%B1%E9%A0%86%E7%9B%8A-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-dfe97.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E8%A8%B1%E9%A8%B0%E5%85%81-%E6%A8%B9%E6%9E%97%E7%A4%BE%E5%A4%A7-abe0a.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -30974,7 +30698,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E8%A8%B1%E9%BA%97%E5%9D%A4-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-786ff.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -31016,7 +30740,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E8%A9%A9%E9%A6%99-%E8%99%8E%E5%B0%BE%E5%85%A8%E6%B0%91%E9%81%8B%E5%8B%95%E9%A4%A8-2db8a.html</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -31095,12 +30819,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E8%A9%B9%E6%98%AD%E8%83%BD-%E5%85%A7%E6%B9%96%E7%A4%BE%E5%A4%A7-9c836.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E8%A9%B9%E6%98%AD%E8%83%BD-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-4e93e.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -31807,14 +31525,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E8%AC%9D%E9%A6%A8%E5%84%80-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-21fb1.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E8%AC%9D%E9%A6%A8%E5%84%80-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-f2e5a.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -32006,6 +31718,12 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E8%B3%B4%E5%A3%AB%E9%AD%81-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-d2bfb.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E8%B3%B4%E5%A3%AB%E9%AD%81-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-02903.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -32354,19 +32072,13 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E8%B3%B4%E9%8C%A6%E8%8F%AF-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-0c8bc.html</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E8%B3%B4%E9%9B%85%E5%90%9B-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-0471b.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E8%B3%B4%E9%9B%85%E5%90%9B-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-f80ee.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -32415,6 +32127,24 @@
   <url>
     <loc>https://kho.tw/teacher/%E8%B3%B4%E9%BA%97%E7%9C%9F-%E6%96%87%E5%B1%B1%E7%A4%BE%E5%A4%A7-7ba07.html</loc>
     <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E8%B3%B4%E9%BA%97%E8%90%8D-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-0705d.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E8%B6%99%E4%BD%A9%E7%8E%89-%E4%B8%AD%E5%A3%A2%E7%A4%BE%E5%A4%A7-b2718.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E8%B6%99%E4%BD%A9%E7%8E%B2-%E4%B8%AD%E5%A3%A2%E7%A4%BE%E5%A4%A7-ffa69.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -32569,12 +32299,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E8%B6%99%E8%8B%B1%E8%98%AD-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-ce8fb.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E8%B6%99%E9%9B%AF%E8%8F%AF-%E4%B8%AD%E5%A3%A2%E7%A4%BE%E5%A4%A7-f29c7.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -32636,7 +32360,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E8%BB%8A%E8%BB%8A-%E9%B3%B3%E5%B1%B1%E9%81%8B%E5%8B%95%E5%9C%92%E5%8D%80-a3a15.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -32679,6 +32403,12 @@
   <url>
     <loc>https://kho.tw/teacher/%E8%BE%B2%E5%85%B6%E5%BF%A0-%E5%B1%8F%E5%8D%97%E5%8D%80%E7%A4%BE%E5%A4%A7-146e8.html</loc>
     <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E9%80%A3%E5%9C%8B%E7%84%B0-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-35d18.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -32749,12 +32479,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E9%82%B1%E4%BD%8F%E5%AE%89-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-d6729.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E9%82%B1%E4%BD%8F%E5%AE%89-%E6%96%B0%E6%A5%8A%E5%B9%B3%E7%A4%BE%E5%A4%A7-ea579.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -32798,12 +32522,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%82%B1%E5%90%89%E5%A3%BD-%E4%B8%AD%E5%A3%A2%E7%A4%BE%E5%A4%A7-88fae.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E9%82%B1%E5%90%89%E5%A3%BD-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-66b53.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -32901,6 +32619,12 @@
   <url>
     <loc>https://kho.tw/teacher/%E9%82%B1%E6%9B%89%E5%AB%88-%E6%B0%B8%E5%92%8C%E7%A4%BE%E5%A4%A7-efca0.html</loc>
     <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E9%82%B1%E6%9F%8F%E7%9B%9B-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-6ffc5.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -33169,12 +32893,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E9%82%B1%E9%9B%85%E6%83%A0-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-61f31.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E9%82%B1%E9%9B%AA%E6%83%A0-%E5%90%8E%E8%B1%90%E7%A4%BE%E5%A4%A7-3e2fd.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -33212,6 +32930,18 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%82%B1%E9%A1%AF%E5%8F%B0-%E4%B8%AD%E5%A3%A2%E7%A4%BE%E5%A4%A7-5c19e.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E9%82%B1%E9%A1%AF%E5%9F%B7-%E6%96%B0%E6%A5%8A%E5%B9%B3%E7%A4%BE%E5%A4%A7-16567.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E9%82%B1%E9%A1%AF%E6%B4%B5-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-cbd1f.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -33261,12 +32991,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E9%82%B1%E9%BD%8A%E6%BB%BF-%E5%85%A7%E6%B9%96%E7%A4%BE%E5%A4%A7-d4cb7.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E9%82%B5%E5%BE%90%E7%90%B3-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-16ba8.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -33327,12 +33051,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E9%83%AD%E4%BB%A4%E9%A0%A4-%E6%B3%B0%E5%B1%B1%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-b8575.html</loc>
     <lastmod>2026-10-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E9%83%AD%E4%BB%B2%E7%90%A6-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-eef79.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -33721,12 +33439,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E9%83%AD%E7%B4%A0%E5%A8%9F-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-2bacf.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E9%83%AD%E7%B4%A0%E5%A8%9F-%E6%96%B0%E6%A5%8A%E5%B9%B3%E7%A4%BE%E5%A4%A7-49f6a.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -33991,12 +33703,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E9%84%A7%E5%BF%83%E6%BD%94-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-1c62b.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E9%84%A7%E6%99%BA%E5%85%83-%E5%B1%B1%E7%B7%9A%E7%A4%BE%E5%A4%A7-877b0.html</loc>
     <lastmod>2026-10-02</lastmod>
     <changefreq>weekly</changefreq>
@@ -34040,12 +33746,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%84%A7%E7%BE%BD%E8%8A%AF-%E6%96%B0%E6%A5%8A%E5%B9%B3%E7%A4%BE%E5%A4%A7-ac0ff.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E9%84%A7%E9%95%B7%E6%A2%85-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-6ea01.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -34255,12 +33955,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E9%84%AD%E5%A6%82%E7%8F%8A-%E6%9D%BE%E5%B1%B1%E7%A4%BE%E5%A4%A7-64556.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E9%84%AD%E5%A6%82%E7%B6%BA-%E8%87%BA%E5%8C%97%E7%89%B9%E6%95%99-e7f3c.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -34310,7 +34004,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%84%AD%E5%B1%85%E5%85%83-%E6%9D%BE%E5%B1%B1%E7%A4%BE%E5%A4%A7-1d5c3.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -34513,6 +34207,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E9%84%AD%E7%90%B9%E4%BA%91-%E4%B8%AD%E5%B1%B1%E7%A4%BE%E5%A4%A7-9467a.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E9%84%AD%E7%90%B9%E4%BA%91-%E5%A3%AB%E6%9E%97%E7%A4%BE%E5%A4%A7-d880c.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -34526,7 +34226,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%84%AD%E7%A7%80%E7%BE%8E-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-311a7.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -34556,6 +34256,12 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%84%AD%E7%B6%BA%E7%8E%9F-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-43c2d.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E9%84%AD%E7%BE%8E%E6%A0%BC-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-0cedb.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -34615,6 +34321,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E9%84%AD%E7%BF%8A%E4%BC%B6-%E6%A8%B9%E6%9E%97%E7%A4%BE%E5%A4%A7-ab8aa.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E9%84%AD%E8%87%B3%E6%B7%82-%E5%B1%B1%E7%B7%9A%E7%A4%BE%E5%A4%A7-6a30e.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -34663,12 +34375,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E9%84%AD%E9%87%87%E5%90%88-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-4a199.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E9%84%AD%E9%87%87%E5%90%88-%E6%A1%83%E5%9C%92%E7%A4%BE%E5%A4%A7-ecb20.html</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -34701,12 +34407,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E9%84%AD%E9%98%BF%E4%B9%BE-%E7%AB%B9%E5%8C%97%E7%A4%BE%E5%A4%A7-9612a.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E9%84%AD%E9%9B%85%E4%BA%91-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-c3f7d.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -34803,6 +34503,12 @@
   <url>
     <loc>https://kho.tw/teacher/%E9%87%8B%E5%A6%99%E8%93%AE-%E5%A4%A7%E6%98%8E%E7%A4%BE%E5%A4%A7-c95fb.html</loc>
     <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E9%87%8D%E7%80%9A-%E8%99%8E%E5%B0%BE%E5%85%A8%E6%B0%91%E9%81%8B%E5%8B%95%E9%A4%A8-b6405.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -34915,7 +34621,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E9%8D%BE%E5%80%9A%E5%A8%9F-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-1099c.html</loc>
+    <loc>https://kho.tw/teacher/%E9%8D%BE%E4%BD%B3%E4%BC%B6-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-cb1f7.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -35013,12 +34719,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E9%8D%BE%E6%80%A1%E6%99%A8-%E6%97%97%E7%BE%8E%E7%A4%BE%E5%A4%A7-ac7d3.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E9%8D%BE%E6%96%87%E6%B7%B5-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-73bf5.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -35138,7 +34838,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%8D%BE%E9%82%B5%E4%B8%9E-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-2eda2.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -35492,7 +35192,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%98%BF%E5%98%8E-%E5%85%A7%E6%B9%96%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-db7fa.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -35684,13 +35384,13 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%98%BF%E9%A3%9B-%E6%B7%A1%E6%B0%B4%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-62d50.html</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%98%BFBen-%E5%9C%9F%E5%9F%8E%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-e0cd7.html</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -35881,12 +35581,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E9%99%B3%E4%BD%B3%E7%B7%AF-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-14752.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E4%BD%B3%E8%81%96-%E5%8D%97%E6%B8%AF%E7%A4%BE%E5%A4%A7-ffb5f.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -36019,6 +35713,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E9%99%B3%E4%BF%8A%E8%B1%AA-%E6%96%B0%E8%8E%8A%E7%A4%BE%E5%A4%A7-ad116.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E4%BF%90%E9%99%B5-%E6%9D%BF%E6%A9%8B%E7%A4%BE%E5%A4%A7-f8b81.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -36057,12 +35757,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E5%80%A9%E6%96%87-%E5%8D%97%E6%B8%AF%E7%A4%BE%E5%A4%A7-864d8.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E9%99%B3%E5%81%89%E6%96%8C-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-7eefd.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -36271,6 +35965,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E9%99%B3%E5%98%89%E8%95%99-%E6%A8%B9%E6%9E%97%E7%A4%BE%E5%A4%A7-e8c90.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E5%98%89%E8%B3%A2-%E5%8C%97%E9%AB%98%E9%9B%84%E7%A4%BE%E5%A4%A7-3672d.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -36343,6 +36043,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E9%99%B3%E5%9D%A4%E6%9D%BE-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-8a7d5.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E5%9D%A4%E6%B6%B5-%E4%B8%AD%E6%AD%A3%E7%A4%BE%E5%A4%A7-368c7.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -36410,12 +36116,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E5%A5%95%E5%90%9B-%E6%9D%BE%E5%B1%B1%E7%A4%BE%E5%A4%A7-382cb.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E9%99%B3%E5%A5%95%E5%A6%82-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-691ce.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -36589,12 +36289,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E9%99%B3%E5%AD%9D%E7%BE%8E-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-fcca4.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E5%AD%9D%E7%BE%8E-%E8%98%86%E5%B1%B1%E5%9C%92%E7%A4%BE%E5%A4%A7-a4289.html</loc>
     <lastmod>2026-09-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -36607,20 +36301,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E9%99%B3%E5%AD%9F%E6%9A%89-%E6%9D%BE%E5%B1%B1%E7%A4%BE%E5%A4%A7-629fb.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E5%AD%9F%E8%AA%BC-%E7%A7%91%E5%AD%B8%E5%9F%8E%E7%A4%BE%E5%A4%A7-7753c.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E9%99%B3%E5%AE%87%E9%8E%AE-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-36865.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -36723,6 +36405,12 @@
   <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E5%AE%A3%E6%85%88-%E4%B8%AD%E5%A3%A2%E7%A4%BE%E5%A4%A7-48251.html</loc>
     <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E9%99%B3%E5%AE%A3%E9%9D%9C-%E4%B8%AD%E5%B1%B1%E7%A4%BE%E5%A4%A7-8d48a.html</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -36872,7 +36560,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E5%BB%BA%E5%AE%89-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-5faba.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -37177,6 +36865,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E9%99%B3%E6%81%A9-%E4%B8%AD%E5%B1%B1%E7%A4%BE%E5%A4%A7-dde2b.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E6%83%A0%E5%A8%9F-%E5%90%8E%E8%B1%90%E7%A4%BE%E5%A4%A7-3c0ca.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -37281,6 +36975,12 @@
   <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E6%85%A7%E5%A9%B7-%E6%96%B0%E8%8E%8A%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-ebf88.html</loc>
     <lastmod>2026-09-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E9%99%B3%E6%85%A7%E7%8E%B2-%E6%96%B0%E8%8E%8A%E7%A4%BE%E5%A4%A7-1a00b.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -37423,6 +37123,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E9%99%B3%E6%98%8E%E5%A7%BF-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-ae19a.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E6%98%8E%E5%AE%8F-%E5%8D%97%E9%97%9C%E7%A4%BE%E5%A4%A7-d418a.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -37435,14 +37141,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E9%99%B3%E6%98%8E%E7%85%8C-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-188f9.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E6%98%8E%E7%85%8C-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-fb7b8.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -37587,12 +37287,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E6%9D%B1%E8%B3%A2-%E5%B9%B3%E5%8E%9F%E7%A4%BE%E5%A4%A7-188df.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E9%99%B3%E6%9F%8F%E5%9B%A0-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-e9806.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -37785,12 +37479,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E6%B3%93%E9%8C%95-%E5%B9%B3%E5%8E%9F%E7%A4%BE%E5%A4%A7-47d87.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E9%99%B3%E6%B3%B0%E4%BD%91-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-d5241.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -37995,12 +37683,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E7%81%BC%E7%90%B4-%E6%9B%BE%E6%96%87%E7%A4%BE%E5%A4%A7-a41a2.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E9%99%B3%E7%82%8E%E5%B3%AF-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-2b5d6.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -38234,12 +37916,12 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E7%8F%88%E6%95%8F-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-6239b.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E9%99%B3%E7%8F%88%E6%95%8F-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-8501f.html</loc>
+    <loc>https://kho.tw/teacher/%E9%99%B3%E7%90%87%E8%90%8D-%E6%A8%B9%E6%9E%97%E7%A4%BE%E5%A4%A7-696fd.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -38432,7 +38114,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E7%A7%80%E6%9E%9D-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-2ba93.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -38451,6 +38133,12 @@
   <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E7%A7%80%E7%90%86-%E6%A1%83%E5%9C%92%E7%A4%BE%E5%A4%A7-fbbc9.html</loc>
     <lastmod>2026-09-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E9%99%B3%E7%A7%80%E7%90%B3-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-bbe6f.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -38707,7 +38395,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E9%99%B3%E7%B6%AD%E7%9C%9F-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-b07ce.html</loc>
+    <loc>https://kho.tw/teacher/%E9%99%B3%E7%B6%AD%E7%9C%9F-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-f501a.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -38852,6 +38540,12 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E7%BE%8E%E7%8E%B2-%E6%B8%AF%E9%83%BD%E7%A4%BE%E5%A4%A7-bae77.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E9%99%B3%E7%BE%8E%E7%8F%8D-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-95981.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -39662,7 +39356,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E9%9D%96%E6%B7%B3-%E6%9C%9D%E9%A6%AC%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-bd94c.html</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -39681,6 +39375,12 @@
   <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E9%9F%8B%E9%81%94-%E6%96%B0%E5%BA%97%E5%B4%87%E5%85%89%E7%A4%BE%E5%A4%A7-5e40a.html</loc>
     <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E9%99%B3%E9%9F%8B%E9%81%94-%E6%96%B0%E8%8E%8A%E7%A4%BE%E5%A4%A7-5a822.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -39735,6 +39435,12 @@
   <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E9%A3%9B%E9%BE%8D-%E5%A4%A7%E5%AE%89%E7%A4%BE%E5%A4%A7-001ef.html</loc>
     <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E9%99%B3%E9%A6%99%E5%A6%82-%E4%B8%AD%E5%B1%B1%E7%A4%BE%E5%A4%A7-6e310.html</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -39805,14 +39511,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E9%99%B3%E9%B4%BB%E5%84%80-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-18463.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E9%B4%BB%E5%84%80-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-f2bdd.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -39871,14 +39571,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E9%99%B3%E9%BA%97%E7%9C%9F-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-21c0e.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E9%99%B3%E9%BA%97%E7%9C%9F-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-c3ac0.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -39895,7 +39589,7 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E9%99%B8%E7%BE%8E%E9%9B%B2-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-6c972.html</loc>
+    <loc>https://kho.tw/teacher/%E9%99%B8%E7%BE%8E%E9%9B%B2-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-79b13.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -39992,7 +39686,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%9B%AA%E8%8E%89-%E5%A4%A7%E5%90%8C%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-c7df1.html</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -40189,6 +39883,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E9%9F%93%E9%9C%87%E7%85%8A-%E6%A8%B9%E6%9E%97%E7%A4%BE%E5%A4%A7-4803f.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E9%9F%93%E9%B3%B3%E7%A7%8B-%E6%B0%B8%E5%BA%B7%E7%A4%BE%E5%A4%A7-cae10.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -40207,14 +39907,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E9%A1%8F%E4%B9%99%E6%BE%84-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-524c2.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E9%A1%8F%E4%B9%99%E6%BE%84-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-7cb58.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -40520,12 +40214,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%A6%AE%E4%B8%96%E8%B3%A2-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-b86f4.html</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E9%A6%AE%E4%B8%96%E8%B3%A2-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-cf12d.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -40749,6 +40437,12 @@
   <url>
     <loc>https://kho.tw/teacher/%E9%AB%98%E6%85%A7%E6%B7%B3-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-90020.html</loc>
     <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E9%AB%98%E6%96%8C%E5%B3%AF-%E4%B8%AD%E5%B1%B1%E7%A4%BE%E5%A4%A7-cb3af.html</loc>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -40988,7 +40682,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%AD%8F%E7%A7%80%E6%83%A0-%E4%B8%AD%E5%A3%A2%E7%A4%BE%E5%A4%A7-9ae84.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -41085,6 +40779,12 @@
   <url>
     <loc>https://kho.tw/teacher/%E9%B7%B2%E7%94%B0%E6%99%B6%E5%AD%90-%E4%B8%AD%E6%AD%A3%E7%A4%BE%E5%A4%A7-28284.html</loc>
     <lastmod>2026-09-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E9%BA%97%E6%96%87-%E8%99%8E%E5%B0%BE%E5%85%A8%E6%B0%91%E9%81%8B%E5%8B%95%E9%A4%A8-f7172.html</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -41203,6 +40903,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E9%BB%83%E4%BF%8A%E4%BF%AE-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-71216.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E9%BB%83%E4%BF%8A%E4%BF%AE-%E6%9D%BE%E5%B1%B1%E7%A4%BE%E5%A4%A7-0284d.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -41228,7 +40934,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%BB%83%E4%BF%8A%E7%94%B7-%E5%8D%97%E6%B8%AF%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-be5aa.html</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -41349,12 +41055,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E9%BB%83%E5%98%89%E8%A3%95-%E5%8D%97%E6%B8%AF%E7%A4%BE%E5%A4%A7-13cc3.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E9%BB%83%E5%98%89%E8%A3%95-%E6%9D%BE%E5%B1%B1%E7%A4%BE%E5%A4%A7-947c6.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -41707,6 +41407,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/%E9%BB%83%E5%BF%83%E6%80%A1-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-13fe9.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/%E9%BB%83%E5%BF%83%E6%80%A1-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-d09ef.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -41781,12 +41487,6 @@
   <url>
     <loc>https://kho.tw/teacher/%E9%BB%83%E6%83%A0%E7%90%B4-%E6%BD%AD%E9%9B%85%E7%A5%9E%E7%A4%BE%E5%A4%A7-84483.html</loc>
     <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E9%BB%83%E6%83%A0%E7%9C%9F-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-9a8f0.html</loc>
-    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -41894,12 +41594,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%BB%83%E6%96%87%E8%A3%95-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-0342f.html</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E9%BB%83%E6%96%87%E8%A3%95-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-11ef4.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -42025,12 +41719,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E9%BB%83%E6%9B%B8%E5%A2%A9-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-50417.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E9%BB%83%E6%9C%9D%E8%B3%A2-%E7%AB%B9%E5%A1%B9%E7%A4%BE%E5%A4%A7-60cbd.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -42050,6 +41738,12 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%BB%83%E6%9F%8F%E6%A3%AE-%E6%A8%B9%E6%9E%97%E7%A4%BE%E5%A4%A7-7820d.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/teacher/%E9%BB%83%E6%9F%8F%E6%A6%AE-%E7%AB%B9%E5%A1%B9%E7%A4%BE%E5%A4%A7-b10a2.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -42284,12 +41978,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%BB%83%E6%B7%91%E9%88%BA-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-11bb9.html</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E9%BB%83%E6%B7%91%E9%88%BA-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-753bb.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -42452,12 +42140,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%BB%83%E7%91%8B%E7%90%AA-%E4%B8%AD%E5%A3%A2%E7%A4%BE%E5%A4%A7-7e8e6.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/%E9%BB%83%E7%91%8B%E7%90%AA-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-10e8f.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -42740,13 +42422,13 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%BB%83%E7%B7%9E-%E8%90%AC%E8%8F%AF%E7%A4%BE%E5%A4%A7-b71eb.html</loc>
-    <lastmod>2026-09-12</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kho.tw/teacher/%E9%BB%83%E7%BE%8E%E6%98%A5Eva-%E6%96%B0%E6%A5%8A%E5%B9%B3%E7%A4%BE%E5%A4%A7-066f4.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -42985,12 +42667,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E9%BB%83%E8%97%8D%E7%A9%8E-%E5%85%AB%E5%BE%B7%E7%A4%BE%E5%A4%A7-9f4f8.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E9%BB%83%E8%97%8D%E7%A9%8E-%E6%96%B0%E6%A5%8A%E5%B9%B3%E7%A4%BE%E5%A4%A7-b7471.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -43177,14 +42853,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E9%BB%83%E9%8C%A6%E7%A7%80-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-0b959.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E9%BB%83%E9%8C%A6%E7%A7%80-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-890a5.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -43447,14 +43117,8 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/%E9%BB%83%E9%BA%97%E8%8E%89-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-90f25.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/%E9%BB%83%E9%BA%97%E8%8E%89-%E5%9F%BA%E9%9A%86%E7%A4%BE%E5%A4%A7-fc93f.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -43754,7 +43418,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Ali-%E6%96%87%E5%B1%B1%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-68685.html</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -43778,7 +43442,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Alice-%E9%B3%B3%E5%B1%B1%E9%81%8B%E5%8B%95%E5%9C%92%E5%8D%80-07b54.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -43826,7 +43490,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Allen-%E5%A4%A7%E5%90%8C%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-db5bc.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -44096,7 +43760,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Archie-%E8%98%86%E6%B4%B2%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-6b3bd.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -44402,7 +44066,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Candy-%E5%A4%A7%E9%87%8C%E5%9C%8B%E6%B0%91%E6%9A%A8%E5%85%92%E7%AB%A5%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-ce743.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -44426,7 +44090,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Canon-%E6%B7%A1%E6%B0%B4%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-b1d17.html</loc>
-    <lastmod>2026-10-07</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -44510,7 +44174,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Cathy-%E6%B3%B0%E5%B1%B1%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-d78e0.html</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -44558,7 +44222,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Cherry-%E5%85%AB%E5%BE%B7%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-e0607.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -44702,7 +44366,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/DADA-%E6%B7%A1%E6%B0%B4%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-63de6.html</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -44732,7 +44396,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/DanielTeitler-%E6%9D%BE%E5%B1%B1%E7%A4%BE%E5%A4%A7-8e6bd.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -44774,7 +44438,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Derek-%E5%85%A7%E6%B9%96%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-e37ce.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -44960,7 +44624,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Elmo-%E7%AB%B9%E5%8C%97%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-fc239.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -45020,7 +44684,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Eric-%E6%A5%8A%E6%A2%85%E9%AB%94%E8%82%B2%E5%9C%92%E5%8D%80-e89d2.html</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -45062,13 +44726,13 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Eva-%E5%A4%A7%E5%90%8C%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-47d00.html</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kho.tw/teacher/Eva-%E6%96%87%E5%B1%B1%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-992cc.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -45290,7 +44954,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Green-%E7%AB%B9%E5%8C%97%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-65221.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -45404,7 +45068,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Hellen-%E5%85%A7%E6%B9%96%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-2dbe8.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -45907,12 +45571,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/Jenny-%E6%A8%B9%E6%9E%97%E7%A4%BE%E5%A4%A7-7e9ae.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/Jenny-%E9%B3%B3%E5%B1%B1%E9%81%8B%E5%8B%95%E5%9C%92%E5%8D%80-48c8e.html</loc>
     <lastmod>2026-10-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -45986,13 +45644,13 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Jill%E5%90%89%E5%85%92-%E4%B8%AD%E6%AD%A3%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-d1b08.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://kho.tw/teacher/Jim-%E8%8B%93%E9%9B%85%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-add0a.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -46046,12 +45704,6 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Jobs-%E6%A5%8A%E6%A2%85%E9%AB%94%E8%82%B2%E5%9C%92%E5%8D%80-a639e.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/teacher/Jocelyn-%E6%A8%B9%E6%9E%97%E7%A4%BE%E5%A4%A7-008b6.html</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -46213,6 +45865,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/teacher/Julia-%E4%B8%AD%E5%B1%B1%E7%A4%BE%E5%A4%A7-6aa55.html</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/teacher/Julia-%E5%85%A7%E6%B9%96%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-90b6e.html</loc>
     <lastmod>2026-10-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -46268,7 +45926,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/KEN-%E6%B3%B0%E5%B1%B1%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-edf3f.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -46292,7 +45950,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/KK-%E5%A4%A7%E5%90%8C%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-b49e6.html</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -46346,7 +46004,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Kate-%E6%A5%8A%E6%A2%85%E9%AB%94%E8%82%B2%E5%9C%92%E5%8D%80-e60eb.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -46568,7 +46226,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Lauren-%E4%B8%AD%E6%AD%A3%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-a96f9.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -46676,7 +46334,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Lily-%E5%A4%A7%E9%87%8C%E5%9C%8B%E6%B0%91%E6%9A%A8%E5%85%92%E7%AB%A5%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-e4e3f.html</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -46724,7 +46382,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Linny-%E7%AB%B9%E5%8C%97%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-cd12a.html</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -46754,7 +46412,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Liz-%E6%A8%B9%E6%9E%97%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-40a8b.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -46886,7 +46544,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Maggie-%E6%B0%B8%E5%92%8C%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-a8a64.html</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -46904,7 +46562,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Maggie-%E9%B3%B3%E5%B1%B1%E9%81%8B%E5%8B%95%E5%9C%92%E5%8D%80-ef43e.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -47654,7 +47312,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Phoebe-%E5%A4%A7%E5%90%8C%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-6c806.html</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -47678,7 +47336,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Ping-%E4%B8%AD%E6%AD%A3%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-b2d12.html</loc>
-    <lastmod>2026-09-29</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -47966,7 +47624,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Rowan-%E6%96%87%E5%B1%B1%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-77242.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -48266,7 +47924,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Selena-%E4%B8%AD%E6%AD%A3%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-11d47.html</loc>
-    <lastmod>2026-10-04</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -48332,7 +47990,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Sherry-%E5%A4%A7%E5%90%8C%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-4121a.html</loc>
-    <lastmod>2026-10-11</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -48386,7 +48044,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Sonny-%E5%85%A7%E6%B9%96%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-f33fd.html</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -48608,7 +48266,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Tiffany-%E6%96%87%E5%B1%B1%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-fa5d6.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -48650,7 +48308,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Timmy-%E6%B7%A1%E6%B0%B4%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-55fce.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -48812,7 +48470,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Via-%E6%B7%A1%E6%B0%B4%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-24391.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -48872,7 +48530,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Vicky-%E6%A1%83%E5%9C%92%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-d96da.html</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -49202,7 +48860,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Yoko-%E4%B8%AD%E5%A3%A2%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-f47cc.html</loc>
-    <lastmod>2026-10-06</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -49238,7 +48896,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/York-%E5%85%A7%E6%B9%96%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-c83de.html</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -49406,7 +49064,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/Zack-%E4%B8%AD%E5%A3%A2%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-64743.html</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -49459,12 +49117,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/teacher/acc-%E5%8C%97%E6%8A%95%E7%A4%BE%E5%A4%A7-d0f6f.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/teacher/chiyuu-%E7%AB%B9%E5%8C%97%E7%A4%BE%E5%A4%A7-33dd1.html</loc>
     <lastmod>2026-10-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -49478,7 +49130,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/justin-%E7%83%8F%E6%97%A5%E5%85%A8%E6%B0%91%E9%81%8B%E5%8B%95%E9%A4%A8-3e99e.html</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -49508,7 +49160,7 @@
   </url>
   <url>
     <loc>https://kho.tw/teacher/miso-%E4%B8%AD%E6%AD%A3%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-05c83.html</loc>
-    <lastmod>2026-10-05</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
