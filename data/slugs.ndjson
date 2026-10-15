@@ -35,8 +35,10 @@
 {"id":"crs_003e595a","kind":"course","slug":"心禾合唱社團-新店區新和樂齡中心-e595a","assignedAt":"2026-09-12"}
 {"id":"crs_003f35f7","kind":"course","slug":"手工皂與保養品輕鬆學-新楊平社大-f35f7","assignedAt":"2026-10-07"}
 {"id":"crs_003f4d89","kind":"course","slug":"輕鬆快樂玩AI初階-內湖社大-f4d89","assignedAt":"2026-09-12"}
+{"id":"crs_004135e1","kind":"course","slug":"快樂學油畫-八德社大-135e1","assignedAt":"2026-10-15"}
 {"id":"crs_00415180","kind":"course","slug":"生活就在速寫畫裡類高階-鳳山社大-15180","assignedAt":"2026-09-12"}
 {"id":"crs_00415d32","kind":"course","slug":"硬綁綁瑜珈-士林運動中心-15d32","assignedAt":"2026-09-29"}
+{"id":"crs_004225c7","kind":"course","slug":"魅影中東肚皮舞-八德社大-225c7","assignedAt":"2026-10-15"}
 {"id":"crs_0043146e","kind":"course","slug":"歡樂羽球-桃園社大-3146e","assignedAt":"2026-09-14"}
 {"id":"crs_00452f40","kind":"course","slug":"沙龍彩繪延甲實務進階班-指甲彩繪美容職業工會-52f40","assignedAt":"2026-09-12"}
 {"id":"crs_004587b7","kind":"course","slug":"口才訓練輕鬆學-北屯社大-587b7","assignedAt":"2026-09-12"}
@@ -338,6 +340,7 @@
 {"id":"crs_01a26615","kind":"course","slug":"肌力間歇有氧-博愛社大-26615","assignedAt":"2026-09-12"}
 {"id":"crs_01a33189","kind":"course","slug":"ZUMBA-八德運動中心-33189","assignedAt":"2026-09-12"}
 {"id":"crs_01a6f281","kind":"course","slug":"器械皮拉提斯-淡水運動中心-6f281","assignedAt":"2026-09-29"}
+{"id":"crs_01a7c968","kind":"course","slug":"有氧與瑜珈提斯初級1-八德社大-7c968","assignedAt":"2026-10-15"}
 {"id":"crs_01a8aa02","kind":"course","slug":"易經居家空間規劃-新楊平社大-8aa02","assignedAt":"2026-10-07"}
 {"id":"crs_01a9adb8","kind":"course","slug":"網路雲端免費資源與AI應用-中正社大-9adb8","assignedAt":"2026-09-12"}
 {"id":"crs_01abf52b","kind":"course","slug":"哈達瑜珈-內湖運動中心-bf52b","assignedAt":"2026-09-12"}
@@ -498,6 +501,7 @@
 {"id":"crs_028ebc1e","kind":"course","slug":"我的代謝甩脂計劃-松山社大-ebc1e","assignedAt":"2026-09-12"}
 {"id":"crs_028f084e","kind":"course","slug":"iPARTY愛派對-新莊運動中心-f084e","assignedAt":"2026-09-29"}
 {"id":"crs_029174de","kind":"course","slug":"國標舞恰恰恰-桃園社大-174de","assignedAt":"2026-09-12"}
+{"id":"crs_0292deac","kind":"course","slug":"中國古籍與古代星象學初級3-八德社大-2deac","assignedAt":"2026-10-15"}
 {"id":"crs_0292f378","kind":"course","slug":"成人騎馬快樂行-竹北社大-2f378","assignedAt":"2026-09-12"}
 {"id":"crs_02933caa","kind":"course","slug":"綜合格鬥-中正運動中心-33caa","assignedAt":"2026-09-29"}
 {"id":"crs_0293e587","kind":"course","slug":"越南語及越南文化初級-竹塹社大-3e587","assignedAt":"2026-09-12"}
@@ -521,6 +525,7 @@
 {"id":"crs_02a62f9d","kind":"course","slug":"讓刺繡走進你的生活水彩應用-大安社大-62f9d","assignedAt":"2026-09-12"}
 {"id":"crs_02a65d14","kind":"course","slug":"養生瑜珈社-新莊社大-65d14","assignedAt":"2026-09-12"}
 {"id":"crs_02a7278b","kind":"course","slug":"中醫養生學舒緩經穴與食療調理-大同社大-7278b","assignedAt":"2026-09-12"}
+{"id":"crs_02a7c6d2","kind":"course","slug":"國台日語歌唱教學-八德社大-7c6d2","assignedAt":"2026-10-15"}
 {"id":"crs_02a80b55","kind":"course","slug":"中西百匯點心廚房-萬華社大-80b55","assignedAt":"2026-09-12"}
 {"id":"crs_02a8561a","kind":"course","slug":"壺鈴翹臀班女性肌力-中壢運動中心-8561a","assignedAt":"2026-09-29"}
 {"id":"crs_02a8e619","kind":"course","slug":"冷氣空調桃園-勞動力發展署桃竹苗分署-8e619","assignedAt":"2026-09-12"}
@@ -1420,6 +1425,7 @@
 {"id":"crs_079d866b","kind":"course","slug":"抒壓創藝生活陶-竹北社大-d866b","assignedAt":"2026-09-12"}
 {"id":"crs_079ddaa7","kind":"course","slug":"書法初級1-中壢社大-ddaa7","assignedAt":"2026-09-12"}
 {"id":"crs_079f710b","kind":"course","slug":"窈窕美人律動肚皮舞初級-苗栗社大-f710b","assignedAt":"2026-09-12"}
+{"id":"crs_079f866f","kind":"course","slug":"專業手機攝影技巧與APP應用-八德社大-f866f","assignedAt":"2026-10-15"}
 {"id":"crs_07a05ba3","kind":"course","slug":"國樂綜合賞析-濁水溪社大-05ba3","assignedAt":"2026-09-12"}
 {"id":"crs_07a1d90f","kind":"course","slug":"書法初階-員永村社大-1d90f","assignedAt":"2026-09-12"}
 {"id":"crs_07a4d5aa","kind":"course","slug":"肌力雕塑有氧-三重運動中心-4d5aa","assignedAt":"2026-09-12"}
@@ -1630,6 +1636,7 @@
 {"id":"crs_08b310d7","kind":"course","slug":"池坊花藝設計-中壢社大-310d7","assignedAt":"2026-09-12"}
 {"id":"crs_08b3a558","kind":"course","slug":"成人羽球課程-中正運動中心-3a558","assignedAt":"2026-09-29"}
 {"id":"crs_08b66d71","kind":"course","slug":"唱出好歌聲人間音緣快樂唱-彰化社大-66d71","assignedAt":"2026-09-12"}
+{"id":"crs_08b85a52","kind":"course","slug":"日語延伸情境會話初級2-八德社大-85a52","assignedAt":"2026-10-15"}
 {"id":"crs_08b8d981","kind":"course","slug":"iDANCE愛跳舞初階MV舞-立竹光運動中心-8d981","assignedAt":"2026-09-12"}
 {"id":"crs_08b9b612","kind":"course","slug":"養身心美學詩詞賞析快樂誦-文山社大-9b612","assignedAt":"2026-09-12"}
 {"id":"crs_08ba103d","kind":"course","slug":"成人羽球團體班-大同運動中心-a103d","assignedAt":"2026-09-29"}
@@ -1731,6 +1738,7 @@
 {"id":"crs_09392891","kind":"course","slug":"消防安全設備-勞動力發展署雲嘉南分署-92891","assignedAt":"2026-09-12"}
 {"id":"crs_0939d744","kind":"course","slug":"BODYCOMBAT-土城運動中心-9d744","assignedAt":"2026-09-29"}
 {"id":"crs_093aa14e","kind":"course","slug":"運動舞蹈週三班-演唱藝術協會-aa14e","assignedAt":"2026-09-12"}
+{"id":"crs_093be868","kind":"course","slug":"手機錄影剪輯輕鬆學-八德社大-be868","assignedAt":"2026-10-15"}
 {"id":"crs_093d0cd9","kind":"course","slug":"哈達瑜珈-新莊運動中心-d0cd9","assignedAt":"2026-09-29"}
 {"id":"crs_0942fc67","kind":"course","slug":"法語文化初級1-八德社大-2fc67","assignedAt":"2026-10-14"}
 {"id":"crs_0944612b","kind":"course","slug":"10分鐘經絡保健DIY-蘆山園社大-4612b","assignedAt":"2026-09-12"}
@@ -1821,6 +1829,7 @@
 {"id":"crs_09a47541","kind":"course","slug":"基礎TRX-長春國民暨兒童運動中心-47541","assignedAt":"2026-09-12"}
 {"id":"crs_09a519b8","kind":"course","slug":"聲音表達基礎練習-萬華社大-519b8","assignedAt":"2026-09-12"}
 {"id":"crs_09a5bc10","kind":"course","slug":"氣機導引-南港社大-5bc10","assignedAt":"2026-09-12"}
+{"id":"crs_09a8ad53","kind":"course","slug":"家庭水電維修-八德社大-8ad53","assignedAt":"2026-10-15"}
 {"id":"crs_09a8dc79","kind":"course","slug":"器械皮拉提斯-朝馬運動中心-8dc79","assignedAt":"2026-09-29"}
 {"id":"crs_09aaa7ab","kind":"course","slug":"兒童芭蕾412歲-永和運動中心-aa7ab","assignedAt":"2026-10-03"}
 {"id":"crs_09ad4507","kind":"course","slug":"綠色行腳C-中山社大-d4507","assignedAt":"2026-09-12"}
@@ -1888,6 +1897,7 @@
 {"id":"crs_09f0160b","kind":"course","slug":"手機平板輕鬆學與應用-八德社大-0160b","assignedAt":"2026-10-14"}
 {"id":"crs_09f0c443","kind":"course","slug":"丹青彩墨研究-博愛社大-0c443","assignedAt":"2026-09-12"}
 {"id":"crs_09f302bb","kind":"course","slug":"英文基礎觀光會話-後驛社大-302bb","assignedAt":"2026-09-12"}
+{"id":"crs_09f6046f","kind":"course","slug":"快樂書法輕鬆學-八德社大-6046f","assignedAt":"2026-10-15"}
 {"id":"crs_09fb8c87","kind":"course","slug":"十孔口琴來吹歌學分費3000-新莊社大-b8c87","assignedAt":"2026-09-12"}
 {"id":"crs_09fd2de4","kind":"course","slug":"塑身肌力TRX-五股運動中心-d2de4","assignedAt":"2026-09-29"}
 {"id":"crs_09fe7df1","kind":"course","slug":"彈琴好樂活-蘆山園社大-e7df1","assignedAt":"2026-09-12"}
@@ -2515,6 +2525,7 @@
 {"id":"crs_0d0d2a1c","kind":"course","slug":"核心雙線-中壢運動中心-d2a1c","assignedAt":"2026-09-29"}
 {"id":"crs_0d0d3f39","kind":"course","slug":"原木美學的循環經濟創意-南關社大-d3f39","assignedAt":"2026-09-12"}
 {"id":"crs_0d0e24c9","kind":"course","slug":"日語進階I2629-南港社大-e24c9","assignedAt":"2026-09-12"}
+{"id":"crs_0d0edf46","kind":"course","slug":"開心學唱歌-八德社大-edf46","assignedAt":"2026-10-15"}
 {"id":"crs_0d0f8a2d","kind":"course","slug":"一起練瑜珈-甲安埔社大-f8a2d","assignedAt":"2026-09-12"}
 {"id":"crs_0d1221f9","kind":"course","slug":"體適能塑身瑜珈C-後驛社大-221f9","assignedAt":"2026-09-12"}
 {"id":"crs_0d15a8cd","kind":"course","slug":"東港小提琴樂器教學-屏南區社大-5a8cd","assignedAt":"2026-09-12"}
@@ -2835,6 +2846,7 @@
 {"id":"crs_0ea91cd1","kind":"course","slug":"生活裡的種子課觀察記錄與社區行動-海線社大-91cd1","assignedAt":"2026-09-12"}
 {"id":"crs_0eaaa54d","kind":"course","slug":"樂活瑜珈-中正運動中心-aa54d","assignedAt":"2026-09-29"}
 {"id":"crs_0eab9696","kind":"course","slug":"快樂動動太鼓-新楊平社大-b9696","assignedAt":"2026-10-06"}
+{"id":"crs_0eabb2a2","kind":"course","slug":"健康優游泳姿矯正初級1-八德社大-bb2a2","assignedAt":"2026-10-15"}
 {"id":"crs_0eacc199","kind":"course","slug":"從API到AI石化固定設備智慧管理實務班-中華產業機械設備協會-cc199","assignedAt":"2026-09-12"}
 {"id":"crs_0ead2fd2","kind":"course","slug":"基礎飛輪有氧訓練-中山運動中心-d2fd2","assignedAt":"2026-09-12"}
 {"id":"crs_0eaf29b8","kind":"course","slug":"樂活學日語-鳳山社大-f29b8","assignedAt":"2026-09-12"}
@@ -4371,6 +4383,7 @@
 {"id":"crs_1695e706","kind":"course","slug":"器械皮拉提斯-文山運動中心-5e706","assignedAt":"2026-09-29"}
 {"id":"crs_16961bdd","kind":"course","slug":"新住民中文班高級-竹塹社大-61bdd","assignedAt":"2026-09-12"}
 {"id":"crs_16973d7b","kind":"course","slug":"正位修復瑜珈-桃園運動中心-73d7b","assignedAt":"2026-09-12"}
+{"id":"crs_1698220c","kind":"course","slug":"手機平板輕鬆學-八德社大-8220c","assignedAt":"2026-10-15"}
 {"id":"crs_1698388e","kind":"course","slug":"手機攝影與剪輯-甲安埔社大-8388e","assignedAt":"2026-09-12"}
 {"id":"crs_16985d81","kind":"course","slug":"客家風舞蹈-新楊平社大-85d81","assignedAt":"2026-09-12"}
 {"id":"crs_1699414e","kind":"course","slug":"夢想音樂創作-蘆山園社大-9414e","assignedAt":"2026-09-14"}
@@ -4386,6 +4399,7 @@
 {"id":"crs_16a75553","kind":"course","slug":"實用創意拼布藝術-中正社大-75553","assignedAt":"2026-09-12"}
 {"id":"crs_16a81721","kind":"course","slug":"生活裡的占星課人生的情緒方程式918開課-第一社大-81721","assignedAt":"2026-09-12"}
 {"id":"crs_16af6c5b","kind":"course","slug":"快樂學烘焙A-大屯社大-f6c5b","assignedAt":"2026-09-12"}
+{"id":"crs_16b00f90","kind":"course","slug":"體適能健康雕塑瑜伽-八德社大-00f90","assignedAt":"2026-10-15"}
 {"id":"crs_16b260fe","kind":"course","slug":"TRX複合式訓練-三重運動中心-260fe","assignedAt":"2026-09-29"}
 {"id":"crs_16b66e67","kind":"course","slug":"踏查北台灣水岸古道文史-松山社大-66e67","assignedAt":"2026-09-12"}
 {"id":"crs_16b6ea17","kind":"course","slug":"居家水電維修DIY進階-北投社大-6ea17","assignedAt":"2026-09-12"}
@@ -4841,6 +4855,7 @@
 {"id":"crs_193517a3","kind":"course","slug":"歡喜學英語-新楊平社大-517a3","assignedAt":"2026-09-12"}
 {"id":"crs_193649e9","kind":"course","slug":"電腦3C安裝維修暨APP美編應用班第02-資訊服務職業工會-649e9","assignedAt":"2026-09-12"}
 {"id":"crs_19374eec","kind":"course","slug":"珠寶設計製作金工-新莊社大-74eec","assignedAt":"2026-09-12"}
+{"id":"crs_1937929f","kind":"course","slug":"TABATA律動核心瑜珈-八德社大-7929f","assignedAt":"2026-10-15"}
 {"id":"crs_1938f8b1","kind":"course","slug":"成人羽球課程-中正運動中心-8f8b1","assignedAt":"2026-10-01"}
 {"id":"crs_1939281c","kind":"course","slug":"素描A總爺-曾文社大-9281c","assignedAt":"2026-09-13"}
 {"id":"crs_19394385","kind":"course","slug":"精彩的城市速寫藝術-文山社大-94385","assignedAt":"2026-09-12"}
@@ -5007,6 +5022,7 @@
 {"id":"crs_1a1a71e8","kind":"course","slug":"地政士班第01期-不動產教育發展協會-a71e8","assignedAt":"2026-09-12"}
 {"id":"crs_1a1bbac0","kind":"course","slug":"流動瑜珈-臺北大學運動中心-bbac0","assignedAt":"2026-09-29"}
 {"id":"crs_1a1c4473","kind":"course","slug":"巧手縫紉班-三芝區樂齡中心-c4473","assignedAt":"2026-09-12"}
+{"id":"crs_1a1db207","kind":"course","slug":"中華花藝-八德社大-db207","assignedAt":"2026-10-15"}
 {"id":"crs_1a1dde6a","kind":"course","slug":"讀寫聽說全方位中級日語-中正社大-dde6a","assignedAt":"2026-09-12"}
 {"id":"crs_1a1e8595","kind":"course","slug":"玩線手編織-松山社大-e8595","assignedAt":"2026-09-19"}
 {"id":"crs_1a1f6a9d","kind":"course","slug":"德語初級-中正社大-f6a9d","assignedAt":"2026-09-12"}
@@ -5973,6 +5989,7 @@
 {"id":"crs_1f70eb6d","kind":"course","slug":"健康養生瑜珈A-鹿秀社大-0eb6d","assignedAt":"2026-09-12"}
 {"id":"crs_1f720482","kind":"course","slug":"鹿秀實驗樂團-鹿秀社大-20482","assignedAt":"2026-09-12"}
 {"id":"crs_1f725cc6","kind":"course","slug":"硬梆梆瑜珈-三重運動中心-25cc6","assignedAt":"2026-09-29"}
+{"id":"crs_1f73a0a2","kind":"course","slug":"陳氏太極拳-八德社大-3a0a2","assignedAt":"2026-10-15"}
 {"id":"crs_1f73b1c2","kind":"course","slug":"伸展瑜珈SX-三峽運動中心-3b1c2","assignedAt":"2026-09-29"}
 {"id":"crs_1f769e7a","kind":"course","slug":"ZUMBA-太平國民暨兒童運動中心-69e7a","assignedAt":"2026-09-12"}
 {"id":"crs_1f772e4a","kind":"course","slug":"舞動有氧樂-甲安埔社大-72e4a","assignedAt":"2026-09-12"}
@@ -6133,6 +6150,7 @@
 {"id":"crs_2054c460","kind":"course","slug":"伸展瑜珈-鳳山運動園區-4c460","assignedAt":"2026-09-12"}
 {"id":"crs_2055dc05","kind":"course","slug":"紓壓粉彩簡單畫-文山社大-5dc05","assignedAt":"2026-09-12"}
 {"id":"crs_2056d70d","kind":"course","slug":"燃脂有氧肌力-永和運動中心-6d70d","assignedAt":"2026-09-12"}
+{"id":"crs_205744fc","kind":"course","slug":"日本語會話高級3-八德社大-744fc","assignedAt":"2026-10-15"}
 {"id":"crs_20575b0e","kind":"course","slug":"兒童桌球班15H-桃園運動中心-75b0e","assignedAt":"2026-09-29"}
 {"id":"crs_2057a497","kind":"course","slug":"頌缽陰瑜珈-太平國民暨兒童運動中心-7a497","assignedAt":"2026-10-01"}
 {"id":"crs_2057db24","kind":"course","slug":"二胡-山線社大-7db24","assignedAt":"2026-09-12"}
@@ -6248,6 +6266,7 @@
 {"id":"crs_20ebf6a7","kind":"course","slug":"成人泳訓平日班-內湖運動中心-bf6a7","assignedAt":"2026-09-12"}
 {"id":"crs_20ed7672","kind":"course","slug":"不動產繼承登記應用班-臺灣資產評估協會-d7672","assignedAt":"2026-09-12"}
 {"id":"crs_20edce62","kind":"course","slug":"輕鬆學小家電維修1110開課-鎮港園社大-dce62","assignedAt":"2026-09-12"}
+{"id":"crs_20f10140","kind":"course","slug":"花巷草弄溪遊記-八德社大-10140","assignedAt":"2026-10-15"}
 {"id":"crs_20f13bbf","kind":"course","slug":"輕鬆學英文基礎會話學分費3000-新莊社大-13bbf","assignedAt":"2026-09-12"}
 {"id":"crs_20f4b3a8","kind":"course","slug":"游泳幼兒班-林口運動中心-4b3a8","assignedAt":"2026-09-29"}
 {"id":"crs_20f69425","kind":"course","slug":"友善平權-太平國小-69425","assignedAt":"2026-09-12"}
@@ -6840,6 +6859,7 @@
 {"id":"crs_2434225f","kind":"course","slug":"現代流行爵士鋼琴-中山社大-4225f","assignedAt":"2026-09-12"}
 {"id":"crs_2436d503","kind":"course","slug":"敲敲打打手縫皮件DIY-大屯社大-6d503","assignedAt":"2026-09-12"}
 {"id":"crs_2437fc4b","kind":"course","slug":"K線戰爭看懂行情打贏戰爭-松山社大-7fc4b","assignedAt":"2026-09-12"}
+{"id":"crs_24395e75","kind":"course","slug":"台灣國寶月琴說唱文化-八德社大-95e75","assignedAt":"2026-10-15"}
 {"id":"crs_2439a6aa","kind":"course","slug":"舒壓塑身瑜珈B-美港西社大-9a6aa","assignedAt":"2026-09-12"}
 {"id":"crs_243be75a","kind":"course","slug":"古箏樂曲合奏班-三芝區福成社區發展協會-be75a","assignedAt":"2026-09-12"}
 {"id":"crs_243d94d3","kind":"course","slug":"藝術有意思-后豐社大-d94d3","assignedAt":"2026-09-12"}
@@ -6984,6 +7004,7 @@
 {"id":"crs_24d9bd60","kind":"course","slug":"箏之韻古箏音韻賞析-新莊社大-9bd60","assignedAt":"2026-09-12"}
 {"id":"crs_24db4232","kind":"course","slug":"妙手妙語律動班-新莊區公所-b4232","assignedAt":"2026-09-12"}
 {"id":"crs_24dd5c75","kind":"course","slug":"精品咖啡調製進階班-文化創意產業工會-d5c75","assignedAt":"2026-09-12"}
+{"id":"crs_24e0d313","kind":"course","slug":"歡樂歌唱-八德社大-0d313","assignedAt":"2026-10-15"}
 {"id":"crs_24e0fdb4","kind":"course","slug":"個性書法綜合應用菁英班週一班-臺南社大-0fdb4","assignedAt":"2026-09-12"}
 {"id":"crs_24e1e5e1","kind":"course","slug":"進階燃脂肌力-板橋運動中心-1e5e1","assignedAt":"2026-09-29"}
 {"id":"crs_24e25f40","kind":"course","slug":"ZUMBA-楊梅體育園區-25f40","assignedAt":"2026-09-12"}
@@ -7034,6 +7055,7 @@
 {"id":"crs_25256b87","kind":"course","slug":"蘆荻享樂薩克斯風進階-蘆荻社大-56b87","assignedAt":"2026-09-12"}
 {"id":"crs_25263941","kind":"course","slug":"兒童羽球訓練班-文山運動中心-63941","assignedAt":"2026-09-29"}
 {"id":"crs_25265002","kind":"course","slug":"內觀流瑜伽-淡水運動中心-65002","assignedAt":"2026-09-29"}
+{"id":"crs_252a976c","kind":"course","slug":"古箏彈奏藝術-八德社大-a976c","assignedAt":"2026-10-15"}
 {"id":"crs_252dc883","kind":"course","slug":"凝影台南感性之美手機班-永康社大-dc883","assignedAt":"2026-09-12"}
 {"id":"crs_252e55b6","kind":"course","slug":"敏捷式專案開發實務班第11期-臺灣國際專案管理師協會-e55b6","assignedAt":"2026-09-12"}
 {"id":"crs_252f4b74","kind":"course","slug":"低衝擊有氧-楊梅體育園區-f4b74","assignedAt":"2026-09-12"}
@@ -7110,6 +7132,7 @@
 {"id":"crs_258c44c7","kind":"course","slug":"單人拉丁基礎班-八德運動中心-c44c7","assignedAt":"2026-09-12"}
 {"id":"crs_258cdd0a","kind":"course","slug":"古傳內修八卦掌-中正社大-cdd0a","assignedAt":"2026-09-12"}
 {"id":"crs_258d505b","kind":"course","slug":"平日女性專班-樹林運動中心-d505b","assignedAt":"2026-09-29"}
+{"id":"crs_258f221c","kind":"course","slug":"戶外休閒樂活行-八德社大-f221c","assignedAt":"2026-10-15"}
 {"id":"crs_258f344f","kind":"course","slug":"不動產營業員複訓班第05期-不動產仲介培訓協會-f344f","assignedAt":"2026-09-12"}
 {"id":"crs_258ff12f","kind":"course","slug":"從新聞談犯罪與法律-大屯社大-ff12f","assignedAt":"2026-09-12"}
 {"id":"crs_2591c3a9","kind":"course","slug":"葡萄酒品飲與餐酒美麗生活絢酒師-新店崇光社大-1c3a9","assignedAt":"2026-09-12"}
@@ -7138,6 +7161,7 @@
 {"id":"crs_25ad7c94","kind":"course","slug":"體態矯正肢體律動兒童-彰北運動中心-d7c94","assignedAt":"2026-09-29"}
 {"id":"crs_25ad92a6","kind":"course","slug":"舒活塑身瑜珈-中壢運動中心-d92a6","assignedAt":"2026-09-12"}
 {"id":"crs_25b738ae","kind":"course","slug":"占星社會研究室2第八宮-鳳山社大-738ae","assignedAt":"2026-09-12"}
+{"id":"crs_25b7aaea","kind":"course","slug":"繪本與粉彩的對話-八德社大-7aaea","assignedAt":"2026-10-15"}
 {"id":"crs_25b8abcc","kind":"course","slug":"新住民班初級-民權國小-8abcc","assignedAt":"2026-09-12"}
 {"id":"crs_25b8ecb9","kind":"course","slug":"劍道進階班-林口運動中心-8ecb9","assignedAt":"2026-09-29"}
 {"id":"crs_25b90768","kind":"course","slug":"都市更新權利變換與更新自主實務進階班第0-中華都市更新全國總會-90768","assignedAt":"2026-09-12"}
@@ -7588,6 +7612,7 @@
 {"id":"crs_27e68131","kind":"course","slug":"積木智高動力科學-後驛社大-68131","assignedAt":"2026-09-12"}
 {"id":"crs_27e96a06","kind":"course","slug":"蝶谷巴特拼貼彩繪-基隆社大-96a06","assignedAt":"2026-09-12"}
 {"id":"crs_27eb33a0","kind":"course","slug":"空瑜入門-楊梅體育園區-b33a0","assignedAt":"2026-09-29"}
+{"id":"crs_27eb3f1d","kind":"course","slug":"客家生活美學與實作-八德社大-b3f1d","assignedAt":"2026-10-15"}
 {"id":"crs_27edad82","kind":"course","slug":"節奏飛輪-板橋運動中心-dad82","assignedAt":"2026-09-29"}
 {"id":"crs_27ee2417","kind":"course","slug":"日本語會話高級2-八德社大-e2417","assignedAt":"2026-09-12"}
 {"id":"crs_27f10dc1","kind":"course","slug":"攝影基礎專題班-汐止社大-10dc1","assignedAt":"2026-09-12"}
@@ -7658,6 +7683,7 @@
 {"id":"crs_2846101e","kind":"course","slug":"那些旅途中的氣味與料理日本關西-新營社大-6101e","assignedAt":"2026-09-12"}
 {"id":"crs_28461bc7","kind":"course","slug":"輕鬆玩口琴-中正社大-61bc7","assignedAt":"2026-09-12"}
 {"id":"crs_28486842","kind":"course","slug":"大家都來拉提琴-樹林社大-86842","assignedAt":"2026-09-12"}
+{"id":"crs_28488582","kind":"course","slug":"二胡輕鬆學-八德社大-88582","assignedAt":"2026-10-15"}
 {"id":"crs_2849101b","kind":"course","slug":"薩克斯風進階B班-基隆社大-9101b","assignedAt":"2026-09-12"}
 {"id":"crs_2849ee2d","kind":"course","slug":"韓式彩妝造型實務班第02期-保養品從業人員職業工會-9ee2d","assignedAt":"2026-09-12"}
 {"id":"crs_284bedf8","kind":"course","slug":"TRX懸吊式訓練-中壢運動中心-bedf8","assignedAt":"2026-09-29"}
@@ -8016,6 +8042,7 @@
 {"id":"crs_2a31c6f3","kind":"course","slug":"登山健行的強膝訓練初階-松山社大-1c6f3","assignedAt":"2026-09-12"}
 {"id":"crs_2a324d3e","kind":"course","slug":"刺繡生活趣總爺-曾文社大-24d3e","assignedAt":"2026-09-12"}
 {"id":"crs_2a35053d","kind":"course","slug":"勁歌金曲國臺語教唱-中山社大-5053d","assignedAt":"2026-09-12"}
+{"id":"crs_2a37862f","kind":"course","slug":"國畫山水花鳥-八德社大-7862f","assignedAt":"2026-10-15"}
 {"id":"crs_2a3809bc","kind":"course","slug":"四早日語-耆光協會-809bc","assignedAt":"2026-09-12"}
 {"id":"crs_2a392ac8","kind":"course","slug":"喀擦喀擦動物傳說中秋剪紙-池南自然教育中心-92ac8","assignedAt":"2026-09-12"}
 {"id":"crs_2a39d661","kind":"course","slug":"日本語初級1-八德社大-9d661","assignedAt":"2026-10-14"}
@@ -8368,6 +8395,7 @@
 {"id":"crs_2c0c6c79","kind":"course","slug":"革物手作就是愛玩皮-八德社大-c6c79","assignedAt":"2026-09-12"}
 {"id":"crs_2c0e9583","kind":"course","slug":"點心伴手禮自己做-中壢社大-e9583","assignedAt":"2026-09-12"}
 {"id":"crs_2c0f0ded","kind":"course","slug":"瑜珈輪-五股運動中心-f0ded","assignedAt":"2026-09-29"}
+{"id":"crs_2c0fdc59","kind":"course","slug":"藝起玩皮革創意-八德社大-fdc59","assignedAt":"2026-10-15"}
 {"id":"crs_2c0fe2e9","kind":"course","slug":"器械皮拉提斯-文山運動中心-fe2e9","assignedAt":"2026-09-29"}
 {"id":"crs_2c10411c","kind":"course","slug":"熟齢偶像團隊培力-桃園社大-0411c","assignedAt":"2026-10-07"}
 {"id":"crs_2c119ba2","kind":"course","slug":"幼兒芭蕾律動-wdygwd28-19ba2","assignedAt":"2026-09-29"}
@@ -8881,6 +8909,7 @@
 {"id":"crs_2ec139c7","kind":"course","slug":"舒活健康瑜珈-八德社大-139c7","assignedAt":"2026-10-14"}
 {"id":"crs_2ec2d946","kind":"course","slug":"女性專班-板橋運動中心-2d946","assignedAt":"2026-09-29"}
 {"id":"crs_2ec47ef9","kind":"course","slug":"初階工筆花鳥畫賞析與創作-南關社大-47ef9","assignedAt":"2026-09-13"}
+{"id":"crs_2ec56865","kind":"course","slug":"四季生態繪畫-八德社大-56865","assignedAt":"2026-10-15"}
 {"id":"crs_2ec6d196","kind":"course","slug":"手指點點靈行動科技的運用-平溪區樂齡中心-6d196","assignedAt":"2026-09-12"}
 {"id":"crs_2ec74859","kind":"course","slug":"桌球基礎進階-三鶯社大-74859","assignedAt":"2026-09-12"}
 {"id":"crs_2eca011a","kind":"course","slug":"健康有氧體適能運動舞-美港西社大-a011a","assignedAt":"2026-09-12"}
@@ -9089,6 +9118,7 @@
 {"id":"crs_2fc640c9","kind":"course","slug":"春仔花-南關社大-640c9","assignedAt":"2026-09-12"}
 {"id":"crs_2fc8bf45","kind":"course","slug":"生活日語初階-潭雅神社大-8bf45","assignedAt":"2026-09-12"}
 {"id":"crs_2fcb72a5","kind":"course","slug":"文史生態采風-中正社大-b72a5","assignedAt":"2026-09-12"}
+{"id":"crs_2fcc698b","kind":"course","slug":"探索埤塘地方文化-八德社大-c698b","assignedAt":"2026-10-15"}
 {"id":"crs_2fcc73ad","kind":"course","slug":"水彩小品繪畫-文山社大-c73ad","assignedAt":"2026-10-05"}
 {"id":"crs_2fcd62ad","kind":"course","slug":"12月8日星際直播攝影棚初體驗-國家圖書館-d62ad","assignedAt":"2026-09-28"}
 {"id":"crs_2fd0126c","kind":"course","slug":"中醫基礎與中藥養生初階-竹北社大-0126c","assignedAt":"2026-09-12"}
@@ -10205,6 +10235,7 @@
 {"id":"crs_35d0fd17","kind":"course","slug":"體態雕塑女性專班971019一18001-蘆竹運動中心-0fd17","assignedAt":"2026-09-29"}
 {"id":"crs_35d1cab3","kind":"course","slug":"成人壁球13歲上團體班-大里國民暨兒童運動中心-1cab3","assignedAt":"2026-09-29"}
 {"id":"crs_35d3cb12","kind":"course","slug":"生活日語及其應用-文山社大-3cb12","assignedAt":"2026-09-12"}
+{"id":"crs_35d650fc","kind":"course","slug":"快樂學油畫-八德社大-650fc","assignedAt":"2026-10-15"}
 {"id":"crs_35d8c15c","kind":"course","slug":"TRX-蘆洲運動中心-8c15c","assignedAt":"2026-09-29"}
 {"id":"crs_35d96f5c","kind":"course","slug":"幼兒優游泳訓班-八德運動中心-96f5c","assignedAt":"2026-10-13"}
 {"id":"crs_35dc731c","kind":"course","slug":"有氧律生活B-後驛社大-c731c","assignedAt":"2026-09-12"}
@@ -10239,6 +10270,7 @@
 {"id":"crs_36092008","kind":"course","slug":"成人羽球班-中壢運動中心-92008","assignedAt":"2026-09-29"}
 {"id":"crs_360955e1","kind":"course","slug":"手機與電腦AI生活應用-內湖社大-955e1","assignedAt":"2026-09-12"}
 {"id":"crs_360d3ca8","kind":"course","slug":"Zumba-新莊運動中心-d3ca8","assignedAt":"2026-09-29"}
+{"id":"crs_360ff6b5","kind":"course","slug":"吉他彈唱輕鬆學-八德社大-ff6b5","assignedAt":"2026-10-15"}
 {"id":"crs_36110f88","kind":"course","slug":"輕鬆學古琴-中和社大-10f88","assignedAt":"2026-09-12"}
 {"id":"crs_3612ed4f","kind":"course","slug":"樂活咖啡烘焙班-濱江國小-2ed4f","assignedAt":"2026-09-12"}
 {"id":"crs_3612fd72","kind":"course","slug":"核心瑜珈-后豐社大-2fd72","assignedAt":"2026-09-12"}
@@ -10437,6 +10469,7 @@
 {"id":"crs_3717775b","kind":"course","slug":"兒童游泳班-中正運動中心-7775b","assignedAt":"2026-09-29"}
 {"id":"crs_3719d59e","kind":"course","slug":"輕水彩插畫輕鬆學-竹東社大-9d59e","assignedAt":"2026-09-12"}
 {"id":"crs_371b32c9","kind":"course","slug":"看韓劇學韓語-中壢社大-b32c9","assignedAt":"2026-09-12"}
+{"id":"crs_371c2776","kind":"course","slug":"養生太極拳初級1-八德社大-c2776","assignedAt":"2026-10-15"}
 {"id":"crs_371e00c2","kind":"course","slug":"兒童跑酷Parkour-桃園運動中心-e00c2","assignedAt":"2026-09-12"}
 {"id":"crs_371e910d","kind":"course","slug":"流行MV舞蹈-楊梅體育園區-e910d","assignedAt":"2026-09-29"}
 {"id":"crs_371eceab","kind":"course","slug":"活力有氧舞蹈-新楊平社大-eceab","assignedAt":"2026-10-07"}
@@ -11120,6 +11153,7 @@
 {"id":"crs_3ac119d9","kind":"course","slug":"大台北人文生態輕鬆走-內湖社大-119d9","assignedAt":"2026-09-12"}
 {"id":"crs_3ac2da13","kind":"course","slug":"兒童泳訓班-wdygwd22-2da13","assignedAt":"2026-09-12"}
 {"id":"crs_3ac6307b","kind":"course","slug":"兒童羽球課-苓雅運動中心-6307b","assignedAt":"2026-09-12"}
+{"id":"crs_3ac663cc","kind":"course","slug":"生活AI實用魔法-八德社大-663cc","assignedAt":"2026-10-15"}
 {"id":"crs_3ac6fb0f","kind":"course","slug":"9014BIM建模基礎B班第01期-勞動力發展署中彰投分署-6fb0f","assignedAt":"2026-10-03"}
 {"id":"crs_3ac85f6d","kind":"course","slug":"生活手機攝影-新楊平社大-85f6d","assignedAt":"2026-09-12"}
 {"id":"crs_3ac97e2b","kind":"course","slug":"單車走讀英文導覽城市移動中的語言練習81-鎮港園社大-97e2b","assignedAt":"2026-09-12"}
@@ -11334,6 +11368,7 @@
 {"id":"crs_3be8db76","kind":"course","slug":"泳訓兒少平日團體班-信義運動中心-8db76","assignedAt":"2026-10-01"}
 {"id":"crs_3be8fa12","kind":"course","slug":"微幸福手作麵包班-金門社大-8fa12","assignedAt":"2026-09-12"}
 {"id":"crs_3beddbe2","kind":"course","slug":"器械皮拉提斯-淡水運動中心-ddbe2","assignedAt":"2026-09-29"}
+{"id":"crs_3bee2a0a","kind":"course","slug":"樂活古箏輕鬆彈-八德社大-e2a0a","assignedAt":"2026-10-15"}
 {"id":"crs_3befb5c0","kind":"course","slug":"舒緩空中瑜伽-內湖運動中心-fb5c0","assignedAt":"2026-09-12"}
 {"id":"crs_3befc081","kind":"course","slug":"流行音樂圓夢鍵盤-八德社大-fc081","assignedAt":"2026-09-12"}
 {"id":"crs_3bf178e4","kind":"course","slug":"機械皮拉提斯-板橋運動中心-178e4","assignedAt":"2026-09-29"}
@@ -11633,6 +11668,7 @@
 {"id":"crs_3d9e8a4e","kind":"course","slug":"成人羽球精緻班-大里國民暨兒童運動中心-e8a4e","assignedAt":"2026-09-29"}
 {"id":"crs_3da32ac1","kind":"course","slug":"餐桌上的饗宴各式料理篇-北投社大-32ac1","assignedAt":"2026-09-12"}
 {"id":"crs_3da38c6c","kind":"course","slug":"野菜料理野菜廚娘來上菜-信義社大-38c6c","assignedAt":"2026-09-12"}
+{"id":"crs_3da39a55","kind":"course","slug":"流行爵士鋼琴初級1-八德社大-39a55","assignedAt":"2026-10-15"}
 {"id":"crs_3da4f8de","kind":"course","slug":"器械皮拉提斯-中和運動中心-4f8de","assignedAt":"2026-10-01"}
 {"id":"crs_3da72de2","kind":"course","slug":"成人的鋼琴教室-臺南社大-72de2","assignedAt":"2026-09-12"}
 {"id":"crs_3da7c904","kind":"course","slug":"Letgo用手機輕鬆學攝影13週-林口社大-7c904","assignedAt":"2026-09-12"}
@@ -11710,6 +11746,7 @@
 {"id":"crs_3e220f97","kind":"course","slug":"11506律動燃脂飛輪1000-新店運動中心-20f97","assignedAt":"2026-10-12"}
 {"id":"crs_3e23ebcb","kind":"course","slug":"水墨畫創作與賞析-中山社大-3ebcb","assignedAt":"2026-09-12"}
 {"id":"crs_3e24b365","kind":"course","slug":"國際標準舞輕鬆學-南港社大-4b365","assignedAt":"2026-09-12"}
+{"id":"crs_3e253aa0","kind":"course","slug":"生活英文輕鬆學-八德社大-53aa0","assignedAt":"2026-10-15"}
 {"id":"crs_3e275017","kind":"course","slug":"水晶花夢幻輕珠寶手作-桃園社大-75017","assignedAt":"2026-10-07"}
 {"id":"crs_3e289976","kind":"course","slug":"刺繡與拼布-鹿秀社大-89976","assignedAt":"2026-09-12"}
 {"id":"crs_3e298352","kind":"course","slug":"ZUMBA-宜蘭運動中心-98352","assignedAt":"2026-09-12"}
@@ -11828,6 +11865,7 @@
 {"id":"crs_3eb5e816","kind":"course","slug":"日本舞踊之美夕顏-基隆社大-5e816","assignedAt":"2026-09-12"}
 {"id":"crs_3eb79237","kind":"course","slug":"A25古典家具榫接木工北港班-海線社大-79237","assignedAt":"2026-09-12"}
 {"id":"crs_3eb7d44f","kind":"course","slug":"游泳兒童班-蘆洲運動中心-7d44f","assignedAt":"2026-09-29"}
+{"id":"crs_3eb90295","kind":"course","slug":"箏琴箏韵新樂章-八德社大-90295","assignedAt":"2026-10-15"}
 {"id":"crs_3ebcca1e","kind":"course","slug":"銀髮族專班-中和運動中心-cca1e","assignedAt":"2026-10-13"}
 {"id":"crs_3ebd50a2","kind":"course","slug":"茶生活美學-南港社大-d50a2","assignedAt":"2026-09-12"}
 {"id":"crs_3ebe2d95","kind":"course","slug":"公益羽球課-淡水運動中心-e2d95","assignedAt":"2026-10-01"}
@@ -12022,6 +12060,7 @@
 {"id":"crs_3fe04ab7","kind":"course","slug":"平日兒童班-樹林運動中心-04ab7","assignedAt":"2026-09-29"}
 {"id":"crs_3fe09e78","kind":"course","slug":"口琴興樂趣中階-竹北社大-09e78","assignedAt":"2026-09-12"}
 {"id":"crs_3fe1802c","kind":"course","slug":"2026活氧提斯班-慈親協進會-1802c","assignedAt":"2026-09-12"}
+{"id":"crs_3fe18ede","kind":"course","slug":"中東肚皮舞-八德社大-18ede","assignedAt":"2026-10-15"}
 {"id":"crs_3fe2044d","kind":"course","slug":"體適能健身班-天母全人關懷協會-2044d","assignedAt":"2026-09-12"}
 {"id":"crs_3fe25bcc","kind":"course","slug":"韓國文化與韓文發音進階-鹿秀社大-25bcc","assignedAt":"2026-09-12"}
 {"id":"crs_3fe2b60d","kind":"course","slug":"假日幼兒優質泳訓班-桃園運動中心-2b60d","assignedAt":"2026-09-29"}
@@ -12041,6 +12080,7 @@
 {"id":"crs_3ff3ee9a","kind":"course","slug":"強化肌力循環1121228一194020-蘆竹運動中心-3ee9a","assignedAt":"2026-10-03"}
 {"id":"crs_3ff5b622","kind":"course","slug":"器械皮拉提斯-蘆洲運動中心-5b622","assignedAt":"2026-09-29"}
 {"id":"crs_3ff7bde4","kind":"course","slug":"花繪創意Yoli水色鉛-大安社大-7bde4","assignedAt":"2026-09-12"}
+{"id":"crs_3ffa28cd","kind":"course","slug":"手機拍出質感與時尚-八德社大-a28cd","assignedAt":"2026-10-15"}
 {"id":"crs_3ffa77df","kind":"course","slug":"伸展舒心瑜珈-大屯社大-a77df","assignedAt":"2026-09-12"}
 {"id":"crs_3ffc317d","kind":"course","slug":"體塑舞動-新楊平社大-c317d","assignedAt":"2026-10-06"}
 {"id":"crs_3ffcbba8","kind":"course","slug":"生活陶趣A班-永和社大-cbba8","assignedAt":"2026-09-12"}
@@ -12113,6 +12153,7 @@
 {"id":"crs_406248c8","kind":"course","slug":"舞魅力排舞初級3-桃園社大-248c8","assignedAt":"2026-09-12"}
 {"id":"crs_406444c8","kind":"course","slug":"泳池女性專班-三重運動中心-444c8","assignedAt":"2026-09-29"}
 {"id":"crs_40664040","kind":"course","slug":"平面廣告設計暨illustrator印刷-臺灣視覺傳達設計產業工會-64040","assignedAt":"2026-09-12"}
+{"id":"crs_40677af4","kind":"course","slug":"印度古瑜珈初級2-八德社大-77af4","assignedAt":"2026-10-15"}
 {"id":"crs_40688d5c","kind":"course","slug":"肌力雕塑班-樹林運動中心-88d5c","assignedAt":"2026-09-29"}
 {"id":"crs_4068c1e3","kind":"course","slug":"拉丁Zumba有氧-甲安埔社大-8c1e3","assignedAt":"2026-10-12"}
 {"id":"crs_406909e4","kind":"course","slug":"想像與認同影讀會-山線社大-909e4","assignedAt":"2026-09-12"}
@@ -12173,6 +12214,7 @@
 {"id":"crs_40b43935","kind":"course","slug":"115年10月31日六09001200中-立圖書館新店分館-43935","assignedAt":"2026-10-08"}
 {"id":"crs_40b5bb05","kind":"course","slug":"程式開發CPythonAI與ERP系統設-勞動力發展署桃竹苗分署-5bb05","assignedAt":"2026-10-02"}
 {"id":"crs_40b61555","kind":"course","slug":"機械皮拉提斯-板橋運動中心-61555","assignedAt":"2026-09-29"}
+{"id":"crs_40b82cd3","kind":"course","slug":"有氧舞蹈皮拉提斯-八德社大-82cd3","assignedAt":"2026-10-15"}
 {"id":"crs_40b9391d","kind":"course","slug":"智慧電子實務應用-勞動部勞動力發展署高屏澎-9391d","assignedAt":"2026-09-12"}
 {"id":"crs_40babf18","kind":"course","slug":"走吧旅行玩粉彩-北投社大-abf18","assignedAt":"2026-09-12"}
 {"id":"crs_40c0bcff","kind":"course","slug":"美背舒展放鬆瑜珈輪-竹北運動中心-0bcff","assignedAt":"2026-09-29"}
@@ -12865,6 +12907,7 @@
 {"id":"crs_44354796","kind":"course","slug":"器械皮拉提斯-南港運動中心-54796","assignedAt":"2026-09-29"}
 {"id":"crs_4439036b","kind":"course","slug":"社區油畫美學初級-桃園社大-9036b","assignedAt":"2026-09-12"}
 {"id":"crs_4439dd5f","kind":"course","slug":"假日幼兒泳訓班-楊梅體育園區-9dd5f","assignedAt":"2026-09-29"}
+{"id":"crs_443ca3a5","kind":"course","slug":"跟著二胡走-八德社大-ca3a5","assignedAt":"2026-10-15"}
 {"id":"crs_443db350","kind":"course","slug":"1213目加溜灣善化街大隱於市的街屋們台-臺南社大-db350","assignedAt":"2026-09-13"}
 {"id":"crs_443dc3d4","kind":"course","slug":"全端開發PythonNodejs與AIO-勞動力發展署桃竹苗分署-dc3d4","assignedAt":"2026-09-12"}
 {"id":"crs_443e69d0","kind":"course","slug":"樂活瑜珈提斯-信義運動中心-e69d0","assignedAt":"2026-09-29"}
@@ -13133,6 +13176,7 @@
 {"id":"crs_45c9c1eb","kind":"course","slug":"MV流行舞蹈-信義運動中心-9c1eb","assignedAt":"2026-09-29"}
 {"id":"crs_45ca2833","kind":"course","slug":"基礎器械核心床-長春國民暨兒童運動中心-a2833","assignedAt":"2026-09-29"}
 {"id":"crs_45ca4a11","kind":"course","slug":"律動有氧核心瑜珈-朝馬運動中心-a4a11","assignedAt":"2026-09-12"}
+{"id":"crs_45ccb76a","kind":"course","slug":"日語中級3-八德社大-cb76a","assignedAt":"2026-10-15"}
 {"id":"crs_45cdf5fc","kind":"course","slug":"兒童泳訓班-中和運動中心-df5fc","assignedAt":"2026-10-13"}
 {"id":"crs_45ced03f","kind":"course","slug":"器械皮拉提斯-林口運動中心-ed03f","assignedAt":"2026-09-28"}
 {"id":"crs_45d47f44","kind":"course","slug":"ZUMBA-土城運動中心-47f44","assignedAt":"2026-09-29"}
@@ -13439,6 +13483,7 @@
 {"id":"crs_476daa4d","kind":"course","slug":"幼兒泳訓-彰北運動中心-daa4d","assignedAt":"2026-09-12"}
 {"id":"crs_476e173e","kind":"course","slug":"11506長者課程樂齡肌力需55歲以上1-新店運動中心-e173e","assignedAt":"2026-10-12"}
 {"id":"crs_476f5b6c","kind":"course","slug":"簡單生活手機攝影-曾文社大-f5b6c","assignedAt":"2026-09-13"}
+{"id":"crs_476f7437","kind":"course","slug":"書法藝術賞析-八德社大-f7437","assignedAt":"2026-10-15"}
 {"id":"crs_476f9713","kind":"course","slug":"中小企業財務管理實務班第03期-臺灣產業職業能力發展中心-f9713","assignedAt":"2026-09-12"}
 {"id":"crs_476ffccf","kind":"course","slug":"流行爵士Jazz基礎-太平國民暨兒童運動中心-ffccf","assignedAt":"2026-09-29"}
 {"id":"crs_47700960","kind":"course","slug":"和緩養身瑜珈入門-松山社大-00960","assignedAt":"2026-09-12"}
@@ -13534,6 +13579,7 @@
 {"id":"crs_47ece046","kind":"course","slug":"日語歌謠歡喜唱2-鎮港園社大-ce046","assignedAt":"2026-09-12"}
 {"id":"crs_47eedc7b","kind":"course","slug":"從古文字看詩經-文山社大-edc7b","assignedAt":"2026-09-12"}
 {"id":"crs_47f11876","kind":"course","slug":"活力環狀燃脂團-板橋運動中心-11876","assignedAt":"2026-09-29"}
+{"id":"crs_47f1f59b","kind":"course","slug":"日本語初級1-八德社大-1f59b","assignedAt":"2026-10-15"}
 {"id":"crs_47f23fa1","kind":"course","slug":"流行烏克麗麗-樹林社大-23fa1","assignedAt":"2026-09-12"}
 {"id":"crs_47f259fd","kind":"course","slug":"半導體矽光子概論與碳管理應用在職班第02-國立成功大學-259fd","assignedAt":"2026-09-12"}
 {"id":"crs_47f465d1","kind":"course","slug":"泳訓幼兒假日團體班-信義運動中心-465d1","assignedAt":"2026-10-01"}
@@ -13797,6 +13843,7 @@
 {"id":"crs_494fecda","kind":"course","slug":"熱門流行MV-彰北運動中心-fecda","assignedAt":"2026-09-29"}
 {"id":"crs_4950565b","kind":"course","slug":"墊上核心滾筒伸展-林口運動中心-0565b","assignedAt":"2026-09-12"}
 {"id":"crs_4952834b","kind":"course","slug":"TRX零基礎核心訓練-南港運動中心-2834b","assignedAt":"2026-09-29"}
+{"id":"crs_4952c9aa","kind":"course","slug":"核心塑身瑜伽-八德社大-2c9aa","assignedAt":"2026-10-15"}
 {"id":"crs_49561b99","kind":"course","slug":"會計帳務處理與稅務申報實務班第01期-中華中小企業財務顧問協會-61b99","assignedAt":"2026-09-12"}
 {"id":"crs_49577689","kind":"course","slug":"11506假日成人精緻泳訓班16歲以上1-蘆竹運動中心-77689","assignedAt":"2026-10-03"}
 {"id":"crs_495a43f6","kind":"course","slug":"樂齡伸展瑜珈-長春國民暨兒童運動中心-a43f6","assignedAt":"2026-09-29"}
@@ -14145,6 +14192,7 @@
 {"id":"crs_4b1ba6df","kind":"course","slug":"成人羽球進階-三重運動中心-ba6df","assignedAt":"2026-09-29"}
 {"id":"crs_4b1c1376","kind":"course","slug":"快樂養身瑜珈-員永村社大-c1376","assignedAt":"2026-09-12"}
 {"id":"crs_4b1c5edd","kind":"course","slug":"單車樂讀走臺灣-新店崇光社大-c5edd","assignedAt":"2026-09-12"}
+{"id":"crs_4b1ccd0a","kind":"course","slug":"哈達瑜伽-八德社大-ccd0a","assignedAt":"2026-10-15"}
 {"id":"crs_4b1f1695","kind":"course","slug":"日語一級棒初級7學分費3000-新莊社大-f1695","assignedAt":"2026-09-12"}
 {"id":"crs_4b1f9ef2","kind":"course","slug":"塑身體能-臺北大學運動中心-f9ef2","assignedAt":"2026-09-29"}
 {"id":"crs_4b207bcb","kind":"course","slug":"安心生活理財課讓AI陪你做規劃-蘆荻社大-07bcb","assignedAt":"2026-09-12"}
@@ -14830,6 +14878,7 @@
 {"id":"crs_4ecc431d","kind":"course","slug":"經絡學習與健康管理登發-北高雄社大-c431d","assignedAt":"2026-09-12"}
 {"id":"crs_4eccb8b8","kind":"course","slug":"薩克斯風進階-潭雅神社大-cb8b8","assignedAt":"2026-09-12"}
 {"id":"crs_4ecced9c","kind":"course","slug":"晚安伸展瑜珈-永和運動中心-ced9c","assignedAt":"2026-09-12"}
+{"id":"crs_4ecde865","kind":"course","slug":"背包客的繪畫旅行-八德社大-de865","assignedAt":"2026-10-15"}
 {"id":"crs_4ecef772","kind":"course","slug":"探訪鮮食百味之旅週一-新店崇光社大-ef772","assignedAt":"2026-09-12"}
 {"id":"crs_4ed1530a","kind":"course","slug":"手工皮革雕刻彩繪工藝上午班-松山社大-1530a","assignedAt":"2026-09-12"}
 {"id":"crs_4ed29142","kind":"course","slug":"里港分班易經生活化-屏北區社大-29142","assignedAt":"2026-09-12"}
@@ -14961,6 +15010,7 @@
 {"id":"crs_4f69aa3e","kind":"course","slug":"紫微生命學進階-桃園社大-9aa3e","assignedAt":"2026-09-14"}
 {"id":"crs_4f69d364","kind":"course","slug":"活力綜合有氧暨瑜珈提斯入門-松山社大-9d364","assignedAt":"2026-09-12"}
 {"id":"crs_4f6b08bc","kind":"course","slug":"生活日語進階9輕鬆開口說日語-新營社大-b08bc","assignedAt":"2026-09-12"}
+{"id":"crs_4f6f0b8a","kind":"course","slug":"理財與投資-八德社大-f0b8a","assignedAt":"2026-10-15"}
 {"id":"crs_4f6fa727","kind":"course","slug":"歌藝心靈養護-甲安埔社大-fa727","assignedAt":"2026-09-12"}
 {"id":"crs_4f70379b","kind":"course","slug":"流行廣場舞B-鹿秀社大-0379b","assignedAt":"2026-09-12"}
 {"id":"crs_4f713b47","kind":"course","slug":"木雕手刻趣-中正社大-13b47","assignedAt":"2026-09-12"}
@@ -15148,6 +15198,7 @@
 {"id":"crs_506b89d9","kind":"course","slug":"BODYCOMBAT-土城運動中心-b89d9","assignedAt":"2026-09-29"}
 {"id":"crs_506d3264","kind":"course","slug":"幼兒泳訓初級班-朝馬運動中心-d3264","assignedAt":"2026-09-29"}
 {"id":"crs_506e5e88","kind":"course","slug":"樂童體操班-文山運動中心-e5e88","assignedAt":"2026-09-12"}
+{"id":"crs_506f5d76","kind":"course","slug":"易經居家空間規劃-八德社大-f5d76","assignedAt":"2026-10-15"}
 {"id":"crs_50704fb2","kind":"course","slug":"樂齡基礎游泳課-林口運動中心-04fb2","assignedAt":"2026-09-29"}
 {"id":"crs_50706e72","kind":"course","slug":"C08黏土捏捏樂-海線社大-06e72","assignedAt":"2026-09-12"}
 {"id":"crs_507233fc","kind":"course","slug":"兒童泳訓班-中和運動中心-233fc","assignedAt":"2026-10-13"}
@@ -15250,6 +15301,7 @@
 {"id":"crs_51154e52","kind":"course","slug":"哲學下午茶-羅東社大-54e52","assignedAt":"2026-09-12"}
 {"id":"crs_5116e194","kind":"course","slug":"基礎有氧-虎尾全民運動館-6e194","assignedAt":"2026-09-12"}
 {"id":"crs_51188e1c","kind":"course","slug":"岩彩畫賞析與創作-新楊平社大-88e1c","assignedAt":"2026-09-12"}
+{"id":"crs_511c086c","kind":"course","slug":"動手玩自然常見植物運用-八德社大-c086c","assignedAt":"2026-10-15"}
 {"id":"crs_51200ad0","kind":"course","slug":"手工皂與精油保養用品實作-士林社大-00ad0","assignedAt":"2026-09-12"}
 {"id":"crs_51202229","kind":"course","slug":"日語基礎班-四縣客家文化協會-02229","assignedAt":"2026-09-12"}
 {"id":"crs_51210d01","kind":"course","slug":"步道美學綠色行腳-樹林社大-10d01","assignedAt":"2026-09-12"}
@@ -15843,12 +15895,14 @@
 {"id":"crs_54517390","kind":"course","slug":"核心流動瑜伽-汐止運動中心-17390","assignedAt":"2026-09-12"}
 {"id":"crs_5453849b","kind":"course","slug":"法文入門從日常對話到法式飲食-新營社大-3849b","assignedAt":"2026-09-12"}
 {"id":"crs_54560550","kind":"course","slug":"初級日語三-大安社大-60550","assignedAt":"2026-09-12"}
+{"id":"crs_5457ee50","kind":"course","slug":"雕塑曲線拉丁窈窕熱舞-八德社大-7ee50","assignedAt":"2026-10-15"}
 {"id":"crs_54594b40","kind":"course","slug":"市民防災課基礎急救與演練-博愛社大-94b40","assignedAt":"2026-09-12"}
 {"id":"crs_54597468","kind":"course","slug":"精緻西式點心班-龍山國中-97468","assignedAt":"2026-09-12"}
 {"id":"crs_545990b0","kind":"course","slug":"田園手工皂實作-中壢社大-990b0","assignedAt":"2026-09-12"}
 {"id":"crs_5459f902","kind":"course","slug":"兒童泳訓單日-北屯國民暨兒童運動中心-9f902","assignedAt":"2026-09-29"}
 {"id":"crs_545c78a3","kind":"course","slug":"銀飾工藝實作班第02期-總工會-c78a3","assignedAt":"2026-09-12"}
 {"id":"crs_545d50ac","kind":"course","slug":"吉他彈唱進階-松山社大-d50ac","assignedAt":"2026-09-12"}
+{"id":"crs_545d5898","kind":"course","slug":"快樂學油畫-八德社大-d5898","assignedAt":"2026-10-15"}
 {"id":"crs_545db155","kind":"course","slug":"Sakula裁縫教室-鎮港園社大-db155","assignedAt":"2026-09-12"}
 {"id":"crs_545e653e","kind":"course","slug":"空靈鼓中級-中壢社大-e653e","assignedAt":"2026-09-12"}
 {"id":"crs_545eb399","kind":"course","slug":"中華花藝週三午六甲-曾文社大-eb399","assignedAt":"2026-09-13"}
@@ -16264,6 +16318,7 @@
 {"id":"crs_569d4e3f","kind":"course","slug":"流行爵士鋼琴四-大安社大-d4e3f","assignedAt":"2026-09-12"}
 {"id":"crs_56a0afd3","kind":"course","slug":"精彩的城市速寫藝術初階-南港社大-0afd3","assignedAt":"2026-09-12"}
 {"id":"crs_56a18509","kind":"course","slug":"咖啡品嚐手作基礎感官開發與產區巡禮-大安社大-18509","assignedAt":"2026-09-12"}
+{"id":"crs_56a4166a","kind":"course","slug":"生活日語中級1-八德社大-4166a","assignedAt":"2026-10-15"}
 {"id":"crs_56a50a9a","kind":"course","slug":"養身保健核心瑜伽提斯-南港社大-50a9a","assignedAt":"2026-09-12"}
 {"id":"crs_56a71414","kind":"course","slug":"中醫之魂傷寒雜病論-松山社大-71414","assignedAt":"2026-09-12"}
 {"id":"crs_56ac0928","kind":"course","slug":"經絡養生輕鬆學初階-潭雅神社大-c0928","assignedAt":"2026-09-12"}
@@ -16461,6 +16516,7 @@
 {"id":"crs_57b7ea79","kind":"course","slug":"田園手工皂實作-中壢社大-7ea79","assignedAt":"2026-09-12"}
 {"id":"crs_57b93314","kind":"course","slug":"義法美食小廚房-大同社大-93314","assignedAt":"2026-09-12"}
 {"id":"crs_57ba7300","kind":"course","slug":"跟著外籍大學生一起環遊世界多元文化故事分-立圖書館多元文化故事分享-a7300","assignedAt":"2026-10-05"}
+{"id":"crs_57bb1bb1","kind":"course","slug":"氣球造形藝術-八德社大-b1bb1","assignedAt":"2026-10-15"}
 {"id":"crs_57bbdb09","kind":"course","slug":"二胡流行風-竹東社大-bdb09","assignedAt":"2026-09-12"}
 {"id":"crs_57bd7533","kind":"course","slug":"萊美戰鬥拳擊BODYCOMBAT-楊梅體育園區-d7533","assignedAt":"2026-09-12"}
 {"id":"crs_57bdfc5a","kind":"course","slug":"幼兒軍刀-楊梅體育園區-dfc5a","assignedAt":"2026-09-29"}
@@ -16924,6 +16980,7 @@
 {"id":"crs_5a31cfff","kind":"course","slug":"艾楊格瑜珈放鬆的藝術-永康社大-1cfff","assignedAt":"2026-09-13"}
 {"id":"crs_5a33038e","kind":"course","slug":"快樂舞動有氧-后豐社大-3038e","assignedAt":"2026-09-12"}
 {"id":"crs_5a346770","kind":"course","slug":"羽球初階日南週三-甲安埔社大-46770","assignedAt":"2026-09-12"}
+{"id":"crs_5a3566a8","kind":"course","slug":"手工皂與保養品輕鬆學-八德社大-566a8","assignedAt":"2026-10-15"}
 {"id":"crs_5a36ba5c","kind":"course","slug":"瘦身瑜珈B班-士林社大-6ba5c","assignedAt":"2026-09-12"}
 {"id":"crs_5a36f011","kind":"course","slug":"芳療脈輪瑜珈-甲安埔社大-6f011","assignedAt":"2026-09-12"}
 {"id":"crs_5a37a159","kind":"course","slug":"西班牙語初級班第02期-中華菁鷹人才技能學習協會-7a159","assignedAt":"2026-09-12"}
@@ -17193,6 +17250,7 @@
 {"id":"crs_5bbb2480","kind":"course","slug":"輕鬆保健學瑜珈-新楊平社大-b2480","assignedAt":"2026-09-12"}
 {"id":"crs_5bbc72ce","kind":"course","slug":"兒童羽球-北屯國民暨兒童運動中心-c72ce","assignedAt":"2026-09-29"}
 {"id":"crs_5bbcea5f","kind":"course","slug":"拳擊有氧-蘆洲運動中心-cea5f","assignedAt":"2026-09-29"}
+{"id":"crs_5bbd5ebf","kind":"course","slug":"女性的香氛日記-八德社大-d5ebf","assignedAt":"2026-10-15"}
 {"id":"crs_5bbfe0f1","kind":"course","slug":"流行爵士鋼琴中級1-中壢社大-fe0f1","assignedAt":"2026-09-12"}
 {"id":"crs_5bc12e66","kind":"course","slug":"古琴藝術概論與彈奏-文山社大-12e66","assignedAt":"2026-09-12"}
 {"id":"crs_5bc21c8e","kind":"course","slug":"韓國KPop-內湖運動中心-21c8e","assignedAt":"2026-09-12"}
@@ -17328,6 +17386,7 @@
 {"id":"crs_5c6ff45c","kind":"course","slug":"從新聞談犯罪與法律-大屯社大-ff45c","assignedAt":"2026-09-12"}
 {"id":"crs_5c7078fd","kind":"course","slug":"有氧瑜珈初階-竹北社大-078fd","assignedAt":"2026-09-12"}
 {"id":"crs_5c710efb","kind":"course","slug":"在園療癒見自己-彰化社大-10efb","assignedAt":"2026-09-12"}
+{"id":"crs_5c71acaf","kind":"course","slug":"流行音樂鍵盤手-八德社大-1acaf","assignedAt":"2026-10-15"}
 {"id":"crs_5c77115d","kind":"course","slug":"咖啡與飲品調製-新楊平社大-7115d","assignedAt":"2026-09-12"}
 {"id":"crs_5c792beb","kind":"course","slug":"校務志工社-中和社大-92beb","assignedAt":"2026-09-12"}
 {"id":"crs_5c7996d8","kind":"course","slug":"快樂口琴自在律動-八德社大-996d8","assignedAt":"2026-09-12"}
@@ -17415,6 +17474,7 @@
 {"id":"crs_5ce8121b","kind":"course","slug":"吉他彈唱初級-內湖社大-8121b","assignedAt":"2026-09-12"}
 {"id":"crs_5cea98c6","kind":"course","slug":"太極拳氣功導引-新楊平社大-a98c6","assignedAt":"2026-09-12"}
 {"id":"crs_5ceb85d5","kind":"course","slug":"健康瑜珈-新楊平社大-b85d5","assignedAt":"2026-09-12"}
+{"id":"crs_5ceb8fee","kind":"course","slug":"禪繞指尖藝術-八德社大-b8fee","assignedAt":"2026-10-15"}
 {"id":"crs_5cec08ff","kind":"course","slug":"小型農機具使用保養與檢修燕巢農場-北高雄社大-c08ff","assignedAt":"2026-09-12"}
 {"id":"crs_5cece041","kind":"course","slug":"素描初階進入繪畫世界的必修學分-基隆社大-ce041","assignedAt":"2026-09-12"}
 {"id":"crs_5ced85b5","kind":"course","slug":"自行車簡易維修保養DIY初階-港都社大-d85b5","assignedAt":"2026-09-12"}
@@ -17705,6 +17765,7 @@
 {"id":"crs_5e769b1a","kind":"course","slug":"燃油與電動機車修護班機車臺中-勞動力發展署中彰投分署-69b1a","assignedAt":"2026-09-12"}
 {"id":"crs_5e778350","kind":"course","slug":"鐵道散策小旅行-三鶯社大-78350","assignedAt":"2026-09-12"}
 {"id":"crs_5e79d0bb","kind":"course","slug":"綠生活手作皂應用實務班-平原社大-9d0bb","assignedAt":"2026-09-12"}
+{"id":"crs_5e7a3075","kind":"course","slug":"手工皂與保養品輕鬆學-八德社大-a3075","assignedAt":"2026-10-15"}
 {"id":"crs_5e7aa0d4","kind":"course","slug":"伸展瑜珈-新楊平社大-aa0d4","assignedAt":"2026-09-12"}
 {"id":"crs_5e7be4f0","kind":"course","slug":"快樂山水畫-八德社大-be4f0","assignedAt":"2026-09-12"}
 {"id":"crs_5e7c8d29","kind":"course","slug":"帶著畫筆去旅行馬克筆手繪-基隆社大-c8d29","assignedAt":"2026-09-12"}
@@ -17774,6 +17835,7 @@
 {"id":"crs_5ed5798e","kind":"course","slug":"走讀客庄楊梅壢五折-新楊平社大-5798e","assignedAt":"2026-10-07"}
 {"id":"crs_5ed6a858","kind":"course","slug":"初級必備手機平板AI應用輕鬆規劃自助旅行-中正社大-6a858","assignedAt":"2026-09-12"}
 {"id":"crs_5ed7ae93","kind":"course","slug":"115剪映AI影片剪輯主流AI影片工具實-松山社大-7ae93","assignedAt":"2026-09-12"}
+{"id":"crs_5ed7e1f6","kind":"course","slug":"圓夢鍵盤流行音樂鍵盤手初級1-八德社大-7e1f6","assignedAt":"2026-10-15"}
 {"id":"crs_5ed859b6","kind":"course","slug":"美甲美睫師實務班第01期-保養品製作調配行銷從業人-859b6","assignedAt":"2026-09-12"}
 {"id":"crs_5ed9e65d","kind":"course","slug":"法式糕點輕鬆做-松山社大-9e65d","assignedAt":"2026-09-19"}
 {"id":"crs_5eda48fe","kind":"course","slug":"溫和瑜珈-楊梅體育園區-a48fe","assignedAt":"2026-09-12"}
@@ -17809,6 +17871,7 @@
 {"id":"crs_5f11ad25","kind":"course","slug":"傳統整復推拿進階週六第01期-勞動力發展署桃竹苗分署-1ad25","assignedAt":"2026-10-03"}
 {"id":"crs_5f12ba4b","kind":"course","slug":"有氧經筋瑜珈-中壢社大-2ba4b","assignedAt":"2026-09-12"}
 {"id":"crs_5f1360de","kind":"course","slug":"入門燃脂飛輪-泰山運動中心-360de","assignedAt":"2026-09-29"}
+{"id":"crs_5f13d379","kind":"course","slug":"斐莉西雅歡樂肚皮舞-八德社大-3d379","assignedAt":"2026-10-15"}
 {"id":"crs_5f13e896","kind":"course","slug":"活力綜合有氧-立竹光運動中心-3e896","assignedAt":"2026-09-12"}
 {"id":"crs_5f1624cf","kind":"course","slug":"養生塑身保健瑜珈-新楊平社大-624cf","assignedAt":"2026-10-07"}
 {"id":"crs_5f171189","kind":"course","slug":"生活與法律-永康社大-71189","assignedAt":"2026-09-12"}
@@ -17877,6 +17940,7 @@
 {"id":"crs_5f76b770","kind":"course","slug":"卡拉OK輕鬆唱-松山社大-6b770","assignedAt":"2026-09-12"}
 {"id":"crs_5f76ce97","kind":"course","slug":"兒童初階-鳳山運動園區-6ce97","assignedAt":"2026-09-12"}
 {"id":"crs_5f791c28","kind":"course","slug":"短影音行銷實務班第01期-觀光旅宿從業人員職業工會-91c28","assignedAt":"2026-09-12"}
+{"id":"crs_5f79f739","kind":"course","slug":"薩克斯風初級1-八德社大-9f739","assignedAt":"2026-10-15"}
 {"id":"crs_5f7aa018","kind":"course","slug":"空靈鼓初級2-中壢社大-aa018","assignedAt":"2026-09-12"}
 {"id":"crs_5f7b77ae","kind":"course","slug":"和緩流動瑜珈-蘆洲運動中心-b77ae","assignedAt":"2026-09-29"}
 {"id":"crs_5f7c8665","kind":"course","slug":"書法鄧石如隸書初探總爺-曾文社大-c8665","assignedAt":"2026-09-13"}
@@ -18063,6 +18127,7 @@
 {"id":"crs_607d0ec0","kind":"course","slug":"樂齡代間桌球週四班-吉林國小-d0ec0","assignedAt":"2026-09-12"}
 {"id":"crs_607f3e73","kind":"course","slug":"友善耕作農業推廣工作坊-石門區樂齡中心-f3e73","assignedAt":"2026-09-12"}
 {"id":"crs_6080d56a","kind":"course","slug":"二胡國樂快樂學土庫-虎尾溪社大-0d56a","assignedAt":"2026-09-12"}
+{"id":"crs_60815bec","kind":"course","slug":"健身好幫手捷舞-八德社大-15bec","assignedAt":"2026-10-15"}
 {"id":"crs_6083bd7c","kind":"course","slug":"深入淺出烏克麗麗微進階-信義社大-3bd7c","assignedAt":"2026-09-12"}
 {"id":"crs_6083e9ad","kind":"course","slug":"零基礎流行舞蹈-萬華社大-3e9ad","assignedAt":"2026-09-15"}
 {"id":"crs_6083f34d","kind":"course","slug":"從家到自然的建築散步-萬華社大-3f34d","assignedAt":"2026-09-12"}
@@ -18431,6 +18496,7 @@
 {"id":"crs_6294463f","kind":"course","slug":"敲敲打打手縫做皮包-大屯社大-4463f","assignedAt":"2026-09-12"}
 {"id":"crs_629539e0","kind":"course","slug":"壁球成人進階班-長春國民暨兒童運動中心-539e0","assignedAt":"2026-09-29"}
 {"id":"crs_629771ee","kind":"course","slug":"兒童拉丁舞班-虎尾溪社大-771ee","assignedAt":"2026-09-12"}
+{"id":"crs_6299a2f9","kind":"course","slug":"手機拍出質感與時尚-八德社大-9a2f9","assignedAt":"2026-10-15"}
 {"id":"crs_629c5f94","kind":"course","slug":"咖啡的世界手沖初階假日班-岡山社大-c5f94","assignedAt":"2026-09-12"}
 {"id":"crs_629d9928","kind":"course","slug":"音樂為什麼動人用最自然的方式打開聽覺-私立開平餐飲-d9928","assignedAt":"2026-09-12"}
 {"id":"crs_629e50d2","kind":"course","slug":"手沖咖啡輕鬆學-三重社大-e50d2","assignedAt":"2026-09-12"}
@@ -18724,6 +18790,7 @@
 {"id":"crs_6437a8c6","kind":"course","slug":"早安球健康-曾文社大-7a8c6","assignedAt":"2026-09-12"}
 {"id":"crs_643bf28d","kind":"course","slug":"筆紙刀的嘉年華-水沙連社大-bf28d","assignedAt":"2026-09-12"}
 {"id":"crs_643ecdef","kind":"course","slug":"療癒瑜伽Healing-淡水運動中心-ecdef","assignedAt":"2026-10-06"}
+{"id":"crs_644107e8","kind":"course","slug":"核心塑身瑜伽-八德社大-107e8","assignedAt":"2026-10-15"}
 {"id":"crs_644206e6","kind":"course","slug":"桌球-鹿秀社大-206e6","assignedAt":"2026-09-12"}
 {"id":"crs_6442cf2f","kind":"course","slug":"與讀者有約多元生活系列講座CHATGPT-立圖書館金山分館-2cf2f","assignedAt":"2026-09-13"}
 {"id":"crs_6442fab4","kind":"course","slug":"法式編織-新楊平社大-2fab4","assignedAt":"2026-10-06"}
@@ -18869,6 +18936,7 @@
 {"id":"crs_64f67d3a","kind":"course","slug":"傳統整復推拿進階手法課程班-傳統整復員職業工會-67d3a","assignedAt":"2026-09-12"}
 {"id":"crs_64f88b13","kind":"course","slug":"肌力循環-蘆洲運動中心-88b13","assignedAt":"2026-09-29"}
 {"id":"crs_64fa132c","kind":"course","slug":"吉他輕鬆玩-信義社大-a132c","assignedAt":"2026-09-12"}
+{"id":"crs_64fb4c21","kind":"course","slug":"實用旅遊生活英語會話初級-桃園社大-b4c21","assignedAt":"2026-10-15"}
 {"id":"crs_64fd44dd","kind":"course","slug":"國台語卡拉OK-北屯社大-d44dd","assignedAt":"2026-10-01"}
 {"id":"crs_64fd48d4","kind":"course","slug":"國標舞倫巴-汐止社大-d48d4","assignedAt":"2026-09-12"}
 {"id":"crs_64feb316","kind":"course","slug":"開口說日語會話初級2-八德社大-eb316","assignedAt":"2026-09-12"}
@@ -18964,6 +19032,7 @@
 {"id":"crs_65810e0e","kind":"course","slug":"二胡演奏流行樂-新店崇光社大-10e0e","assignedAt":"2026-09-12"}
 {"id":"crs_6581b059","kind":"course","slug":"舞動活力有氧-中壢運動中心-1b059","assignedAt":"2026-09-18"}
 {"id":"crs_6581cb92","kind":"course","slug":"中醫養生-中山區樂齡學習優質中心-1cb92","assignedAt":"2026-09-12"}
+{"id":"crs_6584880e","kind":"course","slug":"開口說日語會話初級2-八德社大-4880e","assignedAt":"2026-10-15"}
 {"id":"crs_6586b617","kind":"course","slug":"有機農業與環境教育-平原社大-6b617","assignedAt":"2026-09-12"}
 {"id":"crs_6586d29e","kind":"course","slug":"舞瑜倫比-北屯國民暨兒童運動中心-6d29e","assignedAt":"2026-09-12"}
 {"id":"crs_6586d36e","kind":"course","slug":"常見法律與實務應用-鹿秀社大-6d36e","assignedAt":"2026-09-12"}
@@ -18977,6 +19046,7 @@
 {"id":"crs_658fab5d","kind":"course","slug":"生命故事書寫的方法與意義-竹塹社大-fab5d","assignedAt":"2026-09-12"}
 {"id":"crs_65903e7e","kind":"course","slug":"客語文寫作研習五折-新楊平社大-03e7e","assignedAt":"2026-10-07"}
 {"id":"crs_6590abfc","kind":"course","slug":"AI輔助WordPress網站架設行銷實-中華技職教育推廣協會-0abfc","assignedAt":"2026-09-12"}
+{"id":"crs_659236c5","kind":"course","slug":"自然手作的甜點滋味-八德社大-236c5","assignedAt":"2026-10-15"}
 {"id":"crs_6593e687","kind":"course","slug":"桌球樂齡專班-板橋運動中心-3e687","assignedAt":"2026-09-29"}
 {"id":"crs_659514de","kind":"course","slug":"經典電影賞析與城市閱讀-大安社大-514de","assignedAt":"2026-09-12"}
 {"id":"crs_6595cd9c","kind":"course","slug":"複合媒材教具應用班第01期-褓姆職業工會-5cd9c","assignedAt":"2026-09-12"}
@@ -18990,6 +19060,7 @@
 {"id":"crs_65a2e6a3","kind":"course","slug":"舒活健康動一動-臺北醫學大學展齡中心信義-2e6a3","assignedAt":"2026-09-12"}
 {"id":"crs_65a3c184","kind":"course","slug":"創意裝置藝術資源再利用-美港西社大-3c184","assignedAt":"2026-09-12"}
 {"id":"crs_65a51e27","kind":"course","slug":"皮革與生活風格皮革包袋製作-新莊社大-51e27","assignedAt":"2026-09-12"}
+{"id":"crs_65a5bdd4","kind":"course","slug":"有氧瑜珈提斯-八德社大-5bdd4","assignedAt":"2026-10-15"}
 {"id":"crs_65a8d7c0","kind":"course","slug":"燃脂飛輪-泰山運動中心-8d7c0","assignedAt":"2026-09-29"}
 {"id":"crs_65a9af73","kind":"course","slug":"輕軌散步漫慢城市風情畫五-第一社大-9af73","assignedAt":"2026-09-12"}
 {"id":"crs_65ab18d2","kind":"course","slug":"TIG氬氣鎢極電銲夜間-勞動力發展署雲嘉南分署-b18d2","assignedAt":"2026-09-12"}
@@ -19213,6 +19284,7 @@
 {"id":"crs_66c94060","kind":"course","slug":"樂活輕瑜珈-桃園社大-94060","assignedAt":"2026-09-14"}
 {"id":"crs_66cc61a9","kind":"course","slug":"黑白鍵上的午茶時光鋼琴名曲導聆-松山社大-c61a9","assignedAt":"2026-09-19"}
 {"id":"crs_66cd3ebf","kind":"course","slug":"羽球成人初級班-樹林運動中心-d3ebf","assignedAt":"2026-09-29"}
+{"id":"crs_66cf4246","kind":"course","slug":"探索埤塘地方文化-八德社大-f4246","assignedAt":"2026-10-15"}
 {"id":"crs_66cfb9da","kind":"course","slug":"電腦輔助機械繪圖與智慧化量測-勞動部勞動力發展署高屏澎-fb9da","assignedAt":"2026-09-12"}
 {"id":"crs_66d06532","kind":"course","slug":"非常愛吉他-文山社大-06532","assignedAt":"2026-09-12"}
 {"id":"crs_66d19d23","kind":"course","slug":"旅行台灣看歷史-三重社大-19d23","assignedAt":"2026-09-12"}
@@ -19261,6 +19333,7 @@
 {"id":"crs_66fdcd72","kind":"course","slug":"竹健康養生運動-南湖社大-dcd72","assignedAt":"2026-09-12"}
 {"id":"crs_6701058a","kind":"course","slug":"吉他好聲音指彈班-蘆荻社大-1058a","assignedAt":"2026-09-12"}
 {"id":"crs_67021603","kind":"course","slug":"快樂新移民家庭外籍配偶終身學習與創業輔導-大屯社大-21603","assignedAt":"2026-09-12"}
+{"id":"crs_6703827d","kind":"course","slug":"法式編織-八德社大-3827d","assignedAt":"2026-10-15"}
 {"id":"crs_67059054","kind":"course","slug":"樂學自然走步道-松山社大-59054","assignedAt":"2026-09-12"}
 {"id":"crs_6705cec5","kind":"course","slug":"手繪旅記水彩色鉛筆基礎班-萬華社大-5cec5","assignedAt":"2026-09-12"}
 {"id":"crs_6705eac7","kind":"course","slug":"愛說中文注音班-岡山社大-5eac7","assignedAt":"2026-09-12"}
@@ -19647,6 +19720,7 @@
 {"id":"crs_6908fa12","kind":"course","slug":"茶道生活藝術-永和社大-8fa12","assignedAt":"2026-09-12"}
 {"id":"crs_690a11a3","kind":"course","slug":"創意輕黏土-新楊平社大-a11a3","assignedAt":"2026-09-12"}
 {"id":"crs_690a96bd","kind":"course","slug":"AI輔助室內裝修設計養成宜蘭第01期-勞動力發展署北基宜花金馬-a96bd","assignedAt":"2026-10-09"}
+{"id":"crs_690c343d","kind":"course","slug":"太極傳統導引初級1-八德社大-c343d","assignedAt":"2026-10-15"}
 {"id":"crs_690cd52e","kind":"course","slug":"無痛刮痧-南湖社大-cd52e","assignedAt":"2026-09-12"}
 {"id":"crs_690ea9e0","kind":"course","slug":"熱汗派對瑜珈-科學城社大-ea9e0","assignedAt":"2026-09-12"}
 {"id":"crs_691057d6","kind":"course","slug":"Python與AI應用實務新竹第1期-勞動力發展署桃竹苗分署-057d6","assignedAt":"2026-10-02"}
@@ -19752,6 +19826,7 @@
 {"id":"crs_69a23603","kind":"course","slug":"水墨山水畫-嘉義市社大-23603","assignedAt":"2026-09-12"}
 {"id":"crs_69a45125","kind":"course","slug":"茶香漫談拓點-三峽區樂齡中心-45125","assignedAt":"2026-09-12"}
 {"id":"crs_69a4f86e","kind":"course","slug":"瑜珈輪伸展-竹北運動中心-4f86e","assignedAt":"2026-09-29"}
+{"id":"crs_69a57c1f","kind":"course","slug":"從素描入門到水彩速寫-八德社大-57c1f","assignedAt":"2026-10-15"}
 {"id":"crs_69a606ae","kind":"course","slug":"銀髮樂活肌力-中和運動中心-606ae","assignedAt":"2026-10-01"}
 {"id":"crs_69a6f7fe","kind":"course","slug":"ZumbaA-南港社大-6f7fe","assignedAt":"2026-09-12"}
 {"id":"crs_69a9857c","kind":"course","slug":"伸展瑜珈B-員永村社大-9857c","assignedAt":"2026-09-12"}
@@ -19775,6 +19850,7 @@
 {"id":"crs_69b9bb59","kind":"course","slug":"說唱日文會話-後驛社大-9bb59","assignedAt":"2026-09-12"}
 {"id":"crs_69bd484c","kind":"course","slug":"自然養生樂活健康-后豐社大-d484c","assignedAt":"2026-09-12"}
 {"id":"crs_69bd4c07","kind":"course","slug":"禪繞畫初級1-中壢社大-d4c07","assignedAt":"2026-09-12"}
+{"id":"crs_69bff55c","kind":"course","slug":"輕鬆玩美瑜珈提斯-八德社大-ff55c","assignedAt":"2026-10-15"}
 {"id":"crs_69ca2788","kind":"course","slug":"Pilates-中壢運動中心-a2788","assignedAt":"2026-09-12"}
 {"id":"crs_69cae0a7","kind":"course","slug":"走讀自然山林室內課在週三晚上-蘆荻社大-ae0a7","assignedAt":"2026-09-12"}
 {"id":"crs_69cc60df","kind":"course","slug":"日語初級1-八德社大-c60df","assignedAt":"2026-09-12"}
@@ -19789,6 +19865,7 @@
 {"id":"crs_69e36232","kind":"course","slug":"K線戰爭看懂行情避開風險累積資產-大安社大-36232","assignedAt":"2026-09-12"}
 {"id":"crs_69e5b9a9","kind":"course","slug":"養生太極拳初階-后豐社大-5b9a9","assignedAt":"2026-09-12"}
 {"id":"crs_69e9f85b","kind":"course","slug":"樂齡肌力-中正運動中心-9f85b","assignedAt":"2026-09-29"}
+{"id":"crs_69ea2638","kind":"course","slug":"能量養生瑜珈-八德社大-a2638","assignedAt":"2026-10-15"}
 {"id":"crs_69eaaeee","kind":"course","slug":"手作美學金工漆藝多媒材-信義社大-aaeee","assignedAt":"2026-09-12"}
 {"id":"crs_69eaf853","kind":"course","slug":"東港愛上手工皂-屏南區社大-af853","assignedAt":"2026-09-12"}
 {"id":"crs_69ed3c78","kind":"course","slug":"美好日常刺繡-鎮港園社大-d3c78","assignedAt":"2026-09-12"}
@@ -19810,6 +19887,7 @@
 {"id":"crs_6a095406","kind":"course","slug":"有機溶劑作業主管教育訓練班第01期-中華民國勞動災害防止協會-95406","assignedAt":"2026-09-12"}
 {"id":"crs_6a09619a","kind":"course","slug":"茶道與生活-桃園社大-9619a","assignedAt":"2026-09-12"}
 {"id":"crs_6a09a73e","kind":"course","slug":"假日成人-樹林運動中心-9a73e","assignedAt":"2026-09-29"}
+{"id":"crs_6a0ad076","kind":"course","slug":"就愛玩粉彩-八德社大-ad076","assignedAt":"2026-10-15"}
 {"id":"crs_6a0fc48e","kind":"course","slug":"流動瑜珈-中正運動中心-fc48e","assignedAt":"2026-09-29"}
 {"id":"crs_6a1064bc","kind":"course","slug":"素描全攻略1-嘉義市社大-064bc","assignedAt":"2026-09-12"}
 {"id":"crs_6a117067","kind":"course","slug":"現代流行爵士鋼琴-中山社大-17067","assignedAt":"2026-09-12"}
@@ -19936,6 +20014,7 @@
 {"id":"crs_6ac1dd72","kind":"course","slug":"吹響薩克斯風中級-新楊平社大-1dd72","assignedAt":"2026-10-06"}
 {"id":"crs_6ac21ca1","kind":"course","slug":"小提琴初級班-文山社大-21ca1","assignedAt":"2026-09-12"}
 {"id":"crs_6ac21dfa","kind":"course","slug":"核心覺醒器械皮拉提斯-苓雅運動中心-21dfa","assignedAt":"2026-09-29"}
+{"id":"crs_6ac8bfd2","kind":"course","slug":"生活書法美學-八德社大-8bfd2","assignedAt":"2026-10-15"}
 {"id":"crs_6ac9d2ad","kind":"course","slug":"生活拼布刺繡-三重社大-9d2ad","assignedAt":"2026-09-12"}
 {"id":"crs_6acb6cdd","kind":"course","slug":"園藝景觀與綠意美學設計實作班第01期-總工會-b6cdd","assignedAt":"2026-09-12"}
 {"id":"crs_6ace13ed","kind":"course","slug":"樂學自然-松山社大-e13ed","assignedAt":"2026-09-12"}
@@ -20050,6 +20129,7 @@
 {"id":"crs_6b747593","kind":"course","slug":"大稻埕布創藝美學-大同社大-47593","assignedAt":"2026-09-12"}
 {"id":"crs_6b768e27","kind":"course","slug":"風格有氧-彰化社大-68e27","assignedAt":"2026-09-12"}
 {"id":"crs_6b777e1a","kind":"course","slug":"點心麵包烘焙盛宴-中山社大-77e1a","assignedAt":"2026-09-12"}
+{"id":"crs_6b799fb3","kind":"course","slug":"有氧經筋瑜珈-八德社大-99fb3","assignedAt":"2026-10-15"}
 {"id":"crs_6b7b6162","kind":"course","slug":"樂來樂有趣古典音樂萬花筒-第一社大-b6162","assignedAt":"2026-09-12"}
 {"id":"crs_6b7bf3bf","kind":"course","slug":"觀鳥樂活週一-新店崇光社大-bf3bf","assignedAt":"2026-09-12"}
 {"id":"crs_6b7c72ec","kind":"course","slug":"全身肌力訓練-楊梅體育園區-c72ec","assignedAt":"2026-09-29"}
@@ -20134,6 +20214,7 @@
 {"id":"crs_6be8a6ac","kind":"course","slug":"哈達瑜珈三芝-淡水社大-8a6ac","assignedAt":"2026-09-12"}
 {"id":"crs_6beaeb26","kind":"course","slug":"親山河濱步道PaPaGo-南港社大-aeb26","assignedAt":"2026-09-12"}
 {"id":"crs_6bebffc3","kind":"course","slug":"結構核心肌力體重訓-北投社大-bffc3","assignedAt":"2026-09-12"}
+{"id":"crs_6bec9e31","kind":"course","slug":"日語中級1-八德社大-c9e31","assignedAt":"2026-10-15"}
 {"id":"crs_6bed08ba","kind":"course","slug":"成人匹克球團體班-大里國民暨兒童運動中心-d08ba","assignedAt":"2026-09-29"}
 {"id":"crs_6bed1082","kind":"course","slug":"腳底按摩調理手法實戰A班-腳底按摩職業工會-d1082","assignedAt":"2026-09-12"}
 {"id":"crs_6bf01994","kind":"course","slug":"客家山歌大家唱北埔-竹東社大-01994","assignedAt":"2026-09-12"}
@@ -20331,6 +20412,7 @@
 {"id":"crs_6cbcc5b7","kind":"course","slug":"色鉛筆的藝術家之旅從名畫學繪畫大社-北高雄社大-cc5b7","assignedAt":"2026-09-12"}
 {"id":"crs_6cbd19db","kind":"course","slug":"投資金融市場之技術分析-苗栗社大-d19db","assignedAt":"2026-09-12"}
 {"id":"crs_6cc028db","kind":"course","slug":"活力太鼓-甲安埔社大-028db","assignedAt":"2026-09-12"}
+{"id":"crs_6cc0d6ef","kind":"course","slug":"銀髮健康音樂體適能-八德社大-0d6ef","assignedAt":"2026-10-15"}
 {"id":"crs_6cc5b1cd","kind":"course","slug":"太極拳氣功導引-新楊平社大-5b1cd","assignedAt":"2026-10-06"}
 {"id":"crs_6cc62490","kind":"course","slug":"咖啡飲品樂活-桃園社大-62490","assignedAt":"2026-09-12"}
 {"id":"crs_6cc68772","kind":"course","slug":"水彩速寫輕旅行-大安社大-68772","assignedAt":"2026-09-12"}
@@ -20391,6 +20473,7 @@
 {"id":"crs_6d11d4e8","kind":"course","slug":"數位生活導航快樂學習手機與電腦長青學苑-內湖社大-1d4e8","assignedAt":"2026-09-12"}
 {"id":"crs_6d1558f0","kind":"course","slug":"體育舞蹈拉丁雙人捷舞-海線社大-558f0","assignedAt":"2026-09-12"}
 {"id":"crs_6d19cd3c","kind":"course","slug":"FITMIX80動能體雕FY-豐原國民暨兒童運動中心-9cd3c","assignedAt":"2026-09-29"}
+{"id":"crs_6d1f6b47","kind":"course","slug":"篆刻藝術-八德社大-f6b47","assignedAt":"2026-10-15"}
 {"id":"crs_6d200a87","kind":"course","slug":"國標舞森巴-美港西社大-00a87","assignedAt":"2026-09-12"}
 {"id":"crs_6d20c54c","kind":"course","slug":"黏土捏塑仿真迷你花卉系列-大安社大-0c54c","assignedAt":"2026-09-12"}
 {"id":"crs_6d21b24f","kind":"course","slug":"電子琴永-員永村社大-1b24f","assignedAt":"2026-09-12"}
@@ -20527,6 +20610,7 @@
 {"id":"crs_6de08680","kind":"course","slug":"輕鬆學日語聊日本文化仁武-北高雄社大-08680","assignedAt":"2026-09-12"}
 {"id":"crs_6de18fd7","kind":"course","slug":"11506幼兒平日班週四180036歲-新店運動中心-18fd7","assignedAt":"2026-10-12"}
 {"id":"crs_6de1e3e8","kind":"course","slug":"心肺燃脂飛輪-新莊運動中心-1e3e8","assignedAt":"2026-09-29"}
+{"id":"crs_6de21c64","kind":"course","slug":"旅遊生活英語會話初級-桃園社大-21c64","assignedAt":"2026-10-15"}
 {"id":"crs_6de2fc1d","kind":"course","slug":"拳擊體適能-士林社大-2fc1d","assignedAt":"2026-09-12"}
 {"id":"crs_6de37060","kind":"course","slug":"兒童韓風MV舞蹈-彰北運動中心-37060","assignedAt":"2026-09-12"}
 {"id":"crs_6de40eac","kind":"course","slug":"壁球成人團體班-長春國民暨兒童運動中心-40eac","assignedAt":"2026-09-29"}
@@ -20573,6 +20657,7 @@
 {"id":"crs_6e14eac7","kind":"course","slug":"小提琴歡喜演奏初級-內湖社大-4eac7","assignedAt":"2026-09-12"}
 {"id":"crs_6e1657c9","kind":"course","slug":"小赤讀書會-社大-657c9","assignedAt":"2026-09-13"}
 {"id":"crs_6e16ef69","kind":"course","slug":"核心強化瑜珈與敦煌能量養生功法-曾文社大-6ef69","assignedAt":"2026-09-12"}
+{"id":"crs_6e176a53","kind":"course","slug":"TABATA律動核心瑜珈-八德社大-76a53","assignedAt":"2026-10-15"}
 {"id":"crs_6e1a9519","kind":"course","slug":"TRX懸吊綜合訓練-林口運動中心-a9519","assignedAt":"2026-09-28"}
 {"id":"crs_6e1c4ce2","kind":"course","slug":"國畫初級班-虎尾溪社大-c4ce2","assignedAt":"2026-09-12"}
 {"id":"crs_6e1c662a","kind":"course","slug":"器械皮拉皮斯-中和運動中心-c662a","assignedAt":"2026-10-01"}
@@ -21426,6 +21511,7 @@
 {"id":"crs_72a56241","kind":"course","slug":"唱唱美聲經典作品-信義社大-56241","assignedAt":"2026-09-12"}
 {"id":"crs_72a66ad5","kind":"course","slug":"看見臺北走讀臺灣-中正社大-66ad5","assignedAt":"2026-09-12"}
 {"id":"crs_72a78b43","kind":"course","slug":"日語初級下-萬華社大-78b43","assignedAt":"2026-09-12"}
+{"id":"crs_72a843dc","kind":"course","slug":"輕鬆玩美瑜珈提斯A-八德社大-843dc","assignedAt":"2026-10-15"}
 {"id":"crs_72ab194d","kind":"course","slug":"心開運轉創活力-新莊區樂齡學習優質中心-b194d","assignedAt":"2026-09-12"}
 {"id":"crs_72ab660e","kind":"course","slug":"和緩流動瑜伽-大同運動中心-b660e","assignedAt":"2026-09-12"}
 {"id":"crs_72af1904","kind":"course","slug":"TRX基礎體雕-竹北運動中心-f1904","assignedAt":"2026-09-29"}
@@ -21520,6 +21606,7 @@
 {"id":"crs_731eead8","kind":"course","slug":"塑身瑜珈-八德運動中心-eead8","assignedAt":"2026-09-12"}
 {"id":"crs_731f2bad","kind":"course","slug":"汐止區婦女瑜伽班-汐止區公所-f2bad","assignedAt":"2026-09-12"}
 {"id":"crs_731fb91f","kind":"course","slug":"文創產業ESG綠色行銷與永續品牌經營實務-臺灣文化創意拼布產業工會-fb91f","assignedAt":"2026-09-12"}
+{"id":"crs_7320997c","kind":"course","slug":"最夯古裝劇古典舞-八德社大-0997c","assignedAt":"2026-10-15"}
 {"id":"crs_73213eda","kind":"course","slug":"彼拉提斯-中山社大-13eda","assignedAt":"2026-09-12"}
 {"id":"crs_73234fbb","kind":"course","slug":"健康心方法-新莊區樂齡學習優質中心-34fbb","assignedAt":"2026-09-12"}
 {"id":"crs_7325ff7f","kind":"course","slug":"拳擊有氧-桃園運動中心-5ff7f","assignedAt":"2026-09-12"}
@@ -21554,6 +21641,7 @@
 {"id":"crs_734e06c7","kind":"course","slug":"薩克斯風初級班-基隆社大-e06c7","assignedAt":"2026-09-12"}
 {"id":"crs_734e8daf","kind":"course","slug":"快樂吹長笛中階班-社大-e8daf","assignedAt":"2026-09-12"}
 {"id":"crs_73507ce8","kind":"course","slug":"精品咖啡餐飲實務桃園第2期-勞動力發展署桃竹苗分署-07ce8","assignedAt":"2026-10-02"}
+{"id":"crs_7350d730","kind":"course","slug":"水生植物環保生態與生活應用-八德社大-0d730","assignedAt":"2026-10-15"}
 {"id":"crs_7353ff3e","kind":"course","slug":"激烈爆燃壺鈴-大同運動中心-3ff3e","assignedAt":"2026-09-29"}
 {"id":"crs_7355fa2a","kind":"course","slug":"新手入門飛輪-大同運動中心-5fa2a","assignedAt":"2026-09-12"}
 {"id":"crs_7357bd97","kind":"course","slug":"芭蕾提斯-信義運動中心-7bd97","assignedAt":"2026-09-29"}
@@ -21994,6 +22082,7 @@
 {"id":"crs_75e8eb6c","kind":"course","slug":"機電整合-勞動部勞動力發展署高屏澎-8eb6c","assignedAt":"2026-09-12"}
 {"id":"crs_75e8fa62","kind":"course","slug":"器械皮拉提斯-彰北運動中心-8fa62","assignedAt":"2026-10-12"}
 {"id":"crs_75e90726","kind":"course","slug":"功夫太極推手-大安社大-90726","assignedAt":"2026-09-12"}
+{"id":"crs_75e90afe","kind":"course","slug":"水生植物環保生態與生活應用-八德社大-90afe","assignedAt":"2026-10-15"}
 {"id":"crs_75eb2230","kind":"course","slug":"逆齡狂潮街舞班-內湖區樂齡中心-b2230","assignedAt":"2026-09-23"}
 {"id":"crs_75ebdf7f","kind":"course","slug":"直播電商與社群影音行銷實務新竹-勞動力發展署桃竹苗分署-bdf7f","assignedAt":"2026-09-12"}
 {"id":"crs_75ec1d15","kind":"course","slug":"精品咖啡的迷人世界手沖咖啡好好玩-中山社大-c1d15","assignedAt":"2026-09-12"}
@@ -22219,6 +22308,7 @@
 {"id":"crs_773158c9","kind":"course","slug":"快樂好聲音歌唱班-南湖社大-158c9","assignedAt":"2026-09-12"}
 {"id":"crs_7731e918","kind":"course","slug":"金工進階班-社大-1e918","assignedAt":"2026-09-12"}
 {"id":"crs_7732ecd1","kind":"course","slug":"線材美感創作-鳳山社大-2ecd1","assignedAt":"2026-09-12"}
+{"id":"crs_773346a1","kind":"course","slug":"國台日語歌唱教學-八德社大-346a1","assignedAt":"2026-10-15"}
 {"id":"crs_7733c78b","kind":"course","slug":"24式太極拳初級1-桃園社大-3c78b","assignedAt":"2026-09-12"}
 {"id":"crs_773751ef","kind":"course","slug":"越南語與越南文化生活越語篇原學分費300-新莊社大-751ef","assignedAt":"2026-09-12"}
 {"id":"crs_77378ffe","kind":"course","slug":"認識高雄走讀壽山2-第一社大-78ffe","assignedAt":"2026-09-12"}
@@ -22626,6 +22716,7 @@
 {"id":"crs_7977a3c7","kind":"course","slug":"羽球初階-甲安埔社大-7a3c7","assignedAt":"2026-09-12"}
 {"id":"crs_7978b7d4","kind":"course","slug":"11505入門空中瑜珈095092610-新店運動中心-8b7d4","assignedAt":"2026-09-29"}
 {"id":"crs_7978baca","kind":"course","slug":"伸展瑜珈-三重運動中心-8baca","assignedAt":"2026-09-29"}
+{"id":"crs_797c3f9d","kind":"course","slug":"箏馨樂活-八德社大-c3f9d","assignedAt":"2026-10-15"}
 {"id":"crs_797dbc4d","kind":"course","slug":"強膝肌力旅騎-板橋運動中心-dbc4d","assignedAt":"2026-09-29"}
 {"id":"crs_79802821","kind":"course","slug":"北投文化英文導覽培訓-北投社大-02821","assignedAt":"2026-09-12"}
 {"id":"crs_7980c0ac","kind":"course","slug":"說寫地方導覽解說技巧-濁水溪社大-0c0ac","assignedAt":"2026-09-12"}
@@ -22669,6 +22760,7 @@
 {"id":"crs_79b69af6","kind":"course","slug":"羽球班-中山運動中心-69af6","assignedAt":"2026-09-12"}
 {"id":"crs_79b69e9a","kind":"course","slug":"文化拼圖工作坊小旅行文本設計-桃園社大-69e9a","assignedAt":"2026-09-14"}
 {"id":"crs_79b76b9c","kind":"course","slug":"自然觀察輕鬆行-中正社大-76b9c","assignedAt":"2026-09-12"}
+{"id":"crs_79bb234e","kind":"course","slug":"印度古瑜珈初級3-八德社大-b234e","assignedAt":"2026-10-15"}
 {"id":"crs_79bcabef","kind":"course","slug":"口琴愛好研習-松山社大-cabef","assignedAt":"2026-09-12"}
 {"id":"crs_79bf93d8","kind":"course","slug":"藝遊薩克斯風2-北高雄社大-f93d8","assignedAt":"2026-09-12"}
 {"id":"crs_79c286ec","kind":"course","slug":"肌耐力運動-大同國小-286ec","assignedAt":"2026-09-12"}
@@ -22788,6 +22880,7 @@
 {"id":"crs_7a6bedfc","kind":"course","slug":"KPOP-淡水運動中心-bedfc","assignedAt":"2026-09-29"}
 {"id":"crs_7a6c4a80","kind":"course","slug":"創意打包帶編織不開放旁聽-鎮港園社大-c4a80","assignedAt":"2026-09-12"}
 {"id":"crs_7a6d1c12","kind":"course","slug":"A242基礎體能訓練週三B-海線社大-d1c12","assignedAt":"2026-09-12"}
+{"id":"crs_7a6d4034","kind":"course","slug":"養生塑身瑜伽初級1-八德社大-d4034","assignedAt":"2026-10-15"}
 {"id":"crs_7a6de3f1","kind":"course","slug":"微光電子刊物-蘆山園社大-de3f1","assignedAt":"2026-09-14"}
 {"id":"crs_7a6f0b52","kind":"course","slug":"療癒瑜伽-汐止運動中心-f0b52","assignedAt":"2026-09-12"}
 {"id":"crs_7a704ac0","kind":"course","slug":"A132白鶴獅陣展功夫-海線社大-04ac0","assignedAt":"2026-09-12"}
@@ -22812,6 +22905,7 @@
 {"id":"crs_7a8603c2","kind":"course","slug":"器械皮拉提斯-五股運動中心-603c2","assignedAt":"2026-09-29"}
 {"id":"crs_7a86a708","kind":"course","slug":"手機平板App創意與生活應用-豐湖社大-6a708","assignedAt":"2026-09-12"}
 {"id":"crs_7a86b740","kind":"course","slug":"勞動法令與常見勞資爭議問題處理實務班第0-工業會-6b740","assignedAt":"2026-09-12"}
+{"id":"crs_7a86d444","kind":"course","slug":"經絡穴道保健與應用-八德社大-6d444","assignedAt":"2026-10-15"}
 {"id":"crs_7a87878a","kind":"course","slug":"TRX-大里國民暨兒童運動中心-7878a","assignedAt":"2026-09-29"}
 {"id":"crs_7a8819c2","kind":"course","slug":"蔬果有機栽培管理入門-二林社大-819c2","assignedAt":"2026-09-12"}
 {"id":"crs_7a8b613b","kind":"course","slug":"日本文化實作體驗-科學城社大-b613b","assignedAt":"2026-09-12"}
@@ -23192,6 +23286,7 @@
 {"id":"crs_7c725ae0","kind":"course","slug":"塔羅牌教學神奇的奧修禪塔羅-花蓮社大-25ae0","assignedAt":"2026-09-12"}
 {"id":"crs_7c7304e4","kind":"course","slug":"低空療癒-竹北運動中心-304e4","assignedAt":"2026-09-29"}
 {"id":"crs_7c753ba3","kind":"course","slug":"兒童羽球FY-豐原國民暨兒童運動中心-53ba3","assignedAt":"2026-10-01"}
+{"id":"crs_7c7591ed","kind":"course","slug":"複合式永生花藝-八德社大-591ed","assignedAt":"2026-10-15"}
 {"id":"crs_7c77a005","kind":"course","slug":"循環肌力訓練-桃園運動中心-7a005","assignedAt":"2026-09-29"}
 {"id":"crs_7c799d7c","kind":"course","slug":"水彩創意實驗室-八德社大-99d7c","assignedAt":"2026-10-14"}
 {"id":"crs_7c7add9e","kind":"course","slug":"週六麵包點心B六甲-曾文社大-add9e","assignedAt":"2026-09-13"}
@@ -23199,6 +23294,7 @@
 {"id":"crs_7c7ee348","kind":"course","slug":"書法賞析臨習與創作-科學城社大-ee348","assignedAt":"2026-09-12"}
 {"id":"crs_7c7fde9f","kind":"course","slug":"胡說創意二胡基礎班-山線社大-fde9f","assignedAt":"2026-09-12"}
 {"id":"crs_7c802c50","kind":"course","slug":"順天應食蔬食米食麵食調理保險必保學分費3-新莊社大-02c50","assignedAt":"2026-09-12"}
+{"id":"crs_7c8086fe","kind":"course","slug":"烘焙食尚-八德社大-086fe","assignedAt":"2026-10-15"}
 {"id":"crs_7c81fd84","kind":"course","slug":"花道藝術-新楊平社大-1fd84","assignedAt":"2026-09-12"}
 {"id":"crs_7c827086","kind":"course","slug":"芭蕾形體雕塑舞碼班-社大-27086","assignedAt":"2026-09-13"}
 {"id":"crs_7c838586","kind":"course","slug":"新古典融合舞A-員永村社大-38586","assignedAt":"2026-09-12"}
@@ -23232,6 +23328,7 @@
 {"id":"crs_7ca3f0b8","kind":"course","slug":"古箏初級-中壢社大-3f0b8","assignedAt":"2026-09-12"}
 {"id":"crs_7ca4167c","kind":"course","slug":"幸福滋味做烘焙初級2-桃園社大-4167c","assignedAt":"2026-09-12"}
 {"id":"crs_7ca537e3","kind":"course","slug":"兒童MV流行舞-三重運動中心-537e3","assignedAt":"2026-09-29"}
+{"id":"crs_7ca61983","kind":"course","slug":"手機平板輕鬆學與應用-八德社大-61983","assignedAt":"2026-10-15"}
 {"id":"crs_7ca72bd2","kind":"course","slug":"開口就會好上口的日語五十音-萬華社大-72bd2","assignedAt":"2026-09-12"}
 {"id":"crs_7ca749d7","kind":"course","slug":"A27粉彩基礎班-山線社大-749d7","assignedAt":"2026-09-12"}
 {"id":"crs_7ca7df69","kind":"course","slug":"AI輔助與產品設計整合實務班第01期-健行學校財團法人健行科技-7df69","assignedAt":"2026-09-12"}
@@ -23269,6 +23366,7 @@
 {"id":"crs_7cc9b19c","kind":"course","slug":"成人基礎班-南港運動中心-9b19c","assignedAt":"2026-09-29"}
 {"id":"crs_7cca6f86","kind":"course","slug":"養生太極拳初階-后豐社大-a6f86","assignedAt":"2026-09-12"}
 {"id":"crs_7ccab523","kind":"course","slug":"新流行MV-竹北運動中心-ab523","assignedAt":"2026-09-29"}
+{"id":"crs_7ccb82ab","kind":"course","slug":"魅力有氧皮拉提斯-八德社大-b82ab","assignedAt":"2026-10-15"}
 {"id":"crs_7cccc4b5","kind":"course","slug":"電子琴輕鬆學-中壢社大-cc4b5","assignedAt":"2026-09-12"}
 {"id":"crs_7ccd4f26","kind":"course","slug":"元門太極拳38勢入門-林口社大-d4f26","assignedAt":"2026-09-12"}
 {"id":"crs_7ccdc67b","kind":"course","slug":"花藝池坊生活化保險必保學分費3000-新莊社大-dc67b","assignedAt":"2026-09-12"}
@@ -23450,6 +23548,7 @@
 {"id":"crs_7dd03681","kind":"course","slug":"KK音標與自然發音進階-美港西社大-03681","assignedAt":"2026-09-12"}
 {"id":"crs_7dd0a657","kind":"course","slug":"寂靜的聲音從新聞時事學手語-士林社大-0a657","assignedAt":"2026-09-12"}
 {"id":"crs_7dd113ef","kind":"course","slug":"溼地服務隊-新莊社大-113ef","assignedAt":"2026-09-12"}
+{"id":"crs_7dd17450","kind":"course","slug":"中草藥養生與美容實務-桃園社大-17450","assignedAt":"2026-10-15"}
 {"id":"crs_7dd1fa5b","kind":"course","slug":"彰化社大合唱團-彰化社大-1fa5b","assignedAt":"2026-09-12"}
 {"id":"crs_7dd215a4","kind":"course","slug":"舒緩瑜珈-彰北運動中心-215a4","assignedAt":"2026-09-12"}
 {"id":"crs_7dd2a9d6","kind":"course","slug":"女子肌力-中和運動中心-2a9d6","assignedAt":"2026-09-29"}
@@ -23829,6 +23928,7 @@
 {"id":"crs_800364bd","kind":"course","slug":"肌力雕塑班樂齡-樹林運動中心-364bd","assignedAt":"2026-09-29"}
 {"id":"crs_800709d4","kind":"course","slug":"11506假日兒童基礎班715歲1111-蘆竹運動中心-709d4","assignedAt":"2026-10-03"}
 {"id":"crs_80074ee3","kind":"course","slug":"日本舞踊藤間流入門班-汐止運動中心-74ee3","assignedAt":"2026-09-12"}
+{"id":"crs_80086222","kind":"course","slug":"觀光日語-八德社大-86222","assignedAt":"2026-10-15"}
 {"id":"crs_800b2bf8","kind":"course","slug":"工業配線丙級第03期-勞動力發展署雲嘉南分署-b2bf8","assignedAt":"2026-09-12"}
 {"id":"crs_800baa27","kind":"course","slug":"萬聖節髮箍DIY萬聖節髮箍DIY-立圖書館中和員山分館-baa27","assignedAt":"2026-09-13"}
 {"id":"crs_800e88db","kind":"course","slug":"國畫山水花鳥畫班-板橋區長壽會-e88db","assignedAt":"2026-09-12"}
@@ -24138,6 +24238,7 @@
 {"id":"crs_81a504d3","kind":"course","slug":"馬賽克藝術創作-桃園社大-504d3","assignedAt":"2026-09-14"}
 {"id":"crs_81a5a437","kind":"course","slug":"山岳博物學鐵道捷運趴趴走-大安社大-5a437","assignedAt":"2026-09-12"}
 {"id":"crs_81a6a970","kind":"course","slug":"游泳幼兒班-林口運動中心-6a970","assignedAt":"2026-09-29"}
+{"id":"crs_81a904bd","kind":"course","slug":"國標舞輕鬆學中級1-八德社大-904bd","assignedAt":"2026-10-15"}
 {"id":"crs_81a93884","kind":"course","slug":"樂多流行有氧-蘆山園社大-93884","assignedAt":"2026-09-12"}
 {"id":"crs_81a9c906","kind":"course","slug":"日語五十音-八德社大-9c906","assignedAt":"2026-09-12"}
 {"id":"crs_81aa61b2","kind":"course","slug":"你的港味不是我的港味從港式家庭料理中細看-市圖總館新總館-a61b2","assignedAt":"2026-09-13"}
@@ -24145,6 +24246,7 @@
 {"id":"crs_81aafb55","kind":"course","slug":"香氛舒壓居家精油保健-新楊平社大-afb55","assignedAt":"2026-09-12"}
 {"id":"crs_81acd384","kind":"course","slug":"速寫插畫-貓羅溪社大-cd384","assignedAt":"2026-09-12"}
 {"id":"crs_81ae7cc5","kind":"course","slug":"燃脂飛輪YG-三峽運動中心-e7cc5","assignedAt":"2026-09-29"}
+{"id":"crs_81ae8233","kind":"course","slug":"魅力熱舞-八德社大-e8233","assignedAt":"2026-10-15"}
 {"id":"crs_81af9c87","kind":"course","slug":"伸展肌力與滾筒筋膜放鬆-潭雅神社大-f9c87","assignedAt":"2026-09-12"}
 {"id":"crs_81b1a2ba","kind":"course","slug":"舒活瑜珈六週-三重社大-1a2ba","assignedAt":"2026-09-12"}
 {"id":"crs_81b39500","kind":"course","slug":"輕鬆學小提琴-三鶯社大-39500","assignedAt":"2026-09-12"}
@@ -24282,6 +24384,7 @@
 {"id":"crs_823a76c6","kind":"course","slug":"彩墨國畫-員永村社大-a76c6","assignedAt":"2026-09-12"}
 {"id":"crs_823c6e3a","kind":"course","slug":"TRX懸吊式訓練-中壢運動中心-c6e3a","assignedAt":"2026-09-29"}
 {"id":"crs_823eda70","kind":"course","slug":"開心學太極陳式太極拳36式-新中和社大-eda70","assignedAt":"2026-09-12"}
+{"id":"crs_82452125","kind":"course","slug":"易經與紫微斗數-八德社大-52125","assignedAt":"2026-10-15"}
 {"id":"crs_824589ea","kind":"course","slug":"115年母語讀冊Chill10月場美崙山-林森圖書館-589ea","assignedAt":"2026-10-13"}
 {"id":"crs_82461838","kind":"course","slug":"不累生活正念溝通力-北投社大-61838","assignedAt":"2026-09-12"}
 {"id":"crs_82477b0b","kind":"course","slug":"中音次中音薩克斯風進階-後驛社大-77b0b","assignedAt":"2026-09-12"}
@@ -24424,6 +24527,7 @@
 {"id":"crs_830fec8f","kind":"course","slug":"二胡演奏初級2-中壢社大-fec8f","assignedAt":"2026-09-12"}
 {"id":"crs_830fef66","kind":"course","slug":"歌唱教學-社區家庭關懷協會-fef66","assignedAt":"2026-09-12"}
 {"id":"crs_8310a4eb","kind":"course","slug":"保健食品行銷企劃人員培訓班第01期-光鹽生物科技-0a4eb","assignedAt":"2026-10-09"}
+{"id":"crs_8311bc03","kind":"course","slug":"輕鬆玩美瑜珈提斯B-八德社大-1bc03","assignedAt":"2026-10-15"}
 {"id":"crs_8311eb94","kind":"course","slug":"佛拉明哥初級-社大-1eb94","assignedAt":"2026-09-12"}
 {"id":"crs_83135760","kind":"course","slug":"書法藝術之美早-鳳山社大-35760","assignedAt":"2026-09-12"}
 {"id":"crs_83146e84","kind":"course","slug":"友善耕作小菜園-信義社大-46e84","assignedAt":"2026-09-12"}
@@ -24555,6 +24659,7 @@
 {"id":"crs_83da5490","kind":"course","slug":"健康樂活飛輪-文山運動中心-a5490","assignedAt":"2026-09-12"}
 {"id":"crs_83daf750","kind":"course","slug":"韓風MV-大里國民暨兒童運動中心-af750","assignedAt":"2026-09-29"}
 {"id":"crs_83db04b9","kind":"course","slug":"和緩瑜珈-太平國民暨兒童運動中心-b04b9","assignedAt":"2026-09-12"}
+{"id":"crs_83dd40fb","kind":"course","slug":"銀髮讀經-八德社大-d40fb","assignedAt":"2026-10-15"}
 {"id":"crs_83dd6afe","kind":"course","slug":"Zumba-中壢運動中心-d6afe","assignedAt":"2026-09-12"}
 {"id":"crs_83e3f513","kind":"course","slug":"體適能-天主教遣使會聖文生之友社-3f513","assignedAt":"2026-09-12"}
 {"id":"crs_83e475c5","kind":"course","slug":"樂胡趣味二胡基礎班-平原社大-475c5","assignedAt":"2026-09-12"}
@@ -24595,6 +24700,7 @@
 {"id":"crs_8411eb9f","kind":"course","slug":"愛上自己的聲音聲音的魅力-松山社大-1eb9f","assignedAt":"2026-09-19"}
 {"id":"crs_8414adb0","kind":"course","slug":"屏東好聲音-屏北區社大-4adb0","assignedAt":"2026-09-12"}
 {"id":"crs_8415797b","kind":"course","slug":"主持人培訓班-花蓮社大-5797b","assignedAt":"2026-09-12"}
+{"id":"crs_8415b386","kind":"course","slug":"基礎英語會話-八德社大-5b386","assignedAt":"2026-10-15"}
 {"id":"crs_841ac194","kind":"course","slug":"空中瑜珈A第三期-海線社大-ac194","assignedAt":"2026-09-12"}
 {"id":"crs_841b1f0a","kind":"course","slug":"古道探索進階B1-豐湖社大-b1f0a","assignedAt":"2026-09-12"}
 {"id":"crs_841b7eb3","kind":"course","slug":"夏日愛吉他-文山社大-b7eb3","assignedAt":"2026-09-12"}
@@ -24955,6 +25061,7 @@
 {"id":"crs_863023ee","kind":"course","slug":"鼓棒有氧POUNDFIT-甲安埔社大-023ee","assignedAt":"2026-09-12"}
 {"id":"crs_863104eb","kind":"course","slug":"經絡瑜珈-宜蘭運動中心-104eb","assignedAt":"2026-09-12"}
 {"id":"crs_8632861a","kind":"course","slug":"KPOP副歌-板橋運動中心-2861a","assignedAt":"2026-09-29"}
+{"id":"crs_8632c4da","kind":"course","slug":"電腦Office辦公室軟體應用-八德社大-2c4da","assignedAt":"2026-10-15"}
 {"id":"crs_86334efe","kind":"course","slug":"AICanva輕鬆完成影音簡報-新中和社大-34efe","assignedAt":"2026-09-12"}
 {"id":"crs_8635c514","kind":"course","slug":"服裝電腦打版週六第03期-勞動力發展署桃竹苗分署-5c514","assignedAt":"2026-10-03"}
 {"id":"crs_86367206","kind":"course","slug":"塑身修復瑜珈-五股運動中心-67206","assignedAt":"2026-10-02"}
@@ -25595,6 +25702,7 @@
 {"id":"crs_89ad2bab","kind":"course","slug":"手工皂與環境植物應用仁武-北高雄社大-d2bab","assignedAt":"2026-09-12"}
 {"id":"crs_89ad5a80","kind":"course","slug":"豎笛的異想世界中階-中山社大-d5a80","assignedAt":"2026-09-12"}
 {"id":"crs_89aedd89","kind":"course","slug":"職場溝通管理實務班第02期-工業會-edd89","assignedAt":"2026-09-12"}
+{"id":"crs_89b28f9d","kind":"course","slug":"暢遊日本語演歌文化-八德社大-28f9d","assignedAt":"2026-10-15"}
 {"id":"crs_89b2a5e5","kind":"course","slug":"銀髮族健康長壽訓練課程-桃園運動中心-2a5e5","assignedAt":"2026-09-29"}
 {"id":"crs_89b6764e","kind":"course","slug":"流行爵士舞-鹿秀社大-6764e","assignedAt":"2026-09-12"}
 {"id":"crs_89b74be5","kind":"course","slug":"愛心義剪社研習-松山社大-74be5","assignedAt":"2026-09-12"}
@@ -25671,6 +25779,7 @@
 {"id":"crs_8a312e06","kind":"course","slug":"手機自媒體養成-桃園社大-12e06","assignedAt":"2026-09-14"}
 {"id":"crs_8a314f7f","kind":"course","slug":"俄羅斯水彩-內湖社大-14f7f","assignedAt":"2026-09-12"}
 {"id":"crs_8a322cbb","kind":"course","slug":"墊上核心-淡水運動中心-22cbb","assignedAt":"2026-09-29"}
+{"id":"crs_8a33f078","kind":"course","slug":"客語文學賞讀與寫作-八德社大-3f078","assignedAt":"2026-10-15"}
 {"id":"crs_8a34b27f","kind":"course","slug":"專業手機攝影技巧與APP應用-八德社大-4b27f","assignedAt":"2026-09-12"}
 {"id":"crs_8a35cce5","kind":"course","slug":"輕鬆美臀瘦身飛輪-八德運動中心-5cce5","assignedAt":"2026-09-12"}
 {"id":"crs_8a36c0a2","kind":"course","slug":"Ubound跳床派對-桃園運動中心-6c0a2","assignedAt":"2026-09-12"}
@@ -26303,6 +26412,7 @@
 {"id":"crs_8d654fdb","kind":"course","slug":"雕塑曲線拉丁窈窕舞-八德社大-54fdb","assignedAt":"2026-09-12"}
 {"id":"crs_8d66b8f9","kind":"course","slug":"成人泳訓班-中和運動中心-6b8f9","assignedAt":"2026-10-13"}
 {"id":"crs_8d66f00e","kind":"course","slug":"智慧飛行家無人機學堂進階-木柵高工-6f00e","assignedAt":"2026-09-12"}
+{"id":"crs_8d678cd6","kind":"course","slug":"藝術手工皂及保養品手作-八德社大-78cd6","assignedAt":"2026-10-15"}
 {"id":"crs_8d688b4f","kind":"course","slug":"NEW器械皮拉提斯-三重運動中心-88b4f","assignedAt":"2026-09-29"}
 {"id":"crs_8d6b49af","kind":"course","slug":"理解易經與應用-竹塹社大-b49af","assignedAt":"2026-09-12"}
 {"id":"crs_8d6e1a46","kind":"course","slug":"新激梗社-萬華社大-e1a46","assignedAt":"2026-09-15"}
@@ -26324,6 +26434,7 @@
 {"id":"crs_8d885f47","kind":"course","slug":"兒童初階-wdygwd28-85f47","assignedAt":"2026-09-30"}
 {"id":"crs_8d8a2c4a","kind":"course","slug":"聲音表達與表演訓練班第06期-中華專業講師協會-a2c4a","assignedAt":"2026-09-12"}
 {"id":"crs_8d8a9709","kind":"course","slug":"文化旅行9週-宜蘭社大-a9709","assignedAt":"2026-09-12"}
+{"id":"crs_8d8eb4e7","kind":"course","slug":"革物手作就是愛玩皮-八德社大-eb4e7","assignedAt":"2026-10-15"}
 {"id":"crs_8d90708a","kind":"course","slug":"器械皮拉提斯-桃園運動中心-0708a","assignedAt":"2026-09-12"}
 {"id":"crs_8d9619e3","kind":"course","slug":"生成式AI創意應用實作班第01期-臺灣社區活化協會-619e3","assignedAt":"2026-09-12"}
 {"id":"crs_8d965fda","kind":"course","slug":"成人射箭基礎-三重運動中心-65fda","assignedAt":"2026-09-29"}
@@ -26589,6 +26700,7 @@
 {"id":"crs_8ed66dba","kind":"course","slug":"兒童羽球團體班-大同運動中心-66dba","assignedAt":"2026-09-29"}
 {"id":"crs_8ed7cd77","kind":"course","slug":"快樂口琴自在律動-八德社大-7cd77","assignedAt":"2026-10-14"}
 {"id":"crs_8ed7d65f","kind":"course","slug":"運動舞蹈與體態雕塑-文山社大-7d65f","assignedAt":"2026-10-05"}
+{"id":"crs_8ed86edf","kind":"course","slug":"咖啡飲品調製-八德社大-86edf","assignedAt":"2026-10-15"}
 {"id":"crs_8edc789c","kind":"course","slug":"輕時尚首飾設計-桃園社大-c789c","assignedAt":"2026-09-12"}
 {"id":"crs_8ede2cc9","kind":"course","slug":"書法體驗欣賞入門-林口社大-e2cc9","assignedAt":"2026-09-12"}
 {"id":"crs_8ede5cd0","kind":"course","slug":"機械皮拉提斯-板橋運動中心-e5cd0","assignedAt":"2026-09-29"}
@@ -26746,6 +26858,7 @@
 {"id":"crs_8fa2873f","kind":"course","slug":"旅遊與時事英語輕鬆說-松山社大-2873f","assignedAt":"2026-09-12"}
 {"id":"crs_8fa78c59","kind":"course","slug":"流行爵士鋼琴聰明學週五-新店崇光社大-78c59","assignedAt":"2026-09-12"}
 {"id":"crs_8fa86dae","kind":"course","slug":"日語高級班-長青會-86dae","assignedAt":"2026-09-12"}
+{"id":"crs_8fa88172","kind":"course","slug":"手機或單眼攝影進階外拍實務-八德社大-88172","assignedAt":"2026-10-15"}
 {"id":"crs_8fa9660f","kind":"course","slug":"韓風流行MV-中壢運動中心-9660f","assignedAt":"2026-09-12"}
 {"id":"crs_8fa9fcdc","kind":"course","slug":"生活花藝-岡山社大-9fcdc","assignedAt":"2026-09-12"}
 {"id":"crs_8faa0af0","kind":"course","slug":"綜合美體瑜珈-南港運動中心-a0af0","assignedAt":"2026-09-12"}
@@ -26921,6 +27034,7 @@
 {"id":"crs_907e9cca","kind":"course","slug":"輕鬆畫水彩-宜蘭社大-e9cca","assignedAt":"2026-09-12"}
 {"id":"crs_907ec2e1","kind":"course","slug":"太極武術與養生B-大屯社大-ec2e1","assignedAt":"2026-09-12"}
 {"id":"crs_907ef0f8","kind":"course","slug":"50生活通手機AI管家-樹林社大-ef0f8","assignedAt":"2026-09-12"}
+{"id":"crs_907f6aa0","kind":"course","slug":"流行音樂圓夢鍵盤-八德社大-f6aa0","assignedAt":"2026-10-15"}
 {"id":"crs_907fa4fa","kind":"course","slug":"跟著瑜伽去旅行-中壢社大-fa4fa","assignedAt":"2026-09-12"}
 {"id":"crs_907fcb07","kind":"course","slug":"萬丹分班養生藥膳班-屏北區社大-fcb07","assignedAt":"2026-09-12"}
 {"id":"crs_9080ac31","kind":"course","slug":"薩克斯風班初級-邑米社大-0ac31","assignedAt":"2026-09-12"}
@@ -28015,6 +28129,7 @@
 {"id":"crs_967b342a","kind":"course","slug":"幼兒芭蕾-五股運動中心-b342a","assignedAt":"2026-09-29"}
 {"id":"crs_967b9a11","kind":"course","slug":"健身房公益課程-大同運動中心-b9a11","assignedAt":"2026-09-29"}
 {"id":"crs_967cb0c1","kind":"course","slug":"樂活輕瑜珈初級-蘆山園社大-cb0c1","assignedAt":"2026-09-14"}
+{"id":"crs_967de4c9","kind":"course","slug":"日本語會話高級1-八德社大-de4c9","assignedAt":"2026-10-15"}
 {"id":"crs_967dfe1d","kind":"course","slug":"TRX訓練-士林運動中心-dfe1d","assignedAt":"2026-09-29"}
 {"id":"crs_96806c96","kind":"course","slug":"健康活力有氧暨燃脂體雕肌力-樹林社大-06c96","assignedAt":"2026-09-12"}
 {"id":"crs_9680cafc","kind":"course","slug":"Linux與Container入門實務班-中華民國勞工教育研究發展-0cafc","assignedAt":"2026-09-12"}
@@ -28107,6 +28222,7 @@
 {"id":"crs_96f8bf1a","kind":"course","slug":"流行爵士鋼琴彈奏-中正社大-8bf1a","assignedAt":"2026-09-12"}
 {"id":"crs_96ff0c24","kind":"course","slug":"銀髮族皮拉提斯核心運動-南港運動中心-f0c24","assignedAt":"2026-09-29"}
 {"id":"crs_96ffb20f","kind":"course","slug":"色鉛筆粉彩B-大屯社大-fb20f","assignedAt":"2026-09-12"}
+{"id":"crs_9700438b","kind":"course","slug":"快樂山水畫-八德社大-0438b","assignedAt":"2026-10-15"}
 {"id":"crs_9701a73e","kind":"course","slug":"健康瑜珈-新楊平社大-1a73e","assignedAt":"2026-10-07"}
 {"id":"crs_97044701","kind":"course","slug":"Barre芭蕾雕塑-信義運動中心-44701","assignedAt":"2026-10-03"}
 {"id":"crs_97050fc4","kind":"course","slug":"樂齡肌力訓練-宜蘭運動中心-50fc4","assignedAt":"2026-10-12"}
@@ -28208,6 +28324,7 @@
 {"id":"crs_97879ebf","kind":"course","slug":"AI玩轉旅行創意規劃輕鬆學B-樹林社大-79ebf","assignedAt":"2026-09-12"}
 {"id":"crs_9788f4e9","kind":"course","slug":"自由鉤針編織入門-南湖社大-8f4e9","assignedAt":"2026-09-12"}
 {"id":"crs_978a205c","kind":"course","slug":"台北自然步道尋訪一日生活小確幸-松山社大-a205c","assignedAt":"2026-09-12"}
+{"id":"crs_978bc19e","kind":"course","slug":"背包客的繪畫旅行-八德社大-bc19e","assignedAt":"2026-10-15"}
 {"id":"crs_978e8bc7","kind":"course","slug":"吉他之音-新楊平社大-e8bc7","assignedAt":"2026-10-06"}
 {"id":"crs_978f744c","kind":"course","slug":"ZUMBA-永和運動中心-f744c","assignedAt":"2026-09-12"}
 {"id":"crs_9790702f","kind":"course","slug":"輕流動瑜珈-永和運動中心-0702f","assignedAt":"2026-09-12"}
@@ -28307,6 +28424,7 @@
 {"id":"crs_980d4c03","kind":"course","slug":"布藝手作小物-社大-d4c03","assignedAt":"2026-09-13"}
 {"id":"crs_980f6920","kind":"course","slug":"品飲咖啡從這堂課開始-新店崇光社大-f6920","assignedAt":"2026-09-12"}
 {"id":"crs_98106b31","kind":"course","slug":"脊椎保健瑜珈-中山社大-06b31","assignedAt":"2026-09-12"}
+{"id":"crs_98110267","kind":"course","slug":"說著英語去旅行初級1-八德社大-10267","assignedAt":"2026-10-15"}
 {"id":"crs_981386fd","kind":"course","slug":"商務英文口說實務訓練班第05期-臺灣公共職業訓練國際交流-386fd","assignedAt":"2026-09-12"}
 {"id":"crs_9813c4e4","kind":"course","slug":"ZUMBA-汐止運動中心-3c4e4","assignedAt":"2026-09-12"}
 {"id":"crs_98190286","kind":"course","slug":"活力瑜珈五-湖埔社大-90286","assignedAt":"2026-09-12"}
@@ -28408,6 +28526,7 @@
 {"id":"crs_988d06ae","kind":"course","slug":"里港分班生活陶藝創作-屏北區社大-d06ae","assignedAt":"2026-09-12"}
 {"id":"crs_988db73b","kind":"course","slug":"舒活瑜珈-林口運動中心-db73b","assignedAt":"2026-09-12"}
 {"id":"crs_988e07d7","kind":"course","slug":"輕鬆學好日語五十音-鹿秀社大-e07d7","assignedAt":"2026-09-12"}
+{"id":"crs_988f15b2","kind":"course","slug":"體適能健康雕塑瑜伽-八德社大-f15b2","assignedAt":"2026-10-15"}
 {"id":"crs_98903a70","kind":"course","slug":"薩克斯風演奏初階-士林社大-03a70","assignedAt":"2026-09-12"}
 {"id":"crs_98931772","kind":"course","slug":"書法基礎-中正社大-31772","assignedAt":"2026-09-12"}
 {"id":"crs_9897ac98","kind":"course","slug":"手作羊毛氈山城風華初級-山線社大-7ac98","assignedAt":"2026-09-12"}
@@ -28443,6 +28562,7 @@
 {"id":"crs_98c3d51c","kind":"course","slug":"流行非洲鼓進階班-花蓮社大-3d51c","assignedAt":"2026-09-12"}
 {"id":"crs_98c5bc95","kind":"course","slug":"假日輕鬆騎飛輪-中山運動中心-5bc95","assignedAt":"2026-09-12"}
 {"id":"crs_98c65300","kind":"course","slug":"機電維修泰山-勞動力發展署北基宜花金馬-65300","assignedAt":"2026-09-12"}
+{"id":"crs_98c6ce79","kind":"course","slug":"舒活健康瑜珈-八德社大-6ce79","assignedAt":"2026-10-15"}
 {"id":"crs_98c71630","kind":"course","slug":"兒童羽球712團體班-大里國民暨兒童運動中心-71630","assignedAt":"2026-09-29"}
 {"id":"crs_98ca9e4b","kind":"course","slug":"流動核心伸展-北屯社大-a9e4b","assignedAt":"2026-09-12"}
 {"id":"crs_98caa4d8","kind":"course","slug":"發酵與養生-大屯社大-aa4d8","assignedAt":"2026-09-12"}
@@ -29039,6 +29159,7 @@
 {"id":"crs_9c0acd63","kind":"course","slug":"壁球早鳥團訓班-長春國民暨兒童運動中心-acd63","assignedAt":"2026-09-29"}
 {"id":"crs_9c0aeced","kind":"course","slug":"愛上幸福手工皂-港都社大-aeced","assignedAt":"2026-09-12"}
 {"id":"crs_9c0bf445","kind":"course","slug":"歷史中的社會狂野俄羅斯-文山社大-bf445","assignedAt":"2026-09-12"}
+{"id":"crs_9c0c4548","kind":"course","slug":"捏陶玩泥巴-八德社大-c4548","assignedAt":"2026-10-15"}
 {"id":"crs_9c0d4783","kind":"course","slug":"成人街舞Hip-林口運動中心-d4783","assignedAt":"2026-09-12"}
 {"id":"crs_9c0ed9ea","kind":"course","slug":"壁球SX-三峽運動中心-ed9ea","assignedAt":"2026-09-29"}
 {"id":"crs_9c0fc650","kind":"course","slug":"兒童羽球課程-中正運動中心-fc650","assignedAt":"2026-09-29"}
@@ -29069,6 +29190,7 @@
 {"id":"crs_9c345b62","kind":"course","slug":"器械皮拉提斯-太平國民暨兒童運動中心-45b62","assignedAt":"2026-09-29"}
 {"id":"crs_9c3483bb","kind":"course","slug":"入門TRX-北屯國民暨兒童運動中心-483bb","assignedAt":"2026-09-29"}
 {"id":"crs_9c35ebfb","kind":"course","slug":"樂活律動班-新住民促進會-5ebfb","assignedAt":"2026-09-12"}
+{"id":"crs_9c38a26c","kind":"course","slug":"太極拳初級1-八德社大-8a26c","assignedAt":"2026-10-15"}
 {"id":"crs_9c39e85d","kind":"course","slug":"咖啡飲品調製-八德社大-9e85d","assignedAt":"2026-09-12"}
 {"id":"crs_9c3a001e","kind":"course","slug":"11505格鬥有氧18509281026-新店運動中心-a001e","assignedAt":"2026-09-29"}
 {"id":"crs_9c3a5a8b","kind":"course","slug":"兒童文化研究社-永和社大-a5a8b","assignedAt":"2026-09-12"}
@@ -29309,6 +29431,7 @@
 {"id":"crs_9d71f361","kind":"course","slug":"電腦數值控制與機械加工-勞動部勞動力發展署高屏澎-1f361","assignedAt":"2026-09-12"}
 {"id":"crs_9d71f8aa","kind":"course","slug":"羽球假日班-南港運動中心-1f8aa","assignedAt":"2026-09-29"}
 {"id":"crs_9d727e47","kind":"course","slug":"精彩的速寫生活藝術初-信義社大-27e47","assignedAt":"2026-09-12"}
+{"id":"crs_9d7380b8","kind":"course","slug":"有氧與瑜珈提斯初級1-八德社大-380b8","assignedAt":"2026-10-15"}
 {"id":"crs_9d73a960","kind":"course","slug":"用手機拍出生活藝術-信義社大-3a960","assignedAt":"2026-09-12"}
 {"id":"crs_9d747d13","kind":"course","slug":"匹克球入門與實戰班A-潭雅神社大-47d13","assignedAt":"2026-09-12"}
 {"id":"crs_9d775449","kind":"course","slug":"2026嬰幼兒閱讀推廣活動閱讀萌芽五感放-市圖總館新總館-75449","assignedAt":"2026-09-13"}
@@ -29434,6 +29557,7 @@
 {"id":"crs_9e15fa0f","kind":"course","slug":"體適能健康雕塑瑜伽-八德社大-5fa0f","assignedAt":"2026-09-12"}
 {"id":"crs_9e180a52","kind":"course","slug":"Zumba-港都社大-80a52","assignedAt":"2026-09-12"}
 {"id":"crs_9e1bf099","kind":"course","slug":"成人芭蕾-林口運動中心-bf099","assignedAt":"2026-09-24"}
+{"id":"crs_9e1e29f2","kind":"course","slug":"快樂學二胡-八德社大-e29f2","assignedAt":"2026-10-15"}
 {"id":"crs_9e1fbc46","kind":"course","slug":"健身房公益課程-大同運動中心-fbc46","assignedAt":"2026-10-01"}
 {"id":"crs_9e208c56","kind":"course","slug":"國樂古箏二胡笛子琵琶葫蘆絲-大屯社大-08c56","assignedAt":"2026-09-12"}
 {"id":"crs_9e24318e","kind":"course","slug":"木作榫接拉門小櫃-鹿秀社大-4318e","assignedAt":"2026-09-12"}
@@ -29609,6 +29733,7 @@
 {"id":"crs_9f127ea1","kind":"course","slug":"器械皮拉提斯-北屯國民暨兒童運動中心-27ea1","assignedAt":"2026-09-29"}
 {"id":"crs_9f13897b","kind":"course","slug":"池坊花藝A-嘉義市社大-3897b","assignedAt":"2026-09-12"}
 {"id":"crs_9f175ec1","kind":"course","slug":"AI與Office文案簡報數據分析應用班-工業會-75ec1","assignedAt":"2026-09-12"}
+{"id":"crs_9f1c921d","kind":"course","slug":"最夯古裝劇古典舞-八德社大-c921d","assignedAt":"2026-10-15"}
 {"id":"crs_9f1f00a8","kind":"course","slug":"動物關鍵報告-雙流自然教育中心-f00a8","assignedAt":"2026-09-12"}
 {"id":"crs_9f1fe703","kind":"course","slug":"TRX肌力雕塑-三重運動中心-fe703","assignedAt":"2026-09-29"}
 {"id":"crs_9f204830","kind":"course","slug":"瑜珈提斯-苗栗社大-04830","assignedAt":"2026-09-12"}
@@ -29760,6 +29885,7 @@
 {"id":"crs_a002ad18","kind":"course","slug":"武當內功太極與鞭杆學分費3000-新莊社大-2ad18","assignedAt":"2026-09-12"}
 {"id":"crs_a003630c","kind":"course","slug":"日語基礎入門-八德社大-3630c","assignedAt":"2026-09-12"}
 {"id":"crs_a0063d54","kind":"course","slug":"太極養生-鳳山社大-63d54","assignedAt":"2026-09-12"}
+{"id":"crs_a00872f9","kind":"course","slug":"水彩創意實驗室-八德社大-872f9","assignedAt":"2026-10-15"}
 {"id":"crs_a0087721","kind":"course","slug":"古琴雅韻-彰化社大-87721","assignedAt":"2026-09-12"}
 {"id":"crs_a008ed8a","kind":"course","slug":"拳擊有氧-中正運動中心-8ed8a","assignedAt":"2026-09-12"}
 {"id":"crs_a00a3d51","kind":"course","slug":"你所不知道的河洛漢詩-文山社大-a3d51","assignedAt":"2026-09-12"}
@@ -30017,10 +30143,12 @@
 {"id":"crs_a177f263","kind":"course","slug":"基礎空中瑜珈-文山運動中心-7f263","assignedAt":"2026-09-29"}
 {"id":"crs_a177f517","kind":"course","slug":"減肥飛輪-板橋運動中心-7f517","assignedAt":"2026-09-29"}
 {"id":"crs_a178bf19","kind":"course","slug":"調和之美水彩畫入門-士林社大-8bf19","assignedAt":"2026-09-12"}
+{"id":"crs_a1793ea3","kind":"course","slug":"體適能健康雕塑瑜伽-八德社大-93ea3","assignedAt":"2026-10-15"}
 {"id":"crs_a17c5421","kind":"course","slug":"基礎伸展空瑜-立竹光運動中心-c5421","assignedAt":"2026-09-29"}
 {"id":"crs_a17f13e7","kind":"course","slug":"小家電行動診所-新楊平社大-f13e7","assignedAt":"2026-09-12"}
 {"id":"crs_a18229db","kind":"course","slug":"兒童羽球團體-土城運動中心-229db","assignedAt":"2026-09-29"}
 {"id":"crs_a1823b6a","kind":"course","slug":"葫蘆絲演奏初級-桃園社大-23b6a","assignedAt":"2026-09-12"}
+{"id":"crs_a1828467","kind":"course","slug":"烏克麗麗快樂學社團-八德社大-28467","assignedAt":"2026-10-15"}
 {"id":"crs_a18376df","kind":"course","slug":"快樂歌唱班-新店區大鵬忠孝社區發展協-376df","assignedAt":"2026-09-12"}
 {"id":"crs_a1838c60","kind":"course","slug":"流行爵士鋼琴C-中山社大-38c60","assignedAt":"2026-09-12"}
 {"id":"crs_a1846b9a","kind":"course","slug":"流行MV成人-蘆洲運動中心-46b9a","assignedAt":"2026-09-29"}
@@ -30442,6 +30570,7 @@
 {"id":"crs_a3cdbbdd","kind":"course","slug":"趣味ABC-臺灣關懷弱勢家庭協會-dbbdd","assignedAt":"2026-09-12"}
 {"id":"crs_a3d03ea1","kind":"course","slug":"iWALK愛健走全民有氧-新楊平社大-03ea1","assignedAt":"2026-09-12"}
 {"id":"crs_a3d094c7","kind":"course","slug":"東方古典美人舞-文山社大-094c7","assignedAt":"2026-09-12"}
+{"id":"crs_a3d152fe","kind":"course","slug":"埤圳景觀與農村文化-八德社大-152fe","assignedAt":"2026-10-15"}
 {"id":"crs_a3d16258","kind":"course","slug":"器械皮拉提斯-永和運動中心-16258","assignedAt":"2026-10-03"}
 {"id":"crs_a3d55ca7","kind":"course","slug":"銀髮體適能學苑-鳳山運動園區-55ca7","assignedAt":"2026-09-12"}
 {"id":"crs_a3d564ab","kind":"course","slug":"燃脂飛輪-朝馬運動中心-564ab","assignedAt":"2026-09-12"}
@@ -30510,6 +30639,7 @@
 {"id":"crs_a426c8eb","kind":"course","slug":"瑜珈提斯-長春國民暨兒童運動中心-6c8eb","assignedAt":"2026-09-12"}
 {"id":"crs_a4280990","kind":"course","slug":"零基礎手機攝影-淡水社大-80990","assignedAt":"2026-09-12"}
 {"id":"crs_a42aba9e","kind":"course","slug":"養生塑身瑜珈-新楊平社大-aba9e","assignedAt":"2026-10-07"}
+{"id":"crs_a42b736e","kind":"course","slug":"水電及家電的節能與維修-八德社大-b736e","assignedAt":"2026-10-15"}
 {"id":"crs_a42f3ded","kind":"course","slug":"柔樂球班-飛揚協會-f3ded","assignedAt":"2026-09-12"}
 {"id":"crs_a42f4fe3","kind":"course","slug":"伸展瑜伽-淡水運動中心-f4fe3","assignedAt":"2026-09-29"}
 {"id":"crs_a42f60fe","kind":"course","slug":"流行舞蹈kpop-蘆山園社大-f60fe","assignedAt":"2026-09-12"}
@@ -30717,6 +30847,7 @@
 {"id":"crs_a5343046","kind":"course","slug":"國樂研究與賞析保證金-新楊平社大-43046","assignedAt":"2026-10-06"}
 {"id":"crs_a5363ba6","kind":"course","slug":"器械皮拉提斯-五股運動中心-63ba6","assignedAt":"2026-09-29"}
 {"id":"crs_a5370339","kind":"course","slug":"薩克斯風演奏-桃園社大-70339","assignedAt":"2026-09-12"}
+{"id":"crs_a539e02b","kind":"course","slug":"北台灣導覽走讀-八德社大-9e02b","assignedAt":"2026-10-15"}
 {"id":"crs_a53acd2a","kind":"course","slug":"大智度論-博愛社大-acd2a","assignedAt":"2026-09-12"}
 {"id":"crs_a53b609c","kind":"course","slug":"陶瓷藝術欣賞與創作-羅東社大-b609c","assignedAt":"2026-09-12"}
 {"id":"crs_a53c1a2f","kind":"course","slug":"快速記憶學日語中級進階-松山社大-c1a2f","assignedAt":"2026-09-12"}
@@ -31041,6 +31172,7 @@
 {"id":"crs_a6d3bc4e","kind":"course","slug":"電腦輔助機械製圖與AI繪圖應用泰山-勞動力發展署北基宜花金馬-3bc4e","assignedAt":"2026-09-12"}
 {"id":"crs_a6d4131d","kind":"course","slug":"生活旅遊美語FUN鬆學基礎-士林社大-4131d","assignedAt":"2026-09-12"}
 {"id":"crs_a6d4f5b2","kind":"course","slug":"達摩回春保健三民C班-二社田社大-4f5b2","assignedAt":"2026-09-12"}
+{"id":"crs_a6d6f65a","kind":"course","slug":"西洋創意花藝-八德社大-6f65a","assignedAt":"2026-10-15"}
 {"id":"crs_a6d6f7e9","kind":"course","slug":"半導體與AI應用專業人才養成班第06期-國立陽明交通大學-6f7e9","assignedAt":"2026-09-12"}
 {"id":"crs_a6d7857e","kind":"course","slug":"A06相縫林內布說話-山線社大-7857e","assignedAt":"2026-09-12"}
 {"id":"crs_a6d8a6f5","kind":"course","slug":"實戰流行爵士鼓-新中和社大-8a6f5","assignedAt":"2026-09-12"}
@@ -31164,6 +31296,7 @@
 {"id":"crs_a771c615","kind":"course","slug":"通筋活骨功初級-桃園社大-1c615","assignedAt":"2026-09-12"}
 {"id":"crs_a772a4a9","kind":"course","slug":"器械皮拉提斯-朝馬運動中心-2a4a9","assignedAt":"2026-09-29"}
 {"id":"crs_a772a71e","kind":"course","slug":"拳力以赴拳擊有氧-曾文社大-2a71e","assignedAt":"2026-09-13"}
+{"id":"crs_a7730360","kind":"course","slug":"英文輕鬆學初級1-八德社大-30360","assignedAt":"2026-10-15"}
 {"id":"crs_a7732209","kind":"course","slug":"樂齡重訓指導-大同運動中心-32209","assignedAt":"2026-09-29"}
 {"id":"crs_a7756e64","kind":"course","slug":"生活水電應急班-後驛社大-56e64","assignedAt":"2026-09-12"}
 {"id":"crs_a775a5aa","kind":"course","slug":"英文會話與發音-美港西社大-5a5aa","assignedAt":"2026-09-12"}
@@ -31395,6 +31528,7 @@
 {"id":"crs_a8bce9f5","kind":"course","slug":"經絡鬆筋美容養生-桃園社大-ce9f5","assignedAt":"2026-09-14"}
 {"id":"crs_a8bd7824","kind":"course","slug":"器械皮拉提斯-太平國民暨兒童運動中心-d7824","assignedAt":"2026-09-29"}
 {"id":"crs_a8c090a2","kind":"course","slug":"平日水中有氧-樹林運動中心-090a2","assignedAt":"2026-09-29"}
+{"id":"crs_a8c4e88e","kind":"course","slug":"韓語初級2-八德社大-4e88e","assignedAt":"2026-10-15"}
 {"id":"crs_a8c52996","kind":"course","slug":"魅惑曲線肚皮舞-楊梅體育園區-52996","assignedAt":"2026-09-29"}
 {"id":"crs_a8c6bc71","kind":"course","slug":"午後花藝時光-北投社大-6bc71","assignedAt":"2026-09-12"}
 {"id":"crs_a8c77780","kind":"course","slug":"鄭子37式太極拳B班-潭雅神社大-77780","assignedAt":"2026-09-12"}
@@ -31841,6 +31975,7 @@
 {"id":"crs_ab394a26","kind":"course","slug":"舞動節奏輕鬆學-甲安埔社大-94a26","assignedAt":"2026-09-12"}
 {"id":"crs_ab398c08","kind":"course","slug":"彼拉提斯-文山運動中心-98c08","assignedAt":"2026-09-12"}
 {"id":"crs_ab39b611","kind":"course","slug":"迎向樂齡預約優雅的後青春-中山社大-9b611","assignedAt":"2026-09-12"}
+{"id":"crs_ab39bab9","kind":"course","slug":"就愛玩粉彩-八德社大-9bab9","assignedAt":"2026-10-15"}
 {"id":"crs_ab3c9a7b","kind":"course","slug":"ZUMBA-土城運動中心-c9a7b","assignedAt":"2026-09-29"}
 {"id":"crs_ab3cde60","kind":"course","slug":"AIAgent智慧行銷暨國際電商自動化實-僑光科大-cde60","assignedAt":"2026-09-12"}
 {"id":"crs_ab3d73bc","kind":"course","slug":"書法藝術-新楊平社大-d73bc","assignedAt":"2026-10-06"}
@@ -31947,8 +32082,10 @@
 {"id":"crs_abd8243f","kind":"course","slug":"民法及不動產爭議個案實務解析班第01期-直轄市不動產代銷經紀商業-8243f","assignedAt":"2026-09-12"}
 {"id":"crs_abd90ec1","kind":"course","slug":"11506ZUMBAFitness111-新店運動中心-90ec1","assignedAt":"2026-10-08"}
 {"id":"crs_abdd69bf","kind":"course","slug":"成人電子琴入門-板橋社大-d69bf","assignedAt":"2026-09-12"}
+{"id":"crs_abddd6bb","kind":"course","slug":"經絡穴道保健與應用-八德社大-dd6bb","assignedAt":"2026-10-15"}
 {"id":"crs_abdea316","kind":"course","slug":"國台語金曲歡唱A-北投社大-ea316","assignedAt":"2026-09-12"}
 {"id":"crs_abdec4c4","kind":"course","slug":"兒童籃球FY-豐原國民暨兒童運動中心-ec4c4","assignedAt":"2026-10-01"}
+{"id":"crs_abe02a98","kind":"course","slug":"一起日語輕鬆學高級1-八德社大-02a98","assignedAt":"2026-10-15"}
 {"id":"crs_abe4e383","kind":"course","slug":"有氧瑜珈提斯-八德社大-4e383","assignedAt":"2026-09-12"}
 {"id":"crs_abe6c91f","kind":"course","slug":"有趣塗鴉油畫棒-士林社大-6c91f","assignedAt":"2026-09-12"}
 {"id":"crs_abe85aa8","kind":"course","slug":"兒童羽球712團體班-大里國民暨兒童運動中心-85aa8","assignedAt":"2026-09-29"}
@@ -32086,6 +32223,7 @@
 {"id":"crs_aca3027b","kind":"course","slug":"竹工藝-貓羅溪社大-3027b","assignedAt":"2026-09-12"}
 {"id":"crs_aca3dec9","kind":"course","slug":"實務神秘客培訓班第03期-臺灣服務稽核協會-3dec9","assignedAt":"2026-09-12"}
 {"id":"crs_aca6ba14","kind":"course","slug":"水電及家電的節能與維修-八德社大-6ba14","assignedAt":"2026-09-12"}
+{"id":"crs_acaa1f55","kind":"course","slug":"紓心繪禪繞畫-八德社大-a1f55","assignedAt":"2026-10-15"}
 {"id":"crs_acab29fc","kind":"course","slug":"TRX進階班-立竹光運動中心-b29fc","assignedAt":"2026-09-29"}
 {"id":"crs_acad10d6","kind":"course","slug":"生活花藝B-大屯社大-d10d6","assignedAt":"2026-09-12"}
 {"id":"crs_acae043c","kind":"course","slug":"三運籃球課後班-三重運動中心-e043c","assignedAt":"2026-09-29"}
@@ -32334,6 +32472,7 @@
 {"id":"crs_ae09e56e","kind":"course","slug":"中小企業財務管理實務班第02期-工業會-9e56e","assignedAt":"2026-09-12"}
 {"id":"crs_ae0e43c2","kind":"course","slug":"表演藝術人才培訓研習社-美港西社大-e43c2","assignedAt":"2026-09-12"}
 {"id":"crs_ae0f30a0","kind":"course","slug":"港式餐點培訓班第01期-西餐服務人員職業工會-f30a0","assignedAt":"2026-09-12"}
+{"id":"crs_ae126da9","kind":"course","slug":"混搭風肚皮舞飄扇融合民俗風-八德社大-26da9","assignedAt":"2026-10-15"}
 {"id":"crs_ae13b54a","kind":"course","slug":"新住民學華語初級免費課程-新楊平社大-3b54a","assignedAt":"2026-10-07"}
 {"id":"crs_ae146db5","kind":"course","slug":"茶的世界-內湖社大-46db5","assignedAt":"2026-09-12"}
 {"id":"crs_ae188e06","kind":"course","slug":"歡樂歌唱-八德社大-88e06","assignedAt":"2026-09-12"}
@@ -33143,6 +33282,7 @@
 {"id":"crs_b23961c0","kind":"course","slug":"藝術動起來水彩油畫篇-永和社大-961c0","assignedAt":"2026-09-12"}
 {"id":"crs_b23e2f73","kind":"course","slug":"兒童流行舞蹈-樹林運動中心-e2f73","assignedAt":"2026-09-29"}
 {"id":"crs_b2401ca6","kind":"course","slug":"黃鶯初啼美聲歌唱-松山社大-01ca6","assignedAt":"2026-09-12"}
+{"id":"crs_b244d5d3","kind":"course","slug":"健康優游初級1-八德社大-4d5d3","assignedAt":"2026-10-15"}
 {"id":"crs_b2456d00","kind":"course","slug":"廚餘箱製作-苗栗社大-56d00","assignedAt":"2026-09-12"}
 {"id":"crs_b2459942","kind":"course","slug":"與讀者有約多元生活系列講座喚醒時代的聲音-立圖書館三芝分館-59942","assignedAt":"2026-09-18"}
 {"id":"crs_b245ec1d","kind":"course","slug":"邂逅空靈鼓-北高雄社大-5ec1d","assignedAt":"2026-09-12"}
@@ -33222,6 +33362,7 @@
 {"id":"crs_b2a2cfe1","kind":"course","slug":"粉彩水彩兩相宜-中山社大-2cfe1","assignedAt":"2026-09-12"}
 {"id":"crs_b2a53707","kind":"course","slug":"汽機車修護班-退輔會職訓中心-53707","assignedAt":"2026-09-12"}
 {"id":"crs_b2a7c620","kind":"course","slug":"漫遊色鉛筆C-樹林社大-7c620","assignedAt":"2026-09-12"}
+{"id":"crs_b2a7d4cd","kind":"course","slug":"寶萊塢印度舞-八德社大-7d4cd","assignedAt":"2026-10-15"}
 {"id":"crs_b2a858c5","kind":"course","slug":"韓流動感有氧MV週四-甲安埔社大-858c5","assignedAt":"2026-09-12"}
 {"id":"crs_b2a8cada","kind":"course","slug":"05期兒童班-鳳山運動園區-8cada","assignedAt":"2026-09-12"}
 {"id":"crs_b2adcd75","kind":"course","slug":"TRX-大里國民暨兒童運動中心-dcd75","assignedAt":"2026-09-29"}
@@ -33675,6 +33816,7 @@
 {"id":"crs_b5059302","kind":"course","slug":"兒童適能瑜珈712歲-太平國民暨兒童運動中心-59302","assignedAt":"2026-09-12"}
 {"id":"crs_b506bcc5","kind":"course","slug":"器械皮拉提斯-苓雅運動中心-6bcc5","assignedAt":"2026-09-29"}
 {"id":"crs_b507b667","kind":"course","slug":"書法輕鬆學-濁水溪社大-7b667","assignedAt":"2026-09-12"}
+{"id":"crs_b507f15f","kind":"course","slug":"心靈和諧粉彩-八德社大-7f15f","assignedAt":"2026-10-15"}
 {"id":"crs_b50983f9","kind":"course","slug":"情境英文進階會話班-基督教青年會-983f9","assignedAt":"2026-09-12"}
 {"id":"crs_b50a68a0","kind":"course","slug":"烙畫有溫度的繪畫-三鶯社大-a68a0","assignedAt":"2026-09-12"}
 {"id":"crs_b50afff4","kind":"course","slug":"爵士搖擺舞SwingDance-松山社大-afff4","assignedAt":"2026-09-12"}
@@ -33819,6 +33961,7 @@
 {"id":"crs_b5b4e61b","kind":"course","slug":"兒童游泳班-wdygwd34-4e61b","assignedAt":"2026-09-29"}
 {"id":"crs_b5b5e455","kind":"course","slug":"輕鬆學唱卡拉OK技巧-北屯社大-5e455","assignedAt":"2026-09-12"}
 {"id":"crs_b5b61111","kind":"course","slug":"伸展瑜珈-五股運動中心-61111","assignedAt":"2026-09-29"}
+{"id":"crs_b5b63184","kind":"course","slug":"瑜珈體適能-八德社大-63184","assignedAt":"2026-10-15"}
 {"id":"crs_b5b63821","kind":"course","slug":"舞文弄墨血路通-臺灣基督傳道會復生教會-63821","assignedAt":"2026-09-12"}
 {"id":"crs_b5b7102c","kind":"course","slug":"搖擺中東肚皮舞親子共學-苗栗社大-7102c","assignedAt":"2026-09-12"}
 {"id":"crs_b5b8478f","kind":"course","slug":"愛在畫裏-林口社大-8478f","assignedAt":"2026-09-12"}
@@ -33958,6 +34101,7 @@
 {"id":"crs_b6723665","kind":"course","slug":"東方舞肚皮舞與文化賞析-第一社大-23665","assignedAt":"2026-09-12"}
 {"id":"crs_b672fd93","kind":"course","slug":"電子琴懷舊金曲彈唱初級-甲安埔社大-2fd93","assignedAt":"2026-09-12"}
 {"id":"crs_b6738226","kind":"course","slug":"肌力瑜珈-宜蘭運動中心-38226","assignedAt":"2026-09-12"}
+{"id":"crs_b6741a83","kind":"course","slug":"手機錄影剪輯輕鬆學-八德社大-41a83","assignedAt":"2026-10-15"}
 {"id":"crs_b677c7bf","kind":"course","slug":"輕鬆做料理-北投社大-7c7bf","assignedAt":"2026-09-12"}
 {"id":"crs_b67c64ee","kind":"course","slug":"517宜行是一場生活設計以台南鄰里生活為-臺南社大-c64ee","assignedAt":"2026-09-12"}
 {"id":"crs_b67faa60","kind":"course","slug":"器械皮拉提斯-桃園運動中心-faa60","assignedAt":"2026-09-12"}
@@ -34187,6 +34331,7 @@
 {"id":"crs_b7f5bce4","kind":"course","slug":"室內設計與裝飾使房屋增值-中山社大-5bce4","assignedAt":"2026-09-12"}
 {"id":"crs_b7f7d3da","kind":"course","slug":"傳統古典舞蹈-大同社大-7d3da","assignedAt":"2026-09-12"}
 {"id":"crs_b7f9a8f4","kind":"course","slug":"瑜珈健康操-美港西社大-9a8f4","assignedAt":"2026-09-12"}
+{"id":"crs_b7faede3","kind":"course","slug":"說唱生活西班牙語-八德社大-aede3","assignedAt":"2026-10-15"}
 {"id":"crs_b7fd8590","kind":"course","slug":"開口說商用英文-鎮港園社大-d8590","assignedAt":"2026-09-12"}
 {"id":"crs_b8006939","kind":"course","slug":"幼兒初階跑酷36歲-汐止運動中心-06939","assignedAt":"2026-09-12"}
 {"id":"crs_b8007d5a","kind":"course","slug":"幼兒精緻班-wdygwd32-07d5a","assignedAt":"2026-09-12"}
@@ -34650,6 +34795,7 @@
 {"id":"crs_ba66efde","kind":"course","slug":"中式麵食加工培訓班第01期-私立莊敬高級工業家事職業-6efde","assignedAt":"2026-09-12"}
 {"id":"crs_ba678a75","kind":"course","slug":"成人假日班-新莊運動中心-78a75","assignedAt":"2026-09-29"}
 {"id":"crs_ba680788","kind":"course","slug":"手機攝影真好玩週二全天-文山社大-80788","assignedAt":"2026-09-12"}
+{"id":"crs_ba68bdec","kind":"course","slug":"投資理財策略-八德社大-8bdec","assignedAt":"2026-10-15"}
 {"id":"crs_ba69bbe5","kind":"course","slug":"中東肚皮舞初級-蘆山園社大-9bbe5","assignedAt":"2026-09-12"}
 {"id":"crs_ba6c17f6","kind":"course","slug":"乙級烘焙伴手禮-甲安埔社大-c17f6","assignedAt":"2026-09-12"}
 {"id":"crs_ba6c8c67","kind":"course","slug":"活力飛輪SX-三峽運動中心-c8c67","assignedAt":"2026-09-29"}
@@ -35260,6 +35406,7 @@
 {"id":"crs_bdf5e70f","kind":"course","slug":"水彩之妙風景寫生-屏北區社大-5e70f","assignedAt":"2026-09-12"}
 {"id":"crs_bdf69a07","kind":"course","slug":"居家飾品及植栽創意手作-三鶯社大-69a07","assignedAt":"2026-09-12"}
 {"id":"crs_bdf7974c","kind":"course","slug":"人文與景觀攝影的創作-苗栗社大-7974c","assignedAt":"2026-09-12"}
+{"id":"crs_bdfe6bf7","kind":"course","slug":"烘焙食尚-八德社大-e6bf7","assignedAt":"2026-10-15"}
 {"id":"crs_bdfe97a8","kind":"course","slug":"瘦身瑜珈-中山運動中心-e97a8","assignedAt":"2026-09-12"}
 {"id":"crs_bdfec92d","kind":"course","slug":"50樂齡輕瑜伽-南港社大-ec92d","assignedAt":"2026-09-12"}
 {"id":"crs_be011ee9","kind":"course","slug":"大家來學日語50音-萬華社大-11ee9","assignedAt":"2026-09-12"}
@@ -35493,6 +35640,7 @@
 {"id":"crs_bf30c89b","kind":"course","slug":"手工皮件初階-豐湖社大-0c89b","assignedAt":"2026-09-12"}
 {"id":"crs_bf310ad7","kind":"course","slug":"TRX肌力核心雕塑-長春國民暨兒童運動中心-10ad7","assignedAt":"2026-09-12"}
 {"id":"crs_bf319370","kind":"course","slug":"竹藝手工坊-臺南社大-19370","assignedAt":"2026-09-13"}
+{"id":"crs_bf322628","kind":"course","slug":"療癒多肉植物與創意手作-八德社大-22628","assignedAt":"2026-10-15"}
 {"id":"crs_bf3330e1","kind":"course","slug":"手機商品拍攝與AI短影音實務班第01期-中華民國職能技藝推廣協會-330e1","assignedAt":"2026-09-12"}
 {"id":"crs_bf350528","kind":"course","slug":"皮拉提斯球-潭雅神社大-50528","assignedAt":"2026-09-12"}
 {"id":"crs_bf3a42f3","kind":"course","slug":"AI與AutoCAD智慧機器人製圖班第0-職訓教育協會-a42f3","assignedAt":"2026-09-12"}
@@ -35662,6 +35810,7 @@
 {"id":"crs_c01367cd","kind":"course","slug":"115年英語讀冊Chill09月場Let-林森圖書館-367cd","assignedAt":"2026-09-13"}
 {"id":"crs_c0147d44","kind":"course","slug":"透過籌碼尋找好股票B全線上-文山社大-47d44","assignedAt":"2026-09-12"}
 {"id":"crs_c0150abb","kind":"course","slug":"閩南語悅音歌唱班B班-基隆社大-50abb","assignedAt":"2026-09-12"}
+{"id":"crs_c0173b2e","kind":"course","slug":"安心手工皂與幸福保養品手作-八德社大-73b2e","assignedAt":"2026-10-15"}
 {"id":"crs_c0190d18","kind":"course","slug":"綜合訓練肌力筋膜放鬆-長春國民暨兒童運動中心-90d18","assignedAt":"2026-09-12"}
 {"id":"crs_c01acaa9","kind":"course","slug":"革織短夾與手提包基礎針車操作班第01期-鞋類暨運動休閒科技研發中-acaa9","assignedAt":"2026-09-12"}
 {"id":"crs_c01e9df7","kind":"course","slug":"易經與現代生活-員永村社大-e9df7","assignedAt":"2026-09-12"}
@@ -35824,6 +35973,7 @@
 {"id":"crs_c0ec65d3","kind":"course","slug":"樂齡養生功-淡水區樂齡中心-c65d3","assignedAt":"2026-09-12"}
 {"id":"crs_c0ec9bcd","kind":"course","slug":"二胡高階-貓羅溪社大-c9bcd","assignedAt":"2026-09-12"}
 {"id":"crs_c0ed90c0","kind":"course","slug":"穿越時空感動當下音樂欣賞B-內湖社大-d90c0","assignedAt":"2026-09-12"}
+{"id":"crs_c0f0737c","kind":"course","slug":"手工皂與保養品快樂學-八德社大-0737c","assignedAt":"2026-10-15"}
 {"id":"crs_c0f10570","kind":"course","slug":"跨文化走讀親近大師-大屯社大-10570","assignedAt":"2026-09-12"}
 {"id":"crs_c0f15b0c","kind":"course","slug":"歡喜二胡-中壢社大-15b0c","assignedAt":"2026-09-12"}
 {"id":"crs_c0f4f8b5","kind":"course","slug":"Trx-wdygwd28-4f8b5","assignedAt":"2026-09-29"}
@@ -35989,6 +36139,7 @@
 {"id":"crs_c1bf279e","kind":"course","slug":"AI生活絕學降龍十八掌-大安社大-f279e","assignedAt":"2026-09-12"}
 {"id":"crs_c1c00c45","kind":"course","slug":"禪柔太極道功八段錦養生氣功基礎-中山社大-00c45","assignedAt":"2026-09-12"}
 {"id":"crs_c1c06518","kind":"course","slug":"越南語會話文化篇-海線社大-06518","assignedAt":"2026-09-12"}
+{"id":"crs_c1c0b518","kind":"course","slug":"咖啡飲品調製-八德社大-0b518","assignedAt":"2026-10-15"}
 {"id":"crs_c1c14f19","kind":"course","slug":"預防及延緩失能週四第三期-內湖區碧湖社區發展協會-14f19","assignedAt":"2026-09-12"}
 {"id":"crs_c1c17cac","kind":"course","slug":"沿着海岸去旅行基隆河支流篇-南港社大-17cac","assignedAt":"2026-09-12"}
 {"id":"crs_c1c271f2","kind":"course","slug":"安康快樂有氧運動班-深坑區青年志工會-271f2","assignedAt":"2026-09-12"}
@@ -36164,6 +36315,7 @@
 {"id":"crs_c2bc6a25","kind":"course","slug":"淡水河獨木舟文化巡禮-淡水社大-c6a25","assignedAt":"2026-09-12"}
 {"id":"crs_c2bc7658","kind":"course","slug":"低空療癒-竹北運動中心-c7658","assignedAt":"2026-09-29"}
 {"id":"crs_c2bd2438","kind":"course","slug":"網路規劃架設泰山-勞動力發展署北基宜花金馬-d2438","assignedAt":"2026-09-12"}
+{"id":"crs_c2bf6893","kind":"course","slug":"有氧與瑜珈提斯初級1-八德社大-f6893","assignedAt":"2026-10-15"}
 {"id":"crs_c2bfaa3d","kind":"course","slug":"泳池幼兒班-三重運動中心-faa3d","assignedAt":"2026-10-01"}
 {"id":"crs_c2c0e002","kind":"course","slug":"兒童游泳團體班-長春國民暨兒童運動中心-0e002","assignedAt":"2026-09-12"}
 {"id":"crs_c2c1d57c","kind":"course","slug":"輕流動瑜珈-大屯社大-1d57c","assignedAt":"2026-09-12"}
@@ -36609,6 +36761,7 @@
 {"id":"crs_c5015bec","kind":"course","slug":"智慧製造技術導入週六-勞動力發展署桃竹苗分署-15bec","assignedAt":"2026-09-12"}
 {"id":"crs_c5038480","kind":"course","slug":"空中瑜珈-太平國民暨兒童運動中心-38480","assignedAt":"2026-09-29"}
 {"id":"crs_c5056360","kind":"course","slug":"樂齡瑜珈-松山區松基里辦公處-56360","assignedAt":"2026-09-12"}
+{"id":"crs_c5064366","kind":"course","slug":"長笛初級1-八德社大-64366","assignedAt":"2026-10-15"}
 {"id":"crs_c50a2cd9","kind":"course","slug":"AI虛擬主播製作與短影音實務班第01期-就業服務推廣協會-a2cd9","assignedAt":"2026-09-12"}
 {"id":"crs_c50ac3f6","kind":"course","slug":"玩線手編織-永和社大-ac3f6","assignedAt":"2026-09-12"}
 {"id":"crs_c50cb25c","kind":"course","slug":"銀髮族超慢跑與肌力運動-中山社大-cb25c","assignedAt":"2026-09-12"}
@@ -37414,6 +37567,7 @@
 {"id":"crs_c9696025","kind":"course","slug":"當圖書館遇上程式設計Scratch菁英課-立圖書館新莊中港分館-96025","assignedAt":"2026-09-13"}
 {"id":"crs_c969faed","kind":"course","slug":"C01陶藝生活創作-海線社大-9faed","assignedAt":"2026-09-12"}
 {"id":"crs_c96a2d75","kind":"course","slug":"射箭團體班-中正運動中心-a2d75","assignedAt":"2026-09-29"}
+{"id":"crs_c96af9aa","kind":"course","slug":"筑箏雅樂-八德社大-af9aa","assignedAt":"2026-10-15"}
 {"id":"crs_c96b3dc5","kind":"course","slug":"皮革品製作實務班第02期-總工會-b3dc5","assignedAt":"2026-09-12"}
 {"id":"crs_c96b9935","kind":"course","slug":"AutoCAD電腦輔助製圖班第02期-工業會-b9935","assignedAt":"2026-09-12"}
 {"id":"crs_c96f0ec3","kind":"course","slug":"輕鬆學竹編竹藝美學-后豐社大-f0ec3","assignedAt":"2026-09-12"}
@@ -37459,6 +37613,7 @@
 {"id":"crs_c9a64617","kind":"course","slug":"餐桌上的風景水彩美食速寫-鳳山社大-64617","assignedAt":"2026-09-12"}
 {"id":"crs_c9a9b800","kind":"course","slug":"島嶼與燈塔-北投社大-9b800","assignedAt":"2026-09-12"}
 {"id":"crs_c9aa745f","kind":"course","slug":"民謠與藝術歌曲進階-新店崇光社大-a745f","assignedAt":"2026-09-12"}
+{"id":"crs_c9abc855","kind":"course","slug":"樂活流行音樂鍵盤手初級1-八德社大-bc855","assignedAt":"2026-10-15"}
 {"id":"crs_c9adaaed","kind":"course","slug":"古箏琴韻-三重社大-daaed","assignedAt":"2026-09-12"}
 {"id":"crs_c9ae9bf1","kind":"course","slug":"中阮柳琴初階-美港西社大-e9bf1","assignedAt":"2026-09-12"}
 {"id":"crs_c9afeba4","kind":"course","slug":"空中瑜珈-太平國民暨兒童運動中心-feba4","assignedAt":"2026-09-29"}
@@ -37636,6 +37791,7 @@
 {"id":"crs_ca9870d2","kind":"course","slug":"流動肌力瑜珈-中壢運動中心-870d2","assignedAt":"2026-09-12"}
 {"id":"crs_ca9aaa8e","kind":"course","slug":"一起學日本語初L3-土城區新故鄉協會-aaa8e","assignedAt":"2026-09-12"}
 {"id":"crs_ca9af725","kind":"course","slug":"iPARTY舞蹈有氧-永和運動中心-af725","assignedAt":"2026-09-12"}
+{"id":"crs_ca9b9988","kind":"course","slug":"零基礎學素描-八德社大-b9988","assignedAt":"2026-10-15"}
 {"id":"crs_ca9c09af","kind":"course","slug":"成人射箭班-南港運動中心-c09af","assignedAt":"2026-09-29"}
 {"id":"crs_ca9c9404","kind":"course","slug":"電影心理學學分費3000-新莊社大-c9404","assignedAt":"2026-09-12"}
 {"id":"crs_ca9cf784","kind":"course","slug":"哈達瑜珈SX-三峽運動中心-cf784","assignedAt":"2026-09-29"}
@@ -38056,6 +38212,7 @@
 {"id":"crs_ccc9a99b","kind":"course","slug":"東洋演歌歡唱-南港社大-9a99b","assignedAt":"2026-09-12"}
 {"id":"crs_cccd1aa5","kind":"course","slug":"115年度多元閱讀推廣閩南語繪本導讀及手-東山區圖書館-d1aa5","assignedAt":"2026-09-22"}
 {"id":"crs_cccd62b9","kind":"course","slug":"穿越時空感動當下音樂欣賞A-內湖社大-d62b9","assignedAt":"2026-09-12"}
+{"id":"crs_ccd11ee3","kind":"course","slug":"經絡穴道保健應用-八德社大-11ee3","assignedAt":"2026-10-15"}
 {"id":"crs_ccd167d8","kind":"course","slug":"藝起手作美感趣-興德國小-167d8","assignedAt":"2026-09-12"}
 {"id":"crs_ccd277da","kind":"course","slug":"舒緩塑身輕瑜珈-信義社大-277da","assignedAt":"2026-09-12"}
 {"id":"crs_ccd38c61","kind":"course","slug":"咖啡萃取與咖啡飲品調製班-藝術人文教育發展協會-38c61","assignedAt":"2026-09-12"}
@@ -38202,6 +38359,7 @@
 {"id":"crs_cd96f76b","kind":"course","slug":"輕鬆玩美瑜珈提斯B-八德社大-6f76b","assignedAt":"2026-09-12"}
 {"id":"crs_cd971d75","kind":"course","slug":"TRX全面訓練-新莊運動中心-71d75","assignedAt":"2026-09-29"}
 {"id":"crs_cd97207b","kind":"course","slug":"器械皮拉提斯-中正運動中心-7207b","assignedAt":"2026-09-29"}
+{"id":"crs_cd972d33","kind":"course","slug":"時尚服裝打版縫製-八德社大-72d33","assignedAt":"2026-10-15"}
 {"id":"crs_cd97b42b","kind":"course","slug":"烏克麗麗彈奏及賞析中級-桃園社大-7b42b","assignedAt":"2026-09-12"}
 {"id":"crs_cd97efc7","kind":"course","slug":"木質傢俱手感彩繪班第25期-職業總工會-7efc7","assignedAt":"2026-09-12"}
 {"id":"crs_cd98ccfb","kind":"course","slug":"吉他彈唱與演奏16週-林口社大-8ccfb","assignedAt":"2026-09-12"}
@@ -38224,6 +38382,7 @@
 {"id":"crs_cdaf1eb2","kind":"course","slug":"健脊伸展增肌體適能-松山社大-f1eb2","assignedAt":"2026-09-12"}
 {"id":"crs_cdb0c39b","kind":"course","slug":"生活烘焙趣-水沙連社大-0c39b","assignedAt":"2026-09-12"}
 {"id":"crs_cdb135fa","kind":"course","slug":"從中醫談養生初級-中壢社大-135fa","assignedAt":"2026-09-12"}
+{"id":"crs_cdb3c115","kind":"course","slug":"印度古瑜珈初級1-八德社大-3c115","assignedAt":"2026-10-15"}
 {"id":"crs_cdb64868","kind":"course","slug":"美甲美睫快剪實務全科班第01期-中華國際職業美學協會-64868","assignedAt":"2026-09-12"}
 {"id":"crs_cdbb105e","kind":"course","slug":"Zumba-桃園運動中心-b105e","assignedAt":"2026-09-12"}
 {"id":"crs_cdbb28dd","kind":"course","slug":"活力核心瑜珈15H-永和運動中心-b28dd","assignedAt":"2026-09-12"}
@@ -38236,6 +38395,7 @@
 {"id":"crs_cdc30c90","kind":"course","slug":"汽車噴漆及美容鍍膜-勞動力發展署雲嘉南分署-30c90","assignedAt":"2026-09-12"}
 {"id":"crs_cdc3b551","kind":"course","slug":"養生健康操八段錦-淡水區鄧公社區發展協會-3b551","assignedAt":"2026-09-12"}
 {"id":"crs_cdc41b6c","kind":"course","slug":"核心肌力與居家體適能-金門社大-41b6c","assignedAt":"2026-09-12"}
+{"id":"crs_cdc4507d","kind":"course","slug":"快樂口琴自在律動-八德社大-4507d","assignedAt":"2026-10-15"}
 {"id":"crs_cdc485a8","kind":"course","slug":"MAC品格籃球養成班-烏日全民運動館-485a8","assignedAt":"2026-09-29"}
 {"id":"crs_cdc5bd0c","kind":"course","slug":"古箏初級-中壢社大-5bd0c","assignedAt":"2026-09-12"}
 {"id":"crs_cdc5ce87","kind":"course","slug":"旅遊英文-三鶯社大-5ce87","assignedAt":"2026-09-12"}
@@ -38425,6 +38585,7 @@
 {"id":"crs_cec2530f","kind":"course","slug":"珠寶創意繪圖假日班基隆第01期-勞動力發展署北基宜花金馬-2530f","assignedAt":"2026-09-12"}
 {"id":"crs_cec30832","kind":"course","slug":"泰語初級會話-中和社大-30832","assignedAt":"2026-09-12"}
 {"id":"crs_cec58dcd","kind":"course","slug":"只有素描基礎篇-鎮港園社大-58dcd","assignedAt":"2026-09-12"}
+{"id":"crs_ceca0936","kind":"course","slug":"舒活健康瑜珈-八德社大-a0936","assignedAt":"2026-10-15"}
 {"id":"crs_cecd9e4d","kind":"course","slug":"泳池幼兒班-三重運動中心-d9e4d","assignedAt":"2026-10-01"}
 {"id":"crs_cecdf024","kind":"course","slug":"書法藝術-新楊平社大-df024","assignedAt":"2026-10-07"}
 {"id":"crs_cecf8cd1","kind":"course","slug":"南臺灣志工社-第一社大-f8cd1","assignedAt":"2026-09-12"}
@@ -38553,6 +38714,7 @@
 {"id":"crs_cf7a6259","kind":"course","slug":"關西學沁入鹹菜甕-竹北社大-a6259","assignedAt":"2026-09-12"}
 {"id":"crs_cf7df933","kind":"course","slug":"聽歌減肥雕塑飛輪-土城運動中心-df933","assignedAt":"2026-09-29"}
 {"id":"crs_cf7e8cf6","kind":"course","slug":"幼兒足球79歲-林口運動中心-e8cf6","assignedAt":"2026-09-29"}
+{"id":"crs_cf7ef416","kind":"course","slug":"旅遊英語快樂學-八德社大-ef416","assignedAt":"2026-10-15"}
 {"id":"crs_cf7fe854","kind":"course","slug":"書法初級1-中壢社大-fe854","assignedAt":"2026-09-12"}
 {"id":"crs_cf803db3","kind":"course","slug":"油畫風景花卉C初階入門-北投社大-03db3","assignedAt":"2026-09-12"}
 {"id":"crs_cf845ed6","kind":"course","slug":"一起來彈彈琴中級折疊琴手提電子琴-竹松社大-45ed6","assignedAt":"2026-09-12"}
@@ -39204,6 +39366,7 @@
 {"id":"crs_d2f72ecc","kind":"course","slug":"手機剪輯技巧短影音行銷基礎課-宜蘭社大-72ecc","assignedAt":"2026-09-12"}
 {"id":"crs_d2f92f79","kind":"course","slug":"巧指歡唱學手語-大安社大-92f79","assignedAt":"2026-09-12"}
 {"id":"crs_d2fbbd0d","kind":"course","slug":"幸福玩泥水泥手作花器-竹松社大-bbd0d","assignedAt":"2026-09-12"}
+{"id":"crs_d2fd28b2","kind":"course","slug":"經絡與生活保健-八德社大-d28b2","assignedAt":"2026-10-15"}
 {"id":"crs_d2fdfa42","kind":"course","slug":"輕鬆雕塑減肥飛輪-信義運動中心-dfa42","assignedAt":"2026-09-29"}
 {"id":"crs_d2ffadd9","kind":"course","slug":"器械皮拉提斯核心床-立竹光運動中心-fadd9","assignedAt":"2026-09-29"}
 {"id":"crs_d300366d","kind":"course","slug":"洞簫班-臺南社大-0366d","assignedAt":"2026-09-12"}
@@ -39543,6 +39706,7 @@
 {"id":"crs_d4da59ed","kind":"course","slug":"桌球樂齡專班-板橋運動中心-a59ed","assignedAt":"2026-09-29"}
 {"id":"crs_d4e48af8","kind":"course","slug":"熱唱日文歌樂學日本語-林口社大-48af8","assignedAt":"2026-09-12"}
 {"id":"crs_d4e4de82","kind":"course","slug":"肩頸理療瑜珈-桃園運動中心-4de82","assignedAt":"2026-09-12"}
+{"id":"crs_d4e52d66","kind":"course","slug":"中華文化六十甲子-八德社大-52d66","assignedAt":"2026-10-15"}
 {"id":"crs_d4e552ac","kind":"course","slug":"難得糊塗學南胡二胡進階-南關社大-552ac","assignedAt":"2026-09-12"}
 {"id":"crs_d4e57236","kind":"course","slug":"樂齡瑜伽提斯身體密碼解鎖-社大-57236","assignedAt":"2026-09-12"}
 {"id":"crs_d4e68be7","kind":"course","slug":"壁球成人團體班-板橋運動中心-68be7","assignedAt":"2026-09-29"}
@@ -39833,6 +39997,7 @@
 {"id":"crs_d6707288","kind":"course","slug":"中餐烹調達人葷食丙級-花蓮社大-07288","assignedAt":"2026-09-12"}
 {"id":"crs_d6714789","kind":"course","slug":"手機數位資訊應用1班-中華民國天元慈善功德會-14789","assignedAt":"2026-09-12"}
 {"id":"crs_d672caaa","kind":"course","slug":"成人游泳基礎班-wdygwd22-2caaa","assignedAt":"2026-09-12"}
+{"id":"crs_d673679f","kind":"course","slug":"房地產理財實務-八德社大-3679f","assignedAt":"2026-10-15"}
 {"id":"crs_d674cbe6","kind":"course","slug":"A125北辰小提琴入門團體班-海線社大-4cbe6","assignedAt":"2026-09-12"}
 {"id":"crs_d675c922","kind":"course","slug":"草本植萃養生實務12週416開課-林口社大-5c922","assignedAt":"2026-09-12"}
 {"id":"crs_d67609e9","kind":"course","slug":"燃脂飛輪-新莊運動中心-609e9","assignedAt":"2026-09-29"}
@@ -39988,6 +40153,7 @@
 {"id":"crs_d7708405","kind":"course","slug":"9月23日3D列印關節小吊飾-國家圖書館-08405","assignedAt":"2026-09-12"}
 {"id":"crs_d7717de7","kind":"course","slug":"成人羽球-北屯國民暨兒童運動中心-17de7","assignedAt":"2026-09-29"}
 {"id":"crs_d77400a3","kind":"course","slug":"歐式花藝-大屯社大-400a3","assignedAt":"2026-09-12"}
+{"id":"crs_d774e1c6","kind":"course","slug":"全方位司儀主持人培訓社團-八德社大-4e1c6","assignedAt":"2026-10-15"}
 {"id":"crs_d7759358","kind":"course","slug":"跟著旅遊學英文-新莊社大-59358","assignedAt":"2026-09-12"}
 {"id":"crs_d7783cff","kind":"course","slug":"幼兒游泳班-中正運動中心-83cff","assignedAt":"2026-09-29"}
 {"id":"crs_d77a5cb1","kind":"course","slug":"樂童體操班-文山運動中心-a5cb1","assignedAt":"2026-09-12"}
@@ -40032,6 +40198,7 @@
 {"id":"crs_d7c13986","kind":"course","slug":"ZUMBA-北屯國民暨兒童運動中心-13986","assignedAt":"2026-09-12"}
 {"id":"crs_d7c2356b","kind":"course","slug":"二胡名曲演奏初級-新楊平社大-2356b","assignedAt":"2026-10-06"}
 {"id":"crs_d7c28a3c","kind":"course","slug":"PHP資料庫網頁設計泰山-勞動力發展署北基宜花金馬-28a3c","assignedAt":"2026-09-12"}
+{"id":"crs_d7c2f4cf","kind":"course","slug":"日本語初級1-八德社大-2f4cf","assignedAt":"2026-10-15"}
 {"id":"crs_d7c3a897","kind":"course","slug":"悅齡樂舞國標單人拉丁舞健康-大安社大-3a897","assignedAt":"2026-09-12"}
 {"id":"crs_d7c56785","kind":"course","slug":"雕塑瑜珈-甲安埔社大-56785","assignedAt":"2026-09-12"}
 {"id":"crs_d7c897b0","kind":"course","slug":"體氣圓融舞動B-美港西社大-897b0","assignedAt":"2026-09-12"}
@@ -40086,6 +40253,7 @@
 {"id":"crs_d7fbba80","kind":"course","slug":"拳擊有氧-長春國民暨兒童運動中心-bba80","assignedAt":"2026-09-17"}
 {"id":"crs_d7fc94b9","kind":"course","slug":"舞動東方肚皮舞-桃園社大-c94b9","assignedAt":"2026-10-01"}
 {"id":"crs_d7fd4c11","kind":"course","slug":"生活花藝B-大屯社大-d4c11","assignedAt":"2026-09-12"}
+{"id":"crs_d7fd8727","kind":"course","slug":"四季生活旅繪-八德社大-d8727","assignedAt":"2026-10-15"}
 {"id":"crs_d80424bb","kind":"course","slug":"旅繪圖文手帳創作-第一社大-424bb","assignedAt":"2026-09-12"}
 {"id":"crs_d80892f2","kind":"course","slug":"TRX燃爆核心挑戰-新莊運動中心-892f2","assignedAt":"2026-09-29"}
 {"id":"crs_d808c6a1","kind":"course","slug":"小家電維修-信義社大-8c6a1","assignedAt":"2026-09-12"}
@@ -40096,6 +40264,7 @@
 {"id":"crs_d8100c5e","kind":"course","slug":"十二孔陶笛初級-新楊平社大-00c5e","assignedAt":"2026-09-12"}
 {"id":"crs_d8113409","kind":"course","slug":"成人羽球班-桃園運動中心-13409","assignedAt":"2026-09-29"}
 {"id":"crs_d8123c53","kind":"course","slug":"室內裝修工地監管與直擊-松山社大-23c53","assignedAt":"2026-09-19"}
+{"id":"crs_d812b099","kind":"course","slug":"流行音樂圓夢鍵盤中級1-八德社大-2b099","assignedAt":"2026-10-15"}
 {"id":"crs_d814844b","kind":"course","slug":"道家傳統太極拳-桃園社大-4844b","assignedAt":"2026-09-12"}
 {"id":"crs_d815faca","kind":"course","slug":"有氧舞蹈班-明德國小-5faca","assignedAt":"2026-09-12"}
 {"id":"crs_d816a646","kind":"course","slug":"中阮演奏初級-新楊平社大-6a646","assignedAt":"2026-09-12"}
@@ -40615,6 +40784,7 @@
 {"id":"crs_daf2f5d3","kind":"course","slug":"水中飛輪-大同運動中心-2f5d3","assignedAt":"2026-09-29"}
 {"id":"crs_daf31a9e","kind":"course","slug":"古箏美學國樂賞析-信義社大-31a9e","assignedAt":"2026-09-12"}
 {"id":"crs_daf36575","kind":"course","slug":"成人芭蕾-文山運動中心-36575","assignedAt":"2026-09-12"}
+{"id":"crs_daf6669a","kind":"course","slug":"銀髮讀經-八德社大-6669a","assignedAt":"2026-10-15"}
 {"id":"crs_dafed2cd","kind":"course","slug":"原住民族框織初級-樹林社大-ed2cd","assignedAt":"2026-10-08"}
 {"id":"crs_db03f8fc","kind":"course","slug":"樂活韻律健康操-鹿秀社大-3f8fc","assignedAt":"2026-09-12"}
 {"id":"crs_db05ac03","kind":"course","slug":"機械皮拉提斯-板橋運動中心-5ac03","assignedAt":"2026-09-29"}
@@ -40903,6 +41073,7 @@
 {"id":"crs_dc7f1e16","kind":"course","slug":"投資理財策略-八德社大-f1e16","assignedAt":"2026-09-12"}
 {"id":"crs_dc811264","kind":"course","slug":"AI黑客狠矯社-臺南社大-11264","assignedAt":"2026-09-13"}
 {"id":"crs_dc81e8c4","kind":"course","slug":"空中瑜珈中高階-楊梅體育園區-1e8c4","assignedAt":"2026-09-29"}
+{"id":"crs_dc821004","kind":"course","slug":"用愛編織人生-八德社大-21004","assignedAt":"2026-10-15"}
 {"id":"crs_dc82244b","kind":"course","slug":"TRX微曲線訓練-竹北運動中心-2244b","assignedAt":"2026-09-29"}
 {"id":"crs_dc831c49","kind":"course","slug":"看電影讀文學說自己-萬華社大-31c49","assignedAt":"2026-09-12"}
 {"id":"crs_dc8444cd","kind":"course","slug":"NAS1照服自訓自用班第01期-有限責任高雄市樹子照顧服-444cd","assignedAt":"2026-09-12"}
@@ -41286,6 +41457,7 @@
 {"id":"crs_de7af8a5","kind":"course","slug":"典寶溪畔的自然生活與造屋-北高雄社大-af8a5","assignedAt":"2026-09-12"}
 {"id":"crs_de7bfe95","kind":"course","slug":"生活日語入門-五權社大-bfe95","assignedAt":"2026-09-12"}
 {"id":"crs_de7f3050","kind":"course","slug":"樹木漫聊走讀南關自然生態圈-南關社大-f3050","assignedAt":"2026-09-13"}
+{"id":"crs_de7f98d7","kind":"course","slug":"咖啡飲品調製-八德社大-f98d7","assignedAt":"2026-10-15"}
 {"id":"crs_de836c9c","kind":"course","slug":"哈達瑜珈週二-甲安埔社大-36c9c","assignedAt":"2026-09-12"}
 {"id":"crs_de83711b","kind":"course","slug":"流行有氧舞蹈B-岡山社大-3711b","assignedAt":"2026-09-12"}
 {"id":"crs_de83ea62","kind":"course","slug":"成人壁球平日團體班-內湖運動中心-3ea62","assignedAt":"2026-09-29"}
@@ -41304,6 +41476,7 @@
 {"id":"crs_de945071","kind":"course","slug":"壓花蝶古巴特之創作與賞析-新莊社大-45071","assignedAt":"2026-09-12"}
 {"id":"crs_de989a7c","kind":"course","slug":"新住民班初級-吉林國小-89a7c","assignedAt":"2026-09-12"}
 {"id":"crs_de99a457","kind":"course","slug":"來玩智慧型手機初級班蘇澳分班-羅東社大-9a457","assignedAt":"2026-09-12"}
+{"id":"crs_de9a6c90","kind":"course","slug":"基礎英語發音-八德社大-a6c90","assignedAt":"2026-10-15"}
 {"id":"crs_de9b1163","kind":"course","slug":"自然農法蔬菜栽種班-屏北區社大-b1163","assignedAt":"2026-09-12"}
 {"id":"crs_dea01293","kind":"course","slug":"太極瑜珈-五權社大-01293","assignedAt":"2026-09-12"}
 {"id":"crs_dea185c4","kind":"course","slug":"龍韻口琴樂團合奏班-萬華社大-185c4","assignedAt":"2026-09-15"}
@@ -41826,6 +41999,7 @@
 {"id":"crs_e1888840","kind":"course","slug":"美學花卉色鉛筆下午-松山社大-88840","assignedAt":"2026-09-12"}
 {"id":"crs_e1896065","kind":"course","slug":"國樂古箏二胡笛子琵琶葫蘆絲-大屯社大-96065","assignedAt":"2026-09-12"}
 {"id":"crs_e1897f85","kind":"course","slug":"拿起筆就能畫速寫線上B-淡水社大-97f85","assignedAt":"2026-09-12"}
+{"id":"crs_e189a98b","kind":"course","slug":"革物手作就是愛玩皮-八德社大-9a98b","assignedAt":"2026-10-15"}
 {"id":"crs_e189deeb","kind":"course","slug":"越南語職場實用會話進階班第01期-臺灣新興產業人才培育協會-9deeb","assignedAt":"2026-09-12"}
 {"id":"crs_e189e094","kind":"course","slug":"國際民俗舞蹈體驗營-國立公共資訊圖書館-9e094","assignedAt":"2026-09-13"}
 {"id":"crs_e18a8814","kind":"course","slug":"羽球三人精緻班-長春國民暨兒童運動中心-a8814","assignedAt":"2026-09-29"}
@@ -41850,6 +42024,7 @@
 {"id":"crs_e1a063af","kind":"course","slug":"兒童訓練班可完成自仰各25M-wdygwd32-063af","assignedAt":"2026-09-12"}
 {"id":"crs_e1a0afb6","kind":"course","slug":"兒童游泳班-wdygwd37-0afb6","assignedAt":"2026-09-29"}
 {"id":"crs_e1a41a31","kind":"course","slug":"攝影美學中階保險必保學分費3000-新莊社大-41a31","assignedAt":"2026-09-12"}
+{"id":"crs_e1a54cfc","kind":"course","slug":"舒活健康瑜珈-八德社大-54cfc","assignedAt":"2026-10-15"}
 {"id":"crs_e1a59e03","kind":"course","slug":"甜酒釀手作實驗室6週515開課-林口社大-59e03","assignedAt":"2026-09-12"}
 {"id":"crs_e1a5aa73","kind":"course","slug":"乒乓球運動入門-濁水溪社大-5aa73","assignedAt":"2026-09-12"}
 {"id":"crs_e1a5eba6","kind":"course","slug":"實用英語會話班中級3階-松山社大-5eba6","assignedAt":"2026-09-12"}
@@ -41994,6 +42169,7 @@
 {"id":"crs_e2604a26","kind":"course","slug":"立體繪本工作坊-北投社大-04a26","assignedAt":"2026-09-12"}
 {"id":"crs_e2621c19","kind":"course","slug":"南胡班-新店區下城社區發展協會-21c19","assignedAt":"2026-09-12"}
 {"id":"crs_e262b044","kind":"course","slug":"色鉛筆粉彩C-大屯社大-2b044","assignedAt":"2026-09-12"}
+{"id":"crs_e2655e1f","kind":"course","slug":"手工皂及簡易保養品製作-八德社大-55e1f","assignedAt":"2026-10-15"}
 {"id":"crs_e266af93","kind":"course","slug":"游泳兒童班-蘆洲運動中心-6af93","assignedAt":"2026-09-29"}
 {"id":"crs_e268694c","kind":"course","slug":"舞焰國標社華爾滋-屏北區社大-8694c","assignedAt":"2026-09-12"}
 {"id":"crs_e26b5571","kind":"course","slug":"活力舞動瑜珈-萬華社大-b5571","assignedAt":"2026-09-12"}
@@ -42516,6 +42692,7 @@
 {"id":"crs_e56a75ec","kind":"course","slug":"烏克麗麗超好玩-南港社大-a75ec","assignedAt":"2026-09-12"}
 {"id":"crs_e56c3de7","kind":"course","slug":"和緩流動瑜珈-五股運動中心-c3de7","assignedAt":"2026-09-29"}
 {"id":"crs_e56c6ea1","kind":"course","slug":"藝術插花-新楊平社大-c6ea1","assignedAt":"2026-09-12"}
+{"id":"crs_e56d476a","kind":"course","slug":"日本舞踊-八德社大-d476a","assignedAt":"2026-10-15"}
 {"id":"crs_e56d6a48","kind":"course","slug":"ZUMBA-楊梅體育園區-d6a48","assignedAt":"2026-09-12"}
 {"id":"crs_e56db84c","kind":"course","slug":"十二生肖姓名學-基隆社大-db84c","assignedAt":"2026-09-12"}
 {"id":"crs_e56e17a2","kind":"course","slug":"歡樂二胡-大屯社大-e17a2","assignedAt":"2026-09-12"}
@@ -43075,6 +43252,7 @@
 {"id":"crs_e879465f","kind":"course","slug":"新住民認識中文-中壢社大-9465f","assignedAt":"2026-09-12"}
 {"id":"crs_e87ab890","kind":"course","slug":"三運籃球課後班-三重運動中心-ab890","assignedAt":"2026-09-29"}
 {"id":"crs_e87ba379","kind":"course","slug":"逗陣走讀大自然週四-新店崇光社大-ba379","assignedAt":"2026-09-12"}
+{"id":"crs_e87d9a62","kind":"course","slug":"旅遊英語會話開口說初級-桃園社大-d9a62","assignedAt":"2026-10-15"}
 {"id":"crs_e87e6eee","kind":"course","slug":"舒壓延展瑜珈-立竹光運動中心-e6eee","assignedAt":"2026-09-12"}
 {"id":"crs_e87e73b4","kind":"course","slug":"11505TRX全方位燃脂雕塑二1950-蘆竹運動中心-e73b4","assignedAt":"2026-09-29"}
 {"id":"crs_e88128dd","kind":"course","slug":"幼兒團體班-板橋運動中心-128dd","assignedAt":"2026-10-03"}
@@ -43245,6 +43423,7 @@
 {"id":"crs_e967ae4f","kind":"course","slug":"房地產登記實務-科學城社大-7ae4f","assignedAt":"2026-09-12"}
 {"id":"crs_e969e23d","kind":"course","slug":"初階空中瑜珈-中壢運動中心-9e23d","assignedAt":"2026-09-12"}
 {"id":"crs_e969e357","kind":"course","slug":"養生瑜珈A-內湖社大-9e357","assignedAt":"2026-09-12"}
+{"id":"crs_e96c1e0b","kind":"course","slug":"魚菜共生-八德社大-c1e0b","assignedAt":"2026-10-15"}
 {"id":"crs_e96d2ba1","kind":"course","slug":"攝影空拍技巧及後製-萬華社大-d2ba1","assignedAt":"2026-09-12"}
 {"id":"crs_e96df9c5","kind":"course","slug":"麵包最新產品進階-中山社大-df9c5","assignedAt":"2026-09-12"}
 {"id":"crs_e96e1a0b","kind":"course","slug":"畫畫輕鬆學四早班-汐止社大-e1a0b","assignedAt":"2026-09-12"}
@@ -43403,6 +43582,7 @@
 {"id":"crs_ea45fbd6","kind":"course","slug":"皮革工藝進階班第03期-職業總工會-5fbd6","assignedAt":"2026-09-12"}
 {"id":"crs_ea463a72","kind":"course","slug":"日文N4訓練班第01期-臺灣外語人才發展協會-63a72","assignedAt":"2026-09-12"}
 {"id":"crs_ea487064","kind":"course","slug":"雕塑飛輪SX-三峽運動中心-87064","assignedAt":"2026-09-29"}
+{"id":"crs_ea48e0e5","kind":"course","slug":"太極養生37式-八德社大-8e0e5","assignedAt":"2026-10-15"}
 {"id":"crs_ea4978bc","kind":"course","slug":"佳冬實用手工皂及天然果凍花製作-屏南區社大-978bc","assignedAt":"2026-09-12"}
 {"id":"crs_ea498595","kind":"course","slug":"手機基礎教學-樂齡學習示範中心-98595","assignedAt":"2026-09-12"}
 {"id":"crs_ea4a062a","kind":"course","slug":"有氧彼拉雕塑-土城運動中心-a062a","assignedAt":"2026-09-29"}
@@ -43622,6 +43802,7 @@
 {"id":"crs_eb6c90d8","kind":"course","slug":"開心學唱歌-八德社大-c90d8","assignedAt":"2026-10-14"}
 {"id":"crs_eb6e2f27","kind":"course","slug":"舒心瑜伽-虎尾全民運動館-e2f27","assignedAt":"2026-09-29"}
 {"id":"crs_eb6f2b7d","kind":"course","slug":"活力瑜伽-水沙連社大-f2b7d","assignedAt":"2026-09-12"}
+{"id":"crs_eb70579a","kind":"course","slug":"筝藝茶文化-八德社大-0579a","assignedAt":"2026-10-15"}
 {"id":"crs_eb70991a","kind":"course","slug":"親子跳床班-桃園運動中心-0991a","assignedAt":"2026-09-27"}
 {"id":"crs_eb712a1c","kind":"course","slug":"台語認證師資先修-甲安埔社大-12a1c","assignedAt":"2026-09-12"}
 {"id":"crs_eb713b18","kind":"course","slug":"瑜珈提斯-南港運動中心-13b18","assignedAt":"2026-09-12"}
@@ -43710,6 +43891,7 @@
 {"id":"crs_ebe322b5","kind":"course","slug":"哈燒韓國MV-員永村社大-322b5","assignedAt":"2026-09-12"}
 {"id":"crs_ebe3be00","kind":"course","slug":"誰羽爭鋒-立竹光運動中心-3be00","assignedAt":"2026-09-29"}
 {"id":"crs_ebe4a325","kind":"course","slug":"兒童游泳班-淡水運動中心-4a325","assignedAt":"2026-09-29"}
+{"id":"crs_ebe5167e","kind":"course","slug":"國標舞輕鬆學中級1-八德社大-5167e","assignedAt":"2026-10-15"}
 {"id":"crs_ebe7c267","kind":"course","slug":"社交舞表演與教學實務培訓班第01期-舞蹈職業工會-7c267","assignedAt":"2026-09-12"}
 {"id":"crs_ebe911ef","kind":"course","slug":"太極美學鄭子太極拳三十七式探索上-科學城社大-911ef","assignedAt":"2026-09-12"}
 {"id":"crs_ebede6d4","kind":"course","slug":"泳池幼兒班-三重運動中心-de6d4","assignedAt":"2026-10-01"}
@@ -43796,6 +43978,7 @@
 {"id":"crs_ec540752","kind":"course","slug":"全方位肌能運動-文山社大-40752","assignedAt":"2026-09-12"}
 {"id":"crs_ec547b12","kind":"course","slug":"水噹噹手作皂工坊-中和社大-47b12","assignedAt":"2026-09-12"}
 {"id":"crs_ec56b58f","kind":"course","slug":"快樂學日語-水沙連社大-6b58f","assignedAt":"2026-09-12"}
+{"id":"crs_ec579f8f","kind":"course","slug":"養生太極拳-八德社大-79f8f","assignedAt":"2026-10-15"}
 {"id":"crs_ec57dc45","kind":"course","slug":"新手瘦身飛輪-南港運動中心-7dc45","assignedAt":"2026-09-12"}
 {"id":"crs_ec583e3c","kind":"course","slug":"中正人文生態旅記森林生態系-中正社大-83e3c","assignedAt":"2026-09-12"}
 {"id":"crs_ec5879db","kind":"course","slug":"野訪生態攝影遊-淡水社大-879db","assignedAt":"2026-09-12"}
@@ -44277,6 +44460,7 @@
 {"id":"crs_eecda15a","kind":"course","slug":"低空療癒空瑜-林口運動中心-da15a","assignedAt":"2026-09-12"}
 {"id":"crs_eecdc788","kind":"course","slug":"服裝輕鬆做-新楊平社大-dc788","assignedAt":"2026-09-12"}
 {"id":"crs_eed1599a","kind":"course","slug":"童裝打版設計製作班第01期-臺灣產業人才培育協會-1599a","assignedAt":"2026-09-12"}
+{"id":"crs_eed39d5d","kind":"course","slug":"世界風情創意舞蹈-八德社大-39d5d","assignedAt":"2026-10-15"}
 {"id":"crs_eed58bb7","kind":"course","slug":"時尚美甲-大屯社大-58bb7","assignedAt":"2026-09-12"}
 {"id":"crs_eed5ba9b","kind":"course","slug":"重訓團班-信義運動中心-5ba9b","assignedAt":"2026-09-29"}
 {"id":"crs_eed8740d","kind":"course","slug":"大自然的呼喚健康步道探索之旅-科學城社大-8740d","assignedAt":"2026-09-12"}
@@ -44482,6 +44666,7 @@
 {"id":"crs_eff4526d","kind":"course","slug":"壁球訓練班-永和運動中心-4526d","assignedAt":"2026-09-29"}
 {"id":"crs_eff7365e","kind":"course","slug":"嬰幼兒撫觸與按摩班第02期-保育人員職業工會-7365e","assignedAt":"2026-09-12"}
 {"id":"crs_eff74d4d","kind":"course","slug":"跟著二胡走-八德社大-74d4d","assignedAt":"2026-09-12"}
+{"id":"crs_eff7605f","kind":"course","slug":"古典佳人民俗舞蹈-八德社大-7605f","assignedAt":"2026-10-15"}
 {"id":"crs_eff7c0e9","kind":"course","slug":"綜合流行單人舞B班-基隆社大-7c0e9","assignedAt":"2026-09-12"}
 {"id":"crs_eff8de7f","kind":"course","slug":"美聲歡唱在週五-萬華社大-8de7f","assignedAt":"2026-09-12"}
 {"id":"crs_eff97b00","kind":"course","slug":"壁球入門班-林口運動中心-97b00","assignedAt":"2026-09-29"}
@@ -44572,6 +44757,7 @@
 {"id":"crs_f08d68e6","kind":"course","slug":"一起來跳社交舞三民-港都社大-d68e6","assignedAt":"2026-09-12"}
 {"id":"crs_f08da9ac","kind":"course","slug":"快樂學習薩克斯風-萬華社大-da9ac","assignedAt":"2026-09-12"}
 {"id":"crs_f08f193c","kind":"course","slug":"中餐烹調丙級-竹北社大-f193c","assignedAt":"2026-09-12"}
+{"id":"crs_f0901963","kind":"course","slug":"法語文化初級1-八德社大-01963","assignedAt":"2026-10-15"}
 {"id":"crs_f091dc3a","kind":"course","slug":"假日兒童泳訓班-楊梅體育園區-1dc3a","assignedAt":"2026-09-29"}
 {"id":"crs_f0933a5d","kind":"course","slug":"新古典舞-南港社大-33a5d","assignedAt":"2026-09-12"}
 {"id":"crs_f09351fd","kind":"course","slug":"智慧節能水電自動控制桃園第2期-勞動力發展署桃竹苗分署-351fd","assignedAt":"2026-10-02"}
@@ -44591,6 +44777,7 @@
 {"id":"crs_f09c6edc","kind":"course","slug":"TRX懸吊式與開放式重量肌力訓練-萬華社大-c6edc","assignedAt":"2026-09-15"}
 {"id":"crs_f09e35e4","kind":"course","slug":"生活藝術拼布-平原社大-e35e4","assignedAt":"2026-09-12"}
 {"id":"crs_f09f8bd1","kind":"course","slug":"2026古典身韻班-土城區舞蹈推廣協會-f8bd1","assignedAt":"2026-09-12"}
+{"id":"crs_f0a2f4c5","kind":"course","slug":"美甲彩繪指尖美學-八德社大-2f4c5","assignedAt":"2026-10-15"}
 {"id":"crs_f0a3f177","kind":"course","slug":"匹克球成人基礎班-土城運動中心-3f177","assignedAt":"2026-09-29"}
 {"id":"crs_f0a4a88a","kind":"course","slug":"智能控制與AI實務應用泰山-勞動力發展署北基宜花金馬-4a88a","assignedAt":"2026-09-12"}
 {"id":"crs_f0a50d27","kind":"course","slug":"初動負荷團體課TM-天母運動訓練館-50d27","assignedAt":"2026-09-29"}
@@ -44923,6 +45110,7 @@
 {"id":"crs_f2694a75","kind":"course","slug":"裝潢木工實務-樹林社大-94a75","assignedAt":"2026-09-12"}
 {"id":"crs_f26bb5ae","kind":"course","slug":"女性專班-淡水運動中心-bb5ae","assignedAt":"2026-09-29"}
 {"id":"crs_f26c2fd7","kind":"course","slug":"善化區圖書館115年下半年第二期藝文研習-善化區圖書館-c2fd7","assignedAt":"2026-09-13"}
+{"id":"crs_f26c7b4d","kind":"course","slug":"桃園尚水水資源微旅行-八德社大-c7b4d","assignedAt":"2026-10-15"}
 {"id":"crs_f26da656","kind":"course","slug":"多元動感舞蹈-新楊平社大-da656","assignedAt":"2026-10-06"}
 {"id":"crs_f26ead54","kind":"course","slug":"TRX-大里國民暨兒童運動中心-ead54","assignedAt":"2026-09-29"}
 {"id":"crs_f26f093a","kind":"course","slug":"十二孔陶笛初級-新楊平社大-f093a","assignedAt":"2026-09-12"}
@@ -45106,6 +45294,7 @@
 {"id":"crs_f3627091","kind":"course","slug":"樂音悠揚薩克斯風-岡山社大-27091","assignedAt":"2026-09-12"}
 {"id":"crs_f3628eb4","kind":"course","slug":"快樂學鋼琴-海線社大-28eb4","assignedAt":"2026-09-12"}
 {"id":"crs_f3636ab3","kind":"course","slug":"ZUMBA-北屯國民暨兒童運動中心-36ab3","assignedAt":"2026-09-12"}
+{"id":"crs_f36507a5","kind":"course","slug":"日語初級1-八德社大-507a5","assignedAt":"2026-10-15"}
 {"id":"crs_f369255f","kind":"course","slug":"唱流行歌曲學音樂B-文山社大-9255f","assignedAt":"2026-09-12"}
 {"id":"crs_f369d682","kind":"course","slug":"書法與篆刻初階-竹北社大-9d682","assignedAt":"2026-09-12"}
 {"id":"crs_f36bc833","kind":"course","slug":"創意紙雕-水沙連社大-bc833","assignedAt":"2026-09-12"}
@@ -45442,6 +45631,7 @@
 {"id":"crs_f5293fae","kind":"course","slug":"綜合訓練班-樹林運動中心-93fae","assignedAt":"2026-09-29"}
 {"id":"crs_f52d5977","kind":"course","slug":"成人初階當代-淡水運動中心-d5977","assignedAt":"2026-09-29"}
 {"id":"crs_f52f4035","kind":"course","slug":"歐美韓玩美性感熱舞-八德運動中心-f4035","assignedAt":"2026-09-12"}
+{"id":"crs_f53000b7","kind":"course","slug":"日本語初級3-八德社大-000b7","assignedAt":"2026-10-15"}
 {"id":"crs_f53159e9","kind":"course","slug":"慢活手捏陶藝-松山社大-159e9","assignedAt":"2026-09-19"}
 {"id":"crs_f5338447","kind":"course","slug":"彩墨畫-竹塹社大-38447","assignedAt":"2026-09-12"}
 {"id":"crs_f533eb08","kind":"course","slug":"NotionAI打造高效工作系統-中正社大-3eb08","assignedAt":"2026-09-12"}
@@ -45855,6 +46045,7 @@
 {"id":"crs_f776e4b9","kind":"course","slug":"古典吉他-北屯社大-6e4b9","assignedAt":"2026-09-12"}
 {"id":"crs_f7770574","kind":"course","slug":"打造AI時代的全方位專業簡報力實戰班第0-中華汽車工業股份有限公司-70574","assignedAt":"2026-09-12"}
 {"id":"crs_f777642d","kind":"course","slug":"皮拉提斯-五股運動中心-7642d","assignedAt":"2026-10-02"}
+{"id":"crs_f778e381","kind":"course","slug":"日語五十音-八德社大-8e381","assignedAt":"2026-10-15"}
 {"id":"crs_f77952b5","kind":"course","slug":"傳統技藝漆藝-彰化社大-952b5","assignedAt":"2026-09-12"}
 {"id":"crs_f77c29c4","kind":"course","slug":"流行烏克麗麗彈唱-北投社大-c29c4","assignedAt":"2026-09-12"}
 {"id":"crs_f77d165e","kind":"course","slug":"直排輪二級-土城運動中心-d165e","assignedAt":"2026-09-29"}
@@ -45866,6 +46057,7 @@
 {"id":"crs_f783e6ba","kind":"course","slug":"空瑜入門-楊梅體育園區-3e6ba","assignedAt":"2026-09-29"}
 {"id":"crs_f784742a","kind":"course","slug":"森林木工坊-東眼山自然教育中心-4742a","assignedAt":"2026-09-12"}
 {"id":"crs_f784b5aa","kind":"course","slug":"陰瑜珈-士林運動中心-4b5aa","assignedAt":"2026-09-29"}
+{"id":"crs_f785e0f1","kind":"course","slug":"鄉土休閒與導覽-八德社大-5e0f1","assignedAt":"2026-10-15"}
 {"id":"crs_f7862053","kind":"course","slug":"太極拳養生氣功基礎班斗南-山線社大-62053","assignedAt":"2026-09-12"}
 {"id":"crs_f7882166","kind":"course","slug":"台北自然步道尋訪一日生活小確幸-松山社大-82166","assignedAt":"2026-09-19"}
 {"id":"crs_f7896004","kind":"course","slug":"從大肚台地出發台灣紅土淺山4百年走讀-文山社大-96004","assignedAt":"2026-09-12"}
@@ -46047,6 +46239,7 @@
 {"id":"crs_f88c6d21","kind":"course","slug":"樂活歌舞甲-三重區鶴齡協會-c6d21","assignedAt":"2026-09-12"}
 {"id":"crs_f88e058b","kind":"course","slug":"115年10月嬰幼兒閱讀推廣寶貝閱讀大世-立圖書館淡水竹圍分館-e058b","assignedAt":"2026-09-13"}
 {"id":"crs_f88f0209","kind":"course","slug":"匠畫禪繞-北投社大-f0209","assignedAt":"2026-09-12"}
+{"id":"crs_f8910b7f","kind":"course","slug":"手工皮件社團-八德社大-10b7f","assignedAt":"2026-10-15"}
 {"id":"crs_f891cdec","kind":"course","slug":"AI數位轉型與智慧流程自動化產業升級實務-嘉藥學校財團法人嘉南藥理-1cdec","assignedAt":"2026-09-12"}
 {"id":"crs_f894b871","kind":"course","slug":"2026嬰幼兒閱讀推廣活動閱讀萌芽五感放-市圖總館新總館-4b871","assignedAt":"2026-09-16"}
 {"id":"crs_f894db81","kind":"course","slug":"古流現代花藝A與花的邂逅-博愛社大-4db81","assignedAt":"2026-09-12"}
@@ -46343,6 +46536,7 @@
 {"id":"crs_fa2586c6","kind":"course","slug":"下半身雕塑飛輪-中和運動中心-586c6","assignedAt":"2026-10-01"}
 {"id":"crs_fa25976e","kind":"course","slug":"電腦應用悠遊E世界-新店區安坑樂齡中心-5976e","assignedAt":"2026-09-12"}
 {"id":"crs_fa273a28","kind":"course","slug":"不動產經紀人養成-海線社大-73a28","assignedAt":"2026-09-12"}
+{"id":"crs_fa276016","kind":"course","slug":"水電及家電的節能與維修-八德社大-76016","assignedAt":"2026-10-15"}
 {"id":"crs_fa28ac3d","kind":"course","slug":"愛心義剪社研習-松山社大-8ac3d","assignedAt":"2026-09-12"}
 {"id":"crs_fa2b12ea","kind":"course","slug":"流行歌曲演唱技巧中級-中壢社大-b12ea","assignedAt":"2026-09-12"}
 {"id":"crs_fa2b5954","kind":"course","slug":"日本演歌歡唱-板橋社大-b5954","assignedAt":"2026-09-12"}
@@ -46434,6 +46628,7 @@
 {"id":"crs_fa8804f1","kind":"course","slug":"樂齡椅子瑜珈-宜蘭運動中心-804f1","assignedAt":"2026-09-12"}
 {"id":"crs_fa893d92","kind":"course","slug":"二胡演奏藝術之音色變化四-信義社大-93d92","assignedAt":"2026-09-12"}
 {"id":"crs_fa8c82b9","kind":"course","slug":"企業人資必備勞動法應用班第01期-職場健康發展協會-c82b9","assignedAt":"2026-09-12"}
+{"id":"crs_fa8d7217","kind":"course","slug":"水彩創意實驗室-八德社大-d7217","assignedAt":"2026-10-15"}
 {"id":"crs_fa8ebe8a","kind":"course","slug":"排舞班-貢寮區樂齡中心-ebe8a","assignedAt":"2026-09-12"}
 {"id":"crs_fa8f1106","kind":"course","slug":"空靈鼓輕鬆學-新楊平社大-f1106","assignedAt":"2026-09-12"}
 {"id":"crs_fa924642","kind":"course","slug":"入門空中瑜珈新手友善-蘆洲運動中心-24642","assignedAt":"2026-09-29"}
@@ -46758,6 +46953,7 @@
 {"id":"crs_fc40ba4e","kind":"course","slug":"基礎油畫-大屯社大-0ba4e","assignedAt":"2026-09-12"}
 {"id":"crs_fc42fbe7","kind":"course","slug":"05期女性專班-鳳山運動園區-2fbe7","assignedAt":"2026-09-12"}
 {"id":"crs_fc438c3c","kind":"course","slug":"10分鐘經絡保健DIY-蘆山園社大-38c3c","assignedAt":"2026-09-14"}
+{"id":"crs_fc44b6dd","kind":"course","slug":"健康優游泳姿矯正初級1-八德社大-4b6dd","assignedAt":"2026-10-15"}
 {"id":"crs_fc466751","kind":"course","slug":"TRX午安新手班-八德運動中心-66751","assignedAt":"2026-09-29"}
 {"id":"crs_fc46ee28","kind":"course","slug":"成人游泳班-中正運動中心-6ee28","assignedAt":"2026-09-29"}
 {"id":"crs_fc476c12","kind":"course","slug":"銅諧來做幸運手鍊-鳳山社大-76c12","assignedAt":"2026-09-12"}
@@ -46971,6 +47167,7 @@
 {"id":"crs_fd5cc83a","kind":"course","slug":"DoReMi音樂工坊-永和社大-cc83a","assignedAt":"2026-09-12"}
 {"id":"crs_fd5e3283","kind":"course","slug":"禪繞好舒壓-北屯社大-e3283","assignedAt":"2026-09-12"}
 {"id":"crs_fd610df6","kind":"course","slug":"UIUX原型設計與產品規劃班-自強工業科學基金會-10df6","assignedAt":"2026-09-12"}
+{"id":"crs_fd620e11","kind":"course","slug":"從素描入門到水彩速寫-八德社大-20e11","assignedAt":"2026-10-15"}
 {"id":"crs_fd63e197","kind":"course","slug":"基礎階梯-wdygwd28-3e197","assignedAt":"2026-09-12"}
 {"id":"crs_fd64782c","kind":"course","slug":"手語多元技能進階班第02期-敦親睦鄰關懷協會-4782c","assignedAt":"2026-09-12"}
 {"id":"crs_fd66d849","kind":"course","slug":"兒童籃球訓練班初級-南港運動中心-6d849","assignedAt":"2026-09-29"}
@@ -47319,6 +47516,7 @@
 {"id":"crs_ff82399e","kind":"course","slug":"錫口詩社研習-松山社大-2399e","assignedAt":"2026-09-12"}
 {"id":"crs_ff823a8d","kind":"course","slug":"經絡穴道應用保健-蘆山園社大-23a8d","assignedAt":"2026-09-12"}
 {"id":"crs_ff8340e9","kind":"course","slug":"鹿港英台雙語導覽-鹿秀社大-340e9","assignedAt":"2026-09-12"}
+{"id":"crs_ff8398f5","kind":"course","slug":"肢體開發與身體律動-八德社大-398f5","assignedAt":"2026-10-15"}
 {"id":"crs_ff84a96b","kind":"course","slug":"TRX微曲線訓練-竹北運動中心-4a96b","assignedAt":"2026-09-29"}
 {"id":"crs_ff84c237","kind":"course","slug":"羽球團體班-林口運動中心-4c237","assignedAt":"2026-09-29"}
 {"id":"crs_ff8544bb","kind":"course","slug":"快樂玩手機-羅東社大-544bb","assignedAt":"2026-09-12"}
@@ -47380,6 +47578,7 @@
 {"id":"crs_ffd62016","kind":"course","slug":"暖心麵包工作坊-新楊平社大-62016","assignedAt":"2026-10-06"}
 {"id":"crs_ffd69583","kind":"course","slug":"多元運動舞蹈單人舞班-大屯社大-69583","assignedAt":"2026-09-12"}
 {"id":"crs_ffd73ee0","kind":"course","slug":"女神曲線雕塑-板橋運動中心-73ee0","assignedAt":"2026-09-29"}
+{"id":"crs_ffd9f1a6","kind":"course","slug":"開心玩手語-八德社大-9f1a6","assignedAt":"2026-10-15"}
 {"id":"crs_ffdaab82","kind":"course","slug":"手機應用班-深坑區青年志工會-aab82","assignedAt":"2026-09-12"}
 {"id":"crs_ffdc5860","kind":"course","slug":"器械皮拉提斯-蘆洲運動中心-c5860","assignedAt":"2026-09-29"}
 {"id":"crs_ffe0c06c","kind":"course","slug":"生活花藝B-大屯社大-0c06c","assignedAt":"2026-09-12"}
@@ -47394,6 +47593,7 @@
 {"id":"crs_ffedf033","kind":"course","slug":"有機農法與病蟲害防治五折-新楊平社大-df033","assignedAt":"2026-09-12"}
 {"id":"crs_ffee7044","kind":"course","slug":"魔鬼瘦身班-三重運動中心-e7044","assignedAt":"2026-09-29"}
 {"id":"crs_fff0ad6f","kind":"course","slug":"②重訓抗老F-內湖社大-0ad6f","assignedAt":"2026-09-12"}
+{"id":"crs_fff1655b","kind":"course","slug":"養生瑜珈-八德社大-1655b","assignedAt":"2026-10-15"}
 {"id":"crs_fff21e34","kind":"course","slug":"短片美學創作及品牌塑造實務班-電影戲劇業職業工會-21e34","assignedAt":"2026-09-12"}
 {"id":"crs_fff23d23","kind":"course","slug":"美字硬筆行書-新楊平社大-23d23","assignedAt":"2026-09-12"}
 {"id":"crs_fff43672","kind":"course","slug":"恆春日本語初級J1班-屏南區社大-43672","assignedAt":"2026-09-12"}
