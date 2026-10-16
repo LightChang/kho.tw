@@ -31,12 +31,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/venue/%E4%B8%89%E5%B3%BD-3e3cb.html</loc>
-    <lastmod>2026-09-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/venue/%E4%B8%89%E6%A8%93%E9%9B%BB%E8%85%A6%E6%95%99%E5%AE%A4%E4%B8%89-56ee5.html</loc>
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
@@ -5821,12 +5815,6 @@
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://kho.tw/venue/%E6%A1%83%E5%9C%92%E5%B8%82%E6%A5%8A%E6%A2%85%E5%8D%80%E4%B8%AD%E5%B1%B1%E8%B7%AF125%E5%B7%B7-e7e2a.html</loc>
-    <lastmod>2026-10-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/venue/%E6%A1%83%E5%9C%92%E5%B8%82%E6%A5%8A%E6%A2%85%E5%8D%80%E5%B9%BC%E7%8D%85%E5%B7%A5%E6%A5%AD%E5%8D%80%E9%9D%92%E5%B9%B4%E8%B7%AF3%E8%99%9F-283be.html</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -7730,7 +7718,7 @@
   </url>
   <url>
     <loc>https://kho.tw/venue/%E8%87%BA%E5%8C%97%E5%B8%82%E4%B8%AD%E5%B4%99%E9%AB%98%E7%B4%9A%E4%B8%AD%E5%AD%B8-e6e46.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -8911,6 +8899,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://kho.tw/venue/%E8%87%BA%E5%8D%97%E5%B8%82%E6%AD%B8%E4%BB%81%E5%8D%80%E5%9C%96%E6%9B%B8%E9%A4%A8-c1eb5.html</loc>
+    <lastmod>2026-10-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/venue/%E8%87%BA%E5%8D%97%E5%B8%82%E6%AD%B8%E4%BB%81%E5%8D%80%E8%B3%87%E5%AE%89%E6%9A%A8%E6%99%BA%E6%85%A7%E7%A7%91%E6%8A%80%E7%A0%94%E7%99%BC%E5%A4%A7%E6%A8%936%E6%A8%936-49383.html</loc>
     <lastmod>2026-10-16</lastmod>
     <changefreq>weekly</changefreq>
@@ -8984,7 +8978,7 @@
   </url>
   <url>
     <loc>https://kho.tw/venue/%E8%87%BA%E5%8D%97%E5%B8%82%E7%AB%8B%E5%9C%96%E6%9B%B8%E9%A4%A8%E6%96%B0%E7%B8%BD%E9%A4%A8-cbfb5.html</loc>
-    <lastmod>2026-10-16</lastmod>
+    <lastmod>2026-10-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
