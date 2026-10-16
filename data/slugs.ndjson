@@ -9420,6 +9420,7 @@
 {"id":"crs_30d81cb8","kind":"course","slug":"全效動能-泰山運動中心-81cb8","assignedAt":"2026-09-29"}
 {"id":"crs_30d9fc49","kind":"course","slug":"修復瑜珈-五股運動中心-9fc49","assignedAt":"2026-09-29"}
 {"id":"crs_30dc56a2","kind":"course","slug":"工筆花鳥創作與賞析-中山社大-c56a2","assignedAt":"2026-09-12"}
+{"id":"crs_30dec18b","kind":"course","slug":"我是身體的小主人-歸仁區圖書館-ec18b","assignedAt":"2026-10-17"}
 {"id":"crs_30e25be9","kind":"course","slug":"懂中醫慧生活-博愛社大-25be9","assignedAt":"2026-09-12"}
 {"id":"crs_30e25d6d","kind":"course","slug":"皮拉提斯-南港運動中心-25d6d","assignedAt":"2026-09-12"}
 {"id":"crs_30e525bb","kind":"course","slug":"兒童文化研究社-永和社大-525bb","assignedAt":"2026-09-12"}
@@ -32165,6 +32166,7 @@
 {"id":"crs_aa84c5c6","kind":"course","slug":"實用旅遊日語與文化風俗介紹-北屯社大-4c5c6","assignedAt":"2026-10-01"}
 {"id":"crs_aa8848c4","kind":"course","slug":"藝術美甲實務-鹿秀社大-848c4","assignedAt":"2026-09-12"}
 {"id":"crs_aa896b0c","kind":"course","slug":"電子琴初級1-新楊平社大-96b0c","assignedAt":"2026-09-12"}
+{"id":"crs_aa8adb26","kind":"course","slug":"2026嬰幼兒閱讀推廣活動閱讀萌芽五感放-市圖總館新總館-adb26","assignedAt":"2026-10-17"}
 {"id":"crs_aa8bcf7b","kind":"course","slug":"池坊生活空間藝術插花初階-南港社大-bcf7b","assignedAt":"2026-09-12"}
 {"id":"crs_aa8df263","kind":"course","slug":"電子琴初級班-婦女文化推廣協會-df263","assignedAt":"2026-09-12"}
 {"id":"crs_aa8e044b","kind":"course","slug":"施工架組配作業主管班第01期-中華職安科技協會附設臺北-e044b","assignedAt":"2026-09-12"}
@@ -59358,6 +59360,7 @@
 {"id":"ven_e808c0b9","kind":"venue","slug":"臺北市北投區豐年里辦公處-8c0b9","assignedAt":"2026-09-12"}
 {"id":"ven_e83bf215","kind":"venue","slug":"桃園市平鎮區義民路199號-bf215","assignedAt":"2026-09-12"}
 {"id":"ven_e8853fa8","kind":"venue","slug":"博愛國小射箭場-53fa8","assignedAt":"2026-09-12"}
+{"id":"ven_e89c1eb5","kind":"venue","slug":"臺南市歸仁區圖書館-c1eb5","assignedAt":"2026-10-17"}
 {"id":"ven_e8ba307c","kind":"venue","slug":"會稽-a307c","assignedAt":"2026-09-14"}
 {"id":"ven_e8c462db","kind":"venue","slug":"汐止區秀山里市民活動中心-462db","assignedAt":"2026-09-12"}
 {"id":"ven_e8d72582","kind":"venue","slug":"實踐大學游泳池館臺北校區-72582","assignedAt":"2026-09-12"}
