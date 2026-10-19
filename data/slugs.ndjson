@@ -9008,6 +9008,7 @@
 {"id":"crs_2eb072d8","kind":"course","slug":"你織我織放手作-三鶯社大-072d8","assignedAt":"2026-09-12"}
 {"id":"crs_2eb33a95","kind":"course","slug":"生活社交舞六步吉魯巴-新楊平社大-33a95","assignedAt":"2026-09-12"}
 {"id":"crs_2eb379e2","kind":"course","slug":"古傳內修八卦掌-松山社大-379e2","assignedAt":"2026-09-12"}
+{"id":"crs_2eb68858","kind":"course","slug":"池坊生活花藝-虎尾溪社大-68858","assignedAt":"2026-10-19"}
 {"id":"crs_2eb84899","kind":"course","slug":"台灣古城導覽走讀-八德社大-84899","assignedAt":"2026-09-12"}
 {"id":"crs_2eba6a58","kind":"course","slug":"生活西班牙語三-中正社大-a6a58","assignedAt":"2026-09-12"}
 {"id":"crs_2ebb9326","kind":"course","slug":"11506兒童週日假日班1000B712-新店運動中心-b9326","assignedAt":"2026-10-12"}
@@ -13196,6 +13197,7 @@
 {"id":"crs_44f580c2","kind":"course","slug":"核心塑身瑜伽-八德社大-580c2","assignedAt":"2026-09-12"}
 {"id":"crs_44f5d327","kind":"course","slug":"臺北散步走透透-中正社大-5d327","assignedAt":"2026-09-12"}
 {"id":"crs_44f76d33","kind":"course","slug":"楊式太極拳入門班-鳳山社大-76d33","assignedAt":"2026-09-12"}
+{"id":"crs_44f8bbc8","kind":"course","slug":"11506兒童週日假日班1000C712-新店運動中心-8bbc8","assignedAt":"2026-10-19"}
 {"id":"crs_44f95452","kind":"course","slug":"iPARTY愛派對-林口運動中心-95452","assignedAt":"2026-09-12"}
 {"id":"crs_44f9fc23","kind":"course","slug":"AI工具應用資料處理實務班第01期-僑光科技大學-9fc23","assignedAt":"2026-09-12"}
 {"id":"crs_44fb3c74","kind":"course","slug":"幼兒泳訓假日班-內湖運動中心-b3c74","assignedAt":"2026-09-12"}
@@ -55323,6 +55325,7 @@
 {"id":"tea_d1a8cb6a580f69fa","kind":"teacher","slug":"袁立-科學城社大-64f55","assignedAt":"2026-09-13"}
 {"id":"tea_d1ac9678252251cf","kind":"teacher","slug":"林麗華-桃園社大-a2151","assignedAt":"2026-09-13"}
 {"id":"tea_d1be4760234eb5d6","kind":"teacher","slug":"Cathy-士林運動中心-8229a","assignedAt":"2026-09-29"}
+{"id":"tea_d1c367aa03455c70","kind":"teacher","slug":"張詠淳-虎尾溪社大-02114","assignedAt":"2026-10-19"}
 {"id":"tea_d1d0ab9368f1b9fd","kind":"teacher","slug":"吳瓊桃-臺南社大-ba445","assignedAt":"2026-09-13"}
 {"id":"tea_d1e36396853b64ed","kind":"teacher","slug":"郭孟珍-濁水溪社大-4ead5","assignedAt":"2026-09-13"}
 {"id":"tea_d1f2c1467bac68c5","kind":"teacher","slug":"盧美琉-竹東社大-66f23","assignedAt":"2026-09-13"}
