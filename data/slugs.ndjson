@@ -7540,6 +7540,7 @@
 {"id":"crs_271f9c2c","kind":"course","slug":"健身養心瑜珈B-美港西社大-f9c2c","assignedAt":"2026-09-12"}
 {"id":"crs_2721b0e6","kind":"course","slug":"MV有氧-蘆洲運動中心-1b0e6","assignedAt":"2026-09-29"}
 {"id":"crs_2722e8e6","kind":"course","slug":"舒心瑜珈-新楊平社大-2e8e6","assignedAt":"2026-09-12"}
+{"id":"crs_272328e3","kind":"course","slug":"社群行銷廣告投放整合班第02期-上益資訊管理顧問-328e3","assignedAt":"2026-10-20"}
 {"id":"crs_27239b74","kind":"course","slug":"古琴絃歌輕鬆彈-松山社大-39b74","assignedAt":"2026-09-19"}
 {"id":"crs_2725f35c","kind":"course","slug":"夜光體能訓練營耐力X力量-內湖運動中心-5f35c","assignedAt":"2026-10-15"}
 {"id":"crs_2729143b","kind":"course","slug":"八段錦與八卦掌養生功-文山社大-9143b","assignedAt":"2026-09-12"}
@@ -26834,6 +26835,7 @@
 {"id":"crs_8dfb9206","kind":"course","slug":"11506入門空中瑜珈110011281-新店運動中心-b9206","assignedAt":"2026-10-12"}
 {"id":"crs_8dfb932e","kind":"course","slug":"入門肌力-士林運動中心-b932e","assignedAt":"2026-09-29"}
 {"id":"crs_8dffa8a8","kind":"course","slug":"時尚布藝實務班第01期-職業總工會-fa8a8","assignedAt":"2026-09-12"}
+{"id":"crs_8e00de1b","kind":"course","slug":"智動化與機器人五股第01期-勞動力發展署北基宜花金馬-0de1b","assignedAt":"2026-10-20"}
 {"id":"crs_8e058692","kind":"course","slug":"數位行銷與會展活動應用第01期-勞動部勞動力發展署高屏澎-58692","assignedAt":"2026-09-26"}
 {"id":"crs_8e08a64f","kind":"course","slug":"韓風MV熱舞-新莊運動中心-8a64f","assignedAt":"2026-09-29"}
 {"id":"crs_8e0902e3","kind":"course","slug":"鋼琴初學養成-三鶯社大-902e3","assignedAt":"2026-09-12"}
@@ -42193,6 +42195,7 @@
 {"id":"crs_df8ed344","kind":"course","slug":"護膚及淨膚保養品調製實務班第01期-水源地文教基金會-ed344","assignedAt":"2026-09-12"}
 {"id":"crs_df901e1f","kind":"course","slug":"流行好聲音-港都社大-01e1f","assignedAt":"2026-09-12"}
 {"id":"crs_df90ba31","kind":"course","slug":"NEW11505TRX全方位雕塑1400-新店運動中心-0ba31","assignedAt":"2026-09-29"}
+{"id":"crs_df922df9","kind":"course","slug":"雲端網路工程五股第01期-勞動力發展署北基宜花金馬-22df9","assignedAt":"2026-10-20"}
 {"id":"crs_df92c233","kind":"course","slug":"肚皮舞輕鬆學-文山社大-2c233","assignedAt":"2026-09-12"}
 {"id":"crs_df9337c3","kind":"course","slug":"成人初階-wdygwd28-337c3","assignedAt":"2026-09-29"}
 {"id":"crs_df97a6ba","kind":"course","slug":"椅子瑜珈-苓雅運動中心-7a6ba","assignedAt":"2026-09-24"}
@@ -57997,6 +58000,7 @@
 {"id":"ven_66afacb5","kind":"venue","slug":"臺中市北屯區文心路4段934號-facb5","assignedAt":"2026-09-12"}
 {"id":"ven_66b3e10f","kind":"venue","slug":"台灣老人急重症基金會中山據點-3e10f","assignedAt":"2026-09-12"}
 {"id":"ven_66be8dfc","kind":"venue","slug":"嘉義縣太保市過溝里八德街692號-e8dfc","assignedAt":"2026-09-12"}
+{"id":"ven_66e26fa3","kind":"venue","slug":"新北市五股區新北市五股區五權路17號-26fa3","assignedAt":"2026-10-20"}
 {"id":"ven_672ea5e0","kind":"venue","slug":"善化國小-ea5e0","assignedAt":"2026-09-12"}
 {"id":"ven_673ebf91","kind":"venue","slug":"新北市新莊區新北市新莊區中華路1段66巷-ebf91","assignedAt":"2026-10-07"}
 {"id":"ven_67628cef","kind":"venue","slug":"2F電腦教室-28cef","assignedAt":"2026-09-12"}
@@ -58806,6 +58810,7 @@
 {"id":"ven_ae4721af","kind":"venue","slug":"實踐大學F棟教室暨學生活動中心高雄校區-721af","assignedAt":"2026-09-12"}
 {"id":"ven_ae4c74ff","kind":"venue","slug":"礁溪分班-c74ff","assignedAt":"2026-09-12"}
 {"id":"ven_ae58e59a","kind":"venue","slug":"平鎮區湧安路45號-8e59a","assignedAt":"2026-09-12"}
+{"id":"ven_ae6eae98","kind":"venue","slug":"新北市五股區新北市五股區新北市五股區五權-eae98","assignedAt":"2026-10-20"}
 {"id":"ven_ae749383","kind":"venue","slug":"臺南市歸仁區資安暨智慧科技研發大樓6樓6-49383","assignedAt":"2026-09-12"}
 {"id":"ven_ae796582","kind":"venue","slug":"市立三民國中-96582","assignedAt":"2026-09-13"}
 {"id":"ven_ae8dc973","kind":"venue","slug":"臺北市中正區重慶南路1段10號-dc973","assignedAt":"2026-09-12"}
