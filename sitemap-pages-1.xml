@@ -224,7 +224,7 @@
   </url>
   <url>
     <loc>https://kho.tw/free/%E8%87%BA%E5%8D%97%E5%B8%82.html</loc>
-    <lastmod>2026-10-21</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
@@ -5216,7 +5216,7 @@
   </url>
   <url>
     <loc>https://kho.tw/learn/%E7%BE%BD%E7%90%83/%E8%87%BA%E5%8C%97%E5%B8%82%E4%BF%A1%E7%BE%A9%E5%8D%80.html</loc>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -7691,6 +7691,12 @@
     <lastmod>2026-10-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/senior/%E8%87%BA%E5%8D%97%E5%B8%82.html</loc>
+    <lastmod>2026-10-22</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://kho.tw/senior/%E9%AB%98%E9%9B%84%E5%B8%82.html</loc>
