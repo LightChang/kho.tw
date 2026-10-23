@@ -91,11 +91,11 @@
     "interval": "1.8d",
     "lastFetchedAt": "2026-09-14T11:16:47.725Z",
     "lastChangedAt": "2026-09-14T11:16:47.725Z",
-    "nextDueAt": "2026-10-23T14:10:03.137Z",
+    "nextDueAt": "2026-10-25T10:10:03.123Z",
     "recordCount": 13010,
     "contentHash": "036e2e7671e038777d5a421dec08ff2a17f1ef72da191266001a1ef44534fa58",
     "unchangedRuns": 0,
-    "consecutiveFailures": 21
+    "consecutiveFailures": 22
   },
   "moe-cc-sites": {
     "name": "社區大學據點資訊",
@@ -369,11 +369,11 @@
     "declaredFreq": "UNVERIFIED（每筆有 UpdateTime，實測當日即有更新）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-10-23T12:10:02.957Z",
-    "lastChangedAt": "2026-10-23T12:10:02.957Z",
-    "nextDueAt": "2026-10-23T15:10:02.957Z",
-    "recordCount": 1891,
-    "contentHash": "b0ff20c29877d8cc80f527edab7a5321c09998f717111d0403a17699641e6a91",
+    "lastFetchedAt": "2026-10-23T16:10:03.123Z",
+    "lastChangedAt": "2026-10-23T16:10:03.123Z",
+    "nextDueAt": "2026-10-23T19:10:03.123Z",
+    "recordCount": 1885,
+    "contentHash": "32ea3f1568c19e406ddcf0298dd5d033a9b7eeac661e6c12f6efda356853946d",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
@@ -385,11 +385,11 @@
     "interval": "9h",
     "lastFetchedAt": "2026-10-21T23:10:03.149Z",
     "lastChangedAt": "2026-10-21T23:10:03.149Z",
-    "nextDueAt": "2026-10-23T14:10:02.831Z",
+    "nextDueAt": "2026-10-24T01:10:03.123Z",
     "recordCount": 1338,
     "contentHash": "b259059c6c0b0a125ef8afa7d9e2139cd69d444727f4cf0d66e2e337b41cf700",
     "unchangedRuns": 0,
-    "consecutiveFailures": 3
+    "consecutiveFailures": 4
   },
   "teamxports-centers": {
     "name": "全越運動 XPORTS 線上報名－運動中心期課",
