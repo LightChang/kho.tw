@@ -19,12 +19,12 @@
     "declaredFreq": "UNVERIFIED（期別制，每期約兩個月，新簡章開課前一個月公布）",
     "intervalMs": 86400000,
     "interval": "1d",
-    "lastFetchedAt": "2026-10-22T19:10:03.063Z",
+    "lastFetchedAt": "2026-10-23T20:10:03.098Z",
     "lastChangedAt": "2026-10-19T18:10:02.845Z",
-    "nextDueAt": "2026-10-23T19:10:03.063Z",
+    "nextDueAt": "2026-10-24T20:10:03.098Z",
     "recordCount": 640,
     "contentHash": "4e9bbde15d95418677dbe7911560232c479dac4b35485d44fca07f333ea13125",
-    "unchangedRuns": 5,
+    "unchangedRuns": 6,
     "consecutiveFailures": 0
   },
   "changjia-centers": {
@@ -49,11 +49,11 @@
     "interval": "1.9d",
     "lastFetchedAt": "2026-10-21T22:10:03.033Z",
     "lastChangedAt": "2026-10-21T22:10:03.033Z",
-    "nextDueAt": "2026-10-23T19:43:48.033Z",
+    "nextDueAt": "2026-10-25T17:43:48.098Z",
     "recordCount": 98,
     "contentHash": "8dc3abd4b9a3d5723946f22b2203deeac940da3b397ef3634a55dc8a800fec11",
     "unchangedRuns": 0,
-    "consecutiveFailures": 0
+    "consecutiveFailures": 1
   },
   "hualien-cc": {
     "name": "花蓮縣社區大學－課程查詢",
@@ -369,11 +369,11 @@
     "declaredFreq": "UNVERIFIED（每筆有 UpdateTime，實測當日即有更新）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-10-23T16:10:03.123Z",
-    "lastChangedAt": "2026-10-23T16:10:03.123Z",
-    "nextDueAt": "2026-10-23T19:10:03.123Z",
-    "recordCount": 1885,
-    "contentHash": "32ea3f1568c19e406ddcf0298dd5d033a9b7eeac661e6c12f6efda356853946d",
+    "lastFetchedAt": "2026-10-23T20:10:03.098Z",
+    "lastChangedAt": "2026-10-23T20:10:03.098Z",
+    "nextDueAt": "2026-10-23T23:10:03.098Z",
+    "recordCount": 1888,
+    "contentHash": "f3886daead8c8906eb3712d69512e500a21213cc87736bbc0fa40ed343c21e7f",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
