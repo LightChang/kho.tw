@@ -241,14 +241,14 @@
     "name": "新北市數位樂學網－課程總覽",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（依招生期程公告，實測 1024 筆）",
-    "intervalMs": 48600000,
-    "interval": "13.5h",
-    "lastFetchedAt": "2026-10-23T13:10:03.069Z",
-    "lastChangedAt": "2026-10-22T21:10:02.322Z",
-    "nextDueAt": "2026-10-24T02:40:03.069Z",
-    "recordCount": 1038,
-    "contentHash": "9c5d57d375a3cf438734b01fa843c525662c7e27006097ec250f029297d0bc16",
-    "unchangedRuns": 2,
+    "intervalMs": 24300000,
+    "interval": "6.8h",
+    "lastFetchedAt": "2026-10-24T03:10:02.704Z",
+    "lastChangedAt": "2026-10-24T03:10:02.704Z",
+    "nextDueAt": "2026-10-24T09:55:02.704Z",
+    "recordCount": 1037,
+    "contentHash": "f5ad0435fede0f1733864c54d46cafc349dcf740f64c235430efbda2458ae2ac",
+    "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
   "ntpc-library-activities": {
@@ -301,11 +301,11 @@
     "interval": "22.8h",
     "lastFetchedAt": "2026-10-22T04:10:01.944Z",
     "lastChangedAt": "2026-10-20T10:10:02.307Z",
-    "nextDueAt": "2026-10-24T02:56:55.475Z",
+    "nextDueAt": "2026-10-25T01:56:55.204Z",
     "recordCount": 1572,
     "contentHash": "2bcb6c78cf05916b953b4b88013c11802ccbc757d2e3bb9c5fb9d6608266d6ab",
     "unchangedRuns": 5,
-    "consecutiveFailures": 1
+    "consecutiveFailures": 2
   },
   "tainan-cc-portal": {
     "name": "臺南市社區大學校務資訊系統－課程查詢",
