@@ -1062,6 +1062,7 @@
 {"id":"crs_058d8e4f","kind":"course","slug":"幼兒游泳團體班-太平國民暨兒童運動中心-d8e4f","assignedAt":"2026-09-12"}
 {"id":"crs_059136af","kind":"course","slug":"匹克球入門班-中壢運動中心-136af","assignedAt":"2026-09-29"}
 {"id":"crs_05914bd7","kind":"course","slug":"快樂來唱歌-新楊平社大-14bd7","assignedAt":"2026-09-12"}
+{"id":"crs_05948e7e","kind":"course","slug":"拳擊有氧-板橋運動中心-48e7e","assignedAt":"2026-10-26"}
 {"id":"crs_05966b7d","kind":"course","slug":"基礎韓語初階-豐湖社大-66b7d","assignedAt":"2026-09-12"}
 {"id":"crs_059c91c0","kind":"course","slug":"桌球兒童精緻班-虎尾全民運動館-c91c0","assignedAt":"2026-09-29"}
 {"id":"crs_059dcc4b","kind":"course","slug":"強化肌力循環1171226六194020-蘆竹運動中心-dcc4b","assignedAt":"2026-10-03"}
@@ -5380,6 +5381,7 @@
 {"id":"crs_1ba188af","kind":"course","slug":"生活雕塑藝術魅力初階-后豐社大-188af","assignedAt":"2026-09-12"}
 {"id":"crs_1ba24fe0","kind":"course","slug":"毛線編織單品-文山社大-24fe0","assignedAt":"2026-09-12"}
 {"id":"crs_1ba49c35","kind":"course","slug":"經絡與生活保健-八德社大-49c35","assignedAt":"2026-09-12"}
+{"id":"crs_1ba53d03","kind":"course","slug":"STRONG-板橋運動中心-53d03","assignedAt":"2026-10-26"}
 {"id":"crs_1ba62bec","kind":"course","slug":"3D列印與電腦繪圖班勞動學苑-勞動力發展署中彰投分署-62bec","assignedAt":"2026-09-12"}
 {"id":"crs_1ba70869","kind":"course","slug":"燃脂耐力飛輪-汐止運動中心-70869","assignedAt":"2026-09-12"}
 {"id":"crs_1ba81f70","kind":"course","slug":"公共工程品質計畫撰寫實務班第01期-中國生產力中心附設南雲服-81f70","assignedAt":"2026-09-12"}
@@ -16180,6 +16182,7 @@
 {"id":"crs_545db155","kind":"course","slug":"Sakula裁縫教室-鎮港園社大-db155","assignedAt":"2026-09-12"}
 {"id":"crs_545e653e","kind":"course","slug":"空靈鼓中級-中壢社大-e653e","assignedAt":"2026-09-12"}
 {"id":"crs_545eb399","kind":"course","slug":"中華花藝週三午六甲-曾文社大-eb399","assignedAt":"2026-09-13"}
+{"id":"crs_545fcd2f","kind":"course","slug":"拳擊-板橋運動中心-fcd2f","assignedAt":"2026-10-26"}
 {"id":"crs_546071db","kind":"course","slug":"輕肌力流動瑜伽-永和社大-071db","assignedAt":"2026-10-08"}
 {"id":"crs_5460d37c","kind":"course","slug":"社區推廣迷你豎琴悅音-北高雄社大-0d37c","assignedAt":"2026-09-12"}
 {"id":"crs_5462fdaa","kind":"course","slug":"佛朗明哥舞蹈-臺南社大-2fdaa","assignedAt":"2026-09-12"}
@@ -19818,6 +19821,7 @@
 {"id":"crs_67b349d6","kind":"course","slug":"身書太極練太極寫書法學經絡-大屯社大-349d6","assignedAt":"2026-09-12"}
 {"id":"crs_67b44623","kind":"course","slug":"吉他輕鬆玩一-中正社大-44623","assignedAt":"2026-09-12"}
 {"id":"crs_67b55181","kind":"course","slug":"旅行英語101-內湖社大-55181","assignedAt":"2026-09-12"}
+{"id":"crs_67b55198","kind":"course","slug":"拳擊有氧-板橋運動中心-55198","assignedAt":"2026-10-26"}
 {"id":"crs_67b69379","kind":"course","slug":"基礎正位瑜珈-桃園運動中心-69379","assignedAt":"2026-09-12"}
 {"id":"crs_67b7410a","kind":"course","slug":"空中瑜珈-中正運動中心-7410a","assignedAt":"2026-10-01"}
 {"id":"crs_67b892b2","kind":"course","slug":"休閒養生操-立竹光運動中心-892b2","assignedAt":"2026-09-29"}
@@ -24176,6 +24180,7 @@
 {"id":"crs_7f170da3","kind":"course","slug":"慢速壘球進階-甲安埔社大-70da3","assignedAt":"2026-09-12"}
 {"id":"crs_7f190f4b","kind":"course","slug":"兒童滑冰基礎班-北屯國民暨兒童運動中心-90f4b","assignedAt":"2026-09-29"}
 {"id":"crs_7f1a2faf","kind":"course","slug":"幸福舒心坊-桃園社大-a2faf","assignedAt":"2026-09-14"}
+{"id":"crs_7f1b0a1d","kind":"course","slug":"拳擊-板橋運動中心-b0a1d","assignedAt":"2026-10-26"}
 {"id":"crs_7f1b6786","kind":"course","slug":"體適能瑜珈-北投社大-b6786","assignedAt":"2026-09-12"}
 {"id":"crs_7f1bef29","kind":"course","slug":"開心養蜜蜂安心喝蜂蜜-文山社大-bef29","assignedAt":"2026-09-12"}
 {"id":"crs_7f1c6d55","kind":"course","slug":"TRX全方位肌力UP-大同運動中心-c6d55","assignedAt":"2026-09-29"}
@@ -25110,6 +25115,7 @@
 {"id":"crs_84015877","kind":"course","slug":"東方美人旗袍舞班-大屯社大-15877","assignedAt":"2026-09-12"}
 {"id":"crs_8405ba2b","kind":"course","slug":"舒緩瑜珈B-五權社大-5ba2b","assignedAt":"2026-09-12"}
 {"id":"crs_8405cd8e","kind":"course","slug":"幸福手工皂與保養品手作中級2-桃園社大-5cd8e","assignedAt":"2026-09-12"}
+{"id":"crs_840611f3","kind":"course","slug":"活力環狀燃脂團-板橋運動中心-611f3","assignedAt":"2026-10-26"}
 {"id":"crs_840695bf","kind":"course","slug":"哈達瑜伽-新楊平社大-695bf","assignedAt":"2026-10-06"}
 {"id":"crs_8406b892","kind":"course","slug":"快樂學習薩克斯風中級班-基隆社大-6b892","assignedAt":"2026-09-12"}
 {"id":"crs_84078aa9","kind":"course","slug":"讓身體好好呼吸嬋柔運動Gyrokines-大安社大-78aa9","assignedAt":"2026-09-12"}
@@ -30263,6 +30269,7 @@
 {"id":"crs_9f1f00a8","kind":"course","slug":"動物關鍵報告-雙流自然教育中心-f00a8","assignedAt":"2026-09-12"}
 {"id":"crs_9f1fe703","kind":"course","slug":"TRX肌力雕塑-三重運動中心-fe703","assignedAt":"2026-09-29"}
 {"id":"crs_9f204830","kind":"course","slug":"瑜珈提斯-苗栗社大-04830","assignedAt":"2026-09-12"}
+{"id":"crs_9f2189df","kind":"course","slug":"活力環狀燃脂團-板橋運動中心-189df","assignedAt":"2026-10-26"}
 {"id":"crs_9f23c9e1","kind":"course","slug":"帶著鋼琴去旅行-新化社大-3c9e1","assignedAt":"2026-09-13"}
 {"id":"crs_9f267ce0","kind":"course","slug":"桌角的美食水彩之夏季甜品-新楊平社大-67ce0","assignedAt":"2026-09-12"}
 {"id":"crs_9f2c2083","kind":"course","slug":"Roger科學大魔界2026秋圓周運動田-立圖書館土城分館-c2083","assignedAt":"2026-09-13"}
@@ -54579,6 +54586,7 @@
 {"id":"tea_b3e02110957595f6","kind":"teacher","slug":"Sara-太平國民暨兒童運動中心-66294","assignedAt":"2026-09-13"}
 {"id":"tea_b3e84071e2a06bdc","kind":"teacher","slug":"將將-宜蘭運動中心-daecd","assignedAt":"2026-09-29"}
 {"id":"tea_b3faf9e59cfdb797","kind":"teacher","slug":"Gabby-內湖運動中心-12d72","assignedAt":"2026-09-29"}
+{"id":"tea_b3fb712a531e8196","kind":"teacher","slug":"Stanley-板橋運動中心-e2f15","assignedAt":"2026-10-26"}
 {"id":"tea_b400c08e520084f0","kind":"teacher","slug":"Edith-長春國民暨兒童運動中心-c1294","assignedAt":"2026-09-13"}
 {"id":"tea_b40d08ab5a77b37e","kind":"teacher","slug":"小新-內湖運動中心-e14ba","assignedAt":"2026-09-13"}
 {"id":"tea_b41183f533806812","kind":"teacher","slug":"張美菊-南港社大-c26f9","assignedAt":"2026-09-13"}
@@ -55712,6 +55720,7 @@
 {"id":"tea_d5b7d596c849bf8f","kind":"teacher","slug":"李宛儒-內湖社大-c68f3","assignedAt":"2026-09-13"}
 {"id":"tea_d5bed8b750d450e8","kind":"teacher","slug":"阮呂創義-士林社大-d60e3","assignedAt":"2026-09-13"}
 {"id":"tea_d5c010cf89a4415b","kind":"teacher","slug":"林昆億-美港西社大-c49a6","assignedAt":"2026-09-13"}
+{"id":"tea_d5d982de4c9ba7e3","kind":"teacher","slug":"阿綸-板橋運動中心-2bf34","assignedAt":"2026-10-26"}
 {"id":"tea_d5e4ec7eace3c612","kind":"teacher","slug":"廖中賜-汐止社大-23fea","assignedAt":"2026-09-13"}
 {"id":"tea_d5e78a86bb05dd9f","kind":"teacher","slug":"張耘書-臺南社大-bd1d8","assignedAt":"2026-09-13"}
 {"id":"tea_d5e8da605c9318b1","kind":"teacher","slug":"周師慶-竹東社大-67ee5","assignedAt":"2026-09-13"}
