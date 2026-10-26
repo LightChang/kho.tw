@@ -301,11 +301,11 @@
     "interval": "22.8h",
     "lastFetchedAt": "2026-10-22T04:10:01.944Z",
     "lastChangedAt": "2026-10-20T10:10:02.307Z",
-    "nextDueAt": "2026-10-26T00:56:55.612Z",
+    "nextDueAt": "2026-10-26T23:56:55.820Z",
     "recordCount": 1572,
     "contentHash": "2bcb6c78cf05916b953b4b88013c11802ccbc757d2e3bb9c5fb9d6608266d6ab",
     "unchangedRuns": 5,
-    "consecutiveFailures": 3
+    "consecutiveFailures": 4
   },
   "tainan-cc-portal": {
     "name": "臺南市社區大學校務資訊系統－課程查詢",
@@ -395,13 +395,13 @@
     "name": "全越運動 XPORTS 線上報名－運動中心期課",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（期別制，每期約兩個月；名額即時變動）",
-    "intervalMs": 30754687.5,
-    "interval": "8.5h",
-    "lastFetchedAt": "2026-10-25T16:10:02.939Z",
-    "lastChangedAt": "2026-10-25T16:10:02.939Z",
-    "nextDueAt": "2026-10-26T00:42:37.626Z",
+    "intervalMs": 15377343.75,
+    "interval": "4.3h",
+    "lastFetchedAt": "2026-10-26T01:10:03.320Z",
+    "lastChangedAt": "2026-10-26T01:10:03.320Z",
+    "nextDueAt": "2026-10-26T05:26:20.663Z",
     "recordCount": 590,
-    "contentHash": "803796b88c1e6652cb5262832b60364f58f64f039158cdfcaf7426bf91101720",
+    "contentHash": "c7f870ded8bd8d7ee5cb878e935c73f229521962df9a284e55b3c35c576c43c6",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
