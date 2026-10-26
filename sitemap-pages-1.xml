@@ -56,7 +56,7 @@
   </url>
   <url>
     <loc>https://kho.tw/cert/%E8%8A%B1%E8%93%AE%E7%B8%A3.html</loc>
-    <lastmod>2026-09-13</lastmod>
+    <lastmod>2026-10-22</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -585,6 +585,12 @@
   <url>
     <loc>https://kho.tw/learn/%E5%8C%B9%E5%85%8B%E7%90%83/%E8%87%BA%E4%B8%AD%E5%B8%82.html</loc>
     <lastmod>2026-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/learn/%E5%8C%B9%E5%85%8B%E7%90%83/%E8%8A%B1%E8%93%AE%E7%B8%A3.html</loc>
+    <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -5894,7 +5900,7 @@
   </url>
   <url>
     <loc>https://kho.tw/learn/%E9%8B%BC%E7%90%B4.html</loc>
-    <lastmod>2026-10-15</lastmod>
+    <lastmod>2026-10-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -7538,7 +7544,7 @@
   </url>
   <url>
     <loc>https://kho.tw/type/community-college.html</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-10-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
