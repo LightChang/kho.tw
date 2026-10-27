@@ -43,6 +43,7 @@ playbook 已定「不再多產頁」，本文件的任何新頁提議都必須�
 | ~~Indexing API 積壓推送~~：2026-09-27 開啟後同日關閉（站主拍板）——Google 文件寫明此 API 只能用於 JobPosting／BroadcastEvent 頁。只送出首批 180 筆，不要重新開啟。改用官方允許的做法：sitemap lastmod 取內容實際變更日、首頁與彙整頁加「新上架」內鏈 | **已停用** | seo-ops `c109a0d`；`sites/kho.tw.json` 的 `indexPing.enabled:false` |
 | ~~老師頁移出 sitemap（2026-09-27 共 6,681 頁），頁面仍可收錄、不加 noindex，靠內鏈被發現~~ → **2026-10-02 放回 sitemap**（站主拍板，提前結束 §4 原訂 10-27 的決策點）：講師頁本來就只給同名同單位 ≥2 門課的講師，共 7,977 頁全數放回；場館頁課表與場館 × 細項頁的講師姓名改連到講師頁（講師欄文字一字不改，只包連結） | **已完成** | `4012505c48`（移出）；放回見 `site/sitemap.mjs` 的 `SITEMAP_EXCLUDED_DIRS`（現為空） |
 | 薄場館頁 noindex,follow＋移出 sitemap：總共 ≤2 門課、而且一門還沒結束的課都沒有（2026-10-02 共 637 頁，佔 2,411 個場館）。頁面保留不 404，之後有新課下一輪 build 自動恢復收錄 | **已完成**（站主 2026-10-02 拍板） | `src/lib/data.mjs` 的 `isThinVenue` |
+| **2026-10-27 用戶拍板：撤回 10/02 擴張的低內容頁**。依據：10/02 擴張後約 9 天整站搜尋流量崩盤（GA4 自然流量同步崩，非資料異常），無人工處罰、無安全性問題。場館 × 細項頁 `/at/`（866 頁）與銀髮 × 行政區頁 `/senior/<縣市>/<行政區>`（35 頁）改 `noindex,follow`＋移出 sitemap／llms.txt，並**暫停新增**（只產 `overrides/paused-pages.json` 已列網址）；講師頁回到 10/02 前狀態（可收錄、不加 noindex、不進 sitemap）。頁面保留、站內連結不動。**恢復收錄或恢復新增需用戶同意** | **已完成** | `overrides/paused-pages.json`、`data.mjs` 的 `PAUSED_ROBOTS`、`site/sitemap.mjs` 的 `SITEMAP_EXCLUDED_DIRS` |
 | 結束滿 365 天的課程頁 noindex＋移出 sitemap（2026-09-27 共 111 頁）；180–365 天暫不動 | **已完成** | `5f71b85ec8` |
 | 一週後複查收錄率（見下方查法），和 4/15 基準比 | **待做**（2026-10-04） | — |
 

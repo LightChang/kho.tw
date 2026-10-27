@@ -89,6 +89,13 @@ export const seniorDistrictHref = (city, district) => hrefOf(seniorDistrictRel(c
 // （watchGroups 以網址前綴分組）能把這種頁和場館頁分開算每百頁點擊。
 // 門檻與場館頁頁內細項分段相同：本期同細項 ≥3 門才出頁，場館頁那一段就連過來。
 export const VENUE_ACT_MIN = 3;
+
+// 2026-10-27 用戶拍板：10/02 擴張的低內容頁（/at/ 與 /senior/<縣市>/<行政區>）noindex,follow＋移出 sitemap，
+// 並暫停新增——只產 overrides/paused-pages.json 已列的網址，不再長新網址。恢復需用戶同意。
+export const PAUSED_ROBOTS = 'noindex,follow';
+const PAUSED = JSON.parse(readFileSync(path.join(ROOT, 'overrides', 'paused-pages.json'), 'utf-8'));
+export const pausedVenueActs = new Set(PAUSED.venueActs);
+export const pausedSeniorDistricts = new Set(PAUSED.seniorDistricts);
 export const venueActRel = (venueSlug, name) => `at/${venueSlug}/${name}.html`;
 export const venueActHref = (venueSlug, name) => `/${venueActRel(venueSlug, name).split('/').map(encodeURIComponent).join('/')}`;
 
@@ -344,6 +351,7 @@ function load() {
     for (const a of activities) {
       const list = cur.filter((c) => actsByCourse.get(c.id).includes(a.name));
       if (list.length < VENUE_ACT_MIN) continue;
+      if (!pausedVenueActs.has(venueActRel(p.venue.slug, a.name))) continue; // 暫停新增（2026-10-27）
       venueActs.push({
         venue: p.venue, display: p.display, activity: a,
         short: shortVenue(p.display.heading),
@@ -486,6 +494,7 @@ function load() {
   senior.districts = [...groupBy(senior.list.filter((c) => c.venue?.city && c.venue?.district), (c) => `${c.venue.city}\t${c.venue.district}`)]
     .filter(([, l]) => l.length >= FACET_MIN.district)
     .map(([key, l]) => { const [city, district] = key.split('\t'); return { city, district, list: l, open: l.filter(isOpen).length }; })
+    .filter((x) => pausedSeniorDistricts.has(seniorDistrictRel(x.city, x.district))) // 暫停新增（2026-10-27）
     .sort((a, b) => b.list.length - a.list.length || a.district.localeCompare(b.district));
   /** 縣市頁用：這個縣市有哪些專題頁 [{ href, text, n }] */
   const hubLinksOf = (city) => [

@@ -11,7 +11,7 @@ import { existsSync } from 'node:fs';
 import { rm } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { getData, learnRel, certRel, programRel, freeRel, seniorRel, seniorDistrictRel, hasEnded, isNoindex } from './data.mjs';
+import { getData, learnRel, certRel, programRel, freeRel, seniorRel, hasEnded, isNoindex } from './data.mjs';
 import { SITE_URL } from '../../site/jsonld.mjs';
 import { writeSitemaps, courseHint, maxDate, isSitemapExcluded } from '../../site/sitemap.mjs';
 
@@ -54,7 +54,7 @@ function entries(d) {
       { rel: rel(), lastmod: listLastmod(h.list), changefreq: 'daily', priority: '0.8' },
       ...h.cities.map((x) => ({ rel: rel(x.city), lastmod: listLastmod(x.list), changefreq: 'daily', priority: '0.7' })),
     ]),
-    ...d.senior.districts.map((x) => ({ rel: seniorDistrictRel(x.city, x.district), lastmod: listLastmod(x.list), changefreq: 'daily', priority: '0.6' })),
+    // 銀髮 × 行政區（/senior/<縣市>/<行政區>）2026-10-27 起 noindex、不進 sitemap（用戶拍板，見 data.mjs 的 PAUSED_ROBOTS）
   ];
   // 停開與已截止的課仍然收錄，只是 priority 低、changefreq 長（見 site/sitemap.mjs）。
   // 上課已經結束的課比照「已截止」：來源常把狀態留在「狀態未知」或「開課中」，
@@ -72,11 +72,8 @@ function entries(d) {
   const teachers = d.teachers.map(({ teacher, list }) => ({
     rel: `teacher/${teacher.slug}.html`, lastmod: listLastmod(list), changefreq: 'weekly', priority: '0.5',
   }));
-  // 場館 × 細項（/at/，2026-10-02）：本期課的清單，報名狀態每天在變
-  const venueActs = d.venueActs.map((x) => ({
-    rel: x.rel, lastmod: listLastmod(x.list), changefreq: 'daily', priority: '0.7',
-  }));
-  return { pages, courses, venues, 'venue-acts': venueActs, teachers };
+  // 場館 × 細項（/at/，2026-10-02 新增）：2026-10-27 起 noindex、不進 sitemap（用戶拍板，見 data.mjs 的 PAUSED_ROBOTS）
+  return { pages, courses, venues, teachers };
 }
 
 export default function khoSitemap() {
@@ -89,7 +86,7 @@ export default function khoSitemap() {
         await rm(path.join(dist, 'home.json'), { force: true });
         const groups = Object.entries(entries(getData())).map(([name, list]) => ({
           name,
-          // 排除頁型不進 sitemap，清單見 site/sitemap.mjs 的 SITEMAP_EXCLUDED_DIRS（2026-10-02 起為空）
+          // 排除頁型不進 sitemap，清單見 site/sitemap.mjs 的 SITEMAP_EXCLUDED_DIRS（2026-10-27 起講師頁）
           entries: list.filter((e) => !isSitemapExcluded(e.rel) && existsSync(path.join(dist, e.rel))),
         }));
         const sitemap = await writeSitemaps({ dist, siteUrl: SITE_URL, groups });

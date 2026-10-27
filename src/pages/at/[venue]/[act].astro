@@ -6,7 +6,7 @@ import Base from '../../../layouts/Base.astro';
 import { underVenue } from '../../../lib/crumbs.mjs';
 import StatusBadge from '../../../components/StatusBadge.astro';
 import TeacherNames from '../../../components/TeacherNames.astro';
-import { getData, fmt, link, learnHref, WEEKDAY_LABEL, isOpen, TODAY } from '../../../lib/data.mjs';
+import { getData, fmt, link, learnHref, WEEKDAY_LABEL, isOpen, TODAY, PAUSED_ROBOTS } from '../../../lib/data.mjs';
 import { isCert, shortDistrict } from '../../../lib/facets.mjs';
 import { itemListJsonLd, SITE_URL } from '../../../../site/jsonld.mjs';
 
@@ -90,6 +90,7 @@ const description = `${display.heading}${providerNote ? `（${providerNote}）` 
 ---
 <Base crumbs={underVenue(v.city, { name: short, href: link('venue', v.slug) }, a.label, new Set(cities.map((c) => c.name)))}
   title={title}
+  robots={PAUSED_ROBOTS}
   description={description}
   canonical={`${SITE_URL}${x.href}`}
   jsonld={itemListJsonLd(list.slice(0, 100), { name: `${display.heading}${a.label}課程` })}

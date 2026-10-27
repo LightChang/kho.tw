@@ -4,7 +4,7 @@
 import Base from '../../../layouts/Base.astro';
 import HubByKind from '../../../components/HubByKind.astro';
 import HubTable from '../../../components/HubTable.astro';
-import { getData, fmt, seniorHref, seniorDistrictHref, link } from '../../../lib/data.mjs';
+import { getData, fmt, seniorHref, seniorDistrictHref, link, PAUSED_ROBOTS } from '../../../lib/data.mjs';
 import { itemListJsonLd, SITE_URL } from '../../../../site/jsonld.mjs';
 
 export function getStaticPaths() {
@@ -22,6 +22,7 @@ const siblings = senior.districts.filter((o) => o.city === x.city && o.district 
 const crumbs = [{ name: '首頁', href: '/' }, { name: '銀髮・樂齡課程', href: seniorHref() }, { name: x.city, href: seniorHref(x.city) }, { name: x.district }];
 ---
 <Base crumbs={crumbs}
+  robots={PAUSED_ROBOTS}
   title={fit.length > 0
     ? `${x.district}銀髮族體適能・樂齡課程｜${x.city}${x.district}長輩運動與學習班（${fmt(x.list.length)} 門）`
     : `${x.district}銀髮課程・樂齡課程｜${x.city}${x.district}長輩學習班（${fmt(x.list.length)} 門）`}
