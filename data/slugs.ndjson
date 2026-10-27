@@ -1871,6 +1871,7 @@
 {"id":"crs_09b0ce58","kind":"course","slug":"汐止私密路徑古道探查初級班-汐止社大-0ce58","assignedAt":"2026-09-12"}
 {"id":"crs_09b17250","kind":"course","slug":"舞感基礎街舞班-五股運動中心-17250","assignedAt":"2026-09-29"}
 {"id":"crs_09b27d34","kind":"course","slug":"布料大改造A-大屯社大-27d34","assignedAt":"2026-09-12"}
+{"id":"crs_09b2d033","kind":"course","slug":"實用越南語-新中和社大-2d033","assignedAt":"2026-10-28"}
 {"id":"crs_09b303e2","kind":"course","slug":"流動雕塑瑜珈-鎮港園社大-303e2","assignedAt":"2026-09-12"}
 {"id":"crs_09b52482","kind":"course","slug":"器械皮拉提斯-北屯國民暨兒童運動中心-52482","assignedAt":"2026-09-29"}
 {"id":"crs_09b56d54","kind":"course","slug":"11506樂齡肌力四08400940-蘆竹運動中心-56d54","assignedAt":"2026-10-03"}
@@ -24700,6 +24701,7 @@
 {"id":"crs_819a9f60","kind":"course","slug":"幼兒專班-五股運動中心-a9f60","assignedAt":"2026-10-02"}
 {"id":"crs_819ae0b6","kind":"course","slug":"書藝創研-新店崇光社大-ae0b6","assignedAt":"2026-09-12"}
 {"id":"crs_819d1d75","kind":"course","slug":"兒童KPOP-蘆洲運動中心-d1d75","assignedAt":"2026-09-29"}
+{"id":"crs_819db0f2","kind":"course","slug":"實用越南語-新中和社大-db0f2","assignedAt":"2026-10-28"}
 {"id":"crs_819fd2cc","kind":"course","slug":"午後空中瑜珈入門-汐止運動中心-fd2cc","assignedAt":"2026-09-12"}
 {"id":"crs_81a280d2","kind":"course","slug":"9022生成式AIPhotoshop影像-勞動力發展署中彰投分署-280d2","assignedAt":"2026-10-22"}
 {"id":"crs_81a504d3","kind":"course","slug":"馬賽克藝術創作-桃園社大-504d3","assignedAt":"2026-09-14"}
@@ -35887,6 +35889,7 @@
 {"id":"crs_bcc3144f","kind":"course","slug":"皮拉提斯-北屯國民暨兒童運動中心-3144f","assignedAt":"2026-09-12"}
 {"id":"crs_bcc40b50","kind":"course","slug":"東洋生活通班-永和區敬老護幼協會-40b50","assignedAt":"2026-09-12"}
 {"id":"crs_bcc6bdd5","kind":"course","slug":"器械皮拉提斯-蘆洲運動中心-6bdd5","assignedAt":"2026-10-26"}
+{"id":"crs_bcc8d765","kind":"course","slug":"實用越南語-新中和社大-8d765","assignedAt":"2026-10-28"}
 {"id":"crs_bcce286e","kind":"course","slug":"兒童泳訓單日-北屯國民暨兒童運動中心-e286e","assignedAt":"2026-09-29"}
 {"id":"crs_bcd15602","kind":"course","slug":"色鉛筆素描輕鬆畫-文山社大-15602","assignedAt":"2026-09-12"}
 {"id":"crs_bcd1a9a8","kind":"course","slug":"彩虹蔬果健康廚房DIY-豐湖社大-1a9a8","assignedAt":"2026-09-12"}
@@ -49716,6 +49719,7 @@
 {"id":"tea_21d3c787aa10be8b","kind":"teacher","slug":"邱冠瑛-樹林社大-163dd","assignedAt":"2026-09-13"}
 {"id":"tea_21e06d6b7ffb67f2","kind":"teacher","slug":"邱清文-松山社大-b0184","assignedAt":"2026-09-13"}
 {"id":"tea_21e0ced2e64d8ee6","kind":"teacher","slug":"張嘉真-樂齡學習示範中心-91b73","assignedAt":"2026-09-13"}
+{"id":"tea_21ee15871afd6db5","kind":"teacher","slug":"張婉貞-新中和社大-c8686","assignedAt":"2026-10-28"}
 {"id":"tea_21ef24760d2deb19","kind":"teacher","slug":"簡麗芬-北投區文林里辦公處-a93ae","assignedAt":"2026-09-13"}
 {"id":"tea_21fa083527198719","kind":"teacher","slug":"Joe-wdygwd28-e31b6","assignedAt":"2026-09-29"}
 {"id":"tea_22016c329118140e","kind":"teacher","slug":"李淑梅-萬華社大-c43b8","assignedAt":"2026-10-15"}
