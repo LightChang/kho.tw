@@ -13441,6 +13441,7 @@
 {"id":"crs_45f022b7","kind":"course","slug":"太極拳進階推手-永康社大-022b7","assignedAt":"2026-09-12"}
 {"id":"crs_45f1112b","kind":"course","slug":"器械皮拉提斯-中正運動中心-1112b","assignedAt":"2026-09-29"}
 {"id":"crs_45f1c93f","kind":"course","slug":"新手入門飛輪-中和運動中心-1c93f","assignedAt":"2026-09-29"}
+{"id":"crs_45f35bcd","kind":"course","slug":"兒童平日班-大里國民暨兒童運動中心-35bcd","assignedAt":"2026-10-27"}
 {"id":"crs_45f3cd84","kind":"course","slug":"AI數位流程整合與智慧化應用規劃班-臺灣新活力促進協會-3cd84","assignedAt":"2026-09-12"}
 {"id":"crs_45f3f4a6","kind":"course","slug":"瑜珈彼拉提斯B班-基隆社大-3f4a6","assignedAt":"2026-09-12"}
 {"id":"crs_45f4c0d5","kind":"course","slug":"台江限定作曲課第一期班3晚上班18週課程-臺南社大-4c0d5","assignedAt":"2026-09-13"}
@@ -50385,6 +50386,7 @@
 {"id":"tea_3621150e0aa4f497","kind":"teacher","slug":"張士奎-嘉義市社大-1f3d1","assignedAt":"2026-09-13"}
 {"id":"tea_362b585ba81680e2","kind":"teacher","slug":"王譓茹-松山社大-b3d2b","assignedAt":"2026-09-13"}
 {"id":"tea_3639ff45b319aacc","kind":"teacher","slug":"鍾尚彣-第一社大-91842","assignedAt":"2026-09-13"}
+{"id":"tea_364a7f292e3d9233","kind":"teacher","slug":"潘挪亞-大里國民暨兒童運動中心-43502","assignedAt":"2026-10-27"}
 {"id":"tea_36660ef19d8db042","kind":"teacher","slug":"黃婷鈺-南港社大-8186b","assignedAt":"2026-09-13"}
 {"id":"tea_366a2e6405c90c80","kind":"teacher","slug":"蘇平和-新店崇光社大-d94fb","assignedAt":"2026-09-13"}
 {"id":"tea_367072ef0018a9d6","kind":"teacher","slug":"老麥-新莊運動中心-f2e3d","assignedAt":"2026-09-29"}
