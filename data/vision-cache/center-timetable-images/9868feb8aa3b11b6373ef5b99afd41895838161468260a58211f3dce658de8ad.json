@@ -1,0 +1,17 @@
+{
+ "hash": "9868feb8aa3b11b6373ef5b99afd41895838161468260a58211f3dce658de8ad",
+ "docKey": "wg:news:368",
+ "venue": "新北市五股國民運動中心",
+ "extractedAt": "2026-10-27T11:13:06.475Z",
+ "model": "opus",
+ "costUsd": 0.28320280000000003,
+ "status": "ok",
+ "errors": [],
+ "warnings": [],
+ "result": {
+  "isTimetable": false,
+  "periodStartMonth": null,
+  "periodEndMonth": null
+ },
+ "courses": []
+}
