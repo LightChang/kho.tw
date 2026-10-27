@@ -31,14 +31,14 @@
     "name": "長佳智慧運動中心 Web App－運動中心課程",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（期別制，每期約兩個月；報名人數即時變動）",
-    "intervalMs": 16200000,
-    "interval": "4.5h",
-    "lastFetchedAt": "2026-10-27T18:10:03.028Z",
-    "lastChangedAt": "2026-10-27T15:10:02.541Z",
-    "nextDueAt": "2026-10-27T22:40:03.028Z",
-    "recordCount": 394,
-    "contentHash": "ebc4cc9aefb77303f218d9ac440afd86914b63bb2ff25cf66510ccd100ee15e9",
-    "unchangedRuns": 1,
+    "intervalMs": 10800000,
+    "interval": "3h",
+    "lastFetchedAt": "2026-10-27T23:10:02.542Z",
+    "lastChangedAt": "2026-10-27T23:10:02.542Z",
+    "nextDueAt": "2026-10-28T02:10:02.542Z",
+    "recordCount": 398,
+    "contentHash": "71de8c48cd1f62fdcab89b566ae48eb62a28077a6e1ab1ade5a9b2c9d4205306",
+    "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
   "forest-nature-edu": {
@@ -301,11 +301,11 @@
     "interval": "22.8h",
     "lastFetchedAt": "2026-10-22T04:10:01.944Z",
     "lastChangedAt": "2026-10-20T10:10:02.307Z",
-    "nextDueAt": "2026-10-27T22:56:57.420Z",
+    "nextDueAt": "2026-10-28T21:56:55.042Z",
     "recordCount": 1572,
     "contentHash": "2bcb6c78cf05916b953b4b88013c11802ccbc757d2e3bb9c5fb9d6608266d6ab",
     "unchangedRuns": 5,
-    "consecutiveFailures": 5
+    "consecutiveFailures": 6
   },
   "tainan-cc-portal": {
     "name": "臺南市社區大學校務資訊系統－課程查詢",
