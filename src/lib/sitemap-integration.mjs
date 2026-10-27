@@ -86,7 +86,7 @@ export default function khoSitemap() {
         await rm(path.join(dist, 'home.json'), { force: true });
         const groups = Object.entries(entries(getData())).map(([name, list]) => ({
           name,
-          // 排除頁型不進 sitemap，清單見 site/sitemap.mjs 的 SITEMAP_EXCLUDED_DIRS（2026-10-27 起講師頁）
+          // 排除頁型不進 sitemap，清單見 site/sitemap.mjs 的 SITEMAP_EXCLUDED_DIRS（2026-10-02 起為空；講師頁 2026-10-27 用戶確認留在 sitemap）
           entries: list.filter((e) => !isSitemapExcluded(e.rel) && existsSync(path.join(dist, e.rel))),
         }));
         const sitemap = await writeSitemaps({ dist, siteUrl: SITE_URL, groups });

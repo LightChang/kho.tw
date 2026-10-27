@@ -80,7 +80,7 @@ slug 由 data/slugs.ndjson 登記簿配給並保證重跑不變，不可自行�
 
 ## 完整網址清單
 單一課程／場館／講師的網址請勿自行拼湊，一律從下列來源取得：
-- sitemap 索引：${SITE_URL}/sitemap.xml（依 pages／courses／venues 分組分檔）
+- sitemap 索引：${SITE_URL}/sitemap.xml（依 pages／courses／venues／teachers 分組分檔）
 - robots.txt：${SITE_URL}/robots.txt（全站開放檢索，未擋任何 AI 爬蟲）
 - 站內搜尋：${SITE_URL}/search.html
 
