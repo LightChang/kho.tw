@@ -65,7 +65,7 @@ const description = `${lead}目前 ${fmt(open)} 門招生中${cities[0] ? `，�
   canonical={teacherUrl(t)}
   jsonld={itemListJsonLd(list.slice(0, 100), { name: `${t.name}的課程` })}
 >
-<div class="card"><h2>{t.name}</h2>
+<div class="card"><h1>{t.name}</h1>
 <div class="meta">{t.provider}</div>
 <p>{lead}</p>
 <div class="meta-2">本站收錄 {fmt(list.length)} 門課，其中 {fmt(open)} 門招生中</div></div>
