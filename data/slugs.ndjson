@@ -10046,6 +10046,7 @@
 {"id":"crs_33b81050","kind":"course","slug":"坐著火車去旅行賞古蹟-員永村社大-81050","assignedAt":"2026-09-12"}
 {"id":"crs_33ba2973","kind":"course","slug":"肌力雕塑班樂齡-樹林運動中心-a2973","assignedAt":"2026-09-29"}
 {"id":"crs_33ba55d1","kind":"course","slug":"乙級烘焙伴手禮-甲安埔社大-a55d1","assignedAt":"2026-09-12"}
+{"id":"crs_33bb00bb","kind":"course","slug":"從前衛實驗到歷史知識傳承當代德國漫畫與圖-國立公共資訊圖書館-b00bb","assignedAt":"2026-10-29"}
 {"id":"crs_33bb6bab","kind":"course","slug":"8124工業物聯網應用戰情室基礎班含SM-勞動力發展署中彰投分署-b6bab","assignedAt":"2026-09-12"}
 {"id":"crs_33bd3edb","kind":"course","slug":"麥寮縫紉班-平原社大-d3edb","assignedAt":"2026-09-12"}
 {"id":"crs_33bf82c8","kind":"course","slug":"創意商品網路行銷-勞動力發展署雲嘉南分署-f82c8","assignedAt":"2026-09-12"}
@@ -48915,6 +48916,7 @@
 {"id":"tea_0b81c84159574cef","kind":"teacher","slug":"古廷朱-三鶯社大-10eb5","assignedAt":"2026-09-13"}
 {"id":"tea_0b8ab8b6e4d76ead","kind":"teacher","slug":"劉育君-宜蘭社大-3fc5c","assignedAt":"2026-09-13"}
 {"id":"tea_0b909b711bb68440","kind":"teacher","slug":"許玉君-松山社大-9c570","assignedAt":"2026-09-13"}
+{"id":"tea_0b9c50e40b9d5171","kind":"teacher","slug":"碩碩-桃園運動中心-3156f","assignedAt":"2026-10-29"}
 {"id":"tea_0b9cc766897a75c3","kind":"teacher","slug":"雪雪-八德運動中心-c2d92","assignedAt":"2026-09-29"}
 {"id":"tea_0b9f94d4ef6a985d","kind":"teacher","slug":"可可-苓雅運動中心-c7598","assignedAt":"2026-09-13"}
 {"id":"tea_0ba23db2f13d4b71","kind":"teacher","slug":"謝欽郎-中正社大-0419b","assignedAt":"2026-09-13"}
@@ -52917,6 +52919,7 @@
 {"id":"tea_8012614cf979876c","kind":"teacher","slug":"陳志豪-后豐社大-2103d","assignedAt":"2026-09-13"}
 {"id":"tea_8026cdfaf1c10776","kind":"teacher","slug":"李宗達-北高雄社大-b5926","assignedAt":"2026-09-13"}
 {"id":"tea_802998f8bda941f8","kind":"teacher","slug":"張駿業-臺南社大-3ec09","assignedAt":"2026-09-13"}
+{"id":"tea_802a3e46312e8133","kind":"teacher","slug":"浴巾-長春國民暨兒童運動中心-721f4","assignedAt":"2026-10-29"}
 {"id":"tea_8041d052631f6af6","kind":"teacher","slug":"蔡翠雲-南關社大-b473b","assignedAt":"2026-09-13"}
 {"id":"tea_8044e7c1c9910caa","kind":"teacher","slug":"許雅茹-山線社大-72610","assignedAt":"2026-09-13"}
 {"id":"tea_804bbce3fafef34a","kind":"teacher","slug":"Arlene-蘆洲運動中心-b2c8e","assignedAt":"2026-09-29"}
@@ -54168,6 +54171,7 @@
 {"id":"tea_a5f1fdab95edf581","kind":"teacher","slug":"廖郁齡-中正社大-b6f6b","assignedAt":"2026-09-13"}
 {"id":"tea_a5f97e78114bcfac","kind":"teacher","slug":"邱素琴-蘆山園社大-ec6a5","assignedAt":"2026-09-13"}
 {"id":"tea_a601c01440a38f04","kind":"teacher","slug":"朱玫茵-汐止社大-2c7b9","assignedAt":"2026-09-13"}
+{"id":"tea_a60236889e0eb4dc","kind":"teacher","slug":"佩佩-太平國民暨兒童運動中心-07da5","assignedAt":"2026-10-29"}
 {"id":"tea_a605a7521a3acbac","kind":"teacher","slug":"小橘子-泰山運動中心-03f67","assignedAt":"2026-09-29"}
 {"id":"tea_a60942b9160f26c5","kind":"teacher","slug":"李品慧-萬華社大-8a1c6","assignedAt":"2026-09-13"}
 {"id":"tea_a613479106076d8e","kind":"teacher","slug":"Selena-南港運動中心-902b4","assignedAt":"2026-09-13"}
@@ -55775,6 +55779,7 @@
 {"id":"tea_d44cc33826ced85b","kind":"teacher","slug":"歐斯-土城運動中心-b82dd","assignedAt":"2026-09-29"}
 {"id":"tea_d44e0b2d353b137f","kind":"teacher","slug":"童玲玲-邑山社大-4c5c8","assignedAt":"2026-09-13"}
 {"id":"tea_d455b765e4615d06","kind":"teacher","slug":"Wiggins-wdygwd28-06e1f","assignedAt":"2026-09-29"}
+{"id":"tea_d4606e002e1bb7ab","kind":"teacher","slug":"Sara-苓雅運動中心-27b45","assignedAt":"2026-10-29"}
 {"id":"tea_d462c8200ebf8e56","kind":"teacher","slug":"李家瑜-竹北社大-069f8","assignedAt":"2026-09-13"}
 {"id":"tea_d4676517edc2623c","kind":"teacher","slug":"曹淑女-新楊平社大-ef6b5","assignedAt":"2026-09-13"}
 {"id":"tea_d4691d664c97fd7f","kind":"teacher","slug":"沈孟璇-新中和社大-aa0ff","assignedAt":"2026-09-13"}
