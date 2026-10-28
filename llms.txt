@@ -1,6 +1,6 @@
 # kho.tw（全台成人課程）
 
-> 全台社區大學、運動中心、樂齡中心與職訓課程整合查詢站。收錄 40,582 門課、2,370 個上課地點，其中 13,807 門正在招生。資料每小時自動抓取更新，本頁與 /llms-full.txt 在每次建置時重新生成。
+> 全台社區大學、運動中心、樂齡中心與職訓課程整合查詢站。收錄 40,582 門課、2,370 個上課地點，其中 13,809 門正在招生。資料每小時自動抓取更新，本頁與 /llms-full.txt 在每次建置時重新生成。
 
 ## 這是什麼
 kho.tw 彙整 25 個公開資料來源（教育部社區大學資訊網、各縣市社大聯網、教育部樂齡學習網、運動中心各營運商、勞動部職業訓練開放資料等），把同一門課在不同來源出現的紀錄合併成一筆，並在每個課程頁列出各來源提供的欄位與最後確認日期。收錄範圍：社區大學、運動中心、樂齡中心、職業訓練、圖書館、成人教育班、婦女大學、國中小進修部等機構公開的課程／活動資訊；不含私人補習班。
@@ -9,7 +9,7 @@ kho.tw 彙整 25 個公開資料來源（教育部社區大學資訊網、各縣
 
 ### 依機構類型（共 9 類，網址：/type/<kind 代碼>.html）
 - 社區大學（community-college）：https://kho.tw/type/community-college.html（23,767 門，4,104 門招生中）
-- 運動中心（sports-center）：https://kho.tw/type/sports-center.html（12,175 門，8,416 門招生中）
+- 運動中心（sports-center）：https://kho.tw/type/sports-center.html（12,175 門，8,418 門招生中）
 - 職業訓練（vocational）：https://kho.tw/type/vocational.html（2,261 門，970 門招生中）
 - 樂齡中心（senior-center）：https://kho.tw/type/senior-center.html（1,308 門，154 門招生中）
 - 其他（other）：https://kho.tw/type/other.html（694 門，20 門招生中）
@@ -39,10 +39,10 @@ kho.tw 彙整 25 個公開資料來源（教育部社區大學資訊網、各縣
 - 美容美髮：https://kho.tw/topic/%E7%BE%8E%E5%AE%B9%E7%BE%8E%E9%AB%AE.html（99 門，40 門招生中）
 
 ### 依縣市（共 21 縣市，網址：/city/<縣市名稱>.html；縣市名稱為中文，須百分比編碼）
-- 臺北市：https://kho.tw/city/%E8%87%BA%E5%8C%97%E5%B8%82.html（9,917 門，5,647 門招生中）
-- 新北市：https://kho.tw/city/%E6%96%B0%E5%8C%97%E5%B8%82.html（7,031 門，2,722 門招生中）
-- 臺中市：https://kho.tw/city/%E8%87%BA%E4%B8%AD%E5%B8%82.html（5,228 門，1,395 門招生中）
-- 桃園市：https://kho.tw/city/%E6%A1%83%E5%9C%92%E5%B8%82.html（4,408 門，1,361 門招生中）
+- 臺北市：https://kho.tw/city/%E8%87%BA%E5%8C%97%E5%B8%82.html（9,917 門，5,646 門招生中）
+- 新北市：https://kho.tw/city/%E6%96%B0%E5%8C%97%E5%B8%82.html（7,031 門，2,723 門招生中）
+- 臺中市：https://kho.tw/city/%E8%87%BA%E4%B8%AD%E5%B8%82.html（5,228 門，1,396 門招生中）
+- 桃園市：https://kho.tw/city/%E6%A1%83%E5%9C%92%E5%B8%82.html（4,408 門，1,362 門招生中）
 - 高雄市：https://kho.tw/city/%E9%AB%98%E9%9B%84%E5%B8%82.html（2,332 門，592 門招生中）
 - 彰化縣：https://kho.tw/city/%E5%BD%B0%E5%8C%96%E7%B8%A3.html（1,321 門，276 門招生中）
 - 宜蘭縣：https://kho.tw/city/%E5%AE%9C%E8%98%AD%E7%B8%A3.html（546 門，210 門招生中）
@@ -76,7 +76,7 @@ slug 由 data/slugs.ndjson 登記簿配給並保證重跑不變，不可自行�
 網址規則：/venue/<slug>.html，例如：
   https://kho.tw/venue/%E5%81%A5%E8%A1%8C%E5%9C%8B%E5%B0%8F-247e3.html
 
-### 講師頁（只收同名同單位開課 ≥2 門者，共 7,506 頁）
+### 講師頁（只收同名同單位開課 ≥2 門者，共 7,507 頁）
 網址規則：/teacher/<slug>.html，例如：
   https://kho.tw/teacher/%E5%AE%B6%E6%85%B6-%E5%85%A7%E6%B9%96%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-f0359.html
 身分認定＝姓名＋開課單位，同名不同人不會被合併。
