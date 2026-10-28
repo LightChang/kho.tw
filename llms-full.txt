@@ -5,7 +5,7 @@
 
 這裡是本站聚合統計與代表性內容的全文，純文字，給 AI 助理讀的，可直接引用。
 收錄範圍：全站彙總統計（依機構類型／主題分類／縣市，共 48 個分類的完整數字）、跨來源合併與即時名額揭露各 6 筆代表性課程全文。
-本站共 41,170 門課，規模太大不可能逐頁收錄；個別課程／場館／講師的完整清單見 https://kho.tw/llms.txt 與 https://kho.tw/sitemap.xml。
+本站共 41,022 門課，規模太大不可能逐頁收錄；個別課程／場館／講師的完整清單見 https://kho.tw/llms.txt 與 https://kho.tw/sitemap.xml。
 引用時請標明來源網址；每筆課程都附上正式網址與原始資料來源。
 
 ------------------------------------------------------------
@@ -23,11 +23,11 @@ kho.tw 彙整 25 個公開資料來源（教育部社區大學資訊網、各縣
 | 類型 | 代碼 | 課程數 | 招生中 |
 |---|---|---|---|
 | 社區大學 | community-college | 24,229 | 4,128 |
-| 運動中心 | sports-center | 12,324 | 8,579 |
+| 運動中心 | sports-center | 12,175 | 8,418 |
 | 職業訓練 | vocational | 2,238 | 962 |
 | 樂齡中心 | senior-center | 1,308 | 154 |
 | 其他 | other | 694 | 20 |
-| 圖書館 | library | 211 | 104 |
+| 圖書館 | library | 212 | 103 |
 | 成人教育班 | adult-education | 88 | 18 |
 | 婦女大學 | women-center | 52 | 0 |
 | 國中小進修部 | school-continuing | 26 | 23 |
@@ -38,18 +38,18 @@ kho.tw 彙整 25 個公開資料來源（教育部社區大學資訊網、各縣
 
 | 分類 | 課程數 | 招生中 |
 |---|---|---|
-| 運動健身 | 13,565 | 6,856 |
-| 美術工藝 | 4,628 | 724 |
+| 運動健身 | 13,450 | 6,711 |
+| 美術工藝 | 4,629 | 724 |
 | 音樂戲劇 | 3,804 | 665 |
-| 舞蹈 | 2,882 | 962 |
+| 舞蹈 | 2,857 | 945 |
 | 語言 | 2,272 | 527 |
-| 人文社會 | 1,317 | 469 |
-| 健康養生 | 1,308 | 348 |
+| 人文社會 | 1,317 | 468 |
+| 健康養生 | 1,309 | 348 |
 | 電腦資訊 | 1,132 | 354 |
 | 料理烘焙 | 1,050 | 250 |
-| 自然生態 | 881 | 243 |
+| 自然生態 | 880 | 242 |
 | 工程技術 | 852 | 227 |
-| 攝影影音 | 826 | 219 |
+| 攝影影音 | 823 | 217 |
 | 理財法律 | 461 | 139 |
 | 生活應用 | 374 | 173 |
 | 商業管理 | 314 | 156 |
@@ -63,18 +63,18 @@ kho.tw 彙整 25 個公開資料來源（教育部社區大學資訊網、各縣
 
 | 縣市 | 課程數 | 招生中 |
 |---|---|---|
-| 臺北市 | 9,924 | 5,667 |
-| 新北市 | 7,116 | 2,774 |
-| 臺中市 | 5,234 | 1,414 |
-| 桃園市 | 4,858 | 1,399 |
-| 高雄市 | 2,323 | 604 |
-| 彰化縣 | 1,321 | 278 |
-| 宜蘭縣 | 545 | 216 |
-| 新竹縣 | 602 | 190 |
-| 新竹市 | 865 | 188 |
+| 臺北市 | 9,918 | 5,647 |
+| 新北市 | 7,031 | 2,724 |
+| 臺中市 | 5,226 | 1,395 |
+| 桃園市 | 4,844 | 1,383 |
+| 高雄市 | 2,316 | 591 |
+| 彰化縣 | 1,321 | 276 |
+| 宜蘭縣 | 546 | 210 |
+| 新竹市 | 860 | 184 |
+| 新竹縣 | 596 | 184 |
 | 南投縣 | 538 | 161 |
-| 臺南市 | 1,804 | 149 |
-| 雲林縣 | 793 | 134 |
+| 臺南市 | 1,804 | 148 |
+| 雲林縣 | 791 | 132 |
 | 嘉義市 | 276 | 31 |
 | 花蓮縣 | 163 | 18 |
 | 屏東縣 | 444 | 11 |
@@ -104,8 +104,8 @@ kho.tw 彙整 25 個公開資料來源（教育部社區大學資訊網、各縣
 報名狀態：額滿
 無限制
 資料來源：
-- taipei-cc：https://ss.twcc.org.tw/course/m_course_detail.php?u=3a81c2d7239c333cb18d59018955aab7（最後確認 2026-10-28；提供欄位：categoryRaw、description、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title）
-- taipei-cc：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-10-28；提供欄位：categoryRaw、description、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title）
+- taipei-cc：https://ss.twcc.org.tw/course/m_course_detail.php?u=3a81c2d7239c333cb18d59018955aab7（最後確認 2026-10-29；提供欄位：categoryRaw、description、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title）
+- taipei-cc：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-10-29；提供欄位：categoryRaw、description、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title）
 - moe-cc-courses：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-09-15；提供欄位：credit、enrollment、schedule、topicsRaw）
 - moe-cc-courses：https://ss.twcc.org.tw/course/m_course_detail.php?u=3a81c2d7239c333cb18d59018955aab7（最後確認 2026-09-15；提供欄位：credit、enrollment、schedule、topicsRaw）
 - moe-cc-detail：https://ss.twcc.org.tw/course/m_course_detail.php?u=0966b80a1fec23fa60aeaea609d5603d（最後確認 2026-09-15；提供欄位：）
@@ -126,7 +126,7 @@ kho.tw 彙整 25 個公開資料來源（教育部社區大學資訊網、各縣
 - moe-cc-courses：https://www.tbmcc.tw/modules/tadnews/index.php?nsn=158（最後確認 2026-09-15；提供欄位：credit、enrollment、isFree、price、provider、schedule、sourceUrl、teachers、term、title、topicsRaw）
 - moe-cc-detail：https://www.tbmcc.tw/modules/tadnews/index.php?nsn=158（最後確認 2026-09-15；提供欄位：description）
 - moe-cc-detail：https://www.tbmcc.tw/modules/tadnews/index.php?nsn=158（最後確認 2026-09-15；提供欄位：description）
-- tainan-cc-portal：https://tncu.tn.edu.tw/Modules/Course/Show.php?ID=19637（最後確認 2026-10-28；提供欄位：schedule）
+- tainan-cc-portal：https://tncu.tn.edu.tw/Modules/Course/Show.php?ID=19637（最後確認 2026-10-29；提供欄位：schedule）
 
 ### 手沖精品咖啡
 網址：https://kho.tw/course/%E6%89%8B%E6%B2%96%E7%B2%BE%E5%93%81%E5%92%96%E5%95%A1-%E6%A1%83%E5%9C%92%E7%A4%BE%E5%A4%A7-ca272.html
@@ -163,7 +163,7 @@ kho.tw 彙整 25 個公開資料來源（教育部社區大學資訊網、各縣
 報名狀態：招生中
 楊梅體育園區，11505，公益課程類課程，週四 08:00–08:55上課，自 2026-09-03 起，地點：楊梅體育園區。
 資料來源：
-- xuanen-centers：https://ymscwdyg.com.tw（最後確認 2026-10-28；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
+- xuanen-centers：https://ymscwdyg.com.tw（最後確認 2026-10-29；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
 
 ### 綜合美體瑜珈
 網址：https://kho.tw/course/%E7%B6%9C%E5%90%88%E7%BE%8E%E9%AB%94%E7%91%9C%E7%8F%88-%E5%8D%97%E6%B8%AF%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-51399.html
@@ -177,7 +177,7 @@ kho.tw 彙整 25 個公開資料來源（教育部社區大學資訊網、各縣
 報名狀態：招生中
 臺北市南港運動中心，11505，瑜珈系列類課程，週六 09:00–09:55上課，自 2026-09-19 起，地點：臺北市南港運動中心。
 資料來源：
-- xuanen-centers：https://ngsc.cyc.org.tw（最後確認 2026-10-28；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
+- xuanen-centers：https://ngsc.cyc.org.tw（最後確認 2026-10-29；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
 
 ### 拳擊有氧
 網址：https://kho.tw/course/%E6%8B%B3%E6%93%8A%E6%9C%89%E6%B0%A7-%E6%96%87%E5%B1%B1%E9%81%8B%E5%8B%95%E4%B8%AD%E5%BF%83-b4da9.html
@@ -191,7 +191,7 @@ kho.tw 彙整 25 個公開資料來源（教育部社區大學資訊網、各縣
 報名狀態：招生中
 臺北市文山運動中心，11505，有氧系列類課程，週四 18:30–19:25上課，自 2026-09-03 起，地點：臺北市文山運動中心。
 資料來源：
-- xuanen-centers：https://wssc.cyc.org.tw（最後確認 2026-10-28；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
+- xuanen-centers：https://wssc.cyc.org.tw（最後確認 2026-10-29；提供欄位：categoryRaw、enrollment、provider、schedule、sourceUrl、teachers、term、title）
 
 
 ------------------------------------------------------------
@@ -203,4 +203,4 @@ sitemap 索引（依 pages／courses／venues／venue-acts／teachers 分組分�
 站內搜尋（課名／單位／講師）：https://kho.tw/search.html
 地圖（依座標找附近的課）：https://kho.tw/map.html
 
-更新於 2026-10-28（每小時抓取一次）。本頁每次建置重新生成，內容以此刻為準。
+更新於 2026-10-29（每小時抓取一次）。本頁每次建置重新生成，內容以此刻為準。
