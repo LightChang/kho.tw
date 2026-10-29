@@ -41,7 +41,7 @@ const rows = [
 const jsonld = courseJsonLd(c, venue);
 
 // 同類課程：細項頁（行政區 → 縣市 → 全台）與證照班頁。細項依課名判斷，規則見 overrides/activities.json。
-const { learnLinksOf, certCitySet, titleCollides, successorsOf, alternativesOf, currentByVenue, sameTitleOf, venueActsByVenue, actsByCourse } = getData();
+const { learnLinksOf, certCitySet, titleCollides, successorsOf, alternativesOf, currentByVenue, sameTitleOf, venueActsByVenue, actsByCourse, cities } = getData();
 // 同場館同細項的獨立頁（/at/）：單堂課頁連過去，「北屯運動中心 皮拉提斯」這類查詢才會落在匯集頁而不是單堂課
 const myActs = new Set(actsByCourse.get(c.id) ?? []);
 const atPages = venue?.id ? (venueActsByVenue.get(venue.id) ?? []).filter((x) => myActs.has(x.activity.name)) : [];
@@ -57,6 +57,10 @@ const ended = hasEnded(c);
 const next = ended ? successorsOf(c) : [];
 const alts = ended ? alternativesOf(c) : [];
 const venueNow = ended && venue?.id ? (currentByVenue.get(venue.id) ?? []).length : 0;
+// 同地點、同系列、同縣市同類都沒有出路時，退一步給全縣市的招生中課程列表——
+// 不是推薦同類課，是這個站的樞紐頁（/city/<縣市>.html）本來就在那裡。
+const cityOpen = ended && !next.length && !alts.length && !venueNow && c.venue?.city
+  ? (cities.find((x) => x.name === c.venue.city)?.open ?? 0) : 0;
 // 同名課程的其他期別與其他開課單位（已列在「新的一期」的不重複）；還沒結束的課另列同地點本期課。
 const shown = new Set([c.id, ...next.map((o) => o.id)]);
 const sameTitle = sameTitleOf(c).filter((o) => !shown.has(o.id));
@@ -66,7 +70,7 @@ const whereOf = (o) => [o.provider?.nameRaw, `${o.venue?.city ?? ''}${o.venue?.d
 const whenOf = (o) => [seasonOf(o.schedule?.startDate), (o.schedule?.slots ?? [])[0]?.weekday ? WEEKDAY_LABEL[o.schedule.slots[0].weekday] : '', o.schedule?.startDate ? `${o.schedule.startDate} 開課` : ''].filter(Boolean).join('・');
 ---
 <Base crumbs={underCity(c.venue?.city, c.title, new Set(getData().cities.map((x) => x.name)))} title={courseTitle(c, { collide: titleCollides(c), weekdayLabel: WEEKDAY_LABEL })} description={jsonld.description} canonical={courseUrl(c)} jsonld={jsonld} robots={isNoindex(c) ? 'noindex,follow' : undefined}>
-{ended && (next.length > 0 || alts.length > 0 || venueNow > 0) && (
+{ended && (next.length > 0 || alts.length > 0 || venueNow > 0 || cityOpen > 0) && (
 <div class="card next-up">
 <h2>{next.length ? '這門課有新的一期' : '這門課已結束'}</h2>
 <div class="meta-2">這一頁的課已於 {c.schedule.endDate} 上完。</div>
@@ -74,6 +78,7 @@ const whenOf = (o) => [seasonOf(o.schedule?.startDate), (o.schedule?.slots ?? []
 {alts.length > 0 && <Fragment><h3>同類的本期課程</h3>
 <ul class="next-list">{alts.map(({ course: o, why }) => <li><a href={link('course', o.slug)}>{o.title}</a> <StatusBadge status={o.enrollment?.status} /><div class="meta-2">{why}・{o.provider?.nameRaw ?? ''}{o.schedule?.startDate ? `・${o.schedule.startDate} 開課` : ''}</div></li>)}</ul></Fragment>}
 {venueNow > 0 && <div class="meta"><a href={link('venue', venue.slug)}>{venue.name}本期課程表（{fmt(venueNow)} 門）</a></div>}
+{cityOpen > 0 && <div class="meta"><a href={link('city', c.venue.city)}>{c.venue.city}目前招生中課程列表（{fmt(cityOpen)} 門）</a></div>}
 </div>
 )}
 <div class="card">
