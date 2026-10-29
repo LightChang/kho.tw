@@ -26551,6 +26551,12 @@
     <priority>0.2</priority>
   </url>
   <url>
+    <loc>https://kho.tw/course/%E5%89%B5%E9%A3%9F%E5%99%A8Maker-%E7%9F%A5%E6%9C%AC%E8%87%AA%E7%84%B6%E6%95%99%E8%82%B2%E4%B8%AD%E5%BF%83-d7208.html</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://kho.tw/course/%E5%89%B5%E9%BD%A1%E7%B4%99%E8%97%9D-%E5%85%A7%E6%B9%96%E7%A4%BE%E5%A4%A7-d6d4e.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
@@ -64535,6 +64541,12 @@
     <lastmod>2026-09-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://kho.tw/course/%E5%AF%92%E5%81%87%E7%87%9F%E9%9A%8A%E9%81%A0%E5%BE%81%E5%90%A7%E7%A5%9E%E6%9C%A8%E6%8E%A2%E9%9A%AA%E9%9A%8A-%E6%9D%B1%E7%9C%BC%E5%B1%B1%E8%87%AA%E7%84%B6%E6%95%99%E8%82%B2%E4%B8%AD%E5%BF%83-67dac.html</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://kho.tw/course/%E5%AF%9F%E9%A1%8F%E8%A7%80%E8%89%B2%E4%B8%AD%E9%86%AB%E4%BF%9D%E5%81%A5-%E5%A4%A7%E5%AE%89%E7%A4%BE%E5%A4%A7-2b865.html</loc>
@@ -115651,12 +115663,6 @@
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://kho.tw/course/%E6%9E%97%E4%B8%8B%E5%8E%9F%E9%A3%9F-%E6%9D%B1%E7%9C%BC%E5%B1%B1%E8%87%AA%E7%84%B6%E6%95%99%E8%82%B2%E4%B8%AD%E5%BF%83-1c974.html</loc>
-    <lastmod>2026-10-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
     <loc>https://kho.tw/course/%E6%9E%97%E5%9C%92%E5%A4%A9%E6%96%87%E7%94%9F%E6%85%8B%E6%94%9D%E5%BD%B1%E8%B6%A3-%E9%8E%AE%E6%B8%AF%E5%9C%92%E7%A4%BE%E5%A4%A7-c826c.html</loc>
     <lastmod>2026-09-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -119993,11 +119999,5 @@
     <lastmod>2026-09-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://kho.tw/course/%E6%A8%82%E6%B4%BB%E4%BC%B8%E5%B1%95%E7%91%9C%E7%8F%88B-%E4%BA%94%E6%AC%8A%E7%A4%BE%E5%A4%A7-db0bb.html</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
   </url>
 </urlset>
