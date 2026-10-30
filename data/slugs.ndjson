@@ -29170,6 +29170,7 @@
 {"id":"crs_9856efef","kind":"course","slug":"生活法律實例案例解說-大屯社大-6efef","assignedAt":"2026-09-12"}
 {"id":"crs_9857a644","kind":"course","slug":"樂舞心國標初階-中山社大-7a644","assignedAt":"2026-09-12"}
 {"id":"crs_985a0ab8","kind":"course","slug":"泥塑研習推廣課程-北門社大-a0ab8","assignedAt":"2026-09-12"}
+{"id":"crs_985a9a6f","kind":"course","slug":"壁球成人進階班-長春國民暨兒童運動中心-a9a6f","assignedAt":"2026-10-31"}
 {"id":"crs_985b0cb4","kind":"course","slug":"喪禮服務禮儀師之養成班-羅東社大-b0cb4","assignedAt":"2026-09-12"}
 {"id":"crs_985b4df5","kind":"course","slug":"快樂學書法-永和社大-b4df5","assignedAt":"2026-09-12"}
 {"id":"crs_985c424f","kind":"course","slug":"湖日大展南管劇樂A-大屯社大-c424f","assignedAt":"2026-09-12"}
@@ -48732,6 +48733,7 @@
 {"id":"crs_fffd14ec","kind":"course","slug":"鄭子太極拳37式-北屯社大-d14ec","assignedAt":"2026-10-01"}
 {"id":"crs_fffec0ca","kind":"course","slug":"紓緩養身瑜珈基礎-中山社大-ec0ca","assignedAt":"2026-09-12"}
 {"id":"tea_000bbb86859da654","kind":"teacher","slug":"家慶-內湖運動中心-f0359","assignedAt":"2026-09-13"}
+{"id":"tea_00114f79801dab4e","kind":"teacher","slug":"潘家馨-土城運動中心-1549a","assignedAt":"2026-10-31"}
 {"id":"tea_001be08e14bb7d01","kind":"teacher","slug":"張明益-土城運動中心-5d092","assignedAt":"2026-09-29"}
 {"id":"tea_0022199231d19f99","kind":"teacher","slug":"陳月雪-二社田社大-f5588","assignedAt":"2026-09-13"}
 {"id":"tea_0022638bce4914ef","kind":"teacher","slug":"黃緞-萬華社大-b71eb","assignedAt":"2026-09-13"}
@@ -50252,6 +50254,7 @@
 {"id":"tea_2b442ecfcca9ffcd","kind":"teacher","slug":"張錫池-二社田社大-87e59","assignedAt":"2026-09-13"}
 {"id":"tea_2b561651b7c1818a","kind":"teacher","slug":"Reyna-wdygwd28-a8093","assignedAt":"2026-09-29"}
 {"id":"tea_2b71356a46b3a594","kind":"teacher","slug":"林士聘-汐止社大-a37b0","assignedAt":"2026-09-13"}
+{"id":"tea_2b754c2476b6f3c9","kind":"teacher","slug":"貝克-土城運動中心-2750d","assignedAt":"2026-10-31"}
 {"id":"tea_2b80716e7ac1ec2f","kind":"teacher","slug":"蔡淑貞-后豐社大-c845b","assignedAt":"2026-09-13"}
 {"id":"tea_2b8611a7805445dc","kind":"teacher","slug":"Jun-三重運動中心-5b883","assignedAt":"2026-09-29"}
 {"id":"tea_2b8fb4be9ddc3a66","kind":"teacher","slug":"Ruru-南港運動中心-ba803","assignedAt":"2026-09-29"}
@@ -56025,6 +56028,7 @@
 {"id":"tea_d5fe0a378b369395","kind":"teacher","slug":"紀志賢-甲安埔社大-d7a85","assignedAt":"2026-09-13"}
 {"id":"tea_d611d75f0d861608","kind":"teacher","slug":"仙仙-中和運動中心-b9656","assignedAt":"2026-10-01"}
 {"id":"tea_d6167d139976c795","kind":"teacher","slug":"江美貞-基隆社大-50032","assignedAt":"2026-09-13"}
+{"id":"tea_d61e791344ae7f68","kind":"teacher","slug":"晶晶-楊梅體育園區-1a2b0","assignedAt":"2026-10-31"}
 {"id":"tea_d62258882d1e726a","kind":"teacher","slug":"廖上綺-永康社大-53342","assignedAt":"2026-09-13"}
 {"id":"tea_d62588d94f8f61d4","kind":"teacher","slug":"林靜娟-山線社大-4a126","assignedAt":"2026-09-13"}
 {"id":"tea_d63176f4f774524e","kind":"teacher","slug":"羅慧萍-三鶯社大-b1d1a","assignedAt":"2026-09-13"}
