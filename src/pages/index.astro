@@ -15,7 +15,7 @@ import tokensCss from '../styles/tokens.css?raw';
 import siteCss from '../styles/site.css?raw';
 import homeCss from '../styles/home.css?raw';
 import { getData, fmt } from '../lib/data.mjs';
-import { homeJsonLd } from '../../site/jsonld.mjs';
+import { homeJsonLd, SITE_URL } from '../../site/jsonld.mjs';
 
 const css = [tokensCss, siteCss.replace(/^@import .*$/m, ''), homeCss].join('\n');
 
@@ -43,6 +43,7 @@ const doors = [
   <Head
     title="kho.tw 全台成人課程｜現在還報得到的課"
     description={description}
+    canonical={`${SITE_URL}/`}
     jsonld={jsonld}
   />
   <style is:inline set:html={css} />

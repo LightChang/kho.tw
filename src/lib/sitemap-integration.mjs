@@ -11,7 +11,7 @@ import { existsSync } from 'node:fs';
 import { rm } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { getData, learnRel, certRel, programRel, freeRel, seniorRel, hasEnded, isNoindex } from './data.mjs';
+import { getData, learnRel, certRel, programRel, freeRel, seniorRel, hasEnded, isNoindex, pageTypeRobots } from './data.mjs';
 import { SITE_URL } from '../../site/jsonld.mjs';
 import { writeSitemaps, courseHint, maxDate, isSitemapExcluded } from '../../site/sitemap.mjs';
 
@@ -87,7 +87,8 @@ export default function khoSitemap() {
         const groups = Object.entries(entries(getData())).map(([name, list]) => ({
           name,
           // 排除頁型不進 sitemap，清單見 site/sitemap.mjs 的 SITEMAP_EXCLUDED_DIRS（2026-10-02 起為空；講師頁 2026-10-27 用戶確認留在 sitemap）
-          entries: list.filter((e) => !isSitemapExcluded(e.rel) && existsSync(path.join(dist, e.rel))),
+          // 整型 noindex 的頁型（課程／講師／場館，2026-11-01 用戶拍板方案 A）不進 sitemap，判準與 Head.astro 的 robots 同一個
+          entries: list.filter((e) => !isSitemapExcluded(e.rel) && !pageTypeRobots(e.rel) && existsSync(path.join(dist, e.rel))),
         }));
         const sitemap = await writeSitemaps({ dist, siteUrl: SITE_URL, groups });
         const counts = groups.map((g) => `${g.name} ${g.entries.length}`).join('、');

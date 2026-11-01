@@ -2,6 +2,7 @@
 // <head> 的共用內容。樣式不在這裡：內頁由 Base.astro 連外部 CSS，首頁自己內嵌。
 import { ANALYTICS, GSC_VERIFY } from '../site.config.mjs';
 import { breadcrumbJsonLd } from '../../site/jsonld.mjs';
+import { pageTypeRobots } from '../lib/data.mjs';
 
 interface Props {
   title: string;
@@ -11,7 +12,9 @@ interface Props {
   robots?: string;
   crumbs?: { name: string; href?: string }[];
 }
-const { title, description, canonical, jsonld, robots, crumbs } = Astro.props;
+const { title, description, canonical, jsonld, crumbs } = Astro.props;
+// 頁型層級的 noindex（data.mjs 的 NOINDEX_PAGE_TYPES）優先於頁面自己給的 robots
+const robots = pageTypeRobots(Astro.url.pathname) ?? Astro.props.robots;
 // 全站唯一的 JSON-LD 出口：頁面自己的那塊（site/jsonld.mjs 產生）＋麵包屑，各一個 script。
 // JSON-LD 內的 < 一律跳脫成 \u003c，否則字串裡若出現 </script> 會提前結束 script 區塊
 // （HTML 規範；Astro 的 set:html 不跳脫。見 rules.json 的 global.scriptContent、global.astroOutput）

@@ -59,6 +59,15 @@ export const NOINDEX_AFTER_DAYS = 365;
 export const isNoindex = (c) => hasEnded(c)
   && (Date.parse(TODAY) - Date.parse(c.schedule.endDate)) / 864e5 >= NOINDEX_AFTER_DAYS;
 
+// 2026-11-01 用戶拍板收斂方案 A：可收錄頁只留樞紐與學什麼，程式產生的課程／講師／場館頁
+// 整個頁型 noindex,follow＋移出 sitemap（推翻 10/27「講師頁不動」）。頁面照常產生、站內連結照走。
+// 全站唯一設定點：Head.astro 依此加 robots，sitemap-integration.mjs 依此排除，判準同一個。
+// 恢復（例如分批開放招生中的課）需用戶決定，反思／大腦不得自行縮小這份清單。
+export const NOINDEX_PAGE_TYPES = Object.freeze(['course', 'teacher', 'venue']);
+/** 相對路徑（course/x.html）或 pathname（/course/x.html）屬於整型 noindex 頁型就回 robots 值。 */
+export const pageTypeRobots = (rel) => (NOINDEX_PAGE_TYPES.includes(String(rel).replace(/^\//, '').split('/')[0])
+  ? 'noindex,follow' : undefined);
+
 // 細項頁與證照頁的門檻：課太少的組合不出頁，免得產出一堆只有一兩門課的薄頁。
 // 全國細項 20 門、縣市 8 門、行政區 10 門；證照班縣市頁 8 門。
 // 縣市 8 門是看過實際查詢才定的：「彰化拳擊課程」剛好 8 門，再高就接不到。
