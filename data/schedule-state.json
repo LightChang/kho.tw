@@ -5,11 +5,11 @@
     "declaredFreq": "UNVERIFIED（即時層，列表帶確認開課／額滿／停開旗標）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-11-02T15:10:03.705Z",
-    "lastChangedAt": "2026-11-02T15:10:03.705Z",
-    "nextDueAt": "2026-11-02T18:10:03.705Z",
-    "recordCount": 4495,
-    "contentHash": "ca2e281e229b66b64a2cab142ee6790c998d192495f7bbe7fad6355e8d00c272",
+    "lastFetchedAt": "2026-11-02T19:10:02.669Z",
+    "lastChangedAt": "2026-11-02T19:10:02.669Z",
+    "nextDueAt": "2026-11-02T22:10:02.669Z",
+    "recordCount": 4141,
+    "contentHash": "934528a3e68b8ba575f3470dd06de13b782ce739be2e9710df59e924e5a2bd4a",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
@@ -21,11 +21,11 @@
     "interval": "5.7h",
     "lastFetchedAt": "2026-10-31T03:10:02.785Z",
     "lastChangedAt": "2026-10-31T03:10:02.785Z",
-    "nextDueAt": "2026-11-02T17:51:46.516Z",
+    "nextDueAt": "2026-11-02T23:51:46.507Z",
     "recordCount": 460,
     "contentHash": "53fc5acd55eea9a0365d5218d8f692c6ea5d128274c444606c3d878ce6819962",
     "unchangedRuns": 0,
-    "consecutiveFailures": 9
+    "consecutiveFailures": 10
   },
   "changjia-centers": {
     "name": "長佳智慧運動中心 Web App－運動中心課程",
@@ -301,11 +301,11 @@
     "interval": "22.8h",
     "lastFetchedAt": "2026-10-22T04:10:01.944Z",
     "lastChangedAt": "2026-10-20T10:10:02.307Z",
-    "nextDueAt": "2026-11-02T18:56:55.755Z",
+    "nextDueAt": "2026-11-03T17:56:55.169Z",
     "recordCount": 1572,
     "contentHash": "2bcb6c78cf05916b953b4b88013c11802ccbc757d2e3bb9c5fb9d6608266d6ab",
     "unchangedRuns": 5,
-    "consecutiveFailures": 11
+    "consecutiveFailures": 12
   },
   "tainan-cc-portal": {
     "name": "臺南市社區大學校務資訊系統－課程查詢",
@@ -397,11 +397,11 @@
     "declaredFreq": "UNVERIFIED（期別制，每期約兩個月；名額即時變動）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-11-02T15:10:03.705Z",
-    "lastChangedAt": "2026-11-02T15:10:03.705Z",
-    "nextDueAt": "2026-11-02T18:10:03.705Z",
+    "lastFetchedAt": "2026-11-02T19:10:02.669Z",
+    "lastChangedAt": "2026-11-02T19:10:02.669Z",
+    "nextDueAt": "2026-11-02T22:10:02.669Z",
     "recordCount": 613,
-    "contentHash": "a6e35f3b3a8688340d2addd21ae07bc0a478e6751aef10b215d2aa7514bade7d",
+    "contentHash": "e6cfa8a4e81b42dc56f745ae03e155f91c0bab018a1059edc5ede7f5cb6ef0f2",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
