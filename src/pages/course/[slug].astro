@@ -66,6 +66,8 @@ const shown = new Set([c.id, ...next.map((o) => o.id)]);
 const sameTitle = sameTitleOf(c).filter((o) => !shown.has(o.id));
 for (const o of sameTitle) shown.add(o.id);
 const venueOthers = !ended && venue?.id ? (currentByVenue.get(venue.id) ?? []).filter((o) => !shown.has(o.id)).slice(0, 6) : [];
+// 報名入口：來源給的第一個網址。課上完了就不放。
+const signupUrl = hasEnded(c) || c.enrollment?.status === 'cancelled' ? '' : ((c.sources ?? []).find((s) => s.url)?.url ?? '');
 const whereOf = (o) => [o.provider?.nameRaw, `${o.venue?.city ?? ''}${o.venue?.district ?? ''}`].filter(Boolean).join('・');
 const whenOf = (o) => [seasonOf(o.schedule?.startDate), (o.schedule?.slots ?? [])[0]?.weekday ? WEEKDAY_LABEL[o.schedule.slots[0].weekday] : '', o.schedule?.startDate ? `${o.schedule.startDate} 開課` : ''].filter(Boolean).join('・');
 ---
@@ -87,6 +89,7 @@ const whenOf = (o) => [seasonOf(o.schedule?.startDate), (o.schedule?.slots ?? []
 {hasEnded(c) && <div class="meta-2"><EndedNote course={c} />　本站不改寫來源給的報名狀態，這一行講的是上課期間。</div>}
 {plainText(c.description) && <p>{plainText(c.description)}</p>}
 <table>{rows.map(([k, v]) => <tr><th class="th-key">{k}</th><td>{v}</td></tr>)}</table>
+{signupUrl && <p class="signup"><a href={signupUrl} target="_blank" rel="nofollow noopener" data-goal="register_click">{c.enrollment?.status === 'open' ? '去開課單位報名' : '到開課單位看報名資訊'} ↗</a></p>}
 </div>
 {venue?.id ? (
 <div class="card"><h3>上課地點</h3>
@@ -121,4 +124,10 @@ const whenOf = (o) => [seasonOf(o.schedule?.startDate), (o.schedule?.slots ?? []
 </table>
 {c.rejected && <details class="meta-2"><summary>其他來源的不同值（{c.rejected.length}）</summary><pre class="rejected">{JSON.stringify(c.rejected, null, 1)}</pre></details>}
 </div>
+<script is:inline>
+// 目標事件：點「去報名」時送出。沒開 GA 時 gtag 不存在，什麼都不做。
+document.querySelector('[data-goal]')?.addEventListener('click', function (ev) {
+  if (window.gtag) window.gtag('event', ev.currentTarget.dataset.goal, { link_url: ev.currentTarget.href, transport_type: 'beacon' });
+});
+</script>
 </Base>

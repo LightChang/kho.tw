@@ -30,6 +30,7 @@ a:hover{text-decoration:underline}
 .st{display:inline-block;padding:1px 10px;border-radius:999px;font-size:var(--text-xs);
   border:1px solid currentColor;white-space:nowrap}
 .st-open{color:var(--color-pass)}
+.signup{margin:12px 0 0;font-weight:700}
 .st-full{color:var(--color-fail)}
 .st-upcoming{color:var(--color-warn)}
 .st-running{color:var(--color-info)}
