@@ -301,11 +301,11 @@
     "interval": "22.8h",
     "lastFetchedAt": "2026-10-22T04:10:01.944Z",
     "lastChangedAt": "2026-10-20T10:10:02.307Z",
-    "nextDueAt": "2026-11-03T17:56:55.169Z",
+    "nextDueAt": "2026-11-04T16:56:55.151Z",
     "recordCount": 1572,
     "contentHash": "2bcb6c78cf05916b953b4b88013c11802ccbc757d2e3bb9c5fb9d6608266d6ab",
     "unchangedRuns": 5,
-    "consecutiveFailures": 12
+    "consecutiveFailures": 13
   },
   "tainan-cc-portal": {
     "name": "臺南市社區大學校務資訊系統－課程查詢",
@@ -437,14 +437,14 @@
     "name": "雲林縣社區大學課程表（海線／虎尾溪／平原／山線）",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（帶已報名人數與額滿旗標，為即時層）",
-    "intervalMs": 61509375,
-    "interval": "17.1h",
-    "lastFetchedAt": "2026-11-03T00:10:07.351Z",
-    "lastChangedAt": "2026-11-02T12:10:03.391Z",
-    "nextDueAt": "2026-11-03T17:15:16.726Z",
+    "intervalMs": 30754687.5,
+    "interval": "8.5h",
+    "lastFetchedAt": "2026-11-03T18:10:02.651Z",
+    "lastChangedAt": "2026-11-03T18:10:02.651Z",
+    "nextDueAt": "2026-11-04T02:42:37.338Z",
     "recordCount": 315,
-    "contentHash": "d36f77e787b98823c4607f6b173fb9086c702c5420709b65b1e01b9197376c3a",
-    "unchangedRuns": 1,
+    "contentHash": "d529da6d730d7e38044339ac0a6e1511cb92656a047dc3f2c542347e4088b92e",
+    "unchangedRuns": 0,
     "consecutiveFailures": 0
   }
 }
