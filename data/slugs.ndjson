@@ -39052,6 +39052,7 @@
 {"id":"crs_c906f225","kind":"course","slug":"太極拳文化養生氣功中級2-桃園社大-6f225","assignedAt":"2026-10-01"}
 {"id":"crs_c9073428","kind":"course","slug":"樂活古箏輕鬆彈-八德社大-73428","assignedAt":"2026-09-12"}
 {"id":"crs_c9076cec","kind":"course","slug":"全美語生活美語入門-中正社大-76cec","assignedAt":"2026-09-12"}
+{"id":"crs_c909c804","kind":"course","slug":"兒童趣味跳床-wdygwd28-9c804","assignedAt":"2026-11-03"}
 {"id":"crs_c90efc5f","kind":"course","slug":"烙畫有溫度的繪畫-北投社大-efc5f","assignedAt":"2026-09-12"}
 {"id":"crs_c912e601","kind":"course","slug":"數位國際行銷企劃人才養成班第15梯次-商業發展研究院-2e601","assignedAt":"2026-09-12"}
 {"id":"crs_c913b050","kind":"course","slug":"服裝樣版設計桃園第2期-勞動力發展署桃竹苗分署-3b050","assignedAt":"2026-10-02"}
@@ -42421,6 +42422,7 @@
 {"id":"crs_dabf2016","kind":"course","slug":"器械皮拉提斯-太平國民暨兒童運動中心-f2016","assignedAt":"2026-09-29"}
 {"id":"crs_dabff113","kind":"course","slug":"SwingDance一起來搖擺爵士搖擺舞-中山社大-ff113","assignedAt":"2026-09-12"}
 {"id":"crs_dac1dd3e","kind":"course","slug":"活力瑜珈班-在地青年創益交流協會-1dd3e","assignedAt":"2026-09-12"}
+{"id":"crs_dac268d9","kind":"course","slug":"空中瑜珈新手-長春國民暨兒童運動中心-268d9","assignedAt":"2026-11-03"}
 {"id":"crs_dac2d4a8","kind":"course","slug":"參與都更重建的第一堂課-文山社大-2d4a8","assignedAt":"2026-09-12"}
 {"id":"crs_dac33a2b","kind":"course","slug":"五彩樹-羅東自然教育中心-33a2b","assignedAt":"2026-09-12"}
 {"id":"crs_dac449a5","kind":"course","slug":"紓壓飛輪-土城運動中心-449a5","assignedAt":"2026-09-29"}
@@ -45269,6 +45271,7 @@
 {"id":"crs_e9bb8f34","kind":"course","slug":"聲音表情廣播配音-內湖社大-b8f34","assignedAt":"2026-09-12"}
 {"id":"crs_e9be4288","kind":"course","slug":"女神體態雕塑器械皮拉提斯-苓雅運動中心-e4288","assignedAt":"2026-09-29"}
 {"id":"crs_e9bf2016","kind":"course","slug":"和緩瑜珈-林口運動中心-f2016","assignedAt":"2026-09-24"}
+{"id":"crs_e9c15653","kind":"course","slug":"體適能間歇訓練-wdygwd28-15653","assignedAt":"2026-11-03"}
 {"id":"crs_e9c1bf99","kind":"course","slug":"成人泳訓班-文山運動中心-1bf99","assignedAt":"2026-09-29"}
 {"id":"crs_e9c7775e","kind":"course","slug":"舒活伸展瑜珈瑤-中壢運動中心-7775e","assignedAt":"2026-09-12"}
 {"id":"crs_e9c7e5a9","kind":"course","slug":"經絡舒緩伸展瑜伽混成課程-松山社大-7e5a9","assignedAt":"2026-09-12"}
@@ -57749,6 +57752,7 @@
 {"id":"tea_f18bd6478d513192","kind":"teacher","slug":"Grace-泰山運動中心-e1151","assignedAt":"2026-09-29"}
 {"id":"tea_f19c4634426e5287","kind":"teacher","slug":"卓曉蘭-新楊平社大-a46c7","assignedAt":"2026-09-13"}
 {"id":"tea_f1a6f91dd0501584","kind":"teacher","slug":"張桂菱-內湖社大-71ed5","assignedAt":"2026-09-13"}
+{"id":"tea_f1ad39ec622ae78f","kind":"teacher","slug":"XIN-太平國民暨兒童運動中心-6b487","assignedAt":"2026-11-03"}
 {"id":"tea_f1b89cda8c2326d3","kind":"teacher","slug":"利秀圓-八德運動中心-b9fb5","assignedAt":"2026-09-13"}
 {"id":"tea_f1be84f8b3bbb701","kind":"teacher","slug":"林宏玲-桃園社大-639c6","assignedAt":"2026-09-13"}
 {"id":"tea_f1c2812cbf4e5b40","kind":"teacher","slug":"葉鴻志-甲安埔社大-18f6f","assignedAt":"2026-09-13"}
