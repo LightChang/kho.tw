@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import { underSection } from '../../lib/crumbs.mjs';
 import CourseList from '../../components/CourseList.astro';
-import { getData, fmt, link, programHref, seniorHref } from '../../lib/data.mjs';
+import { getData, fmt, link, programHref, seniorHref, learnHref } from '../../lib/data.mjs';
 import { itemListJsonLd, pageListJsonLd, SITE_URL } from '../../../site/jsonld.mjs';
 
 export function getStaticPaths() {
@@ -50,7 +50,7 @@ const placeOf = (h) => h.main.display.placeName ?? (h.main.display.from === 'sou
 <li>{h.main ? <a href={link('venue', h.main.venue.slug)}>{h.name}</a> : h.name}<span class="meta-2 tnum">　{h.current ? `本期 ${fmt(h.current)} 門${h.open ? `，${fmt(h.open)} 門招生中` : ''}` : `共 ${fmt(h.n)} 門，都是往期課程`}</span>
 {h.main && placeOf(h) !== h.name && <div class="meta-2">主要上課地點：{placeOf(h)}</div>}</li>
 ))}</ul>
-<div class="meta"><a href={link('city', c.city)}>{c.city}全部成人課程</a></div>
+<div class="meta">{c.city === '臺北市' && <Fragment><a href={learnHref('編織', c.city)}>台北編織課程</a>　</Fragment>}<a href={link('city', c.city)}>{c.city}全部成人課程</a></div>
 </div>
 ))}
 </Fragment>
