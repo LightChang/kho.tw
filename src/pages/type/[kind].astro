@@ -57,6 +57,7 @@ const placeOf = (h) => h.main.display.placeName ?? (h.main.display.from === 'sou
 ) : (
 <Fragment>
 <div class="card"><h2>{kind.label}</h2><div class="meta">共 {fmt(list.length)} 門課，其中 {fmt(kind.open)} 門正在招生</div>
+{kind.kind === 'sports-center' && <div class="meta-2">想找特定運動中心的完整課表，例如<a href={link('venue', '臺北市大同運動中心-b366f')}>臺北市大同運動中心</a>（大同區大龍街51號），點場館名稱即可看本期開課與報名連結。</div>}
 {hubs.map(([href, text]) => <div class="meta-2">另見<a href={href}>{text}</a></div>)}</div>
 <CourseList list={list} />
 </Fragment>
