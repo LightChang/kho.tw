@@ -15,6 +15,7 @@ const { senior } = getData();
   jsonld={itemListJsonLd(senior.list.slice(0, 100), { name: '銀髮・樂齡課程' })}
 >
 <div class="card"><h1>銀髮・樂齡課程</h1>
+<div class="meta-2">長輩找樂齡課程，或是免費課程，都可以從這頁開始：樂齡課程列在下方，免費課程另見<a href="/free.html">全台免費課程總覽</a>。</div>
 <div class="meta">全台 {fmt(senior.list.length)} 門，其中 {fmt(senior.open)} 門招生中</div>
 <div class="meta-2">收錄樂齡學習中心的課，以及社大、運動中心、圖書館等單位課名寫明樂齡、銀髮、長青、熟齡的課；職訓課只收寫明「高齡者專班」「中高齡」的班。年齡等報名資格以開課單位公告為準。另見<a href={link('type', 'senior-center')}>樂齡中心的全部課程</a>。</div>
 </div>
