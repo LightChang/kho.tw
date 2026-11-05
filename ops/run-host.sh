@@ -182,10 +182,15 @@ git -C "$PAGES_WORKTREE" add -A >> "$LOG" 2>&1
 if git -C "$PAGES_WORKTREE" diff --cached --quiet; then
   log "deploy：網站產出與線上版相同，不推"
 else
+  # gh-pages 只留最新一次：Pages 只用最新版，舊版可從 main 重建。一路累積的話，每次整站產出都留在 .git
+  # （2026-11-05 累積 805 次、302 萬個物件、3.7GB，把 volume 吃到快滿）。第一次（還沒有 commit）不能 amend。
+  AMEND=""; git -C "$PAGES_WORKTREE" rev-parse -q --verify HEAD >/dev/null && AMEND="--amend --reset-author"
   git -C "$PAGES_WORKTREE" -c user.name='kho-ingest' -c user.email='ingest@kho.tw' \
-    commit -q -m "deploy: $(date -u +%Y-%m-%dT%H:%MZ)" >> "$LOG" 2>&1
-  git -C "$PAGES_WORKTREE" push origin "$BRANCH_PAGES" >> "$LOG" 2>&1 || { log "push gh-pages 失敗"; exit 1; }
+    commit -q $AMEND -m "deploy: $(date -u +%Y-%m-%dT%H:%MZ)" >> "$LOG" 2>&1
+  git -C "$PAGES_WORKTREE" push --force origin "$BRANCH_PAGES" >> "$LOG" 2>&1 || { log "push gh-pages 失敗"; exit 1; }
   log "deploy：已推上 $BRANCH_PAGES"
+  # 被 amend 換掉的舊版要真的清掉；--auto 只在物件夠多時才動手，不分離以免跑到鎖外
+  git -C "$ROOT" -c gc.autoDetach=false -c gc.reflogExpireUnreachable=now -c gc.pruneExpire=1.day.ago gc --auto -q >> "$LOG" 2>&1 || log "git gc 失敗（不影響部署）"
 fi
 
 log "───── 這輪完成，共 $(( $(date +%s) - started ))s ─────"
