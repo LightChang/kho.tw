@@ -33,11 +33,11 @@
     "declaredFreq": "UNVERIFIED（期別制，每期約兩個月；報名人數即時變動）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-11-05T07:10:04.040Z",
-    "lastChangedAt": "2026-11-05T07:10:04.040Z",
-    "nextDueAt": "2026-11-05T10:10:04.040Z",
+    "lastFetchedAt": "2026-11-05T11:10:02.375Z",
+    "lastChangedAt": "2026-11-05T11:10:02.375Z",
+    "nextDueAt": "2026-11-05T14:10:02.375Z",
     "recordCount": 304,
-    "contentHash": "5b1c6481a222127390811e36d840cf0057856eb95098406c9bf41ed37ccfdfa4",
+    "contentHash": "a03c56281c67129d4f05b3e1c026f40d28bb8b729d2b2ab651c5bfd6c839d016",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
@@ -385,11 +385,11 @@
     "interval": "9h",
     "lastFetchedAt": "2026-10-21T23:10:03.149Z",
     "lastChangedAt": "2026-10-21T23:10:03.149Z",
-    "nextDueAt": "2026-11-05T09:10:05.218Z",
+    "nextDueAt": "2026-11-05T20:10:02.375Z",
     "recordCount": 1338,
     "contentHash": "b259059c6c0b0a125ef8afa7d9e2139cd69d444727f4cf0d66e2e337b41cf700",
     "unchangedRuns": 0,
-    "consecutiveFailures": 34
+    "consecutiveFailures": 35
   },
   "teamxports-centers": {
     "name": "全越運動 XPORTS 線上報名－運動中心期課",
@@ -437,14 +437,14 @@
     "name": "雲林縣社區大學課程表（海線／虎尾溪／平原／山線）",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（帶已報名人數與額滿旗標，為即時層）",
-    "intervalMs": 34599023.4375,
-    "interval": "9.6h",
-    "lastFetchedAt": "2026-11-05T00:10:05.218Z",
-    "lastChangedAt": "2026-11-04T17:10:03.898Z",
-    "nextDueAt": "2026-11-05T09:46:44.241Z",
+    "intervalMs": 17299511.71875,
+    "interval": "4.8h",
+    "lastFetchedAt": "2026-11-05T11:10:02.375Z",
+    "lastChangedAt": "2026-11-05T11:10:02.375Z",
+    "nextDueAt": "2026-11-05T15:58:21.886Z",
     "recordCount": 315,
-    "contentHash": "b979b23aee99498d01982c346fac7cf5968623fd34c55b183ffad4ebdbd7d3b3",
-    "unchangedRuns": 1,
+    "contentHash": "3c21472341044c0bb85974d47a04acc5740f2c4c5407c079d35bb3357e084261",
+    "unchangedRuns": 0,
     "consecutiveFailures": 0
   }
 }
