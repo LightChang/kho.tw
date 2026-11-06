@@ -21,11 +21,11 @@
     "interval": "5.7h",
     "lastFetchedAt": "2026-10-31T03:10:02.785Z",
     "lastChangedAt": "2026-10-31T03:10:02.785Z",
-    "nextDueAt": "2026-11-06T15:51:45.745Z",
+    "nextDueAt": "2026-11-06T21:51:45.180Z",
     "recordCount": 460,
     "contentHash": "53fc5acd55eea9a0365d5218d8f692c6ea5d128274c444606c3d878ce6819962",
     "unchangedRuns": 0,
-    "consecutiveFailures": 24
+    "consecutiveFailures": 25
   },
   "changjia-centers": {
     "name": "長佳智慧運動中心 Web App－運動中心課程",
@@ -241,14 +241,14 @@
     "name": "新北市數位樂學網－課程總覽",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（依招生期程公告，實測 1024 筆）",
-    "intervalMs": 72900000,
-    "interval": "20.3h",
-    "lastFetchedAt": "2026-11-05T19:10:02.573Z",
-    "lastChangedAt": "2026-11-04T11:10:03.379Z",
-    "nextDueAt": "2026-11-06T15:25:02.573Z",
-    "recordCount": 1034,
-    "contentHash": "3596e3073ddd8adfd559187d45092df16cbd723bbd7fcc42f94bf6c7034d19a4",
-    "unchangedRuns": 3,
+    "intervalMs": 36450000,
+    "interval": "10.1h",
+    "lastFetchedAt": "2026-11-06T16:10:02.055Z",
+    "lastChangedAt": "2026-11-06T16:10:02.055Z",
+    "nextDueAt": "2026-11-07T02:17:32.055Z",
+    "recordCount": 1032,
+    "contentHash": "e468e0f10bc01cb15ac915c813e3d14a982bf7411a2dc9b8419c54e1d497d779",
+    "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
   "ntpc-library-activities": {
@@ -301,11 +301,11 @@
     "interval": "22.8h",
     "lastFetchedAt": "2026-10-22T04:10:01.944Z",
     "lastChangedAt": "2026-10-20T10:10:02.307Z",
-    "nextDueAt": "2026-11-06T14:56:54.938Z",
+    "nextDueAt": "2026-11-07T14:56:54.555Z",
     "recordCount": 1572,
     "contentHash": "2bcb6c78cf05916b953b4b88013c11802ccbc757d2e3bb9c5fb9d6608266d6ab",
     "unchangedRuns": 5,
-    "consecutiveFailures": 15
+    "consecutiveFailures": 16
   },
   "tainan-cc-portal": {
     "name": "臺南市社區大學校務資訊系統－課程查詢",
@@ -385,11 +385,11 @@
     "interval": "9h",
     "lastFetchedAt": "2026-10-21T23:10:03.149Z",
     "lastChangedAt": "2026-10-21T23:10:03.149Z",
-    "nextDueAt": "2026-11-06T15:10:02.433Z",
+    "nextDueAt": "2026-11-07T01:10:02.055Z",
     "recordCount": 1338,
     "contentHash": "b259059c6c0b0a125ef8afa7d9e2139cd69d444727f4cf0d66e2e337b41cf700",
     "unchangedRuns": 0,
-    "consecutiveFailures": 37
+    "consecutiveFailures": 38
   },
   "teamxports-centers": {
     "name": "全越運動 XPORTS 線上報名－運動中心期課",
