@@ -21,11 +21,11 @@
     "interval": "5.7h",
     "lastFetchedAt": "2026-10-31T03:10:02.785Z",
     "lastChangedAt": "2026-10-31T03:10:02.785Z",
-    "nextDueAt": "2026-11-09T03:51:45.502Z",
+    "nextDueAt": "2026-11-09T10:51:45.218Z",
     "recordCount": 460,
     "contentHash": "53fc5acd55eea9a0365d5218d8f692c6ea5d128274c444606c3d878ce6819962",
     "unchangedRuns": 0,
-    "consecutiveFailures": 34
+    "consecutiveFailures": 35
   },
   "changjia-centers": {
     "name": "長佳智慧運動中心 Web App－運動中心課程",
@@ -77,11 +77,11 @@
     "interval": "2.6d",
     "lastFetchedAt": "2026-09-14T11:16:47.725Z",
     "lastChangedAt": "2026-09-12T03:10:12.815Z",
-    "nextDueAt": "2026-11-09T04:10:02.638Z",
+    "nextDueAt": "2026-11-11T20:10:02.093Z",
     "recordCount": 13011,
     "contentHash": "883234fb32567b75fce2337fe9db0e38717998274cd61fb7941905abeeb98dd1",
     "unchangedRuns": 1,
-    "consecutiveFailures": 20
+    "consecutiveFailures": 21
   },
   "moe-cc-detail": {
     "name": "全國社區大學教育資訊網－課程詳情",
@@ -199,14 +199,14 @@
     "name": "國家圖書館 最新活動訊息",
     "kind": "course-live",
     "declaredFreq": "不定期更新（dataset 6838 更新頻率欄位；RSS 本身即時，但固定只出最新 10 筆）",
-    "intervalMs": 82012500,
-    "interval": "22.8h",
-    "lastFetchedAt": "2026-11-08T05:10:02.364Z",
-    "lastChangedAt": "2026-11-06T10:10:02.620Z",
-    "nextDueAt": "2026-11-09T03:56:54.864Z",
+    "intervalMs": 41006250,
+    "interval": "11.4h",
+    "lastFetchedAt": "2026-11-09T05:10:02.093Z",
+    "lastChangedAt": "2026-11-09T05:10:02.093Z",
+    "nextDueAt": "2026-11-09T16:33:28.343Z",
     "recordCount": 20,
-    "contentHash": "7fa8a106ba87972ca3458513a9f4253464a0845e48537de96d4fd82fe6e93ecd",
-    "unchangedRuns": 5,
+    "contentHash": "418c22a3949fe25bf194ff94d5fec083e46cb5ae2b11f29efaa337745632da31",
+    "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
   "nlpi-activities": {
@@ -385,11 +385,11 @@
     "interval": "9h",
     "lastFetchedAt": "2026-10-21T23:10:03.149Z",
     "lastChangedAt": "2026-10-21T23:10:03.149Z",
-    "nextDueAt": "2026-11-09T03:10:02.860Z",
+    "nextDueAt": "2026-11-09T14:10:02.093Z",
     "recordCount": 1338,
     "contentHash": "b259059c6c0b0a125ef8afa7d9e2139cd69d444727f4cf0d66e2e337b41cf700",
     "unchangedRuns": 0,
-    "consecutiveFailures": 43
+    "consecutiveFailures": 44
   },
   "teamxports-centers": {
     "name": "全越運動 XPORTS 線上報名－運動中心期課",
@@ -413,11 +413,11 @@
     "interval": "4.5h",
     "lastFetchedAt": "2026-11-08T23:10:02.399Z",
     "lastChangedAt": "2026-11-08T19:10:02.761Z",
-    "nextDueAt": "2026-11-09T03:40:02.399Z",
+    "nextDueAt": "2026-11-09T09:40:02.093Z",
     "recordCount": 46,
     "contentHash": "7df88e523f472deda6007ec17c32f7cb2fa7e4b6e448db16c1099529650be82e",
     "unchangedRuns": 1,
-    "consecutiveFailures": 0
+    "consecutiveFailures": 1
   },
   "xuanen-centers": {
     "name": "軒恩線上報名系統－運動中心課表",
@@ -441,10 +441,10 @@
     "interval": "15.2h",
     "lastFetchedAt": "2026-11-07T20:10:02.318Z",
     "lastChangedAt": "2026-11-06T17:10:02.076Z",
-    "nextDueAt": "2026-11-09T03:21:17.327Z",
+    "nextDueAt": "2026-11-09T20:21:17.093Z",
     "recordCount": 315,
     "contentHash": "704c5c059de65f2c12502e98b38ae5b484360a5c819769e6b791dc7d68a0b0b9",
     "unchangedRuns": 4,
-    "consecutiveFailures": 1
+    "consecutiveFailures": 2
   }
 }
