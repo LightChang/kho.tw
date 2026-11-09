@@ -120,23 +120,39 @@ function parseCourses(html) {
   return rows;
 }
 
+// 單站斷路：一個站抓不到時不要把 10 個退回類別逐一再等一輪逾時。
+// 2026-10-30 起 cyc-tp01 每次請求都逾時（90 秒 × 3 次），類別清單失敗後再掃 10 個退回類別，
+// 一站就吃掉約 45 分鐘，整支 xuanen 從約 18 分拉到 62 分，連帶 run-host 持鎖超過一小時。
+//   - 類別清單（站首頁）重試後仍失敗 → 這站本輪放棄（不退回類別）。清單有拿到但解析不到類別才退回。
+//   - 類別頁連續失敗 SITE_MAX_CONSECUTIVE_FAILS 次 → 這站本輪放棄，剩下的類別不再打。
+// 放棄的站本輪 0 門，跟原本「每個類別都失敗」的結果一樣，只是不再耗時；下輪照常重試。
+export const SITE_MAX_CONSECUTIVE_FAILS = 2;
+
 // 匯出供單站測試用：node -e "import('./ingest/sources/xuanen-centers.mjs').then(m => m.fetchSite(m.SITES[0]))"
 export async function fetchSite(site) {
   let categories;
   try {
     categories = parseCategories(await (await fetchWithRetry(infoUrl(site, null))).text());
   } catch (err) {
-    process.stderr.write(`[xuanen-centers] ${site.site} 類別清單失敗：${err.message}\n`);
+    process.stderr.write(`[xuanen-centers] ${site.site} 類別清單失敗：${err.message}，這站本輪放棄\n`);
+    return [];
   }
   if (!categories?.length) categories = FALLBACK_CATEGORIES.map((code) => ({ code, name: '' }));
   const rows = [];
+  let consecutiveFails = 0;
   for (const { code, name } of categories) {
     await pause(2000);
     let html;
     try {
       html = await (await fetchWithRetry(infoUrl(site, code))).text();
+      consecutiveFails = 0;
     } catch (err) {
+      consecutiveFails += 1;
       process.stderr.write(`[xuanen-centers] ${site.site} B=${code} 失敗：${err.message}\n`);
+      if (consecutiveFails >= SITE_MAX_CONSECUTIVE_FAILS) {
+        process.stderr.write(`[xuanen-centers] ${site.site} 連續 ${consecutiveFails} 個類別失敗，這站本輪放棄\n`);
+        break;
+      }
       continue;
     }
     for (const row of parseCourses(html)) {
@@ -151,24 +167,36 @@ export async function fetchSite(site) {
 
 // 同一台主機的站點依序抓（每次請求間隔 2 秒），不同主機併行。
 // 2026-09-28 起每站改掃自己的全部類別（38 站合計約 475 類），全部串行太久，
-// 會拖住每小時一次的排程（同一把鎖）；分主機併行後實測 21 分鐘。
-export async function fetchRaw() {
+// 會拖住每小時一次的排程（同一把鎖）；分主機併行後實測 21 分鐘（2026-10 實際約 18 分）。
+//
+// 整支時間上限 BUDGET_MS（預設 30 分，約正常的 1.7 倍）：超過就不再開新的站。
+// 有站因此沒抓到時整支丟錯——scheduler 記這輪失敗、保留上一份 raw、下輪再抓，
+// 不拿缺了幾站的結果覆蓋（缺的站的課會被當成消失）。正在抓的站不會被中斷。
+export const BUDGET_MS = Number(process.env.KHO_XUANEN_BUDGET_MIN || 30) * 60_000;
+
+export async function fetchRaw({ sites = SITES, budgetMs = BUDGET_MS } = {}) {
+  const deadlineAt = Date.now() + budgetMs;
   const byHost = new Map();
-  for (const site of SITES) {
+  for (const site of sites) {
     const host = new URL(site.url).host;
     if (!byHost.has(host)) byHost.set(host, []);
     byHost.get(host).push(site);
   }
   const perSite = new Map();
-  await Promise.all([...byHost.values()].map(async (sites) => {
-    for (const site of sites) {
+  const overBudget = [];
+  await Promise.all([...byHost.values()].map(async (hostSites) => {
+    for (const site of hostSites) {
+      if (Date.now() >= deadlineAt) { overBudget.push(site.site); continue; }
       const rows = await fetchSite(site);
       process.stderr.write(`[xuanen-centers] ${site.site} ${rows.length} 門\n`);
       perSite.set(site.site, rows);
     }
   }));
+  if (overBudget.length) {
+    throw new Error(`超過 ${+(budgetMs / 60_000).toFixed(2)} 分上限，${overBudget.length} 站沒抓：${overBudget.join(', ')}（保留上一份，下輪再抓）`);
+  }
   // 輸出順序固定依 SITES，不受併行完成先後影響（raw 的雜湊決定排程判斷「有沒有變」）
-  const out = SITES.flatMap((s) => perSite.get(s.site) ?? []);
+  const out = sites.flatMap((s) => perSite.get(s.site) ?? []);
   // 同一門課可能同時出現在多個類別頁，依站點＋課程代碼去重
   const seen = new Set();
   return out.filter((r) => {

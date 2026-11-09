@@ -134,6 +134,11 @@ scheduler 失敗不會改間隔，只累積失敗次數，所以不會愈退愈�
 單獨重抓一支：`node transform/scheduler.mjs --force <來源 id>`。
 看誰到期：`node transform/scheduler.mjs --list`。
 
+**一輪跑很久（持鎖擋到 seo-ops decide）**
+兩道上限（2026-11-09 起）：scheduler 整輪 45 分不再派新來源（`--deadline <分鐘>` 可調，沒派到的維持到期、下輪再抓）；
+`xuanen-centers` 單站斷路（站首頁抓不到就整站放棄、類別頁連 2 次失敗就停）與整支 30 分上限
+（`KHO_XUANEN_BUDGET_MIN`，超過時整支記失敗、保留上一份 raw）。log 搜「本輪放棄」「分上限」。
+
 **log 只寫了「找不到可執行的 node」**
 `/usr/local/bin/node` 是指向 nvm 的 symlink（`~/.nvm/versions/node/<版本>/bin/node`），
 nvm 換版本或清掉舊版時這條連結就會斷。改 `ops/run-pipeline.sh` 開頭的 `NODE` 變數指到新版本即可。

@@ -8,6 +8,7 @@
 //   node transform/scheduler.mjs --list       只列出誰到期，不抓
 //   node transform/scheduler.mjs --force <id> 強制重抓單一來源
 //   node transform/scheduler.mjs --dry-run    照常抓，但不寫 state（開發用）
+//   node transform/scheduler.mjs --deadline <分鐘>  整輪派工上限（預設 DEADLINE_MIN）
 import { createHash } from 'node:crypto';
 import { readdir, readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
@@ -31,6 +32,11 @@ const HARD_MAX = 30 * DAY;      // 停更來源的硬上限，永不完全放棄
 const UNCHANGED_BREAKOUT = 10;  // 連續幾次沒變才允許突破 max
 const DOMAIN_GAP_MS = 2000;     // 同網域兩次請求的最小間隔
 const DOMAIN_CONCURRENCY = 4;
+// 整輪派工上限（分），沿用 seh.tw docs/scheduling.md §6：超過就不再派新的來源，
+// 沒派到的不動 state（維持到期）、下輪再抓。正在抓的來源不會被中斷——單一來源自己的上限
+// 由來源處理（例如 xuanen-centers 的 BUDGET_MS）。run-host 持有 seo-ops 共用鎖，
+// 一輪拖過整點會讓 decide（等鎖上限 65 分）整輪被跳過，所以留 15 分給後面的 build／部署。
+const DEADLINE_MIN = 45;
 
 const ms = (v) => (typeof v === 'number' ? v : 0);
 export const fmt = (msVal) => {
@@ -156,6 +162,8 @@ async function main() {
   const dryRun = args.includes('--dry-run');
   const forceIdx = args.indexOf('--force');
   const forceId = forceIdx >= 0 ? args[forceIdx + 1] : null;
+  const deadlineIdx = args.indexOf('--deadline');
+  const deadlineMin = deadlineIdx >= 0 ? Number(args[deadlineIdx + 1]) : DEADLINE_MIN;
 
   const now = new Date();
   const mods = await loadSources();
@@ -192,10 +200,13 @@ async function main() {
   let anyChanged = false;
   let failures = 0;
   let cursor = 0;
+  const deadlineAt = Date.now() + deadlineMin * 60_000;
+  const skipped = [];
   const workers = Array.from({ length: Math.min(DOMAIN_CONCURRENCY, queues.length) }, async () => {
     while (cursor < queues.length) {
       const queue = queues[cursor++];
       for (const [i, mod] of queue.entries()) {
+        if (Date.now() >= deadlineAt) { skipped.push(...queue.slice(i).map((m) => m.meta.id)); break; }
         if (i > 0) await new Promise((r) => setTimeout(r, DOMAIN_GAP_MS));
         const { changed, failed } = await runOne(mod, state, now, dryRun);
         anyChanged ||= changed;
@@ -207,6 +218,9 @@ async function main() {
 
   if (!dryRun) await saveState(state);
   process.stderr.write(`\n本輪 ${due.length} 支，變動 ${anyChanged ? '有' : '無'}，失敗 ${failures} 支\n`);
+  if (skipped.length) {
+    process.stderr.write(`超過 ${deadlineMin} 分上限，未抓 ${skipped.length} 支（維持到期，下輪再抓）：${skipped.join(', ')}\n`);
+  }
   // 給後續 pipeline 判斷要不要跑 build：2 = 沒有任何變動，0 = 有變動，1 = 例外
   process.exitCode = anyChanged ? 0 : 2;
 }
