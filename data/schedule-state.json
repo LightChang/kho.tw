@@ -385,11 +385,11 @@
     "interval": "9h",
     "lastFetchedAt": "2026-10-21T23:10:03.149Z",
     "lastChangedAt": "2026-10-21T23:10:03.149Z",
-    "nextDueAt": "2026-11-10T19:10:02.178Z",
+    "nextDueAt": "2026-11-11T04:10:02.945Z",
     "recordCount": 1338,
     "contentHash": "b259059c6c0b0a125ef8afa7d9e2139cd69d444727f4cf0d66e2e337b41cf700",
     "unchangedRuns": 0,
-    "consecutiveFailures": 47
+    "consecutiveFailures": 48
   },
   "teamxports-centers": {
     "name": "全越運動 XPORTS 線上報名－運動中心期課",
@@ -411,11 +411,11 @@
     "declaredFreq": "UNVERIFIED（報名系統，隨各館上架活動即時變動）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-11-10T16:10:02.846Z",
-    "lastChangedAt": "2026-11-10T16:10:02.846Z",
-    "nextDueAt": "2026-11-10T19:10:02.846Z",
+    "lastFetchedAt": "2026-11-10T19:10:02.945Z",
+    "lastChangedAt": "2026-11-10T19:10:02.945Z",
+    "nextDueAt": "2026-11-10T22:10:02.945Z",
     "recordCount": 47,
-    "contentHash": "5ed04371b7997565317cd9d8067d3454504a8b7647b45e753093fa73c70fa8f3",
+    "contentHash": "c8040e131b3c8ff350e52f2862c29c080b77dfea6c7251501f36800544422176",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
