@@ -18642,6 +18642,7 @@
 {"id":"crs_5d87b823","kind":"course","slug":"樂齡帶狀課程B班-古亭國中-7b823","assignedAt":"2026-09-12"}
 {"id":"crs_5d87d312","kind":"course","slug":"銀髮健身樂-松年長春社會福利基金會景-7d312","assignedAt":"2026-09-12"}
 {"id":"crs_5d89747c","kind":"course","slug":"新手國標舞-北屯國民暨兒童運動中心-9747c","assignedAt":"2026-09-12"}
+{"id":"crs_5d89fbf4","kind":"course","slug":"自動化機構設計與機電控制應用班臺中第1期-勞動力發展署中彰投分署-9fbf4","assignedAt":"2026-11-11"}
 {"id":"crs_5d8a680f","kind":"course","slug":"親子科學實做-科學城社大-a680f","assignedAt":"2026-09-12"}
 {"id":"crs_5d8c66e4","kind":"course","slug":"幼兒芭蕾律動-wdygwd28-c66e4","assignedAt":"2026-10-01"}
 {"id":"crs_5d8ee676","kind":"course","slug":"TRX專修班-wdygwd28-ee676","assignedAt":"2026-09-29"}
@@ -45926,6 +45927,7 @@
 {"id":"crs_e7eb9858","kind":"course","slug":"國標舞進階班-中正運動中心-b9858","assignedAt":"2026-09-29"}
 {"id":"crs_e7ee5896","kind":"course","slug":"自然手作的甜點滋味-南港社大-e5896","assignedAt":"2026-09-12"}
 {"id":"crs_e7ee6ea1","kind":"course","slug":"HYROX新手班-中正運動中心-e6ea1","assignedAt":"2026-09-29"}
+{"id":"crs_e7ef860a","kind":"course","slug":"社區長照人才培訓班第02期-臺灣故鄉發展協會-f860a","assignedAt":"2026-11-11"}
 {"id":"crs_e7efd801","kind":"course","slug":"走向戶外傾聽自然保險必保學分費3000-新莊社大-fd801","assignedAt":"2026-09-12"}
 {"id":"crs_e7f01dec","kind":"course","slug":"自媒體經營把生活分享成影響力-士林社大-01dec","assignedAt":"2026-09-12"}
 {"id":"crs_e7f0bc3f","kind":"course","slug":"手機拍照輕鬆學-中山社大-0bc3f","assignedAt":"2026-09-12"}
@@ -59800,6 +59802,7 @@
 {"id":"ven_2894bacc","kind":"venue","slug":"北大高中籃球場-4bacc","assignedAt":"2026-09-12"}
 {"id":"ven_28ac6a0f","kind":"venue","slug":"屏東縣麟洛鄉民族路17號-c6a0f","assignedAt":"2026-09-24"}
 {"id":"ven_28bcfb9e","kind":"venue","slug":"竹南國中-cfb9e","assignedAt":"2026-09-12"}
+{"id":"ven_28e7361a","kind":"venue","slug":"南投縣南投市南投縣南投市平山二路47巷2-7361a","assignedAt":"2026-11-11"}
 {"id":"ven_28f142f7","kind":"venue","slug":"桃園市蘆竹區南崁路265號-142f7","assignedAt":"2026-09-12"}
 {"id":"ven_2901541e","kind":"venue","slug":"銘傳國小-1541e","assignedAt":"2026-09-12"}
 {"id":"ven_2921547d","kind":"venue","slug":"改在新竹縣關西鎮仁安里中豐路2段191巷-1547d","assignedAt":"2026-09-23"}
