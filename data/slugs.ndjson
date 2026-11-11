@@ -6382,6 +6382,7 @@
 {"id":"crs_1faaa2ff","kind":"course","slug":"日本語會話高級2-八德社大-aa2ff","assignedAt":"2026-09-12"}
 {"id":"crs_1fab7702","kind":"course","slug":"我的自然週記-文山社大-b7702","assignedAt":"2026-09-12"}
 {"id":"crs_1facc5f5","kind":"course","slug":"摩登肚皮舞入門女性肢體之美②-大安社大-cc5f5","assignedAt":"2026-09-12"}
+{"id":"crs_1fade99b","kind":"course","slug":"基礎飛輪-虎尾全民運動館-de99b","assignedAt":"2026-11-12"}
 {"id":"crs_1fb4cbc4","kind":"course","slug":"關係動力學讀書會-開平餐飲學校-4cbc4","assignedAt":"2026-09-12"}
 {"id":"crs_1fb5f364","kind":"course","slug":"口琴輕鬆學-樹林社大-5f364","assignedAt":"2026-09-12"}
 {"id":"crs_1fb70d0d","kind":"course","slug":"薩客家族保證金-新楊平社大-70d0d","assignedAt":"2026-10-07"}
@@ -16535,6 +16536,7 @@
 {"id":"crs_52962e25","kind":"course","slug":"現代心靈瑜珈-濁水溪社大-62e25","assignedAt":"2026-09-12"}
 {"id":"crs_529a07d2","kind":"course","slug":"和太鼓中級-新楊平社大-a07d2","assignedAt":"2026-09-12"}
 {"id":"crs_529a46bd","kind":"course","slug":"香草綠生活-蘆洲區樂齡中心-a46bd","assignedAt":"2026-09-12"}
+{"id":"crs_529c1dad","kind":"course","slug":"基礎飛輪-虎尾全民運動館-c1dad","assignedAt":"2026-11-12"}
 {"id":"crs_529db98f","kind":"course","slug":"走讀大台北文史建築與自然市區班-松山社大-db98f","assignedAt":"2026-09-12"}
 {"id":"crs_529e4e13","kind":"course","slug":"電腦輔助機械繪圖與智慧化量測第01期-勞動部勞動力發展署高屏澎-e4e13","assignedAt":"2026-10-07"}
 {"id":"crs_52a1000d","kind":"course","slug":"鼓動人生非洲鼓-萬華社大-1000d","assignedAt":"2026-09-15"}
@@ -56094,6 +56096,7 @@
 {"id":"tea_a019dbb5bfe408fc","kind":"teacher","slug":"張琦雯-大安社大-e3fde","assignedAt":"2026-09-13"}
 {"id":"tea_a026c876c6f07d86","kind":"teacher","slug":"丹丹-竹北運動中心-8ca30","assignedAt":"2026-09-29"}
 {"id":"tea_a034a50ec6588f7d","kind":"teacher","slug":"蕭慶智-中壢社大-c1b27","assignedAt":"2026-09-13"}
+{"id":"tea_a04841b3d07d9fd5","kind":"teacher","slug":"庭毓-虎尾全民運動館-90693","assignedAt":"2026-11-12"}
 {"id":"tea_a0559cb27bebc41e","kind":"teacher","slug":"蔡念慈-松山社大-9a2cf","assignedAt":"2026-10-15"}
 {"id":"tea_a05bdd083377cce4","kind":"teacher","slug":"廖寶珠-松山社大-c49ac","assignedAt":"2026-09-13"}
 {"id":"tea_a0858702175bb5aa","kind":"teacher","slug":"蔡美慧-鎮港園社大-06095","assignedAt":"2026-09-13"}
