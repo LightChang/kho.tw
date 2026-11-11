@@ -5,11 +5,11 @@
     "declaredFreq": "UNVERIFIED（即時層，列表帶確認開課／額滿／停開旗標）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-11-11T01:10:02.854Z",
-    "lastChangedAt": "2026-11-11T01:10:02.854Z",
-    "nextDueAt": "2026-11-11T04:10:02.854Z",
+    "lastFetchedAt": "2026-11-11T05:10:02.804Z",
+    "lastChangedAt": "2026-11-11T05:10:02.804Z",
+    "nextDueAt": "2026-11-11T08:10:02.804Z",
     "recordCount": 4364,
-    "contentHash": "1e996d9b52464818616c0a6a5073a01c9ead7e69fe8f6a3457baf5a2ff63e5d9",
+    "contentHash": "416273e674bac229131e883530efae2765c31ec3aec9d36b9578d34b30055b35",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
@@ -21,11 +21,11 @@
     "interval": "5.7h",
     "lastFetchedAt": "2026-10-31T03:10:02.785Z",
     "lastChangedAt": "2026-10-31T03:10:02.785Z",
-    "nextDueAt": "2026-11-11T04:51:45.496Z",
+    "nextDueAt": "2026-11-11T10:51:45.929Z",
     "recordCount": 460,
     "contentHash": "53fc5acd55eea9a0365d5218d8f692c6ea5d128274c444606c3d878ce6819962",
     "unchangedRuns": 0,
-    "consecutiveFailures": 42
+    "consecutiveFailures": 43
   },
   "changjia-centers": {
     "name": "長佳智慧運動中心 Web App－運動中心課程",
@@ -33,11 +33,11 @@
     "declaredFreq": "UNVERIFIED（期別制，每期約兩個月；報名人數即時變動）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-11-11T01:10:02.854Z",
-    "lastChangedAt": "2026-11-11T01:10:02.854Z",
-    "nextDueAt": "2026-11-11T04:10:02.854Z",
+    "lastFetchedAt": "2026-11-11T05:10:02.804Z",
+    "lastChangedAt": "2026-11-11T05:10:02.804Z",
+    "nextDueAt": "2026-11-11T08:10:02.804Z",
     "recordCount": 315,
-    "contentHash": "e0a890944d9ababfa6d01fb39ecf214a0be0911a120b964f59e2f5584013875d",
+    "contentHash": "1239d2dc69f82b3dec408ccf8672b448bfd58cbcaabfcd12906964f554ae025b",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
@@ -255,14 +255,14 @@
     "name": "新北市立圖書館－活動報名",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（報名系統，名額與狀態即時變動）",
-    "intervalMs": 16200000,
-    "interval": "4.5h",
-    "lastFetchedAt": "2026-11-11T00:10:05.513Z",
-    "lastChangedAt": "2026-11-10T20:10:02.789Z",
-    "nextDueAt": "2026-11-11T04:40:05.513Z",
+    "intervalMs": 10800000,
+    "interval": "3h",
+    "lastFetchedAt": "2026-11-11T05:10:02.804Z",
+    "lastChangedAt": "2026-11-11T05:10:02.804Z",
+    "nextDueAt": "2026-11-11T08:10:02.804Z",
     "recordCount": 47,
-    "contentHash": "f053d08c09307f463b385ea820cc8bbf1a30e95b86fcd5009fe54ff7390955f1",
-    "unchangedRuns": 1,
+    "contentHash": "5afd16b807391af509928996d72e86650575dc06d82a33ce6ec4a6163465fa2a",
+    "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
   "penghu-cc-portal": {
@@ -385,11 +385,11 @@
     "interval": "9h",
     "lastFetchedAt": "2026-10-21T23:10:03.149Z",
     "lastChangedAt": "2026-10-21T23:10:03.149Z",
-    "nextDueAt": "2026-11-11T04:10:02.945Z",
+    "nextDueAt": "2026-11-11T14:10:02.804Z",
     "recordCount": 1338,
     "contentHash": "b259059c6c0b0a125ef8afa7d9e2139cd69d444727f4cf0d66e2e337b41cf700",
     "unchangedRuns": 0,
-    "consecutiveFailures": 48
+    "consecutiveFailures": 49
   },
   "teamxports-centers": {
     "name": "全越運動 XPORTS 線上報名－運動中心期課",
@@ -441,10 +441,10 @@
     "interval": "15.2h",
     "lastFetchedAt": "2026-11-07T20:10:02.318Z",
     "lastChangedAt": "2026-11-06T17:10:02.076Z",
-    "nextDueAt": "2026-11-11T04:21:17.892Z",
+    "nextDueAt": "2026-11-11T20:21:17.804Z",
     "recordCount": 315,
     "contentHash": "704c5c059de65f2c12502e98b38ae5b484360a5c819769e6b791dc7d68a0b0b9",
     "unchangedRuns": 4,
-    "consecutiveFailures": 4
+    "consecutiveFailures": 5
   }
 }
