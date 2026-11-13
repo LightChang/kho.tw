@@ -18,7 +18,7 @@ const subs = getData().learnByTopic.get(t.name) ?? [];
   canonical={`${SITE_URL}/topic/${encodeURIComponent(t.name)}.html`}
   jsonld={itemListJsonLd(t.list.slice(0, 100), { name: `${t.name}課程` })}
 >
-<div class="card"><h2>{t.name}</h2><div class="meta">{fmt(t.list.length)} 門課，其中 {fmt(t.open)} 門招生中</div>
+<div class="card"><h1>{t.name}</h1><div class="meta">{fmt(t.list.length)} 門課，其中 {fmt(t.open)} 門招生中</div>
 {t.inferred > 0 && <div class="meta-2">其中 {fmt(t.inferred)} 門是依課名判斷的分類（來源沒標分類、或標的是行政分類），卡片上會註明。</div>}</div>
 {subs.length > 0 && (
 <div class="card"><h3>{t.name}的細項</h3>

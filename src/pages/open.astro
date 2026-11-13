@@ -14,7 +14,7 @@ const fresh = newestOpen.slice(0, 20);
   canonical={`${SITE_URL}/open.html`}
   jsonld={itemListJsonLd(openCourses.slice(0, 100), { name: '現在可報名的課程' })}
 >
-<div class="card"><h2>現在可報名</h2><div class="meta">共 {fmt(openCourses.length)} 門課還沒截止報名，依縣市分組。</div></div>
+<div class="card"><h1>現在可報名</h1><div class="meta">共 {fmt(openCourses.length)} 門課還沒截止報名，依縣市分組。</div></div>
 <div class="card" id="seats"><h3>怎麼知道還剩幾個名額？</h3><div class="meta-2">名額會不會滿、剩幾個名額，各開課單位公告的方式不同，本站不代為保證一定還有名額。點進想上的課程頁面，按「去報名」連到開課單位的報名頁面，就能看到當下最新的名額與報名狀況。</div></div>
 {fresh.length > 0 && (
 <div class="card" id="new"><h3>最近新上架</h3><div class="meta-2">本站最近才收錄、仍在招生的課程，依收錄日新到舊。</div>

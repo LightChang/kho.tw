@@ -37,7 +37,7 @@ const topKinds = byKind.slice(0, 3).map(([kind]) => KIND_LABEL.get(kind)).filter
   canonical={`${SITE_URL}/city/${encodeURIComponent(c.name)}.html`}
   jsonld={itemListJsonLd(c.list.slice(0, LIST_MAX), { name: `${c.name}的成人課程` })}
 >
-<div class="card"><h2>{c.name}</h2><div class="meta">{fmt(c.list.length)} 門課，其中 {fmt(c.open)} 門招生中</div>
+<div class="card"><h1>{c.name}</h1><div class="meta">{fmt(c.list.length)} 門課，其中 {fmt(c.open)} 門招生中</div>
 {byKind.length > 0 && (
 <ul class="chips">{byKind.map(([kind, n]) => (
   <li><a href={link('type', kind)}>{KIND_LABEL.get(kind) ?? kind}<span class="n">{fmt(n)}</span></a></li>

@@ -13,7 +13,7 @@ const shown = rankedTeachers.slice(0, 300);
   canonical={`${SITE_URL}/teachers.html`}
   jsonld={pageListJsonLd(shown.slice(0, 100).map((t) => ({ url: teacherUrl(t), name: `${t.name}（${t.provider}）` })), { name: '講師索引' })}
 >
-<div class="card"><h2>講師</h2>
+<div class="card"><h1>講師</h1>
 <div class="meta">本站從課程資料裡認得出 {fmt(teacherIndex.size)} 個講師身分（姓名＋開課單位），其中 {fmt(pageTeachers.length)} 個收錄 {MIN_COURSES} 門以上的課、有自己的頁面。</div>
 <div class="meta-2">首頁「講師」那個數字算的是另一件事——課程資料裡出現過的講師姓名字面數，含「專業師資」「講師群」這類集合名稱，兩個數字不會一樣。</div>
 <div class="meta-2">講師身分以「姓名＋開課單位」認定：同名的人很多，而來源只給名字、沒有任何識別碼，分不出「同一位老師跨校開課」與「剛好同名的兩個人」——所以寧可把同一位老師拆成兩頁，也不把兩個人合成一頁。只收錄一門課的講師不另外產頁，那一頁的內容會和課程頁完全重複。</div></div>
