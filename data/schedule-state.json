@@ -21,11 +21,11 @@
     "interval": "5.7h",
     "lastFetchedAt": "2026-10-31T03:10:02.785Z",
     "lastChangedAt": "2026-10-31T03:10:02.785Z",
-    "nextDueAt": "2026-11-14T16:51:45.764Z",
+    "nextDueAt": "2026-11-14T22:51:45.569Z",
     "recordCount": 460,
     "contentHash": "53fc5acd55eea9a0365d5218d8f692c6ea5d128274c444606c3d878ce6819962",
     "unchangedRuns": 0,
-    "consecutiveFailures": 56
+    "consecutiveFailures": 57
   },
   "changjia-centers": {
     "name": "長佳智慧運動中心 Web App－運動中心課程",
@@ -395,14 +395,14 @@
     "name": "全越運動 XPORTS 線上報名－運動中心期課",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（期別制，每期約兩個月；名額即時變動）",
-    "intervalMs": 16200000,
-    "interval": "4.5h",
-    "lastFetchedAt": "2026-11-14T12:10:02.795Z",
-    "lastChangedAt": "2026-11-14T08:10:02.928Z",
-    "nextDueAt": "2026-11-14T16:40:02.795Z",
+    "intervalMs": 10800000,
+    "interval": "3h",
+    "lastFetchedAt": "2026-11-14T17:10:02.444Z",
+    "lastChangedAt": "2026-11-14T17:10:02.444Z",
+    "nextDueAt": "2026-11-14T20:10:02.444Z",
     "recordCount": 554,
-    "contentHash": "42974ab2e5b60389202b67701eddf14348005ddb128cb2e02c82c2775394cb1a",
-    "unchangedRuns": 1,
+    "contentHash": "25d51d8354b9a58ee4daafd206b979a192a8ab39e0446d5910e007f6e9bfee91",
+    "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
   "tnpl-activities": {
