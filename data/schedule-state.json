@@ -425,11 +425,11 @@
     "declaredFreq": "UNVERIFIED（期別制，每期約兩個月；名額逐日變動）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-11-14T09:10:03.203Z",
-    "lastChangedAt": "2026-11-14T09:10:03.203Z",
-    "nextDueAt": "2026-11-14T12:10:03.203Z",
+    "lastFetchedAt": "2026-11-14T13:10:02.583Z",
+    "lastChangedAt": "2026-11-14T13:10:02.583Z",
+    "nextDueAt": "2026-11-14T16:10:02.583Z",
     "recordCount": 10937,
-    "contentHash": "2503d41679c1b9d85dfca628c9eb2ebce759971a16b4c914a396b751a7c7c88a",
+    "contentHash": "45c186e39fb1a1a585bdd2528636d0724e51fda43f3be06fef4a63961ea7e550",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
@@ -441,10 +441,10 @@
     "interval": "15.2h",
     "lastFetchedAt": "2026-11-07T20:10:02.318Z",
     "lastChangedAt": "2026-11-06T17:10:02.076Z",
-    "nextDueAt": "2026-11-14T12:21:17.707Z",
+    "nextDueAt": "2026-11-15T04:21:17.583Z",
     "recordCount": 315,
     "contentHash": "704c5c059de65f2c12502e98b38ae5b484360a5c819769e6b791dc7d68a0b0b9",
     "unchangedRuns": 4,
-    "consecutiveFailures": 9
+    "consecutiveFailures": 10
   }
 }
