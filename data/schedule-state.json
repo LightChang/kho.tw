@@ -21,11 +21,11 @@
     "interval": "5.7h",
     "lastFetchedAt": "2026-10-31T03:10:02.785Z",
     "lastChangedAt": "2026-10-31T03:10:02.785Z",
-    "nextDueAt": "2026-11-15T04:51:46.174Z",
+    "nextDueAt": "2026-11-15T10:51:45.419Z",
     "recordCount": 460,
     "contentHash": "53fc5acd55eea9a0365d5218d8f692c6ea5d128274c444606c3d878ce6819962",
     "unchangedRuns": 0,
-    "consecutiveFailures": 58
+    "consecutiveFailures": 59
   },
   "changjia-centers": {
     "name": "長佳智慧運動中心 Web App－運動中心課程",
@@ -385,11 +385,11 @@
     "interval": "9h",
     "lastFetchedAt": "2026-10-21T23:10:03.149Z",
     "lastChangedAt": "2026-10-21T23:10:03.149Z",
-    "nextDueAt": "2026-11-15T04:10:02.414Z",
+    "nextDueAt": "2026-11-15T14:10:02.294Z",
     "recordCount": 1338,
     "contentHash": "b259059c6c0b0a125ef8afa7d9e2139cd69d444727f4cf0d66e2e337b41cf700",
     "unchangedRuns": 0,
-    "consecutiveFailures": 58
+    "consecutiveFailures": 59
   },
   "teamxports-centers": {
     "name": "全越運動 XPORTS 線上報名－運動中心期課",
@@ -441,10 +441,10 @@
     "interval": "15.2h",
     "lastFetchedAt": "2026-11-07T20:10:02.318Z",
     "lastChangedAt": "2026-11-06T17:10:02.076Z",
-    "nextDueAt": "2026-11-15T04:21:17.583Z",
+    "nextDueAt": "2026-11-15T20:21:17.294Z",
     "recordCount": 315,
     "contentHash": "704c5c059de65f2c12502e98b38ae5b484360a5c819769e6b791dc7d68a0b0b9",
     "unchangedRuns": 4,
-    "consecutiveFailures": 10
+    "consecutiveFailures": 11
   }
 }
