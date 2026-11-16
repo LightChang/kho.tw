@@ -21,11 +21,11 @@
     "interval": "5.7h",
     "lastFetchedAt": "2026-10-31T03:10:02.785Z",
     "lastChangedAt": "2026-10-31T03:10:02.785Z",
-    "nextDueAt": "2026-11-16T16:51:45.629Z",
+    "nextDueAt": "2026-11-16T22:51:46.364Z",
     "recordCount": 460,
     "contentHash": "53fc5acd55eea9a0365d5218d8f692c6ea5d128274c444606c3d878ce6819962",
     "unchangedRuns": 0,
-    "consecutiveFailures": 64
+    "consecutiveFailures": 65
   },
   "changjia-centers": {
     "name": "長佳智慧運動中心 Web App－運動中心課程",
