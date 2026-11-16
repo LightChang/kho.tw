@@ -213,14 +213,14 @@
     "name": "國立公共資訊圖書館－活動報名",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（報名平台，列表混有已結束與常態性活動）",
-    "intervalMs": 36450000,
-    "interval": "10.1h",
-    "lastFetchedAt": "2026-11-16T03:10:03.151Z",
-    "lastChangedAt": "2026-11-15T12:10:02.641Z",
-    "nextDueAt": "2026-11-16T13:17:33.151Z",
-    "recordCount": 46,
-    "contentHash": "73103c058cc7c74ebf579eb40d7e982ba7a7f652528b7f3cee783ebd67b8b146",
-    "unchangedRuns": 3,
+    "intervalMs": 18225000,
+    "interval": "5.1h",
+    "lastFetchedAt": "2026-11-16T14:10:02.451Z",
+    "lastChangedAt": "2026-11-16T14:10:02.451Z",
+    "nextDueAt": "2026-11-16T19:13:47.451Z",
+    "recordCount": 45,
+    "contentHash": "2a2992390811b2718751d8743010c59bc83f25dc10abe3d4ff06aeaaf61cf18e",
+    "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
   "ntpc-cc": {
@@ -327,12 +327,12 @@
     "declaredFreq": "UNVERIFIED（實測 115 秋季班在開課前即有資料，為即時層）",
     "intervalMs": 86400000,
     "interval": "1d",
-    "lastFetchedAt": "2026-11-15T13:10:03.177Z",
+    "lastFetchedAt": "2026-11-16T14:10:02.451Z",
     "lastChangedAt": "2026-11-08T08:10:02.523Z",
-    "nextDueAt": "2026-11-16T13:10:03.177Z",
+    "nextDueAt": "2026-11-17T14:10:02.451Z",
     "recordCount": 6055,
     "contentHash": "c420abe98e7e943eee39279941252401f1c4a141e79a70a539f7fccee74df6be",
-    "unchangedRuns": 7,
+    "unchangedRuns": 8,
     "consecutiveFailures": 0
   },
   "taipei-senior-points": {
@@ -409,14 +409,14 @@
     "name": "臺南市立圖書館－活動報名",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（報名系統，隨各館上架活動即時變動）",
-    "intervalMs": 27337500,
-    "interval": "7.6h",
-    "lastFetchedAt": "2026-11-16T06:10:02.739Z",
+    "intervalMs": 41006250,
+    "interval": "11.4h",
+    "lastFetchedAt": "2026-11-16T14:10:02.451Z",
     "lastChangedAt": "2026-11-15T20:10:03.151Z",
-    "nextDueAt": "2026-11-16T13:45:40.239Z",
+    "nextDueAt": "2026-11-17T01:33:28.701Z",
     "recordCount": 38,
     "contentHash": "f6d20e281f85e7264c170d286c8883053ad18716d2a40e4d83cd9b9ce20e0242",
-    "unchangedRuns": 2,
+    "unchangedRuns": 3,
     "consecutiveFailures": 0
   },
   "xuanen-centers": {
@@ -441,10 +441,10 @@
     "interval": "15.2h",
     "lastFetchedAt": "2026-11-07T20:10:02.318Z",
     "lastChangedAt": "2026-11-06T17:10:02.076Z",
-    "nextDueAt": "2026-11-16T12:21:17.852Z",
+    "nextDueAt": "2026-11-17T04:21:17.424Z",
     "recordCount": 315,
     "contentHash": "704c5c059de65f2c12502e98b38ae5b484360a5c819769e6b791dc7d68a0b0b9",
     "unchangedRuns": 4,
-    "consecutiveFailures": 12
+    "consecutiveFailures": 13
   }
 }
