@@ -385,11 +385,11 @@
     "interval": "9h",
     "lastFetchedAt": "2026-10-21T23:10:03.149Z",
     "lastChangedAt": "2026-10-21T23:10:03.149Z",
-    "nextDueAt": "2026-11-16T08:10:03.156Z",
+    "nextDueAt": "2026-11-16T18:10:03.204Z",
     "recordCount": 1338,
     "contentHash": "b259059c6c0b0a125ef8afa7d9e2139cd69d444727f4cf0d66e2e337b41cf700",
     "unchangedRuns": 0,
-    "consecutiveFailures": 61
+    "consecutiveFailures": 62
   },
   "teamxports-centers": {
     "name": "全越運動 XPORTS 線上報名－運動中心期課",
