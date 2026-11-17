@@ -21,11 +21,11 @@
     "interval": "5.7h",
     "lastFetchedAt": "2026-10-31T03:10:02.785Z",
     "lastChangedAt": "2026-10-31T03:10:02.785Z",
-    "nextDueAt": "2026-11-17T04:51:46.234Z",
+    "nextDueAt": "2026-11-17T10:51:46.002Z",
     "recordCount": 460,
     "contentHash": "53fc5acd55eea9a0365d5218d8f692c6ea5d128274c444606c3d878ce6819962",
     "unchangedRuns": 0,
-    "consecutiveFailures": 66
+    "consecutiveFailures": 67
   },
   "changjia-centers": {
     "name": "長佳智慧運動中心 Web App－運動中心課程",
@@ -33,11 +33,11 @@
     "declaredFreq": "UNVERIFIED（期別制，每期約兩個月；報名人數即時變動）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-11-17T04:10:02.671Z",
-    "lastChangedAt": "2026-11-17T04:10:02.671Z",
-    "nextDueAt": "2026-11-17T07:10:02.671Z",
-    "recordCount": 342,
-    "contentHash": "81f4a8594d7f4b12f44bb519bd1010997189fb56dd5d96ab6c462a0f0f2889f0",
+    "lastFetchedAt": "2026-11-17T07:10:02.682Z",
+    "lastChangedAt": "2026-11-17T07:10:02.682Z",
+    "nextDueAt": "2026-11-17T10:10:02.682Z",
+    "recordCount": 341,
+    "contentHash": "bc23cb3659965ca69a5da84679b87219aad1df278c345aaefe5635e603272f65",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
@@ -257,11 +257,11 @@
     "declaredFreq": "UNVERIFIED（報名系統，名額與狀態即時變動）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-11-17T04:10:02.671Z",
-    "lastChangedAt": "2026-11-17T04:10:02.671Z",
-    "nextDueAt": "2026-11-17T07:10:02.671Z",
-    "recordCount": 46,
-    "contentHash": "6dd94e7dcfb8a9acaf71d1bd22fb68e06605c2cb4e1a224d5f8070d56bf26acd",
+    "lastFetchedAt": "2026-11-17T07:10:02.682Z",
+    "lastChangedAt": "2026-11-17T07:10:02.682Z",
+    "nextDueAt": "2026-11-17T10:10:02.682Z",
+    "recordCount": 47,
+    "contentHash": "bcb27a524135a427ab17631efe6d7398c1ce9513f01f91e4118c207f8bc1ca05",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
@@ -301,11 +301,11 @@
     "interval": "22.8h",
     "lastFetchedAt": "2026-10-22T04:10:01.944Z",
     "lastChangedAt": "2026-10-20T10:10:02.307Z",
-    "nextDueAt": "2026-11-17T05:56:56.131Z",
+    "nextDueAt": "2026-11-18T04:56:54.882Z",
     "recordCount": 1572,
     "contentHash": "2bcb6c78cf05916b953b4b88013c11802ccbc757d2e3bb9c5fb9d6608266d6ab",
     "unchangedRuns": 5,
-    "consecutiveFailures": 26
+    "consecutiveFailures": 27
   },
   "tainan-cc-portal": {
     "name": "臺南市社區大學校務資訊系統－課程查詢",
@@ -397,11 +397,11 @@
     "declaredFreq": "UNVERIFIED（期別制，每期約兩個月；名額即時變動）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-11-17T04:10:02.671Z",
-    "lastChangedAt": "2026-11-17T04:10:02.671Z",
-    "nextDueAt": "2026-11-17T07:10:02.671Z",
+    "lastFetchedAt": "2026-11-17T07:10:02.682Z",
+    "lastChangedAt": "2026-11-17T07:10:02.682Z",
+    "nextDueAt": "2026-11-17T10:10:02.682Z",
     "recordCount": 554,
-    "contentHash": "2c34e58c7f008c623fc28a5d01418b46ce8abe7ab64caf55357495fcf41b7694",
+    "contentHash": "e6a6731c3fbd8353f89a78827df875784e3fc5abb87620509b3dcd57ad0d91ae",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
@@ -425,11 +425,11 @@
     "declaredFreq": "UNVERIFIED（期別制，每期約兩個月；名額逐日變動）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-11-17T03:10:02.801Z",
-    "lastChangedAt": "2026-11-17T03:10:02.801Z",
-    "nextDueAt": "2026-11-17T06:10:02.801Z",
-    "recordCount": 10941,
-    "contentHash": "176d81b735d717b3ea0c3929f00bfb9e7edba26e96a22ddf1f4d7275fa8b289d",
+    "lastFetchedAt": "2026-11-17T07:10:02.682Z",
+    "lastChangedAt": "2026-11-17T07:10:02.682Z",
+    "nextDueAt": "2026-11-17T10:10:02.682Z",
+    "recordCount": 10933,
+    "contentHash": "a4c128d3595621a0b74c21233bef15b2c2ab318fa16213b08acfaf9d504c12e3",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
@@ -441,10 +441,10 @@
     "interval": "15.2h",
     "lastFetchedAt": "2026-11-07T20:10:02.318Z",
     "lastChangedAt": "2026-11-06T17:10:02.076Z",
-    "nextDueAt": "2026-11-17T04:21:17.424Z",
+    "nextDueAt": "2026-11-17T20:21:17.877Z",
     "recordCount": 315,
     "contentHash": "704c5c059de65f2c12502e98b38ae5b484360a5c819769e6b791dc7d68a0b0b9",
     "unchangedRuns": 4,
-    "consecutiveFailures": 13
+    "consecutiveFailures": 14
   }
 }
