@@ -21,11 +21,11 @@
     "interval": "5.7h",
     "lastFetchedAt": "2026-10-31T03:10:02.785Z",
     "lastChangedAt": "2026-10-31T03:10:02.785Z",
-    "nextDueAt": "2026-11-19T10:51:45.096Z",
+    "nextDueAt": "2026-11-19T16:51:45.583Z",
     "recordCount": 460,
     "contentHash": "53fc5acd55eea9a0365d5218d8f692c6ea5d128274c444606c3d878ce6819962",
     "unchangedRuns": 0,
-    "consecutiveFailures": 75
+    "consecutiveFailures": 76
   },
   "changjia-centers": {
     "name": "長佳智慧運動中心 Web App－運動中心課程",
@@ -255,13 +255,13 @@
     "name": "新北市立圖書館－活動報名",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（報名系統，名額與狀態即時變動）",
-    "intervalMs": 12150000,
-    "interval": "3.4h",
-    "lastFetchedAt": "2026-11-19T07:10:02.720Z",
-    "lastChangedAt": "2026-11-19T07:10:02.720Z",
-    "nextDueAt": "2026-11-19T10:32:32.720Z",
+    "intervalMs": 10800000,
+    "interval": "3h",
+    "lastFetchedAt": "2026-11-19T11:10:02.458Z",
+    "lastChangedAt": "2026-11-19T11:10:02.458Z",
+    "nextDueAt": "2026-11-19T14:10:02.458Z",
     "recordCount": 49,
-    "contentHash": "4cdb70ed351edb17ed8dd663f05bf005fdbd5ee3ee057bf977b1619ee44d75eb",
+    "contentHash": "891236e3ae4164aee67771030801e14642a7a297b7493ab747824c146f7c2e01",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
