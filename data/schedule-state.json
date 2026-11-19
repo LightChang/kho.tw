@@ -21,11 +21,11 @@
     "interval": "5.7h",
     "lastFetchedAt": "2026-10-31T03:10:02.785Z",
     "lastChangedAt": "2026-10-31T03:10:02.785Z",
-    "nextDueAt": "2026-11-19T04:51:45.929Z",
+    "nextDueAt": "2026-11-19T10:51:45.096Z",
     "recordCount": 460,
     "contentHash": "53fc5acd55eea9a0365d5218d8f692c6ea5d128274c444606c3d878ce6819962",
     "unchangedRuns": 0,
-    "consecutiveFailures": 74
+    "consecutiveFailures": 75
   },
   "changjia-centers": {
     "name": "長佳智慧運動中心 Web App－運動中心課程",
@@ -91,11 +91,11 @@
     "interval": "1.8d",
     "lastFetchedAt": "2026-09-14T11:16:47.725Z",
     "lastChangedAt": "2026-09-14T11:16:47.725Z",
-    "nextDueAt": "2026-11-19T04:10:03.276Z",
+    "nextDueAt": "2026-11-20T23:10:01.971Z",
     "recordCount": 13010,
     "contentHash": "036e2e7671e038777d5a421dec08ff2a17f1ef72da191266001a1ef44534fa58",
     "unchangedRuns": 0,
-    "consecutiveFailures": 36
+    "consecutiveFailures": 37
   },
   "moe-cc-sites": {
     "name": "社區大學據點資訊",
@@ -215,11 +215,11 @@
     "declaredFreq": "UNVERIFIED（報名平台，列表混有已結束與常態性活動）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-11-19T01:10:02.949Z",
-    "lastChangedAt": "2026-11-19T01:10:02.949Z",
-    "nextDueAt": "2026-11-19T04:10:02.949Z",
-    "recordCount": 47,
-    "contentHash": "6c9f08d338055e4b3c87dd94a966f0da3492894bf5e00b081976e0ca926be2be",
+    "lastFetchedAt": "2026-11-19T05:10:01.971Z",
+    "lastChangedAt": "2026-11-19T05:10:01.971Z",
+    "nextDueAt": "2026-11-19T08:10:01.971Z",
+    "recordCount": 46,
+    "contentHash": "54e7522ff1dc278b10457df4ee6918d4713dcee4959cfb4cdaaaa0c52ac1d9e3",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
@@ -395,14 +395,14 @@
     "name": "全越運動 XPORTS 線上報名－運動中心期課",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（期別制，每期約兩個月；名額即時變動）",
-    "intervalMs": 24300000,
-    "interval": "6.8h",
-    "lastFetchedAt": "2026-11-18T22:10:02.646Z",
-    "lastChangedAt": "2026-11-18T13:10:02.881Z",
-    "nextDueAt": "2026-11-19T04:55:02.646Z",
+    "intervalMs": 12150000,
+    "interval": "3.4h",
+    "lastFetchedAt": "2026-11-19T05:10:01.971Z",
+    "lastChangedAt": "2026-11-19T05:10:01.971Z",
+    "nextDueAt": "2026-11-19T08:32:31.971Z",
     "recordCount": 547,
-    "contentHash": "622acad56de821ce919c748c9d86f397a79fa01d379127700b6c4d770d52c8b0",
-    "unchangedRuns": 2,
+    "contentHash": "a367ffe1e145e0bf4b576a848ef923fda106fcd3580e4d4e1be2d189f6e50cbc",
+    "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
   "tnpl-activities": {
@@ -425,11 +425,11 @@
     "declaredFreq": "UNVERIFIED（期別制，每期約兩個月；名額逐日變動）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-11-19T01:10:02.949Z",
-    "lastChangedAt": "2026-11-19T01:10:02.949Z",
-    "nextDueAt": "2026-11-19T04:10:02.949Z",
-    "recordCount": 11111,
-    "contentHash": "53e449c03b7e8ecf914a7fd4d1ed968f7ead739939e254b45f4297a64aef5370",
+    "lastFetchedAt": "2026-11-19T05:10:01.971Z",
+    "lastChangedAt": "2026-11-19T05:10:01.971Z",
+    "nextDueAt": "2026-11-19T08:10:01.971Z",
+    "recordCount": 11113,
+    "contentHash": "b7f67755185387c020784cfeff4ebca578c4a379621b2928a0e4d68f8ae9d644",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
@@ -441,10 +441,10 @@
     "interval": "15.2h",
     "lastFetchedAt": "2026-11-07T20:10:02.318Z",
     "lastChangedAt": "2026-11-06T17:10:02.076Z",
-    "nextDueAt": "2026-11-19T04:21:17.881Z",
+    "nextDueAt": "2026-11-19T20:21:16.971Z",
     "recordCount": 315,
     "contentHash": "704c5c059de65f2c12502e98b38ae5b484360a5c819769e6b791dc7d68a0b0b9",
     "unchangedRuns": 4,
-    "consecutiveFailures": 16
+    "consecutiveFailures": 17
   }
 }
