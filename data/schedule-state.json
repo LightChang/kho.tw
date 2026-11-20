@@ -33,11 +33,11 @@
     "declaredFreq": "UNVERIFIED（期別制，每期約兩個月；報名人數即時變動）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-11-20T10:10:02.312Z",
-    "lastChangedAt": "2026-11-20T10:10:02.312Z",
-    "nextDueAt": "2026-11-20T13:10:02.312Z",
+    "lastFetchedAt": "2026-11-20T13:10:02.627Z",
+    "lastChangedAt": "2026-11-20T13:10:02.627Z",
+    "nextDueAt": "2026-11-20T16:10:02.627Z",
     "recordCount": 351,
-    "contentHash": "9a39641f280f1ec4f3d19be6c0242eaa1d74d3f52350d24faeecb67d58ab058d",
+    "contentHash": "f8180e979f9a92dae2f50ae19e2d6e7a42f1f14bfc3551b400138eba28cfbe3c",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
@@ -425,11 +425,11 @@
     "declaredFreq": "UNVERIFIED（期別制，每期約兩個月；名額逐日變動）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-11-20T10:10:02.312Z",
-    "lastChangedAt": "2026-11-20T10:10:02.312Z",
-    "nextDueAt": "2026-11-20T13:10:02.312Z",
-    "recordCount": 11247,
-    "contentHash": "322744d5e852b30e71b6e988c007bea91b9293a08d4ccbb0acddd0a3e36bc854",
+    "lastFetchedAt": "2026-11-20T13:10:02.627Z",
+    "lastChangedAt": "2026-11-20T13:10:02.627Z",
+    "nextDueAt": "2026-11-20T16:10:02.627Z",
+    "recordCount": 11270,
+    "contentHash": "15259d920e4fb70711c5b67515c9dcac585b38f6bb60b19913618166b1c04c35",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
@@ -441,10 +441,10 @@
     "interval": "15.2h",
     "lastFetchedAt": "2026-11-07T20:10:02.318Z",
     "lastChangedAt": "2026-11-06T17:10:02.076Z",
-    "nextDueAt": "2026-11-20T12:21:17.454Z",
+    "nextDueAt": "2026-11-21T04:21:17.627Z",
     "recordCount": 315,
     "contentHash": "704c5c059de65f2c12502e98b38ae5b484360a5c819769e6b791dc7d68a0b0b9",
     "unchangedRuns": 4,
-    "consecutiveFailures": 18
+    "consecutiveFailures": 19
   }
 }
