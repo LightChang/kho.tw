@@ -5,7 +5,9 @@ import Base from '../../../layouts/Base.astro';
 import { learnCrumbs } from '../../../lib/crumbs.mjs';
 import CourseList from '../../../components/CourseList.astro';
 import VenueSummary from '../../../components/VenueSummary.astro';
-import { getData, fmt, learnHref, certHref } from '../../../lib/data.mjs';
+import LearnFacts from '../../../components/LearnFacts.astro';
+import { getData, fmt, learnHref, certHref, hasEnded, TODAY } from '../../../lib/data.mjs';
+import { learnFacts, factsBlurb } from '../../../lib/learn-facts.mjs';
 import { shortCity, shortDistrict } from '../../../lib/facets.mjs';
 import { dominantSportsCenter } from '../../../lib/hubs.mjs';
 import { itemListJsonLd, SITE_URL } from '../../../../site/jsonld.mjs';
@@ -40,10 +42,12 @@ const atPages = venueActsIn(a.name, x.city, x.district);
 const dominant = dominantSportsCenter(x.list);
 const center = dominant && !atPages.some((p) => p.short === dominant.short || p.display.heading === dominant.name) ? dominant : null;
 const alias = a.aliases.length ? `（${a.aliases.join('、')}）` : '';
+const facts = learnFacts(x.list, hasEnded, TODAY);
+const blurb = factsBlurb(facts, fmt);
 ---
 <Base crumbs={learnCrumbs(a, { city: x.city, district: x.district, cityArea: cityPage?.area })}
   title={center ? `${center.short}${a.label}課｜${place}${a.label}課程（${full}）時間與地點` : `${place}${a.label}課程｜${full}${kinds.slice(0, 2).join('・')}開課時間與地點`}
-  description={`${full}的成人${a.name}${alias}課程共 ${fmt(x.list.length)} 門，其中 ${fmt(x.open)} 門招生中。開課單位有${providers.slice(0, 3).join('、')}${providers.length > 3 ? `等 ${providers.length} 個` : ''}，列出上課時間、地點與報名狀態。`}
+  description={`${full}的成人${a.name}${alias}課程共 ${fmt(x.list.length)} 門，${x.open > 0 ? `其中 ${fmt(x.open)} 門招生中` : '目前沒有招生中的課'}${blurb ? `；${blurb}` : ''}。開課單位有${providers.slice(0, 3).join('、')}${providers.length > 3 ? `等 ${providers.length} 個` : ''}，列出上課時間、地點與報名狀態。`}
   canonical={`${SITE_URL}${learnHref(a.name, x.area)}`}
   jsonld={itemListJsonLd(x.list.slice(0, 100), { name: `${full}${a.label}課程` })}
 >
@@ -54,6 +58,7 @@ const alias = a.aliases.length ? `（${a.aliases.join('、')}）` : '';
 {certN > 0 && certCitySet.has(x.city) && <div class="meta-2">其中 {fmt(certN)} 門是證照班，另見<a href={certHref(x.city)}>{x.city}證照班</a>。</div>}
 <div class="meta-2"><a href={learnHref(a.name)}>全台{a.label}課程</a>{cityPage && <Fragment>　<a href={learnHref(a.name, cityPage.area)}>{x.city}{a.label}課程</a></Fragment>}　<a href={`/city/${encodeURIComponent(x.city)}.html`}>{x.city}全部成人課程</a></div>
 </div>
+<LearnFacts f={facts} label={a.label} />
 {siblings.length > 0 && (
 <div class="card"><h3>{x.city}其他行政區的{a.label}</h3>
 <ul class="chips">{siblings.map((d) => <li><a href={learnHref(a.name, d.area)}>{d.district}<span class="n tnum">{fmt(d.list.length)}</span></a></li>)}</ul></div>

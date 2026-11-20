@@ -1,0 +1,50 @@
+---
+// 細項頁頂端的「先看重點」：現在報不報得到、什麼時段、要多少錢。數字由 src/lib/learn-facts.mjs 算。
+import { link, fmt, WEEKDAY_LABEL } from '../lib/data.mjs';
+import { shortCenter } from '../lib/hubs.mjs';
+
+const { f, label, max = 5 } = Astro.props;
+const md = (d) => String(d).slice(5).replace('-', '/');
+const whenOf = (c) => {
+  const s = c.schedule?.slots?.[0];
+  return [s?.weekday ? WEEKDAY_LABEL[s.weekday] : '', s?.startTime ? `${s.startTime}${s.endTime ? `–${s.endTime}` : ''}` : ''].filter(Boolean).join(' ');
+};
+const whereOf = (c) => {
+  const n = c.venue?.name ?? c.provider?.nameRaw ?? '';
+  return c.provider?.kind === 'sports-center' ? shortCenter(n) : n;
+};
+const when = [['weekend', '週末'], ['evening', '平日晚上（18:00 以後）'], ['daytime', '平日白天']]
+  .filter(([k]) => f.slots[k] > 0);
+---
+<div class="card facts">
+<h2>先看重點</h2>
+<table>
+<tr><th>現在報得到</th><td>
+{f.open.length > 0 ? (
+  <Fragment>
+  <div>{fmt(f.open.length)} 門招生中{f.open.length > max && `，先列 ${max} 門`}：</div>
+  <ul class="facts-open">{f.open.slice(0, max).map((c) => {
+    const left = Number.isFinite(c.enrollment?.available) ? c.enrollment.available : null;
+    return <li><a href={link('course', c.slug)}>{c.title}</a><span class="meta-2">　{[whenOf(c), whereOf(c), left !== null ? `剩 ${left} 位` : ''].filter(Boolean).join('・')}</span></li>;
+  })}</ul>
+  </Fragment>
+) : f.upcoming > 0 ? (
+  <div>目前沒有招生中的課。{fmt(f.upcoming)} 門還沒開放報名{f.nextOpensAt ? `，最早 ${md(f.nextOpensAt)} 開放` : ''}。</div>
+) : f.current > 0 ? (
+  <div>目前沒有招生中的課{f.full > 0 ? `，還沒上完的 ${fmt(f.current)} 門裡有 ${fmt(f.full)} 門額滿，可以問開課單位有沒有候補` : ''}。</div>
+) : (
+  <div>這裡的 {fmt(f.total)} 門{label}課都已經上完，下一期還沒上架。</div>
+)}
+</td></tr>
+{when.length > 0 && (
+<tr><th>上課時段</th><td>{when.map(([k, l]) => `${l} ${fmt(f.slots[k])} 門`).join('、')}<div class="meta-2">只算還沒上完的課，依每門課的第一個上課時段。{f.slots.none > 0 && `另外 ${fmt(f.slots.none)} 門來源沒寫上課時間。`}</div></td></tr>
+)}
+{f.current > 0 && (
+<tr><th>費用</th><td>
+{f.price && <div>{f.price.n === 1 ? `有標價的 1 門是 ${fmt(f.price.min)} 元` : f.price.min === f.price.max ? `有標價的 ${fmt(f.price.n)} 門都是 ${fmt(f.price.min)} 元` : `有標價的 ${fmt(f.price.n)} 門從 ${fmt(f.price.min)} 到 ${fmt(f.price.max)} 元，一半在 ${fmt(f.price.median)} 元以下`}</div>}
+{f.free > 0 && <div>免費 {fmt(f.free)} 門</div>}
+{f.unpriced > 0 && <div class="meta-2">{f.price || f.free > 0 ? `另外 ${fmt(f.unpriced)} 門` : '這些課'}來源沒寫費用，要看開課單位的簡章。</div>}
+</td></tr>
+)}
+</table>
+</div>

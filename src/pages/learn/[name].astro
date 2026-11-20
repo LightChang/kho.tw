@@ -4,7 +4,9 @@ import Base from '../../layouts/Base.astro';
 import { learnCrumbs } from '../../lib/crumbs.mjs';
 import CourseList from '../../components/CourseList.astro';
 import VenueSummary from '../../components/VenueSummary.astro';
-import { getData, fmt, learnHref, certHref } from '../../lib/data.mjs';
+import LearnFacts from '../../components/LearnFacts.astro';
+import { getData, fmt, learnHref, certHref, hasEnded, TODAY } from '../../lib/data.mjs';
+import { learnFacts } from '../../lib/learn-facts.mjs';
 import { itemListJsonLd, SITE_URL } from '../../../site/jsonld.mjs';
 
 export function getStaticPaths() {
@@ -22,6 +24,7 @@ const kinds = [...l.list.reduce((m, c) => m.set(c.provider?.kind, (m.get(c.provi
 // 課多半是運動中心開的（游泳、飛輪…）：標題補「運動中心X課」，接「運動中心 游泳課」這種問法
 const centerShare = l.list.filter((c) => c.provider?.kind === 'sports-center').length / l.list.length;
 const alias = a.aliases.length ? `（${a.aliases.join('、')}）` : '';
+const facts = learnFacts(l.list, hasEnded, TODAY);
 ---
 <Base crumbs={learnCrumbs(a)}
   title={centerShare >= 0.5 ? `成人${a.label}課程｜運動中心${a.label}課、全台 ${l.cities.length} 縣市開課地點與時間` : `成人${a.label}課程｜全台 ${l.cities.length} 縣市開課地點與時間`}
@@ -34,6 +37,7 @@ const alias = a.aliases.length ? `（${a.aliases.join('、')}）` : '';
 {a.aliases.length > 0 && <div class="meta-2">課名含「{[a.name, ...a.aliases].join('」「')}」等字樣的課都收在這裡。</div>}
 {a.topic && <div class="meta-2">屬於<a href={`/topic/${encodeURIComponent(a.topic)}.html`}>{a.topic}</a>{certN > 0 && <Fragment>，其中 {fmt(certN)} 門是<a href={certHref()}>證照班</a></Fragment>}。</div>}
 </div>
+<LearnFacts f={facts} label={a.label} />
 {l.cities.length > 0 && (
 <div class="card"><h3>依縣市</h3>
 <ul class="chips">{l.cities.map((x) => <li><a href={learnHref(a.name, x.area)}>{x.city}{a.label}<span class="n tnum">{fmt(x.open)}／{fmt(x.list.length)}</span></a></li>)}</ul></div>

@@ -66,6 +66,8 @@ a:hover{text-decoration:underline}
 table{width:100%;border-collapse:collapse;font-size:var(--text-sm)}
 th,td{border-bottom:1px solid var(--border-subtle);padding:9px 6px;text-align:left;vertical-align:top}
 th{color:var(--text-secondary);font-weight:600;white-space:nowrap}
+.facts-open{margin:4px 0 0;padding-left:1.2em}
+.facts-open li{margin:3px 0}
 /* 窄螢幕的表格：字級對齊 design-tokens 之後 th 從 16.8px 變 20px，
    320px 寬實測課程頁的表格被撐到 341px，整頁跟著橫捲。
    先解除表頭不換行（341→291px），但 320 扣掉 .wrap 與 .card 的左右 padding

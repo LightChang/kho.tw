@@ -2,7 +2,7 @@
 // markInferred：主題分類頁專用。分類是從課名推斷的就標出來，不讓推測值混在來源事實裡。
 import StatusBadge from './StatusBadge.astro';
 import EndedNote from './EndedNote.astro';
-import { WEEKDAY_LABEL, link } from '../lib/data.mjs';
+import { WEEKDAY_LABEL, link, fmt } from '../lib/data.mjs';
 import { isCert } from '../lib/facets.mjs';
 
 const { course: c, markInferred = false } = Astro.props;
@@ -13,10 +13,12 @@ const when = [
   c.schedule?.startDate ? `自 ${c.schedule.startDate}` : '',
 ].filter(Boolean).join('　');
 const left = Number.isFinite(c.enrollment?.available) ? c.enrollment.available : null;
+// 費用只寫來源給的（2026-11-20 起）：免費或標價，沒資料就不寫
+const fee = c.isFree === true ? '免費' : (Number.isFinite(c.price) && c.price > 0 ? `${fmt(c.price)} 元` : '');
 ---
 <div class="card">
 <div><a href={link('course', c.slug)}>{c.title}</a> <StatusBadge status={c.enrollment?.status} />{isCert(c) && <Fragment> <span class="badge-cert">可考證照</span></Fragment>}{left !== null && <Fragment>　<span class="tnum left-seats">剩 {left} 位</span></Fragment>}　<EndedNote course={c} /></div>
 <div class="meta">{c.provider?.nameRaw ?? ''}{c.venue?.city && <Fragment>　<a href={link('city', c.venue.city)}>{c.venue.city}{c.venue.district ?? ''}</a></Fragment>}</div>
-{when && <div class="meta">{when}</div>}
+{(when || fee) && <div class="meta">{[when, fee].filter(Boolean).join('　')}</div>}
 {markInferred && c.categoryFrom === 'title' && <div class="meta-2">分類依課名判斷</div>}
 </div>
