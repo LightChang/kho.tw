@@ -51,7 +51,11 @@ export const byStatusThenDate = (a, b) => (hasEnded(a) - hasEnded(b))
   || (STATUS_ORDER[a.enrollment?.status] ?? 9) - (STATUS_ORDER[b.enrollment?.status] ?? 9)
   || String(b.schedule?.startDate ?? '').localeCompare(String(a.schedule?.startDate ?? ''));
 
-export const isOpen = (c) => c.enrollment?.status === 'open';
+// 「招生中」的計數與清單只算真的還報得到的課：來源狀態是 open，而且上課還沒結束。
+// 來源常把上完的課留在 open（2026-11-20 查到 /learn/二胡 頁首 47 門 vs 實際 31 門）。
+// 這裡只影響我們怎麼數，不改 enrollment.status 本身（課程卡的狀態徽章照來源寫）。
+// transform/emit.mjs 的 stillOpen（首頁與 /cities.html 的數字）用同一個定義。
+export const isOpen = (c) => c.enrollment?.status === 'open' && !hasEnded(c);
 
 // 上課結束滿一年的課程頁：noindex,follow 並移出 sitemap（站主 2026-09-27 拍板）。
 // 頁面保留、連結照走；180–365 天的不動，靠頁首「新一期」卡片承接流量。

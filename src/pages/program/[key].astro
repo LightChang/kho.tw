@@ -4,7 +4,7 @@ import Base from '../../layouts/Base.astro';
 import { hubCrumbs } from '../../lib/crumbs.mjs';
 import HubTable from '../../components/HubTable.astro';
 import ProgramRules from '../../components/ProgramRules.astro';
-import { getData, fmt, programHref, TODAY } from '../../lib/data.mjs';
+import { getData, fmt, programHref, TODAY, isOpen } from '../../lib/data.mjs';
 import { itemListJsonLd, SITE_URL } from '../../../site/jsonld.mjs';
 
 export function getStaticPaths() {
@@ -15,7 +15,7 @@ const { p } = Astro.props;
 const { programs } = getData();
 const year = TODAY.slice(0, 4);
 const upcoming = p.list.filter((c) => c.enrollment?.status === 'upcoming').length;
-const openList = p.list.filter((c) => c.enrollment?.status === 'open');
+const openList = p.list.filter(isOpen);
 const others = programs.filter((o) => o.key !== p.key);
 const title = p.key === '產投'
   ? `${year} 產投課程查詢：補助 50–80%、報名中 ${fmt(p.open)} 門（每日更新）`

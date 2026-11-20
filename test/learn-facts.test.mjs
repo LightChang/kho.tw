@@ -30,3 +30,17 @@ test('已上完的課不算進「現在」；費用只認來源數字', () => {
   assert.equal(f.nextOpensAt, '2026-12-01');
   assert.match(factsBlurb(f, fmt), /有標價的 2 門 1,200–3,000 元，免費 1 門/);
 });
+
+test('頁首的招生中門數與「先看重點」同一個定義（上完的課不算招生中）', async () => {
+  const { isOpen, hasEnded, TODAY } = await import('../src/lib/data.mjs');
+  const past = '2000-01-01';
+  const list = [
+    mk({ schedule: { endDate: '2999-12-31' } }),
+    mk({ schedule: { endDate: past } }),                      // 來源仍寫 open，但已上完
+    mk({ schedule: { endDate: undefined } }),                // 沒有結束日：算還沒上完
+    mk({ enrollment: { status: 'full' }, schedule: { endDate: '2999-12-31' } }),
+  ];
+  const f = learnFacts(list, hasEnded, TODAY);
+  assert.equal(list.filter(isOpen).length, 2);
+  assert.equal(f.open.length, list.filter(isOpen).length);
+});
