@@ -3510,6 +3510,7 @@
 {"id":"crs_10d3d134","kind":"course","slug":"11506假日幼兒精緻泳訓班36歲111-蘆竹運動中心-3d134","assignedAt":"2026-10-03"}
 {"id":"crs_10d3dee2","kind":"course","slug":"11506女神肚皮舞女性專班1830-新店運動中心-3dee2","assignedAt":"2026-10-12"}
 {"id":"crs_10d5e70e","kind":"course","slug":"TRX-太平國民暨兒童運動中心-5e70e","assignedAt":"2026-09-29"}
+{"id":"crs_10d666a4","kind":"course","slug":"趣味親子桌球課-泰山運動中心-666a4","assignedAt":"2026-11-20"}
 {"id":"crs_10d6b6d0","kind":"course","slug":"兒童游泳團體班-太平國民暨兒童運動中心-6b6d0","assignedAt":"2026-09-12"}
 {"id":"crs_10dc6578","kind":"course","slug":"太極拳與氣功養生-北投社大-c6578","assignedAt":"2026-10-15"}
 {"id":"crs_10dd418e","kind":"course","slug":"快樂好聲音歌唱班-南湖社大-d418e","assignedAt":"2026-09-12"}
@@ -36129,6 +36130,7 @@
 {"id":"crs_b31e01d0","kind":"course","slug":"用手機輕鬆學攝影-三鶯社大-e01d0","assignedAt":"2026-11-16"}
 {"id":"crs_b31f724b","kind":"course","slug":"生命教育經絡學-蘆山園社大-f724b","assignedAt":"2026-09-12"}
 {"id":"crs_b32174b1","kind":"course","slug":"11506假日成人匹克球入門班六1800-蘆竹運動中心-174b1","assignedAt":"2026-10-03"}
+{"id":"crs_b321e577","kind":"course","slug":"兒童桌球團體-泰山運動中心-1e577","assignedAt":"2026-11-20"}
 {"id":"crs_b322e6a5","kind":"course","slug":"核心養成所-土城運動中心-2e6a5","assignedAt":"2026-09-29"}
 {"id":"crs_b323e532","kind":"course","slug":"ZUMBA-八德運動中心-3e532","assignedAt":"2026-09-12"}
 {"id":"crs_b325b4c2","kind":"course","slug":"金嗓國臺語教唱-中山社大-5b4c2","assignedAt":"2026-09-12"}
@@ -60087,6 +60089,7 @@
 {"id":"tea_ff1349ad90ebe9e5","kind":"teacher","slug":"Alicia-內湖運動中心-e684e","assignedAt":"2026-09-29"}
 {"id":"tea_ff213fa82610829b","kind":"teacher","slug":"Peggy-南港運動中心-0ec12","assignedAt":"2026-09-13"}
 {"id":"tea_ff32310e58b57bc6","kind":"teacher","slug":"Eric-宜蘭運動中心-72464","assignedAt":"2026-09-13"}
+{"id":"tea_ff33e8a7ba2681fb","kind":"teacher","slug":"陳宜蓁-泰山運動中心-79358","assignedAt":"2026-11-20"}
 {"id":"tea_ff40e01226694b99","kind":"teacher","slug":"王素美-南湖社大-eec7e","assignedAt":"2026-09-13"}
 {"id":"tea_ff5583d9e71c89f3","kind":"teacher","slug":"阿Ben-土城運動中心-e0cd7","assignedAt":"2026-09-29"}
 {"id":"tea_ff62673d268b8aba","kind":"teacher","slug":"蔡采秀-信義社大-9fef2","assignedAt":"2026-09-13"}
