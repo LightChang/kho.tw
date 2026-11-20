@@ -21,11 +21,11 @@
     "interval": "5.7h",
     "lastFetchedAt": "2026-10-31T03:10:02.785Z",
     "lastChangedAt": "2026-10-31T03:10:02.785Z",
-    "nextDueAt": "2026-11-20T04:51:45.378Z",
+    "nextDueAt": "2026-11-20T10:51:45.151Z",
     "recordCount": 460,
     "contentHash": "53fc5acd55eea9a0365d5218d8f692c6ea5d128274c444606c3d878ce6819962",
     "unchangedRuns": 0,
-    "consecutiveFailures": 78
+    "consecutiveFailures": 79
   },
   "changjia-centers": {
     "name": "長佳智慧運動中心 Web App－運動中心課程",
@@ -257,11 +257,11 @@
     "declaredFreq": "UNVERIFIED（報名系統，名額與狀態即時變動）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-11-20T02:10:01.860Z",
-    "lastChangedAt": "2026-11-20T02:10:01.860Z",
-    "nextDueAt": "2026-11-20T05:10:01.860Z",
+    "lastFetchedAt": "2026-11-20T05:10:02.026Z",
+    "lastChangedAt": "2026-11-20T05:10:02.026Z",
+    "nextDueAt": "2026-11-20T08:10:02.026Z",
     "recordCount": 49,
-    "contentHash": "f83d5e35976e88a600185fb4e66e149f5152b58d29f67fcb1baed417570c7301",
+    "contentHash": "8779322cb47e3f1f9a113734eb1ac65a9177920d8a3f131aa8e56c526ec33c07",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
