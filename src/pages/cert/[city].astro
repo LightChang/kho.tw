@@ -1,4 +1,9 @@
 ---
+import LearnFacts from '../../components/LearnFacts.astro';
+import { soonestOpen } from '../../lib/city-facts.mjs';
+import { isOpen as __isOpen } from '../../lib/data.mjs';
+import { learnFacts } from '../../lib/learn-facts.mjs';
+import { hasEnded as __hasEnded, TODAY as __TODAY } from '../../lib/data.mjs';
 import Base from '../../layouts/Base.astro';
 import { underSection } from '../../lib/crumbs.mjs';
 import CourseList from '../../components/CourseList.astro';
@@ -13,6 +18,9 @@ export function getStaticPaths() {
 
 const { x } = Astro.props;
 const providers = [...new Set(x.list.map((c) => c.provider?.nameRaw).filter(Boolean))];
+// 頁頂「先看重點」（2026-11-21）：現在報得到哪幾門、上課時段、費用，與 /learn/ 細項頁同一套算法
+const facts = learnFacts(x.list, __hasEnded, __TODAY);
+const soon = soonestOpen(x.list, { isOpen: __isOpen, today: __TODAY, max: 60, per: 3 });
 ---
 <Base crumbs={underSection('cert', x.city)}
   title={`${shortCity(x.city)}證照班・檢定輔導課程｜${x.city}可考證照的課程`}
@@ -24,6 +32,7 @@ const providers = [...new Set(x.list.map((c) => c.provider?.nameRaw).filter(Bool
 <div class="meta">{x.city}共 {fmt(x.list.length)} 門，其中 {fmt(x.open)} 門招生中</div>
 <div class="meta-2">判斷方式與<a href={certHref()}>全台證照班</a>相同：課名寫明證照、檢定、技術士，或課程說明寫到輔導報考。報考資格以開課單位與考試主管機關公告為準。</div>
 <div class="meta-2"><a href={`/city/${encodeURIComponent(x.city)}.html`}>{x.city}全部成人課程</a></div></div>
+<LearnFacts f={facts} label={'證照'} pick={soon} />
 <VenueSummary list={x.list} />
 <CourseList list={x.list} />
 </Base>

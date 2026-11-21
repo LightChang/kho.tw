@@ -1,5 +1,10 @@
 ---
 // 銀髮・樂齡課程全國頁：樂齡中心的課，加上其他單位課名寫明樂齡、銀髮、長青、熟齡的課（規則見 src/lib/hubs.mjs 的 isSenior）。
+import LearnFacts from '../components/LearnFacts.astro';
+import { soonestOpen } from '../lib/city-facts.mjs';
+import { isOpen as __isOpen } from '../lib/data.mjs';
+import { learnFacts } from '../lib/learn-facts.mjs';
+import { hasEnded as __hasEnded, TODAY as __TODAY } from '../lib/data.mjs';
 import Base from '../layouts/Base.astro';
 import { hubCrumbs } from '../lib/crumbs.mjs';
 import HubByKind from '../components/HubByKind.astro';
@@ -7,6 +12,9 @@ import { getData, fmt, seniorHref, link } from '../lib/data.mjs';
 import { itemListJsonLd, SITE_URL } from '../../site/jsonld.mjs';
 
 const { senior } = getData();
+// 頁頂「先看重點」（2026-11-21）：現在報得到哪幾門、上課時段、費用，與 /learn/ 細項頁同一套算法
+const facts = learnFacts(senior.list, __hasEnded, __TODAY);
+const soon = soonestOpen(senior.list, { isOpen: __isOpen, today: __TODAY, max: 60, per: 3 });
 ---
 <Base crumbs={hubCrumbs('銀髮・樂齡課程')}
   title={`銀髮課程・樂齡課程：樂齡中心、社大、運動中心的長輩課（${fmt(senior.list.length)} 門）`}
@@ -19,6 +27,7 @@ const { senior } = getData();
 <div class="meta">全台 {fmt(senior.list.length)} 門，其中 {fmt(senior.open)} 門招生中</div>
 <div class="meta-2">收錄樂齡學習中心的課，以及社大、運動中心、圖書館等單位課名寫明樂齡、銀髮、長青、熟齡的課；職訓課只收寫明「高齡者專班」「中高齡」的班。年齡等報名資格以開課單位公告為準。另見<a href={link('type', 'senior-center')}>樂齡中心的全部課程</a>。</div>
 </div>
+<LearnFacts f={facts} label={'銀髮・樂齡'} pick={soon} />
 {senior.cities.length > 0 && (
 <div class="card"><h3>依縣市</h3>
 <ul class="chips">{senior.cities.map((x) => <li><a href={seniorHref(x.city)}>{x.city}銀髮課程<span class="n tnum">{fmt(x.open)}／{fmt(x.list.length)}</span></a></li>)}</ul>

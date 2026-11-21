@@ -1,4 +1,9 @@
 ---
+import LearnFacts from '../../components/LearnFacts.astro';
+import { soonestOpen } from '../../lib/city-facts.mjs';
+import { isOpen as __isOpen } from '../../lib/data.mjs';
+import { learnFacts } from '../../lib/learn-facts.mjs';
+import { hasEnded as __hasEnded, TODAY as __TODAY } from '../../lib/data.mjs';
 import Base from '../../layouts/Base.astro';
 import { underSection } from '../../lib/crumbs.mjs';
 import CourseList from '../../components/CourseList.astro';
@@ -32,6 +37,12 @@ const jsonld = isCC
   ? pageListJsonLd(ccLinked.map((h) => ({ url: `${SITE_URL}${link('venue', h.main.venue.slug)}`, name: `${h.name}課程表` })), { name: '社區大學課程表' })
   : itemListJsonLd(list.slice(0, 100), { name: `${kind.label}的課程` });
 const placeOf = (h) => h.main.display.placeName ?? (h.main.display.from === 'source' ? h.main.display.heading : h.main.venue.name);
+// 頁頂「先看重點」（2026-11-21）：現在報得到哪幾門、上課時段、費用，與 /learn/ 細項頁同一套算法
+const facts = learnFacts(list, __hasEnded, __TODAY);
+const soon = soonestOpen(list, { isOpen: __isOpen, today: __TODAY, max: 60, per: 3 });
+// 依縣市：這一類招生中的課在哪些縣市，連到縣市頁（2026-11-21）
+const openByCity = [...list.reduce((m, c) => (c.enrollment?.status === 'open' && !__hasEnded(c) && c.venue?.city ? m.set(c.venue.city, (m.get(c.venue.city) ?? 0) + 1) : m), new Map())]
+  .sort((a, b) => b[1] - a[1]);
 ---
 <Base crumbs={underSection('types', kind.label)}
   title={title}
@@ -60,7 +71,18 @@ const placeOf = (h) => h.main.display.placeName ?? (h.main.display.from === 'sou
 {kind.kind === 'sports-center' && <div class="meta-2">想找特定運動中心的完整課表，例如<a href={link('venue', '臺北市大同運動中心-b366f')}>臺北市大同運動中心</a>（大同區大龍街51號），點場館名稱即可看本期開課與報名連結。</div>}
 {kind.kind === 'sports-center' && <div class="meta-2">找運動中心的舞蹈課可以看<a href={link('venue', '桃園國民運動中心-cc6a2')}>桃園國民運動中心</a>（桃園區中山東路233號，救國團開課），頁面會列出本期舞蹈課表、上課時間與報名連結。</div>}
 {hubs.map(([href, text]) => <div class="meta-2">另見<a href={href}>{text}</a></div>)}</div>
-<CourseList list={list} />
+<LearnFacts f={facts} label={kind.label} pick={soon} />
+{openByCity.length > 0 && (
+<div class="card"><h3>{kind.label}招生中的課在哪些縣市</h3>
+<ul class="chips">{openByCity.map(([city, n]) => <li><a href={link('city', city)}>{city}<span class="n tnum">{fmt(n)}</span></a></li>)}</ul></div>
+)}
+{soon.length > 0 ? (
+<Fragment>
+<div class="card"><h2>{kind.label}最近開課、還能報名</h2>
+<div class="meta-2">招生中、開課日在今天以後的課，開課日近的在前，先列 {fmt(soon.length)} 門。同一門課的不同場次只列一次，同一個開課單位最多三門，兒童、親子課不列。要看某個縣市的課，點上面的縣市。</div></div>
+<CourseList list={soon} />
+</Fragment>
+) : <CourseList list={list} />}
 </Fragment>
 )}
 </Base>

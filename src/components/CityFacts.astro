@@ -1,0 +1,59 @@
+---
+// 縣市頁頂端的「先看重點」：現在報得到幾門、誰開的、哪一區最多、什麼時段、多少錢。數字由 src/lib/city-facts.mjs 算。
+import { fmt, learnHref } from '../lib/data.mjs';
+
+const { f, city, acts = [], freeHref = null, seniorHref = null } = Astro.props;
+const thisYear = Astro.props.today.slice(0, 4);
+const monthLabel = (ym) => (ym.slice(0, 4) === thisYear ? `${Number(ym.slice(5))} 月` : `${ym.slice(0, 4)} 年 ${Number(ym.slice(5))} 月`);
+const md = (d) => String(d).slice(5).replace('-', '/');
+const when = [['weekend', '週末'], ['evening', '平日晚上（18:00 以後）'], ['daytime', '平日白天']]
+  .filter(([k]) => f.slots[k] > 0);
+const topDistricts = f.districts.filter((d) => d.open > 0).slice(0, 3);
+const anchor = (d) => `#d-${encodeURIComponent(d)}`;
+const topActs = acts.filter((o) => o.open > 0).sort((a, b) => b.open - a.open).slice(0, 6);
+const others = [
+  f.full > 0 && `${fmt(f.full)} 門額滿`,
+  f.upcoming > 0 && `${fmt(f.upcoming)} 門還沒開放報名${f.nextOpensAt ? `（最早 ${md(f.nextOpensAt)} 開放）` : ''}`,
+].filter(Boolean);
+---
+<div class="card facts">
+<h2>先看重點</h2>
+<table>
+<tr><th>現在報得到</th><td>
+{f.openN > 0 ? (
+  <Fragment>
+  <div>{fmt(f.openN)} 門招生中{f.byKind.length > 0 && `：${f.byKind.slice(0, 4).map((k) => `${k.label} ${fmt(k.n)}`).join('、')}`}{f.byKind.length > 4 && ' 等'}。</div>
+  {f.notStarted > 0 ? (
+    <div>其中 {fmt(f.notStarted)} 門還沒開課，報了可以從第一堂上起：{f.startsByMonth.slice(0, 4).map(([ym, n]) => `${monthLabel(ym)}開課 ${fmt(n)} 門`).join('、')}{f.startsByMonth.length > 4 && ' 等'}。</div>
+  ) : (
+    <div>招生中的課都已經開課，報名前先問開課單位能不能中途加入。</div>
+  )}
+  </Fragment>
+) : (
+  <div>目前沒有招生中的課。</div>
+)}
+{others.length > 0 && <div class="meta-2">另外 {others.join('、')}。</div>}
+</td></tr>
+{topDistricts.length > 0 && (
+<tr><th>哪一區最多</th><td>
+<div>招生中最多的是{topDistricts.map((d, i) => <Fragment>{i > 0 && '、'}<a href={anchor(d.district)}>{d.district}</a> {fmt(d.open)} 門</Fragment>)}。</div>
+<div class="meta-2">{city}有課的 {fmt(f.districts.length)} 個行政區都列在下方「各行政區」。{f.noDistrictOpen > 0 && `另有 ${fmt(f.noDistrictOpen)} 門招生中的課來源沒寫行政區。`}</div>
+</td></tr>
+)}
+{topActs.length > 0 && (
+<tr><th>熱門細項</th><td>
+<div>招生中最多的是{topActs.map((o, i) => <Fragment>{i > 0 && '、'}<a href={learnHref(o.activity.name, city)}>{o.activity.label}</a> {fmt(o.open)} 門</Fragment>)}。</div>
+</td></tr>
+)}
+{when.length > 0 && (
+<tr><th>上課時段</th><td>{when.map(([k, l]) => `${l} ${fmt(f.slots[k])} 門`).join('、')}<div class="meta-2">只算還沒上完的 {fmt(f.current)} 門，依每門課的第一個上課時段。{f.slots.none > 0 && `其中 ${fmt(f.slots.none)} 門來源沒寫上課時間。`}</div></td></tr>
+)}
+{f.current > 0 && (
+<tr><th>費用</th><td>
+{f.price && <div>{f.price.n === 1 ? `有標價的 1 門是 ${fmt(f.price.min)} 元` : f.price.min === f.price.max ? `有標價的 ${fmt(f.price.n)} 門都是 ${fmt(f.price.min)} 元` : `有標價的 ${fmt(f.price.n)} 門從 ${fmt(f.price.min)} 到 ${fmt(f.price.max)} 元，一半在 ${fmt(f.price.median)} 元以下`}</div>}
+{f.free > 0 && <div>免費 {fmt(f.free)} 門{freeHref && <Fragment>，整理在<a href={freeHref}>{city}免費課程</a></Fragment>}{seniorHref && <Fragment>；長輩的課另見<a href={seniorHref}>{city}銀髮・樂齡課程</a></Fragment>}</div>}
+{f.unpriced > 0 && <div class="meta-2">{f.price || f.free > 0 ? `另外 ${fmt(f.unpriced)} 門` : '這些課'}來源沒寫費用，要看開課單位的簡章。</div>}
+</td></tr>
+)}
+</table>
+</div>

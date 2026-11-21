@@ -1,5 +1,10 @@
 ---
 // 證照班：課名寫明考照、檢定，或描述講到輔導報考技術士、證照的課（判斷規則見 src/lib/facets.mjs 的 isCert）。
+import LearnFacts from '../components/LearnFacts.astro';
+import { soonestOpen } from '../lib/city-facts.mjs';
+import { isOpen as __isOpen } from '../lib/data.mjs';
+import { learnFacts } from '../lib/learn-facts.mjs';
+import { hasEnded as __hasEnded, TODAY as __TODAY } from '../lib/data.mjs';
 import Base from '../layouts/Base.astro';
 import { sectionCrumbs } from '../lib/crumbs.mjs';
 import CourseList from '../components/CourseList.astro';
@@ -8,6 +13,9 @@ import { getData, fmt, certHref } from '../lib/data.mjs';
 import { itemListJsonLd, SITE_URL } from '../../site/jsonld.mjs';
 
 const { cert } = getData();
+// 頁頂「先看重點」（2026-11-21）：現在報得到哪幾門、上課時段、費用，與 /learn/ 細項頁同一套算法
+const facts = learnFacts(cert.list, __hasEnded, __TODAY);
+const soon = soonestOpen(cert.list, { isOpen: __isOpen, today: __TODAY, max: 60, per: 3 });
 ---
 <Base crumbs={sectionCrumbs('cert')}
   title="證照班・檢定輔導課程｜丙級、乙級技術士與職訓考照課程"
@@ -18,6 +26,7 @@ const { cert } = getData();
 <div class="card"><h1>證照班・檢定輔導課程</h1>
 <div class="meta">全台 {fmt(cert.list.length)} 門，其中 {fmt(cert.open)} 門招生中</div>
 <div class="meta-2">收錄課名寫明證照、檢定、丙級／乙級、技術士、考照的課，以及課程說明寫到「輔導報考」「取得」某項證照或技能檢定的課。只寫「結業證書」「研習證明」的不算。能不能報考、考不考得過，以開課單位與考試主管機關公告為準。</div></div>
+<LearnFacts f={facts} label={'證照'} pick={soon} />
 {cert.cities.length > 0 && (
 <div class="card"><h3>依縣市</h3>
 <ul class="chips">{cert.cities.map((x) => <li><a href={certHref(x.city)}>{x.city}<span class="n tnum">{fmt(x.open)}／{fmt(x.list.length)}</span></a></li>)}</ul></div>

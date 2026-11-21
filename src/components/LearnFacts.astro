@@ -3,7 +3,9 @@
 import { link, fmt, WEEKDAY_LABEL } from '../lib/data.mjs';
 import { shortCenter } from '../lib/hubs.mjs';
 
-const { f, label, max = 5 } = Astro.props;
+// pick：要列出的那幾門（縣市、類型這種大頁傳「最近開課」，2026-11-21）；沒傳就照清單順序取 f.open
+const { f, label, max = 5, pick = null } = Astro.props;
+const shown = pick && pick.length ? pick : f.open;
 const md = (d) => String(d).slice(5).replace('-', '/');
 const whenOf = (c) => {
   const s = c.schedule?.slots?.[0];
@@ -22,8 +24,8 @@ const when = [['weekend', '週末'], ['evening', '平日晚上（18:00 以後）
 <tr><th>現在報得到</th><td>
 {f.open.length > 0 ? (
   <Fragment>
-  <div>{fmt(f.open.length)} 門招生中{f.open.length > max && `，先列 ${max} 門`}：</div>
-  <ul class="facts-open">{f.open.slice(0, max).map((c) => {
+  <div>{fmt(f.open.length)} 門招生中{f.open.length > max && (shown === f.open ? `，先列 ${max} 門` : `，先列最近開課的 ${Math.min(max, shown.length)} 門`)}：</div>
+  <ul class="facts-open">{shown.slice(0, max).map((c) => {
     const left = Number.isFinite(c.enrollment?.available) ? c.enrollment.available : null;
     return <li><a href={link('course', c.slug)}>{c.title}</a><span class="meta-2">　{[whenOf(c), whereOf(c), left !== null ? `剩 ${left} 位` : ''].filter(Boolean).join('・')}</span></li>;
   })}</ul>

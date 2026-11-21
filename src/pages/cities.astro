@@ -1,12 +1,45 @@
 ---
+// 依縣市找課：/cities.html。
+// 2026-11-21 改版：原本只有一排「縣市 招生中／全部」標籤。搜這一頁的人想知道的是哪個縣市現在報得到最多、
+// 是哪種單位開的、該縣市哪一區最多、熱門的是什麼課，所以先給一句結論，再給一張可以比較的表，
+// 每一格都連到縣市頁的行政區段落或 /learn/ 縣市細項頁。數字與縣市頁「先看重點」同一套算法（src/lib/city-facts.mjs）。
 import Base from '../layouts/Base.astro';
 import { sectionCrumbs } from '../lib/crumbs.mjs';
-import { getData, fmt } from '../lib/data.mjs';
+import { getData, fmt, link, learnHref, isOpen, hasEnded, TODAY } from '../lib/data.mjs';
+import { cityFacts } from '../lib/city-facts.mjs';
 import { SITE_URL } from '../../site/jsonld.mjs';
 
-const { home } = getData();
+const { cities, types, learnByCity, home } = getData();
+const KIND_LABEL = new Map(types.map((k) => [k.kind, k.label]));
+const rows = cities.map((c) => ({
+  name: c.name,
+  n: c.list.length,
+  f: cityFacts({ list: c.list, isOpen, hasEnded, today: TODAY, kindLabel: KIND_LABEL }),
+  acts: [...(learnByCity.get(c.name) ?? [])].filter((o) => o.open > 0).sort((a, b) => b.open - a.open).slice(0, 3),
+})).sort((a, b) => b.f.openN - a.f.openN || b.n - a.n);
+const totalOpen = rows.reduce((t, r) => t + r.f.openN, 0);
+const top = rows.filter((r) => r.f.openN > 0).slice(0, 3);
+const none = rows.filter((r) => r.f.openN === 0);
+const cityHref = (name) => `/city/${encodeURIComponent(name)}.html`;
 ---
-<Base crumbs={sectionCrumbs('cities')} title="各縣市課程" description="全台 21 縣市的成人課程索引。" canonical={`${SITE_URL}/cities.html`}>
-<div class="card"><h1>各縣市</h1><div class="meta">數字是該縣市正在招生的課程數。</div></div>
-<div class="card"><ul class="chips">{home.cities.map((c) => <li><a href={`/city/${encodeURIComponent(c.name)}.html`}>{c.name}<span class="n tnum">{fmt(c.open)}／{fmt(c.n)}</span></a></li>)}</ul></div>
+<Base crumbs={sectionCrumbs('cities')} title="各縣市成人課程｜哪裡現在報得到最多"
+  description={`全台 ${rows.length} 縣市的成人課程，現在 ${fmt(totalOpen)} 門招生中，${top.map((r) => `${r.name} ${fmt(r.f.openN)} 門`).join('、')}最多。每個縣市列出開課單位、招生中最多的行政區與熱門細項。`}
+  canonical={`${SITE_URL}/cities.html`}>
+<div class="card"><h1>各縣市成人課程</h1>
+<div class="meta">全台 {fmt(rows.length)} 縣市，現在 {fmt(totalOpen)} 門招生中</div>
+<div>招生中最多的是{top.map((r, i) => <Fragment>{i > 0 && '、'}<a href={cityHref(r.name)}>{r.name}</a> {fmt(r.f.openN)} 門</Fragment>)}。{none.length > 0 && `${none.map((r) => r.name).join('、')}目前沒有招生中的課。`}</div>
+<div class="meta-2">各縣市收錄深度不同（例如新北只抓近 180 天），數字是本站收得到的課，不代表當地實際的課程總量。更新於 {home.updatedAt}。</div>
+</div>
+<div class="card"><h2>縣市比較</h2>
+<div class="meta-2">依招生中的課數排列。「還沒開課」是招生中、開課日在今天以後的課，報了可以從第一堂上起。</div>
+<table><tr><th>縣市</th><th>招生中</th><th>主要開課單位</th><th>招生中最多的行政區</th><th>熱門細項</th></tr>
+{rows.map((r) => (
+<tr><td><a href={cityHref(r.name)}>{r.name}</a><div class="meta-2 tnum">共 {fmt(r.n)}</div></td>
+<td class="tnum">{fmt(r.f.openN)}{r.f.openN > 0 && <div class="meta-2">還沒開課 {fmt(r.f.notStarted)}</div>}</td>
+<td>{r.f.byKind.slice(0, 2).map((k, i) => <Fragment>{i > 0 && '、'}<a href={link('type', k.kind)}>{k.label}</a> <span class="meta-2 tnum">{fmt(k.n)}</span></Fragment>)}</td>
+<td>{r.f.districts.filter((d) => d.open > 0).slice(0, 2).map((d, i) => <Fragment>{i > 0 && '、'}<a href={`${cityHref(r.name)}#d-${encodeURIComponent(d.district)}`}>{d.district}</a> <span class="meta-2 tnum">{fmt(d.open)}</span></Fragment>)}</td>
+<td>{r.acts.map((o, i) => <Fragment>{i > 0 && '、'}<a href={learnHref(o.activity.name, r.name)}>{o.activity.label}</a></Fragment>)}</td></tr>
+))}
+</table>
+</div>
 </Base>
