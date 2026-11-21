@@ -74,7 +74,8 @@ const openByCity = [...list.reduce((m, c) => (c.enrollment?.status === 'open' &&
 <LearnFacts f={facts} label={kind.label} pick={soon} />
 {openByCity.length > 0 && (
 <div class="card"><h3>{kind.label}招生中的課在哪些縣市</h3>
-<ul class="chips">{openByCity.map(([city, n]) => <li><a href={link('city', city)}>{city}<span class="n tnum">{fmt(n)}</span></a></li>)}</ul></div>
+<ul class="chips">{openByCity.map(([city, n]) => <li><a href={link('city', city)}>{city}<span class="n tnum">{fmt(n)}</span></a></li>)}</ul>
+{facts.open.length > openByCity.reduce((t, [, n]) => t + n, 0) && <div class="meta-2">另有 {fmt(facts.open.length - openByCity.reduce((t, [, n]) => t + n, 0))} 門招生中的課來源沒寫縣市。</div>}</div>
 )}
 {soon.length > 0 ? (
 <Fragment>
