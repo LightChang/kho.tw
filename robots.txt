@@ -1,0 +1,6 @@
+# kho.tw — 全台成人課程資訊站
+# 全站開放檢索。/index.json 是搜尋頁算繪需要的資料檔，刻意不擋（見 site/sitemap.mjs 註解）。
+User-agent: *
+Allow: /
+
+Sitemap: https://kho.tw/sitemap.xml
