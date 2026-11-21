@@ -5,7 +5,7 @@ import CourseList from '../../components/CourseList.astro';
 import CityFacts from '../../components/CityFacts.astro';
 import { getData, fmt, link, learnHref, certHref, isOpen, hasEnded, TODAY } from '../../lib/data.mjs';
 import { cityFacts, soonestOpen, KID_TITLE } from '../../lib/city-facts.mjs';
-import { itemListJsonLd, SITE_URL } from '../../../site/jsonld.mjs';
+import { itemListJsonLd, pageListJsonLd, SITE_URL } from '../../../site/jsonld.mjs';
 
 export function getStaticPaths() {
   return getData().cities.map((c) => ({ params: { city: c.name }, props: { c } }));
@@ -46,13 +46,25 @@ const mainActs = actRows.slice(0, ACT_MAX);
 const restActs = actRows.slice(ACT_MAX);
 const freeLink = free.cities.some((x) => x.city === c.name) ? hubs.find((h) => h.text === `${c.name}免費課程`)?.href : null;
 const seniorLink = senior.cities.some((x) => x.city === c.name) ? hubs.find((h) => h.text === `${c.name}銀髮・樂齡課程`)?.href : null;
+// JSON-LD：/city/ 頁型一定要有 ItemList（site/validate-jsonld.mjs），itemListJsonLd 要 3 門以上才輸出。
+// 近期開課的課夠 3 門就用它；不夠就用下方退回清單（依報名狀態的前 30 門）；連課都不到 3 門，改列本頁連出去的站內頁面。
+const SHOW_ALL = soon.length < 3;
+const jsonld = (!SHOW_ALL && itemListJsonLd(soon, { name: `${c.name}最近開課、還能報名的成人課程` }))
+  || itemListJsonLd(c.list.slice(0, 30), { name: `${c.name}的成人課程` })
+  || pageListJsonLd([
+    ...acts.map((o) => ({ url: `${SITE_URL}${learnHref(o.activity.name, c.name)}`, name: `${c.name}${o.activity.label}課程` })),
+    ...hubs.map((h) => ({ url: `${SITE_URL}${h.href}`, name: h.text })),
+    { url: `${SITE_URL}/cities.html`, name: '各縣市成人課程' },
+    { url: `${SITE_URL}/open.html`, name: '現在可報名的課程' },
+    { url: `${SITE_URL}/search.html`, name: '搜尋課程' },
+  ], { name: `${c.name}成人課程的相關頁面` });
 const topDistrictNames = f.districts.filter((d) => d.open > 0).slice(0, 3).map((d) => d.district);
 ---
 <Base crumbs={underSection('cities', c.name)}
   title={topKinds.length ? `${c.name}成人課程｜${topKinds.join('・')}` : `${c.name}的成人課程`}
   description={`${c.name}現在 ${fmt(f.openN)} 門成人課程招生中${f.notStarted > 0 ? `，${fmt(f.notStarted)} 門還沒開課` : ''}${topDistrictNames.length ? `；招生中最多在${topDistrictNames.join('、')}` : ''}。${byKind.slice(0, 3).map(([kind, n]) => `${KIND_LABEL.get(kind)}${fmt(n)}門`).join('、')}，共 ${fmt(c.list.length)} 門，附上課時段、費用與各區細項。`}
   canonical={`${SITE_URL}/city/${encodeURIComponent(c.name)}.html`}
-  jsonld={soon.length ? itemListJsonLd(soon, { name: `${c.name}最近開課、還能報名的成人課程` }) : itemListJsonLd(c.list.slice(0, 30), { name: `${c.name}的成人課程` })}
+  jsonld={jsonld}
 >
 <div class="card"><h1>{c.name}成人課程</h1><div class="meta">{fmt(c.list.length)} 門課，其中 {fmt(f.openN)} 門招生中</div>
 {byKind.length > 0 && (
@@ -104,10 +116,10 @@ const topDistrictNames = f.districts.filter((d) => d.open > 0).slice(0, 3).map((
 <CourseList list={soon} max={SOON_MAX} />
 </Fragment>
 )}
-{soon.length === 0 && (
+{SHOW_ALL && c.list.length > 0 && (
 <Fragment>
 <div class="card"><h2>{c.name}的課程</h2>
-<div class="meta-2">目前沒有還沒開課的招生中課程，下面依報名狀態列出前 30 門，上完的課排在最後。</div></div>
+<div class="meta-2">{soon.length > 0 ? `還沒開課的招生中課程只有上面 ${soon.length} 門，` : '目前沒有還沒開課的招生中課程，'}下面依報名狀態列出{c.list.length > 30 ? '前 30 門' : `全部 ${fmt(c.list.length)} 門`}，上完的課排在最後。</div></div>
 <CourseList list={c.list} max={30} />
 </Fragment>
 )}
