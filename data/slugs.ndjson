@@ -30573,6 +30573,7 @@
 {"id":"crs_9732be2f","kind":"course","slug":"古典鋼琴進階-中山社大-2be2f","assignedAt":"2026-09-12"}
 {"id":"crs_9733d94b","kind":"course","slug":"觀光日語會話班-永和區敬老護幼協會-3d94b","assignedAt":"2026-09-12"}
 {"id":"crs_9734d251","kind":"course","slug":"交通安全講座-吉林國小-4d251","assignedAt":"2026-09-12"}
+{"id":"crs_97355e59","kind":"course","slug":"桌球兒童團體班-太平國民暨兒童運動中心-55e59","assignedAt":"2026-11-21"}
 {"id":"crs_9739cd56","kind":"course","slug":"舊衣新造親子寵物保暖背心創意製作班第01-紡織產業綜合研究所-9cd56","assignedAt":"2026-09-12"}
 {"id":"crs_973a3ffb","kind":"course","slug":"日語生活會話進階I-北屯社大-a3ffb","assignedAt":"2026-09-12"}
 {"id":"crs_973cbbbd","kind":"course","slug":"城市中的低碳綠生活零廢棄生活習作-大安社大-cbbbd","assignedAt":"2026-09-12"}
@@ -39200,6 +39201,7 @@
 {"id":"crs_c24a64df","kind":"course","slug":"1123台江田野花草拓染體驗-臺南社大-a64df","assignedAt":"2026-09-13"}
 {"id":"crs_c24ad316","kind":"course","slug":"基礎皮拉提斯器械床-鳳山運動園區-ad316","assignedAt":"2026-09-29"}
 {"id":"crs_c24c0856","kind":"course","slug":"薩克斯風初階-內湖社大-c0856","assignedAt":"2026-09-12"}
+{"id":"crs_c24d1a47","kind":"course","slug":"桌球兒童團體班-太平國民暨兒童運動中心-d1a47","assignedAt":"2026-11-21"}
 {"id":"crs_c24e32be","kind":"course","slug":"核心伸展瑜珈-五股運動中心-e32be","assignedAt":"2026-10-02"}
 {"id":"crs_c2511b85","kind":"course","slug":"基礎英語會話-八德社大-11b85","assignedAt":"2026-10-14"}
 {"id":"crs_c251ae71","kind":"course","slug":"假日幼兒優質泳訓班-桃園運動中心-1ae71","assignedAt":"2026-10-05"}
@@ -57648,6 +57650,7 @@
 {"id":"tea_b3faf9e59cfdb797","kind":"teacher","slug":"Gabby-內湖運動中心-12d72","assignedAt":"2026-09-29"}
 {"id":"tea_b3fb712a531e8196","kind":"teacher","slug":"Stanley-板橋運動中心-e2f15","assignedAt":"2026-10-26"}
 {"id":"tea_b400c08e520084f0","kind":"teacher","slug":"Edith-長春國民暨兒童運動中心-c1294","assignedAt":"2026-09-13"}
+{"id":"tea_b4088474c1a575d8","kind":"teacher","slug":"加恩-太平國民暨兒童運動中心-cef13","assignedAt":"2026-11-21"}
 {"id":"tea_b40d08ab5a77b37e","kind":"teacher","slug":"小新-內湖運動中心-e14ba","assignedAt":"2026-09-13"}
 {"id":"tea_b41183f533806812","kind":"teacher","slug":"張美菊-南港社大-c26f9","assignedAt":"2026-09-13"}
 {"id":"tea_b42a3e1b5384c99e","kind":"teacher","slug":"李宇翔-新營社大-1eef1","assignedAt":"2026-09-13"}
