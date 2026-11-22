@@ -31,14 +31,14 @@
     "name": "長佳智慧運動中心 Web App－運動中心課程",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（期別制，每期約兩個月；報名人數即時變動）",
-    "intervalMs": 16200000,
-    "interval": "4.5h",
-    "lastFetchedAt": "2026-11-21T19:10:02.881Z",
-    "lastChangedAt": "2026-11-21T16:10:02.705Z",
-    "nextDueAt": "2026-11-21T23:40:02.881Z",
-    "recordCount": 351,
-    "contentHash": "96badf8908c3513b286f5f581e8049f2543e4cb9dfe4ee33fcbb31ff14d1b559",
-    "unchangedRuns": 1,
+    "intervalMs": 10800000,
+    "interval": "3h",
+    "lastFetchedAt": "2026-11-22T00:10:05.043Z",
+    "lastChangedAt": "2026-11-22T00:10:05.043Z",
+    "nextDueAt": "2026-11-22T03:10:05.043Z",
+    "recordCount": 350,
+    "contentHash": "011033369da8c8bc8eeb59ee5003d16cd83b958c058f291a0a90a63f3ad7df99",
+    "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
   "forest-nature-edu": {
@@ -385,11 +385,11 @@
     "interval": "9h",
     "lastFetchedAt": "2026-10-21T23:10:03.149Z",
     "lastChangedAt": "2026-10-21T23:10:03.149Z",
-    "nextDueAt": "2026-11-21T23:10:02.785Z",
+    "nextDueAt": "2026-11-22T09:10:05.043Z",
     "recordCount": 1338,
     "contentHash": "b259059c6c0b0a125ef8afa7d9e2139cd69d444727f4cf0d66e2e337b41cf700",
     "unchangedRuns": 0,
-    "consecutiveFailures": 75
+    "consecutiveFailures": 76
   },
   "teamxports-centers": {
     "name": "全越運動 XPORTS 線上報名－運動中心期課",
