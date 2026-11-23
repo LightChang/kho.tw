@@ -33,11 +33,11 @@
     "declaredFreq": "UNVERIFIED（期別制，每期約兩個月；報名人數即時變動）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-11-23T04:10:02.878Z",
-    "lastChangedAt": "2026-11-23T04:10:02.878Z",
-    "nextDueAt": "2026-11-23T07:10:02.878Z",
-    "recordCount": 324,
-    "contentHash": "f4964d81b40b7f2cba6fd21e00c634c67201630f02d65a9c80f5911b93734a46",
+    "lastFetchedAt": "2026-11-23T08:10:02.200Z",
+    "lastChangedAt": "2026-11-23T08:10:02.200Z",
+    "nextDueAt": "2026-11-23T11:10:02.200Z",
+    "recordCount": 309,
+    "contentHash": "dff092007c23928615dd5697086ea48cbdcf0a48062c2994f2a0629cbcb89dfa",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
@@ -61,12 +61,12 @@
     "declaredFreq": "UNVERIFIED（即時層，列表帶開課狀況與報名人數）",
     "intervalMs": 86400000,
     "interval": "1d",
-    "lastFetchedAt": "2026-11-22T07:10:03.116Z",
+    "lastFetchedAt": "2026-11-23T08:10:02.200Z",
     "lastChangedAt": "2026-11-20T07:10:02.222Z",
-    "nextDueAt": "2026-11-23T07:10:03.116Z",
+    "nextDueAt": "2026-11-24T08:10:02.200Z",
     "recordCount": 64,
     "contentHash": "b9cf706bbc52b0afa565581f3867fa1fd81849e3ea2100f0057d7d4da90334de",
-    "unchangedRuns": 5,
+    "unchangedRuns": 6,
     "consecutiveFailures": 0
   },
   "moe-cc-courses": {
@@ -427,11 +427,11 @@
     "interval": "3h",
     "lastFetchedAt": "2026-11-23T03:10:02.166Z",
     "lastChangedAt": "2026-11-23T03:10:02.166Z",
-    "nextDueAt": "2026-11-23T06:10:02.166Z",
+    "nextDueAt": "2026-11-23T10:10:02.326Z",
     "recordCount": 11464,
     "contentHash": "9c1313f5232b13bf62af123f123c65d48f2be45fa41692f7a2b32440edfd24bd",
     "unchangedRuns": 0,
-    "consecutiveFailures": 0
+    "consecutiveFailures": 1
   },
   "yunlin-cc": {
     "name": "雲林縣社區大學課程表（海線／虎尾溪／平原／山線）",
