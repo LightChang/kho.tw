@@ -5,11 +5,11 @@
     "declaredFreq": "UNVERIFIED（即時層，列表帶確認開課／額滿／停開旗標）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-11-23T02:10:02.362Z",
-    "lastChangedAt": "2026-11-23T02:10:02.362Z",
-    "nextDueAt": "2026-11-23T05:10:02.362Z",
-    "recordCount": 3937,
-    "contentHash": "ce431fbdca1cccaff4ecdab7d65dbb495f1a756f3146584e73b5e04875a8bdd0",
+    "lastFetchedAt": "2026-11-23T06:10:02.084Z",
+    "lastChangedAt": "2026-11-23T06:10:02.084Z",
+    "nextDueAt": "2026-11-23T09:10:02.084Z",
+    "recordCount": 4372,
+    "contentHash": "c11d079cbdb076060545072d6c52d41a3b3a34e2e7990e6756edbd942d897fcf",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
@@ -21,11 +21,11 @@
     "interval": "5.7h",
     "lastFetchedAt": "2026-10-31T03:10:02.785Z",
     "lastChangedAt": "2026-10-31T03:10:02.785Z",
-    "nextDueAt": "2026-11-23T04:52:25.798Z",
+    "nextDueAt": "2026-11-23T10:51:45.159Z",
     "recordCount": 460,
     "contentHash": "53fc5acd55eea9a0365d5218d8f692c6ea5d128274c444606c3d878ce6819962",
     "unchangedRuns": 0,
-    "consecutiveFailures": 90
+    "consecutiveFailures": 91
   },
   "changjia-centers": {
     "name": "長佳智慧運動中心 Web App－運動中心課程",
@@ -241,14 +241,14 @@
     "name": "新北市數位樂學網－課程總覽",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（依招生期程公告，實測 1024 筆）",
-    "intervalMs": 23066015.625,
-    "interval": "6.4h",
-    "lastFetchedAt": "2026-11-22T22:10:02.680Z",
+    "intervalMs": 34599023.4375,
+    "interval": "9.6h",
+    "lastFetchedAt": "2026-11-23T05:10:02.034Z",
     "lastChangedAt": "2026-11-22T17:10:02.417Z",
-    "nextDueAt": "2026-11-23T04:34:28.695Z",
+    "nextDueAt": "2026-11-23T14:46:41.057Z",
     "recordCount": 1038,
     "contentHash": "43694921f259478c8dd56c91c74c0f844829086fbab48a043578f098731bdbb8",
-    "unchangedRuns": 1,
+    "unchangedRuns": 2,
     "consecutiveFailures": 0
   },
   "ntpc-library-activities": {
@@ -257,11 +257,11 @@
     "declaredFreq": "UNVERIFIED（報名系統，名額與狀態即時變動）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-11-23T02:10:02.362Z",
-    "lastChangedAt": "2026-11-23T02:10:02.362Z",
-    "nextDueAt": "2026-11-23T05:10:02.362Z",
-    "recordCount": 34,
-    "contentHash": "85a28409279cd646494191bfa5b8f771bbb9d9839be81e3093cf97c5ecd45c4d",
+    "lastFetchedAt": "2026-11-23T06:10:02.084Z",
+    "lastChangedAt": "2026-11-23T06:10:02.084Z",
+    "nextDueAt": "2026-11-23T09:10:02.084Z",
+    "recordCount": 33,
+    "contentHash": "36944ef1d89b0a98f9dabc3a27eee86a7eaad0681bdddf7667f2b73d9f237eab",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
@@ -367,14 +367,14 @@
     "name": "台灣就業通－職訓課程查詢",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（每筆有 UpdateTime，實測當日即有更新）",
-    "intervalMs": 16200000,
-    "interval": "4.5h",
-    "lastFetchedAt": "2026-11-23T00:10:04.541Z",
+    "intervalMs": 24300000,
+    "interval": "6.8h",
+    "lastFetchedAt": "2026-11-23T05:10:02.034Z",
     "lastChangedAt": "2026-11-22T21:10:02.863Z",
-    "nextDueAt": "2026-11-23T04:40:04.541Z",
+    "nextDueAt": "2026-11-23T11:55:02.034Z",
     "recordCount": 1330,
     "contentHash": "e2129a5a655c525dcc0f81f46356a02bb42345323c1cba6e76153643f3aa2319",
-    "unchangedRuns": 1,
+    "unchangedRuns": 2,
     "consecutiveFailures": 0
   },
   "taoyuan-cc-portal": {
@@ -385,11 +385,11 @@
     "interval": "9h",
     "lastFetchedAt": "2026-10-21T23:10:03.149Z",
     "lastChangedAt": "2026-10-21T23:10:03.149Z",
-    "nextDueAt": "2026-11-23T04:10:03.011Z",
+    "nextDueAt": "2026-11-23T14:10:02.034Z",
     "recordCount": 1338,
     "contentHash": "b259059c6c0b0a125ef8afa7d9e2139cd69d444727f4cf0d66e2e337b41cf700",
     "unchangedRuns": 0,
-    "consecutiveFailures": 78
+    "consecutiveFailures": 79
   },
   "teamxports-centers": {
     "name": "全越運動 XPORTS 線上報名－運動中心期課",
@@ -441,10 +441,10 @@
     "interval": "15.2h",
     "lastFetchedAt": "2026-11-07T20:10:02.318Z",
     "lastChangedAt": "2026-11-06T17:10:02.076Z",
-    "nextDueAt": "2026-11-23T04:21:17.490Z",
+    "nextDueAt": "2026-11-23T20:21:17.034Z",
     "recordCount": 315,
     "contentHash": "704c5c059de65f2c12502e98b38ae5b484360a5c819769e6b791dc7d68a0b0b9",
     "unchangedRuns": 4,
-    "consecutiveFailures": 22
+    "consecutiveFailures": 23
   }
 }
