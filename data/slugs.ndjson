@@ -17120,6 +17120,7 @@
 {"id":"crs_537aed0a","kind":"course","slug":"有趣塗鴉油畫棒-士林社大-aed0a","assignedAt":"2026-09-12"}
 {"id":"crs_537bcb5b","kind":"course","slug":"經典西洋老歌賞析-大同社大-bcb5b","assignedAt":"2026-09-12"}
 {"id":"crs_537de8bf","kind":"course","slug":"手機影像與AI應用初級-桃園社大-de8bf","assignedAt":"2026-10-01"}
+{"id":"crs_537e530c","kind":"course","slug":"記憶溯溪馬賽克臺灣的歷史圖像談談臺灣高等-國家圖書館-e530c","assignedAt":"2026-11-24"}
 {"id":"crs_537fdd51","kind":"course","slug":"與佛拉明哥共舞-文山社大-fdd51","assignedAt":"2026-09-12"}
 {"id":"crs_538111ad","kind":"course","slug":"彈力繩樂齡肌力-板橋運動中心-111ad","assignedAt":"2026-09-29"}
 {"id":"crs_5381711c","kind":"course","slug":"輕鬆休閒來養蜂-淡水社大-1711c","assignedAt":"2026-09-12"}
@@ -35364,6 +35365,7 @@
 {"id":"crs_adb391d7","kind":"course","slug":"北臺山水花海旅行-中山社大-391d7","assignedAt":"2026-09-12"}
 {"id":"crs_adb41860","kind":"course","slug":"玩轉AI社群行銷-文山社大-41860","assignedAt":"2026-09-12"}
 {"id":"crs_adb5e11c","kind":"course","slug":"成人平日班-新莊運動中心-5e11c","assignedAt":"2026-09-29"}
+{"id":"crs_adb5f6f6","kind":"course","slug":"戰後初期臺灣的學生運動四六事件自覺會與統-國家圖書館-5f6f6","assignedAt":"2026-11-24"}
 {"id":"crs_adb621d8","kind":"course","slug":"樂齡肌不可失-蘆洲運動中心-621d8","assignedAt":"2026-09-29"}
 {"id":"crs_adb9e55f","kind":"course","slug":"兒童羽球課-苓雅運動中心-9e55f","assignedAt":"2026-09-12"}
 {"id":"crs_adbd0a3d","kind":"course","slug":"有氧雕塑-臺北大學運動中心-d0a3d","assignedAt":"2026-09-29"}
@@ -62005,6 +62007,7 @@
 {"id":"ven_78942bab","kind":"venue","slug":"臺北市中山區龍江路-42bab","assignedAt":"2026-09-12"}
 {"id":"ven_78a8ae6f","kind":"venue","slug":"屏東縣內埔鄉東勢村大同路2段福泉巷120-8ae6f","assignedAt":"2026-09-12"}
 {"id":"ven_78bf0990","kind":"venue","slug":"新明國中活動中心-f0990","assignedAt":"2026-09-12"}
+{"id":"ven_793424ce","kind":"venue","slug":"國家圖書館簡報室-424ce","assignedAt":"2026-11-24"}
 {"id":"ven_79368301","kind":"venue","slug":"木柵國小-68301","assignedAt":"2026-09-12"}
 {"id":"ven_794bf065","kind":"venue","slug":"竹北市自强南路281號-bf065","assignedAt":"2026-09-12"}
 {"id":"ven_7977ef2e","kind":"venue","slug":"新竹縣竹北市嘉豐七街145號-7ef2e","assignedAt":"2026-09-12"}
