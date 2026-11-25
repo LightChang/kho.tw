@@ -257,11 +257,11 @@
     "declaredFreq": "UNVERIFIED（報名系統，名額與狀態即時變動）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-11-25T17:10:02.818Z",
-    "lastChangedAt": "2026-11-25T17:10:02.818Z",
-    "nextDueAt": "2026-11-25T20:10:02.818Z",
+    "lastFetchedAt": "2026-11-25T21:10:02.535Z",
+    "lastChangedAt": "2026-11-25T21:10:02.535Z",
+    "nextDueAt": "2026-11-26T00:10:02.535Z",
     "recordCount": 36,
-    "contentHash": "dee01ad3e894059ea26b8b05f7722283cf4dc40d33a2c7091660a38f05c402ff",
+    "contentHash": "a1f8cdb97da04f09a33917c80570be52ef18c409b8dd3bc671b8446a5910d1cc",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
@@ -301,11 +301,11 @@
     "interval": "22.8h",
     "lastFetchedAt": "2026-10-22T04:10:01.944Z",
     "lastChangedAt": "2026-10-20T10:10:02.307Z",
-    "nextDueAt": "2026-11-25T20:56:55.120Z",
+    "nextDueAt": "2026-11-26T19:56:55.035Z",
     "recordCount": 1572,
     "contentHash": "2bcb6c78cf05916b953b4b88013c11802ccbc757d2e3bb9c5fb9d6608266d6ab",
     "unchangedRuns": 5,
-    "consecutiveFailures": 35
+    "consecutiveFailures": 36
   },
   "tainan-cc-portal": {
     "name": "臺南市社區大學校務資訊系統－課程查詢",
@@ -325,14 +325,14 @@
     "name": "臺北市社區大學聯網－課程",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（實測 115 秋季班在開課前即有資料，為即時層）",
-    "intervalMs": 291600000,
-    "interval": "3.4d",
-    "lastFetchedAt": "2026-11-22T11:10:02.851Z",
-    "lastChangedAt": "2026-11-08T08:10:02.523Z",
-    "nextDueAt": "2026-11-25T20:10:02.851Z",
-    "recordCount": 6055,
-    "contentHash": "c420abe98e7e943eee39279941252401f1c4a141e79a70a539f7fccee74df6be",
-    "unchangedRuns": 12,
+    "intervalMs": 86400000,
+    "interval": "1d",
+    "lastFetchedAt": "2026-11-25T21:10:02.535Z",
+    "lastChangedAt": "2026-11-25T21:10:02.535Z",
+    "nextDueAt": "2026-11-26T21:10:02.535Z",
+    "recordCount": 6061,
+    "contentHash": "7ac1e1a6aa977e69ed37160ddb7574b405ba674b69d5bad27ad07e9fb8e22794",
+    "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
   "taipei-senior-points": {
@@ -409,14 +409,14 @@
     "name": "臺南市立圖書館－活動報名",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（報名系統，隨各館上架活動即時變動）",
-    "intervalMs": 10800000,
-    "interval": "3h",
-    "lastFetchedAt": "2026-11-25T17:10:02.818Z",
+    "intervalMs": 16200000,
+    "interval": "4.5h",
+    "lastFetchedAt": "2026-11-25T21:10:02.535Z",
     "lastChangedAt": "2026-11-25T17:10:02.818Z",
-    "nextDueAt": "2026-11-25T20:10:02.818Z",
+    "nextDueAt": "2026-11-26T01:40:02.535Z",
     "recordCount": 36,
     "contentHash": "d9b28dccb4381e21b3291fe7d0428f883d4772b5b7e1d1a413a9f4302ec73e31",
-    "unchangedRuns": 0,
+    "unchangedRuns": 1,
     "consecutiveFailures": 0
   },
   "xuanen-centers": {
@@ -441,10 +441,10 @@
     "interval": "15.2h",
     "lastFetchedAt": "2026-11-07T20:10:02.318Z",
     "lastChangedAt": "2026-11-06T17:10:02.076Z",
-    "nextDueAt": "2026-11-25T20:21:17.687Z",
+    "nextDueAt": "2026-11-26T12:21:17.535Z",
     "recordCount": 315,
     "contentHash": "704c5c059de65f2c12502e98b38ae5b484360a5c819769e6b791dc7d68a0b0b9",
     "unchangedRuns": 4,
-    "consecutiveFailures": 26
+    "consecutiveFailures": 27
   }
 }
