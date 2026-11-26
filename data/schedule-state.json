@@ -33,11 +33,11 @@
     "declaredFreq": "UNVERIFIED（期別制，每期約兩個月；報名人數即時變動）",
     "intervalMs": 10800000,
     "interval": "3h",
-    "lastFetchedAt": "2026-11-26T09:10:02.329Z",
-    "lastChangedAt": "2026-11-26T09:10:02.329Z",
-    "nextDueAt": "2026-11-26T12:10:02.329Z",
-    "recordCount": 239,
-    "contentHash": "d6ab5840b280b0511fc6f3c66c62c7865d3dfb19dfa2ac6a054a0d9817b86f78",
+    "lastFetchedAt": "2026-11-26T12:10:02.375Z",
+    "lastChangedAt": "2026-11-26T12:10:02.375Z",
+    "nextDueAt": "2026-11-26T15:10:02.375Z",
+    "recordCount": 224,
+    "contentHash": "e6e617e1aef962387a3834a6f04c501c1f53591b32dcd103959645fafbe178db",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
@@ -273,11 +273,11 @@
     "interval": "14d",
     "lastFetchedAt": "2026-11-12T12:10:02.295Z",
     "lastChangedAt": "2026-09-13T06:08:03.653Z",
-    "nextDueAt": "2026-11-26T12:10:02.295Z",
+    "nextDueAt": "2026-12-10T12:10:02.375Z",
     "recordCount": 49,
     "contentHash": "af6c83713540ae6952e12ff8026fb11668e94a7f7d786cf1e80603f0abf0110c",
     "unchangedRuns": 4,
-    "consecutiveFailures": 0
+    "consecutiveFailures": 1
   },
   "sports-venues": {
     "name": "全國運動場館資訊",
