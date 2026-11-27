@@ -301,11 +301,11 @@
     "interval": "22.8h",
     "lastFetchedAt": "2026-10-22T04:10:01.944Z",
     "lastChangedAt": "2026-10-20T10:10:02.307Z",
-    "nextDueAt": "2026-11-27T18:56:55.138Z",
+    "nextDueAt": "2026-11-28T17:56:54.617Z",
     "recordCount": 1572,
     "contentHash": "2bcb6c78cf05916b953b4b88013c11802ccbc757d2e3bb9c5fb9d6608266d6ab",
     "unchangedRuns": 5,
-    "consecutiveFailures": 37
+    "consecutiveFailures": 38
   },
   "tainan-cc-portal": {
     "name": "臺南市社區大學校務資訊系統－課程查詢",
@@ -409,14 +409,14 @@
     "name": "臺南市立圖書館－活動報名",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（報名系統，隨各館上架活動即時變動）",
-    "intervalMs": 16200000,
-    "interval": "4.5h",
-    "lastFetchedAt": "2026-11-27T14:10:03.066Z",
-    "lastChangedAt": "2026-11-27T10:10:02.529Z",
-    "nextDueAt": "2026-11-27T18:40:03.066Z",
+    "intervalMs": 10800000,
+    "interval": "3h",
+    "lastFetchedAt": "2026-11-27T19:10:02.117Z",
+    "lastChangedAt": "2026-11-27T19:10:02.117Z",
+    "nextDueAt": "2026-11-27T22:10:02.117Z",
     "recordCount": 35,
-    "contentHash": "6b21d88ec7bc031620128ee86e0540c759b0d8d6b369f4c5a2555b1b623dff3e",
-    "unchangedRuns": 1,
+    "contentHash": "0e4f52bda7dd448a4e6b269a1aec5a540ec08348266d1277c848d51e2795cf3e",
+    "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
   "xuanen-centers": {
