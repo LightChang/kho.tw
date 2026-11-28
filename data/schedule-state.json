@@ -31,13 +31,13 @@
     "name": "長佳智慧運動中心 Web App－運動中心課程",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（期別制，每期約兩個月；報名人數即時變動）",
-    "intervalMs": 12150000,
-    "interval": "3.4h",
-    "lastFetchedAt": "2026-11-28T06:10:02.859Z",
-    "lastChangedAt": "2026-11-28T06:10:02.859Z",
-    "nextDueAt": "2026-11-28T09:32:32.859Z",
+    "intervalMs": 10800000,
+    "interval": "3h",
+    "lastFetchedAt": "2026-11-28T10:10:02.085Z",
+    "lastChangedAt": "2026-11-28T10:10:02.085Z",
+    "nextDueAt": "2026-11-28T13:10:02.085Z",
     "recordCount": 199,
-    "contentHash": "fb74fa615833c5e38f25061b0851510ccf9f01a10a7035ea625f2fcfc7369812",
+    "contentHash": "8869e1ecacbaae4aeb98961f7899315f4760025681d0b100af6430505765cceb",
     "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
@@ -385,11 +385,11 @@
     "interval": "9h",
     "lastFetchedAt": "2026-10-21T23:10:03.149Z",
     "lastChangedAt": "2026-10-21T23:10:03.149Z",
-    "nextDueAt": "2026-11-28T09:10:04.695Z",
+    "nextDueAt": "2026-11-28T19:10:02.085Z",
     "recordCount": 1338,
     "contentHash": "b259059c6c0b0a125ef8afa7d9e2139cd69d444727f4cf0d66e2e337b41cf700",
     "unchangedRuns": 0,
-    "consecutiveFailures": 91
+    "consecutiveFailures": 92
   },
   "teamxports-centers": {
     "name": "全越運動 XPORTS 線上報名－運動中心期課",
