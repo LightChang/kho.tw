@@ -21,24 +21,24 @@
     "interval": "5.7h",
     "lastFetchedAt": "2026-10-31T03:10:02.785Z",
     "lastChangedAt": "2026-10-31T03:10:02.785Z",
-    "nextDueAt": "2026-11-28T16:51:46.006Z",
+    "nextDueAt": "2026-11-28T22:51:45.268Z",
     "recordCount": 460,
     "contentHash": "53fc5acd55eea9a0365d5218d8f692c6ea5d128274c444606c3d878ce6819962",
     "unchangedRuns": 0,
-    "consecutiveFailures": 112
+    "consecutiveFailures": 113
   },
   "changjia-centers": {
     "name": "長佳智慧運動中心 Web App－運動中心課程",
     "kind": "course-live",
     "declaredFreq": "UNVERIFIED（期別制，每期約兩個月；報名人數即時變動）",
-    "intervalMs": 16200000,
-    "interval": "4.5h",
-    "lastFetchedAt": "2026-11-28T13:10:02.316Z",
-    "lastChangedAt": "2026-11-28T10:10:02.085Z",
-    "nextDueAt": "2026-11-28T17:40:02.316Z",
+    "intervalMs": 10800000,
+    "interval": "3h",
+    "lastFetchedAt": "2026-11-28T18:10:02.638Z",
+    "lastChangedAt": "2026-11-28T18:10:02.638Z",
+    "nextDueAt": "2026-11-28T21:10:02.638Z",
     "recordCount": 199,
-    "contentHash": "8869e1ecacbaae4aeb98961f7899315f4760025681d0b100af6430505765cceb",
-    "unchangedRuns": 1,
+    "contentHash": "67e6289643f980af7de656b502ea0937f2066645d55a829ae6ca13709f759083",
+    "unchangedRuns": 0,
     "consecutiveFailures": 0
   },
   "forest-nature-edu": {
@@ -301,11 +301,11 @@
     "interval": "22.8h",
     "lastFetchedAt": "2026-10-22T04:10:01.944Z",
     "lastChangedAt": "2026-10-20T10:10:02.307Z",
-    "nextDueAt": "2026-11-28T17:56:54.617Z",
+    "nextDueAt": "2026-11-29T16:56:55.138Z",
     "recordCount": 1572,
     "contentHash": "2bcb6c78cf05916b953b4b88013c11802ccbc757d2e3bb9c5fb9d6608266d6ab",
     "unchangedRuns": 5,
-    "consecutiveFailures": 38
+    "consecutiveFailures": 39
   },
   "tainan-cc-portal": {
     "name": "臺南市社區大學校務資訊系統－課程查詢",
